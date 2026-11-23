@@ -83,11 +83,14 @@
   sBtn.addEventListener("click", () => { P.s = !P.s; sBtn.setAttribute("aria-pressed", P.s); sBtn.classList.toggle("on", P.s); save(); render(); });
 
   function goalChips() {
-    const n = Math.max(1, P.life);
-    const opts = [1000, 5000, 10000, 25000, 50000].filter(g => g > n).slice(0, 3);
-    const step = n < 1000 ? 100 : 1000, next = Math.floor(n / step) * step + step;
-    if (!opts.includes(next)) opts.unshift(next);
-    $("#goalChips").innerHTML = `<span>Quick goals</span>` + [...new Set(opts)].slice(0, 4).map(g => `<button type="button" data-g="${g}"${g === P.goal ? ' class="on"' : ""}>${L(g)}</button>`).join("");
+    const n = Math.max(1, P.life), mag = Math.pow(10, Math.floor(Math.log10(n)));
+    const up = step => { step = Math.max(100, step); return Math.floor(n / step) * step + step; };
+    const opts = [...new Set([1000, 5000, 10000, 25000, 50000, 100000, 1000000, up(mag / 10), up(mag / 2), up(mag), up(mag * 2), up(mag * 5), up(mag * 10)])]
+      .filter(g => g > n).sort((a, b) => a - b);
+    // the next round number, then a few bigger jumps
+    const pick = [];
+    opts.forEach(g => { if (pick.length < 4 && (!pick.length || g >= pick[pick.length - 1] * 1.25)) pick.push(g); });
+    $("#goalChips").innerHTML = `<span>Quick goals</span>` + pick.map(g => `<button type="button" data-g="${g}"${g === P.goal ? ' class="on"' : ""}>${L(g)}</button>`).join("");
   }
   $("#goalChips").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; P.goal = +b.dataset.g; F.goal.value = P.goal; save(); render(); });
 

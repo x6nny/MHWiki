@@ -1,0 +1,90 @@
+# Records Miner's Haven's live player count (CCU) every 15 minutes.
+# Data is written to ccu.json on a separate "data" branch, so it never triggers a Pages redeploy.
+# The Game Tracker page reads it from:
+#   https://raw.githubusercontent.com/<owner>/<repo>/data/ccu.json
+name: Track CCU
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: track-ccu
+  cancel-in-progress: false
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out the data branch
+        run: |
+          git init -q data && cd data
+          git config user.name "ccu-tracker"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          if git ls-remote --exit-code --heads origin data >/dev/null 2>&1; then
+            git fetch -q --depth=1 origin data && git checkout -q -b data FETCH_HEAD
+          else
+            git checkout -q --orphan data
+          fi
+
+      - name: Record a data point
+        working-directory: data
+        run: |
+          cat > /tmp/record.mjs <<'EOF'
+          import fs from "node:fs";
+          const UNIVERSE = 105689481;
+          const FILE = "ccu.json";
+          const get = async (url) => {
+            for (let i = 0; i < 4; i++) {
+              try {
+                const r = await fetch(url, { headers: { "User-Agent": "MinersHavenWiki-CCU-Tracker" } });
+                if (r.ok) return await r.json();
+              } catch (e) {}
+              await new Promise((res) => setTimeout(res, 3000 * (i + 1)));
+            }
+            return null;
+          };
+          const game = await get(`https://games.roblox.com/v1/games?universeIds=${UNIVERSE}`);
+          const g = game && game.data && game.data[0];
+          if (!g) { console.log("Roblox didn't answer, skipping this run"); process.exit(0); }
+          const votes = await get(`https://games.roblox.com/v1/games/votes?universeIds=${UNIVERSE}`);
+          const v = votes && votes.data && votes.data[0];
+
+          let db = { v: 1, fields: ["t", "players", "visits", "favorites", "up", "down"], points: [] };
+          try { db = JSON.parse(fs.readFileSync(FILE, "utf8")); } catch (e) {}
+
+          const now = Math.floor(Date.now() / 1000);
+          db.points.push([now, g.playing ?? null, g.visits ?? null, g.favoritedCount ?? null, v ? v.upVotes : null, v ? v.downVotes : null]);
+
+          // Keep every point for 14 days, then one per hour, then one per 6 hours after a year
+          const DAY = 86400, keep = [], seen = new Set();
+          for (const p of db.points.sort((a, b) => a[0] - b[0])) {
+            const age = now - p[0];
+            const step = age <= 14 * DAY ? 0 : age <= 365 * DAY ? 3600 : 21600;
+            if (!step) { keep.push(p); continue; }
+            const bucket = step + ":" + Math.floor(p[0] / step);
+            if (!seen.has(bucket)) { seen.add(bucket); keep.push(p); }
+          }
+          db.points = keep;
+          db.updated = now;
+          fs.writeFileSync(FILE, JSON.stringify(db));
+          console.log(`Recorded ${g.playing} players (${keep.length} points stored)`);
+          EOF
+          node /tmp/record.mjs
+
+      - name: Save (one rolling commit, so the branch stays small)
+        working-directory: data
+        run: |
+          git add ccu.json
+          if git rev-parse -q --verify HEAD >/dev/null; then
+            git commit -q --amend -m "CCU data (updated $(date -u '+%Y-%m-%d %H:%M UTC'))"
+          else
+            git commit -q -m "CCU data (updated $(date -u '+%Y-%m-%d %H:%M UTC'))"
+          fi
+          git push -q -f origin data

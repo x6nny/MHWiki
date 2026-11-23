@@ -36,7 +36,7 @@
 /* ---------- Toolbar ---------- */
 .ii-bar {
   position: sticky; top: 92px; z-index: 40;
-  display: grid; grid-template-columns: 1fr auto auto auto auto auto; gap: 10px; align-items: center;
+  display: grid; grid-template-columns: 1fr auto auto auto auto auto auto; gap: 10px; align-items: center;
   padding: 10px; border-radius: 20px; margin: 10px 0 14px; background: rgba(12,16,32,.62);
 }
 .result-count { font-size: 13px; color: var(--faint); font-weight: 700; white-space: nowrap; padding: 0 6px; min-width: 92px; text-align: right; }
@@ -364,3 +364,25 @@ body.modal-open { overflow: hidden; }
 .pc em { position: relative; font-style: normal; font: 700 11px var(--font-mono); color: rgba(255,255,255,.75); }
 .xt-note { margin: 6px 2px 0; font-size: 11.5px; color: var(--faint); }
 @media (max-width: 680px) { .pc-td { min-width: 110px; } .xt { font-size: 12.5px; } .xt td, .xt th { padding: 8px; } }
+
+/* Sorted stat chip (shown when sorting by MPU, length or width) */
+.icard .ic-stat { display: none; position: relative; margin-top: 7px; padding: 3px 9px; border-radius: 8px; font: 800 12px var(--font-mono); color: #fff; background: rgba(56,217,255,.14); border: 1px solid rgba(56,217,255,.35); animation: statIn .35s var(--spring) both; }
+.icard .ic-stat small { margin-left: 5px; font: 700 9.5px var(--font-body, inherit); color: var(--faint); letter-spacing: .06em; }
+.icard .ic-stat.none { color: var(--faint); background: rgba(255,255,255,.04); border-color: rgba(255,255,255,.08); font-weight: 700; }
+#grid[data-stat="_mpu"] .st-mpu, #grid[data-size="1"] .st-size { display: inline-block; }
+@keyframes statIn { from { opacity: 0; transform: translateY(4px) scale(.9); } }
+.dd-menu .dd-group { display: block; padding: 8px 12px 3px; font-size: 10.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); border-top: 1px solid rgba(255,255,255,.07); margin-top: 4px; }
+
+/* Size search (Length × Width) */
+.size-f { display: flex; align-items: center; gap: 5px; height: 44px; padding: 0 6px 0 12px; border-radius: 14px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.09); transition: border-color .25s, box-shadow .25s; }
+.size-f:focus-within, .size-f.on { border-color: rgba(56,217,255,.5); box-shadow: 0 0 0 4px rgba(56,217,255,.1); }
+.size-f > span { font-size: 14px; font-weight: 700; color: var(--muted); margin-right: 3px; }
+.size-f input { width: 46px; height: 32px; padding: 0 6px; border-radius: 9px; text-align: center; font: 800 14px var(--font-mono); color: #fff; background: rgba(0,0,0,.3); border: 1px solid rgba(255,255,255,.1); outline: 0; -moz-appearance: textfield; }
+.size-f input::-webkit-inner-spin-button, .size-f input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.size-f input:focus { border-color: var(--cyan, #38d9ff); }
+.size-f input::placeholder { color: var(--faint); font-weight: 700; }
+.size-f > b { font-size: 13px; color: var(--faint); }
+.size-f button { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 9px; color: var(--faint); transition: color .2s, background .2s; }
+.size-f button:hover { color: var(--text); background: rgba(255,255,255,.07); }
+.size-f button.on { color: #04131c; background: #38d9ff; }
+@media (max-width: 1180px) { .size-f { justify-content: center; } }

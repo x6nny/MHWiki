@@ -18,7 +18,28 @@
     if (it.page) byName.set(it.page.toLowerCase(), it);
     it._text = [it.n, it.tier, it.type, it.event || "", it.f.effects || "", it.f.drawbacks || "", it.f.source || "", it.quote || ""].join(" ").toLowerCase().replace(/[⟦⟧]/g, "");
     it._date = parseDate(it.date);
+    it._mpu = parseMpu(it.f.multiplier_length);
+    const sz = String(it.f.item_size || "").match(/(\d+(?:\.\d+)?)\s*x\s*(\d+(?:\.\d+)?)/i); // wiki order: Length x Width
+    it._len = sz ? +sz[1] : null; it._wid = sz ? +sz[2] : null;
   });
+  // MPU (multiplier per length): the highest value listed, e.g. "Min: x1.4\nMax: x1.6" -> 1.6
+  function parseMpu(v) {
+    const str = String(v || "").replace(/,/g, "");
+    if (!str.trim()) return null;
+    let best = null;
+    const take = n => { if (n > 0 && n < 1e5 && (best == null || n > best)) best = n; };
+    for (let line of str.split(/\n|\|/)) {
+      const pct = line.match(/%\)?\s*-\s*x?\s*(\d+(?:\.\d+)?)\s*x?\s*$/); // "x4.2 (45%) - x1.432": MPU is after the dash
+      if (pct) { take(+pct[1]); continue; }
+      if (/[*/^]/.test(line)) continue; // formulas like x(90*1.02y)^1/7
+      line = line.replace(/[a-z]-[\d.]+/gi, " "); // item names like SpookLord-95,000
+      line = line.replace(/\([^)]*\)/g, " ");
+      if (line.includes(":")) line = line.slice(line.lastIndexOf(":") + 1); // "With 10 upgrades: x1.956"
+      line = line.replace(/\$[\d.]+\s*[a-z]*/gi, " ").replace(/\d+(st|nd|rd|th)\b/gi, " ").replace(/\d+(?:\.\d+)?\s*(?!x\b)[a-z]{2,}/gi, " ");
+      for (const m of line.matchAll(/\d+(?:\.\d+)?/g)) take(+m[0]);
+    }
+    return best;
+  }
   function parseDate(s) {
     if (!s) return 0;
     if (/initial release/i.test(s)) return Date.UTC(2015, 5, 12);
@@ -49,7 +70,7 @@
   ];
   const EVENT_ICON = { "Halloween": "halloween.png", "Holidays": "winter.png", "Birthday": "birthday.png", "St. Patrick's": "st-patty.png", "Easter": "easter.png", "Valentine's": "valentines.png", "Spring": "spring.png", "Summer": "summer.png" };
 
-  const state = { type: "all", tier: "all", sort: "tier", q: "", rp: false, shiny: false };
+  const state = { type: "all", tier: "all", sort: "tier", q: "", rp: false, shiny: false, len: null, wid: null, swap: false };
   let list = [], shown = 0;
 
   /* ---------- Type tiles ---------- */
@@ -88,11 +109,32 @@
   });
   $("#clearAll").addEventListener("click", clearAll);
   function clearAll() {
-    Object.assign(state, { type: "all", tier: "all", q: "", rp: false, shiny: false });
-    $("#q").value = ""; $("#rebornProof").checked = false; $("#hasShiny").checked = false; apply(true);
+    Object.assign(state, { type: "all", tier: "all", q: "", rp: false, shiny: false, len: null, wid: null });
+    $("#q").value = ""; $("#rebornProof").checked = false; $("#hasShiny").checked = false; $("#fLen").value = ""; $("#fWid").value = ""; apply(true);
   }
+  // Size search: exact Length × Width (wiki order). "Swap" also matches the item turned sideways.
+  const sizeOk = it => {
+    if (!state.len && !state.wid) return true;
+    const m = (l, w) => (!state.len || l === state.len) && (!state.wid || w === state.wid);
+    return it._len != null && (m(it._len, it._wid) || (state.swap && m(it._wid, it._len)));
+  };
+  let st2;
+  ["fLen", "fWid"].forEach(id => $("#" + id).addEventListener("input", () => {
+    clearTimeout(st2);
+    st2 = setTimeout(() => {
+      const num = el => { const v = parseFloat(el.value); return v > 0 ? v : null; };
+      state.len = num($("#fLen")); state.wid = num($("#fWid")); apply(true);
+    }, 200);
+  }));
+  $("#fSwap").addEventListener("click", e => {
+    state.swap = !state.swap; e.currentTarget.classList.toggle("on", state.swap); e.currentTarget.setAttribute("aria-pressed", state.swap);
+    if (state.len || state.wid) apply(true);
+  });
 
   /* ---------- Filter / sort / render ---------- */
+  // sort key -> [item field, direction]; items without a value always go last
+  const SORTS = { "mpu-d": ["_mpu", -1], "mpu-a": ["_mpu", 1] };
+  const fmtNum = n => (Math.round(n * 1000) / 1000).toLocaleString("en-US", { maximumFractionDigits: 3 });
   function apply(scrollUp) {
     const toks = state.q.split(/\s+/).filter(Boolean);
     list = ITEMS.filter(it =>
@@ -100,12 +142,17 @@
       (state.tier === "all" || it.tier === state.tier) &&
       (!state.rp || it.f.reborn_proof === "Yes") &&
       (!state.shiny || hasShiny(it)) &&
+      sizeOk(it) &&
       toks.every(t => it._text.includes(t)));
     const byName = (a, b) => a.n.localeCompare(b.n);
     if (state.sort === "name") list.sort(byName);
     else if (state.sort === "new") list.sort((a, b) => b._date - a._date || byName(a, b));
     else if (state.sort === "old") list.sort((a, b) => (a._date || 9e15) - (b._date || 9e15) || byName(a, b));
+    else if (SORTS[state.sort]) { const [k, dir] = SORTS[state.sort]; list.sort((a, b) => (a[k] == null) - (b[k] == null) || (a[k] == null ? 0 : (a[k] - b[k]) * dir) || byName(a, b)); }
     else list.sort((a, b) => a.rank - b.rank || byName(a, b));
+    $("#grid").dataset.stat = SORTS[state.sort] ? SORTS[state.sort][0] : "";
+    $("#grid").dataset.size = state.len || state.wid ? "1" : "";
+    $("#sizeF").classList.toggle("on", !!(state.len || state.wid));
 
     document.querySelectorAll(".tt").forEach(t => t.classList.toggle("on", t.dataset.type === state.type));
     $("#tierDD .dd-label").textContent = state.tier === "all" ? "All tiers" : state.tier;
@@ -129,6 +176,7 @@
     if (state.tier !== "all") chips.push(["tier", state.tier + " tier"]);
     if (state.rp) chips.push(["rp", "Reborn-proof"]);
     if (state.shiny) chips.push(["shiny", "Has shiny"]);
+    if (state.len || state.wid) chips.push(["size", `Size ${state.len || "any"} × ${state.wid || "any"}${state.swap ? " (either way)" : ""}`]);
     if (state.q) chips.push(["q", `“${state.q}”`]);
     $("#activeFilters").innerHTML = chips.map(([k, l]) => `<span class="af">${esc(l)}<button data-k="${k}" aria-label="Remove filter">×</button></span>`).join("") +
       (chips.length > 1 ? `<span class="af"><b>Clear all</b><button data-k="all" aria-label="Clear all">×</button></span>` : "");
@@ -141,6 +189,7 @@
     if (k === "tier") state.tier = "all";
     if (k === "rp") { state.rp = false; $("#rebornProof").checked = false; }
     if (k === "shiny") { state.shiny = false; $("#hasShiny").checked = false; }
+    if (k === "size") { state.len = state.wid = null; $("#fLen").value = ""; $("#fWid").value = ""; }
     if (k === "q") { state.q = ""; $("#q").value = ""; }
     apply(false);
   });
@@ -156,6 +205,8 @@
       <h3>${esc(it.n)}</h3>
       <span class="tier-pill">${esc(it.tier)}</span>
       <span class="ic-type">${esc(type.replace(/s$/, ""))}</span>
+      ${it._mpu != null ? `<span class="ic-stat st-mpu" title="Multiplier per length (MPU)">MPU x${fmtNum(it._mpu)}</span>` : `<span class="ic-stat st-mpu none">No MPU</span>`}
+      ${it._len != null ? `<span class="ic-stat st-size" title="Length × Width">${fmtNum(it._len)} × ${fmtNum(it._wid)}<small>L × W</small></span>` : `<span class="ic-stat st-size none">No size</span>`}
     </div>`;
   }
   function more() {
@@ -188,7 +239,7 @@
     item_size: "Size", source: "Source", created_by: "Created by", cost: "Cost", sell: "Sell value", rp_needed: "RP to unlock",
     life_required: "Life required", rarity: "Rarity", reborn_proof: "Reborn-proof", sacrifice_proof: "Sacrifice-proof", soulbound: "Soulbound",
     drop_rate: "Drop rate", ore_worth: "Ore worth", ore_size: "Ore size", ore_material: "Ore material",
-    upgrade_counter: "Upgrade counter", upgrade_limit: "Upgrade limit", multiplier_length: "Multiplier", conveyor_speed: "Conveyor speed",
+    upgrade_counter: "Upgrade counter", upgrade_limit: "Upgrade limit", multiplier_length: "Multiplier per length (MPU)", conveyor_speed: "Conveyor speed",
     conveyor_elevation: "Conveyor height", conveyor_wall: "Conveyor walls", cell_compatibility: "Cell furnace compatible", rp_yield: "RP yield",
     shiny: "Shiny variant", bok_multiplier: "Book of Knowledge", catalyst: "Catalyst", damage: "Damage", range: "Range", ammo: "Ammo", f_rate: "Fire rate",
     beam_size: "Beam size", item_vfx: "Visual effects", status: "Status", date_retired: "Retired on", retire_reason: "Why it was retired",

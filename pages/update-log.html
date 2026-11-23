@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Update Log · Miner's Haven Wiki</title>
+  <meta name="description" content="Every Miner's Haven update, event and patch since the 2015 release, newest first." />
+  <link rel="icon" href="../assets/icons/rebirth.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/update-log.css" />
+</head>
+<body class="subpage">
+  <div class="backdrop" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+    <div class="grid-lines"></div>
+    <canvas id="ore-field"></canvas>
+    <div class="grain"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner glass">
+      <a href="../index.html" class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="../index.html#explore">Sections</a>
+        <a href="update-log.html" class="current">Update Log</a>
+      </nav>
+      <a class="search-trigger" href="../index.html#explore">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>All sections</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <nav class="crumbs intro" style="--d:0" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a><span>/</span><b>Update Log</b>
+      </nav>
+      <div class="page-hero-row">
+        <div>
+          <h1 class="intro" style="--d:1"><span class="shine">Update Log</span></h1>
+          <p class="lede intro" style="--d:2">
+            Every update, event and patch since Miner's Haven launched on 12 June 2015, newest first.
+            Open any entry to read its full patch notes.
+          </p>
+        </div>
+        <img class="hero-pumpkin intro" style="--d:2" src="../assets/icons/halloween.png" alt="" aria-hidden="true" />
+      </div>
+      <div class="stats intro" style="--d:3">
+        <div class="stat glass"><strong id="statUpdates">0</strong><span>Updates</span></div>
+        <div class="stat glass"><strong id="statChanges">0</strong><span>Changes</span></div>
+        <div class="stat glass"><strong id="statYears">0</strong><span>Years</span></div>
+        <div class="stat glass"><strong id="statLatest">–</strong><span>Latest</span></div>
+      </div>
+    </section>
+
+    <!-- Toolbar -->
+    <div class="toolbar glass intro" style="--d:4" id="toolbar">
+      <label class="tb-search">
+        <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="q" type="search" placeholder="Search patch notes… e.g. “Masked Man”, “shiny”, “2019”" autocomplete="off" />
+        <kbd>/</kbd>
+      </label>
+      <div class="kinds" id="kinds" role="tablist" aria-label="Filter by type"></div>
+      <div class="tb-actions">
+        <span class="result-count" id="resultCount"></span>
+        <button class="tb-btn" id="toggleAll" aria-pressed="false">Expand all</button>
+      </div>
+    </div>
+
+    <div class="log-layout">
+      <aside class="years glass" id="years" aria-label="Jump to year"></aside>
+      <div class="log-timeline" id="timeline">
+        <div class="log-rail" aria-hidden="true"><div class="log-fill" id="railFill"></div></div>
+      </div>
+    </div>
+
+    <div class="no-results glass" id="noResults" hidden>
+      <img src="../assets/icons/spook-mcdooks.png" alt="" />
+      <h3>Nothing matches that search</h3>
+      <p>Try a different word, or clear the filters.</p>
+      <button class="btn btn-ghost" id="clearSearch">Clear search</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner glass reveal">
+      <div class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </div>
+      <p>
+        Patch notes are taken from the
+        <a href="https://minershaven.fandom.com/wiki/Category:Events" target="_blank" rel="noopener">Miner's Haven Fandom wiki</a>
+        and are available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA</a>.
+        A fan-made wiki, not affiliated with Roblox or Berezaa Games.
+      </p>
+    </div>
+  </footer>
+
+  <button class="to-top glass" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/update-log-data.js"></script>
+  <script src="../js/update-log.js"></script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miner's Haven Wiki</title>
+  <meta name="description" content="A fan-made guide to Miner's Haven, the sandbox tycoon on Roblox: items, rebirth, sacrifice, gamepasses, status effects, updates, events, mystery boxes, codes and NPCs." />
+  <link rel="icon" href="assets/icons/rebirth.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ===== Animated backdrop ===== -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+    <div class="grid-lines"></div>
+    <canvas id="ore-field"></canvas>
+    <div class="grain"></div>
+  </div>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner glass">
+      <a href="index.html" class="brand">
+        <img src="assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#explore" data-filter-link="items">Items</a>
+        <a href="#explore" data-filter-link="progression">Progression</a>
+        <a href="#explore" data-filter-link="economy">Economy</a>
+        <a href="#explore" data-filter-link="news">News</a>
+        <a href="#explore" data-filter-link="world">World</a>
+      </nav>
+      <button class="search-trigger" id="openPalette" aria-label="Search the wiki">
+        <svg viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>Search</span>
+        <kbd>Ctrl K</kbd>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="hero-copy">
+        <a class="live-pill glass intro" style="--d:0" href="#featured">
+          <span class="pulse-dot"></span>
+          Halloween 2026 event is live
+          <svg viewBox="0 0 24 24" width="14" height="14"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <h1 class="intro" style="--d:1">
+          <span class="shine">Miner's Haven</span><br />
+          <span class="h1-sub">Wiki</span>
+        </h1>
+        <p class="lede intro" style="--d:2">
+          The guide to Roblox's biggest sandbox tycoon. Over a thousand items, every
+          rebirth and sacrifice, eleven years of events, and the latest codes, all in one place.
+        </p>
+
+        <button class="hero-search glass intro" style="--d:3" id="heroSearch">
+          <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span class="typer" id="typer">Search items, NPCs, codes…</span>
+          <kbd>Ctrl K</kbd>
+        </button>
+
+        <div class="stats intro" style="--d:4">
+          <div class="stat glass"><strong data-count="1548">0</strong><span>Articles</span></div>
+          <div class="stat glass"><strong data-count="1086">0</strong><span>Items</span></div>
+          <div class="stat glass"><strong data-count="10254">0</strong><span>Images</span></div>
+          <div class="stat glass"><strong data-count="43">0</strong><span>NPCs</span></div>
+        </div>
+      </div>
+
+      <div class="hero-art intro" style="--d:2" aria-hidden="true">
+        <div class="orbit-core glass">
+          <img src="assets/icons/rebirth.png" alt="" />
+        </div>
+        <div class="ring r1"></div>
+        <div class="ring r2"></div>
+        <div class="ring r3"></div>
+        <div class="orbit o1"><img src="assets/icons/money.png" alt="" /></div>
+        <div class="orbit o2"><img src="assets/icons/uc.png" alt="" /></div>
+        <div class="orbit o3"><img src="assets/icons/rp.png" alt="" /></div>
+        <div class="orbit o4"><img src="assets/icons/draedon.png" alt="" /></div>
+        <div class="orbit o5"><img src="assets/icons/halloween.png" alt="" /></div>
+        <div class="orbit o6"><img src="assets/icons/craftsman.png" alt="" /></div>
+      </div>
+    </section>
+
+    <!-- ===== Ticker ===== -->
+    <div class="ticker glass" aria-label="Latest update notes">
+      <div class="ticker-label">Patch notes</div>
+      <div class="ticker-track">
+        <div class="ticker-move">
+          <span>Halloween Part 1 released 29 Oct 2026</span>
+          <span>The Baron replaces The Masked Man for the season</span>
+          <span>Shop tiers renamed: Basic, Novice, Intermediate, Advanced, Proficient</span>
+          <span>Inventory now has filters</span>
+          <span>Pumpkins &amp; Giant Candy Corn drop around the map</span>
+          <span>New Seasonal Challenge added</span>
+          <span>Migrated to ProfileStore to stop rejoin data corruption</span>
+          <span>Windmills on Quaint Skymill &amp; Whimsical Turbine now animate</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Featured ===== -->
+    <section class="featured glass reveal" id="featured">
+      <div class="featured-copy">
+        <span class="eyebrow">Featured update</span>
+        <h2>Halloween 2026</h2>
+        <p>
+          The nights grow longer and the ghouls are out. This year reruns last year's event:
+          collect ingredients from Lucian, cook up candy, and trade it with Pirate Santa for presents.
+          The update also ships a reworked UI, a one-page shop with filters, and a big round of performance fixes.
+        </p>
+        <div class="featured-actions">
+          <a href="pages/update-log.html" class="btn btn-primary" data-page="update-log">Read the update log</a>
+          <a href="pages/events.html" class="btn btn-ghost" data-page="events">All events</a>
+        </div>
+      </div>
+      <div class="featured-art" aria-hidden="true">
+        <img class="fa-pumpkin" src="assets/icons/halloween.png" alt="" />
+        <img class="fa-candy c1" src="assets/icons/candy.png" alt="" />
+        <img class="fa-candy c2" src="assets/icons/candy.png" alt="" />
+        <img class="fa-candy c3" src="assets/icons/candy.png" alt="" />
+      </div>
+    </section>
+
+    <!-- ===== Sections ===== -->
+    <section class="explore" id="explore">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Explore</span>
+          <h2>Every corner of the Haven</h2>
+        </div>
+        <div class="filters glass" role="tablist" aria-label="Filter sections">
+          <span class="filter-indicator"></span>
+          <button class="filter active" data-filter="all" role="tab">All</button>
+          <button class="filter" data-filter="items" role="tab">Items</button>
+          <button class="filter" data-filter="progression" role="tab">Progression</button>
+          <button class="filter" data-filter="economy" role="tab">Economy</button>
+          <button class="filter" data-filter="news" role="tab">News</button>
+          <button class="filter" data-filter="world" role="tab">World</button>
+        </div>
+      </div>
+
+      <div class="bento" id="bento">
+
+        <!-- 01 Item Index -->
+        <article class="card glass reveal span-2x2" data-cat="items" data-page="item-index" style="--accent:#ffc857; --accent2:#7cff6b">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">01</span><span class="chip">1,086 items</span></div>
+          <img class="card-icon float big" src="assets/icons/money.png" alt="" />
+          <h3>Item Index</h3>
+          <p>Every mine, upgrader, furnace and utility in the game, with tiers, costs and what each one actually does to your ore.</p>
+          <div class="mini-stats">
+            <div><strong>146</strong><span>Droppers</span></div>
+            <div><strong>558</strong><span>Upgraders</span></div>
+            <div><strong>168</strong><span>Furnaces</span></div>
+            <div><strong>214</strong><span>Utilities</span></div>
+          </div>
+          <div class="dist" aria-label="Share of items by type">
+            <div class="dist-bar">
+              <span style="--w:13.4%; --dd:0ms;   background:#7cff6b"></span>
+              <span style="--w:51.4%; --dd:150ms; background:#38d9ff"></span>
+              <span style="--w:15.5%; --dd:300ms; background:#ff8a3d"></span>
+              <span style="--w:19.7%; --dd:450ms; background:#a77bff"></span>
+            </div>
+            <div class="dist-legend">
+              <span><i style="background:#7cff6b"></i>Droppers</span>
+              <span><i style="background:#38d9ff"></i>Upgraders</span>
+              <span><i style="background:#ff8a3d"></i>Furnaces</span>
+              <span><i style="background:#a77bff"></i>Utilities</span>
+            </div>
+          </div>
+          <p class="tier-label">Browse by tier</p>
+          <ul class="tiers">
+            <li style="--i:0; --c:#cfd6e6">Basic</li>
+            <li style="--i:1; --c:#7cff6b">Novice</li>
+            <li style="--i:2; --c:#38d9ff">Intermediate</li>
+            <li style="--i:3; --c:#a77bff">Advanced</li>
+            <li style="--i:4; --c:#ff6bb5">Proficient</li>
+            <li style="--i:5; --c:#ffc857">Reborn</li>
+            <li style="--i:6; --c:#ff8a3d">Exotic</li>
+            <li style="--i:7; --c:#5ad8ff">Superstitious</li>
+          </ul>
+          <a class="cta" href="pages/item-index.html">Browse items <i></i></a>
+        </article>
+
+        <!-- 02 Rebirth -->
+        <article class="card glass reveal" data-cat="progression" data-page="rebirth" style="--accent:#5ad8ff; --accent2:#a77bff">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">02</span><span class="chip">135 Reborn items</span></div>
+          <img class="card-icon float" src="assets/icons/rebirth.png" alt="" />
+          <h3>Rebirth</h3>
+          <p>Wipe your base, start a new life, and earn powerful Reborn items that get rarer the further you go.</p>
+          <ul class="tags"><li>Reborn</li><li>Advanced</li><li>Slipstream</li><li>Shiny</li></ul>
+          <a class="cta" href="pages/rebirth.html">Learn rebirthing <i></i></a>
+        </article>
+
+        <!-- 03 Sacrifice -->
+        <article class="card glass reveal" data-cat="progression" data-page="sacrifice" style="--accent:#ff6b9a; --accent2:#c9a7ff">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">03</span><span class="chip">Life 1,000+</span></div>
+          <img class="card-icon float" src="assets/icons/draedon.png" alt="" />
+          <h3>Sacrifice</h3>
+          <p>Give up almost everything and return to life 1 for new mechanics and items. Permanent, and once per save.</p>
+          <ul class="tags"><li>Ultimate</li><li>Second</li><li>Escrow</li><li>Soulbound</li></ul>
+          <a class="cta" href="pages/sacrifice.html">Read the rules <i></i></a>
+        </article>
+
+        <!-- 04 Gamepasses -->
+        <article class="card glass reveal" data-cat="economy" data-page="gamepasses" style="--accent:#3ef0e0; --accent2:#4f8bff">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">04</span><span class="chip">Robux perks</span></div>
+          <img class="card-icon float" src="assets/icons/rp.png" alt="" />
+          <h3>Gamepasses</h3>
+          <p>VIP, Premium, Executive, Dark Knight and more. What each pass costs and every perk it unlocks.</p>
+          <ul class="tags"><li>VIP</li><li>Premium</li><li>Executive</li><li>Shiny Charm</li></ul>
+          <a class="cta" href="pages/gamepasses.html">Compare passes <i></i></a>
+        </article>
+
+        <!-- 05 Status Effects -->
+        <article class="card glass reveal" data-cat="items" data-page="status-effects" style="--accent:#ff8a3d; --accent2:#4fd1ff">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">05</span><span class="chip">Ore properties</span></div>
+          <div class="effects" aria-hidden="true">
+            <span class="fx fire"></span><span class="fx frost"></span><span class="fx rad"></span><span class="fx poison"></span>
+          </div>
+          <h3>Status Effects</h3>
+          <p>Fire, Frostbite, Radioactive, Poison and more: which destroy ore, how they interact, and how to clear them.</p>
+          <ul class="tags"><li>Fire</li><li>Frostbite</li><li>Sparkles</li><li>Wet</li></ul>
+          <a class="cta" href="pages/status-effects.html">See all effects <i></i></a>
+        </article>
+
+        <!-- 06 Update Log -->
+        <article class="card glass reveal span-2" data-cat="news" data-page="update-log" style="--accent:#ff9f1c; --accent2:#ff4d6d">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">06</span><span class="chip live"><span class="pulse-dot"></span>Latest: Halloween 2026</span></div>
+          <div class="split">
+            <div>
+              <h3>Update Log</h3>
+              <p>Patch notes for every update since the 2015 release, newest first.</p>
+              <ol class="timeline">
+                <li><b>Oct 2026</b> Halloween Part 1 + hot-patches</li>
+                <li><b>2026</b> 11th Birthday</li>
+                <li><b>2026</b> Easter &amp; Labor of Love</li>
+              </ol>
+            </div>
+            <img class="card-icon float big" src="assets/icons/halloween.png" alt="" />
+          </div>
+          <a class="cta" href="pages/update-log.html">Open changelog <i></i></a>
+        </article>
+
+        <!-- 07 Events -->
+        <article class="card glass reveal span-2" data-cat="news" data-page="events" style="--accent:#ff5c8a; --accent2:#5cffb1">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">07</span><span class="chip">Since 2015</span></div>
+          <div class="split">
+            <div>
+              <h3>Events</h3>
+              <p>Valentine's, St. Patrick's, Easter, Birthdays, Halloween, Black Friday and Winter: every seasonal event and its limited items.</p>
+              <ul class="tags"><li>Seasonal</li><li>Limited items</li><li>Event boxes</li></ul>
+            </div>
+            <div class="event-cycle" aria-hidden="true">
+              <img src="assets/icons/valentines.png" alt="" />
+              <img src="assets/icons/st-patty.png" alt="" />
+              <img src="assets/icons/easter.png" alt="" />
+              <img src="assets/icons/halloween.png" alt="" />
+              <img src="assets/icons/winter.png" alt="" />
+            </div>
+          </div>
+          <a class="cta" href="pages/events.html">Event history <i></i></a>
+        </article>
+
+        <!-- 08 Mystery Boxes -->
+        <article class="card glass reveal" data-cat="economy" data-page="mystery-boxes" style="--accent:#9dff6b; --accent2:#b072ff">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">08</span><span class="chip">14 box types</span></div>
+          <img class="card-icon float wobble" src="assets/icons/spook-mcdooks.png" alt="" />
+          <h3>Mystery Boxes</h3>
+          <p>Every box, where to get it, and its odds. Lucky Clovers can double or triple a win.</p>
+          <ul class="tags"><li>Regular</li><li>Inferno</li><li>Limited</li><li>Clovers</li></ul>
+          <a class="cta" href="pages/mystery-boxes.html">Open the boxes <i></i></a>
+        </article>
+
+        <!-- 09 Codes -->
+        <article class="card glass reveal span-2" data-cat="economy" data-page="codes" style="--accent:#ff6bb5; --accent2:#ffd16b">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">09</span><span class="chip live"><span class="pulse-dot"></span>Active codes</span></div>
+          <div class="split">
+            <div>
+              <h3>Codes</h3>
+              <p>Free uC, boxes and items. Codes aren't case-sensitive, and each one can be redeemed once.</p>
+            </div>
+            <img class="card-icon float" src="assets/icons/uc.png" alt="" />
+          </div>
+          <div class="codes">
+            <button class="code" data-code="ItsWonderful"><code>ItsWonderful</code><span>Iron Flakes Mine</span><em>Copy</em></button>
+            <button class="code" data-code="SLUMBER"><code>SLUMBER</code><span>Ore Gielder</span><em>Copy</em></button>
+            <button class="code" data-code="RestEasyNow"><code>RestEasyNow</code><span>Yoda</span><em>Copy</em></button>
+          </div>
+          <a class="cta" href="pages/codes.html">All codes <i></i></a>
+        </article>
+
+        <!-- 10 NPCs -->
+        <article class="card glass reveal" data-cat="world" data-page="npcs" style="--accent:#7ee0a1; --accent2:#c7c7ff">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">10</span><span class="chip">43 characters</span></div>
+          <div class="npc-stack" aria-hidden="true">
+            <img src="assets/icons/masked-man.png" alt="" />
+            <img src="assets/icons/craftsman.png" alt="" />
+            <img src="assets/icons/spook-mcdooks.png" alt="" />
+          </div>
+          <h3>NPCs</h3>
+          <p>The Masked Man, The Craftsman, Spook McDooks, Draedon and the rest: where to find them and what they do.</p>
+          <a class="cta" href="pages/npcs.html">Meet the cast <i></i></a>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner glass reveal">
+      <div class="brand">
+        <img src="assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </div>
+      <p>
+        A fan-made wiki. Not affiliated with Roblox or Berezaa Games. Content adapted from the
+        <a href="https://minershaven.fandom.com/wiki/Welcome_To_The_Miner%27s_Haven_Wikia!" target="_blank" rel="noopener">Miner's Haven Fandom wiki</a>,
+        available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA</a>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ===== Command palette ===== -->
+  <div class="palette-backdrop" id="palette" aria-hidden="true">
+    <div class="palette glass" role="dialog" aria-label="Search the wiki">
+      <div class="palette-input">
+        <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="paletteInput" type="text" placeholder="Jump to a section…" autocomplete="off" />
+        <kbd>Esc</kbd>
+      </div>
+      <ul class="palette-list" id="paletteList"></ul>
+    </div>
+  </div>
+
+  <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -68,6 +68,12 @@
 
   /* ---------- Miner's Haven badges (cached) ---------- */
   const EGG_RE = /egg|legg|eggle|burgor|stormcrow|borker/i;
+  // Ruby Crystallizer: own every egg except the Noob Egg, Eggield, Egg of Illusion and the rare eggs
+  const RARE_EGGS = ["baby borker", "eggield", "leggacy", "stormcrow", "wisdom egg"];
+  const RUBY_SKIP = ["noob egg", "eggield", "egg of illusion", "egg of illusions", ...RARE_EGGS];
+  const eggKey = b => b.name.toLowerCase().replace(/\s+/g, " ").trim();
+  const isRare = b => RARE_EGGS.includes(eggKey(b));
+  const rubyNeeds = b => !RUBY_SKIP.includes(eggKey(b));
   const isEgg = b => EGG_RE.test(b.name) || /you (found|discovered)|egg'?s reward/i.test(b.desc);
   let badgeP = null;
   function loadBadges() {
@@ -204,18 +210,17 @@
 
       // 3. Badge ownership, one check per badge (only possible with a public inventory)
       if (view) {
-        const st = $("#bdgState"), SK = "mh-ut-own-" + id;
+        const SK = "mh-ut-own-" + id;
         let prev = null; try { prev = JSON.parse(sessionStorage.getItem(SK) || "null"); } catch (e) {}
-        if (prev && Date.now() - prev.t < 15 * 60e3) { fillBadges(P, new Set(prev.own), 0); return; }
-        const owned = await pool(badges, 6, b => get(`${API("inventory")}/v1/users/${id}/items/2/${b.id}/is-owned`), (d, n) => {
+        if (prev && Date.now() - prev.t < 15 * 60e3) { fillBadges(P, new Set(prev.own), new Set()); return; }
+        const st = $("#bdgState");
+        const res = await checkOwned(id, badges, (d, n) => {
           if (my !== token || !st) return;
           st.querySelector("b").textContent = `${d} / ${n}`; st.querySelector("i").style.width = d / n * 100 + "%";
         });
         if (my !== token) return;
-        const own = new Set(badges.filter((b, i) => owned[i] === true).map(b => b.id));
-        const failed = owned.filter(x => x instanceof Error).length;
-        if (!failed) try { sessionStorage.setItem(SK, JSON.stringify({ t: Date.now(), own: [...own] })); } catch (e) {}
-        fillBadges(P, own, failed);
+        if (!res.unk.size) try { sessionStorage.setItem(SK, JSON.stringify({ t: Date.now(), own: [...res.own] })); } catch (e) {}
+        fillBadges(P, res.own, res.unk);
       }
     } catch (e) {
       if (my !== token) return;
@@ -226,6 +231,14 @@
     }
   }
   const notFound = q => `<div class="ut-msg glass"><img src="../assets/icons/masked-man.png" alt="" /><b>No player called “${esc(q)}”</b><p>Check the spelling. Usernames are the @name on a Roblox profile, not the display name.</p></div>`;
+
+  // Ask Roblox about each badge. Checks that still fail after retries stay "unknown", never "missing".
+  async function checkOwned(id, list, onEach) {
+    const r = await pool(list, 4, b => get(`${API("inventory")}/v1/users/${id}/items/2/${b.id}/is-owned`), onEach);
+    const own = new Set(), unk = new Set();
+    list.forEach((b, i) => { if (r[i] === true) own.add(b.id); else if (r[i] !== false) unk.add(b.id); });
+    return { own, unk };
+  }
 
   /* ---------- Render ---------- */
   const fmtDate = d => new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
@@ -285,6 +298,7 @@
           <div class="egg-ring" id="eggRing"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52" class="eg-bg"/><circle cx="60" cy="60" r="52" class="eg-fg"/></svg><div><b>0</b><small>of ${eggs.length}</small></div></div>
           <div class="egg-txt"><p>Each egg found in the Egg Hunt grants an Eggxotic item at the Flea Bag. Glowing eggs are the ones ${esc(P.displayName || P.name)} has found.</p><div class="egg-bar"><i></i></div><span id="eggPct">Checking…</span></div>
         </div>
+        ${rubyCard(eggs)}
         <div class="egg-grid" id="eggGrid">${eggs.map(b => eggCard(b)).join("")}</div>
       </section>`}
 
@@ -318,29 +332,69 @@
       <span class="bd-ic">${b.icon ? `<img src="${esc(b.icon)}" alt="" loading="lazy" />` : ""}</span>
       <div class="bd-m"><b>${esc(b.name)}</b><p>${esc(b.desc)}</p><small>${short(b.awarded)} players have it</small></div>
       <span class="bd-st" aria-hidden="true"></span></div>`;
+  function rubyCard(eggs) {
+    const it = T.eggItems.find(([n]) => /^ruby crystal/i.test(n)) || ["Ruby Crystallizer", ""];
+    const need = eggs.filter(rubyNeeds).length;
+    return `<div class="ruby" id="ruby">
+      <a class="ruby-pic" href="${ITEM(it[0])}">${it[1] ? `<img src="${esc(wiki(it[1], 160))}" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<span class=ph>R</span>'" />` : `<span class="ph">R</span>`}<i class="ruby-shine" aria-hidden="true"></i></a>
+      <div class="ruby-m">
+        <small>Bonus Eggxotic</small>
+        <a class="ruby-n" href="${ITEM(it[0])}">${esc(it[0])}</a>
+        <p>Claimed at the Flea Bag once you have every egg except the Noob Egg, Eggield, Egg of Illusion and the rare eggs (Baby Borker, Leggacy, Stormcrow and Wisdom Egg).</p>
+        <div class="ruby-bar"><i></i></div>
+        <span class="ruby-st" id="rubySt">Checking 0 / ${need} eggs…</span>
+        <div class="ruby-miss" id="rubyMiss"></div>
+      </div>
+    </div>`;
+  }
   function eggCard(b) {
     const it = eggItem(b);
-    return `<div class="eg" data-id="${b.id}" title="${esc(b.name)}${it ? " → " + esc(it[0]) : ""}">
+    return `<div class="eg${isRare(b) ? " rare" : ""}${rubyNeeds(b) ? "" : " noruby"}" data-id="${b.id}" title="${esc(b.name)}${it ? " → " + esc(it[0]) : ""}">${isRare(b) ? `<em class="eg-tag">Rare</em>` : ""}
       <span class="eg-ic">${b.icon ? `<img src="${esc(b.icon)}" alt="" loading="lazy" />` : ""}</span>
       <b>${esc(b.name)}</b>${it ? `<a href="${ITEM(it[0])}">${esc(it[0])}</a>` : /future/i.test(b.desc) ? `<small>Reward coming later</small>` : ""}</div>`;
   }
-  function fillBadges(P, own, failed) {
+  function fillBadges(P, own, unk) {
     const nonEgg = P.badges.filter(b => !isEgg(b)), eggs = P.badges.filter(isEgg);
     const nOwn = nonEgg.filter(b => own.has(b.id)).length, eOwn = eggs.filter(b => own.has(b.id)).length;
     document.querySelectorAll(".bd, .eg").forEach((el, i) => {
-      const has = own.has(+el.dataset.id);
-      setTimeout(() => el.classList.add(has ? "own" : "miss"), RM ? 0 : Math.min(i, 60) * 18);
+      const bid = +el.dataset.id, st = own.has(bid) ? "own" : unk.has(bid) ? "unk" : "miss";
+      el.classList.remove("own", "miss", "unk");
+      setTimeout(() => el.classList.add(st), RM ? 0 : Math.min(i, 60) * 18);
     });
     const pct = nonEgg.length ? nOwn / nonEgg.length * 100 : 0;
-    $("#bdgSum").innerHTML = `<span class="bdg-done"><b>${nOwn}</b> / ${nonEgg.length} badges · ${pct.toFixed(0)}%</span><span class="bar done"><i style="width:${pct}%"></i></span>${failed ? `<small class="warn">${failed} badge${failed === 1 ? "" : "s"} couldn't be checked</small>` : ""}`;
+    $("#bdgSum").innerHTML = `<span class="bdg-done"><b>${nOwn}</b> / ${nonEgg.length} badges · ${pct.toFixed(0)}%</span><span class="bar done"><i style="width:${pct}%"></i></span>`
+      + (unk.size ? `<span class="unk-note">${unk.size} badge${unk.size === 1 ? "" : "s"} couldn't be checked (Roblox was busy) <button type="button" id="recheck">Check again</button></span>` : "");
     const ring = $("#eggRing"); if (ring) {
       const C = 2 * Math.PI * 52, p = eggs.length ? eOwn / eggs.length : 0;
-      const fg = ring.querySelector(".eg-fg"); fg.style.strokeDasharray = C; fg.style.strokeDashoffset = C;
+      const fg = ring.querySelector(".eg-fg"); fg.style.strokeDasharray = C;
       requestAnimationFrame(() => requestAnimationFrame(() => { fg.style.strokeDashoffset = C * (1 - p); }));
       const b = ring.querySelector("b"); MH.countUp(b, eOwn, 900);
       $(".egg-bar i").style.width = p * 100 + "%";
-      $("#eggPct").textContent = eOwn === eggs.length ? "Every egg found! 🥚" : `${eOwn} found, ${eggs.length - eOwn} to go (${(p * 100).toFixed(0)}%)`;
+      const eUnk = eggs.filter(x => unk.has(x.id)).length;
+      $("#eggPct").textContent = eOwn === eggs.length ? "Every egg found! 🥚" : `${eOwn} found, ${eggs.length - eOwn - eUnk} to go${eUnk ? `, ${eUnk} unchecked` : ""} (${(p * 100).toFixed(0)}%)`;
     }
+    // Ruby Crystallizer
+    const req = eggs.filter(rubyNeeds), rOwn = req.filter(b => own.has(b.id)).length;
+    const rUnk = req.filter(b => unk.has(b.id)), rMiss = req.filter(b => !own.has(b.id) && !unk.has(b.id));
+    const rb = $("#ruby"); if (rb) {
+      rb.classList.toggle("got", rOwn === req.length);
+      rb.querySelector(".ruby-bar i").style.width = (req.length ? rOwn / req.length * 100 : 0) + "%";
+      $("#rubySt").textContent = rOwn === req.length ? `Unlocked! All ${req.length} eggs found.`
+        : rMiss.length ? `${rOwn} / ${req.length} eggs · ${rMiss.length} still needed${rUnk.length ? `, ${rUnk.length} unchecked` : ""}`
+        : `${rOwn} / ${req.length} eggs · ${rUnk.length} couldn't be checked`;
+      $("#rubyMiss").innerHTML = rMiss.length && rMiss.length <= 20 ? `<span>Still needed:</span>${rMiss.map(b => `<em>${esc(b.name)}</em>`).join("")}` : "";
+    }
+    const btn = $("#recheck");
+    if (btn) btn.addEventListener("click", async () => {
+      btn.disabled = true; btn.textContent = "Checking…";
+      const list = P.badges.filter(b => unk.has(b.id));
+      const r = await checkOwned(P.id, list);
+      r.own.forEach(x => own.add(x));
+      const still = new Set([...unk].filter(x => r.unk.has(x)));
+      if (!still.size) try { sessionStorage.setItem("mh-ut-own-" + P.id, JSON.stringify({ t: Date.now(), own: [...own] })); } catch (e) {}
+      fillBadges(P, own, still);
+      MH.toast(still.size ? `${still.size} still couldn't be checked` : "All badges checked");
+    });
   }
 
   /* ---------- Staff directory ---------- */

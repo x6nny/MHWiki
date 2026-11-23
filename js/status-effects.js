@@ -241,7 +241,7 @@
   $("#propIntro").textContent = intros.find(p => /do not retain|do not pertain/i.test(p)) || "";
   const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   $("#matGrid").innerHTML = D.materials.map(m => `
-    <div class="mcard glass reveal">
+    <div class="mcard glass reveal" id="mat-${slug(m.name)}">
       <span class="mname m-${slug(m.name)}">${esc(m.name === "CrackedLava" ? "Cracked Lava" : m.name)}</span>
       <ul>${m.lines.map(l => `<li>${esc(l)}</li>`).join("")}</ul>
       ${m.ex ? `<div class="e-row"><span>Example</span>${chip(m.ex)}</div>` : ""}
@@ -271,4 +271,11 @@
   render();
   const h = location.hash.slice(1);
   if (h && D.effects.some(e => e.slug === h)) setTimeout(() => jumpTo(h), 400);
+  else if (h === "materials" || /^mat-/.test(h)) setTimeout(() => {
+    const el = document.getElementById(h) || document.getElementById("materials");
+    if (!el) return;
+    el.classList.add("in");
+    window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - 120, behavior: MH.reduceMotion ? "auto" : "smooth" });
+    if (el.classList.contains("mcard")) { el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); }
+  }, 400);
 })();

@@ -214,6 +214,38 @@
         : `<span class="iref nolink">${esc(n)}</span>`;
     }).join("")}</div>`;
   }
+  /* Ore effects & materials: link to the Status Effects page with the same animated text */
+  const FX = window.MH_FX;
+  const SE = "status-effects.html";
+  const matHref = d => `${SE}#${d[2] ? "mat-" + d[1] : "materials"}`;
+  function matHTML(v) {
+    if (!FX) return rich(v);
+    return esc(v).replace(FX.matRe, m => {
+      const d = FX.matBy[m.toLowerCase()];
+      const label = d[1] === "crackedlava" ? "Cracked Lava" : m;
+      return `<a class="matlink" href="${matHref(d)}" title="${d[2] ? "See " + esc(label) + " on the Status Effects page" : "See ore materials on the Status Effects page"}"><span class="mname m-${d[1]}">${esc(label)}</span></a>`;
+    });
+  }
+  function oreFxHTML(it) {
+    if (!FX) return "";
+    const f = it.f;
+    const effects = FX.detect([f.effects || "", f.drawbacks || ""].join("\n"), it.n);
+    const mats = [];
+    const seen = new Set();
+    const addMat = (name, roleTxt) => {
+      const d = FX.matBy[name.toLowerCase()]; if (!d || seen.has(d[1])) return; seen.add(d[1]);
+      mats.push({ d, label: d[1] === "crackedlava" ? "Cracked Lava" : d[0], roleTxt });
+    };
+    if (f.ore_material) for (const m of String(f.ore_material).matchAll(FX.matRe)) addMat(m[1], "Ore material");
+    if (FX.KNOWN_MAT[it.n]) addMat(FX.KNOWN_MAT[it.n], "Turns ore into");
+    if (!effects.length && !mats.length) return "";
+    let i = 0;
+    return `<div class="m-fx">` +
+      mats.map(m => `<a class="fxchip mat" style="--i:${i++}" href="${matHref(m.d)}"><span class="mname m-${m.d[1]}">${esc(m.label)}</span><small><em>${m.roleTxt}</em><i>Details →</i></small></a>`).join("") +
+      effects.map(e => `<a class="fxchip" style="--i:${i++};--c:${(FX.STYLE[e.slug] || ["#fff"])[0]}" href="${SE}#${e.slug}" title="${esc(e.name)} on the Status Effects page"><span class="fxslot" data-slug="${e.slug}" data-name="${esc(e.name)}"></span><small><em>${e.role}</em><i>Details →</i></small></a>`).join("") +
+      `</div>`;
+  }
+
   function sec(title, html) { return html ? `<section class="m-sec"><h4>${title}</h4>${html}</section>` : ""; }
 
   function buildModal(it) {
@@ -228,7 +260,8 @@
     const stats = STAT_ORDER.filter(k => f[k]).map((k, i) => {
       const v = f[k];
       const cls = /^yes\b/i.test(v) ? "yes" : /^no\b/i.test(v) ? "no" : "";
-      return `<div class="ms" style="--i:${i}"><span>${LABELS[k] || k}</span><b class="${cls}">${rich(v)}</b></div>`;
+      const val = k === "ore_material" ? matHTML(v) : rich(v);
+      return `<div class="ms" style="--i:${i}"><span>${LABELS[k] || k}</span><b class="${cls}">${val}</b></div>`;
     }).join("");
 
     let elements = "";
@@ -266,6 +299,7 @@
         ${it.quote ? `<p class="m-quote">${rich(it.quote)}</p>` : ""}
         ${sec("Effects", f.effects && `<div class="m-effect">${rich(f.effects)}</div>`)}
         ${sec("Drawbacks", f.drawbacks && `<div class="m-effect bad">${rich(f.drawbacks)}</div>`)}
+        ${sec("Ore effects", oreFxHTML(it))}
         ${sec("Requirements", f.requirements && `<div class="m-effect req">${rich(f.requirements)}</div>`)}
         ${sec("Stats", stats && `<div class="m-stats">${stats}</div>`)}
         ${sec("Evolutions & fusions", craft)}
@@ -278,6 +312,7 @@
         ${sec("Original idea", sub)}
         ${sec("Categories", cats.length && `<div class="cat-chips">${cats.map(c => `<span>${esc(c)}</span>`).join("")}</div>`)}
       </div>`;
+    if (FX) body.querySelectorAll(".fxslot").forEach(sl => sl.replaceWith(FX.fxName({ slug: sl.dataset.slug, name: sl.dataset.name })));
     body.querySelector(".m-main").scrollTop = 0;
     body.querySelector(".m-side").scrollTop = 0;
     body.querySelector("[data-copy]").addEventListener("click", async () => {

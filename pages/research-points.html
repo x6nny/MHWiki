@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Points · Miner's Haven Wiki</title>
+  <meta name="referrer" content="no-referrer" />
+  <meta name="description" content="Research Points (RP) in Miner's Haven: every research crate, shop tier unlock costs, the best RP furnaces, an RP farm calculator and farming tips." />
+  <link rel="icon" href="../assets/icons/rp.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css?v=17" />
+  <link rel="stylesheet" href="../css/subpage.css?v=17" />
+  <link rel="stylesheet" href="../css/research-points.css?v=17" />
+</head>
+<body class="subpage rp-page">
+  <div class="backdrop" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+    <div class="grid-lines"></div>
+    <canvas id="ore-field"></canvas>
+    <div class="grain"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner glass">
+      <a href="../index.html" class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="item-index.html">Item Index</a>
+        <a href="rebirth.html">Rebirth</a>
+        <a href="sacrifice.html">Sacrifice</a>
+        <a href="research-points.html" class="current">Research Points</a>
+        <a href="status-effects.html">Status Effects</a>
+        <a href="mystery-boxes.html">Mystery Boxes</a>
+        <a href="codes.html">Codes</a>
+        <a href="cash-suffixes.html">Cash Suffixes</a>
+        <a href="events.html">Events</a>
+        <a href="npcs.html">NPCs</a>
+        <a href="update-log.html">Update Log</a>
+        <a href="gamepasses.html">Gamepasses</a>
+      </nav>
+      <a class="search-trigger" href="../index.html#explore">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>All sections</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="page-hero rp-hero">
+      <div>
+        <nav class="crumbs intro" style="--d:0" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span>/</span><b>Research Points</b>
+        </nav>
+        <h1 class="intro" style="--d:1"><span class="shine rp-shine">Research Points</span></h1>
+        <p class="lede intro" style="--d:2" id="lede"></p>
+        <div class="stats intro" style="--d:3">
+          <div class="stat glass"><strong id="stCrates">0</strong><span>Sky crates</span></div>
+          <div class="stat glass"><strong id="stTop">0</strong><span>Best RP / ore</span></div>
+          <div class="stat glass"><strong id="stAlmighty">0</strong><span>Almighty unlock</span></div>
+          <div class="stat glass"><strong id="stBp">0</strong><span>Priciest blueprint</span></div>
+        </div>
+        <nav class="rp-jump intro" style="--d:4" aria-label="On this page">
+          <a href="#earn">Crates</a><a href="#spend">Spending</a><a href="#furnaces">Furnaces</a><a href="#calc">Calculator</a><a href="#guide">Farming guide</a><a href="#history">History</a>
+        </nav>
+      </div>
+
+      <!-- Crate catcher -->
+      <div class="catch-wrap intro" style="--d:2">
+        <div class="catch glass" id="catch" aria-label="Crate catcher mini-game">
+          <div class="sky" id="sky"><span class="sun" id="sun"></span><span class="stars"></span></div>
+          <div class="ground"></div>
+          <div class="field" id="field"></div>
+          <div class="catch-hud">
+            <div class="hud-rp"><img src="../assets/rp/rp-icon.webp" alt="" /><b id="hudRp">0</b><small>RP</small></div>
+            <button class="hud-time" id="hudTime" type="button" title="Switch day and night"><span id="hudTimeIcon">☀</span><span id="hudTimeText">Day</span></button>
+          </div>
+          <div class="catch-goal">
+            <div class="goal-row"><span id="goalText">Next unlock: Super Rare</span><b id="goalNum">0 / 2,500</b></div>
+            <div class="goal-bar"><i id="goalFill"></i></div>
+          </div>
+          <p class="catch-hint" id="catchHint">Click the crates before they disappear</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EARN ================= -->
+    <section class="rp-block" id="earn">
+      <div class="rp-head reveal">
+        <span class="rp-kicker">How to get RP</span>
+        <h2>Research crates</h2>
+        <p>Crates drop from the sky all over the map. Walk into one to open it. You can also farm RP by burning ore in furnaces, which is covered <a href="#furnaces">further down</a>.</p>
+      </div>
+      <div class="crate-tabs reveal" role="tablist" id="crateTabs"></div>
+      <div class="crate-grid" id="crateGrid"></div>
+      <div class="drop-ladder glass reveal" id="ladder">
+        <div class="ladder-head"><h3>RP per sky crate</h3><span>Bars scale to the Diamond Crate's 5k</span></div>
+        <div id="ladderRows"></div>
+      </div>
+    </section>
+
+    <!-- ================= SPEND ================= -->
+    <section class="rp-block" id="spend">
+      <div class="rp-head reveal">
+        <span class="rp-kicker">What RP is for</span>
+        <h2>Spending your RP</h2>
+        <p>RP isn't spent when you unlock a shop tier. You just need to have earned that much. Type in your RP to see what's open to you.</p>
+      </div>
+      <div class="spend-grid">
+        <div class="unlock glass reveal">
+          <div class="unlock-top">
+            <label for="myRp">Your RP</label>
+            <div class="rp-input"><img src="../assets/rp/rp-icon.webp" alt="" /><input id="myRp" type="text" inputmode="decimal" value="75k" autocomplete="off" spellcheck="false" /></div>
+            <input id="myRpSlider" type="range" min="0" max="1000" step="1" value="0" aria-label="Your RP (slider)" />
+          </div>
+          <div class="tier-steps" id="tierSteps"></div>
+          <p class="unlock-sum" id="unlockSum"></p>
+        </div>
+        <div class="uses" id="uses"></div>
+      </div>
+    </section>
+
+    <!-- ================= FURNACES ================= -->
+    <section class="rp-block" id="furnaces">
+      <div class="rp-head reveal">
+        <span class="rp-kicker">Farming</span>
+        <h2>Best RP furnaces</h2>
+        <p>Since the Reincarnation Update almost every furnace gives RP for a set number of ore. Ranked by RP per ore, highest first.</p>
+      </div>
+      <div class="fz-tools reveal">
+        <div class="fz-chips" id="fzChips"></div>
+        <div class="fz-sort" id="fzSort">
+          <button type="button" data-sort="rate" class="on">RP / ore</button>
+          <button type="button" data-sort="name">A–Z</button>
+        </div>
+      </div>
+      <div class="fz-list glass reveal" id="fzList"></div>
+    </section>
+
+    <!-- ================= CALCULATOR ================= -->
+    <section class="rp-block" id="calc">
+      <div class="rp-head reveal">
+        <span class="rp-kicker">Plan your farm</span>
+        <h2>RP farm calculator</h2>
+        <p>Pick a furnace and how much ore reaches it each second. Mines' drop rates don't really matter for RP, only how many ores get processed.</p>
+      </div>
+      <div class="calc-grid">
+        <div class="calc-in glass reveal">
+          <label class="fld"><span>Furnace</span><select id="cFurnace"></select></label>
+          <label class="fld"><span>Ore reaching the furnace per second <b id="cOpsVal">40</b></span>
+            <input type="range" id="cOps" min="1" max="150" value="40" /></label>
+          <label class="fld"><span>Hours you leave it running <b id="cHVal">8 h</b></span>
+            <input type="range" id="cH" min="1" max="24" value="8" /></label>
+          <button type="button" class="preset" id="cPreset">Try the Painite + Scarab farm</button>
+          <div class="calc-note" id="cNote"></div>
+        </div>
+        <div class="calc-out glass reveal">
+          <div class="meter">
+            <svg viewBox="0 0 200 200" aria-hidden="true">
+              <circle cx="100" cy="100" r="84" class="m-track" />
+              <circle cx="100" cy="100" r="84" class="m-fill" id="mFill" />
+            </svg>
+            <div class="m-mid"><small>per hour</small><b id="oHour">0</b><span>RP</span></div>
+          </div>
+          <div class="out-rows">
+            <div><span>Per minute</span><b id="oMin">0</b></div>
+            <div><span>Per session</span><b id="oSess">0</b></div>
+            <div><span>Per day</span><b id="oDay">0</b></div>
+          </div>
+          <div class="eta" id="eta"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GUIDE ================= -->
+    <section class="rp-block" id="guide">
+      <div class="rp-head reveal">
+        <span class="rp-kicker">Farming guide</span>
+        <h2>Building an RP farm</h2>
+      </div>
+      <div class="picks" id="picks"></div>
+      <div class="guide-grid">
+        <div class="mines glass reveal">
+          <h3>Fast mines</h3>
+          <p>Fastest first. Speed only saves space: you hit the ore limit with fewer mines.</p>
+          <ol id="mineList"></ol>
+        </div>
+        <div class="tips" id="tips"></div>
+      </div>
+    </section>
+
+    <!-- ================= HISTORY ================= -->
+    <section class="rp-block" id="history">
+      <div class="rp-head reveal">
+        <span class="rp-kicker">Since 2015</span>
+        <h2>RP through the years</h2>
+      </div>
+      <div class="hist glass reveal" id="hist"></div>
+      <div class="extra-grid">
+        <div class="related" id="related"></div>
+        <div class="trivia glass reveal">
+          <h3>Trivia</h3>
+          <ul id="trivia"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner glass reveal">
+      <div class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </div>
+      <p>
+        Research Points details come from the
+        <a href="https://minershaven.fandom.com/wiki/Research_Points" target="_blank" rel="noopener">Research Points</a>,
+        <a href="https://minershaven.fandom.com/wiki/Research_Crates" target="_blank" rel="noopener">Research Crates</a>,
+        <a href="https://minershaven.fandom.com/wiki/Item_Tiers" target="_blank" rel="noopener">Item Tiers</a> and item pages on the Miner's Haven Fandom wiki,
+        available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA</a>.
+        A fan-made wiki, not affiliated with Roblox or Berezaa Games.
+      </p>
+    </div>
+  </footer>
+
+  <button class="to-top glass" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../js/common.js?v=17"></script>
+  <script src="../js/rp-data.js?v=17"></script>
+  <script src="../js/research-points.js?v=17"></script>
+</body>
+</html>

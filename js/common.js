@@ -11,6 +11,42 @@ const MH = (() => {
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  /* Priority nav: move links that don't fit into a "More" menu */
+  (function priorityNav() {
+    const inner = document.querySelector(".subpage .nav-inner");
+    const links = inner && inner.querySelector(".nav-links");
+    if (!links) return;
+    const all = [...links.querySelectorAll("a")];
+    const more = document.createElement("div");
+    more.className = "nav-more";
+    more.innerHTML = `<button class="nav-more-btn" type="button" aria-haspopup="true" aria-expanded="false">More <svg viewBox="0 0 24 24" width="14" height="14"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="nav-more-menu glass" role="menu"></div>`;
+    links.appendChild(more);
+    const btn = more.firstElementChild, menu = more.lastElementChild;
+    const over = () => inner.scrollWidth > inner.clientWidth + 1;
+    // Move links one at a time until everything fits
+    function fitStep() {
+      all.forEach(a => links.insertBefore(a, more));
+      more.classList.remove("has");
+      if (getComputedStyle(links).display === "none" || !over()) return;
+      more.classList.add("has");
+      const queue = all.filter(a => !a.classList.contains("current")).reverse();
+      while (over() && queue.length) {
+        const a = queue.shift();
+        const after = all.slice(all.indexOf(a) + 1).find(x => x.parentNode === menu);
+        menu.insertBefore(a, after || null);
+      }
+      btn.classList.toggle("cur", !!menu.querySelector(".current"));
+    }
+    const close = () => { more.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); };
+    btn.addEventListener("click", e => { e.stopPropagation(); const o = more.classList.toggle("open"); btn.setAttribute("aria-expanded", o); });
+    document.addEventListener("click", e => { if (!more.contains(e.target)) close(); });
+    document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
+    let raf;
+    window.addEventListener("resize", () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => { close(); fitStep(); }); });
+    fitStep();
+    document.fonts && document.fonts.ready.then(fitStep);
+  })();
+
   /* Floating ore particles */
   (function oreField() {
     const canvas = document.getElementById("ore-field");

@@ -201,6 +201,7 @@
 
   // "⟦Item⟧" markers become links to that item's popup when we have it
   function rich(text) {
+    text = String(text ?? "").replace(/\b(Shards of Life|Research Points|Unobtainium Crystals) \1\b/g, "$1");
     return esc(text).replace(/⟦([^⟧]+)⟧/g, (_, n) => {
       const it = byName.get(n.toLowerCase().replace(/&amp;/g, "&").replace(/&#39;/g, "'"));
       return it ? `<button class="inl" data-goto="${it._i}">${n}</button>` : `<b>${n}</b>`;
@@ -286,7 +287,7 @@
         <div class="m-img">${it.img ? `<img src="${esc(imgUrl(it.img, 400))}" referrerpolicy="no-referrer" alt="${esc(it.n)}" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'ph',textContent:'${esc(it.n[0])}'}))" />` : `<span class="ph">${esc(it.n[0])}</span>`}</div>
         ${variantsHTML(it)}
         <div class="m-chips"><span class="tier-pill" style="--tb:${bg};--tf:${fg}">${esc(it.tier)}</span><span class="chip2">${esc(type.replace(/s$/, ""))}</span>${ev}</div>
-        <div class="m-quick">
+        <div class="m-quick" data-cur-money>
           ${q("cost", "Cost")}${q("sell", "Sells for")}${q("item_size", "Size")}${q("date", "Added")}${q("source", "Where to get it", true)}${q("created_by", "Created by", true)}
         </div>
         <div class="m-actions">
@@ -301,7 +302,7 @@
         ${sec("Drawbacks", f.drawbacks && `<div class="m-effect bad">${rich(f.drawbacks)}</div>`)}
         ${sec("Ore effects", oreFxHTML(it))}
         ${sec("Requirements", f.requirements && `<div class="m-effect req">${rich(f.requirements)}</div>`)}
-        ${sec("Stats", stats && `<div class="m-stats">${stats}</div>`)}
+        ${sec("Stats", stats && `<div class="m-stats" data-cur-money>${stats}</div>`)}
         ${sec("Evolutions & fusions", craft)}
         ${sec("Elements", elements)}
         ${sec("Overview", it.overview && `<p class="m-text">${rich(it.overview)}</p>`)}

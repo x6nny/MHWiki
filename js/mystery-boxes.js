@@ -44,7 +44,7 @@
     const c = BOX_COLOR[b.slug] || "#fff";
     const price = cheapest(b);
     const tags = [];
-    if (price) tags.push(`<span class="b-tag"><img src="../assets/icons/uc.png" alt="" />${price} uC</span>`);
+    if (price) tags.push(`<span class="b-tag">${price} uC</span>`);
     if (b.notes.some(n => /always lucky/i.test(n))) tags.push(`<span class="b-tag lucky">Always lucky</span>`);
     if (b.relics.length) tags.push(`<span class="b-tag relic">Has relics</span>`);
     const total = b.odds.reduce((s, o) => s + o[0], 0);

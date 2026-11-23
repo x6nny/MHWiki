@@ -118,5 +118,80 @@ const MH = (() => {
     })(start);
   }
 
-  return { reduceMotion, toast, reveal, countUp };
+
+  /* ---------- Currency icons ----------
+     Wraps amounts like "500 Shards of Life", "35 Candy", "117 uC", "75k RP", "R$95",
+     "350 Gold Clovers" and "10 Present Value" in an icon + number. Money ($) only gets an
+     icon inside [data-cur-money] (price boxes), so prose and suffix tables stay clean.
+     Runs on everything the page renders, now and later. Skip a block with [data-nocur]. */
+  const ASSETS = (() => {
+    const s = document.querySelector('script[src*="common.js"]');
+    return s ? s.getAttribute("src").replace(/js\/common\.js.*$/, "") + "assets/" : "../assets/";
+  })();
+  const NUM = String.raw`(?<![\w$.,])\d[\d,]*(?:\.\d+)?(?:\s?[kKmMbB]\b)?`;
+  const RANGE = `${NUM}(?:\\s?(?:to|-|–|&)\\s?${NUM})?`;
+  const CUR = [
+    { k: "shard", re: `(${RANGE})\\s?Shards? of Life\\b`, icon: "sol/shard.webp", name: "Shards of Life" },
+    { k: "shard2", re: `(${RANGE})\\s?[Ss]hards?\\b(?! of Life)`, icon: "sol/shard.webp", name: "Shards of Life" },
+    { k: "clover", re: `(${RANGE})\\s?Gold(?:en)? Clovers?\\b`, icon: "icons/st-patty.png", name: "Golden Clovers" },
+    { k: "candy", re: `(${RANGE})\\s?Candy\\b`, icon: "icons/candy.png", name: "Candy" },
+    { k: "present", re: `(${RANGE})\\s?Present Value\\b`, icon: "icons/winter.png", name: "Present Value" },
+    { k: "uc", re: `(${RANGE})\\s?uC\\b`, icon: "icons/uc.png", name: "Unobtainium Crystals (uC)" },
+    { k: "rp", re: `(${RANGE})\\s?RP\\b`, icon: "icons/rp.png", name: "Research Points" },
+    { k: "robux", re: `R\\$\\s?(${RANGE})`, icon: "icons/robux.png", name: "Robux" },
+    { k: "robux2", re: `(${RANGE})\\s?(?:R\\$|Robux)(?![\\w$])`, icon: "icons/robux.png", name: "Robux" },
+    { k: "money", re: `(?<![R\\w])(\\$\\s?\\d[\\d,.]*\\s?[A-Za-z]{0,8}(?:\\s?(?:to|-|–)\\s?\\$\\s?\\d[\\d,.]*\\s?[A-Za-z]{0,8})?)`, icon: "icons/money.png", name: "Cash", money: true },
+  ];
+  const curRe = new RegExp(CUR.map(c => `(?<${c.k}>${c.re.replace(/\((?!\?)/g, "(?:")})`).join("|"), "g");
+  const SKIP = new Set(["SCRIPT", "STYLE", "TEXTAREA", "INPUT", "SELECT", "OPTION", "CODE", "NOSCRIPT"]);
+  function curNode(t) {
+    const txt = t.nodeValue;
+    if (!txt || txt.length < 2 || !/\d/.test(txt)) return;
+    const host = t.parentElement;
+    if (!host || SKIP.has(host.tagName) || host.closest("mh-cur, svg, [data-nocur], .nav, .footer, .toast, [contenteditable]")) return;
+    const money = !!host.closest("[data-cur-money]");
+    curRe.lastIndex = 0;
+    let m, last = 0, frag = null;
+    while ((m = curRe.exec(txt))) {
+      const c = CUR.find(x => m.groups[x.k] !== undefined);
+      if (!c || (c.money && !money)) continue;
+      frag = frag || document.createDocumentFragment();
+      if (m.index > last) frag.appendChild(document.createTextNode(txt.slice(last, m.index)));
+      const el = document.createElement("mh-cur");
+      el.className = "cur-" + c.k.replace(/\d$/, "");
+      el.title = c.name;
+      const img = document.createElement("img");
+      img.src = ASSETS + c.icon; img.alt = ""; img.decoding = "async";
+      el.appendChild(img);
+      // keep the number (and $ for cash); the icon stands in for the unit
+      const inner = new RegExp(c.re).exec(m[0]);
+      el.appendChild(document.createTextNode((c.money ? m[0] : (inner && inner[1] ? inner[1] : m[0])).replace(/\s+/g, " ").trim()));
+      frag.appendChild(el);
+      last = m.index + m[0].length;
+    }
+    if (!frag) return;
+    if (last < txt.length) frag.appendChild(document.createTextNode(txt.slice(last)));
+    t.replaceWith(frag);
+  }
+  function curify(root) {
+    if (!root) return;
+    if (root.nodeType === 3) { curNode(root); return; }
+    if (root.nodeType !== 1 || SKIP.has(root.tagName) || root.tagName === "MH-CUR") return;
+    const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const list = [];
+    while (w.nextNode()) list.push(w.currentNode);
+    list.forEach(curNode);
+  }
+  let pending = new Set(), queued = false;
+  const flush = () => { queued = false; const nodes = [...pending]; pending.clear(); nodes.forEach(n => n.isConnected && curify(n)); };
+  new MutationObserver(muts => {
+    for (const mu of muts) {
+      if (mu.type === "characterData") pending.add(mu.target);
+      else mu.addedNodes.forEach(n => { if (!(n.nodeType === 1 && n.tagName === "MH-CUR")) pending.add(n); });
+    }
+    if (!queued && pending.size) { queued = true; requestAnimationFrame(flush); }
+  }).observe(document.body, { childList: true, subtree: true, characterData: true });
+  curify(document.body);
+
+  return { curify, reduceMotion, toast, reveal, countUp };
 })();

@@ -13,6 +13,7 @@ const SECTIONS = [
   { id: "events",         name: "Events",         icon: "assets/icons/winter.png",        desc: "Seasonal events since 2015",                 cat: "news",        keys: "valentines st patricks spring easter birthday summer halloween black friday winter christmas", ready: true },
   { id: "mystery-boxes",  name: "Mystery Boxes",  icon: "assets/icons/spook-mcdooks.png", desc: "Box types, odds & Lucky Clovers",            cat: "economy",     keys: "boxes crates inferno lucky clover spook mcdooks unreal magnificent", ready: true },
   { id: "codes",          name: "Codes",          icon: "assets/icons/uc.png",            desc: "Active codes for uC, boxes & items",         cat: "economy",     keys: "redeem codes uc unobtainium crystals free",                  ready: true },
+  { id: "cash-suffixes",  name: "Cash Suffixes",  icon: "assets/icons/money.png",         desc: "Every suffix from k to UNCENT, plus a converter", cat: "economy", keys: "cash suffix suffixes money k m b t qn sx centillion uncent scientific notation converter cap inf", ready: true },
   { id: "npcs",           name: "NPCs",           icon: "assets/icons/craftsman.png",     desc: "Masked Man, Craftsman, Draedon & more",      cat: "world",       keys: "npc masked man craftsman spook mcdooks draedon daegel fargield john doe zalgo", ready: false },
 ];
 const byId = Object.fromEntries(SECTIONS.map(s => [s.id, s]));

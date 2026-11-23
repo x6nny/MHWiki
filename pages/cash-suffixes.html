@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cash Suffixes · Miner's Haven Wiki</title>
+  <meta name="referrer" content="no-referrer" />
+  <meta name="description" content="Every Miner's Haven cash suffix from k to UNCENT, a suffix converter, money milestones, glitched suffixes and the history of the cash cap." />
+  <link rel="icon" href="../assets/icons/money.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css?v=13" />
+  <link rel="stylesheet" href="../css/subpage.css?v=13" />
+  <link rel="stylesheet" href="../css/cash-suffixes.css?v=13" />
+</head>
+<body class="subpage">
+  <div class="backdrop" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+    <div class="grid-lines"></div>
+    <canvas id="ore-field"></canvas>
+    <div class="grain"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner glass">
+      <a href="../index.html" class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="item-index.html">Item Index</a>
+        <a href="status-effects.html">Status Effects</a>
+        <a href="mystery-boxes.html">Mystery Boxes</a>
+        <a href="codes.html">Codes</a>
+        <a href="cash-suffixes.html" class="current">Cash Suffixes</a>
+        <a href="events.html">Events</a>
+        <a href="update-log.html">Update Log</a>
+        <a href="gamepasses.html">Gamepasses</a>
+      </nav>
+      <a class="search-trigger" href="../index.html#explore">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>All sections</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero cs-hero">
+      <div>
+        <nav class="crumbs intro" style="--d:0" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span>/</span><b>Cash Suffixes</b>
+        </nav>
+        <h1 class="intro" style="--d:1"><span class="shine">Cash Suffixes</span></h1>
+        <p class="lede intro" style="--d:2" id="lede"></p>
+        <div class="stats intro" style="--d:3">
+          <div class="stat glass"><strong id="stCount">0</strong><span>Suffixes</span></div>
+          <div class="stat glass"><strong id="stDigits">0</strong><span>Digits at the cap</span></div>
+          <div class="stat glass"><strong id="stMiles">0</strong><span>Milestones</span></div>
+          <div class="stat glass"><strong id="stGlitch">0</strong><span>Glitched suffixes</span></div>
+        </div>
+      </div>
+
+      <!-- Money counter -->
+      <div class="counter glass intro" style="--d:2" aria-hidden="true">
+        <div class="cn-top"><img src="../assets/codes/cash.webp" alt="" /><span>Your cash</span><em id="cnLife">Life 1</em></div>
+        <div class="cn-money"><span class="cn-dollar">$</span><span id="cnNum">300</span><span class="cn-suf" id="cnSuf"></span></div>
+        <div class="cn-name" id="cnName">Three hundred</div>
+        <div class="cn-bar"><i id="cnFill"></i><span id="cnSci">3e+2</span></div>
+        <div class="cn-rain" id="cnRain"></div>
+      </div>
+    </section>
+
+    <!-- Converter -->
+    <section class="cs-block" id="convert">
+      <div class="conv glass reveal">
+        <div class="conv-head">
+          <div>
+            <span class="eyebrow">Suffix converter</span>
+            <h2>What does that number mean?</h2>
+            <p>Type an amount like <code>25Qn</code>, <code>1.5e+45</code>, <code>3 septillion</code> or a plain number. Suffixes are case-sensitive in-game (qd and QnD are different), so the converter checks the exact spelling first.</p>
+          </div>
+        </div>
+        <form class="conv-form" id="convForm" autocomplete="off">
+          <label class="conv-field">
+            <span class="dollar">$</span>
+            <input id="convIn" type="text" spellcheck="false" value="25Qn" aria-label="Amount to convert" />
+          </label>
+          <button class="btn btn-primary" type="submit">Convert</button>
+        </form>
+        <div class="presets" id="presets"></div>
+        <div class="conv-out" id="convOut" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Scale + ladder -->
+    <section class="cs-block" id="ladder">
+      <div class="cs-head reveal">
+        <span class="eyebrow">From k to UNCENT</span>
+        <h2>Every cash suffix</h2>
+        <p>Each suffix is 1,000 times the one before it. Names follow the Conway-Wechsler system for naming big numbers. Click any suffix to open it in the converter.</p>
+      </div>
+      <div class="scale glass reveal" id="scale">
+        <div class="sc-track"><i class="sc-fill"></i></div>
+        <div class="sc-marks" id="scaleMarks"></div>
+      </div>
+      <div class="ladder-tools glass reveal">
+        <label class="tb-search">
+          <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input id="q" type="search" placeholder="Search suffixes, names or items…" autocomplete="off" />
+        </label>
+        <label class="tg-wrap">
+          <input type="checkbox" id="onlyNotes" /><span class="tg"></span><span>Only suffixes with milestones</span>
+        </label>
+      </div>
+      <p class="cs-count" id="count" aria-live="polite"></p>
+      <div id="groups"></div>
+      <div class="no-results glass" id="empty" hidden>
+        <img src="../assets/icons/money.png" alt="" />
+        <h3>No suffixes match</h3>
+        <p>Try another search.</p>
+        <button class="btn btn-ghost" id="clear">Clear search</button>
+      </div>
+    </section>
+
+    <!-- History -->
+    <section class="cs-block" id="history">
+      <div class="cs-head reveal">
+        <span class="eyebrow">Raising the roof</span>
+        <h2>How the cash cap grew</h2>
+        <p>The biggest suffix in the game has climbed from Sextillion (21 zeros) at launch to Uncentillion (306 zeros) today.</p>
+      </div>
+      <div class="stairs glass reveal" id="stairs"></div>
+      <ol class="cap-list" id="capList"></ol>
+      <details class="more glass reveal">
+        <summary>The full timeline from the wiki</summary>
+        <ul id="timeline"></ul>
+      </details>
+    </section>
+
+    <!-- Glitched -->
+    <section class="cs-block" id="glitched">
+      <div class="cs-head reveal">
+        <span class="eyebrow">When the numbers break</span>
+        <h2>Glitched suffixes</h2>
+        <p>Bugs over the years have produced some very strange cash amounts. Most were patched, and some wiped people's saves.</p>
+      </div>
+      <div id="glitchList"></div>
+    </section>
+
+    <!-- Notation + trivia -->
+    <section class="cs-block two-col">
+      <div class="note glass reveal">
+        <span class="eyebrow">Reading big numbers</span>
+        <h2>Scientific notation</h2>
+        <p>Numbers too big to write out are shown as <b>m × 10<sup>n</sup></b>: a number between 1 and 10, times 10 raised to a power. The game (and this wiki) writes it as <code>me+n</code>, so <code>1.23e+4</code> means 12,300 and <code>4.56e-2</code> means 0.0456.</p>
+        <div class="sci-demo" id="sciDemo" aria-hidden="true"></div>
+      </div>
+      <div class="note glass reveal">
+        <span class="eyebrow">Good to know</span>
+        <h2>Trivia</h2>
+        <ul id="trivia"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner glass reveal">
+      <div class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </div>
+      <p>
+        Suffixes, milestones and history come from the
+        <a href="https://minershaven.fandom.com/wiki/Cash_Suffixes" target="_blank" rel="noopener">Cash Suffixes page on the Miner's Haven Fandom wiki</a>,
+        available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA</a>.
+        A fan-made wiki, not affiliated with Roblox or Berezaa Games.
+      </p>
+    </div>
+  </footer>
+
+  <button class="to-top glass" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../js/common.js?v=13"></script>
+  <script src="../js/suffix-data.js?v=13"></script>
+  <script src="../js/cash-suffixes.js?v=13"></script>
+</body>
+</html>

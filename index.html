@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Miner's Haven Wiki</title>
-  <meta name="description" content="A fan-made guide to Miner's Haven, the sandbox tycoon on Roblox: items, rebirth, sacrifice, gamepasses, status effects, updates, events, mystery boxes, codes and NPCs." />
+  <meta name="description" content="A fan-made guide to Miner's Haven, the sandbox tycoon on Roblox: items, rebirth, sacrifice, gamepasses, status effects, updates, events, mystery boxes, codes, cash suffixes and NPCs." />
   <link rel="icon" href="assets/icons/rebirth.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=12" />
+  <link rel="stylesheet" href="css/style.css?v=13" />
 </head>
 <body>
   <!-- ===== Animated backdrop ===== -->
@@ -60,7 +60,7 @@
         </h1>
         <p class="lede intro" style="--d:2">
           The guide to Roblox's biggest sandbox tycoon. Over a thousand items, every
-          rebirth and sacrifice, eleven years of events, and the latest codes, all in one place.
+          rebirth and sacrifice, eleven years of events, the latest codes and every cash suffix, all in one place.
         </p>
 
         <button class="hero-search glass intro" style="--d:3" id="heroSearch">
@@ -283,13 +283,17 @@
         </article>
 
         <!-- 08 Mystery Boxes -->
-        <article class="card glass reveal" data-cat="economy" data-page="mystery-boxes" style="--accent:#9dff6b; --accent2:#b072ff">
+        <article class="card glass reveal span-2" data-cat="economy" data-page="mystery-boxes" style="--accent:#9dff6b; --accent2:#b072ff">
           <div class="card-spot"></div>
           <div class="card-top"><span class="num">08</span><span class="chip">14 box types</span></div>
-          <img class="card-icon float wobble" src="assets/icons/spook-mcdooks.png" alt="" />
-          <h3>Mystery Boxes</h3>
-          <p>Every box, where to get it, and its odds. Lucky Clovers can double or triple a win.</p>
-          <ul class="tags"><li>Regular</li><li>Inferno</li><li>Limited</li><li>Clovers</li></ul>
+          <div class="split">
+            <div>
+              <h3>Mystery Boxes</h3>
+              <p>Every box, where to get it, and its odds. Lucky Clovers can double or triple a win.</p>
+              <ul class="tags"><li>Regular</li><li>Inferno</li><li>Limited</li><li>Clovers</li></ul>
+            </div>
+            <img class="card-icon float wobble big" src="assets/icons/spook-mcdooks.png" alt="" />
+          </div>
           <a class="cta" href="pages/mystery-boxes.html">Open the boxes <i></i></a>
         </article>
 
@@ -313,7 +317,7 @@
         </article>
 
         <!-- 10 NPCs -->
-        <article class="card glass reveal" data-cat="world" data-page="npcs" style="--accent:#7ee0a1; --accent2:#c7c7ff">
+        <article class="card glass reveal span-2" data-cat="world" data-page="npcs" style="--accent:#7ee0a1; --accent2:#c7c7ff">
           <div class="card-spot"></div>
           <div class="card-top"><span class="num">10</span><span class="chip">43 characters</span></div>
           <div class="npc-stack" aria-hidden="true">
@@ -324,6 +328,24 @@
           <h3>NPCs</h3>
           <p>The Masked Man, The Craftsman, Spook McDooks, Draedon and the rest: where to find them and what they do.</p>
           <a class="cta" href="pages/npcs.html">Meet the cast <i></i></a>
+        </article>
+
+        <!-- 11 Cash Suffixes -->
+        <article class="card glass reveal span-2" data-cat="economy" data-page="cash-suffixes" style="--accent:#40d565; --accent2:#b6ff6b">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">11</span><span class="chip">102 suffixes</span></div>
+          <div class="split">
+            <div>
+              <h3>Cash Suffixes</h3>
+              <p>From k to UNCENT: what every suffix means, a converter for big numbers, and the milestones along the way.</p>
+              <ul class="tags"><li>Converter</li><li>Milestones</li><li>Cash cap</li></ul>
+            </div>
+            <div class="suffix-roll" aria-hidden="true">
+              <span class="sr-dollar">$1</span>
+              <span class="sr-win"><span class="sr-list"><b>k</b><b>M</b><b>B</b><b>T</b><b>qd</b><b>Qn</b><b>sx</b><b>Sp</b><b>O</b><b>N</b><b>de</b><b>DD</b><b>Vgn</b><b>QdDR</b><b>SXGNTL</b><b>CENT</b><b>UNCENT</b><b>k</b></span></span>
+            </div>
+          </div>
+          <a class="cta" href="pages/cash-suffixes.html">See every suffix <i></i></a>
         </article>
 
       </div>
@@ -358,6 +380,6 @@
 
   <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="js/main.js?v=12"></script>
+  <script src="js/main.js?v=13"></script>
 </body>
 </html>

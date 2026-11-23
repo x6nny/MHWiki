@@ -30,6 +30,9 @@
     return idx < 0 ? Date.UTC(y, 0, 1) : Date.UTC(y, idx, d);
   }
   const tierColors = t => TIERS[t] || ["#666", "#fff"];
+  const IMG_BASE = window.MH_IMG_BASE || "";
+  const vUrl = (v, size) => IMG_BASE + v.u + "/scale-to-width-down/" + size;
+  const hasShiny = it => !!(it.v && it.v.some(v => v.s));
   const imgUrl = (u, size) => u ? u.replace(/scale-to-width-down\/\d+/, "scale-to-width-down/" + size) : null;
 
   /* ---------- Types ---------- */
@@ -46,7 +49,7 @@
   ];
   const EVENT_ICON = { "Halloween": "halloween.png", "Holidays": "winter.png", "Birthday": "birthday.png", "St. Patrick's": "st-patty.png", "Easter": "easter.png", "Valentine's": "valentines.png" };
 
-  const state = { type: "all", tier: "all", sort: "tier", q: "", rp: false };
+  const state = { type: "all", tier: "all", sort: "tier", q: "", rp: false, shiny: false };
   let list = [], shown = 0;
 
   /* ---------- Type tiles ---------- */
@@ -77,6 +80,7 @@
   dropdown($("#sortDD"), (v, b) => { state.sort = v; $("#sortDD .dd-label").textContent = "Sort: " + b.textContent; $("#sortDD").querySelectorAll("button[data-v]").forEach(x => x.classList.toggle("on", x === b)); apply(true); });
 
   $("#rebornProof").addEventListener("change", e => { state.rp = e.target.checked; apply(true); });
+  $("#hasShiny").addEventListener("change", e => { state.shiny = e.target.checked; apply(true); });
   let qt;
   $("#q").addEventListener("input", e => { clearTimeout(qt); qt = setTimeout(() => { state.q = e.target.value.trim().toLowerCase(); apply(true); }, 150); });
   document.addEventListener("keydown", e => {
@@ -84,8 +88,8 @@
   });
   $("#clearAll").addEventListener("click", clearAll);
   function clearAll() {
-    Object.assign(state, { type: "all", tier: "all", q: "", rp: false });
-    $("#q").value = ""; $("#rebornProof").checked = false; apply(true);
+    Object.assign(state, { type: "all", tier: "all", q: "", rp: false, shiny: false });
+    $("#q").value = ""; $("#rebornProof").checked = false; $("#hasShiny").checked = false; apply(true);
   }
 
   /* ---------- Filter / sort / render ---------- */
@@ -95,6 +99,7 @@
       (state.type === "all" || it.type === state.type) &&
       (state.tier === "all" || it.tier === state.tier) &&
       (!state.rp || it.f.reborn_proof === "Yes") &&
+      (!state.shiny || hasShiny(it)) &&
       toks.every(t => it._text.includes(t)));
     const byName = (a, b) => a.n.localeCompare(b.n);
     if (state.sort === "name") list.sort(byName);
@@ -123,6 +128,7 @@
     if (state.type !== "all") chips.push(["type", TYPES.find(t => t.id === state.type).label]);
     if (state.tier !== "all") chips.push(["tier", state.tier + " tier"]);
     if (state.rp) chips.push(["rp", "Reborn-proof"]);
+    if (state.shiny) chips.push(["shiny", "Has shiny"]);
     if (state.q) chips.push(["q", `“${state.q}”`]);
     $("#activeFilters").innerHTML = chips.map(([k, l]) => `<span class="af">${esc(l)}<button data-k="${k}" aria-label="Remove filter">×</button></span>`).join("") +
       (chips.length > 1 ? `<span class="af"><b>Clear all</b><button data-k="all" aria-label="Clear all">×</button></span>` : "");
@@ -134,6 +140,7 @@
     if (k === "type") state.type = "all";
     if (k === "tier") state.tier = "all";
     if (k === "rp") { state.rp = false; $("#rebornProof").checked = false; }
+    if (k === "shiny") { state.shiny = false; $("#hasShiny").checked = false; }
     if (k === "q") { state.q = ""; $("#q").value = ""; }
     apply(false);
   });
@@ -142,8 +149,9 @@
     const [bg, fg] = tierColors(it.tier);
     const ev = it.event ? (EVENT_ICON[it.event] ? `<img class="ev-badge" src="${ICON + EVENT_ICON[it.event]}" alt="${esc(it.event)}" title="${esc(it.event)} item" />` : `<span class="ev-text">${esc(it.event)}</span>`) : "";
     const type = (TYPES.find(t => t.id === it.type) || {}).label || it.type;
-    return `<div class="icard" role="button" tabindex="0" data-i="${it._i}" style="--tb:${bg};--tf:${fg};--i:${i % PAGE}">
-      ${ev}
+    const sh = hasShiny(it) ? `<span class="shiny-badge" title="Has a shiny variant"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z" fill="currentColor"/></svg></span>` : "";
+    return `<div class="icard ${sh ? "has-shiny" : ""}" role="button" tabindex="0" data-i="${it._i}" style="--tb:${bg};--tf:${fg};--i:${i % PAGE}">
+      ${ev}${sh}
       <div class="ic-img">${it.img ? `<img src="${esc(it.img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />` : ""}<span class="ph" ${it.img ? "hidden" : ""}>${esc(it.n[0])}</span></div>
       <h3>${esc(it.n)}</h3>
       <span class="tier-pill">${esc(it.tier)}</span>
@@ -243,6 +251,7 @@
     body.innerHTML = `
       <aside class="m-side">
         <div class="m-img">${it.img ? `<img src="${esc(imgUrl(it.img, 400))}" referrerpolicy="no-referrer" alt="${esc(it.n)}" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'ph',textContent:'${esc(it.n[0])}'}))" />` : `<span class="ph">${esc(it.n[0])}</span>`}</div>
+        ${variantsHTML(it)}
         <div class="m-chips"><span class="tier-pill" style="--tb:${bg};--tf:${fg}">${esc(it.tier)}</span><span class="chip2">${esc(type.replace(/s$/, ""))}</span>${ev}</div>
         <div class="m-quick">
           ${q("cost", "Cost")}${q("sell", "Sells for")}${q("item_size", "Size")}${q("date", "Added")}${q("source", "Where to get it", true)}${q("created_by", "Created by", true)}
@@ -276,10 +285,85 @@
       try { await navigator.clipboard.writeText(url); } catch {}
       MH.toast("Link copied");
     });
+    bindVariants(it);
     const pos = list.indexOf(it);
     $("#mPrev").disabled = pos <= 0;
     $("#mNext").disabled = pos < 0 || pos >= list.length - 1;
     history.replaceState(null, "", "#item=" + encodeURIComponent(it.n));
+  }
+
+  /* ---------- Image variants (normal / HD / shiny / limited shiny) ---------- */
+  function startVariant(it) {
+    if (!it.v) return -1;
+    const base = (it.img || "").split("/revision/")[0];
+    let k = it.v.findIndex(v => base && base.endsWith(v.u.split("/revision/")[0]));
+    if (k < 0) k = it.v.findIndex(v => !v.s);
+    return Math.max(0, k);
+  }
+  function variantsHTML(it) {
+    if (!it.v || it.v.length < 2) return "";
+    const k = startVariant(it);
+    return `<div class="v-caption" id="vCaption"></div>
+      <div class="variants" role="tablist" aria-label="Image variants">${it.v.map((v, i) => `
+        <button class="vbtn ${v.s ? "shiny" : ""} ${i === k ? "on" : ""}" role="tab" aria-selected="${i === k}" data-v="${i}" title="${esc(v.nm ? v.nm + " " + it.n : v.l)}">
+          <span class="vthumb"><img src="${esc(vUrl(v, 96))}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.visibility='hidden'" /></span>
+          <span class="vl">${v.s ? `<svg viewBox="0 0 24 24" width="11" height="11"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z" fill="currentColor"/></svg>` : ""}${esc(v.l)}</span>
+          ${v.ev && EVENT_ICON[v.ev] ? `<img class="vev" src="${ICON + EVENT_ICON[v.ev]}" alt="${esc(v.ev)}" />` : ""}
+        </button>`).join("")}</div>`;
+  }
+  function caption(it, v) {
+    const c = $("#vCaption");
+    if (!c) return;
+    c.innerHTML = v.s
+      ? `<span class="vc-tag">${esc(v.l)}${v.ev ? " · " + esc(v.ev) : ""}</span><b>${esc(v.nm ? v.nm + " " + it.n : it.n)}</b>`
+      : `<span class="vc-tag plain">${esc(v.l)}</span>`;
+  }
+  function bindVariants(it) {
+    const wrapV = body.querySelector(".variants");
+    if (!wrapV) { modal.classList.remove("shiny-on"); return; }
+    const k = startVariant(it);
+    caption(it, it.v[k]);
+    modal.classList.toggle("shiny-on", !!it.v[k].s);
+    wrapV.addEventListener("click", e => {
+      const b = e.target.closest(".vbtn"); if (!b || b.classList.contains("on")) return;
+      const v = it.v[+b.dataset.v];
+      wrapV.querySelectorAll(".vbtn").forEach(x => { x.classList.toggle("on", x === b); x.setAttribute("aria-selected", x === b); });
+      swapImage(vUrl(v, 400), it);
+      caption(it, v);
+      modal.classList.toggle("shiny-on", !!v.s);
+      if (v.s) sparkle();
+    });
+  }
+  function swapImage(src, it) {
+    const box = body.querySelector(".m-img");
+    const old = box.querySelector("img, .ph");
+    const img = new Image();
+    img.referrerPolicy = "no-referrer";
+    img.alt = it.n;
+    img.className = "v-in";
+    img.src = src;
+    img.onerror = () => { img.replaceWith(Object.assign(document.createElement("span"), { className: "ph", textContent: it.n[0] })); };
+    if (old) {
+      old.classList.add("v-out");
+      setTimeout(() => old.remove(), 260);
+    }
+    box.appendChild(img);
+  }
+  function sparkle() {
+    if (MH.reduceMotion) return;
+    const box = body.querySelector(".m-img");
+    for (let i = 0; i < 14; i++) {
+      const s = document.createElement("i");
+      s.className = "spk";
+      const a = (i / 14) * Math.PI * 2 + Math.random() * .4;
+      const d = 90 + Math.random() * 60;
+      s.style.setProperty("--x", Math.cos(a) * d + "px");
+      s.style.setProperty("--y", Math.sin(a) * d + "px");
+      s.style.setProperty("--d", Math.random() * 120 + "ms");
+      s.style.setProperty("--s", (.6 + Math.random() * .8).toFixed(2));
+      box.appendChild(s);
+      setTimeout(() => s.remove(), 1100);
+    }
   }
 
   function openItem(i, fromEl) {

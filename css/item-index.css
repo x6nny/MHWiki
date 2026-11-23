@@ -321,3 +321,18 @@ body.modal-open { overflow: hidden; }
 }
 @media (max-width: 1180px) { .ii-bar { grid-template-columns: 1fr 1fr 1fr; } .ii-bar .tb-search { grid-column: 1 / -1; } }
 @media (max-width: 680px) { .ii-bar { grid-template-columns: 1fr 1fr; } .vbtn { width: 64px; } }
+
+/* ---------- Popup scrolling fix ----------
+   The popup has a fixed max height, so each column needs its own scroll area. */
+.modal { display: flex; flex-direction: column; }
+.m-body { flex: 1 1 auto; min-height: 0; max-height: min(88vh, 900px); grid-template-rows: minmax(0, 1fr); }
+.m-side, .m-main { min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.25) transparent; }
+.m-side::-webkit-scrollbar, .m-main::-webkit-scrollbar { width: 8px; }
+.m-side::-webkit-scrollbar-thumb, .m-main::-webkit-scrollbar-thumb { background: rgba(255,255,255,.2); border-radius: 8px; border: 2px solid transparent; background-clip: padding-box; }
+.m-side::-webkit-scrollbar-thumb:hover, .m-main::-webkit-scrollbar-thumb:hover { background-color: rgba(255,255,255,.35); }
+.m-main { padding-bottom: 48px; }
+@media (max-width: 860px) {
+  .m-body { max-height: 92vh; grid-template-rows: auto; overflow-y: auto; overscroll-behavior: contain; }
+  .m-side, .m-main { overflow: visible; min-height: auto; }
+}
+.m-side > * { flex-shrink: 0; }

@@ -173,7 +173,9 @@
           <a href="${wiki}" target="_blank" rel="noopener">Read more on the wiki ↗</a>
         </div>
       </div>
+      ${n.id === "the-masked-man" && window.MH_MM_STOCK ? stockHtml() : ""}
     </div>`;
+    if (n.id === "the-masked-man") wireStock();
     clearInterval(typer);
     if (n.quote) {
       const el = $("#tw"); let k = 0;
@@ -182,6 +184,40 @@
     }
     history.replaceState(null, "", "#npc=" + n.id);
   }
+  /* ---------- The Masked Man's stock ---------- */
+  const MMS = window.MH_MM_STOCK;
+  const MM_IMG = u => u ? `https://static.wikia.nocookie.net/the-miners-haven-project/images/${u}/revision/latest/scale-to-width-down/96` : "";
+  const MM_GROUPS = ["Contraband", "Exotic", "Collectible", "Other"];
+  let mmTab = "all";
+  function stockRows() {
+    const rows = MMS.items.filter(x => mmTab === "all" || x.g === mmTab);
+    const row = x => `<a class="mm-row${x.s ? " seas" : ""}" href="item-index.html#item=${encodeURIComponent(x.n)}">
+        <span class="mm-pic">${x.img ? `<img src="${MM_IMG(x.img)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" />` : ""}</span>
+        <span class="mm-name"><b>${esc(x.n)}</b><small>${esc(x.tier || x.g)}${x.s ? ` · <em>${esc(x.s)} only</em>` : ""}</small></span>
+        <span class="mm-price" data-cur-money>${esc(x.p)}${x.range ? `<i title="Old price range from the wiki">?</i>` : ""}</span>
+      </a>`;
+    const SO = ["Summer", "Autumn", "Halloween", "Winter"];
+    const now = rows.filter(x => !x.s), seas = rows.filter(x => x.s).sort((a, b) => SO.indexOf(a.s) - SO.indexOf(b.s));
+    return (now.length ? `<div class="mm-sub">Always in stock <em>${now.length}</em></div>` + now.map(row).join("") : "") +
+      (seas.length ? `<div class="mm-sub">Seasonal <em>${seas.length}</em><span>Only sold while its season is on. Prices with a ? are the old ranges from the wiki.</span></div>` + seas.map(row).join("") : "");
+  }
+  function stockHtml() {
+    const cnt = g => MMS.items.filter(x => g === "all" || x.g === g).length;
+    return `<section class="mm-stock">
+      <div class="mm-head"><h3>His stock</h3><p>Everything The Masked Man sells, at full price. A few items are discounted each day and the discounts change at the daily reset, so the in-game price may be lower.</p></div>
+      <div class="mm-tabs" role="tablist">${["all", ...MM_GROUPS].map(g => `<button type="button" data-g="${g}" class="${mmTab === g ? "on" : ""}">${g === "all" ? "All" : g}<em>${cnt(g)}</em></button>`).join("")}</div>
+      <div class="mm-list" id="mmList">${stockRows()}</div>
+    </section>`;
+  }
+  function wireStock() {
+    const t = modal.querySelector(".mm-tabs"); if (!t) return;
+    t.addEventListener("click", e => {
+      const b = e.target.closest("button"); if (!b) return;
+      mmTab = b.dataset.g; t.querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b));
+      const l = $("#mmList"); l.innerHTML = stockRows(); l.classList.remove("swap"); void l.offsetWidth; l.classList.add("swap");
+    });
+  }
+
   function open(id, from) {
     list = from && from.some(n => n.id === id) ? from : ALL;
     idx = Math.max(0, list.findIndex(n => n.id === id));

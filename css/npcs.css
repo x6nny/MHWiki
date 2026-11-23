@@ -124,6 +124,33 @@
 .md .links a:hover { border-color: var(--c); transform: translateY(-2px); }
 
 /* ---------- Responsive ---------- */
+/* The Masked Man's stock */
+.mm-stock { grid-column: 1 / -1; margin-top: 6px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.08); }
+.mm-head h3 { margin: 0 0 4px; font-size: 20px; }
+.mm-head p { margin: 0 0 14px; color: var(--muted); font-size: 14px; }
+.mm-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+.mm-tabs button { display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 13px; border-radius: 11px; font-size: 13px; font-weight: 800; color: var(--muted); background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.09); transition: color .2s, border-color .2s, background .2s; }
+.mm-tabs button em { font-style: normal; font: 800 11px var(--font-mono); color: var(--faint); }
+.mm-tabs button:hover { color: #fff; }
+.mm-tabs button.on { color: #fff; border-color: var(--c); background: color-mix(in srgb, var(--c) 18%, transparent); }
+.mm-tabs button.on em { color: var(--c); }
+.mm-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.mm-list.swap { animation: mdIn .35s var(--ease); }
+.mm-sub { grid-column: 1 / -1; display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; margin: 8px 0 2px; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); }
+.mm-sub:first-child { margin-top: 0; }
+.mm-sub em { font-style: normal; color: var(--c); }
+.mm-sub span { font-size: 12px; font-weight: 600; letter-spacing: 0; text-transform: none; }
+.mm-row { display: flex; align-items: center; gap: 12px; min-width: 0; padding: 8px 12px 8px 8px; border-radius: 14px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); transition: border-color .2s, transform .3s var(--spring), background .2s; }
+.mm-row:hover { border-color: var(--c); background: color-mix(in srgb, var(--c) 8%, rgba(255,255,255,.04)); transform: translateY(-2px); }
+.mm-pic { flex: none; width: 46px; height: 46px; display: grid; place-items: center; border-radius: 11px; background: rgba(0,0,0,.25); }
+.mm-pic img { width: 88%; height: 88%; object-fit: contain; }
+.mm-name { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.mm-name b { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mm-name small { font-size: 12px; font-weight: 700; color: var(--faint); }
+.mm-name em { font-style: normal; color: #ffb347; }
+.mm-price { flex: none; display: inline-flex; align-items: center; gap: 4px; font: 800 13px var(--font-mono); color: var(--text); text-align: right; }
+.mm-price i { font-style: normal; display: inline-grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; font-size: 10px; color: var(--faint); border: 1px solid rgba(255,255,255,.2); }
+.mm-row.seas { opacity: .85; }
 @media (max-width: 1080px) {
   .np-hero { grid-template-columns: 1fr; }
   .sched { grid-template-columns: repeat(2, 1fr); }
@@ -131,6 +158,9 @@
 }
 @media (max-width: 760px) {
   .md { grid-template-columns: 1fr; padding: 0; }
+  .mm-list { grid-template-columns: minmax(0, 1fr); }
+  .mm-name b { white-space: normal; line-height: 1.25; }
+  .mm-name small { white-space: nowrap; }
   .md .pic { max-width: 260px; margin: 0 auto; }
   .m-nav { top: 150px; }
   .np-modal { padding: 20px 16px; }

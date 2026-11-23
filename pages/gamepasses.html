@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gamepasses · Miner's Haven Wiki</title>
+  <meta name="description" content="Every Miner's Haven gamepass, Black Friday artifact and retired pack: prices and perks." />
+  <link rel="icon" href="../assets/icons/rebirth.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css?v=3" />
+  <link rel="stylesheet" href="../css/subpage.css?v=3" />
+  <link rel="stylesheet" href="../css/gamepasses.css?v=3" />
+</head>
+<body class="subpage">
+  <div class="backdrop" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+    <div class="grid-lines"></div>
+    <canvas id="ore-field"></canvas>
+    <div class="grain"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner glass">
+      <a href="../index.html" class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="update-log.html">Update Log</a>
+        <a href="gamepasses.html" class="current">Gamepasses</a>
+      </nav>
+      <a class="search-trigger" href="../index.html#explore">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>All sections</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero gp-hero">
+      <div class="gp-hero-copy">
+        <nav class="crumbs intro" style="--d:0" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span>/</span><b>Gamepasses</b>
+        </nav>
+        <h1 class="intro" style="--d:1"><span class="shine">Gamepasses</span></h1>
+        <p class="lede intro" style="--d:2">
+          Robux bundles that add perks, items and chat tags. None of them are needed to get most items
+          in the game. Here's what every current pass, Black Friday artifact and retired pack gives you.
+        </p>
+        <div class="stats intro" style="--d:3">
+          <div class="stat glass"><strong id="stPerm">0</strong><span>Permanent passes</span></div>
+          <div class="stat glass"><strong><img class="rbx" src="../assets/items/robux.webp" alt="Robux" /><b id="stTotal">0</b></strong><span>To own all of them</span></div>
+          <div class="stat glass"><strong id="stArt">0</strong><span>Artifacts</span></div>
+          <div class="stat glass"><strong id="stRet">0</strong><span>Retired</span></div>
+        </div>
+      </div>
+      <div class="gp-hero-art intro" style="--d:2" aria-hidden="true">
+        <div class="fan">
+          <img class="f1" src="../assets/gamepasses/v-i-p-membership.webp" alt="" />
+          <img class="f2" src="../assets/gamepasses/executive-membership.webp" alt="" />
+          <img class="f3" src="../assets/gamepasses/premium-membership.webp" alt="" />
+        </div>
+        <span class="spark s1"></span><span class="spark s2"></span><span class="spark s3"></span>
+      </div>
+    </section>
+
+    <!-- Tabs + tools -->
+    <div class="gp-bar glass intro" style="--d:4">
+      <div class="seg" id="tabs" role="tablist" aria-label="Pass type">
+        <span class="seg-ind" aria-hidden="true"></span>
+        <button role="tab" data-tab="current" class="active">Gamepasses <em></em></button>
+        <button role="tab" data-tab="artifacts">Black Friday Artifacts <em></em></button>
+        <button role="tab" data-tab="retired">Retired <em></em></button>
+      </div>
+      <label class="tb-search">
+        <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="q" type="search" placeholder="Search passes or perks…" autocomplete="off" />
+        <kbd>/</kbd>
+      </label>
+      <div class="sort" id="sort" aria-label="Sort">
+        <button data-sort="default" class="active">Default</button>
+        <button data-sort="price-asc">Price ↑</button>
+        <button data-sort="price-desc">Price ↓</button>
+        <button data-sort="name">A–Z</button>
+      </div>
+    </div>
+
+    <!-- Price ladder (current tab only) -->
+    <section class="ladder glass reveal" id="ladder" aria-label="Price comparison">
+      <div class="ladder-head">
+        <div>
+          <span class="eyebrow">Price ladder</span>
+          <h2>What each pass costs</h2>
+        </div>
+        <p>Bar length is the price in Robux. Limited passes are only on sale during their event.</p>
+      </div>
+      <div class="ladder-rows" id="ladderRows"></div>
+    </section>
+
+    <div class="tab-hint" id="tabHint" hidden></div>
+    <div class="gp-grid" id="grid"></div>
+
+    <div class="no-results glass" id="noResults" hidden>
+      <img src="../assets/icons/spook-mcdooks.png" alt="" />
+      <h3>No passes match that search</h3>
+      <p>Try another word, like an item name or “uC”.</p>
+      <button class="btn btn-ghost" id="clearSearch">Clear search</button>
+    </div>
+
+    <section class="trivia glass reveal" aria-label="Good to know">
+      <div class="trivia-head">
+        <img src="../assets/icons/rp.png" alt="" />
+        <div>
+          <span class="eyebrow">Good to know</span>
+          <h2>Gamepass trivia</h2>
+        </div>
+      </div>
+      <ul id="trivia"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner glass reveal">
+      <div class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </div>
+      <p>
+        Pass details and images are from the
+        <a href="https://minershaven.fandom.com/wiki/Gamepasses" target="_blank" rel="noopener">Miner's Haven Fandom wiki</a>,
+        available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA</a>.
+        Prices for artifacts and retired passes are what they cost when they were on sale.
+        A fan-made wiki, not affiliated with Roblox or Berezaa Games.
+      </p>
+    </div>
+  </footer>
+
+  <button class="to-top glass" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../js/common.js?v=3"></script>
+  <script src="../js/gamepasses-data.js?v=3"></script>
+  <script src="../js/gamepasses.js?v=3"></script>
+</body>
+</html>

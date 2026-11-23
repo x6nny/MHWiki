@@ -13,7 +13,7 @@
     valentines:  { label: "Valentine's",   icon: "valentines.png",    color: "#ff5c7a" },
     stpatricks:  { label: "St. Patrick's", icon: "st-patty.png",      color: "#5cdb6b" },
     easter:      { label: "Easter",        icon: "easter.png",        color: "#ffd166" },
-    birthday:    { label: "Anniversary",   icon: "rp.png",            color: "#3ef0e0" },
+    birthday:    { label: "Anniversary",   icon: "birthday.png",            color: "#ff7aa2" },
     blackfriday: { label: "Black Friday",  icon: "money.png",         color: "#9dff6b" },
     spring:      { label: "Seasonal",      icon: "uc.png",            color: "#ff8ac0" },
   };

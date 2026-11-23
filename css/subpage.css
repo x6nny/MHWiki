@@ -1,0 +1,48 @@
+/* =========================================================
+   Shared styles for section pages (extends style.css)
+   ========================================================= */
+[hidden] { display: none !important; }
+
+.nav-links a.current { color: var(--text); background: rgba(255,255,255,.09); }
+
+/* Page hero */
+.page-hero { padding: 30px 0 26px; }
+.crumbs { display: flex; gap: 10px; align-items: center; font-size: 14px; color: var(--faint); font-weight: 600; }
+.crumbs a { color: var(--muted); transition: color .2s; }
+.crumbs a:hover { color: var(--text); }
+.crumbs b { color: var(--text); }
+.page-hero h1 { font-size: clamp(46px, 6.4vw, 84px); margin: 18px 0 16px; }
+.page-hero .lede { max-width: 620px; margin-bottom: 0; }
+.page-hero .stats { margin-top: 30px; }
+.stat span { white-space: nowrap; }
+
+/* Search field */
+.tb-search {
+  display: flex; align-items: center; gap: 10px; padding: 0 12px; height: 44px; border-radius: 14px;
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.09); color: var(--muted);
+  transition: border-color .25s, box-shadow .25s;
+}
+.tb-search:focus-within { border-color: rgba(56,217,255,.5); box-shadow: 0 0 0 4px rgba(56,217,255,.1); }
+.tb-search input { flex: 1; min-width: 0; background: none; border: 0; outline: 0; color: var(--text); font: inherit; font-size: 15px; }
+.tb-search input::-webkit-search-cancel-button { filter: invert(1) opacity(.5); }
+
+mark { background: rgba(255,214,10,.28); color: #fff3b0; border-radius: 4px; padding: 0 2px; }
+
+/* Empty state */
+.no-results { text-align: center; padding: 40px 20px; border-radius: 24px; max-width: 520px; margin: 0 auto 80px; }
+.no-results img { width: 90px; margin: 0 auto 10px; animation: bob 4s ease-in-out infinite; }
+.no-results p { color: var(--muted); margin: 6px 0 18px; }
+
+/* Back to top */
+.to-top {
+  position: fixed; right: 24px; bottom: 24px; z-index: 60; width: 48px; height: 48px; border-radius: 16px;
+  display: grid; place-items: center; color: var(--text);
+  opacity: 0; transform: translateY(20px) scale(.9); pointer-events: none;
+  transition: opacity .3s, transform .45s var(--spring), border-color .3s;
+}
+.to-top.show { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover { border-color: rgba(56,217,255,.5); transform: translateY(-3px); }
+
+@media (max-width: 1080px) {
+  .nav-links { display: none; }
+}

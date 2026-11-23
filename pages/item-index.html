@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Item Index · Miner's Haven Wiki</title>
+  <meta name="referrer" content="no-referrer" />
+  <meta name="description" content="Every Miner's Haven item: droppers, upgraders, furnaces, conveyors and more, with tiers, effects and stats." />
+  <link rel="icon" href="../assets/icons/rebirth.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://static.wikia.nocookie.net" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css?v=6" />
+  <link rel="stylesheet" href="../css/subpage.css?v=6" />
+  <link rel="stylesheet" href="../css/item-index.css?v=6" />
+</head>
+<body class="subpage">
+  <div class="backdrop" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+    <div class="grid-lines"></div>
+    <canvas id="ore-field"></canvas>
+    <div class="grain"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner glass">
+      <a href="../index.html" class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="item-index.html" class="current">Item Index</a>
+        <a href="update-log.html">Update Log</a>
+        <a href="gamepasses.html">Gamepasses</a>
+      </nav>
+      <a class="search-trigger" href="../index.html#explore">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>All sections</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <nav class="crumbs intro" style="--d:0" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a><span>/</span><b>Item Index</b>
+      </nav>
+      <h1 class="intro" style="--d:1"><span class="shine">Item Index</span></h1>
+      <p class="lede intro" style="--d:2">
+        Every mine, upgrader, furnace, conveyor and gadget in Miner's Haven. Filter by type or tier,
+        then click any item to see its effects, stats, costs and where to get it.
+      </p>
+      <div class="type-tiles intro" style="--d:3" id="typeTiles"></div>
+    </section>
+
+    <div class="ii-bar glass intro" style="--d:4" id="bar">
+      <label class="tb-search">
+        <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="q" type="search" placeholder="Search 1,400+ items by name or effect…" autocomplete="off" />
+        <kbd>/</kbd>
+      </label>
+      <div class="dd" id="tierDD">
+        <button class="dd-btn" aria-haspopup="listbox" aria-expanded="false"><span class="dd-dot"></span><span class="dd-label">All tiers</span><i></i></button>
+        <div class="dd-menu glass" role="listbox"></div>
+      </div>
+      <div class="dd" id="sortDD">
+        <button class="dd-btn" aria-haspopup="listbox" aria-expanded="false"><span class="dd-label">Sort: Tier</span><i></i></button>
+        <div class="dd-menu glass" role="listbox">
+          <button data-v="tier" class="on">Tier</button>
+          <button data-v="name">Name A–Z</button>
+          <button data-v="new">Newest first</button>
+          <button data-v="old">Oldest first</button>
+        </div>
+      </div>
+      <label class="toggle" title="Only show items that stay after you rebirth">
+        <input type="checkbox" id="rebornProof" /><span class="tg"></span><span>Reborn-proof</span>
+      </label>
+      <span class="result-count" id="count"></span>
+    </div>
+
+    <div class="active-filters" id="activeFilters"></div>
+    <div class="item-grid" id="grid" aria-live="polite"></div>
+    <div class="sentinel" id="sentinel"></div>
+
+    <div class="no-results glass" id="noResults" hidden>
+      <img src="../assets/icons/spook-mcdooks.png" alt="" />
+      <h3>No items match</h3>
+      <p>Try a different name or effect, or clear the filters.</p>
+      <button class="btn btn-ghost" id="clearAll">Clear filters</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner glass reveal">
+      <div class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </div>
+      <p>
+        Item details and pictures are from the
+        <a href="https://minershaven.fandom.com/wiki/Welcome_To_The_Miner%27s_Haven_Wikia!" target="_blank" rel="noopener">Miner's Haven Fandom wiki</a>,
+        available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA</a>.
+        A fan-made wiki, not affiliated with Roblox or Berezaa Games.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Item detail popup -->
+  <div class="modal-wrap" id="modal" aria-hidden="true">
+    <div class="modal-scrim" data-close></div>
+    <article class="modal glass" role="dialog" aria-modal="true" aria-labelledby="mName">
+      <button class="m-close" data-close aria-label="Close">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </button>
+      <button class="m-nav prev" id="mPrev" aria-label="Previous item"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="m-nav next" id="mNext" aria-label="Next item"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="m-body" id="mBody"></div>
+    </article>
+  </div>
+
+  <button class="to-top glass" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../js/common.js?v=6"></script>
+  <script src="../js/items-data.js?v=6"></script>
+  <script src="../js/item-index.js?v=6"></script>
+</body>
+</html>

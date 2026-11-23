@@ -336,3 +336,31 @@ body.modal-open { overflow: hidden; }
   .m-side, .m-main { overflow: visible; min-height: auto; }
 }
 .m-side > * { flex-shrink: 0; }
+
+/* ---------- Extra wiki tables: chances, ore value, details ---------- */
+.ms.wide { grid-column: 1 / -1; }
+.m-stats { grid-auto-flow: dense; }
+.ore-fn { margin-top: 10px; display: grid; gap: 10px; }
+.of-sec { padding: 10px 12px; border-radius: 12px; background: rgba(0,0,0,.22); border: 1px dashed rgba(255,255,255,.12); }
+.of-sec small { display: block; font-size: 10.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #ffd78a; margin-bottom: 6px; }
+.of-sec .m-text { font-size: 13.5px; }
+.xc + .xc { margin-top: 14px; }
+.xc h5 { margin: 0 0 8px; font-size: 13px; font-weight: 800; color: var(--text); }
+.xt-cap { margin: 8px 0 6px; font-size: 13px; font-weight: 700; color: var(--muted); }
+.xt-wrap { max-height: 440px; overflow: auto; border-radius: 14px; border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.025); scrollbar-width: thin; }
+.xt-wrap + .xt-wrap, .m-text + .xt-wrap, .xt-wrap + .m-text { margin-top: 10px; }
+.xt { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.xt th { position: sticky; top: 0; z-index: 1; padding: 9px 12px; text-align: left; font-size: 10.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); background: rgba(16,20,36,.96); border-bottom: 1px solid rgba(255,255,255,.08); }
+.xt td { padding: 9px 12px; color: #d7deef; vertical-align: middle; border-top: 1px solid rgba(255,255,255,.05); white-space: pre-line; line-height: 1.45; }
+.xt tbody tr { animation: cardIn .4s var(--ease) both; animation-delay: calc(var(--r) * 35ms + 150ms); }
+.xt tbody tr:hover td { background: rgba(255,255,255,.035); }
+.xt.chance td:first-child { font-weight: 700; color: var(--text); }
+.pc-td { width: 42%; min-width: 150px; }
+.pc { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 8px; height: 30px; padding: 0 10px; border-radius: 9px; overflow: hidden; background: rgba(255,255,255,.05); }
+.pc i { position: absolute; inset: 0 auto 0 0; width: var(--w); background: linear-gradient(90deg, rgba(108,184,255,.75), rgba(167,123,255,.45)); border-radius: inherit; transform-origin: left; animation: pcGrow .9s var(--ease) both; animation-delay: .25s; }
+.pc.none i { background: rgba(255,255,255,.12); }
+@keyframes pcGrow { from { transform: scaleX(0); } }
+.pc b { position: relative; font: 800 13px var(--font-mono); color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,.6); white-space: nowrap; }
+.pc em { position: relative; font-style: normal; font: 700 11px var(--font-mono); color: rgba(255,255,255,.75); }
+.xt-note { margin: 6px 2px 0; font-size: 11.5px; color: var(--faint); }
+@media (max-width: 680px) { .pc-td { min-width: 110px; } .xt { font-size: 12.5px; } .xt td, .xt th { padding: 8px; } }

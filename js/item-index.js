@@ -247,6 +247,44 @@
       `</div>`;
   }
 
+  /* Extra wiki sections: outcome/chance tables, ore value functionality, other details */
+  const pctOf = s => {
+    let m = String(s).match(/(\d+(?:\.\d+)?)\s?%/); if (m) return +m[1];
+    m = String(s).match(/(\d+)\s?\/\s?(\d+)/); if (m) return +m[1] / +m[2] * 100;
+    m = String(s).match(/(\d+)\s(?:in|out of)\s(\d+)/); if (m) return +m[1] / +m[2] * 100;
+    return null;
+  };
+  const fmtPct = p => p >= 10 ? Math.round(p * 10) / 10 + "%" : p >= 1 ? Math.round(p * 100) / 100 + "%" : +p.toPrecision(2) + "%";
+  function tableHTML(tb, chance) {
+    const ch = chance ? tb.ch : -1;
+    const cols = (tb.head.length ? tb.head : tb.rows[0]).map((_, i) => i);
+    const order = ch >= 0 ? [...cols.filter(i => i !== ch), ch] : cols;   // chance column last
+    const head = tb.head.length && tb.head.some(Boolean) ? `<thead><tr>${order.map(i => `<th>${rich(tb.head[i] || "")}</th>`).join("")}</tr></thead>` : "";
+    const body = tb.rows.map((r, ri) => `<tr style="--r:${ri}">${order.map(i => {
+      if (i !== ch) return `<td>${rich(r[i] || "")}</td>`;
+      const p = pctOf(r[i]);
+      const nothing = /^(nothing|none|no effect|nothing extra happens)/i.test(r[0] || "");
+      return `<td class="pc-td"><div class="pc${nothing ? " none" : ""}"><i style="--w:${p == null ? 0 : Math.min(100, p)}%"></i><b>${rich(r[i] || "")}</b>${p != null && !/%/.test(r[i]) ? `<em>${fmtPct(p)}</em>` : ""}</div></td>`;
+    }).join("")}</tr>`).join("");
+    return `${tb.c ? `<p class="xt-cap">${rich(tb.c)}</p>` : ""}<div class="xt-wrap"><table class="xt${ch >= 0 ? " chance" : ""}">${head}<tbody>${body}</tbody></table></div>`;
+  }
+  function xBlock(s, chance) {
+    return `${s.t ? `<p class="m-text">${rich(s.t)}</p>` : ""}${s.tb.map(tb => tableHTML(tb, chance)).join("")}`;
+  }
+  function chanceHTML(it) {
+    const xs = (it.x || []).filter(s => s.k === "chance");
+    if (!xs.length) return "";
+    return xs.map(s => `<div class="xc">${s.h && s.h !== "Outcomes & chances" ? `<h5>${esc(s.h)}</h5>` : ""}${xBlock(s, true)}${s.auto ? `<p class="xt-note">Worked out from the item's description. Outcomes can overlap.</p>` : ""}</div>`).join("");
+  }
+  function oreFnHTML(it) {
+    const xs = (it.x || []).filter(s => s.k === "ore");
+    if (!xs.length) return "";
+    return `<div class="ore-fn">${xs.map(s => `<div class="of-sec"><small>${/^ore value( functionality)?$/i.test(s.h) ? "How it's worked out" : esc(s.h)}</small>${xBlock(s, false)}</div>`).join("")}</div>`;
+  }
+  function infoHTML(it) {
+    return (it.x || []).filter(s => s.k === "info").map(s => sec(esc(s.h), xBlock(s, false))).join("");
+  }
+
   function sec(title, html) { return html ? `<section class="m-sec"><h4>${title}</h4>${html}</section>` : ""; }
 
   function buildModal(it) {
@@ -262,7 +300,8 @@
       const v = f[k];
       const cls = /^yes\b/i.test(v) ? "yes" : /^no\b/i.test(v) ? "no" : "";
       const val = k === "ore_material" ? matHTML(v) : rich(v);
-      return `<div class="ms" style="--i:${i}"><span>${LABELS[k] || k}</span><b class="${cls}">${val}</b></div>`;
+      const fn = k === "ore_worth" ? oreFnHTML(it) : "";
+      return `<div class="ms${fn ? " wide" : ""}" style="--i:${i}"><span>${LABELS[k] || k}</span><b class="${cls}">${val}</b>${fn}</div>`;
     }).join("");
 
     let elements = "";
@@ -301,11 +340,13 @@
         ${sec("Effects", f.effects && `<div class="m-effect">${rich(f.effects)}</div>`)}
         ${sec("Drawbacks", f.drawbacks && `<div class="m-effect bad">${rich(f.drawbacks)}</div>`)}
         ${sec("Ore effects", oreFxHTML(it))}
+        ${sec("Outcomes & chances", chanceHTML(it))}
         ${sec("Requirements", f.requirements && `<div class="m-effect req">${rich(f.requirements)}</div>`)}
         ${sec("Stats", stats && `<div class="m-stats" data-cur-money>${stats}</div>`)}
         ${sec("Evolutions & fusions", craft)}
         ${sec("Elements", elements)}
         ${sec("Overview", it.overview && `<p class="m-text">${rich(it.overview)}</p>`)}
+        ${infoHTML(it)}
         ${sec("Related items", f.related_items && irefs(f.related_items))}
         ${sec("Related", f.related_items_text && `<p class="m-text">${rich(f.related_items_text)}</p>`)}
         ${sec("Events", f.item_events && `<p class="m-text">${rich(f.item_events)}</p>`)}

@@ -5,6 +5,7 @@
 /* Section registry. Flip `ready` to true as each page in /pages is built. */
 const SECTIONS = [
   { id: "item-index",     name: "Item Index",     icon: "assets/icons/money.png",         desc: "Droppers, upgraders, furnaces & utilities", cat: "items",       keys: "items mines droppers upgraders furnaces utility tiers shop", ready: true },
+  { id: "shiny-checklist", name: "Shiny Checklist", icon: "assets/icons/rebirth.png",       desc: "Track every Shiny & Limited Shiny you've found", cat: "items", keys: "shiny shinies checklist limited shiny tracker collection variants found life date copies backup reborn", ready: true },
   { id: "rebirth",        name: "Rebirth",        icon: "assets/icons/rebirth.png",       desc: "New lives & Reborn items",                   cat: "progression", keys: "reborn life slipstream shiny advanced evolved fusion rebirth price life skipping shards of life decimal rarity ultimate", ready: true },
   { id: "rebirth-tracker", name: "Rebirth Tracker", icon: "assets/icons/rebirth.png",     desc: "Life goal ETA, grind planner & milestone graph", cat: "progression", keys: "rebirth tracker life goal eta grind hours setup speed lives per hour milestone log graph chart progress planner", ready: true },
   { id: "sacrifice",      name: "Sacrifice",      icon: "assets/icons/draedon.png",       desc: "Ultimate & Second Sacrifice, escrow",        cat: "progression", keys: "ultimate second third forbidden escrow soulbound reset catalyst superstitious final upgrader", ready: true },

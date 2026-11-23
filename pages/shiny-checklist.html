@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shiny Checklist · Miner's Haven Wiki</title>
+  <meta name="referrer" content="no-referrer" />
+  <meta name="description" content="Track every Shiny and Limited Shiny item in Miner's Haven: tick off the ones you have and note the life, date and copies. Saved in your browser, with backup download." />
+  <link rel="icon" href="../assets/icons/rebirth.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css?v=33" />
+  <link rel="stylesheet" href="../css/subpage.css?v=33" />
+  <link rel="stylesheet" href="../css/shiny-checklist.css?v=33" />
+</head>
+<body class="subpage sc-page">
+  <div class="backdrop" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+    <div class="grid-lines"></div>
+    <canvas id="ore-field"></canvas>
+    <div class="grain"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner glass">
+      <a href="../index.html" class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="item-index.html">Item Index</a>
+        <a href="shiny-checklist.html" class="current">Shiny Checklist</a>
+        <a href="rebirth.html">Rebirth</a>
+        <a href="rebirth-tracker.html">Rebirth Tracker</a>
+        <a href="sacrifice.html">Sacrifice</a>
+        <a href="research-points.html">Research Points</a>
+        <a href="shards-of-life.html">Shards of Life</a>
+        <a href="crafting.html">Crafting</a>
+        <a href="status-effects.html">Status Effects</a>
+        <a href="mystery-boxes.html">Mystery Boxes</a>
+        <a href="daily-tasks.html">Daily Tasks</a>
+        <a href="codes.html">Codes</a>
+        <a href="cash-suffixes.html">Cash Suffixes</a>
+        <a href="events.html">Events</a>
+        <a href="npcs.html">NPCs</a>
+        <a href="user-tracker.html">User Tracker</a>
+        <a href="update-log.html">Update Log</a>
+        <a href="game-tracker.html">Game Tracker</a>
+        <a href="gamepasses.html">Gamepasses</a>
+      </nav>
+      <a class="discord-btn" href="https://discord.gg/minershaven" target="_blank" rel="noopener" aria-label="Join our Discord server" title="Join our Discord server"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.32 4.37a19.8 19.8 0 0 0-4.89-1.52.07.07 0 0 0-.08.04c-.21.38-.44.87-.61 1.25a18.27 18.27 0 0 0-5.49 0 12.6 12.6 0 0 0-.62-1.25.08.08 0 0 0-.08-.04 19.74 19.74 0 0 0-4.89 1.52.07.07 0 0 0-.03.03C.53 9.05-.32 13.58.1 18.06a.08.08 0 0 0 .03.06 19.9 19.9 0 0 0 5.99 3.03.08.08 0 0 0 .08-.03c.46-.63.87-1.29 1.23-1.99a.08.08 0 0 0-.04-.11 13.1 13.1 0 0 1-1.87-.89.08.08 0 0 1-.01-.13l.37-.29a.07.07 0 0 1 .08-.01c3.93 1.79 8.18 1.79 12.07 0a.07.07 0 0 1 .08.01l.37.29a.08.08 0 0 1-.01.13c-.6.35-1.22.65-1.87.89a.08.08 0 0 0-.04.11c.36.7.78 1.36 1.22 1.99a.08.08 0 0 0 .08.03 19.84 19.84 0 0 0 6-3.03.08.08 0 0 0 .03-.06c.5-5.18-.84-9.67-3.55-13.66a.06.06 0 0 0-.03-.03ZM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42Zm7.97 0c-1.18 0-2.15-1.08-2.15-2.42 0-1.33.95-2.42 2.15-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.95 2.42-2.16 2.42Z"/></svg><span>Discord</span></a>
+      <a class="search-trigger" href="../index.html#explore">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>All sections</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="page-hero sc-hero">
+      <div>
+        <nav class="crumbs intro" style="--d:0" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span>/</span><b>Shiny Checklist</b>
+        </nav>
+        <h1 class="intro" style="--d:1"><span class="shine sc-shine">Shiny Checklist</span></h1>
+        <p class="lede intro" style="--d:2">Every Shiny and Limited Shiny item in Miner's Haven. Tap one to mark it as found, then add the life you got it on, the date and how many copies you have. Your list saves in this browser, and you can download a backup any time.</p>
+        <div class="stats intro" style="--d:3">
+          <div class="stat glass"><strong id="sGot">0</strong><span>Found</span></div>
+          <div class="stat glass"><strong id="sTotal">0</strong><span>Shinies</span></div>
+          <div class="stat glass"><strong id="sLim">0</strong><span>Limited found</span></div>
+          <div class="stat glass"><strong id="sCopies">0</strong><span>Copies</span></div>
+        </div>
+        <div class="sc-save intro" style="--d:4">
+          <button type="button" class="sc-btn" id="dlJson"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Download backup</button>
+          <label class="sc-btn ghost file"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 20V9m0 0l-4 4m4-4l4 4M5 5h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Load backup<input type="file" id="upJson" accept=".json,application/json" /></label>
+          <button type="button" class="sc-btn ghost" id="dlCsv">Export CSV</button>
+          <span class="sc-saved" id="savedNote"></span>
+        </div>
+      </div>
+      <div class="ring-wrap intro" style="--d:2">
+        <div class="sc-ring glass" id="ring">
+          <svg viewBox="0 0 240 240" aria-hidden="true">
+            <defs><linearGradient id="scG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd76b"/><stop offset=".35" stop-color="#ff7ad9"/><stop offset=".7" stop-color="#7ad7ff"/><stop offset="1" stop-color="#b7ffb0"/></linearGradient></defs>
+            <circle cx="120" cy="120" r="100" class="rg-bg"/><circle cx="120" cy="120" r="100" class="rg-fg" id="ringArc"/>
+          </svg>
+          <div class="rg-mid"><b id="ringPct">0%</b><span id="ringTxt">0 of 0 found</span></div>
+          <div class="rg-sparks" id="sparks" aria-hidden="true"></div>
+          <div class="rg-split"><div><small>Shiny</small><b id="ringS">0/0</b></div><div><small>Limited</small><b id="ringL">0/0</b></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LIST ================= -->
+    <section class="sc-block" id="list">
+      <div class="sc-bar glass" id="bar">
+        <label class="tb-search">
+          <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input id="q" type="search" placeholder="Search shinies or items…" autocomplete="off" />
+          <span class="sc-count" id="count"></span>
+        </label>
+        <div class="seg" id="fStatus" role="tablist" aria-label="Show">
+          <button type="button" class="on" data-v="all">All</button><button type="button" data-v="got">Found</button><button type="button" data-v="miss">Missing</button>
+        </div>
+        <div class="seg" id="fKind" role="tablist" aria-label="Kind">
+          <button type="button" class="on" data-v="all">Both</button><button type="button" data-v="S">Shiny</button><button type="button" data-v="L">Limited</button>
+        </div>
+        <label class="sc-sel"><span>Tier</span><select id="fTier"><option value="">All tiers</option></select></label>
+        <label class="sc-sel"><span>Sort</span><select id="fSort">
+          <option value="tier">Tier</option><option value="name">Name A–Z</option><option value="recent">Recently found</option><option value="life">Life found (low → high)</option><option value="copies">Most copies</option>
+        </select></label>
+      </div>
+      <div class="tier-prog" id="tierProg"></div>
+      <div class="sc-grid" id="grid"></div>
+      <div class="sc-empty glass" id="empty" hidden><b>Nothing matches</b><p>Try a different search or filter.</p></div>
+    </section>
+  </main>
+
+  <!-- Edit panel -->
+  <div class="ed-wrap" id="edWrap" hidden>
+    <div class="ed glass" role="dialog" aria-modal="true" aria-labelledby="edName">
+      <button type="button" class="ed-x" id="edClose" aria-label="Close">×</button>
+      <div class="ed-top">
+        <div class="ed-pic" id="edPic"></div>
+        <div><small id="edKind"></small><h3 id="edName"></h3><a class="xlink" id="edLink" href="#">Open in Item Index</a></div>
+      </div>
+      <label class="ed-got"><input type="checkbox" id="edGot" /><span class="tg"></span><b>I have this shiny</b></label>
+      <div class="ed-grid">
+        <label class="ef"><span>Life obtained</span><input id="edLife" type="text" maxlength="20" placeholder="e.g. 523 or S+12" /></label>
+        <label class="ef"><span>Date obtained</span><input id="edDate" type="date" /></label>
+        <label class="ef"><span>Copies</span><div class="ef-num"><button type="button" data-d="-1" aria-label="One less">−</button><input id="edCopies" type="number" min="0" max="9999" inputmode="numeric" /><button type="button" data-d="1" aria-label="One more">+</button></div></label>
+        <label class="ef"><span>How you got it</span><select id="edHow"><option value="">-</option><option>Rebirth</option><option>Trade</option><option>Event</option><option>Evolved / fused</option><option>Other</option></select></label>
+        <label class="ef wide"><span>Notes</span><textarea id="edNote" rows="2" maxlength="200" placeholder="Anything you want to remember"></textarea></label>
+      </div>
+      <div class="ed-foot"><button type="button" class="sc-btn ghost" id="edClear">Clear details</button><button type="button" class="sc-btn" id="edDone">Done</button></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner glass reveal">
+      <div class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </div>
+      <p>
+        Shiny variants and images come from the item pages on the <a href="https://minershaven.fandom.com/" target="_blank" rel="noopener">Miner's Haven Fandom wiki</a>, available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA</a>.
+        Your checklist is saved only in this browser. A fan-made wiki, not affiliated with Roblox or Berezaa Games.
+      </p>
+      <a class="discord-cta" href="https://discord.gg/minershaven" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.32 4.37a19.8 19.8 0 0 0-4.89-1.52.07.07 0 0 0-.08.04c-.21.38-.44.87-.61 1.25a18.27 18.27 0 0 0-5.49 0 12.6 12.6 0 0 0-.62-1.25.08.08 0 0 0-.08-.04 19.74 19.74 0 0 0-4.89 1.52.07.07 0 0 0-.03.03C.53 9.05-.32 13.58.1 18.06a.08.08 0 0 0 .03.06 19.9 19.9 0 0 0 5.99 3.03.08.08 0 0 0 .08-.03c.46-.63.87-1.29 1.23-1.99a.08.08 0 0 0-.04-.11 13.1 13.1 0 0 1-1.87-.89.08.08 0 0 1-.01-.13l.37-.29a.07.07 0 0 1 .08-.01c3.93 1.79 8.18 1.79 12.07 0a.07.07 0 0 1 .08.01l.37.29a.08.08 0 0 1-.01.13c-.6.35-1.22.65-1.87.89a.08.08 0 0 0-.04.11c.36.7.78 1.36 1.22 1.99a.08.08 0 0 0 .08.03 19.84 19.84 0 0 0 6-3.03.08.08 0 0 0 .03-.06c.5-5.18-.84-9.67-3.55-13.66a.06.06 0 0 0-.03-.03ZM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42Zm7.97 0c-1.18 0-2.15-1.08-2.15-2.42 0-1.33.95-2.42 2.15-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.95 2.42-2.16 2.42Z"/></svg><span>Join our Discord</span></a>
+    </div>
+  </footer>
+
+  <button class="to-top glass" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../js/common.js?v=33"></script>
+  <script src="../js/shiny-data.js?v=33"></script>
+  <script src="../js/shiny-checklist.js?v=33"></script>
+</body>
+</html>

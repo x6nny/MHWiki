@@ -193,5 +193,23 @@ const MH = (() => {
   }).observe(document.body, { childList: true, subtree: true, characterData: true });
   curify(document.body);
 
-  return { curify, reduceMotion, toast, reveal, countUp };
+
+  /* Daily reset: Miner's Haven daily rewards (tasks, Daily Gifts, Fargield, Spook McDooks)
+     refresh at 8:00 PM New York time (01:00 UTC in winter, 00:00 UTC in summer). */
+  const RESET_TZ = "America/New_York", RESET_HOUR = 20;
+  const tzParts = (t, tz) => { const o = {}; new Intl.DateTimeFormat("en-US", { timeZone: tz, hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit" }).formatToParts(t).forEach(p => o[p.type] = +p.value || p.value); return o; };
+  const tzOffset = t => { const p = tzParts(t, RESET_TZ); return Date.UTC(p.year, p.month - 1, p.day, p.hour % 24, p.minute, p.second) - Math.floor(t / 1000) * 1000; };
+  const nyTime = (y, m, d, h) => { let g = Date.UTC(y, m, d, h); for (let i = 0; i < 2; i++) g = Date.UTC(y, m, d, h) - tzOffset(g); return g; };
+  function dailyReset(now = Date.now()) {
+    const p = tzParts(now, RESET_TZ);
+    let next = nyTime(p.year, p.month - 1, p.day, RESET_HOUR);
+    if (next <= now) next = nyTime(p.year, p.month - 1, p.day + 1, RESET_HOUR);
+    const q = tzParts(next - 30 * 36e5, RESET_TZ); // a time on the previous New York day
+    const prev = nyTime(q.year, q.month - 1, q.day, RESET_HOUR);
+    const k = tzParts(next - 12 * 36e5, RESET_TZ); // the day this reset period ends on
+    const key = `${k.year}-${String(k.month).padStart(2, "0")}-${String(k.day).padStart(2, "0")}`;
+    const local = new Date(next).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+    return { next, prev, key, left: next - now, local };
+  }
+  return { curify, reduceMotion, toast, reveal, countUp, dailyReset };
 })();

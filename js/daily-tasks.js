@@ -36,12 +36,9 @@
   const label = (t, kind) => `${t.verb} <b>${fmt(t[kind])}</b> ${esc(t.noun)}`;
   const plain = (t, kind) => `${t.verb} ${fmt(t[kind])} ${t.noun}`;
 
-  /* ---------- Reset clock (00:00 UTC) ---------- */
-  const todayUTC = () => new Date().toISOString().slice(0, 10);
-  function untilReset() {
-    const now = new Date(), next = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + 1);
-    return next - now.getTime();
-  }
+  /* ---------- Reset clock (8:00 PM New York time, see MH.dailyReset) ---------- */
+  const todayUTC = () => MH.dailyReset().key;
+  const untilReset = () => MH.dailyReset().left;
   const hms = ms => { const s = Math.max(0, Math.floor(ms / 1000)); return [Math.floor(s / 3600), Math.floor(s % 3600 / 60), s % 60].map(v => String(v).padStart(2, "0")).join(":"); };
 
   /* ================= Hero ================= */
@@ -258,7 +255,7 @@
   (function gifts() {
     const G = D.gifts;
     $("#giftIntro").textContent = G.intro;
-    $("#gfReset").textContent = G.reset;
+    $("#gfReset").textContent = G.reset.replace("{local}", MH.dailyReset().local);
     $("#streakNote").textContent = G.streakNote;
     const by = Object.fromEntries(G.streak.map(s => [s.day, s]));
     $("#gfDays").innerHTML = Array.from({ length: 7 }, (_, i) => {
@@ -269,9 +266,9 @@
     $("#gfBoost").querySelectorAll(".reveal").forEach(MH.reveal);
     const clock = $("#gfClock"), stat = $("#stReset"), bar = $("#gfBar");
     function tick() {
-      const ms = untilReset(), t = hms(ms);
+      const r = MH.dailyReset(), ms = r.left, t = hms(ms);
       clock.textContent = t; stat.textContent = t.slice(0, 5).replace(":", "h ") + "m";
-      bar.style.width = (1 - ms / 864e5) * 100 + "%";
+      bar.style.width = (1 - ms / (r.next - r.prev)) * 100 + "%";
     }
     tick(); setInterval(tick, 1000);
   })();

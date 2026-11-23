@@ -35,7 +35,7 @@ window.MH_TASKS = {
   ],
   gifts: {
     intro: "A free gift every day you log in. It gives copies of a shop item, cash based on how much money you have, a Gift Crate with RP and sometimes Mystery Boxes. You can buy a second daily gift for R$20.",
-    reset: "Daily Gifts reset at 12:00 am GMT (8:00 pm EST), so you can claim one at 11:59 pm GMT and another a minute later.",
+    reset: "Daily Gifts reset at 8:00 PM New York time ({local} your time), so you can claim one just before the reset and another right after it.",
     streak: [
       { day: 3, box: "Unreal Box", slug: "unreal-box" },
       { day: 5, box: "Inferno Box", slug: "inferno-box" },

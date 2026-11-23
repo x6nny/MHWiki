@@ -14,7 +14,7 @@ const SECTIONS = [
   { id: "mystery-boxes",  name: "Mystery Boxes",  icon: "assets/icons/spook-mcdooks.png", desc: "Box types, odds & Lucky Clovers",            cat: "economy",     keys: "boxes crates inferno lucky clover spook mcdooks unreal magnificent", ready: true },
   { id: "codes",          name: "Codes",          icon: "assets/icons/uc.png",            desc: "Active codes for uC, boxes & items",         cat: "economy",     keys: "redeem codes uc unobtainium crystals free",                  ready: true },
   { id: "cash-suffixes",  name: "Cash Suffixes",  icon: "assets/icons/money.png",         desc: "Every suffix from k to UNCENT, plus a converter", cat: "economy", keys: "cash suffix suffixes money k m b t qn sx centillion uncent scientific notation converter cap inf", ready: true },
-  { id: "npcs",           name: "NPCs",           icon: "assets/icons/craftsman.png",     desc: "Masked Man, Craftsman, Draedon & more",      cat: "world",       keys: "npc masked man craftsman spook mcdooks draedon daegel fargield john doe zalgo", ready: false },
+  { id: "npcs",           name: "NPCs",           icon: "assets/icons/craftsman.png",     desc: "Masked Man, Craftsman, Draedon & more",      cat: "world",       keys: "npc masked man craftsman spook mcdooks draedon daegel fargield john doe zalgo characters guardians santa leprechaun", ready: true },
 ];
 const byId = Object.fromEntries(SECTIONS.map(s => [s.id, s]));
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

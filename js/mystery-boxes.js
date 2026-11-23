@@ -190,7 +190,7 @@
   const tabs = Object.keys(D.circulation);
   const seg = $("#circTabs"), ind = seg.querySelector(".seg-ind");
   seg.insertAdjacentHTML("beforeend", tabs.map((t, i) => `<button data-tab="${t}" class="${i === 0 ? "active" : ""}">${t}<em>${D.circulation[t].filter(x => x.n).length}</em></button>`).join(""));
-  const SEC_ICON = { Spring: "easter.png", Autumn: "halloween.png", Winter: "winter.png" };
+  const SEC_ICON = { Spring: "spring.png", Summer: "summer.png", Autumn: "halloween.png", Winter: "winter.png" };
   function boxIconFor(name) {
     const b = D.boxes.find(x => x.name === name);
     return b ? `${ICON + b.slug}.webp` : `${ICON}mysteryboxes.gif`;

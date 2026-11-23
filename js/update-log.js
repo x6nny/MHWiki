@@ -15,7 +15,8 @@
     easter:      { label: "Easter",        icon: "easter.png",        color: "#ffd166" },
     birthday:    { label: "Anniversary",   icon: "birthday.png",            color: "#ff7aa2" },
     blackfriday: { label: "Black Friday",  icon: "money.png",         color: "#9dff6b" },
-    spring:      { label: "Seasonal",      icon: "uc.png",            color: "#ff8ac0" },
+    spring:      { label: "Spring",        icon: "spring.png",        color: "#ffc93c" },
+    summer:      { label: "Summer",        icon: "summer.png",        color: "#ffa62b" },
   };
 
   const $ = s => document.querySelector(s);

@@ -47,7 +47,7 @@
     { id: "Weapon",     label: "Weapons",     color: "#ff4d6d", sample: "Illumina" },
     { id: "Other",      label: "Misc",        color: "#9aa6c4", sample: "Giant Dice" },
   ];
-  const EVENT_ICON = { "Halloween": "halloween.png", "Holidays": "winter.png", "Birthday": "birthday.png", "St. Patrick's": "st-patty.png", "Easter": "easter.png", "Valentine's": "valentines.png" };
+  const EVENT_ICON = { "Halloween": "halloween.png", "Holidays": "winter.png", "Birthday": "birthday.png", "St. Patrick's": "st-patty.png", "Easter": "easter.png", "Valentine's": "valentines.png", "Spring": "spring.png", "Summer": "summer.png" };
 
   const state = { type: "all", tier: "all", sort: "tier", q: "", rp: false, shiny: false };
   let list = [], shown = 0;

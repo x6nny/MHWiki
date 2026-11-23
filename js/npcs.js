@@ -69,7 +69,7 @@
       card(["john-doe"], "John Doe's Coliseum", true, "",
         "Always open. Take on the zombie survival gauntlet whenever you like for rewards.", null, "#ffb347") +
       card(["fargield", "spook-mcdooks"], "Daily gifts", true, fmtLeft(dr.left),
-        `Fargield and Spook McDooks each give you something free every day, and Spook McDooks hands out a free Mystery Box. Both reset at 8:00 PM New York time (${dr.local} your time).`, 1 - dr.left / (dr.next - dr.prev), "#34f5a4") +
+        `Fargield and Spook McDooks each give you something free every day, and Spook McDooks hands out a free Mystery Box. Both reset at 12:00 AM UTC (${dr.local} your time).`, 1 - dr.left / (dr.next - dr.prev), "#34f5a4") +
       card(nextIds.length ? nextIds : curIds, `${esc(s.next)} visitors`, false, "",
         `${s.cur ? `${esc(s.cur)} visitors may still be around. ` : ""}Next up: ${esc(s.next)} characters, usually from ${MONTHS[s.month - 1]}.`, null, "#ff8a3d");
   }

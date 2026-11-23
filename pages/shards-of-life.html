@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shards of Life · Miner's Haven Wiki</title>
+  <meta name="referrer" content="no-referrer" />
+  <meta name="description" content="Shards of Life in Miner's Haven: life skipping, salvaging, the Reborn Shop, Enchanted recipes, platforms, Shard Park and Shard City, with calculators." />
+  <link rel="icon" href="../assets/sol/shard.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css?v=18" />
+  <link rel="stylesheet" href="../css/subpage.css?v=18" />
+  <link rel="stylesheet" href="../css/shards-of-life.css?v=18" />
+</head>
+<body class="subpage sol-page">
+  <div class="backdrop" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+    <div class="grid-lines"></div>
+    <canvas id="ore-field"></canvas>
+    <div class="grain"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner glass">
+      <a href="../index.html" class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="item-index.html">Item Index</a>
+        <a href="rebirth.html">Rebirth</a>
+        <a href="sacrifice.html">Sacrifice</a>
+        <a href="research-points.html">Research Points</a>
+        <a href="shards-of-life.html" class="current">Shards of Life</a>
+        <a href="status-effects.html">Status Effects</a>
+        <a href="mystery-boxes.html">Mystery Boxes</a>
+        <a href="codes.html">Codes</a>
+        <a href="cash-suffixes.html">Cash Suffixes</a>
+        <a href="events.html">Events</a>
+        <a href="npcs.html">NPCs</a>
+        <a href="update-log.html">Update Log</a>
+        <a href="gamepasses.html">Gamepasses</a>
+      </nav>
+      <a class="search-trigger" href="../index.html#explore">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>All sections</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="page-hero sol-hero">
+      <div>
+        <nav class="crumbs intro" style="--d:0" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span>/</span><b>Shards of Life</b>
+        </nav>
+        <h1 class="intro" style="--d:1"><span class="shine sol-shine">Shards of Life</span></h1>
+        <p class="lede intro" style="--d:2">A currency you earn by <b>skipping lives</b> when you rebirth and by <b>salvaging Reborn items</b>. Spend it at The Craftsman's Reborn Shop, on Enchanted recipes and on platforms. Shards are Reborn-proof, but a sacrifice takes them.</p>
+        <div class="stats intro" style="--d:3">
+          <div class="stat glass"><strong id="stMax">0</strong><span>Max / rebirth</span></div>
+          <div class="stat glass"><strong id="stShop">0</strong><span>Shop items</span></div>
+          <div class="stat glass"><strong id="stEnch">0</strong><span>Recipes</span></div>
+          <div class="stat glass"><strong id="stTop">0</strong><span>Top recipe</span></div>
+        </div>
+        <nav class="sol-jump intro" style="--d:4" aria-label="On this page">
+          <a href="#earn">Earning</a><a href="#shop">Reborn Shop</a><a href="#enchanted">Enchanted</a><a href="#platforms">Platforms</a><a href="#park">Shard Park</a><a href="#history">History</a>
+        </nav>
+      </div>
+
+      <!-- Life-skip simulator -->
+      <div class="sim-wrap intro" style="--d:2">
+        <div class="sim glass" id="sim">
+          <div class="sim-top">
+            <div class="sim-stat"><small>Your life</small><b id="simLife">100</b></div>
+            <div class="sim-stat right"><small>Shards banked</small><b id="simBank"><img src="../assets/sol/shard.webp" alt="" /><span>0</span></b></div>
+          </div>
+          <div class="crystal" id="crystal" aria-hidden="true">
+            <span class="halo"></span><span class="ring r1"></span><span class="ring r2"></span>
+            <img class="core" src="../assets/sol/shard.webp" alt="" />
+            <span class="frag f1"></span><span class="frag f2"></span><span class="frag f3"></span><span class="frag f4"></span><span class="frag f5"></span>
+          </div>
+          <div class="sim-ctrl">
+            <label for="simOver"><span>Cash over your rebirth price</span><b id="simOverTxt">10 suffixes</b></label>
+            <input type="range" id="simOver" min="0" max="24" value="10" />
+            <div class="pips" id="pips" aria-hidden="true"></div>
+            <div class="sim-out">
+              <div><small>Lives skipped</small><b id="simSkip">10</b></div>
+              <div><small>Life gained</small><b id="simGain">+11</b></div>
+              <div class="hl"><small>Shards</small><b id="simShards">5</b></div>
+            </div>
+            <button class="sim-btn" id="simBtn" type="button">Rebirth <span>&amp; skip lives</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EARN ================= -->
+    <section class="sol-block" id="earn">
+      <div class="sol-head reveal">
+        <span class="sol-kicker">Getting shards</span>
+        <h2>Three ways to earn them</h2>
+      </div>
+      <div class="src-grid" id="sources"></div>
+
+      <div class="skip-chart glass reveal" id="skipChart">
+        <div class="sc-top">
+          <div><h3>Shards per rebirth</h3><p>Every suffix of cash above your rebirth price lets you skip one more life, up to 20. Skipping more also raises your chance of an Inferno Box.</p></div>
+          <div class="sc-key"><span><i class="k1"></i>Lives skipped</span><span><i class="k2"></i>Shards</span></div>
+        </div>
+        <div class="sc-bars" id="scBars"></div>
+        <div class="sc-axis"><span>0</span><span>Lives skipped</span><span>20</span></div>
+      </div>
+    </section>
+
+    <!-- ================= SPEND ================= -->
+    <section class="sol-block" id="spend">
+      <div class="sol-head reveal">
+        <span class="sol-kicker">Spending shards</span>
+        <h2>What they buy</h2>
+      </div>
+      <div class="use-row" id="uses"></div>
+      <div class="warn-row reveal" id="warns"></div>
+    </section>
+
+    <!-- ================= REBORN SHOP ================= -->
+    <section class="sol-block" id="shop">
+      <div class="sol-head reveal">
+        <span class="sol-kicker">The Craftsman</span>
+        <h2>Reborn Shop &amp; salvaging</h2>
+        <p id="shopNote"></p>
+      </div>
+      <div class="rar glass reveal">
+        <div class="rar-l">
+          <h3>Price by rarity</h3>
+          <p>Lower rarity numbers are rarer. Drag to see what an item costs and what it salvages for.</p>
+          <div class="rar-seg" id="rarSeg" role="tablist">
+            <button type="button" class="on" data-t="R">Reborn</button>
+            <button type="button" data-t="A">Advanced Reborn</button>
+          </div>
+          <label class="rar-sl"><span>Rarity <b id="rarVal">10</b></span><input type="range" id="rarRange" min="1" max="19" value="10" /></label>
+          <div class="rar-out">
+            <div><small>Buy for</small><b id="rarBuy">375</b></div>
+            <div><small>Salvage for</small><b id="rarSell">17</b></div>
+          </div>
+          <code class="rar-f" id="rarF"></code>
+        </div>
+        <div class="rar-r">
+          <svg id="rarChart" viewBox="0 0 520 260" preserveAspectRatio="none" aria-hidden="true"></svg>
+        </div>
+      </div>
+      <p class="quirk reveal" id="quirk"></p>
+
+      <div class="rs-tools reveal">
+        <div class="rs-search glass">
+          <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input id="rsQ" type="search" placeholder="Search Reborn items…" autocomplete="off" />
+        </div>
+        <div class="rs-chips" id="rsTier">
+          <button type="button" class="on" data-t="all">All</button><button type="button" data-t="R">Reborn</button><button type="button" data-t="A">Advanced</button>
+        </div>
+        <label class="rs-sort"><span>Sort</span>
+          <select id="rsSort">
+            <option value="cost-desc">Price: high → low</option>
+            <option value="cost-asc">Price: low → high</option>
+            <option value="sell-desc">Salvage value</option>
+            <option value="name">A – Z</option>
+          </select>
+        </label>
+      </div>
+      <div class="rs-count" id="rsCount"></div>
+      <div class="rs-grid" id="rsGrid"></div>
+      <div class="rs-more"><button type="button" id="rsMore">Show more</button></div>
+    </section>
+
+    <!-- ================= ENCHANTED ================= -->
+    <section class="sol-block" id="enchanted">
+      <div class="sol-head reveal">
+        <span class="sol-kicker">Crafting</span>
+        <h2>Enchanted recipes</h2>
+        <p>Every Enchanted item at The Craftsman costs shards as well as items. Set how many shards you have to see which recipes you can cover.</p>
+      </div>
+      <div class="have glass reveal">
+        <label for="haveRange"><img src="../assets/sol/shard.webp" alt="" /><span>Shards you have</span></label>
+        <input type="range" id="haveRange" min="0" max="2000" step="10" value="750" />
+        <b id="haveVal">750</b>
+        <span class="have-sum" id="haveSum"></span>
+      </div>
+      <div class="en-grid" id="enGrid"></div>
+    </section>
+
+    <!-- ================= PLATFORMS ================= -->
+    <section class="sol-block" id="platforms">
+      <div class="sol-head reveal">
+        <span class="sol-kicker">Building up</span>
+        <h2>Platforms &amp; other buys</h2>
+        <p>Platforms let you build on a higher floor. The shard ones come from the Premium Shop and their price climbs every time you buy one.</p>
+      </div>
+      <div class="pl-grid" id="plGrid"></div>
+      <div class="hyd glass reveal">
+        <div class="hyd-l">
+          <h3>Hydraulic Platform cost</h3>
+          <p>Starts at 100 shards and goes up by about 150 each time. The wiki notes the first few steps can be a bit smaller, so treat this as an estimate.</p>
+          <label class="hyd-sl"><span>How many to buy <b id="hydN">4</b></span><input type="range" id="hydRange" min="1" max="12" value="4" /></label>
+          <div class="hyd-out"><div><small>Last one costs</small><b id="hydLast">550</b></div><div><small>Total</small><b id="hydTot">1,300</b></div></div>
+        </div>
+        <div class="stack" id="stack" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ================= PARK ================= -->
+    <section class="sol-block" id="park">
+      <div class="sol-head reveal">
+        <span class="sol-kicker">Hoarding pays</span>
+        <h2>Shard Park &amp; Shard City</h2>
+        <p>Two upgraders whose multiplier depends on how many shards you're holding right now.</p>
+      </div>
+      <div class="park glass reveal">
+        <div class="park-items" id="parkItems"></div>
+        <div class="park-calc">
+          <label class="park-sl"><span><img src="../assets/sol/shard.webp" alt="" />Shards held <b id="pkN">20</b></span><input type="range" id="pkRange" min="0" max="80" value="20" /></label>
+          <div class="park-out">
+            <div class="po-park"><small>Shard Park</small><b id="pkPark">6x</b><i><em id="pkParkBar"></em></i></div>
+            <div class="po-city"><small>Shard City</small><b id="pkCity">5x</b><i><em id="pkCityBar"></em></i></div>
+          </div>
+          <svg id="pkChart" viewBox="0 0 520 220" preserveAspectRatio="none" aria-hidden="true"></svg>
+          <p class="park-tip" id="pkTip"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HISTORY ================= -->
+    <section class="sol-block" id="history">
+      <div class="sol-head reveal">
+        <span class="sol-kicker">Since 2018</span>
+        <h2>History &amp; trivia</h2>
+      </div>
+      <div class="tl glass reveal" id="tl"></div>
+      <div class="tri-wrap">
+        <div class="old glass reveal">
+          <div class="old-pics"><figure><img src="../assets/sol/shard-old.webp" alt="Old Shards of Life icon" /><figcaption>Old icon</figcaption></figure><span class="arrow">→</span><figure><img src="../assets/sol/shard.webp" alt="Current Shards of Life icon" /><figcaption>Now</figcaption></figure></div>
+          <p>Shards have had two icons: the original teal crystal, and today's blue one.</p>
+        </div>
+        <div class="trivia glass reveal"><h3>Trivia</h3><ul id="trivia"></ul></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner glass reveal">
+      <div class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </div>
+      <p>
+        Shards of Life details come from the
+        <a href="https://minershaven.fandom.com/wiki/Shards_of_Life" target="_blank" rel="noopener">Shards of Life</a>,
+        <a href="https://minershaven.fandom.com/wiki/The_Craftsman" target="_blank" rel="noopener">The Craftsman</a>,
+        <a href="https://minershaven.fandom.com/wiki/Category:Rebirth" target="_blank" rel="noopener">Rebirth</a> and item pages on the Miner's Haven Fandom wiki,
+        available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA</a>.
+        A fan-made wiki, not affiliated with Roblox or Berezaa Games.
+      </p>
+    </div>
+  </footer>
+
+  <button class="to-top glass" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
+  <div class="burst" id="burst" aria-hidden="true"></div>
+
+  <script src="../js/common.js?v=18"></script>
+  <script src="../js/sol-gen.js?v=18"></script>
+  <script src="../js/sol-data.js?v=18"></script>
+  <script src="../js/shards-of-life.js?v=18"></script>
+</body>
+</html>

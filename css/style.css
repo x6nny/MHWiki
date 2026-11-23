@@ -617,6 +617,15 @@ h3 { font-family: var(--font-display); font-size: 22px; letter-spacing: -.02em; 
 @keyframes rpDrop { 0% { transform: translateY(-40px); opacity: 0; } 18% { transform: translateY(0); opacity: 1; } 24% { transform: translateY(-6px); } 30%, 70% { transform: translateY(0); opacity: 1; } 85%, 100% { transform: translateY(-10px) scale(.8); opacity: 0; } }
 @keyframes rpTag { 0%, 30% { opacity: 0; transform: translateY(6px); } 40%, 70% { opacity: 1; transform: translateY(0); } 85%, 100% { opacity: 0; transform: translateY(-8px); } }
 @media (max-width: 680px) { .rp-drops { width: 150px; height: 110px; transform: scale(.85); transform-origin: right center; } }
+.sol-cluster { position: relative; flex: none; width: 170px; height: 130px; }
+.sol-cluster::before { content: ""; position: absolute; left: 50%; top: 50%; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; background: radial-gradient(circle, rgba(108,184,255,.35), transparent 65%); animation: corePulse 3s ease-in-out infinite; }
+.sol-cluster img { position: absolute; object-fit: contain; filter: drop-shadow(0 0 14px rgba(108,184,255,.6)); }
+.sol-cluster .sc1 { width: 92px; height: 92px; left: 39px; top: 18px; animation: floaty 4.5s ease-in-out infinite; }
+.sol-cluster .sc2 { width: 40px; height: 40px; left: 6px; top: 60px; transform: rotate(-24deg); animation: floaty 5.5s ease-in-out infinite -1.5s; opacity: .85; }
+.sol-cluster .sc3 { width: 34px; height: 34px; right: 8px; top: 16px; transform: rotate(22deg); animation: floaty 5s ease-in-out infinite -3s; opacity: .8; }
+.sol-cluster b { position: absolute; right: 6px; bottom: 6px; font: 800 14px var(--font-mono); color: #b8e6ff; text-shadow: 0 0 10px rgba(108,184,255,.8); animation: rpTag 3.6s var(--ease) infinite; }
+.card:hover .sol-cluster .sc1 { filter: drop-shadow(0 0 22px rgba(108,184,255,.9)); }
+@media (max-width: 680px) { .sol-cluster { width: 130px; height: 110px; transform: scale(.85); transform-origin: right center; } }
 .npc-stack { display: flex; height: 92px; margin: 0 0 14px; padding-left: 6px; }
 .npc-stack img {
   width: 76px; height: 76px; padding: 8px; border-radius: 22px; margin-left: -18px; object-fit: contain;

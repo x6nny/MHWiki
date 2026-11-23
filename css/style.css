@@ -715,10 +715,14 @@ h3 { font-family: var(--font-display); font-size: 22px; letter-spacing: -.02em; 
 /* Nav fits nine links */
 .subpage .nav-links a, .subpage .search-trigger, .subpage .brand { white-space: nowrap; }
 @media (max-width: 1500px) {
+  .subpage .search-trigger span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .subpage .search-trigger { padding: 0; width: 40px; height: 40px; justify-content: center; flex: none; }
   .subpage .nav-links { gap: 2px; }
   .subpage .nav-links a { padding: 8px 10px; font-size: 13.5px; }
 }
 @media (max-width: 1240px) {
   .subpage .nav-links { display: none; }
   .subpage .search-trigger { margin-left: auto; }
+  .subpage .search-trigger span { position: static; width: auto; height: auto; overflow: visible; clip: auto; }
+  .subpage .search-trigger { width: auto; height: auto; padding: 8px 10px 8px 14px; }
 }

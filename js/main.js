@@ -12,7 +12,7 @@ const SECTIONS = [
   { id: "update-log",     name: "Update Log",     icon: "assets/icons/halloween.png",     desc: "Patch notes, newest first",                  cat: "news",        keys: "updates patch notes changelog halloween 2026",               ready: true },
   { id: "events",         name: "Events",         icon: "assets/icons/winter.png",        desc: "Seasonal events since 2015",                 cat: "news",        keys: "valentines st patricks easter birthday halloween black friday winter christmas", ready: false },
   { id: "mystery-boxes",  name: "Mystery Boxes",  icon: "assets/icons/spook-mcdooks.png", desc: "Box types, odds & Lucky Clovers",            cat: "economy",     keys: "boxes crates inferno lucky clover spook mcdooks unreal magnificent", ready: true },
-  { id: "codes",          name: "Codes",          icon: "assets/icons/uc.png",            desc: "Active codes for uC, boxes & items",         cat: "economy",     keys: "redeem codes uc unobtainium crystals free",                  ready: false },
+  { id: "codes",          name: "Codes",          icon: "assets/icons/uc.png",            desc: "Active codes for uC, boxes & items",         cat: "economy",     keys: "redeem codes uc unobtainium crystals free",                  ready: true },
   { id: "npcs",           name: "NPCs",           icon: "assets/icons/craftsman.png",     desc: "Masked Man, Craftsman, Draedon & more",      cat: "world",       keys: "npc masked man craftsman spook mcdooks draedon daegel fargield john doe zalgo", ready: false },
 ];
 const byId = Object.fromEntries(SECTIONS.map(s => [s.id, s]));

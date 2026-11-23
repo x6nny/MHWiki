@@ -20,7 +20,7 @@
   const count = g => ALL.filter(n => n.g === g).length;
 
   /* ---------- Hero ---------- */
-  $("#lede").textContent = D.intro + " Here's everyone, from the weekend-only Masked Man to the gods of the Void and Thunder.";
+  $("#lede").textContent = D.intro + " Here's everyone, from The Masked Man and his daily deals to the gods of the Void and Thunder.";
   setTimeout(() => {
     MH.countUp($("#stAll"), ALL.length);
     MH.countUp($("#stMap"), count("map"));
@@ -34,19 +34,7 @@
   }).join("");
   $("#carousel").addEventListener("click", e => { const b = e.target.closest(".car-card"); if (b) open(b.dataset.id, ALL); });
 
-  /* ---------- Schedule (UTC) ---------- */
-  const DAY = 864e5;
-  function weekendWindow(now) {
-    // Friday 00:00 UTC to Monday 00:00 UTC
-    const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
-    const dow = d.getUTCDay(); // 0 Sun … 6 Sat
-    const sinceFri = (dow + 2) % 7; // Fri → 0, Sat → 1, Sun → 2, Mon → 3 …
-    const start = new Date(d.getTime() - sinceFri * DAY);
-    const end = new Date(start.getTime() + 3 * DAY);
-    if (now >= start && now < end) return { here: true, start, end };
-    const next = new Date(start.getTime() + 7 * DAY);
-    return { here: false, start: next, end: new Date(next.getTime() + 3 * DAY), prevEnd: end };
-  }
+  /* ---------- Schedule ---------- */
   function fmtLeft(ms) {
     const s = Math.max(0, Math.floor(ms / 1000));
     const d = Math.floor(s / 86400), h = Math.floor(s % 86400 / 3600), m = Math.floor(s % 3600 / 60), sec = s % 60;
@@ -66,12 +54,9 @@
   const seasonOf = n => n.g === "event" ? n.where.replace("Valentine's Day", "Valentines") : n.id === "trick-or-treaters" ? "Halloween" : null;
   function schedule() {
     const now = new Date();
-    const w = weekendWindow(now);
-    const span = 3 * DAY;
-    const wk = w.here ? (now - w.start) / span : 1 - (w.start - now) / (4 * DAY);
     const card = (ids, title, here, cd, text, pct, c) => `<button class="sc glass ${here ? "here" : "away"}" data-id="${ids[0]}" style="--c:${c}">
-      <div class="sc-top"><span class="faces">${ids.map(id => `<img src="${IMG(byId[id])}" alt="" />`).join("")}</span><div><h3>${title}</h3><span class="st"><i></i>${here ? "Here now" : "Away"}</span></div></div>
-      ${cd ? `<div class="cd" data-cd${ids[0] === "fargield" ? '="daily"' : ""}>${cd}</div>` : ""}
+      <div class="sc-top"><span class="faces">${ids.map(id => `<img src="${IMG(byId[id])}" alt="" />`).join("")}</span><div><h3>${title}</h3><span class="st"><i></i>${here ? (ids[0] === "john-doe" ? "Open now" : "Here now") : "Away"}</span></div></div>
+      ${cd ? `<div class="cd" data-cd>${cd}</div>` : ""}
       <p>${text}</p>
       ${pct != null ? `<div class="bar"><i style="--w:${Math.round(Math.min(1, Math.max(0, pct)) * 100)}%"></i></div>` : ""}
     </button>`;
@@ -79,10 +64,10 @@
     const curIds = s.cur ? ALL.filter(n => seasonOf(n) === s.cur).map(n => n.id).slice(0, 3) : [];
     const nextIds = ALL.filter(n => seasonOf(n) === s.next).map(n => n.id).slice(0, 3);
     $("#sched").innerHTML =
-      card(["the-masked-man"], "The Masked Man", w.here, fmtLeft((w.here ? w.end : w.start) - now),
-        w.here ? "Selling Contraband items until Sunday night. He moves somewhere new every day." : "Back on Friday at 12:00 AM UTC with a new stock of Contraband items.", wk, "#ff6b9a") +
-      card(["john-doe"], "John Doe's Coliseum", w.here, fmtLeft((w.here ? w.end : w.start) - now),
-        w.here ? "The zombie survival gauntlet is open until Sunday night." : "The Coliseum opens on Friday. Survive the zombie gauntlet for rewards.", wk, "#ffb347") +
+      card(["the-masked-man"], "The Masked Man", true, fmtLeft(dr.left),
+        `Always here with his whole stock of Contraband items. A few items are discounted each day, and the discounts change at the daily reset (${dr.local} your time). Bigger discounts on weekends.`, 1 - dr.left / (dr.next - dr.prev), "#ff6b9a") +
+      card(["john-doe"], "John Doe's Coliseum", true, "",
+        "Always open. Take on the zombie survival gauntlet whenever you like for rewards.", null, "#ffb347") +
       card(["fargield", "spook-mcdooks"], "Daily gifts", true, fmtLeft(dr.left),
         `Fargield and Spook McDooks each give you something free every day, and Spook McDooks hands out a free Mystery Box. Both reset at 8:00 PM New York time (${dr.local} your time).`, 1 - dr.left / (dr.next - dr.prev), "#34f5a4") +
       card(nextIds.length ? nextIds : curIds, `${esc(s.next)} visitors`, false, "",
@@ -90,14 +75,11 @@
   }
   let schedKey = "";
   function tick() {
-    const now = new Date(), w = weekendWindow(now);
-    const key = w.here + "|" + nextSeason(now).next;
+    const now = new Date(), dr = MH.dailyReset();
+    const key = nextSeason(now).next + "|" + dr.key;
     if (key !== schedKey) { schedKey = key; schedule(); return; }
-    const left = fmtLeft((w.here ? w.end : w.start) - now);
-    const wk = w.here ? (now - w.start) / (3 * DAY) : 1 - (w.start - now) / (4 * DAY);
-    const dr = MH.dailyReset(), dp = 1 - dr.left / (dr.next - dr.prev);
-    document.querySelectorAll("#sched [data-cd]").forEach(el => { el.innerHTML = el.dataset.cd === "daily" ? fmtLeft(dr.left) : left; });
-    document.querySelectorAll("#sched .bar i").forEach(el => el.style.setProperty("--w", Math.round(Math.min(1, Math.max(0, el.closest("[data-id='fargield']") ? dp : wk)) * 100) + "%"));
+    document.querySelectorAll("#sched [data-cd]").forEach(el => { el.innerHTML = fmtLeft(dr.left); });
+    document.querySelectorAll("#sched .bar i").forEach(el => el.style.setProperty("--w", Math.round(Math.min(1, Math.max(0, 1 - dr.left / (dr.next - dr.prev))) * 100) + "%"));
   }
   tick();
   setInterval(() => { if (!document.hidden) tick(); }, 1000);

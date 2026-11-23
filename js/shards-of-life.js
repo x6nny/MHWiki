@@ -265,7 +265,7 @@
       <article class="pl glass reveal">
         <div class="pic">${pic(p.img, 300, p.n)}</div>
         <a class="nm" href="${ITEM(p.n)}">${esc(p.n)}</a>
-        <span class="price">${SHARD}1</span><span class="rise">Sold by The Masked Man on weekends</span>
+        <span class="price">${SHARD}1</span><span class="rise">Sold by The Masked Man</span>
         <p>${esc(p.quote || "")}</p>
         <div class="tagz"><span>Contraband</span><span>The Masked Man</span></div>
       </article>`).join("");

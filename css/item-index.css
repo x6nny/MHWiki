@@ -36,7 +36,7 @@
 /* ---------- Toolbar ---------- */
 .ii-bar {
   position: sticky; top: 92px; z-index: 40;
-  display: grid; grid-template-columns: 1fr auto auto auto auto; gap: 10px; align-items: center;
+  display: grid; grid-template-columns: 1fr auto auto auto auto auto; gap: 10px; align-items: center;
   padding: 10px; border-radius: 20px; margin: 10px 0 14px; background: rgba(12,16,32,.62);
 }
 .result-count { font-size: 13px; color: var(--faint); font-weight: 700; white-space: nowrap; padding: 0 6px; min-width: 92px; text-align: right; }
@@ -261,3 +261,63 @@ body.modal-open { overflow: hidden; }
   .modal-wrap { padding: 10px; }
   .tb-search kbd { display: none; }
 }
+
+/* ---------- Shiny variants ---------- */
+.shiny-toggle input:checked + .tg { background: linear-gradient(90deg, #ffd76b, #ff7ad9, #7ad7ff); }
+.shiny-badge {
+  position: absolute; top: 10px; left: 10px; z-index: 2; width: 24px; height: 24px; border-radius: 8px; display: grid; place-items: center;
+  color: #fff6c9; background: linear-gradient(135deg, rgba(255,215,107,.35), rgba(255,122,217,.3)); border: 1px solid rgba(255,230,160,.45);
+  box-shadow: 0 0 12px rgba(255,215,107,.45);
+}
+.shiny-badge svg { animation: twinkleSpin 3s ease-in-out infinite; }
+@keyframes twinkleSpin { 0%,100% { transform: scale(.85) rotate(0); opacity: .8; } 50% { transform: scale(1.1) rotate(45deg); opacity: 1; } }
+
+.v-caption { min-height: 22px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; margin-top: -4px; }
+.v-caption b { font-family: var(--font-display); font-size: 15px; }
+.vc-tag {
+  padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #2a1a00;
+  background: linear-gradient(90deg, #ffe08a, #ffb3ec, #a5e8ff); background-size: 200% 100%; animation: holo 3s linear infinite;
+}
+.vc-tag.plain { color: var(--muted); background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); animation: none; }
+@keyframes holo { to { background-position: 200% 0; } }
+
+.variants { width: 100%; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.vbtn {
+  position: relative; display: flex; flex-direction: column; align-items: center; gap: 4px; width: 74px; padding: 6px 4px 7px; border-radius: 14px;
+  background: rgba(0,0,0,.2); border: 1px solid rgba(255,255,255,.1);
+  transition: transform .35s var(--spring), border-color .25s, background .25s, box-shadow .25s;
+}
+.vbtn:hover { transform: translateY(-3px); border-color: rgba(255,255,255,.25); }
+.vbtn.on { background: color-mix(in srgb, var(--tb) 22%, rgba(0,0,0,.2)); border-color: color-mix(in srgb, var(--tb) 70%, white); box-shadow: 0 8px 20px -10px color-mix(in srgb, var(--tb) 80%, transparent); }
+.vbtn.shiny { border-color: rgba(255,220,140,.35); }
+.vbtn.shiny.on { border-color: #ffe08a; background: linear-gradient(160deg, rgba(255,224,138,.22), rgba(255,179,236,.16), rgba(165,232,255,.18)); box-shadow: 0 0 0 1px rgba(255,224,138,.4), 0 10px 24px -10px rgba(255,200,120,.8); }
+.vthumb { width: 44px; height: 44px; display: grid; place-items: center; }
+.vthumb img { max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(0,0,0,.5)); }
+.vl { display: inline-flex; align-items: center; gap: 3px; font-size: 10.5px; font-weight: 800; line-height: 1.2; color: var(--muted); text-align: center; }
+.vbtn.on .vl { color: var(--text); }
+.vbtn.shiny .vl { color: #ffe7a6; }
+.vev { position: absolute; top: -6px; right: -6px; width: 18px; height: 18px; filter: drop-shadow(0 2px 4px rgba(0,0,0,.5)); }
+
+/* image swap + shiny glow */
+.m-img img.v-in { animation: vIn .45s var(--spring) both, mFloat 5s ease-in-out .45s infinite; }
+.m-img .v-out { position: absolute; animation: vOut .25s var(--ease) forwards !important; }
+@keyframes vIn { from { opacity: 0; transform: scale(.7) rotate(-8deg); filter: blur(6px) drop-shadow(0 20px 30px rgba(0,0,0,.6)); } }
+@keyframes vOut { to { opacity: 0; transform: scale(1.15); filter: blur(8px); } }
+.modal.shiny-on .m-img::before {
+  background: conic-gradient(from var(--angle, 0deg), #ffe08a, #ff9ce6, #8fe3ff, #b7ffb0, #ffe08a);
+  opacity: .85; animation-duration: 3s;
+}
+.modal.shiny-on .m-side { background: radial-gradient(420px 360px at 50% 28%, rgba(255,214,140,.28), transparent 70%), rgba(255,255,255,.02); }
+.spk {
+  position: absolute; left: 50%; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; z-index: 3; pointer-events: none;
+  background: #fff8d6; clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+  filter: drop-shadow(0 0 6px #ffd76b);
+  animation: spk 1s cubic-bezier(.2,.8,.3,1) var(--d) both;
+}
+@keyframes spk {
+  0% { transform: translate(0,0) scale(0) rotate(0); opacity: 1; }
+  60% { opacity: 1; }
+  100% { transform: translate(var(--x), var(--y)) scale(var(--s)) rotate(180deg); opacity: 0; }
+}
+@media (max-width: 1180px) { .ii-bar { grid-template-columns: 1fr 1fr 1fr; } .ii-bar .tb-search { grid-column: 1 / -1; } }
+@media (max-width: 680px) { .ii-bar { grid-template-columns: 1fr 1fr; } .vbtn { width: 64px; } }

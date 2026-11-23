@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mystery Boxes · Miner's Haven Wiki</title>
+  <meta name="referrer" content="no-referrer" />
+  <meta name="description" content="Every Miner's Haven mystery box: where to get it, its odds, its relics, and the items in circulation." />
+  <link rel="icon" href="../assets/boxes/regular-box.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css?v=10" />
+  <link rel="stylesheet" href="../css/subpage.css?v=10" />
+  <link rel="stylesheet" href="../css/mystery-boxes.css?v=10" />
+</head>
+<body class="subpage">
+  <div class="backdrop" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+    <div class="grid-lines"></div>
+    <canvas id="ore-field"></canvas>
+    <div class="grain"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner glass">
+      <a href="../index.html" class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="item-index.html">Item Index</a>
+        <a href="status-effects.html">Status Effects</a>
+        <a href="mystery-boxes.html" class="current">Mystery Boxes</a>
+        <a href="update-log.html">Update Log</a>
+        <a href="gamepasses.html">Gamepasses</a>
+      </nav>
+      <a class="search-trigger" href="../index.html#explore">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>All sections</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero mb-hero">
+      <div>
+        <nav class="crumbs intro" style="--d:0" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span>/</span><b>Mystery Boxes</b>
+        </nav>
+        <h1 class="intro" style="--d:1"><span class="shine">Mystery Boxes</span></h1>
+        <p class="lede intro" style="--d:2" id="lede"></p>
+        <div class="stats intro" style="--d:3">
+          <div class="stat glass"><strong id="stBoxes">0</strong><span>Box types</span></div>
+          <div class="stat glass"><strong id="stLimited">0</strong><span>Limited boxes</span></div>
+          <div class="stat glass"><strong id="stRelics">0</strong><span>Relics</span></div>
+          <div class="stat glass"><strong id="stExotics">0</strong><span>Box exotics</span></div>
+        </div>
+      </div>
+      <div class="hero-stack intro" style="--d:2" aria-hidden="true" id="heroStack"></div>
+    </section>
+
+    <!-- Box opener -->
+    <section class="opener glass reveal" id="opener" aria-label="Box opener">
+      <div class="op-head">
+        <div>
+          <span class="eyebrow">Try your luck</span>
+          <h2>Box opener</h2>
+          <p>Pick a box and open it. Rolls use each box's real odds from the wiki. Just for fun: nothing here touches your game.</p>
+        </div>
+        <label class="toggle clover-toggle" title="Lucky Clovers can give 2 or 3 copies of what you win">
+          <input type="checkbox" id="clover" /><span class="tg"></span>
+          <img src="../assets/boxes/new-lucky-clover.webp" alt="" /><span>Lucky Clover</span>
+        </label>
+      </div>
+      <div class="op-picker" id="picker" role="listbox" aria-label="Choose a box"></div>
+      <div class="op-stage">
+        <div class="reel-wrap">
+          <div class="reel" id="reel"></div>
+          <span class="reel-marker" aria-hidden="true"></span>
+        </div>
+        <div class="op-controls">
+          <button class="btn btn-primary open-btn" id="openBtn">
+            <img id="openIcon" src="../assets/boxes/regular-box.webp" alt="" />
+            <span>Open <b id="openName">Regular Box</b></span>
+          </button>
+          <div class="tally" id="tally" aria-live="polite"></div>
+        </div>
+        <div class="announce" id="announce" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- All boxes -->
+    <section class="block" id="boxes">
+      <div class="block-head reveal">
+        <span class="eyebrow">Every box</span>
+        <h2>Box types</h2>
+        <p>Odds are shown as bars. Each colour is a reward tier. Relics are the rarest drops and only come from certain boxes.</p>
+      </div>
+      <h3 class="grp-title reveal">Normal boxes</h3>
+      <div class="box-grid" id="normalBoxes"></div>
+      <h3 class="grp-title reveal">Limited boxes <small>Only during their event</small></h3>
+      <div class="box-grid" id="limitedBoxes"></div>
+    </section>
+
+    <!-- Lucky Clovers -->
+    <section class="clovers glass reveal" id="clovers">
+      <img class="clover-art" src="../assets/boxes/new-lucky-clover.webp" alt="" />
+      <div>
+        <span class="eyebrow">Box modifier</span>
+        <h2>Lucky Clovers</h2>
+        <div id="cloverText"></div>
+      </div>
+    </section>
+
+    <!-- Items in circulation -->
+    <section class="block" id="circulation">
+      <div class="block-head reveal">
+        <span class="eyebrow">Items in circulation</span>
+        <h2>What you can unbox</h2>
+        <p>The special-tier items you can only get from boxes. Click any item to open it in the Item Index.</p>
+      </div>
+      <div class="seg circ-tabs reveal" id="circTabs" role="tablist"><span class="seg-ind" aria-hidden="true"></span></div>
+      <div id="circBody"></div>
+    </section>
+
+    <!-- Announcements -->
+    <section class="block" id="announcements">
+      <div class="block-head reveal">
+        <span class="eyebrow">Server shout-outs</span>
+        <h2>Winning announcements</h2>
+        <p>When someone unboxes something good, the whole server sees a message. The colour and wording depend on the tier.</p>
+      </div>
+      <div class="ann-list" id="annList"></div>
+    </section>
+
+    <!-- Discontinued -->
+    <section class="block" id="discontinued">
+      <div class="block-head reveal">
+        <span class="eyebrow">Gone but not forgotten</span>
+        <h2>Discontinued boxes</h2>
+      </div>
+      <div class="disc-grid" id="discGrid"></div>
+    </section>
+
+    <section class="trivia glass reveal">
+      <div class="trivia-head">
+        <img src="../assets/boxes/mysteryboxes.gif" alt="" />
+        <div>
+          <span class="eyebrow">Good to know</span>
+          <h2>Box trivia</h2>
+        </div>
+      </div>
+      <ul id="trivia"></ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner glass reveal">
+      <div class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </div>
+      <p>
+        Box details and icons are from the
+        <a href="https://minershaven.fandom.com/wiki/Mystery_Boxes" target="_blank" rel="noopener">Mystery Boxes page on the Miner's Haven Fandom wiki</a>,
+        available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA</a>.
+        A fan-made wiki, not affiliated with Roblox or Berezaa Games.
+      </p>
+    </div>
+  </footer>
+
+  <button class="to-top glass" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../js/common.js?v=10"></script>
+  <script src="../js/mb-data.js?v=10"></script>
+  <script src="../js/mystery-boxes.js?v=10"></script>
+</body>
+</html>

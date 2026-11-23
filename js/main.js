@@ -5,7 +5,7 @@
 /* Section registry. Flip `ready` to true as each page in /pages is built. */
 const SECTIONS = [
   { id: "item-index",     name: "Item Index",     icon: "assets/icons/money.png",         desc: "Droppers, upgraders, furnaces & utilities", cat: "items",       keys: "items mines droppers upgraders furnaces utility tiers shop", ready: true },
-  { id: "rebirth",        name: "Rebirth",        icon: "assets/icons/rebirth.png",       desc: "New lives & Reborn items",                   cat: "progression", keys: "reborn life slipstream shiny advanced evolved fusion",        ready: false },
+  { id: "rebirth",        name: "Rebirth",        icon: "assets/icons/rebirth.png",       desc: "New lives & Reborn items",                   cat: "progression", keys: "reborn life slipstream shiny advanced evolved fusion rebirth price life skipping shards of life decimal rarity ultimate", ready: true },
   { id: "sacrifice",      name: "Sacrifice",      icon: "assets/icons/draedon.png",       desc: "Ultimate & Second Sacrifice, escrow",        cat: "progression", keys: "ultimate second third escrow soulbound reset",               ready: false },
   { id: "gamepasses",     name: "Gamepasses",     icon: "assets/icons/robux.png",         desc: "Robux passes and their perks",               cat: "economy",     keys: "vip premium executive dark knight robux perks shiny charm",  ready: true },
   { id: "status-effects", name: "Status Effects", icon: null,                             desc: "Fire, frostbite, radioactive, poison…",      cat: "items",       keys: "ore properties fire frostbite radioactive poison sparkles wet anti-gravity shield", ready: true },

@@ -872,8 +872,8 @@ mh-cur.cur-money img { width: 1.25em; height: 1.25em; vertical-align: -.28em; ma
 @media (prefers-reduced-motion: reduce) { .tm i { width: calc(100% - 6px); } .tm b { opacity: 1; } }
 
 /* Rebirth Tracker card */
-.rt-mini { position: relative; flex: none; width: 240px; height: 140px; }
-.rt-mini svg { width: 100%; height: 120px; overflow: visible; }
+.rt-mini { position: relative; flex: none; width: 200px; height: 130px; }
+.rt-mini svg { width: 100%; height: 110px; overflow: visible; }
 .rtm-goal { stroke: #7cff6b; stroke-width: 1.5; stroke-dasharray: 5 4; opacity: .7; }
 .rtm-area { fill: url(#rtmA); }
 .rtm-ln { fill: none; stroke: url(#rtmL); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; filter: drop-shadow(0 0 6px rgba(68,152,255,.7)); animation: rtmDraw 5s var(--ease) infinite; }
@@ -886,3 +886,22 @@ mh-cur.cur-money img { width: 1.25em; height: 1.25em; vertical-align: -.28em; ma
 .rt-card .split > div:first-child p { max-width: 640px; }
 @media (max-width: 680px) { .rt-mini { width: 180px; height: 110px; } .rt-mini svg { height: 95px; } }
 @media (prefers-reduced-motion: reduce) { .rtm-ln { stroke-dashoffset: 0; animation: none; } }
+
+/* User Tracker card */
+.ut-mini { position: relative; flex: none; width: 180px; height: 130px; }
+.um-bar { position: absolute; left: 0; top: 4px; display: flex; align-items: center; gap: 6px; height: 26px; padding: 0 10px; border-radius: 999px; color: #3fe0a0; background: rgba(0,0,0,.3); border: 1px solid rgba(63,224,160,.4); }
+.um-type { display: inline-block; overflow: hidden; white-space: nowrap; width: 0; font: 700 12px var(--font-mono); color: #fff; border-right: 2px solid #3fe0a0; animation: umType 5s steps(7) infinite; }
+@keyframes umType { 0% { width: 0; } 30%, 85% { width: 7ch; } 100% { width: 0; } }
+.um-av { position: absolute; left: 50%; top: 42px; width: 64px; height: 64px; margin-left: -32px; display: grid; place-items: center; border-radius: 20px; background: linear-gradient(160deg, rgba(63,224,160,.3), rgba(179,123,255,.2)); border: 1px solid rgba(255,255,255,.15); animation: umPop 5s var(--spring) infinite; }
+.um-av img { width: 46px; height: 46px; object-fit: contain; }
+.um-b, .um-egg { position: absolute; width: 22px; height: 22px; border-radius: 50%; opacity: 0; animation: umBadge 5s var(--spring) infinite; }
+.um-b { background: radial-gradient(circle at 35% 30%, #fff, #3fe0a0 55%, #127a55); box-shadow: 0 0 10px rgba(63,224,160,.7); }
+.um-b.b1 { left: 14px; top: 70px; animation-delay: .15s; } .um-b.b2 { right: 18px; top: 50px; animation-delay: .3s; } .um-b.b3 { right: 8px; top: 96px; animation-delay: .45s; }
+.um-egg { left: 34px; top: 104px; width: 18px; height: 24px; border-radius: 50% 50% 46% 46% / 60% 60% 40% 40%; background: radial-gradient(circle at 35% 30%, #fff8d6, #ffd36b 55%, #c98a00); box-shadow: 0 0 10px rgba(255,211,107,.7); animation-delay: .6s; }
+@keyframes umPop { 0%, 28% { transform: scale(.6); opacity: 0; } 36%, 88% { transform: none; opacity: 1; } 100% { opacity: 0; } }
+@keyframes umBadge { 0%, 36% { transform: scale(0); opacity: 0; } 44%, 86% { transform: none; opacity: 1; } 100% { opacity: 0; } }
+@media (max-width: 680px) { .ut-mini { width: 150px; height: 120px; transform: scale(.9); transform-origin: right center; } }
+@media (prefers-reduced-motion: reduce) { .um-type { width: 7ch; animation: none; } .um-av, .um-b, .um-egg { opacity: 1; animation: none; } }
+
+/* Keep the logo from being squeezed by long navs */
+.nav-inner > .brand, .nav-inner > .brand .brand-icon { flex: none; }

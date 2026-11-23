@@ -19,6 +19,7 @@ const SECTIONS = [
   { id: "daily-tasks",    name: "Daily Tasks",    icon: "assets/icons/uc.png",            desc: "Daily & weekly tasks, uC rewards, Daily Gifts", cat: "economy", keys: "daily tasks task weekly quests objectives uc unobtainium rewards daily gift gifts login streak reset tracker", ready: true },
   { id: "codes",          name: "Codes",          icon: "assets/icons/uc.png",            desc: "Active codes for uC, boxes & items",         cat: "economy",     keys: "redeem codes uc unobtainium crystals free",                  ready: true },
   { id: "cash-suffixes",  name: "Cash Suffixes",  icon: "assets/icons/money.png",         desc: "Every suffix from k to UNCENT, plus a converter", cat: "economy", keys: "cash suffix suffixes money k m b t qn sx centillion uncent scientific notation converter cap inf", ready: true },
+  { id: "user-tracker",   name: "User Tracker",   icon: "assets/icons/masked-man.png",    desc: "Look up a player's badges, eggs & staff roles", cat: "world", keys: "user tracker player lookup search username roblox profile badges eggxotic eggs egg hunt staff developer moderator contributor tester submitter friends", ready: true },
   { id: "npcs",           name: "NPCs",           icon: "assets/icons/craftsman.png",     desc: "Masked Man, Craftsman, Draedon & more",      cat: "world",       keys: "npc masked man craftsman spook mcdooks draedon daegel fargield john doe zalgo characters guardians santa leprechaun", ready: true },
 ];
 const byId = Object.fromEntries(SECTIONS.map(s => [s.id, s]));

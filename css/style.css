@@ -392,6 +392,7 @@ h3 { font-family: var(--font-display); font-size: 22px; letter-spacing: -.02em; 
 }
 .span-2 { grid-column: span 2; }
 .span-2x2 { grid-column: span 2; grid-row: span 2; }
+.span-4 { grid-column: 1 / -1; }
 
 /* ---------- Card ---------- */
 .card {
@@ -769,3 +770,14 @@ h3 { font-family: var(--font-display); font-size: 22px; letter-spacing: -.02em; 
 mh-cur { display: inline; white-space: nowrap; }
 mh-cur img { display: inline-block; width: 1.15em; height: 1.15em; margin-right: .22em; vertical-align: -.22em; object-fit: contain; filter: drop-shadow(0 1px 2px rgba(0,0,0,.45)); }
 mh-cur.cur-money img { width: 1.25em; height: 1.25em; vertical-align: -.28em; margin-right: .18em; }
+
+/* Crafting card */
+.craft-orbit { position: relative; flex: none; width: 170px; height: 150px; }
+.craft-orbit::before { content: ""; position: absolute; left: 50%; top: 50%; width: 110px; height: 110px; margin: -55px 0 0 -55px; border-radius: 50%; background: radial-gradient(circle, rgba(255,90,122,.4), rgba(155,92,255,.12) 55%, transparent 70%); animation: corePulse 3.2s ease-in-out infinite; }
+.craft-orbit img { position: absolute; left: 50%; top: 50%; width: 70px; height: 70px; margin: -35px 0 0 -35px; object-fit: contain; filter: drop-shadow(0 8px 16px rgba(0,0,0,.5)); animation: floaty 4.5s ease-in-out infinite; }
+.craft-orbit .co { position: absolute; left: 50%; top: 50%; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff, var(--c) 55%, rgba(0,0,0,.35)); box-shadow: 0 0 14px var(--c); animation: coOrbit 9s linear infinite; animation-delay: calc(var(--i) * -1.5s); }
+@keyframes coOrbit { from { transform: rotate(0deg) translateX(62px) rotate(0deg); } to { transform: rotate(360deg) translateX(62px) rotate(-360deg); } }
+.card:hover .craft-orbit .co { animation-duration: 4s; }
+.craft-card .split > div:first-child p { max-width: 640px; }
+@media (max-width: 680px) { .craft-orbit { width: 130px; height: 120px; transform: scale(.85); transform-origin: right center; } }
+@media (prefers-reduced-motion: reduce) { .craft-orbit .co { animation: none; transform: rotate(calc(var(--i) * 60deg)) translateX(62px); } }

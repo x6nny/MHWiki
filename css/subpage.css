@@ -47,3 +47,7 @@ mark { background: rgba(255,214,10,.28); color: #fff3b0; border-radius: 4px; pad
   .nav-links { display: none; }
 }
 
+
+/* Cross-page link */
+a.xlink { color: var(--text); font-weight: 700; text-decoration: underline; text-decoration-color: rgba(255,255,255,.35); text-underline-offset: 3px; transition: text-decoration-color .2s; }
+a.xlink:hover { text-decoration-color: currentColor; }

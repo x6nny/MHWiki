@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crafting · Miner's Haven Wiki</title>
+  <meta name="referrer" content="no-referrer" />
+  <meta name="description" content="Every Enchanted recipe from The Craftsman and every Superstitious recipe from Draedon in Miner's Haven: items, Shards of Life, catalysts, elements and a forge planner." />
+  <link rel="icon" href="../assets/icons/draedon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css?v=23" />
+  <link rel="stylesheet" href="../css/subpage.css?v=23" />
+  <link rel="stylesheet" href="../css/crafting.css?v=23" />
+</head>
+<body class="subpage cr-page">
+  <div class="backdrop" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+    <div class="grid-lines"></div>
+    <canvas id="ore-field"></canvas>
+    <div class="grain"></div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner glass">
+      <a href="../index.html" class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="item-index.html">Item Index</a>
+        <a href="rebirth.html">Rebirth</a>
+        <a href="sacrifice.html">Sacrifice</a>
+        <a href="research-points.html">Research Points</a>
+        <a href="shards-of-life.html">Shards of Life</a>
+        <a href="crafting.html" class="current">Crafting</a>
+        <a href="status-effects.html">Status Effects</a>
+        <a href="mystery-boxes.html">Mystery Boxes</a>
+        <a href="codes.html">Codes</a>
+        <a href="cash-suffixes.html">Cash Suffixes</a>
+        <a href="events.html">Events</a>
+        <a href="npcs.html">NPCs</a>
+        <a href="update-log.html">Update Log</a>
+        <a href="gamepasses.html">Gamepasses</a>
+      </nav>
+      <a class="search-trigger" href="../index.html#explore">
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>All sections</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="page-hero cr-hero">
+      <div>
+        <nav class="crumbs intro" style="--d:0" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span>/</span><b>Crafting</b>
+        </nav>
+        <h1 class="intro" style="--d:1"><span class="shine cr-shine">Crafting</span></h1>
+        <p class="lede intro" style="--d:2">Two crafting systems. <b>Enchanted</b> items come from The Craftsman for a set of items plus Shards of Life. <b>Superstitious</b> items come from Draedon: you need a Catalyst, then you balance six elements with Reborn items.</p>
+        <div class="stats intro" style="--d:3">
+          <div class="stat glass"><strong id="stEn">0</strong><span>Enchanted</span></div>
+          <div class="stat glass"><strong id="stSu">0</strong><span>Superstitious</span></div>
+          <div class="stat glass"><strong id="stPool">0</strong><span>Element items</span></div>
+          <div class="stat glass"><strong>6</strong><span>Elements</span></div>
+        </div>
+        <nav class="cr-jump intro" style="--d:4" aria-label="On this page">
+          <a href="#enchanted">Enchanted</a><a href="#superstitious">Superstitious</a><a href="#forge">Forge planner</a>
+        </nav>
+      </div>
+
+      <!-- Element forge visual -->
+      <div class="cr-orb-wrap intro" style="--d:2" aria-hidden="true">
+        <div class="cr-orb" id="orb">
+          <div class="cr-orb-glow"></div>
+          <div class="cr-orb-ring r1"></div>
+          <div class="cr-orb-ring r2"></div>
+          <div class="cr-orb-els" id="orbEls"></div>
+          <div class="cr-orb-core"><img id="orbImg" alt="" referrerpolicy="no-referrer" /></div>
+          <div class="cr-orb-name" id="orbName"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ENCHANTED ================= -->
+    <section class="cr-block" id="enchanted">
+      <div class="cr-head reveal">
+        <span class="cr-kicker en-k">The Craftsman</span>
+        <h2>Enchanted recipes</h2>
+        <p>Talk to The Craftsman, hand over every item on the list plus the Shards of Life, and the Enchanted item is yours. You also need to be at or above the listed life. Tick recipes to build a shopping list.</p>
+      </div>
+      <ol class="cr-steps reveal">
+        <li><b>1</b><span>Reach the life shown on the recipe</span></li>
+        <li><b>2</b><span>Collect every listed item, with the counts shown</span></li>
+        <li><b>3</b><span>Pay the Shards of Life at The Craftsman</span></li>
+      </ol>
+
+      <div class="cr-tools reveal">
+        <label class="tb-search glass">
+          <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input id="enQ" type="search" placeholder="Search recipes or ingredients…" autocomplete="off" />
+        </label>
+        <label class="cr-sort"><span>Sort</span>
+          <select id="enSort">
+            <option value="shards">Shards: low → high</option>
+            <option value="shards-d">Shards: high → low</option>
+            <option value="life">Life required</option>
+            <option value="items">Fewest items</option>
+            <option value="name">A – Z</option>
+          </select>
+        </label>
+      </div>
+      <div class="cr-count" id="enCount"></div>
+      <div class="cr-grid" id="enGrid"></div>
+
+      <div class="cr-list glass" id="enList" hidden>
+        <div class="cl-top">
+          <div><h3>Your crafting list</h3><p id="clSub"></p></div>
+          <div class="cl-actions"><button type="button" id="clCopy">Copy list</button><button type="button" id="clClear">Clear</button><button type="button" class="cl-tog" id="clTog" aria-label="Collapse list" aria-expanded="true"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+        </div>
+        <div class="cl-body" id="clBody"></div>
+      </div>
+    </section>
+
+    <!-- ================= SUPERSTITIOUS ================= -->
+    <section class="cr-block" id="superstitious">
+      <div class="cr-head reveal">
+        <span class="cr-kicker su-k">Draedon</span>
+        <h2>Superstitious recipes</h2>
+        <p>Only after <a href="sacrifice.html">The Second Sacrifice</a>, from life S+1000. Each Superstitious item needs its own Catalyst, then a set amount of six elements that you add by feeding Reborn items to Draedon.</p>
+      </div>
+      <ol class="cr-steps su reveal">
+        <li><b>1</b><span>Click Draedon in the Sporest at S+1000 for the <a href="item-index.html#item=True%20Book%20of%20Knowledge">True Book of Knowledge</a></span></li>
+        <li><b>2</b><span>Place the True Book and the Catalyst's 5 items, then rebirth: about a <b>1 in 3</b> chance of the Catalyst. The items stay.</span></li>
+        <li><b>3</b><span>Take the Catalyst to Draedon and add Reborn items until every element reaches its target</span></li>
+        <li><b>4</b><span>Forge it. The Catalyst and the Reborn items you added are used up.</span></li>
+      </ol>
+      <p class="cr-note reveal" id="suNote"></p>
+
+      <div class="cr-tools reveal">
+        <label class="tb-search glass">
+          <svg viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input id="suQ" type="search" placeholder="Search items, catalysts or Reborn items…" autocomplete="off" />
+        </label>
+        <label class="cr-sort"><span>Sort</span>
+          <select id="suSort">
+            <option value="life">Life required</option>
+            <option value="total">Fewest Reborn items</option>
+            <option value="name">A – Z</option>
+          </select>
+        </label>
+      </div>
+      <div class="cr-count" id="suCount"></div>
+      <div class="cr-grid su-grid" id="suGrid"></div>
+    </section>
+
+    <!-- ================= FORGE PLANNER ================= -->
+    <section class="cr-block" id="forge">
+      <div class="cr-head reveal">
+        <span class="cr-kicker su-k">Plan a forge</span>
+        <h2>Draedon's forge planner</h2>
+        <p>Works like the crafting screen: click a Reborn item to add one, right-click (or press −) to take one back. Every element with a target has to reach it. Elements with a target of 0 can be anything.</p>
+      </div>
+      <div class="fg glass reveal" id="fg">
+        <div class="fg-left">
+          <label class="fg-pick"><span>Forging</span>
+            <select id="fgSel"></select>
+          </label>
+          <div class="fg-target">
+            <div class="fg-pic" id="fgPic"></div>
+            <div class="fg-state" id="fgState"></div>
+          </div>
+          <div class="fg-meters" id="fgMeters"></div>
+          <div class="fg-btns">
+            <button type="button" id="fgAuto">Fewest items</button>
+            <button type="button" id="fgCommon">Common Reborns</button>
+            <button type="button" id="fgClear" class="ghost">Clear</button>
+          </div>
+          <div class="fg-used">
+            <div class="fg-used-h"><b>Added</b><span id="fgTotal">0 items</span></div>
+            <div class="fg-used-list" id="fgUsed"></div>
+          </div>
+        </div>
+        <div class="fg-right">
+          <div class="fg-tools">
+            <label class="tb-search">
+              <svg viewBox="0 0 24 24" width="16" height="16"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              <input id="fgQ" type="search" placeholder="Find an item…" autocomplete="off" />
+            </label>
+            <div class="fg-tier" id="fgTier" role="tablist">
+              <button type="button" class="on" data-t="Reborn">Reborn</button>
+              <button type="button" data-t="Advanced Reborn">Advanced</button>
+              <button type="button" data-t="Slipstream">Slipstream</button>
+            </div>
+            <label class="fg-sortel"><span>Best for</span>
+              <select id="fgEl"><option value="">Name</option></select>
+            </label>
+          </div>
+          <div class="fg-pool" id="fgPool"></div>
+          <p class="fg-hint">The crafting screen lists Reborn-tier items. Advanced Reborn and Slipstream items also carry elements on the wiki, so they're here for planning.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner glass reveal">
+      <div class="brand">
+        <img src="../assets/icons/rebirth.png" alt="" class="brand-icon" />
+        <span>Haven<b>Wiki</b></span>
+      </div>
+      <p>
+        Recipes come from the
+        <a href="https://minershaven.fandom.com/wiki/The_Craftsman" target="_blank" rel="noopener">The Craftsman</a>,
+        <a href="https://minershaven.fandom.com/wiki/Category:Superstitious" target="_blank" rel="noopener">Superstitious</a>,
+        <a href="https://minershaven.fandom.com/wiki/Catalysts" target="_blank" rel="noopener">Catalysts</a>,
+        <a href="https://minershaven.fandom.com/wiki/Guide:_Crafting_Superstitious_Items" target="_blank" rel="noopener">crafting guide</a> and item pages on the Miner's Haven Fandom wiki,
+        available under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA</a>.
+        A fan-made wiki, not affiliated with Roblox or Berezaa Games.
+      </p>
+    </div>
+  </footer>
+
+  <button class="to-top glass" id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="../js/common.js?v=23"></script>
+  <script src="../js/crafting-data.js?v=23"></script>
+  <script src="../js/crafting.js?v=23"></script>
+</body>
+</html>

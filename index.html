@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=42" />
+  <link rel="stylesheet" href="css/style.css?v=43" />
 </head>
 <body>
   <!-- ===== Animated backdrop ===== -->
@@ -31,11 +31,11 @@
         <span>Haven<b>Wiki</b></span>
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#explore" data-filter-link="items">Items</a>
-        <a href="#explore" data-filter-link="progression">Progression</a>
-        <a href="#explore" data-filter-link="economy">Economy</a>
-        <a href="#explore" data-filter-link="news">News</a>
-        <a href="#explore" data-filter-link="world">World</a>
+        <a href="#cat-items" data-filter-link="items">Items</a>
+        <a href="#cat-progression" data-filter-link="progression">Progression</a>
+        <a href="#cat-economy" data-filter-link="economy">Economy</a>
+        <a href="#cat-news" data-filter-link="news">News</a>
+        <a href="#cat-world" data-filter-link="world">World</a>
       </nav>
       <a class="discord-btn" href="https://discord.gg/minershaven" target="_blank" rel="noopener" aria-label="Join our Discord server" title="Join our Discord server"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.32 4.37a19.8 19.8 0 0 0-4.89-1.52.07.07 0 0 0-.08.04c-.21.38-.44.87-.61 1.25a18.27 18.27 0 0 0-5.49 0 12.6 12.6 0 0 0-.62-1.25.08.08 0 0 0-.08-.04 19.74 19.74 0 0 0-4.89 1.52.07.07 0 0 0-.03.03C.53 9.05-.32 13.58.1 18.06a.08.08 0 0 0 .03.06 19.9 19.9 0 0 0 5.99 3.03.08.08 0 0 0 .08-.03c.46-.63.87-1.29 1.23-1.99a.08.08 0 0 0-.04-.11 13.1 13.1 0 0 1-1.87-.89.08.08 0 0 1-.01-.13l.37-.29a.07.07 0 0 1 .08-.01c3.93 1.79 8.18 1.79 12.07 0a.07.07 0 0 1 .08.01l.37.29a.08.08 0 0 1-.01.13c-.6.35-1.22.65-1.87.89a.08.08 0 0 0-.04.11c.36.7.78 1.36 1.22 1.99a.08.08 0 0 0 .08.03 19.84 19.84 0 0 0 6-3.03.08.08 0 0 0 .03-.06c.5-5.18-.84-9.67-3.55-13.66a.06.06 0 0 0-.03-.03ZM8.02 15.33c-1.18 0-2.16-1.08-2.16-2.42 0-1.33.96-2.42 2.16-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.96 2.42-2.16 2.42Zm7.97 0c-1.18 0-2.15-1.08-2.15-2.42 0-1.33.95-2.42 2.15-2.42 1.21 0 2.18 1.1 2.16 2.42 0 1.34-.95 2.42-2.16 2.42Z"/></svg><span>Discord</span></a>
       <button class="search-trigger" id="openPalette" aria-label="Search the wiki">
@@ -141,19 +141,28 @@
           <span class="eyebrow">Explore</span>
           <h2>Every corner of the Haven</h2>
         </div>
-        <div class="filters glass" role="tablist" aria-label="Filter sections">
+        <div class="filters glass" aria-label="Jump to a section">
           <span class="filter-indicator"></span>
-          <button class="filter active" data-filter="all" role="tab">All</button>
-          <button class="filter" data-filter="items" role="tab">Items</button>
-          <button class="filter" data-filter="progression" role="tab">Progression</button>
-          <button class="filter" data-filter="economy" role="tab">Economy</button>
-          <button class="filter" data-filter="news" role="tab">News</button>
-          <button class="filter" data-filter="world" role="tab">World</button>
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="items">Items</button>
+          <button class="filter" data-filter="progression">Progression</button>
+          <button class="filter" data-filter="economy">Economy</button>
+          <button class="filter" data-filter="news">News</button>
+          <button class="filter" data-filter="world">World</button>
         </div>
       </div>
 
-      <div class="bento" id="bento">
+      <div class="cat-groups" id="bento">
 
+        <!-- ===== Items ===== -->
+        <div class="cat-group" id="cat-items" data-group="items">
+          <div class="cat-head reveal">
+            <span class="cat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5Zm0 2.3 6.6 3.7L12 11.7 5.4 8 12 4.3ZM5 9.7l6 3.4v6.6l-6-3.4V9.7Zm8 10v-6.6l6-3.4v6.6l-6 3.4Z"/></svg></span>
+            <div class="cat-title"><h3>Items</h3><span>Every item, effect and shiny in the game</span></div>
+            <i class="cat-rule" aria-hidden="true"></i>
+            <span class="cat-count">3 pages</span>
+          </div>
+          <div class="bento">
         <!-- 01 Item Index -->
         <article class="card glass reveal span-2x2" data-cat="items" data-page="item-index" style="--accent:#ffc857; --accent2:#7cff6b">
           <div class="card-spot"></div>
@@ -194,44 +203,10 @@
           </ul>
           <a class="cta" href="pages/item-index.html">Browse items <i></i></a>
         </article>
-
-        <!-- 02 Rebirth -->
-        <article class="card glass reveal span-2" data-cat="progression" data-page="rebirth" style="--accent:#5ad8ff; --accent2:#a77bff">
-          <div class="card-spot"></div>
-          <div class="card-top"><span class="num">02</span><span class="chip">135 Reborn items</span></div>
-          <img class="card-icon float" src="assets/icons/rebirth.png" alt="" />
-          <h3>Rebirth</h3>
-          <p>Wipe your base, start a new life, and earn powerful Reborn items that get rarer the further you go.</p>
-          <ul class="tags"><li>Reborn</li><li>Advanced</li><li>Slipstream</li><li>Shiny</li></ul>
-          <a class="cta" href="pages/rebirth.html">Learn rebirthing <i></i></a>
-        </article>
-
-        <!-- 03 Sacrifice -->
-        <article class="card glass reveal span-2" data-cat="progression" data-page="sacrifice" style="--accent:#ff6b9a; --accent2:#c9a7ff">
-          <div class="card-spot"></div>
-          <div class="card-top"><span class="num">03</span><span class="chip">Life 1,000+</span></div>
-          <img class="card-icon float" src="assets/icons/draedon.png" alt="" />
-          <h3>Sacrifice</h3>
-          <p>Give up almost everything and return to life 1 for new mechanics and items. Permanent, and once per save.</p>
-          <ul class="tags"><li>Ultimate</li><li>Second</li><li>Escrow</li><li>Soulbound</li></ul>
-          <a class="cta" href="pages/sacrifice.html">Read the rules <i></i></a>
-        </article>
-
-        <!-- 04 Gamepasses -->
-        <article class="card glass reveal span-2" data-cat="economy" data-page="gamepasses" style="--accent:#ffd16b; --accent2:#ff9f1c">
-          <div class="card-spot"></div>
-          <div class="card-top"><span class="num">04</span><span class="chip">Robux perks</span></div>
-          <img class="card-icon float" src="assets/icons/robux.png" alt="" />
-          <h3>Gamepasses</h3>
-          <p>VIP, Premium, Executive, Dark Knight and more. What each pass costs and every perk it unlocks.</p>
-          <ul class="tags"><li>VIP</li><li>Premium</li><li>Executive</li><li>Shiny Charm</li></ul>
-          <a class="cta" href="pages/gamepasses.html">Compare passes <i></i></a>
-        </article>
-
-        <!-- 05 Status Effects -->
+        <!-- 02 Status Effects -->
         <article class="card glass reveal span-2" data-cat="items" data-page="status-effects" style="--accent:#ff8a3d; --accent2:#4fd1ff">
           <div class="card-spot"></div>
-          <div class="card-top"><span class="num">05</span><span class="chip">Ore properties</span></div>
+          <div class="card-top"><span class="num">02</span><span class="chip">Ore properties</span></div>
           <div class="effects" aria-hidden="true">
             <span class="fx fire"></span><span class="fx frost"></span><span class="fx rad"></span><span class="fx poison"></span>
           </div>
@@ -240,138 +215,56 @@
           <ul class="tags"><li>Fire</li><li>Frostbite</li><li>Sparkles</li><li>Wet</li></ul>
           <a class="cta" href="pages/status-effects.html">See all effects <i></i></a>
         </article>
-
-        <!-- 06 Update Log -->
-        <article class="card glass reveal span-2" data-cat="news" data-page="update-log" style="--accent:#ff9f1c; --accent2:#ff4d6d">
+        <!-- 03 Shiny Checklist -->
+        <article class="card glass reveal span-2 sc-card" data-cat="items" data-page="shiny-checklist" style="--accent:#ff7ad9; --accent2:#ffd76b">
           <div class="card-spot"></div>
-          <div class="card-top"><span class="num">06</span><span class="chip live"><span class="pulse-dot"></span>Latest: Halloween 2026</span></div>
+          <div class="card-top"><span class="num">03</span><span class="chip">311 shinies</span></div>
           <div class="split">
             <div>
-              <h3>Update Log</h3>
-              <p>Patch notes for every update since the 2015 release, newest first.</p>
-              <ol class="timeline">
-                <li><b>Oct 2026</b> Halloween Part 1 + hot-patches</li>
-                <li><b>2026</b> 11th Birthday</li>
-                <li><b>2026</b> Easter &amp; Labor of Love</li>
-              </ol>
+              <h3>Shiny Checklist</h3>
+              <p>Tick off every Shiny and Limited Shiny you've found and note the life, date and copies for each. Saved in your browser, with a backup you can download and load again.</p>
+              <ul class="tags"><li>Shiny &amp; Limited</li><li>Life &amp; date found</li><li>Backup file</li></ul>
             </div>
-            <img class="card-icon float big" src="assets/icons/halloween.png" alt="" />
+            <div class="sc-mini" aria-hidden="true"><i style="--n:0"><img src="https://static.wikia.nocookie.net/the-miners-haven-project/images/6/6d/Inevitable_Draedon%27s_Gauntlet.png/revision/latest/scale-to-width-down/96" alt="" loading="lazy" referrerpolicy="no-referrer" /></i><i style="--n:1"><img src="https://static.wikia.nocookie.net/the-miners-haven-project/images/2/24/Advanced_Tesla_Refuter.png/revision/latest/scale-to-width-down/96" alt="" loading="lazy" referrerpolicy="no-referrer" /></i><i style="--n:2"><img src="https://static.wikia.nocookie.net/the-miners-haven-project/images/d/d2/Abstract_Sakura_Garden.png/revision/latest/scale-to-width-down/96" alt="" loading="lazy" referrerpolicy="no-referrer" /></i><i style="--n:3"><img src="https://static.wikia.nocookie.net/the-miners-haven-project/images/b/bb/Crimson_Azure_Refiner.png/revision/latest/scale-to-width-down/96" alt="" loading="lazy" referrerpolicy="no-referrer" /></i><i style="--n:4"><img src="https://static.wikia.nocookie.net/the-miners-haven-project/images/1/10/Frightful_Dreamer%27s_Might.png/revision/latest/scale-to-width-down/96" alt="" loading="lazy" referrerpolicy="no-referrer" /></i><b class="scm-spark"></b><b class="scm-spark s2"></b></div>
           </div>
-          <a class="cta" href="pages/update-log.html">Open changelog <i></i></a>
+          <a class="cta" href="pages/shiny-checklist.html">Start your checklist <i></i></a>
         </article>
+          </div>
+        </div>
 
-        <!-- 07 Events -->
-        <article class="card glass reveal span-2" data-cat="news" data-page="events" style="--accent:#ff5c8a; --accent2:#5cffb1">
+        <!-- ===== Progression ===== -->
+        <div class="cat-group" id="cat-progression" data-group="progression">
+          <div class="cat-head reveal">
+            <span class="cat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3 5 10h4v5h6v-5h4l-7-7Zm-7 15h14v3H5v-3Z"/></svg></span>
+            <div class="cat-title"><h3>Progression</h3><span>Rebirths, sacrifices, crafting and your road to the next life</span></div>
+            <i class="cat-rule" aria-hidden="true"></i>
+            <span class="cat-count">5 pages</span>
+          </div>
+          <div class="bento">
+        <!-- 04 Rebirth -->
+        <article class="card glass reveal span-2" data-cat="progression" data-page="rebirth" style="--accent:#5ad8ff; --accent2:#a77bff">
           <div class="card-spot"></div>
-          <div class="card-top"><span class="num">07</span><span class="chip">Since 2015</span></div>
-          <div class="split">
-            <div>
-              <h3>Events</h3>
-              <p>Valentine's, St. Patrick's, Spring, Easter, Birthdays, Summer, Halloween, Black Friday and Winter: every seasonal event and its limited items.</p>
-              <ul class="tags"><li>Seasonal</li><li>Limited items</li><li>Event boxes</li></ul>
-            </div>
-            <div class="event-cycle" aria-hidden="true">
-              <img src="assets/icons/valentines.png" alt="" />
-              <img src="assets/icons/st-patty.png" alt="" />
-              <img src="assets/icons/spring.png" alt="" />
-              <img src="assets/icons/easter.png" alt="" />
-              <img src="assets/icons/summer.png" alt="" />
-              <img src="assets/icons/halloween.png" alt="" />
-              <img src="assets/icons/winter.png" alt="" />
-            </div>
-          </div>
-          <a class="cta" href="pages/events.html">Event history <i></i></a>
+          <div class="card-top"><span class="num">04</span><span class="chip">135 Reborn items</span></div>
+          <img class="card-icon float" src="assets/icons/rebirth.png" alt="" />
+          <h3>Rebirth</h3>
+          <p>Wipe your base, start a new life, and earn powerful Reborn items that get rarer the further you go.</p>
+          <ul class="tags"><li>Reborn</li><li>Advanced</li><li>Slipstream</li><li>Shiny</li></ul>
+          <a class="cta" href="pages/rebirth.html">Learn rebirthing <i></i></a>
         </article>
-
-        <!-- 08 Mystery Boxes -->
-        <article class="card glass reveal span-2" data-cat="economy" data-page="mystery-boxes" style="--accent:#9dff6b; --accent2:#b072ff">
+        <!-- 05 Sacrifice -->
+        <article class="card glass reveal span-2" data-cat="progression" data-page="sacrifice" style="--accent:#ff6b9a; --accent2:#c9a7ff">
           <div class="card-spot"></div>
-          <div class="card-top"><span class="num">08</span><span class="chip">14 box types</span></div>
-          <div class="split">
-            <div>
-              <h3>Mystery Boxes</h3>
-              <p>Every box, where to get it, and its odds. Lucky Clovers can double or triple a win.</p>
-              <ul class="tags"><li>Regular</li><li>Inferno</li><li>Limited</li><li>Clovers</li></ul>
-            </div>
-            <img class="card-icon float wobble big" src="assets/icons/spook-mcdooks.png" alt="" />
-          </div>
-          <a class="cta" href="pages/mystery-boxes.html">Open the boxes <i></i></a>
+          <div class="card-top"><span class="num">05</span><span class="chip">Life 1,000+</span></div>
+          <img class="card-icon float" src="assets/icons/draedon.png" alt="" />
+          <h3>Sacrifice</h3>
+          <p>Give up almost everything and return to life 1 for new mechanics and items. Permanent, and once per save.</p>
+          <ul class="tags"><li>Ultimate</li><li>Second</li><li>Escrow</li><li>Soulbound</li></ul>
+          <a class="cta" href="pages/sacrifice.html">Read the rules <i></i></a>
         </article>
-
-        <!-- 09 Codes -->
-        <article class="card glass reveal span-2" data-cat="economy" data-page="codes" style="--accent:#ff6bb5; --accent2:#ffd16b">
-          <div class="card-spot"></div>
-          <div class="card-top"><span class="num">09</span><span class="chip live"><span class="pulse-dot"></span>Active codes</span></div>
-          <div class="split">
-            <div>
-              <h3>Codes</h3>
-              <p>Free uC, boxes and items. Codes aren't case-sensitive, and each one can be redeemed once.</p>
-            </div>
-            <img class="card-icon float" src="assets/icons/uc.png" alt="" />
-          </div>
-          <div class="codes">
-            <button class="code" data-code="ItsWonderful"><code>ItsWonderful</code><span>Iron Flakes Mine</span><em>Copy</em></button>
-            <button class="code" data-code="SLUMBER"><code>SLUMBER</code><span>Ore Gielder</span><em>Copy</em></button>
-            <button class="code" data-code="RestEasyNow"><code>RestEasyNow</code><span>Yoda</span><em>Copy</em></button>
-          </div>
-          <a class="cta" href="pages/codes.html">All codes <i></i></a>
-        </article>
-
-        <!-- 10 NPCs -->
-        <article class="card glass reveal span-2" data-cat="world" data-page="npcs" style="--accent:#7ee0a1; --accent2:#c7c7ff">
-          <div class="card-spot"></div>
-          <div class="card-top"><span class="num">10</span><span class="chip">42 characters</span></div>
-          <div class="npc-stack" aria-hidden="true">
-            <img src="assets/icons/masked-man.png" alt="" />
-            <img src="assets/icons/craftsman.png" alt="" />
-            <img src="assets/icons/spook-mcdooks.png" alt="" />
-          </div>
-          <h3>NPCs</h3>
-          <p>The Masked Man, The Craftsman, Spook McDooks, Draedon and the rest: where to find them and what they do.</p>
-          <a class="cta" href="pages/npcs.html">Meet the cast <i></i></a>
-        </article>
-
-        <!-- 11 Cash Suffixes -->
-        <article class="card glass reveal span-2" data-cat="economy" data-page="cash-suffixes" style="--accent:#40d565; --accent2:#b6ff6b">
-          <div class="card-spot"></div>
-          <div class="card-top"><span class="num">11</span><span class="chip">102 suffixes</span></div>
-          <div class="split">
-            <div>
-              <h3>Cash Suffixes</h3>
-              <p>From k to UNCENT: what every suffix means, a converter for big numbers, and the milestones along the way.</p>
-              <ul class="tags"><li>Converter</li><li>Milestones</li><li>Cash cap</li></ul>
-            </div>
-            <div class="suffix-roll" aria-hidden="true">
-              <span class="sr-dollar">$1</span>
-              <span class="sr-win"><span class="sr-list"><b>k</b><b>M</b><b>B</b><b>T</b><b>qd</b><b>Qn</b><b>sx</b><b>Sp</b><b>O</b><b>N</b><b>de</b><b>DD</b><b>Vgn</b><b>QdDR</b><b>SXGNTL</b><b>CENT</b><b>UNCENT</b><b>k</b></span></span>
-            </div>
-          </div>
-          <a class="cta" href="pages/cash-suffixes.html">See every suffix <i></i></a>
-        </article>
-
-        <!-- 12 Research Points -->
-        <article class="card glass reveal span-2" data-cat="economy" data-page="research-points" style="--accent:#3fe6d4; --accent2:#8f7bff">
-          <div class="card-spot"></div>
-          <div class="card-top"><span class="num">12</span><span class="chip">Up to 400k to unlock</span></div>
-          <div class="split">
-            <div>
-              <h3>Research Points</h3>
-              <p>Every research crate, what RP unlocks, the best RP furnaces and a calculator for your farm.</p>
-              <ul class="tags"><li>Crates</li><li>Furnaces</li><li>Farm calculator</li></ul>
-            </div>
-            <div class="rp-drops" aria-hidden="true">
-              <span class="rpd d1"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,6 92,25 50,44 8,25" fill="#d3d7df"/><polygon points="8,25 50,44 50,95 8,76" fill="#a3aab6"/><polygon points="50,44 92,25 92,76 50,95" fill="#7a8190"/><g transform="matrix(.42 .19 0 .51 8 25)"><rect x="9" y="9" width="82" height="82" rx="8" fill="none" stroke="#4a505c" stroke-width="7" opacity=".55"/><circle cx="50" cy="52" r="25" fill="#fff"/><path d="M27 52a23 23 0 0 1 46 0Z" fill="#3a3f4a"/><path d="M50 33l3.2 8.6 9 .4-7 5.6 2.4 8.7L50 51.3l-7.6 5 2.4-8.7-7-5.6 9-.4Z" fill="#fff"/></g><g transform="matrix(.42 -.19 0 .51 50 44)"><rect x="9" y="9" width="82" height="82" rx="8" fill="none" stroke="#4a505c" stroke-width="7" opacity=".55"/><circle cx="50" cy="52" r="25" fill="#fff"/><path d="M27 52a23 23 0 0 1 46 0Z" fill="#3a3f4a"/><path d="M50 33l3.2 8.6 9 .4-7 5.6 2.4 8.7L50 51.3l-7.6 5 2.4-8.7-7-5.6 9-.4Z" fill="#fff"/></g><polygon points="50,6 92,25 50,44 8,25" fill="none" stroke="#4a505c" stroke-width="2.4" stroke-linejoin="round" opacity=".7"/><path d="M8 25v51l42 19 42-19V25M50 44v51" fill="none" stroke="#4a505c" stroke-width="2.4" stroke-linejoin="round" opacity=".7"/><path d="M14 27.5l36 16.2 36-16.2" fill="none" stroke="#fff" stroke-width="1.4" opacity=".35"/></svg><b>+400</b></span>
-              <span class="rpd d2"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,6 92,25 50,44 8,25" fill="#fff0a6"/><polygon points="8,25 50,44 50,95 8,76" fill="#ffc93d"/><polygon points="50,44 92,25 92,76 50,95" fill="#e0a116"/><g transform="matrix(.42 .19 0 .51 8 25)"><rect x="9" y="9" width="82" height="82" rx="8" fill="none" stroke="#8a5a00" stroke-width="7" opacity=".55"/><circle cx="50" cy="52" r="25" fill="#fff"/><path d="M27 52a23 23 0 0 1 46 0Z" fill="#7a4b00"/><path d="M50 33l3.2 8.6 9 .4-7 5.6 2.4 8.7L50 51.3l-7.6 5 2.4-8.7-7-5.6 9-.4Z" fill="#fff"/></g><g transform="matrix(.42 -.19 0 .51 50 44)"><rect x="9" y="9" width="82" height="82" rx="8" fill="none" stroke="#8a5a00" stroke-width="7" opacity=".55"/><circle cx="50" cy="52" r="25" fill="#fff"/><path d="M27 52a23 23 0 0 1 46 0Z" fill="#7a4b00"/><path d="M50 33l3.2 8.6 9 .4-7 5.6 2.4 8.7L50 51.3l-7.6 5 2.4-8.7-7-5.6 9-.4Z" fill="#fff"/></g><polygon points="50,6 92,25 50,44 8,25" fill="none" stroke="#8a5a00" stroke-width="2.4" stroke-linejoin="round" opacity=".7"/><path d="M8 25v51l42 19 42-19V25M50 44v51" fill="none" stroke="#8a5a00" stroke-width="2.4" stroke-linejoin="round" opacity=".7"/><path d="M14 27.5l36 16.2 36-16.2" fill="none" stroke="#fff" stroke-width="1.4" opacity=".35"/></svg><b>+1.2k</b></span>
-              <span class="rpd d3"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,6 92,25 50,44 8,25" fill="#e2f9ff"/><polygon points="8,25 50,44 50,95 8,76" fill="#8fdfff"/><polygon points="50,44 92,25 92,76 50,95" fill="#4fb3e6"/><g transform="matrix(.42 .19 0 .51 8 25)"><rect x="9" y="9" width="82" height="82" rx="8" fill="none" stroke="#1d6e9a" stroke-width="7" opacity=".55"/><circle cx="50" cy="52" r="25" fill="#fff"/><path d="M27 52a23 23 0 0 1 46 0Z" fill="#16577b"/><path d="M50 33l3.2 8.6 9 .4-7 5.6 2.4 8.7L50 51.3l-7.6 5 2.4-8.7-7-5.6 9-.4Z" fill="#fff"/></g><g transform="matrix(.42 -.19 0 .51 50 44)"><rect x="9" y="9" width="82" height="82" rx="8" fill="none" stroke="#1d6e9a" stroke-width="7" opacity=".55"/><circle cx="50" cy="52" r="25" fill="#fff"/><path d="M27 52a23 23 0 0 1 46 0Z" fill="#16577b"/><path d="M50 33l3.2 8.6 9 .4-7 5.6 2.4 8.7L50 51.3l-7.6 5 2.4-8.7-7-5.6 9-.4Z" fill="#fff"/></g><polygon points="50,6 92,25 50,44 8,25" fill="none" stroke="#1d6e9a" stroke-width="2.4" stroke-linejoin="round" opacity=".7"/><path d="M8 25v51l42 19 42-19V25M50 44v51" fill="none" stroke="#1d6e9a" stroke-width="2.4" stroke-linejoin="round" opacity=".7"/><path d="M14 27.5l36 16.2 36-16.2" fill="none" stroke="#fff" stroke-width="1.4" opacity=".35"/></svg><b>+5k</b></span>
-            </div>
-          </div>
-          <a class="cta" href="pages/research-points.html">Start farming <i></i></a>
-        </article>
-
-        <!-- 13 Shards of Life -->
+        <!-- 06 Shards of Life -->
         <article class="card glass reveal span-2" data-cat="progression" data-page="shards-of-life" style="--accent:#6cb8ff; --accent2:#8f7bff">
           <div class="card-spot"></div>
-          <div class="card-top"><span class="num">13</span><span class="chip">Up to 10 per rebirth</span></div>
+          <div class="card-top"><span class="num">06</span><span class="chip">Up to 10 per rebirth</span></div>
           <div class="split">
             <div>
               <h3>Shards of Life</h3>
@@ -387,11 +280,10 @@
           </div>
           <a class="cta" href="pages/shards-of-life.html">Count your shards <i></i></a>
         </article>
-
-        <!-- 14 Crafting -->
+        <!-- 07 Crafting -->
         <article class="card glass reveal span-2 craft-card" data-cat="progression" data-page="crafting" style="--accent:#ff5a7a; --accent2:#ffd36b">
           <div class="card-spot"></div>
-          <div class="card-top"><span class="num">14</span><span class="chip">40 recipes</span></div>
+          <div class="card-top"><span class="num">07</span><span class="chip">40 recipes</span></div>
           <div class="split">
             <div>
               <h3>Crafting</h3>
@@ -406,31 +298,10 @@
           </div>
           <a class="cta" href="pages/crafting.html">Plan a craft <i></i></a>
         </article>
-
-        <!-- 15 Daily Tasks -->
-        <article class="card glass reveal span-2" data-cat="economy" data-page="daily-tasks" style="--accent:#c77dff; --accent2:#6be3ff">
+        <!-- 08 Rebirth Tracker -->
+        <article class="card glass reveal span-4 rt-card" data-cat="progression" data-page="rebirth-tracker" style="--accent:#4498ff; --accent2:#a77bff">
           <div class="card-spot"></div>
-          <div class="card-top"><span class="num">15</span><span class="chip">Up to 50 uC each</span></div>
-          <div class="split">
-            <div>
-              <h3>Daily Tasks</h3>
-              <p>Every daily and weekly task and its uC reward, a tracker for the ones you got, and Daily Gift streaks.</p>
-              <ul class="tags"><li>Tasks</li><li>Tracker</li><li>Daily Gifts</li></ul>
-            </div>
-            <div class="task-mini" aria-hidden="true">
-              <span class="tm r1"><i></i><b>+10</b></span>
-              <span class="tm r2"><i></i><b>+10</b></span>
-              <span class="tm r3"><i></i><b>+50</b></span>
-              <img src="assets/icons/uc.png" alt="" />
-            </div>
-          </div>
-          <a class="cta" href="pages/daily-tasks.html">Track your tasks <i></i></a>
-        </article>
-
-        <!-- 16 Rebirth Tracker -->
-        <article class="card glass reveal span-2 rt-card" data-cat="progression" data-page="rebirth-tracker" style="--accent:#4498ff; --accent2:#a77bff">
-          <div class="card-spot"></div>
-          <div class="card-top"><span class="num">16</span><span class="chip">Saved in your browser</span></div>
+          <div class="card-top"><span class="num">08</span><span class="chip">Saved in your browser</span></div>
           <div class="split">
             <div>
               <h3>Rebirth Tracker</h3>
@@ -452,30 +323,170 @@
           </div>
           <a class="cta" href="pages/rebirth-tracker.html">Plan your grind <i></i></a>
         </article>
+          </div>
+        </div>
 
-        <!-- 17 User Tracker -->
-        <article class="card glass reveal span-2" data-cat="world" data-page="user-tracker" style="--accent:#3fe0a0; --accent2:#b37bff">
+        <!-- ===== Economy ===== -->
+        <div class="cat-group" id="cat-economy" data-group="economy">
+          <div class="cat-head reveal">
+            <span class="cat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 15.9V19h-2v-1.1c-1.7-.3-3-1.4-3.1-3h2c.1.9.9 1.5 2.1 1.5 1.3 0 2-.6 2-1.4 0-.7-.5-1.2-2.1-1.5-2.1-.5-3.6-1.2-3.6-3.1 0-1.5 1.1-2.6 2.7-2.9V6.4h2v1.1c1.6.3 2.6 1.4 2.7 2.9h-2c-.1-.8-.8-1.3-1.8-1.3-1.1 0-1.8.5-1.8 1.3 0 .7.6 1 2.2 1.4 2.2.5 3.5 1.3 3.5 3.2 0 1.6-1.2 2.7-2.8 3Z"/></svg></span>
+            <div class="cat-title"><h3>Economy</h3><span>Currencies, boxes, codes and daily rewards</span></div>
+            <i class="cat-rule" aria-hidden="true"></i>
+            <span class="cat-count">6 pages</span>
+          </div>
+          <div class="bento">
+        <!-- 09 Research Points -->
+        <article class="card glass reveal span-2" data-cat="economy" data-page="research-points" style="--accent:#3fe6d4; --accent2:#8f7bff">
           <div class="card-spot"></div>
-          <div class="card-top"><span class="num">17</span><span class="chip">Live from Roblox</span></div>
+          <div class="card-top"><span class="num">09</span><span class="chip">Up to 400k to unlock</span></div>
           <div class="split">
             <div>
-              <h3>User Tracker</h3>
-              <p>Search any player to see their Miner's Haven badges, Eggxotic egg progress, staff roles and the items they've made.</p>
-              <ul class="tags"><li>Badges</li><li>Eggxotics</li><li>Staff</li></ul>
+              <h3>Research Points</h3>
+              <p>Every research crate, what RP unlocks, the best RP furnaces and a calculator for your farm.</p>
+              <ul class="tags"><li>Crates</li><li>Furnaces</li><li>Farm calculator</li></ul>
             </div>
-            <div class="ut-mini" aria-hidden="true">
-              <span class="um-bar"><svg viewBox="0 0 24 24" width="12" height="12"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg><b class="um-type">berezaa</b></span>
-              <span class="um-av"><img src="assets/icons/masked-man.png" alt="" /></span>
-              <span class="um-b b1"></span><span class="um-b b2"></span><span class="um-b b3"></span><span class="um-egg"></span>
+            <div class="rp-drops" aria-hidden="true">
+              <span class="rpd d1"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,6 92,25 50,44 8,25" fill="#d3d7df"/><polygon points="8,25 50,44 50,95 8,76" fill="#a3aab6"/><polygon points="50,44 92,25 92,76 50,95" fill="#7a8190"/><g transform="matrix(.42 .19 0 .51 8 25)"><rect x="9" y="9" width="82" height="82" rx="8" fill="none" stroke="#4a505c" stroke-width="7" opacity=".55"/><circle cx="50" cy="52" r="25" fill="#fff"/><path d="M27 52a23 23 0 0 1 46 0Z" fill="#3a3f4a"/><path d="M50 33l3.2 8.6 9 .4-7 5.6 2.4 8.7L50 51.3l-7.6 5 2.4-8.7-7-5.6 9-.4Z" fill="#fff"/></g><g transform="matrix(.42 -.19 0 .51 50 44)"><rect x="9" y="9" width="82" height="82" rx="8" fill="none" stroke="#4a505c" stroke-width="7" opacity=".55"/><circle cx="50" cy="52" r="25" fill="#fff"/><path d="M27 52a23 23 0 0 1 46 0Z" fill="#3a3f4a"/><path d="M50 33l3.2 8.6 9 .4-7 5.6 2.4 8.7L50 51.3l-7.6 5 2.4-8.7-7-5.6 9-.4Z" fill="#fff"/></g><polygon points="50,6 92,25 50,44 8,25" fill="none" stroke="#4a505c" stroke-width="2.4" stroke-linejoin="round" opacity=".7"/><path d="M8 25v51l42 19 42-19V25M50 44v51" fill="none" stroke="#4a505c" stroke-width="2.4" stroke-linejoin="round" opacity=".7"/><path d="M14 27.5l36 16.2 36-16.2" fill="none" stroke="#fff" stroke-width="1.4" opacity=".35"/></svg><b>+400</b></span>
+              <span class="rpd d2"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,6 92,25 50,44 8,25" fill="#fff0a6"/><polygon points="8,25 50,44 50,95 8,76" fill="#ffc93d"/><polygon points="50,44 92,25 92,76 50,95" fill="#e0a116"/><g transform="matrix(.42 .19 0 .51 8 25)"><rect x="9" y="9" width="82" height="82" rx="8" fill="none" stroke="#8a5a00" stroke-width="7" opacity=".55"/><circle cx="50" cy="52" r="25" fill="#fff"/><path d="M27 52a23 23 0 0 1 46 0Z" fill="#7a4b00"/><path d="M50 33l3.2 8.6 9 .4-7 5.6 2.4 8.7L50 51.3l-7.6 5 2.4-8.7-7-5.6 9-.4Z" fill="#fff"/></g><g transform="matrix(.42 -.19 0 .51 50 44)"><rect x="9" y="9" width="82" height="82" rx="8" fill="none" stroke="#8a5a00" stroke-width="7" opacity=".55"/><circle cx="50" cy="52" r="25" fill="#fff"/><path d="M27 52a23 23 0 0 1 46 0Z" fill="#7a4b00"/><path d="M50 33l3.2 8.6 9 .4-7 5.6 2.4 8.7L50 51.3l-7.6 5 2.4-8.7-7-5.6 9-.4Z" fill="#fff"/></g><polygon points="50,6 92,25 50,44 8,25" fill="none" stroke="#8a5a00" stroke-width="2.4" stroke-linejoin="round" opacity=".7"/><path d="M8 25v51l42 19 42-19V25M50 44v51" fill="none" stroke="#8a5a00" stroke-width="2.4" stroke-linejoin="round" opacity=".7"/><path d="M14 27.5l36 16.2 36-16.2" fill="none" stroke="#fff" stroke-width="1.4" opacity=".35"/></svg><b>+1.2k</b></span>
+              <span class="rpd d3"><svg viewBox="0 0 100 100" aria-hidden="true"><polygon points="50,6 92,25 50,44 8,25" fill="#e2f9ff"/><polygon points="8,25 50,44 50,95 8,76" fill="#8fdfff"/><polygon points="50,44 92,25 92,76 50,95" fill="#4fb3e6"/><g transform="matrix(.42 .19 0 .51 8 25)"><rect x="9" y="9" width="82" height="82" rx="8" fill="none" stroke="#1d6e9a" stroke-width="7" opacity=".55"/><circle cx="50" cy="52" r="25" fill="#fff"/><path d="M27 52a23 23 0 0 1 46 0Z" fill="#16577b"/><path d="M50 33l3.2 8.6 9 .4-7 5.6 2.4 8.7L50 51.3l-7.6 5 2.4-8.7-7-5.6 9-.4Z" fill="#fff"/></g><g transform="matrix(.42 -.19 0 .51 50 44)"><rect x="9" y="9" width="82" height="82" rx="8" fill="none" stroke="#1d6e9a" stroke-width="7" opacity=".55"/><circle cx="50" cy="52" r="25" fill="#fff"/><path d="M27 52a23 23 0 0 1 46 0Z" fill="#16577b"/><path d="M50 33l3.2 8.6 9 .4-7 5.6 2.4 8.7L50 51.3l-7.6 5 2.4-8.7-7-5.6 9-.4Z" fill="#fff"/></g><polygon points="50,6 92,25 50,44 8,25" fill="none" stroke="#1d6e9a" stroke-width="2.4" stroke-linejoin="round" opacity=".7"/><path d="M8 25v51l42 19 42-19V25M50 44v51" fill="none" stroke="#1d6e9a" stroke-width="2.4" stroke-linejoin="round" opacity=".7"/><path d="M14 27.5l36 16.2 36-16.2" fill="none" stroke="#fff" stroke-width="1.4" opacity=".35"/></svg><b>+5k</b></span>
             </div>
           </div>
-          <a class="cta" href="pages/user-tracker.html">Look someone up <i></i></a>
+          <a class="cta" href="pages/research-points.html">Start farming <i></i></a>
         </article>
+        <!-- 10 Cash Suffixes -->
+        <article class="card glass reveal span-2" data-cat="economy" data-page="cash-suffixes" style="--accent:#40d565; --accent2:#b6ff6b">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">10</span><span class="chip">102 suffixes</span></div>
+          <div class="split">
+            <div>
+              <h3>Cash Suffixes</h3>
+              <p>From k to UNCENT: what every suffix means, a converter for big numbers, and the milestones along the way.</p>
+              <ul class="tags"><li>Converter</li><li>Milestones</li><li>Cash cap</li></ul>
+            </div>
+            <div class="suffix-roll" aria-hidden="true">
+              <span class="sr-dollar">$1</span>
+              <span class="sr-win"><span class="sr-list"><b>k</b><b>M</b><b>B</b><b>T</b><b>qd</b><b>Qn</b><b>sx</b><b>Sp</b><b>O</b><b>N</b><b>de</b><b>DD</b><b>Vgn</b><b>QdDR</b><b>SXGNTL</b><b>CENT</b><b>UNCENT</b><b>k</b></span></span>
+            </div>
+          </div>
+          <a class="cta" href="pages/cash-suffixes.html">See every suffix <i></i></a>
+        </article>
+        <!-- 11 Mystery Boxes -->
+        <article class="card glass reveal span-2" data-cat="economy" data-page="mystery-boxes" style="--accent:#9dff6b; --accent2:#b072ff">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">11</span><span class="chip">14 box types</span></div>
+          <div class="split">
+            <div>
+              <h3>Mystery Boxes</h3>
+              <p>Every box, where to get it, and its odds. Lucky Clovers can double or triple a win.</p>
+              <ul class="tags"><li>Regular</li><li>Inferno</li><li>Limited</li><li>Clovers</li></ul>
+            </div>
+            <img class="card-icon float wobble big" src="assets/icons/spook-mcdooks.png" alt="" />
+          </div>
+          <a class="cta" href="pages/mystery-boxes.html">Open the boxes <i></i></a>
+        </article>
+        <!-- 12 Codes -->
+        <article class="card glass reveal span-2" data-cat="economy" data-page="codes" style="--accent:#ff6bb5; --accent2:#ffd16b">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">12</span><span class="chip live"><span class="pulse-dot"></span>Active codes</span></div>
+          <div class="split">
+            <div>
+              <h3>Codes</h3>
+              <p>Free uC, boxes and items. Codes aren't case-sensitive, and each one can be redeemed once.</p>
+            </div>
+            <img class="card-icon float" src="assets/icons/uc.png" alt="" />
+          </div>
+          <div class="codes">
+            <button class="code" data-code="ItsWonderful"><code>ItsWonderful</code><span>Iron Flakes Mine</span><em>Copy</em></button>
+            <button class="code" data-code="SLUMBER"><code>SLUMBER</code><span>Ore Gielder</span><em>Copy</em></button>
+            <button class="code" data-code="RestEasyNow"><code>RestEasyNow</code><span>Yoda</span><em>Copy</em></button>
+          </div>
+          <a class="cta" href="pages/codes.html">All codes <i></i></a>
+        </article>
+        <!-- 13 Daily Tasks -->
+        <article class="card glass reveal span-2" data-cat="economy" data-page="daily-tasks" style="--accent:#c77dff; --accent2:#6be3ff">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">13</span><span class="chip">Up to 50 uC each</span></div>
+          <div class="split">
+            <div>
+              <h3>Daily Tasks</h3>
+              <p>Every daily and weekly task and its uC reward, a tracker for the ones you got, and Daily Gift streaks.</p>
+              <ul class="tags"><li>Tasks</li><li>Tracker</li><li>Daily Gifts</li></ul>
+            </div>
+            <div class="task-mini" aria-hidden="true">
+              <span class="tm r1"><i></i><b>+10</b></span>
+              <span class="tm r2"><i></i><b>+10</b></span>
+              <span class="tm r3"><i></i><b>+50</b></span>
+              <img src="assets/icons/uc.png" alt="" />
+            </div>
+          </div>
+          <a class="cta" href="pages/daily-tasks.html">Track your tasks <i></i></a>
+        </article>
+        <!-- 14 Gamepasses -->
+        <article class="card glass reveal span-2" data-cat="economy" data-page="gamepasses" style="--accent:#ffd16b; --accent2:#ff9f1c">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">14</span><span class="chip">Robux perks</span></div>
+          <img class="card-icon float" src="assets/icons/robux.png" alt="" />
+          <h3>Gamepasses</h3>
+          <p>VIP, Premium, Executive, Dark Knight and more. What each pass costs and every perk it unlocks.</p>
+          <ul class="tags"><li>VIP</li><li>Premium</li><li>Executive</li><li>Shiny Charm</li></ul>
+          <a class="cta" href="pages/gamepasses.html">Compare passes <i></i></a>
+        </article>
+          </div>
+        </div>
 
-        <!-- 18 Game Tracker -->
+        <!-- ===== News ===== -->
+        <div class="cat-group" id="cat-news" data-group="news">
+          <div class="cat-head reveal">
+            <span class="cat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4 4h13v15a2 2 0 0 0 2 2H6a2 2 0 0 1-2-2V4Zm15 4h2v11a2 2 0 0 1-4 0V8h2ZM7 7v4h7V7H7Zm0 6v2h7v-2H7Zm0 4v1.5h7V17H7Z"/></svg></span>
+            <div class="cat-title"><h3>News</h3><span>What changed, what's on and who's playing</span></div>
+            <i class="cat-rule" aria-hidden="true"></i>
+            <span class="cat-count">3 pages</span>
+          </div>
+          <div class="bento">
+        <!-- 15 Update Log -->
+        <article class="card glass reveal span-2" data-cat="news" data-page="update-log" style="--accent:#ff9f1c; --accent2:#ff4d6d">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">15</span><span class="chip live"><span class="pulse-dot"></span>Latest: Halloween 2026</span></div>
+          <div class="split">
+            <div>
+              <h3>Update Log</h3>
+              <p>Patch notes for every update since the 2015 release, newest first.</p>
+              <ol class="timeline">
+                <li><b>Oct 2026</b> Halloween Part 1 + hot-patches</li>
+                <li><b>2026</b> 11th Birthday</li>
+                <li><b>2026</b> Easter &amp; Labor of Love</li>
+              </ol>
+            </div>
+            <img class="card-icon float big" src="assets/icons/halloween.png" alt="" />
+          </div>
+          <a class="cta" href="pages/update-log.html">Open changelog <i></i></a>
+        </article>
+        <!-- 16 Events -->
+        <article class="card glass reveal span-2" data-cat="news" data-page="events" style="--accent:#ff5c8a; --accent2:#5cffb1">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">16</span><span class="chip">Since 2015</span></div>
+          <div class="split">
+            <div>
+              <h3>Events</h3>
+              <p>Valentine's, St. Patrick's, Spring, Easter, Birthdays, Summer, Halloween, Black Friday and Winter: every seasonal event and its limited items.</p>
+              <ul class="tags"><li>Seasonal</li><li>Limited items</li><li>Event boxes</li></ul>
+            </div>
+            <div class="event-cycle" aria-hidden="true">
+              <img src="assets/icons/valentines.png" alt="" />
+              <img src="assets/icons/st-patty.png" alt="" />
+              <img src="assets/icons/spring.png" alt="" />
+              <img src="assets/icons/easter.png" alt="" />
+              <img src="assets/icons/summer.png" alt="" />
+              <img src="assets/icons/halloween.png" alt="" />
+              <img src="assets/icons/winter.png" alt="" />
+            </div>
+          </div>
+          <a class="cta" href="pages/events.html">Event history <i></i></a>
+        </article>
+        <!-- 17 Game Tracker -->
         <article class="card glass reveal span-4 gt-card" data-cat="news" data-page="game-tracker" style="--accent:#ffc857; --accent2:#38d9ff">
           <div class="card-spot"></div>
-          <div class="card-top"><span class="num">18</span><span class="chip"><i class="gt-live-dot"></i> Live</span></div>
+          <div class="card-top"><span class="num">17</span><span class="chip"><i class="gt-live-dot"></i> Live</span></div>
           <div class="split">
             <div>
               <h3>Game Tracker</h3>
@@ -493,21 +504,51 @@
           </div>
           <a class="cta" href="pages/game-tracker.html">See the player count <i></i></a>
         </article>
+          </div>
+        </div>
 
-        <!-- 19 Shiny Checklist -->
-        <article class="card glass reveal span-4 sc-card" data-cat="items" data-page="shiny-checklist" style="--accent:#ff7ad9; --accent2:#ffd76b">
+        <!-- ===== World ===== -->
+        <div class="cat-group" id="cat-world" data-group="world">
+          <div class="cat-head reveal">
+            <span class="cat-ico" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-3a15.7 15.7 0 0 0-1.4-3.6A8 8 0 0 1 18.9 8ZM12 4c.8 1.2 1.5 2.5 1.9 4h-3.8c.4-1.5 1.1-2.8 1.9-4ZM4.3 14a8 8 0 0 1 0-4h3.4a16.5 16.5 0 0 0 0 4H4.3Zm.8 2h3c.3 1.3.8 2.5 1.4 3.6A8 8 0 0 1 5.1 16ZM8 8H5.1a8 8 0 0 1 4.3-3.6C8.8 5.5 8.4 6.7 8 8Zm4 12c-.8-1.2-1.5-2.5-1.9-4h3.8c-.4 1.5-1.1 2.8-1.9 4Zm2.3-6H9.7a14.7 14.7 0 0 1 0-4h4.6a14.7 14.7 0 0 1 0 4Zm.3 5.6c.6-1.1 1.1-2.3 1.4-3.6h3a8 8 0 0 1-4.4 3.6Zm1.7-5.6a16.5 16.5 0 0 0 0-4h3.4a8 8 0 0 1 0 4h-3.4Z"/></svg></span>
+            <div class="cat-title"><h3>World</h3><span>The characters of the Haven and its players</span></div>
+            <i class="cat-rule" aria-hidden="true"></i>
+            <span class="cat-count">2 pages</span>
+          </div>
+          <div class="bento">
+        <!-- 18 NPCs -->
+        <article class="card glass reveal span-2" data-cat="world" data-page="npcs" style="--accent:#7ee0a1; --accent2:#c7c7ff">
           <div class="card-spot"></div>
-          <div class="card-top"><span class="num">19</span><span class="chip">311 shinies</span></div>
+          <div class="card-top"><span class="num">18</span><span class="chip">42 characters</span></div>
+          <div class="npc-stack" aria-hidden="true">
+            <img src="assets/icons/masked-man.png" alt="" />
+            <img src="assets/icons/craftsman.png" alt="" />
+            <img src="assets/icons/spook-mcdooks.png" alt="" />
+          </div>
+          <h3>NPCs</h3>
+          <p>The Masked Man, The Craftsman, Spook McDooks, Draedon and the rest: where to find them and what they do.</p>
+          <a class="cta" href="pages/npcs.html">Meet the cast <i></i></a>
+        </article>
+        <!-- 19 User Tracker -->
+        <article class="card glass reveal span-2" data-cat="world" data-page="user-tracker" style="--accent:#3fe0a0; --accent2:#b37bff">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">19</span><span class="chip">Live from Roblox</span></div>
           <div class="split">
             <div>
-              <h3>Shiny Checklist</h3>
-              <p>Tick off every Shiny and Limited Shiny you've found and note the life, date and copies for each. Saved in your browser, with a backup you can download and load again.</p>
-              <ul class="tags"><li>Shiny &amp; Limited</li><li>Life &amp; date found</li><li>Backup file</li></ul>
+              <h3>User Tracker</h3>
+              <p>Search any player to see their Miner's Haven badges, Eggxotic egg progress, staff roles and the items they've made.</p>
+              <ul class="tags"><li>Badges</li><li>Eggxotics</li><li>Staff</li></ul>
             </div>
-            <div class="sc-mini" aria-hidden="true"><i style="--n:0"><img src="https://static.wikia.nocookie.net/the-miners-haven-project/images/6/6d/Inevitable_Draedon%27s_Gauntlet.png/revision/latest/scale-to-width-down/96" alt="" loading="lazy" referrerpolicy="no-referrer" /></i><i style="--n:1"><img src="https://static.wikia.nocookie.net/the-miners-haven-project/images/2/24/Advanced_Tesla_Refuter.png/revision/latest/scale-to-width-down/96" alt="" loading="lazy" referrerpolicy="no-referrer" /></i><i style="--n:2"><img src="https://static.wikia.nocookie.net/the-miners-haven-project/images/d/d2/Abstract_Sakura_Garden.png/revision/latest/scale-to-width-down/96" alt="" loading="lazy" referrerpolicy="no-referrer" /></i><i style="--n:3"><img src="https://static.wikia.nocookie.net/the-miners-haven-project/images/b/bb/Crimson_Azure_Refiner.png/revision/latest/scale-to-width-down/96" alt="" loading="lazy" referrerpolicy="no-referrer" /></i><i style="--n:4"><img src="https://static.wikia.nocookie.net/the-miners-haven-project/images/1/10/Frightful_Dreamer%27s_Might.png/revision/latest/scale-to-width-down/96" alt="" loading="lazy" referrerpolicy="no-referrer" /></i><b class="scm-spark"></b><b class="scm-spark s2"></b></div>
+            <div class="ut-mini" aria-hidden="true">
+              <span class="um-bar"><svg viewBox="0 0 24 24" width="12" height="12"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg><b class="um-type">berezaa</b></span>
+              <span class="um-av"><img src="assets/icons/masked-man.png" alt="" /></span>
+              <span class="um-b b1"></span><span class="um-b b2"></span><span class="um-b b3"></span><span class="um-egg"></span>
+            </div>
           </div>
-          <a class="cta" href="pages/shiny-checklist.html">Start your checklist <i></i></a>
+          <a class="cta" href="pages/user-tracker.html">Look someone up <i></i></a>
         </article>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -554,6 +595,6 @@
 
   <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="js/main.js?v=42"></script>
+  <script src="js/main.js?v=43"></script>
 </body>
 </html>

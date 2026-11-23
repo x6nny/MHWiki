@@ -225,25 +225,54 @@ document.querySelectorAll(".code").forEach(btn => {
   });
 });
 
-/* ---------- Filters with sliding indicator ---------- */
+/* ---------- Section jump bar with sliding indicator + scroll spy ---------- */
 const filtersEl = document.querySelector(".filters");
 const indicator = document.querySelector(".filter-indicator");
+const groups = [...document.querySelectorAll(".cat-group")];
+const RM_SCROLL = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 function moveIndicator(btn) {
+  if (!btn) return;
   indicator.style.width = `${btn.offsetWidth}px`;
   indicator.style.transform = `translateX(${btn.offsetLeft}px)`;
 }
-function applyFilter(cat) {
+function setActive(cat) {
   const btn = filtersEl.querySelector(`[data-filter="${cat}"]`);
-  if (!btn) return;
+  if (!btn || btn.classList.contains("active")) return;
   filtersEl.querySelectorAll(".filter").forEach(b => b.classList.toggle("active", b === btn));
   moveIndicator(btn);
-  document.querySelectorAll(".card").forEach(c => {
-    c.classList.toggle("dim", cat !== "all" && c.dataset.cat !== cat);
-  });
+  // keep the active chip visible when the bar scrolls sideways on phones
+  if (filtersEl.scrollWidth > filtersEl.clientWidth) filtersEl.scrollTo({ left: btn.offsetLeft - 40, behavior: RM_SCROLL ? "auto" : "smooth" });
 }
-filtersEl.querySelectorAll(".filter").forEach(b => b.addEventListener("click", () => applyFilter(b.dataset.filter)));
-document.querySelectorAll("[data-filter-link]").forEach(a => a.addEventListener("click", () => applyFilter(a.dataset.filterLink)));
-window.addEventListener("load", () => moveIndicator(filtersEl.querySelector(".filter.active")));
+let spyLock = 0;
+function jumpTo(cat) {
+  const target = cat === "all" ? document.getElementById("explore") : document.getElementById("cat-" + cat);
+  if (!target) return;
+  setActive(cat);
+  spyLock = Date.now() + 900; // let the smooth scroll finish before the spy takes over again
+  target.scrollIntoView({ behavior: RM_SCROLL ? "auto" : "smooth", block: "start" });
+  if (cat !== "all") {
+    target.classList.remove("flash"); void target.offsetWidth; target.classList.add("flash");
+    history.replaceState(null, "", "#cat-" + cat);
+  }
+}
+filtersEl.querySelectorAll(".filter").forEach(b => b.addEventListener("click", () => jumpTo(b.dataset.filter)));
+document.querySelectorAll("[data-filter-link]").forEach(a => a.addEventListener("click", e => { e.preventDefault(); jumpTo(a.dataset.filterLink); }));
+function spy() {
+  if (Date.now() < spyLock) return;
+  const line = Math.min(window.innerHeight * 0.35, 260);
+  let cur = "all";
+  groups.forEach(g => { if (g.getBoundingClientRect().top <= line) cur = g.dataset.group; });
+  const last = groups[groups.length - 1];
+  if (last && last.getBoundingClientRect().bottom < line) cur = "all";
+  setActive(cur);
+}
+let spyRaf = 0;
+window.addEventListener("scroll", () => { if (!spyRaf) spyRaf = requestAnimationFrame(() => { spyRaf = 0; spy(); }); }, { passive: true });
+window.addEventListener("load", () => {
+  moveIndicator(filtersEl.querySelector(".filter.active"));
+  const m = location.hash.match(/^#cat-(\w+)$/);
+  if (m) setTimeout(() => jumpTo(m[1]), 60); else spy();
+});
 window.addEventListener("resize", () => moveIndicator(filtersEl.querySelector(".filter.active")));
 document.fonts && document.fonts.ready.then(() => moveIndicator(filtersEl.querySelector(".filter.active")));
 

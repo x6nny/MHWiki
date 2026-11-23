@@ -36,7 +36,7 @@
   const label = (t, kind) => `${t.verb} <b>${fmt(t[kind])}</b> ${esc(t.noun)}`;
   const plain = (t, kind) => `${t.verb} ${fmt(t[kind])} ${t.noun}`;
 
-  /* ---------- Reset clock (12:00 AM UTC, see MH.dailyReset) ---------- */
+  /* ---------- Reset clock (8:00 PM New York time, see MH.dailyReset) ---------- */
   const todayUTC = () => MH.dailyReset().key;
   const untilReset = () => MH.dailyReset().left;
   const hms = ms => { const s = Math.max(0, Math.floor(ms / 1000)); return [Math.floor(s / 3600), Math.floor(s % 3600 / 60), s % 60].map(v => String(v).padStart(2, "0")).join(":"); };

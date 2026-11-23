@@ -19,7 +19,7 @@
   const E = [];
   D.items.forEach(it => it.sh.forEach((s, j) => E.push({
     key: it.n + "|" + (s.nm || s.k + j), item: it.n, tier: it.t, type: it.ty, rank: it.r,
-    name: (s.nm ? s.nm + " " : s.k === "L" ? "Limited Shiny " : "Shiny ") + it.n, nm: s.nm, kind: s.k, ev: s.ev || "", u: s.u, base: it.img
+    name: (s.nm ? s.nm + " " : s.k === "L" ? "Limited Shiny " : "Shiny ") + it.n.replace(/ \(Renegade\)$/, "") + (/ \(Renegade\)$/.test(it.n) ? " (Renegade)" : ""), nm: s.nm, kind: s.k, ev: s.ev || "", u: s.u || it.img, noimg: !s.u, base: it.img
   })));
   E.forEach((e, i) => { e.i = i; e._t = (e.name + " " + e.item + " " + e.tier + " " + e.ev).toLowerCase(); });
   const byKey = Object.fromEntries(E.map(e => [e.key, e]));
@@ -27,6 +27,14 @@
   /* ---------- Saved state ---------- */
   let S = { v: 1, items: {} };
   try { const s = JSON.parse(localStorage.getItem(KEY) || "null"); if (s && s.items) S = s; } catch (e) {}
+  // shinies whose names were corrected keep their saved progress
+  function migrate(items) {
+    Object.entries(D.renamed || {}).forEach(([o, n]) => { if (!items[o]) return; if (!items[n]) items[n] = items[o]; delete items[o]; migrated = true; });
+    return items;
+  }
+  let migrated = false;
+  migrate(S.items);
+  if (migrated) try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {}
   const rec = k => S.items[k] || (S.items[k] = {});
   const got = k => !!(S.items[k] && S.items[k].got);
   let saveOk = true;
@@ -46,12 +54,18 @@
   const lifeN = l => { if (!l) return Infinity; const n = +String(l).replace(/[^\d]/g, "") || 0; return /s/i.test(l) ? 1e7 + n : n; };
 
   /* ---------- Filters ---------- */
-  const st = { q: "", status: "all", kind: "all", tier: "", sort: "tier" };
+  const st = { q: "", status: "all", kind: "all", tier: "", ev: "", sort: "tier" };
   const tiers = [...new Set(E.map(e => e.tier))].sort((a, b) => E.find(e => e.tier === a).rank - E.find(e => e.tier === b).rank);
   $("#fTier").innerHTML += tiers.map(t => `<option value="${esc(t)}">${esc(t)}</option>`).join("");
   function seg(el, k) { el.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; el.querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b)); st[k] = b.dataset.v; draw(); }); }
   seg($("#fStatus"), "status"); seg($("#fKind"), "kind");
-  $("#fTier").addEventListener("change", e => { st.tier = e.target.value; draw(); });
+  $("#fTier").addEventListener("change", e => { st.tier = e.target.value; stats(); draw(); });
+  const EV_ORDER = ["Valentine's", "St. Patrick's", "Easter", "Birthday", "Halloween", "Christmas", "Discord Giveaway", "Special Requirement"];
+  const evs = [...new Set(E.map(e => e.ev).filter(Boolean))].sort((a, b) => (EV_ORDER.indexOf(a) + 1 || 99) - (EV_ORDER.indexOf(b) + 1 || 99) || a.localeCompare(b));
+  const evCount = v => E.filter(e => v === "*" ? e.ev : v === "-" ? !e.ev : e.ev === v).length;
+  $("#fEv").innerHTML = `<option value="">All</option><option value="*">Any event (${evCount("*")})</option><option value="-">No event (${evCount("-")})</option>` + evs.map(v => `<option value="${esc(v)}">${esc(v)} (${evCount(v)})</option>`).join("");
+  $("#fEv").addEventListener("change", e => { st.ev = e.target.value; draw(); });
+  const evOk = e => !st.ev || (st.ev === "*" ? !!e.ev : st.ev === "-" ? !e.ev : e.ev === st.ev);
   $("#fSort").addEventListener("change", e => { st.sort = e.target.value; draw(); });
   let qt; $("#q").addEventListener("input", e => { clearTimeout(qt); qt = setTimeout(() => { st.q = e.target.value.trim().toLowerCase(); draw(); }, 150); });
 
@@ -63,9 +77,9 @@
     return `<div class="sc${r.got ? " got" : ""}${e.kind === "L" ? " lim" : ""}" data-k="${esc(e.key)}" style="--tb:${bg};--tf:${fg}">
       <button type="button" class="sc-tick" aria-pressed="${!!r.got}" aria-label="${r.got ? "Unmark" : "Mark"} ${esc(e.name)} as found"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <button type="button" class="sc-edit" aria-label="Details for ${esc(e.name)}"><svg viewBox="0 0 24 24" width="15" height="15"><path d="M4 20h4L19 9l-4-4L4 16v4zM14 6l4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-      <div class="sc-img"><img src="${esc(img(e.u, 160))}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<span class=ph>${esc(e.item[0])}</span>'" /><i class="sc-glint" aria-hidden="true"></i></div>
+      <div class="sc-img${e.noimg ? " noimg" : ""}"${e.noimg ? ' title="No shiny image on the wiki yet"' : ""}><img src="${esc(img(e.u, 160))}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<span class=ph>${esc(e.item[0])}</span>'" /><i class="sc-glint" aria-hidden="true"></i></div>
       <b class="sc-name">${esc(e.name)}</b>
-      <div class="sc-tags"><span class="tp">${esc(e.tier)}</span><span class="kd ${e.kind}">${e.kind === "L" ? "Limited" + (e.ev ? " · " + esc(e.ev) : "") : "Shiny"}</span></div>
+      <div class="sc-tags"><span class="tp">${esc(e.tier)}</span><span class="kd ${e.kind}">${e.kind === "L" ? "Limited" : "Shiny"}</span>${e.ev ? `<span class="ev">${esc(e.ev)}</span>` : ""}</div>
       <div class="sc-meta">${meta.length ? meta.map(m => `<span>${m}</span>`).join("") : `<span class="add">${r.got ? "Add life, date…" : "Not found yet"}</span>`}</div>
     </div>`;
   }
@@ -73,12 +87,13 @@
   const PAGE = 60;
   function draw() {
     const q = st.q.split(/\s+/).filter(Boolean);
-    list = E.filter(e => (st.status === "all" || (st.status === "got") === got(e.key)) && (st.kind === "all" || e.kind === st.kind) && (!st.tier || e.tier === st.tier) && q.every(t => e._t.includes(t)));
+    list = E.filter(e => (st.status === "all" || (st.status === "got") === got(e.key)) && (st.kind === "all" || e.kind === st.kind) && (!st.tier || e.tier === st.tier) && evOk(e) && q.every(t => e._t.includes(t)));
     const byName = (a, b) => a.name.localeCompare(b.name);
     const R = k => S.items[k] || {};
     if (st.sort === "name") list.sort(byName);
     else if (st.sort === "recent") list.sort((a, b) => (R(b.key).at || 0) - (R(a.key).at || 0) || byName(a, b));
     else if (st.sort === "life") list.sort((a, b) => lifeN(R(a.key).life) - lifeN(R(b.key).life) || byName(a, b));
+    else if (st.sort === "event") list.sort((a, b) => (a.ev ? EV_ORDER.indexOf(a.ev) + 1 || 50 : 99) - (b.ev ? EV_ORDER.indexOf(b.ev) + 1 || 50 : 99) || a.ev.localeCompare(b.ev) || a.rank - b.rank || byName(a, b));
     else if (st.sort === "copies") list.sort((a, b) => (R(b.key).n || 0) - (R(a.key).n || 0) || byName(a, b));
     else list.sort((a, b) => a.rank - b.rank || a.item.localeCompare(b.item) || (a.kind > b.kind ? 1 : -1));
     $("#count").textContent = `${fmt(list.length)} shin${list.length === 1 ? "y" : "ies"}`;
@@ -153,7 +168,7 @@
     edKey = k; lastFocus = document.activeElement;
     const e = byKey[k], r = S.items[k] || {};
     $("#edPic").innerHTML = `<img src="${esc(img(e.u, 200))}" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML='<span class=ph>${esc(e.item[0])}</span>'" />`;
-    $("#edKind").textContent = `${e.kind === "L" ? "Limited Shiny" + (e.ev ? " · " + e.ev : "") : "Shiny"} · ${e.tier}`;
+    $("#edKind").textContent = `${e.kind === "L" ? "Limited Shiny" : "Shiny"}${e.ev ? " · " + e.ev : ""} · ${e.tier}`;
     $("#edName").textContent = e.name;
     $("#edLink").href = ITEM(e.item);
     $("#edGot").checked = !!r.got; $("#edLife").value = r.life || ""; $("#edDate").value = r.date || "";
@@ -207,7 +222,7 @@
       const d = JSON.parse(t);
       if (!d || typeof d.items !== "object") throw 0;
       const items = {}; let n = 0, skipped = 0;
-      Object.entries(d.items).forEach(([k, r]) => {
+      Object.entries(migrate({ ...d.items })).forEach(([k, r]) => {
         if (!byKey[k]) { skipped++; return; }
         items[k] = { got: !!r.got, life: String(r.life || "").slice(0, 20), date: /^\d{4}-\d{2}-\d{2}$/.test(r.date || "") ? r.date : "", n: Math.max(0, parseInt(r.n, 10) || 0), how: String(r.how || "").slice(0, 40), note: String(r.note || "").slice(0, 200), at: +r.at || 0 };
         if (items[k].got) n++;

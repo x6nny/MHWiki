@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=24" />
+  <link rel="stylesheet" href="css/style.css?v=25" />
 </head>
 <body>
   <!-- ===== Animated backdrop ===== -->
@@ -389,14 +389,14 @@
         </article>
 
         <!-- 14 Crafting -->
-        <article class="card glass reveal span-4 craft-card" data-cat="progression" data-page="crafting" style="--accent:#ff5a7a; --accent2:#ffd36b">
+        <article class="card glass reveal span-2 craft-card" data-cat="progression" data-page="crafting" style="--accent:#ff5a7a; --accent2:#ffd36b">
           <div class="card-spot"></div>
           <div class="card-top"><span class="num">14</span><span class="chip">40 recipes</span></div>
           <div class="split">
             <div>
               <h3>Crafting</h3>
-              <p>Every Enchanted recipe from The Craftsman and every Superstitious recipe from Draedon: items, Shards of Life, Catalysts and the six elements, with a forge planner that checks your Reborn items.</p>
-              <ul class="tags"><li>Enchanted</li><li>Superstitious</li><li>Catalysts</li><li>Forge planner</li></ul>
+              <p>Every Enchanted and Superstitious recipe: items, Shards of Life, Catalysts and elements, plus a forge planner.</p>
+              <ul class="tags"><li>Enchanted</li><li>Superstitious</li><li>Forge planner</li></ul>
             </div>
             <div class="craft-orbit" aria-hidden="true">
               <img src="assets/icons/draedon.png" alt="" />
@@ -405,6 +405,26 @@
             </div>
           </div>
           <a class="cta" href="pages/crafting.html">Plan a craft <i></i></a>
+        </article>
+
+        <!-- 15 Daily Tasks -->
+        <article class="card glass reveal span-2" data-cat="economy" data-page="daily-tasks" style="--accent:#c77dff; --accent2:#6be3ff">
+          <div class="card-spot"></div>
+          <div class="card-top"><span class="num">15</span><span class="chip">Up to 50 uC each</span></div>
+          <div class="split">
+            <div>
+              <h3>Daily Tasks</h3>
+              <p>Every daily and weekly task and its uC reward, a tracker for the ones you got, and Daily Gift streaks.</p>
+              <ul class="tags"><li>Tasks</li><li>Tracker</li><li>Daily Gifts</li></ul>
+            </div>
+            <div class="task-mini" aria-hidden="true">
+              <span class="tm r1"><i></i><b>+10</b></span>
+              <span class="tm r2"><i></i><b>+10</b></span>
+              <span class="tm r3"><i></i><b>+50</b></span>
+              <img src="assets/icons/uc.png" alt="" />
+            </div>
+          </div>
+          <a class="cta" href="pages/daily-tasks.html">Track your tasks <i></i></a>
         </article>
 
       </div>
@@ -452,6 +472,6 @@
 
   <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="js/main.js?v=24"></script>
+  <script src="js/main.js?v=25"></script>
 </body>
 </html>

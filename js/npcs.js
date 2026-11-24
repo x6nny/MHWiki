@@ -1,6 +1,6 @@
 /* =========================================================
    NPCs page
-   Data: window.MH_NPCS (js/npc-data.js)
+   Data: window.MH_NPCS (data/NPCs.json), The Masked Man's stock in data/MaskedMan.json
    ========================================================= */
 (() => {
   const D = window.MH_NPCS;
@@ -186,7 +186,7 @@
   }
   /* ---------- The Masked Man's stock ---------- */
   const MMS = window.MH_MM_STOCK;
-  const MM_IMG = u => u ? `https://static.wikia.nocookie.net/the-miners-haven-project/images/${u}/revision/latest/scale-to-width-down/96` : "";
+  const MM_IMG = u => u ? MH_SRC(u) : "";
   const MM_GROUPS = ["Contraband", "Exotic", "Collectible", "Other"];
   let mmTab = "all";
   function stockRows() {

@@ -1,0 +1,4109 @@
+{
+  "creators": {
+    "berezaa": {
+      "n": "Berezaa",
+      "items": [
+        ["Tiny Conveyor", "assets/wiki/tiny-conveyor.webp", "Novice"],
+        ["Coal Mine", "assets/wiki/coal-mine.webp", "Basic"],
+        ["Conveyor Corner", "assets/wiki/conveyor-corner-hd.webp", "Novice"],
+        ["Neon Gift of Glowing", "assets/wiki/neon-gift-of-glowing-hd.webp", "Collectible"],
+        ["Raised-ier Conveyor", "assets/wiki/raised-ier-conveyor-hd.webp", "Intermediate"],
+        ["Small Bench", "assets/wiki/small-bench-hd.webp", "Novice"],
+        ["Aman The Survivor", "assets/wiki/aman-the-survivor.webp", "Legendary"],
+        ["Conveyor Converter", "assets/wiki/conveyor-converter-hd.webp", "Collectible"],
+        ["Reversible Conveyor", "assets/wiki/reversible-conveyor-hd.webp", "Premium"],
+        ["Health Infuser", "assets/wiki/thrust-infuser.webp", "Intermediate"],
+        ["Haste Infuser", "assets/wiki/haste-infuser-hd.webp", "Premium"],
+        ["Swordmaster Statue", "assets/wiki/swordmaster-statue-hd.webp", "Premium"],
+        ["Automatic Weaponry", "assets/wiki/automatic-weaponry-hd.webp", "Intermediate"],
+        ["Iron Turret Wall", "assets/wiki/iron-turret-wall-hd.webp", "Basic"],
+        ["Revolver Rack", "assets/wiki/revolver-rack-hd.webp", "Epic"],
+        ["Spawn Beacon", "assets/wiki/spawn-beacon-hd.webp", "Novice"],
+        ["Controlled Gate", "assets/wiki/controlled-gate-hd.webp", "Novice"],
+        ["Ladder", "assets/wiki/ladder-hd.webp", "Advanced"],
+        ["Ore Incinerator", "assets/wiki/ore-incinerator.webp", "Basic"],
+        ["Close-Range Ordinance", "assets/wiki/close-range-ordinance-hd.webp", "Novice"],
+        ["Cherry Blossom", "assets/wiki/cherry-blossom-hd.webp", "Proficient"],
+        ["Flood Light", "assets/wiki/flood-light-hd.webp", "Basic"],
+        ["Freeze-Ray Tech", "assets/wiki/freeze-ray-tech-hd.webp", "Collectible"],
+        ["Staircase Wall", "assets/wiki/staircase-wall-hd.webp", "Basic"],
+        ["Autumn Tree", "assets/wiki/autumn-tree-hd.webp", "Advanced"],
+        ["Pebble Flooring", "assets/wiki/pebble-flooring-hd.webp", "Intermediate"],
+        ["Potted Tree", "assets/wiki/potted-tree-hd.webp", "Novice"],
+        ["Undead Santa", "assets/wiki/undead-santa.webp", "Fabled"],
+        ["Firework Pile", "assets/wiki/firework-pile.webp", "Collectible"],
+        ["Lava Flooring", "assets/wiki/lava-flooring-hd.webp", "Intermediate"],
+        ["Giant Doge Plushie", "assets/wiki/giant-doge-plushie.webp", "Premium"],
+        ["Carpet Flooring", "assets/wiki/carpet-flooring-hd.webp", "Basic"],
+        ["Pink Teleporter", "assets/wiki/pink-teleporter-sender-hd.webp", "Advanced"],
+        ["Ore Cannon", "assets/wiki/ore-cannon-hd.webp", "Novice"],
+        ["Ore Magnifier", "assets/wiki/ore-magnifier-hd.webp", "Intermediate"],
+        ["Brick Wall", "assets/wiki/brick-wall-hd.webp", "Novice"],
+        ["Flintlock Table", "assets/wiki/flintlock-table.webp", "Premium"],
+        ["Proficient Research Center", "assets/wiki/proficient-research-center-hd.webp", "Novice"],
+        ["Massive Diamond Mine", "assets/wiki/massive-diamond-mine.webp", "Reborn"],
+        ["Mithril Mine", "assets/wiki/mithril-mine-hd.webp", "Epic"],
+        ["Schrodinger Evaluator", "assets/wiki/schrodinger-evaluator-hd.webp", "Epic"],
+        ["Undead Guardian", "assets/wiki/undead-guardian-hd.webp", "Premium"],
+        ["Adowable Guardian", "assets/wiki/adowable-guardian-hd.webp", "Vintage"],
+        ["Ninja Diamond Mine", "assets/wiki/ninja-diamond-mine-hd.webp", "Premium"],
+        ["Iron Excavator", "assets/wiki/iron-excavator-hd.webp", "Basic"],
+        ["Portable Flamethrower", "assets/wiki/portable-flamethrower-hd.webp", "Premium"],
+        ["Flaming Ore Scanner", "assets/wiki/flaming-ore-scanner-hd.webp", "Epic"],
+        ["Industrial Ruby Mine", "assets/wiki/industrial-ruby-mine-hd.webp", "Intermediate"],
+        ["Executive Infuser", "assets/wiki/executive-infuser-hd.webp", "Fabled"],
+        ["Explosive Infuser", "assets/wiki/cursed-infuser.webp", "Advanced"],
+        ["Orbitable Upgrader", "assets/wiki/orbital-upgrader-hd.webp", "Epic"],
+        ["Large Ore Upgrader", "assets/wiki/large-ore-upgrader.webp", "Basic"],
+        ["Ore Encapsulator", "assets/wiki/ore-encapsulator-hd.webp", "Fabled"],
+        ["Precision Refiner", "assets/wiki/precision-refiner-hd.webp", "Advanced"],
+        ["Osmium Excavator", "assets/wiki/osmium-excavator-hd.webp", "Advanced"],
+        ["Industrial Diamond Mine", "assets/wiki/industrial-diamond-mine-hd.webp", "Intermediate"],
+        ["Rainbow Upgrader", "assets/wiki/rainbow-upgrader-hd.webp", "Premium"],
+        ["Molten Upgrader", "assets/wiki/molten-upgrader-hd.webp", "Legendary"],
+        ["Big Bad Blaster", "assets/wiki/big-bad-blaster.webp", "Reborn"],
+        ["Industrial Rainbow Mine", "assets/wiki/industrial-rainbow-mine-hd.webp", "Premium"],
+        ["Sacrificial Altar", "assets/wiki/sacrificial-altar-hd.webp", "Proficient"],
+        ["Lucky Infuser", "assets/wiki/lucky-infuser-hd.webp", "Fabled"],
+        ["Quantum Research Center", "assets/wiki/quantum-research-center-hd.webp", "Intermediate"],
+        ["Cell Processor", "assets/wiki/cell-processor-hd.webp", "Intermediate"],
+        ["Speed Infuser", "assets/wiki/speed-infuser-hd.webp", "Premium"],
+        ["Way-Up-High Upgrader", "assets/wiki/way-up-high-upgrader-hd.webp", "Advanced"],
+        ["Industrial Osmium Mine", "assets/wiki/industrial-osmium-mine-hd.webp", "Advanced"],
+        ["Plutonium Excavator", "assets/wiki/plutonium-excavator-hd.webp", "Intermediate"],
+        ["Cell Incinerator", "assets/wiki/cell-incinerator-hd.webp", "Novice"],
+        ["Digital Ore Cleaner", "assets/wiki/digital-ore-cleaner-hd.webp", "Advanced"],
+        ["Nuclear Conveyor", "assets/wiki/nuclear-conveyor-hd.webp", "Novice"],
+        ["The Second Amendment", "assets/wiki/the-second-amendment-hd.webp", "Exotic"],
+        ["Portable Ore Refiner", "assets/wiki/portable-ore-advancer-hd.webp", "Novice"],
+        ["Plasma Iron Polisher", "assets/wiki/plasma-iron-polisher.webp", "Novice"],
+        ["Heavenly Forge", "assets/wiki/heavenly-forge-hd.webp", "Advanced"],
+        ["Hunting Tent", "assets/wiki/hunting-tent-hd.webp", "Epic"],
+        ["Lunar Refiner", "assets/wiki/lunar-refiner-hd.webp", "Contraband"],
+        ["Ancient Conveyor", "assets/wiki/ancient-conveyor-hd.webp", "Redeemed"],
+        ["Storage Conveyor", "assets/wiki/storage-conveyor-hd.webp", "Fabled"],
+        ["Remote Osmium Mine", "assets/wiki/remote-osmium-mine-hd.webp", "Advanced"],
+        ["Military-Grade Conveyor", "assets/wiki/military-grade-conveyor-hd.webp", "Basic"],
+        ["Large Conveyor Ramp", "assets/wiki/large-conveyor-ramp.webp", "Intermediate"],
+        ["Flaming Schrodinger", "assets/wiki/flaming-schrodinger-hd.webp", "Reborn"],
+        ["Walled Conveyor", "assets/wiki/walled-conveyor-hd.webp", "Basic"],
+        ["Blue Ore Teleporter", "assets/wiki/ore-teleporter-sender-hd.webp", "Intermediate"],
+        ["The Dream-Maker", "assets/wiki/the-dream-maker-hd.webp", "Epic"],
+        ["Quantum Processor", "assets/wiki/quantum-processor-hd.webp", "Intermediate"],
+        ["Raised Shielded Conveyor", "assets/wiki/raised-shielded-conveyor-hd.webp", "Novice"],
+        ["Osmium Mine", "assets/wiki/osmium-mine-hd.webp", "Advanced"],
+        ["Shrine of Penitence", "assets/wiki/shrine-of-penitence-hd.webp", "Epic"],
+        ["Spookmaster-5000", "assets/wiki/spookmaster-5000-hd.webp", "Exotic"],
+        ["Lightningbolt Refiner", "assets/wiki/lightningbolt-refiner-hd.webp", "Reborn"],
+        ["Frozen Justice", "assets/wiki/frozen-justice.webp", "Reborn"],
+        ["Ore Tracker", "assets/wiki/ore-tracker-hd.webp", "Intermediate"],
+        ["Fine-Point Upgrader", "assets/wiki/fine-point-upgrader.webp", "Basic"],
+        ["Lovestruck Particle", "assets/wiki/lovestruck-particle-hd.webp", "Premium"],
+        ["Loominati Particle", "assets/wiki/loominati-particle-hd.webp", "Premium"],
+        ["Heavenly Infuser", "assets/wiki/heavenly-infuser-hd.webp", "Premium"],
+        ["Cursed Infuser", "assets/wiki/cursed-infuser-hd.webp", "Premium"],
+        ["Thrust Infuser", "assets/wiki/thrust-infuser-hd.webp", "Premium"],
+        ["Evil Flood Light", "assets/wiki/evil-flood-light-hd.webp", "Premium"],
+        ["Infinite Infuser", "assets/wiki/infinite-infuser.webp", "Premium"],
+        ["Solar Large Upgrader", "assets/wiki/solar-large-upgrader-hd.webp", "Proficient"],
+        ["Ore Scanner", "assets/wiki/ore-scanner.webp", "Novice"],
+        ["Solar Conveyor", "assets/wiki/solar-conveyor-hd.webp", "Proficient"],
+        ["UZI Manufacturer", "assets/wiki/uzi-manufacturer-hd.webp", "Premium"],
+        ["Green Teleporter", "assets/wiki/green-teleporter-sender-hd.webp", "Premium"],
+        ["Ruby Wall", "assets/wiki/ruby-wall.webp", "Premium"],
+        ["Radioactive Refiner", "assets/wiki/radioactive-refiner-hd.webp", "Intermediate"],
+        ["Reverse Corner", "assets/wiki/reverse-corner-hd.webp", "Basic"],
+        ["Conveyor Ramp", "assets/wiki/conveyor-ramp-hd.webp", "Intermediate"],
+        ["Shielded Conveyor", "assets/wiki/shielded-conveyor-hd.webp", "Basic"],
+        ["Two-Level Conveyor", "assets/wiki/two-level-conveyor-hd.webp", "Intermediate"],
+        ["Pirate Wall", "assets/wiki/pirate-wall.webp", "Contraband"],
+        ["Plasma Conveyor", "assets/wiki/plasma-conveyor-hd.webp", "Advanced"],
+        ["Corner Wall", "assets/wiki/corner-wall.webp", "Basic"],
+        ["Dr.Berza Machine", "assets/wiki/dr-berza-machine.webp", "Mythic"],
+        ["Giant Torch", "assets/wiki/giant-torch-hd.webp", "Basic"],
+        ["Gold Excavator", "assets/wiki/gold-excavator-hd.webp", "Basic"],
+        ["Haunted Infuser", "assets/wiki/haunted-infuser-hd.webp", "Exotic"],
+        ["Magnificent Torch", "assets/wiki/magnificent-torch-hd.webp", "Premium"],
+        ["Ore Quasar", "assets/wiki/ore-quasar.webp", "Vintage"],
+        ["Ore Replicator", "assets/wiki/ore-replicator-hd.webp", "Advanced"],
+        ["Party Boombox", "assets/wiki/party-boombox-hd.webp", "Advanced"],
+        ["Regeneration Infuser", "assets/wiki/regeneration-infuser.webp", "Proficient"],
+        ["Sacrificial Cell", "assets/wiki/sacrificial-cell-hd.webp", "Proficient"],
+        ["Security Gate", "assets/wiki/security-gate-hd.webp", "Novice"],
+        ["Spooky Coal Mine", "assets/wiki/spooky-coal-mine-hd.webp", "Collectible"],
+        ["Spooky Research Center", "assets/wiki/spooky-research-center-hd.webp", "Collectible"],
+        ["Unstable Conveyor", "assets/wiki/unstable-conveyor-hd.webp", "Contraband"],
+        ["Wide Conveyor", "assets/wiki/wide-conveyor-hd.webp", "Collectible"],
+        ["Wood Flooring", "assets/wiki/wood-flooring-hd.webp", "Basic"],
+        ["Worldly Illuminator", "assets/wiki/worldly-illuminator-hd.webp", "Legendary"],
+        ["Raised Mini Conveyor", "assets/wiki/raised-mini-conveyor-hd.webp", "Basic"],
+        ["Ore Pulsar", "assets/wiki/ore-pulsar.webp", "Intermediate"],
+        ["Nature's Grip", "assets/wiki/nature-s-grip.webp", "Reborn"],
+        ["Spitfire Iron Mine", "assets/wiki/spitfire-iron-mine-hd.webp", "Premium"],
+        ["Righteous Will", "assets/wiki/righteous-will.webp", "Reborn"],
+        ["Pineapple Refiner", "assets/wiki/pineapple-refiner-hd.webp", "Collectible"],
+        ["Pirate's Loot Collector", "assets/wiki/pirate-s-loot-collector.webp", "Premium"],
+        ["Cursed Ore Purifier", "assets/wiki/cursed-ore-purifier-hd.webp", "Proficient"],
+        ["Dark Magic", "assets/wiki/dark-magic.webp", "Reborn"],
+        ["Freon-Blast Upgrader", "assets/wiki/freon-blast-upgrader-hd.webp", "Proficient"],
+        ["Advanced Ore Scanner", "assets/wiki/advanced-ore-scanner-hd.webp", "Advanced"],
+        ["Sword God Shrine", "assets/wiki/sword-god-shrine-hd.webp", "Advanced Reborn"],
+        ["Frostarium Mine", "assets/wiki/frostarian-mine-hd.webp", "Advanced"],
+        ["Quantum Ore Cleaner", "assets/wiki/quantum-ore-cleaner.webp", "Reborn"],
+        ["Suspended Refiner", "assets/wiki/suspended-refiner-hd.webp", "Legendary"],
+        ["Twitch-Powered Upgrader", "assets/wiki/twitch-powered-upgrader.webp", "Collectible"],
+        ["Tiny Iron Mine", "assets/wiki/tiny-iron-mine.webp", "Fabled"],
+        ["Martian Friend", "assets/wiki/martian-friend.webp", "Fabled"],
+        ["Snow-Covered Tree", "assets/wiki/snow-covered-tree-hd.webp", "Collectible"],
+        ["Hyper Mine", "assets/wiki/hyper-mine.webp", "Collectible"],
+        ["Steel Refinery", "assets/wiki/steel-refinery.webp", "Collectible"],
+        ["Assembly Unit", "assets/wiki/assembly-unit.webp", "Collectible"],
+        ["Slanted Wall", "assets/wiki/slanted-wall-hd.webp", "Novice"],
+        ["High-Security Wall", "assets/wiki/high-security-wall-hd.webp", "Intermediate"],
+        ["Anti-Personnel Gate", "assets/wiki/anti-personal-gate-hd.webp", "Intermediate"],
+        ["Wood Wall Segment", "assets/wiki/wood-wall-segment-hd.webp", "Basic"],
+        ["Metal Wall Segment", "assets/wiki/metal-wall-segment-hd.webp", "Novice"],
+        ["Rusty Wall Segment", "assets/wiki/rusty-wall-segment-hd.webp", "Intermediate"],
+        ["Potted Plant", "assets/wiki/potted-plant-hd.webp", "Advanced"],
+        ["Premium Tracker", "assets/wiki/premium-tracker.webp", "Contraband"],
+        ["Sacred Katana Stand", "assets/wiki/sacred-katana-stand-hd.webp", "Premium"],
+        ["Evil Tree", "assets/wiki/evil-tree.webp", "Collectible"],
+        ["Grass Flooring", "assets/wiki/grass-flooring-hd.webp", "Novice"],
+        ["Granite Wall", "assets/wiki/granite-wall-hd.webp", "Intermediate"],
+        ["Rusty Wall", "assets/wiki/rusty-wall-hd.webp", "Novice"],
+        ["Warhammer Stand", "assets/wiki/warhammer-stand-hd.webp", "Premium"],
+        ["Jump Pad", "assets/wiki/jump-pad-hd.webp", "Premium"],
+        ["Gold Flood Light", "assets/wiki/gold-flood-light-hd.webp", "Premium"],
+        ["Fuzzy Pink Flood Light", "assets/wiki/fuzzy-pink-flood-light-hd.webp", "Premium"],
+        ["Bookshelf", "assets/wiki/bookshelf-hd.webp", "Intermediate"],
+        ["Pumpkin Aman", "assets/wiki/pumpkin-aman-hd.webp", "Collectible"],
+        ["Jack-o-Lantern", "assets/wiki/jack-o-lantern.webp", "Collectible"],
+        ["Spooky Security Gate", "assets/wiki/spooky-security-gate-hd.webp", "Collectible"],
+        ["Spooky Control Gate", "assets/wiki/spooky-control-gate-hd.webp", "Collectible"],
+        ["Yuge Iron Mine", "assets/wiki/yuge-iron-mine.webp", "Redeemed"],
+        ["Yuge Furnace", "assets/wiki/yuge-furnace.webp", "Redeemed"],
+        ["Orange Teleporter", "assets/wiki/orange-teleporter-sender-hd.webp", "Premium"],
+        ["Cerulean Potted Tree", "assets/wiki/cerulean-potted-tree-hd.webp", "Premium"],
+        ["Flaming Potted Tree", "assets/wiki/flaming-potted-tree-hd.webp", "Premium"],
+        ["Ray Guns", "assets/wiki/ray-guns-hd.webp", "Epic"],
+        ["Leafy Particle", "assets/wiki/leafy-particle-hd.webp", "Premium"],
+        ["Superhero Particle", "assets/wiki/superhero-particle-hd.webp", "Premium"],
+        ["Filthy Rich Particle", "assets/wiki/filthy-rich-particle-hd.webp", "Premium"],
+        ["Frostarian Flag", "assets/wiki/frostarian-flag-hd.webp", "Epic"],
+        ["Berezaa Games Wall", "assets/wiki/berezaa-games-wall-hd.webp", "Redeemed"],
+        ["Steel Wall", "assets/wiki/steel-wall-hd.webp", "Novice"],
+        ["Wooden Wall", "assets/wiki/wooden-wall-hd.webp", "Basic"],
+        ["Bonfire", "assets/wiki/bonfire-hd.webp", "Basic"],
+        ["Blinged Badge Giver", "assets/wiki/blinged-badge-giver-hd.webp", "Premium"],
+        ["Neon Tree", "assets/wiki/neon-tree-hd.webp", "Legendary"],
+        ["Two-Level Corner", "assets/wiki/two-level-corner-hd.webp", "Intermediate"],
+        ["Two-Layer Intersection", "assets/wiki/two-layer-intersection-hd.webp", "Intermediate"],
+        ["Diamond Wall", "assets/wiki/diamond-wall-2.webp", "Premium"],
+        ["Gold Wall", "assets/wiki/gold-wall.webp", "Premium"],
+        ["Plasma Sharpshooting", "assets/wiki/plasma-sharpshooting-hd.webp", "Legendary"],
+        ["High Velocity Energy", "assets/wiki/high-velocity-energy-hd.webp", "Legendary"],
+        ["SMG Production", "assets/wiki/smg-production-hd.webp", "Advanced"],
+        ["Triple Flood Light", "assets/wiki/triple-flood-light-hd.webp", "Premium"],
+        ["Swag Conveyor", "assets/wiki/swag-conveyor.webp", "Collectible"],
+        ["Portable Macrowave", "assets/wiki/portable-macrowave.webp", "Epic"],
+        ["Lucky Clover Particle", "assets/wiki/lucky-clover-particle.webp", "Collectible"],
+        ["Update Board", "assets/wiki/update-board.webp", "Proficient"],
+        ["Lucky Flood Light", "assets/wiki/lucky-flood-light.webp", "Collectible"],
+        ["Ice Mine", "assets/wiki/ice-mine.webp", "Quest"],
+        ["Fire Mine", "assets/wiki/fire-mine.webp", "Quest"],
+        ["Lightning Mine", "assets/wiki/lightning-mine.webp", "Quest"],
+        ["Base Colorizer", "assets/wiki/base-colorizer.webp", "Luxury"],
+        ["Base Materializer", "assets/wiki/base-materializer.webp", "Luxury"],
+        ["Crystal Mine", "assets/wiki/crystal-mine-hd.webp", "Novice"],
+        ["Remote Opal Mine", "assets/wiki/remote-opal-mine-hd.webp", "Advanced"],
+        ["Opal Mine", "assets/wiki/opal-mine-hd.webp", "Advanced"],
+        ["Bismuth Mine", "assets/wiki/bismuth-mine-hd.webp", "Advanced"],
+        ["Painite Mine", "assets/wiki/painite-mine-hd.webp", "Proficient"],
+        ["Triple Coal Mine", "assets/wiki/triple-coal-mine-hd.webp", "Premium"],
+        ["Diamond Mine", "assets/wiki/diamond-mine-hd.webp", "Novice"],
+        ["Remote Diamond Mine", "assets/wiki/remote-diamond-mine-hd.webp", "Novice"],
+        ["Undead Doge Plushie", "assets/wiki/undead-doge-plushie.webp", "Collectible"],
+        ["Industrial Firecrystal Mine", "assets/wiki/helping-erik-firecrystal-dlc.webp", "Reborn"],
+        ["Crucible Iron Mine", "assets/wiki/crucible-iron-mine-hd.webp", "Basic"],
+        ["Firecrystal Mine", "assets/wiki/firecrystal-mine-hd.webp", "Legendary"],
+        ["Unobtainium Flooring", "assets/wiki/unobtainium-flooring-hd.webp", "Premium"],
+        ["Gold Mine", "assets/wiki/gold-mine-hd.webp", "Intermediate"],
+        ["Copper Mine", "assets/wiki/copper-mine.webp", "Basic"],
+        ["Massive Iron Mine", "assets/wiki/massive-iron-mine-hd.webp", "Intermediate"],
+        ["Giant Rock", "assets/wiki/giant-rock-hd.webp", "Intermediate"],
+        ["Ore Collider", "assets/wiki/ore-collider-hd.webp", "Proficient"],
+        ["Plutonium Mine", "assets/wiki/plutonium-mine-hd.webp", "Intermediate"],
+        ["Remote Iron Mine", "assets/wiki/remote-iron-mine-hd.webp", "Basic"],
+        ["Magifyre", "assets/wiki/magifyre-hd.webp", "Premium"],
+        ["Orbital Antimatter Uplink", "assets/wiki/orbital-antimatter-uplink-hd.webp", "Proficient"],
+        ["Darkmatter Mine", "assets/wiki/darkmatter-mine-hd.webp", "Legendary"],
+        ["Massive Gold Mine", "assets/wiki/massive-gold-mine-hd.webp", "Advanced"],
+        ["Uranium Mine", "assets/wiki/uranium-mine-hd.webp", "Novice"],
+        ["Berezium Mine", "assets/wiki/berezium-mine-hd.webp", "Collectible"],
+        ["Forcefield Generator", "assets/wiki/forcefield-generator-hd.webp", "Premium"],
+        ["Silver Mine", "assets/wiki/silver-mine.webp", "Basic"],
+        ["Platinum Mine", "assets/wiki/platnium-mine-hd.webp", "Basic"],
+        ["Thrust Pad", "assets/wiki/thrust-pad-hd.webp", "Premium"],
+        ["Mini Infuser", "assets/wiki/mini-infuser.webp", "Vintage"],
+        ["Large Converter Ramp", "assets/wiki/large-converter-ramp-hd.webp", "Intermediate"],
+        ["Berezaa's Car", "assets/wiki/berezaa-s-car.webp", "Fabled"],
+        ["Iron Mine", "assets/wiki/iron-mine.webp", "Relic"],
+        ["Slightly Upscaled Worldly Illuminator", "assets/wiki/slightly-upscaled-worldly-illuminator.webp", "Relic"],
+        ["Headless Horseman (Item)", "assets/wiki/headless-horseman-hd.webp", "Collectible"]
+      ]
+    },
+    "jesssssssss_s": {
+      "n": "Jesssssssss_s",
+      "items": [
+        ["Basic Furnace", "assets/wiki/basic-furnace.webp", "Basic"],
+        ["Basic Ore Purifier", "assets/wiki/basic-ore-purifier.webp", "Basic"],
+        ["Ghost of Christmas Past", "assets/wiki/ghost-of-christmas-past.webp", "Exotic"],
+        ["Symmetrium Mine", "assets/wiki/symmetrium-mine.webp", "Reborn"],
+        ["Pot of Gold", "assets/wiki/pot-of-gold.webp", "Exotic"],
+        ["Phantom of Christmas Future", "assets/wiki/phantom-of-christmas-future.webp", "Exotic"],
+        ["The Haunted House", "assets/wiki/the-haunted-house.webp", "Exotic"],
+        ["Spector of Christmas Present", "assets/wiki/spector-of-christmas-present.webp", "Exotic"],
+        ["Golden Horseshoe", "assets/wiki/golden-horseshoe.webp", "Exotic"],
+        ["The Sporest", "assets/wiki/the-sporest.webp", "Reborn"],
+        ["Red Velvet Conveyor", "assets/wiki/red-velvet-conveyor.webp", "Collectible"],
+        ["The Heart of Void", "assets/wiki/the-heart-of-void.webp", "Superstitious"],
+        ["The Phantasm", "assets/wiki/the-phantasm.webp", "Phantasmal"],
+        ["Candy Metropolis", "assets/wiki/candy-metropolis.webp", "Exotic"],
+        ["SpookStorm-X", "assets/wiki/spookstorm-x.webp", "Exotic"],
+        ["The Storm", "assets/wiki/the-storm.webp", "Phantasmal"],
+        ["Plagued Forest", "assets/wiki/plagued-forest.webp", "Collectible"],
+        ["Awakened Jack O Lantern", "assets/wiki/awakened-jack-o-lantern.webp", "Relic"],
+        ["Eerie Marsh", "assets/wiki/eerie-marsh.webp", "Exotic"],
+        ["Eerie Conveyor", "assets/wiki/eerie-conveyor.webp", "Collectible"],
+        ["Plague Doctor", "assets/wiki/plague-doctor.webp", "Collectible"],
+        ["Chocolate Coater", "assets/wiki/chocolate-coater.webp", "Collectible"],
+        ["Windforce Shrine", "assets/wiki/windforce-shrine.webp", "Exotic"],
+        ["Frightful Cotton Candy", "assets/wiki/frightful-cotton-candy.webp", "Collectible"],
+        ["Hellish Bat Cookie", "assets/wiki/hellish-bat-cookie.webp", "Collectible"],
+        ["Doomsekkar's War", "assets/wiki/doomsekkar-s-war.webp", "Collectible"],
+        ["King Darkseed", "assets/wiki/king-darkseed.webp", "Limited Reborn"],
+        ["Dreamer's Birthday Cake", "assets/wiki/dreamer-s-birthday-cake.webp", "Enchanted"],
+        ["Eggplosive Refiner", "assets/wiki/eggplosive-refiner.webp", "Eggxotic"],
+        ["Chicken Legg Cookout", "assets/wiki/chicken-legg-cookout.webp", "Eggxotic"],
+        ["The Vault", "assets/wiki/the-vault.webp", "Eggxotic"],
+        ["Red Velvet Cupcake", "assets/wiki/red-velvet-cupcake.webp", "Collectible"]
+      ]
+    },
+    "captainmario5": {
+      "n": "CaptainMario5",
+      "items": [
+        ["Remote Ambrosia Mine", "assets/wiki/remote-ambrosia-mine-hd.webp", "Legendary"]
+      ]
+    },
+    "seenverge": {
+      "n": "SeenVerge",
+      "items": [
+        ["Massive Diamond Mine", "assets/wiki/massive-diamond-mine.webp", "Reborn"],
+        ["Frozen Justice", "assets/wiki/frozen-justice.webp", "Reborn"],
+        ["Newtonium Mine", "assets/wiki/newtonium-mine.webp", "Reborn"],
+        ["Dragonglass Mine", "assets/wiki/dragonglass-mine.webp", "Reborn"],
+        ["Breech Loader", "assets/wiki/breech-loader.webp", "Reborn"],
+        ["Nature's Enchantment", "assets/wiki/nature-s-enchantment.webp", "Slipstream"],
+        ["The Grand Prism", "assets/wiki/the-grand-prism.webp", "Slipstream"],
+        ["Newtonium Excavator", "assets/wiki/newtonium-excavator.webp", "Evolved Reborn"],
+        ["Champion Infuser", "assets/wiki/champion-infuser.webp", "Enchanted"],
+        ["Hades' Palace", "assets/wiki/hades-palace.webp", "Advanced Reborn"],
+        ["Midas Blaster", "assets/wiki/midas-blaster.webp", "Superstitious"],
+        ["Optic Origin", "assets/wiki/optic-origin.webp", "Superstitious"],
+        ["The Sporest", "assets/wiki/the-sporest.webp", "Reborn"],
+        ["Ore Gielder", "assets/wiki/ore-gielder.webp", "Redeemed"],
+        ["Big Fungus", "assets/wiki/big-fungus.webp", "Advanced Fusion"],
+        ["The Rock", "assets/wiki/the-rock.webp", "Collectible"],
+        ["Ore Caramelizer", "assets/wiki/ore-caramelizer.webp", "Collectible"],
+        ["The Master", "assets/wiki/the-master.webp", "Phantasmal"],
+        ["Candy Factory", "assets/wiki/candy-factory.webp", "Collectible"],
+        ["Birthday Doge", "assets/wiki/birthday-doge.webp", "Collectible"],
+        ["Honeycomb Cake", "assets/wiki/honeycomb-cake.webp", "Exotic"],
+        ["Donut Refiner", "assets/wiki/donut-refiner.webp", "Collectible"],
+        ["Ore Skillet", "assets/wiki/ore-skillet.webp", "Reborn"],
+        ["Auroral Metropolis", "assets/wiki/auroral-metropolis.webp", "Advanced Evolution"],
+        ["Combustion Engine", "assets/wiki/combustion-engine.webp", "Reborn"],
+        ["Clover Crunch", "assets/wiki/clover-crunch.webp", "Collectible"],
+        ["Leprechaun Guardian", "assets/wiki/leprechaun-guardian.webp", "Collectible"],
+        ["Leprechaun Trap", "assets/wiki/leprechaun-trap.webp", "Exotic"],
+        ["Shamrock Factory", "assets/wiki/shamrock-factory.webp", "Exotic"],
+        ["The Cookinator", "assets/wiki/the-cookinator.webp", "Collectible"],
+        ["Grand Wafer", "assets/wiki/grand-wafer.webp", "Collectible"],
+        ["Darkseed's Conquest", "assets/wiki/darkseed-s-conquest.webp", "Collectible"],
+        ["Cryptic Graveyard", "assets/wiki/cryptic-graveyard.webp", "Exotic"],
+        ["Putrid Farmyard", "assets/wiki/putrid-farmyard.webp", "Exotic"],
+        ["Fireplace Wall", "assets/wiki/fireplace-wall.webp", "Collectible"],
+        ["Frostbite Chamber", "assets/wiki/frostbite-chamber.webp", "Limited Reborn"],
+        ["The Ice Fortress", "assets/wiki/the-ice-fortress.webp", "Exotic"],
+        ["The Stormcrow", "assets/wiki/the-stormcrow.webp", "Eggxotic"],
+        ["Way-Up-High Cake Pop", "assets/wiki/way-up-high-cake-pop.webp", "Collectible"],
+        ["Sinister Sepulcher", "assets/wiki/sinister-sepulcher.webp", "Slipstream"],
+        ["Delightful Minty Cake", "assets/wiki/delightful-minty-cake.webp", "Exotic"],
+        ["Nature's Enchantment (Renegade)", "assets/wiki/nature-s-enchantment.webp", "Renegade"],
+        ["The Grand Prism (Renegade)", "assets/wiki/the-grand-prism.webp", "Renegade"],
+        [
+          "Freshly Baked Upsidedown Pineapple Cake",
+          "assets/wiki/freshly-baked-upsidedown-pineapple-cake.webp",
+          "Exotic"
+        ],
+        ["BUNZILLA", "assets/wiki/bunzilla.webp", "Limited Reborn"],
+        ["Carat Carrot Factory", "assets/wiki/carat-carrot-factory.webp", "Collectible"],
+        ["Carat Carrot Mine", "assets/wiki/carat-carrot-mine.webp", "Collectible"],
+        ["Sun Mask", "assets/wiki/sun-mask.webp", "Exotic"],
+        ["Doge Chad Mine", "assets/wiki/doge-chad-mine.webp", "Redeemed"],
+        ["Rock Climbing Wall", "assets/wiki/rock-climbing-wall.webp", "Fabled"],
+        ["Trollium Mine", "assets/wiki/trollium-mine.webp", "Exotic"]
+      ]
+    },
+    "sparkyinferno": {
+      "n": "SparkyInferno",
+      "items": [
+        ["Dreamer's Fright", "assets/wiki/dreamer-s-fright.webp", "Reborn"],
+        ["Unobtainium Mine", "assets/wiki/unobtainium-mine-hd.webp", "Premium"],
+        ["Dreamer's Might", "assets/wiki/dreamer-s-might-high-quality.webp", "Reborn"]
+      ]
+    },
+    "outoforderfoxy": {
+      "n": "OutOfOrderFoxy",
+      "items": [
+        ["Tesla Resetter", "assets/wiki/tesla-resetter.webp", "Reborn"],
+        ["Big Bad Blaster", "assets/wiki/big-bad-blaster.webp", "Reborn"],
+        ["Ore Zapper", "assets/wiki/ore-zapper-hd.webp", "Advanced"],
+        ["Advanced Furnace", "assets/wiki/advanced-furnace.webp", "Basic"],
+        ["Clockwork", "assets/wiki/clockwork.webp", "Reborn"],
+        ["Eternal Journey", "assets/wiki/eternal-journey.webp", "Reborn"],
+        ["Ruby Wall", "assets/wiki/ruby-wall.webp", "Premium"],
+        ["Righteous Will", "assets/wiki/righteous-will.webp", "Reborn"],
+        ["Quantum Ore Cleaner", "assets/wiki/quantum-ore-cleaner.webp", "Reborn"],
+        ["Nebula System", "assets/wiki/nebula-system.webp", "Fabled"],
+        ["Quantum Clockwork", "assets/wiki/quantum-clockwork.webp", "Reborn Fusion"],
+        ["Dystopian Refiner", "assets/wiki/dystopian-refiner.webp", "Slipstream"],
+        ["Utopian Refiner", "assets/wiki/utopian-refiner.webp", "Slipstream"],
+        ["Submitter Trophy", "assets/wiki/submitter-trophy.webp", "Fabled"],
+        ["Ore Gate", "assets/wiki/ore-gate.webp", "Intermediate"],
+        ["Autumn Breeze", "assets/wiki/autumn-breeze.webp", "Exotic"],
+        ["SpookLord-95,000", "assets/wiki/spooklord-95-000.webp", "Exotic"],
+        ["Northern Lights", "assets/wiki/northern-lights.webp", "Advanced Reborn"],
+        ["Twitchite Mine", "assets/wiki/twitchite-mine-hd.webp", "Exotic"],
+        ["Overlord Device", "assets/wiki/overlord-device.webp", "Ultimate"],
+        ["Birthday Upgrader", "assets/wiki/birthday-upgrader.webp", "Collectible"],
+        ["Diamond Wall", "assets/wiki/diamond-wall-2.webp", "Premium"],
+        ["Gold Wall", "assets/wiki/gold-wall.webp", "Premium"],
+        ["Wubium Mine", "assets/wiki/wubium-mine.webp", "Exotic"],
+        ["THE UNDERTAKER", "assets/wiki/the-undertaker.webp", "Contraband"],
+        ["True Overlord Device", "assets/wiki/true-overlord-device.webp", "Ultimate"],
+        ["Reinforced Furnace", "assets/wiki/reinforced-furnace.webp", "Intermediate"],
+        ["Ore Supernova", "assets/wiki/ore-supernova.webp", "Slipstream"],
+        ["Golden Clover Blaster", "assets/wiki/golden-clover-blaster.webp", "Exotic"],
+        ["Circus Cannon", "assets/wiki/circus-cannon.webp", "Fabled"],
+        ["Mysterious Teleporter", "assets/wiki/mysterious-teleporter.webp", "Fabled"],
+        ["SpookDemon-66,666", "assets/wiki/spookdemon-66-666.webp", "Exotic"],
+        ["Aurora Borealis", "assets/wiki/aurora-borealis.webp", "Advanced Evolution"],
+        ["The Final Upgrader", "assets/wiki/the-final-upgrader.webp", "Ultimate"],
+        ["Santa's Workshop", "assets/wiki/santa-s-workshop-hd.webp", "Exotic"],
+        ["Video Game Digitalizer", "assets/wiki/video-game-digitalizer.webp", "Collectible"],
+        ["Candy Cane Cannon", "assets/wiki/candy-cane-cannon.webp", "Limited Reborn"],
+        ["Brick Gift", "assets/wiki/brick-gift.webp", "Collectible"],
+        ["GIGANTIC Gift of Mischief", "assets/wiki/gigantic-gift-of-mischief.webp", "Exotic"],
+        ["MONSTER TRUCKER!", "assets/wiki/monster-trucker.webp", "Collectible"],
+        ["Gift of Patriots", "assets/wiki/gift-of-patriots.webp", "Exotic"],
+        ["Fidget Spinner-ifier", "assets/wiki/fidget-spinner-ifier.webp", "Collectible"],
+        ["Teddy Bear Stuffer", "assets/wiki/teddy-bear-stuffer.webp", "Collectible"],
+        ["Overlord's Telamonster", "assets/wiki/overlord-s-telamonster.webp", "Ultimate"],
+        ["Ore Memer", "assets/wiki/ore-memer.webp", "Rare Reborn"],
+        ["Shoddy Crate", "assets/wiki/shoddy-crate.webp", "Fabled"],
+        ["Giant Dice", "assets/wiki/giant-dice.webp", "Fabled"],
+        ["Corrupt Pearl", "assets/wiki/corrupt-pearl.webp", "Fabled"],
+        ["Gift of Trolling", "assets/wiki/gift-of-trolling.webp", "Limited Reborn"],
+        ["Meme God Shrine", "assets/wiki/meme-god-shrine.webp", "Fabled"],
+        ["Candy Gun Giver", "assets/wiki/candy-gun-giver.webp", "Collectible"],
+        ["Dankheart", "assets/wiki/dankheart.webp", "Misc"],
+        ["Raised Turn", "assets/wiki/raised-left-turn.webp", "Novice"],
+        ["Spooky Schrodinger", "assets/wiki/spooky-schrodinger.webp", "Collectible"],
+        ["Raised Conveyor", "assets/wiki/raised-conveyor.webp", "Novice"],
+        ["Way-Up-High Turn", "assets/wiki/way-up-high-left-turn.webp", "Intermediate"],
+        ["Dreamer's Terror", "assets/wiki/dreamer-s-terror.webp", "Evolved Reborn"],
+        ["Baron's GhostWalker Statue", "assets/wiki/baron-s-ghostwalker-statue.webp", "Exotic"],
+        ["Darkseed Tree", "assets/wiki/darkseed-tree.webp", "Collectible"],
+        ["Darkseed Lantern", "assets/wiki/darkseed-lantern.webp", "Collectible"],
+        ["Lord of the Haven Shrine", "assets/wiki/lord-of-the-haven-shrine.webp", "Fabled"],
+        ["Digital Peppermint Refiner", "assets/wiki/digital-peppermint-refiner.webp", "Limited Reborn"],
+        ["Santa's Rage", "assets/wiki/santa-s-rage.webp", "Exotic"],
+        ["Mystical Teleporter", "assets/wiki/mystical-teleporter.webp", "Fabled"],
+        ["Suspicious Teleporter", "assets/wiki/suspicious-teleporter.webp", "Fabled"],
+        ["Road Flooring", "assets/wiki/road-flooring.webp", "Fabled"],
+        ["Suitopian Refiner", "assets/wiki/suitopian-refiner.webp", "Slipstream"],
+        ["Neutropian Refiner", "assets/wiki/neutropian-refiner.webp", "Slipstream"],
+        ["Gold Wall Segment", "assets/wiki/gold-wall-segment.webp", "Premium"],
+        ["Diamond Wall Segment", "assets/wiki/diamond-wall-segment.webp", "Premium"],
+        ["Ruby Wall Segment", "assets/wiki/ruby-wall-segment.webp", "Premium"],
+        ["Shrine of Creators", "assets/wiki/shrine-of-creators.webp", "Fabled"],
+        ["Shrine of Influencers", "assets/wiki/shrine-of-influencers.webp", "Fabled"],
+        ["Unobtainium Wall Segment", "assets/wiki/unobtainium-wall-segment.webp", "Premium"],
+        ["Unobtainium Wall", "assets/wiki/unobtainium-wall.webp", "Premium"],
+        ["Everlasting Key", "assets/wiki/everlasting-key.webp", "Rare Reborn"],
+        ["Ooftopian Refiner", "assets/wiki/ooftopian-refiner.webp", "Rare Reborn"],
+        ["Catalyst of Thunder", "assets/wiki/catalyst-of-thunder.webp", "Ultimate"],
+        ["Catalyst of Void", "assets/wiki/catalyst-of-void.webp", "Ultimate"],
+        ["Catalyst of the Supreme", "assets/wiki/catalyst-of-the-supreme.webp", "Ultimate"],
+        ["Catalyst of Light", "assets/wiki/catalyst-of-light.webp", "Ultimate"],
+        ["Catalyst of Destruction", "assets/wiki/catalyst-of-destruction.webp", "Ultimate"],
+        ["Catalyst of Spirits", "assets/wiki/catalyst-of-spirits.webp", "Ultimate"],
+        ["Catalyst of Earth", "assets/wiki/catalyst-of-earth.webp", "Ultimate"],
+        ["Catalyst of Death", "assets/wiki/catalyst-of-death.webp", "Ultimate"],
+        ["Catalyst of Fire", "assets/wiki/catalyst-of-fire.webp", "Ultimate"],
+        ["Catalyst of Fortune", "assets/wiki/catalyst-of-fortune.webp", "Ultimate"],
+        ["Catalyst of Power", "assets/wiki/catalyst-of-power.webp", "Ultimate"],
+        ["Catalyst of Nature", "assets/wiki/catalyst-of-nature.webp", "Ultimate"],
+        ["Catalyst of Space", "assets/wiki/catalyst-of-space.webp", "Ultimate"],
+        ["Catalyst of Knowledge", "assets/wiki/catalyst-of-knowledge.webp", "Ultimate"],
+        ["Way-Up-High Conveyor", "assets/wiki/way-up-high-conveyor.webp", "Intermediate"],
+        ["Way-Up-High Converter", "assets/wiki/way-up-high-mini-converter.webp", "Intermediate"],
+        ["Catalyst of Magic", "assets/wiki/catalyst-of-magic.webp", "Ultimate"],
+        ["Catalyst of Blood Magic", "assets/wiki/catalyst-of-blood-magic.webp", "Ultimate"],
+        ["Catalyst of Necromancy", "assets/wiki/catalyst-of-necromancy.webp", "Ultimate"],
+        ["Australis Fornacem", "assets/wiki/australis-fornacem.webp", "Rare Reborn"],
+        ["Catalyst of Oblivion", "assets/wiki/catalyst-of-oblivion.webp", "Ultimate"],
+        ["Ancient Gift of the Catacombs", "assets/wiki/ancient-gift-of-the-catacombs.webp", "Exotic"],
+        ["Spookening Gift of Demons", "assets/wiki/spookening-gift-of-demons.webp", "Exotic"],
+        ["Tainted Gift of Blood", "assets/wiki/tainted-gift-of-blood.webp", "Exotic"],
+        ["Spookening Gift of Lords", "assets/wiki/spookening-gift-of-lords.webp", "Exotic"],
+        ["Transylvanian Gift of Flames", "assets/wiki/transylvanian-gift-of-flames.webp", "Exotic"],
+        ["Spookening Gift of Barons", "assets/wiki/spookening-gift-of-barons.webp", "Exotic"],
+        ["Spectral Gift of Poltergeists", "assets/wiki/spectral-gift-of-poltergeists.webp", "Exotic"],
+        ["Putrid Gift of Harvest", "assets/wiki/putrid-gift-of-harvest.webp", "Exotic"],
+        ["SpookPhantasm-EX", "assets/wiki/spookphantasm-ex.webp", "Exotic"],
+        ["Eldritch Gift of Void", "assets/wiki/eldritch-gift-of-void.webp", "Exotic"],
+        ["Essence of War", "assets/wiki/essence-of-war.webp", "Collectible"],
+        ["Doomsekkar's Bastion", "assets/wiki/doomsekkar-s-bastion.webp", "Collectible"],
+        ["Pillars of Creation", "assets/wiki/pillars-of-creation.webp", "Relic"],
+        ["Gift of the Azurian Dragon", "assets/wiki/gift-of-the-azurian-dragon.webp", "Exotic"],
+        ["Present of the Eternal Overseers", "assets/wiki/present-of-the-eternal-overseers.webp", "Exotic"],
+        ["Giant Pretzel", "assets/wiki/giant-pretzel.webp", "Collectible"],
+        ["Spectral Purgatory", "assets/wiki/spectral-purgatory.webp", "Exotic"],
+        ["Delightful Gift of Sugar", "assets/wiki/delightful-gift-of-sugar.webp", "Relic"],
+        ["Delightful Gift of Mint", "assets/wiki/delightful-gift-of-mint.webp", "Relic"],
+        ["Gift of Research", "assets/wiki/gift-of-research.webp", "Collectible"],
+        ["Freezing Gift of Strongholds", "assets/wiki/freezing-gift-of-strongholds.webp", "Exotic"],
+        ["Gift with a Pleasant Presence", "assets/wiki/gift-with-a-pleasant-presence.webp", "Exotic"],
+        ["Burst Refiner (Renegade)", "assets/wiki/burst-refiner.webp", "Renegade"],
+        ["Dystopian Refiner (Renegade)", "assets/wiki/dystopian-refiner.webp", "Renegade"],
+        ["Neutropian Refiner (Renegade)", "assets/wiki/neutropian-refiner.webp", "Renegade"],
+        ["Ore Supernova (Renegade)", "assets/wiki/ore-supernova.webp", "Renegade"],
+        ["Suitopian Refiner (Renegade)", "assets/wiki/suitopian-refiner.webp", "Renegade"],
+        ["Pulsar Octagnium Mine (Renegade)", "assets/wiki/pulsar-octagnium-mine.webp", "Renegade"],
+        ["Utopian Refiner (Renegade)", "assets/wiki/utopian-refiner.webp", "Renegade"],
+        ["Nebula Firework", "assets/wiki/nebula-firework.webp", "Fabled"],
+        ["Toothpick Wall", "assets/wiki/toothpick-wall.webp", "Fabled"],
+        ["Toothpick Wall Segment", "assets/wiki/toothpick-wall-segment.webp", "Fabled"],
+        ["Wholesam Plushie", "assets/wiki/wholesam-plushie.webp", "Collectible"],
+        ["Catalyst of Chaos", "assets/wiki/catalyst-of-chaos.webp", "Ultimate"]
+      ]
+    },
+    "lucas4114": {
+      "n": "lucas4114",
+      "items": [
+        ["Tesla Resetter", "assets/wiki/tesla-resetter.webp", "Reborn"],
+        ["Advanced Ore Atomizer", "assets/wiki/advanced-ore-atomizer-hd.webp", "Mythic"],
+        ["Newtonium Mine", "assets/wiki/newtonium-mine.webp", "Reborn"],
+        ["Ore Illuminator", "assets/wiki/ore-illuminator.webp", "Reborn"],
+        ["The Black Hole", "assets/wiki/the-black-hole-hd.webp", "Legendary"],
+        ["Freon Supressor", "assets/wiki/freon-suppressor-hd.webp", "Mythic"],
+        ["Professional Upgrader", "assets/wiki/professional-upgrader-hd.webp", "Premium"]
+      ]
+    },
+    "xxburgereaxx": {
+      "n": "xxBurgerEAxx",
+      "items": [
+        ["Big Bertha", "assets/wiki/big-bertha.webp", "Reborn"],
+        ["Industrial Ore Welder", "assets/wiki/industrial-ore-welder.webp", "Intermediate"],
+        ["Excalibur", "assets/wiki/excalibur.webp", "Exotic"],
+        ["Spooky Wall", "assets/wiki/spooky-wall.webp", "Collectible"],
+        ["Ancient Temple", "assets/wiki/ancient-temple.webp", "Reborn"],
+        ["Astral Predictor", "assets/wiki/astral-predictor.webp", "Reborn"],
+        ["Heat Condenser", "assets/wiki/heat-condenser.webp", "Intermediate"],
+        ["Innovator's Research Center", "assets/wiki/innovator-s-research-center.webp", "Quest"]
+      ]
+    },
+    "alex645ca": {
+      "n": "Alex645ca",
+      "items": [
+        ["Half Conveyor", "assets/wiki/half-conveyor-hd.webp", "Novice"],
+        ["Conveyor Splitter", "assets/wiki/conveyor-splitter.webp", "Advanced"]
+      ]
+    },
+    "cole20050": {
+      "n": "cole20050",
+      "items": [
+        ["Basic Cell Furnace", "assets/wiki/basic-cell-furnace.webp", "Basic"],
+        ["Basic Research Center", "assets/wiki/basic-research-center.webp", "Basic"],
+        ["Basic Iron Mine", "assets/wiki/basic-iron-mine.webp", "Basic"],
+        ["Burst Refiner", "assets/wiki/burst-refiner.webp", "Slipstream"],
+        ["Pizza Blaster", "assets/wiki/pizza-blaster.webp", "Reborn"],
+        ["Ghosdeeri's Antidote", "assets/wiki/ghosdeeri-s-antidote.webp", "Limited Reborn"],
+        ["Esoteric Citadel", "assets/wiki/esoteric-citadel.webp", "Reborn"],
+        ["Monstrous Mimic Cake", "assets/wiki/monstrous-mimic-cake.webp", "Exotic"],
+        ["Eros Elixir", "assets/wiki/eros-elixir.webp", "Exotic"],
+        ["Ancient Catalyst", "assets/wiki/ancient-catalyst.webp", "Reborn Fusion"],
+        ["Pancake Stack", "assets/wiki/pancake-stack.webp", "Exotic"],
+        ["Big Fluxxus", "assets/wiki/big-fluxxus.webp", "Advanced Fusion"],
+        ["Tortoise Fortifier", "assets/wiki/tortoise-fortifier.webp", "Evolved Reborn"],
+        ["Doom Incarnate", "assets/wiki/doom-incarnate.webp", "Enchanted"]
+      ]
+    },
+    "glitchy_robot": {
+      "n": "Glitchy_Robot",
+      "items": [
+        ["The Catalyst", "assets/wiki/the-catalyst.webp", "Reborn"]
+      ]
+    },
+    "xpixillion": {
+      "n": "xPixillion",
+      "items": [
+        ["Basic Conveyor", "assets/wiki/basic-conveyor.webp", "Basic"],
+        ["Clover Rune", "assets/wiki/clover-rune.webp", "Collectible"],
+        ["Industrial Firegem Quarry", "assets/wiki/industrial-firegem-quarry.webp", "Evolved Reborn"],
+        ["Forsaken Battleground", "assets/wiki/forsaken-battleground.webp", "Limited Reborn"],
+        ["Solar Apocalypse", "assets/wiki/solar-apocalypse.webp", "Relic"],
+        ["Ghosdeeri's Plague", "assets/wiki/ghosdeeri-s-plague.webp", "Collectible"],
+        ["Devil's Cake", "assets/wiki/devil-s-cake.webp", "Exotic"],
+        ["Angel's Cake", "assets/wiki/angel-s-cake.webp", "Exotic"],
+        ["Candy Core", "assets/wiki/candy-core.webp", "Collectible"],
+        ["Witch's Broomstick", "assets/wiki/witch-s-broomstick.webp", "Collectible"],
+        ["FRIGHT FOLLY", "assets/wiki/fright-folly.webp", "Fabled"],
+        ["Aromatic Holidays", "assets/wiki/aromatic-holidays.webp", "Collectible"],
+        ["Spotlight Cannon", "assets/wiki/spotlight-cannon.webp", "Collectible"],
+        ["Rainbow Blaster", "assets/wiki/rainbow-blaster.webp", "Exotic"]
+      ]
+    },
+    "luxup": {
+      "n": "Luxup",
+      "items": [
+        ["Radium Mine", "assets/wiki/radium-mine-hd.webp", "Premium"]
+      ]
+    },
+    "feleanne": {
+      "n": "Feleanne",
+      "items": [
+        ["The Sunken Past", "assets/wiki/the-sunken-past.webp", "Vintage"],
+        ["Yunium Mine", "assets/wiki/yunium-mine.webp", "Reborn"],
+        ["Dragonglass Blaster", "assets/wiki/dragonglass-blaster.webp", "Advanced Fusion"],
+        ["Flying Dutchman", "assets/wiki/flying-dutchman.webp", "Exotic"],
+        ["Azure Refiner", "assets/wiki/azure-refiner.webp", "Reborn"],
+        ["Angel's Blessing", "assets/wiki/angel-s-blessing.webp", "Enchanted"],
+        ["The Final Upgrader", "assets/wiki/the-final-upgrader.webp", "Ultimate"],
+        ["The Banhammer", "assets/wiki/the-banhammer.webp", "Vintage"],
+        ["Red Giant", "assets/wiki/red-giant.webp", "Reborn"],
+        ["2020 Conveyor", "assets/wiki/2020-conveyor.webp", "Collectible"],
+        ["Moai God", "assets/wiki/moai-god.webp", "Eggxotic"],
+        ["Railgun Cannon", "assets/wiki/railgun-cannon.webp", "Advanced Reborn"],
+        ["Nova Evaluator", "assets/wiki/nova-evaluator.webp", "Advanced Fusion"]
+      ]
+    },
+    "deaigle": {
+      "n": "DeAigle",
+      "items": [
+        ["Atomium Mine", "assets/wiki/atomium-mine.webp", "Reborn"],
+        ["Scorpium Mine", "assets/wiki/scorpium-mine.webp", "Reborn"]
+      ]
+    },
+    "devilboy08": {
+      "n": "devilboy08",
+      "items": [
+        ["The Beehive", "assets/wiki/the-beehive.webp", "Exotic"],
+        ["Reinforced Security Wall", "assets/wiki/reinforced-security-wall.webp", "Luxury"],
+        ["Wild Spore", "assets/wiki/wild-spore.webp", "Reborn"],
+        ["Forbidden Magic", "assets/wiki/forbidden-magic.webp", "Evolved Reborn"],
+        ["Onyx Mine", "assets/wiki/onyx-mine.webp", "Divine"],
+        ["Tempest Refiner", "assets/wiki/tempest-refiner.webp", "Evolved Reborn"],
+        ["Hydraulic Ramp Upgrader", "assets/wiki/hydraulic-ramp-upgrader.webp", "Hydraulic"],
+        ["Deluxe Beehive", "assets/wiki/deluxe-beehive.webp", "Exotic"],
+        ["Nature's Temple", "assets/wiki/nature-s-temple.webp", "Reborn Fusion"]
+      ]
+    },
+    "soundsenpai": {
+      "n": "SoundSenpai",
+      "items": [
+        ["Ore Tixicator", "assets/wiki/ore-tixicator.webp", "Exotic"]
+      ]
+    },
+    "andr315j": {
+      "n": "andr315j",
+      "items": [
+        ["Executive Pillars", "assets/wiki/executive-pillars.webp", "Fabled"]
+      ]
+    },
+    "veterantoaster": {
+      "n": "VeteranToaster",
+      "items": [
+        ["The Fracture", "assets/wiki/the-fracture.webp", "Reborn"]
+      ]
+    },
+    "gimmewafflebruh": {
+      "n": "GimmeWaffleBruh",
+      "items": [
+        ["Thingamajig", "assets/wiki/thingamajig.webp", "Vintage"]
+      ]
+    },
+    "nazog": {
+      "n": "Nazog",
+      "items": [
+        ["Gate of Eclipse", "assets/wiki/guys-its-a-door-not-a-gate-are-you-blind.webp", "Reborn"]
+      ]
+    },
+    "frogiscute": {
+      "n": "frogiscute",
+      "items": [
+        ["Sage Redeemer", "assets/wiki/sage-redeemer.webp", "Reborn"],
+        ["Pumpkin Hero", "assets/wiki/pumpkin-hero.webp", "Collectible"],
+        ["Lightningbolt Predictor", "assets/wiki/lightningbolt-predictor.webp", "Reborn Fusion"],
+        ["Sage Justice", "assets/wiki/sage-justice.webp", "Reborn Fusion"],
+        ["The Frog Particles", "assets/wiki/the-frog-particles.webp", "Fabled"],
+        ["Frog Infuser", "assets/wiki/frog-infuser.webp", "Fabled"],
+        ["Clover Rune", "assets/wiki/clover-rune.webp", "Collectible"],
+        ["Ancient Magic", "assets/wiki/ancient-magic.webp", "Exotic"],
+        ["Sage King", "assets/wiki/sage-king.webp", "Evolved Reborn"]
+      ]
+    },
+    "thekeytothetruth": {
+      "n": "TheKeyToTheTruth",
+      "items": [
+        ["Solar Flare", "assets/wiki/solar-flare.webp", "Reborn"],
+        ["Spooktastic Refiner", "assets/wiki/spooktastic-refiner.webp", "Collectible"],
+        ["Birthday Cake", "assets/wiki/birthday-cake.webp", "Exotic"],
+        ["Elevated Furnace", "assets/wiki/elevated-furnace.webp", "Intermediate"],
+        ["Ore Recliner", "assets/wiki/ore-recliner.webp", "Advanced"],
+        ["Caramel Birthday Cake", "assets/wiki/caramel-birthday-cake.webp", "Exotic"],
+        ["Electronic Furnace", "assets/wiki/electronic-furnace.webp", "Proficient"],
+        ["Mini Upgrader", "assets/wiki/mini-upgrader.webp", "Mythic"],
+        ["Stellarite Mine", "assets/wiki/stellarite-mine.webp", "Rare Reborn"],
+        ["Auroral Wings", "assets/wiki/auroral-wings.webp", "Collectible"]
+      ]
+    },
+    "auxinite": {
+      "n": "auxinite",
+      "items": [
+        ["Diamond Falls", "assets/wiki/diamond-falls.webp", "Contraband"],
+        ["Pumpkin Particle Giver", "assets/wiki/pumpkin-particle-giver.webp", "Collectible"],
+        ["Candy Security Wall", "assets/wiki/candy-security-wall.webp", "Collectible"],
+        ["Daestrophe", "assets/wiki/daestrophe.webp", "Superstitious"],
+        ["Gargantium Core", "assets/wiki/gargantium-core.webp", "Enchanted"],
+        ["Shard Park", "assets/wiki/shard-park.webp", "Reborn"],
+        ["Breached Motherboard", "assets/wiki/breached-motherboard.webp", "Evolved Reborn"],
+        ["Atlantic Monument", "assets/wiki/atlantic-monument.webp", "Evolved Reborn"],
+        ["Tyrant's Throne", "assets/wiki/tyrant-s-throne.webp", "Superstitious"],
+        ["Vulcan's Wrath", "assets/wiki/vulcan-s-wrath.webp", "Superstitious"],
+        ["The Heartbreaker", "assets/wiki/the-heartbreaker.webp", "Exotic"],
+        ["The Grand Banana", "assets/wiki/the-grand-banana.webp", "Rare Reborn"],
+        ["Grand Willow", "assets/wiki/grand-willow.webp", "Exotic"],
+        ["Royal Rabbit", "assets/wiki/royal-rabbit.webp", "Exotic"],
+        ["Green Tea Kettle", "assets/wiki/green-tea-kettle.webp", "Evolved Reborn"]
+      ]
+    },
+    "treyne22": {
+      "n": "Treyne22",
+      "items": [
+        ["Conveyor Wall", "assets/wiki/conveyor-wall-hd.webp", "Intermediate"],
+        ["Advanced Wall", "assets/wiki/advanced-wall-hd.webp", "Redeemed"]
+      ]
+    },
+    "chudy190104": {
+      "n": "chudy190104",
+      "items": [
+        ["Dr.Berza Machine", "assets/wiki/dr-berza-machine.webp", "Mythic"],
+        ["Super Schrodinger", "assets/wiki/super-schrodinger.webp", "Evolved Reborn"],
+        ["Foxbar Machine", "assets/wiki/foxbar-machine.webp", "Mythic"],
+        ["Diet Dr. Berza Machine", "assets/wiki/diet-dr-berza-machine.webp", "Divine"],
+        ["Dr.Berza Zer0 Machine", "assets/wiki/dr-berza-zer0-machine.webp", "Divine"],
+        ["Foxerbar Machine", "assets/wiki/foxerbar-machine.webp", "Divine"]
+      ]
+    },
+    "wintermagpie": {
+      "n": "WinterMagpie",
+      "items": [
+        ["Ore Thermocrusher", "assets/wiki/ore-thermocrusher-hd.webp", "Divine"]
+      ]
+    },
+    "norilsk": {
+      "n": "Norilsk",
+      "items": [
+        ["Ore Transistor", "assets/wiki/ore-transistor-hd.webp", "Divine"]
+      ]
+    },
+    "captainmario4": {
+      "n": "CaptainMario4",
+      "items": [
+        ["'Ol Faithful", "assets/wiki/ol-faithful-hd.webp", "Vintage"]
+      ]
+    },
+    "fvii": {
+      "n": "Fvii",
+      "items": [
+        ["Santa's Sleigh", "assets/wiki/santa-s-sleigh-hd.webp", "Exotic"],
+        ["Ore Hoister", "assets/wiki/ore-hoister.webp", "Intermediate"]
+      ]
+    },
+    "justg0lden": {
+      "n": "JustG0lden",
+      "items": [
+        ["Cell Particalizer", "assets/wiki/cell-particalizer-hd.webp", "Legendary"]
+      ]
+    },
+    "frenzzyy": {
+      "n": "Frenzzyy",
+      "items": [
+        ["Gingerbread House", "assets/wiki/gingerbread-house.webp", "Exotic"],
+        ["Christmas Wall", "assets/wiki/christmas-wall.webp", "Collectible"],
+        ["Catalyzed Star", "assets/wiki/catalyzed-star.webp", "Reborn Fusion"],
+        ["Dreamer's Anguish", "assets/wiki/dreamer-s-anguish.webp", "Reborn"],
+        ["Candy Bag", "assets/wiki/candy-bag.webp", "Collectible"],
+        ["Lucky Wall", "assets/wiki/lucky-wall.webp", "Collectible"],
+        ["Sakura Garden", "assets/wiki/sakura-garden.webp", "Reborn"],
+        ["Easter Statues 🗿", "assets/wiki/easter-statues.webp", "Exotic"],
+        ["Portable Ore Enhancer", "assets/wiki/portable-ore-enhancer.webp", "Intermediate"],
+        ["Festive Potted Tree", "assets/wiki/festive-potted-tree.webp", "Collectible"],
+        ["Festive Flood Light", "assets/wiki/festive-flood-light.webp", "Collectible"],
+        ["Candy Cane Particle", "assets/wiki/candy-cane-particle.webp", "Collectible"],
+        ["Lucky Doge Plushie", "assets/wiki/lucky-doge-plushie.webp", "Collectible"],
+        ["Easter Egg Particle", "assets/wiki/easter-egg-particle.webp", "Collectible"],
+        ["Easter Flood Light", "assets/wiki/easter-flood-light.webp", "Collectible"],
+        ["Tesla Refuter", "assets/wiki/tesla-refuter.webp", "Evolved Reborn"],
+        ["Shortcake Teleporter", "assets/wiki/shortcake-teleporter-sender.webp", "Collectible"],
+        ["Haven Tree", "assets/wiki/haven-tree.webp", "Novice"],
+        ["Ore Indoctrinator", "assets/wiki/ore-indoctrinator.webp", "Evolved Reborn"],
+        ["Haunted House Gate", "assets/wiki/haunted-house-gate.webp", "Collectible"],
+        ["Saturated Catalyst", "assets/wiki/saturated-catalyst.webp", "Evolved Reborn"],
+        ["Glow Infuser", "assets/wiki/glow-infuser.webp", "Luxury"],
+        ["Venomshank", "assets/wiki/venomshank.webp", "Reborn"],
+        ["Hanging Wreath", "assets/wiki/hanging-wreath.webp", "Exotic"],
+        ["Fruitcake Blaster", "assets/wiki/fruitcake-blaster.webp", "Limited Reborn"],
+        ["Toxic Schrodinger Evaluator", "assets/wiki/toxic-schrodinger-evaluator.webp", "Mythic"],
+        ["Dreamer's Sight", "assets/wiki/dreamer-s-sight.webp", "Mythic"],
+        ["Overlord's Telamonster", "assets/wiki/overlord-s-telamonster.webp", "Ultimate"],
+        ["Eternal Limbo", "assets/wiki/eternal-limbo.webp", "Evolved Reborn"],
+        ["Grandfather Clockwork", "assets/wiki/grandfather-clockwork.webp", "Evolved Reborn"],
+        ["Blue Supergiant", "assets/wiki/blue-supergiant.webp", "Advanced Reborn"],
+        ["Pizzapreneur Wall", "assets/wiki/pizzapreneur-wall.webp", "Collectible"],
+        ["Pizza Flood Light", "assets/wiki/pizza-flood-light.webp", "Collectible"],
+        ["Pizza Slice Wall", "assets/wiki/pizza-slice-wall.webp", "Collectible"],
+        ["Dreamer's Nightmare", "assets/wiki/dreamer-s-nightmare.webp", "Evolved Reborn"],
+        ["SpookBaron-360,000", "assets/wiki/spookbaron-360-000.webp", "Exotic"],
+        ["Delta Phantom", "assets/wiki/delta-phantom.webp", "Superstitious"],
+        ["Dreamer's Blight", "assets/wiki/dreamer-s-blight.webp", "Advanced Reborn"],
+        ["Son of Poison", "assets/wiki/son-of-poison.webp", "Advanced Reborn"],
+        ["Behemoth Blossom", "assets/wiki/behemoth-blossom.webp", "Slipstream"],
+        ["Dreamer's Life", "assets/wiki/dreamer-s-life.webp", "Enchanted"],
+        ["Virtual Gearwork", "assets/wiki/virtual-gearwork.webp", "Advanced Fusion"],
+        ["Igneous Lightning", "assets/wiki/igneous-lightning.webp", "Advanced Fusion"],
+        ["Tree of Giving", "assets/wiki/tree-of-giving.webp", "Exotic"],
+        ["Walrus Blaster", "assets/wiki/walrus-blaster.webp", "Limited Reborn"],
+        ["Gingerbread Mansion", "assets/wiki/gingerbread-mansion.webp", "Exotic"],
+        ["Orbital Christmas Uplink", "assets/wiki/orbital-christmas-uplink.webp", "Collectible"],
+        ["Industrial Giftium Mine", "assets/wiki/industrial-giftium-mine.webp", "Collectible"],
+        ["Ice Fortress Wall Segment", "assets/wiki/ice-fortress-wall-segment.webp", "Collectible"],
+        ["Mystical Thunder", "assets/wiki/mystical-thunder.webp", "Advanced Evolution"],
+        ["Valentine's Conveyor", "assets/wiki/valentine-s-conveyor.webp", "Collectible"],
+        ["Reaper's Fortress", "assets/wiki/reaper-s-fortress.webp", "Eggxotic"],
+        ["Ore Hypernova", "assets/wiki/ore-hypernova.webp", "Superstitious"],
+        ["Meatball Sandwich", "assets/wiki/meatball-sandwich.webp", "Rare Reborn"],
+        ["The Trinity", "assets/wiki/the-trinity.webp", "Enchanted"],
+        ["CONTRALAND", "assets/wiki/contraland.webp", "Relic"],
+        ["Red Velvet Cake", "assets/wiki/red-velvet-cake.webp", "Exotic"],
+        ["Red Velvet Flood Light", "assets/wiki/red-velvet-flood-light.webp", "Collectible"],
+        ["Cakepreneur Wall", "assets/wiki/cakepreneur-wall.webp", "Collectible"],
+        ["Swag City", "assets/wiki/swag-city.webp", "Superstitious"],
+        ["Ghost Town", "assets/wiki/ghost-town.webp", "Collectible"],
+        ["Green Tea Kettle", "assets/wiki/green-tea-kettle.webp", "Evolved Reborn"],
+        ["Massive Quantum Diamond Cleaner", "assets/wiki/massive-quantum-diamond-cleaner.webp", "Reborn Fusion"],
+        ["Candypreneur Wall", "assets/wiki/candypreneur-wall.webp", "Collectible"],
+        ["Grand Fruitcake", "assets/wiki/grand-fruitcake.webp", "Exotic"],
+        ["Gingerbread Boat", "assets/wiki/gingerbread-boat.webp", "Exotic"],
+        ["Behemoth Blossom (Renegade)", "assets/wiki/behemoth-blossom.webp", "Renegade"],
+        ["2021 Conveyor", "assets/wiki/2021-conveyor.webp", "Collectible"],
+        ["SpookApocalypse-Ω", "assets/wiki/spookapocalypse.webp", "Superstitious"],
+        ["Lord of the Apocalypse", "assets/wiki/lord-of-the-apocalypse.webp", "Phantasmal"],
+        ["DECADE HAVEN SPOOKMINE-5,256,000", "assets/wiki/decade-haven-spookmine-5-256-000.webp", "Exotic"],
+        ["Monstrous Stitchwork", "assets/wiki/monstrous-stitchwork.webp", "Exotic"],
+        ["Furnace Conveyor", "assets/wiki/furnace-conveyor.webp", "Redeemed"],
+        ["THE DECADE", "assets/wiki/the-decade.webp", "Phantasmal"],
+        ["Ice Fortress Conveyor", "assets/wiki/ice-fortress-conveyor.webp", "Collectible"],
+        ["DECADE HAVEN CHRISTMAS TREE", "assets/wiki/decade-haven-christmas-tree.webp", "Exotic"],
+        ["DECADE HAVEN POTTED TREE", "assets/wiki/decade-haven-potted-tree.webp", "Collectible"],
+        ["The Egg Portal", "assets/wiki/the-egg-portal.webp", "Relic"],
+        ["Havenpreneur Upgrader", "assets/wiki/havenpreneur-upgrader.webp", "Collectible"],
+        ["DECADE HAVEN CAKE", "assets/wiki/decade-haven-cake.webp", "Exotic"],
+        ["Spaghetti & Meatballs", "assets/wiki/spaghetti-meatballs.webp", "Evolved Reborn"],
+        ["DECADE HAVEN UPGRADER", "assets/wiki/decade-haven-upgrader.webp", "Exotic"],
+        ["Faint Conveyor", "assets/wiki/faint-conveyor.webp", "Collectible"]
+      ]
+    },
+    "commandergolem": {
+      "n": "Commandergolem",
+      "items": [
+        ["Santa's Chimney", "assets/wiki/santa-s-chimney.webp", "Exotic"],
+        ["Aether Schrodinger", "assets/wiki/aether-schrodinger.webp", "Reborn Fusion"],
+        ["Burst Refiner", "assets/wiki/burst-refiner.webp", "Slipstream"],
+        ["Pot of Gold", "assets/wiki/pot-of-gold.webp", "Exotic"],
+        ["Ultimate Conveyor", "assets/wiki/ultimate-conveyor.webp", "Collectible"],
+        ["The Easter Shrine", "assets/wiki/the-easter-shrine.webp", "Exotic"],
+        ["Green Tea Latte", "assets/wiki/green-tea-latte.webp", "Reborn"],
+        ["Neutron Star", "assets/wiki/neutron-star.webp", "Evolved Reborn"],
+        ["Hydra Blaster", "assets/wiki/hydra-blaster.webp", "Advanced Evolution"],
+        ["Hungry Spirit", "assets/wiki/hungry-spirit.webp", "Exotic"],
+        ["Oasis", "assets/wiki/oasis.webp", "Exotic"],
+        ["Oblivion Weaver", "assets/wiki/oblivion-weaver.webp", "Slipstream"],
+        ["Pandora's Box", "assets/wiki/pandora-s-box.webp", "Superstitious"],
+        ["Behemoth Blossom", "assets/wiki/behemoth-blossom.webp", "Slipstream"],
+        ["Behemoth Blossom (Renegade)", "assets/wiki/behemoth-blossom.webp", "Renegade"],
+        ["Oblivion Weaver (Renegade)", "assets/wiki/oblivion-weaver.webp", "Renegade"]
+      ]
+    },
+    "supz_boi": {
+      "n": "Supz_Boi",
+      "items": [
+        ["Festive Conveyor", "assets/wiki/festive-conveyor.webp", "Collectible"],
+        ["Golden Clover Blaster", "assets/wiki/golden-clover-blaster.webp", "Exotic"],
+        ["Easter Conveyor", "assets/wiki/easter-conveyor.webp", "Collectible"],
+        ["Crystallized System", "assets/wiki/crystallized-system.webp", "Reborn"],
+        ["North Pole Conveyor", "assets/wiki/north-pole-conveyor.webp", "Collectible"],
+        ["Transylvanian Refiner", "assets/wiki/transylvanian-refiner.webp", "Exotic"],
+        ["Spooky Particle", "assets/wiki/spooky-particle.webp", "Collectible"],
+        ["Silicon Excavator", "assets/wiki/silicon-excavator.webp", "Quest"],
+        ["Lemon Land", "assets/wiki/lemon-land.webp", "Legendary"],
+        ["Tsar Bomba", "assets/wiki/tsar-bomba.webp", "Evolved Reborn"],
+        ["Doomsday Pad", "assets/wiki/doomsday-pad.webp", "Vintage"],
+        ["Ancient Tablet", "assets/wiki/ancient-tablet.webp", "Contraband"],
+        ["Spirit of Fire", "assets/wiki/spirit-of-fire.webp", "Advanced Reborn"],
+        ["Golden Bell Upgrader", "assets/wiki/golden-bell-upgrader.webp", "Collectible"],
+        ["Behemoth Snowflake", "assets/wiki/behemoth-snowflake.webp", "Collectible"],
+        ["Gaia's Grasp", "assets/wiki/gaia-s-grasp.webp", "Evolved Reborn"],
+        ["Citrus Enhancer", "assets/wiki/citrus-enhancer.webp", "Exotic"],
+        ["Glass Butterfly", "assets/wiki/glass-butterfly.webp", "Limited Reborn"],
+        ["Blade of Catastrophe", "assets/wiki/blade-of-catastrophe.webp", "Misc"],
+        ["CYBEGG9000", "assets/wiki/cybegg9000.webp", "Eggxotic"],
+        ["Deviled Blaster", "assets/wiki/deviled-blaster.webp", "Eggxotic"],
+        ["Gator's Cove", "assets/wiki/gator-s-cove.webp", "Eggxotic"],
+        ["Giant Fargield Plushie", "assets/wiki/giant-fargield-plushie.webp", "Premium"],
+        ["Ruby Crystallizer", "assets/wiki/ruby-crystallizer.webp", "Eggxotic"],
+        ["Desert Monument", "assets/wiki/desert-monument.webp", "Reborn"],
+        ["The Demon", "assets/wiki/the-demon.webp", "Phantasmal"],
+        ["Turtle Dignifier", "assets/wiki/turtle-dignifier.webp", "Rare Reborn"],
+        ["Lepretron", "assets/wiki/lepretron.webp", "Limited Reborn"],
+        ["Soapy Refiner", "assets/wiki/soapy-refiner.webp", "Eggxotic"],
+        ["VIP Conveyor", "assets/wiki/vip-conveyor.webp", "Fabled"],
+        ["Verdant Pincher", "assets/wiki/verdant-pincher.webp", "Exotic"],
+        ["Friends Forever", "assets/wiki/friends-forever.webp", "Exotic"],
+        ["Gravitational Gyrocopter", "assets/wiki/gravitational-gyrocopter.webp", "Advanced Reborn"],
+        ["Doge Conveyor", "assets/wiki/doge-conveyor.webp", "Collectible"],
+        ["Green Giant", "assets/wiki/green-giant.webp", "Exotic"],
+        ["Brick Wall Enhancer", "assets/wiki/brick-wall-enhancer.webp", "Fabled"]
+      ]
+    },
+    "genkroco": {
+      "n": "GENKROCO",
+      "items": [
+        ["Winterheart", "assets/wiki/winterheart.webp", "Exotic"],
+        ["Sweet Tooth", "assets/wiki/sweet-tooth.webp", "Collectible"],
+        ["Azure Spore", "assets/wiki/azure-spore.webp", "Reborn Fusion"],
+        ["Hopeless Bog", "assets/wiki/hopeless-bog.webp", "Collectible"],
+        ["Haunted Carnival", "assets/wiki/haunted-carnival.webp", "Collectible"],
+        ["Boomite Mine", "assets/wiki/boomite-mine.webp", "Vintage"],
+        ["Heavenly Wisp", "assets/wiki/heavenly-wisp.webp", "Exotic"],
+        ["Raised Furnace", "assets/wiki/raised-furnace.webp", "Intermediate"],
+        ["Endpoint Refiner", "assets/wiki/endpoint-refiner.webp", "Advanced"],
+        ["Dreamcatcher", "assets/wiki/dreamcatcher.webp", "Vintage"],
+        ["Ion Field", "assets/wiki/ion-field.webp", "Epic"],
+        ["Portable Ore Stopper", "assets/wiki/portable-ore-stopper.webp", "Advanced"],
+        ["Sakura Falls", "assets/wiki/sakura-falls.webp", "Evolved Reborn"],
+        ["Swift Justice", "assets/wiki/swift-justice.webp", "Evolved Reborn"],
+        ["Raised Wide Upgrader", "assets/wiki/raised-wide-upgrader-hd.webp", "Intermediate"],
+        ["Rocket Launcher", "assets/wiki/rocket-launcher.webp", "Fabled"],
+        ["Gladiator's Fury", "assets/wiki/gladiator-s-fury.webp", "Exotic"]
+      ]
+    },
+    "gryves": {
+      "n": "Gryves",
+      "items": [
+        ["Festive Spirit", "assets/wiki/festive-spirit.webp", "Exotic"]
+      ]
+    },
+    "nerdy_sus": {
+      "n": "Nerdy_Sus",
+      "items": [
+        ["Ore Elevator", "assets/wiki/ore-elevator.webp", "Proficient"],
+        ["Icosahedron Flood Light", "assets/wiki/icosahedron-flood-light.webp", "Exotic"],
+        ["Horizon Centrifuge", "assets/wiki/horizon-centrifuge.webp", "Mythic"],
+        ["Wholesome Skull Blaster", "assets/wiki/wholesome-skull-blaster.webp", "Exotic"],
+        ["One Million Upgrader", "assets/wiki/one-million-upgrader.webp", "Exotic"],
+        ["Helium Blaster", "assets/wiki/helium-blaster.webp", "Contraband"],
+        ["Hydraulic Presser", "assets/wiki/hydraulic-presser.webp", "Contraband"],
+        ["Dreamer's Valor", "assets/wiki/dreamer-s-valor.webp", "Evolved Reborn"],
+        ["Whale Gun", "assets/wiki/whale-gun.webp", "Exotic"],
+        ["Cooling Chamber", "assets/wiki/cooling-chamber.webp", "Reborn"],
+        ["Turbine Chamber", "assets/wiki/turbine-chamber.webp", "Evolved Reborn"],
+        ["Octopi Council", "assets/wiki/octopi-council.webp", "Eggxotic"],
+        ["Sandshark", "assets/wiki/sandshark-sender.webp", "Eggxotic"],
+        ["Bazingium Mine", "assets/wiki/bazingium-mine.webp", "Redeemed"],
+        ["New Years Monument", "assets/wiki/new-years-monument.webp", "Collectible"]
+      ]
+    },
+    "thebluemac55": {
+      "n": "TheBlueMac55",
+      "items": [
+        ["Diamond Breech Loader", "assets/wiki/diamond-breech-loader.webp", "Reborn Fusion"],
+        ["The Grand Prism", "assets/wiki/the-grand-prism.webp", "Slipstream"],
+        ["Ancient Coliseum", "assets/wiki/ancient-coliseum.webp", "Evolved Reborn"],
+        ["Snowglobe Refiner", "assets/wiki/snowglobe-refiner.webp", "Exotic"],
+        ["Giftium Mine", "assets/wiki/giftium-mine.webp", "Collectible"],
+        ["Frozen Peaks", "assets/wiki/frozen-peaks.webp", "Evolved Reborn"],
+        ["Heavy Sweet Conveyor", "assets/wiki/heavy-sweet-conveyor.webp", "Collectible"],
+        ["Cupcakium Mine", "assets/wiki/cupcakium-mine.webp", "Collectible"],
+        ["Supreme Birthday Cake", "assets/wiki/supreme-birthday-cake.webp", "Exotic"],
+        ["Saturated Catalyst", "assets/wiki/saturated-catalyst.webp", "Evolved Reborn"],
+        ["Ore Winder", "assets/wiki/ore-winder.webp", "Epic"],
+        ["Nightmare", "assets/wiki/nightmare.webp", "Exotic"],
+        ["Final Eclipse Gate", "assets/wiki/final-eclipse-gate.webp", "Evolved Reborn"],
+        ["Yuttrium Mine", "assets/wiki/yuttrium-mine.webp", "Evolved Reborn"],
+        ["Pilotite Mine", "assets/wiki/pilotite-mine.webp", "Reborn"],
+        ["Draedon's Gauntlet", "assets/wiki/draedon-s-gauntlet.webp", "Superstitious"],
+        ["Empyrean Monument", "assets/wiki/empyrean-monument.webp", "Enchanted"],
+        ["Aethereal Synthesizer", "assets/wiki/aethereal-synthesizer.webp", "Evolved Reborn"],
+        ["Gloom Refiner", "assets/wiki/gloom-refiner.webp", "Collectible"],
+        ["Candy Refiner", "assets/wiki/candy-refiner.webp", "Collectible"],
+        ["Mineral Wheel", "assets/wiki/mineral-wheel.webp", "Reborn"],
+        ["Midas Blaster", "assets/wiki/midas-blaster.webp", "Superstitious"],
+        ["Dreamer's Life", "assets/wiki/dreamer-s-life.webp", "Enchanted"],
+        ["Anguished Guardian of the Gate", "assets/wiki/anguished-guardian-of-the-gate.webp", "Reborn Fusion"],
+        ["Toxic Waste Disposal", "assets/wiki/toxic-waste-disposal.webp", "Reborn"],
+        ["Havium Mine", "assets/wiki/havium-mine.webp", "Superstitious"],
+        ["Phasecursor Furnace", "assets/wiki/phasecursor-furnace.webp", "Advanced Fusion"],
+        ["Azure Purifier", "assets/wiki/azure-purifier.webp", "Evolved Reborn"],
+        ["Phase Refiner", "assets/wiki/phase-refiner.webp", "Reborn"],
+        ["Coliseum Catharsis", "assets/wiki/coliseum-catharsis.webp", "Enchanted"],
+        ["The Grand Prism (Renegade)", "assets/wiki/the-grand-prism.webp", "Renegade"]
+      ]
+    },
+    "concon98765": {
+      "n": "concon98765",
+      "items": [
+        ["Pulsar Octagnium Mine", "assets/wiki/pulsar-octagnium-mine.webp", "Slipstream"],
+        ["Twitch Scanner", "assets/wiki/twitch-scanner.webp", "Collectible"]
+      ]
+    },
+    "incendispike": {
+      "n": "Incendispike",
+      "items": [
+        ["Incendium Mine", "assets/wiki/incendium-mine.webp", "Slipstream"],
+        ["Atomyke Mine", "assets/wiki/atomyke-mine.webp", "Evolved Reborn"],
+        ["Blue Tree Sapling", "assets/wiki/blue-tree-sapling.webp", "Contraband"],
+        ["Shield Generator", "assets/wiki/shield-generator.webp", "Eggxotic"],
+        ["Leggendary Black Hole", "assets/wiki/leggendary-black-hole.webp", "Eggxotic"],
+        ["Dubious Noobius Guardian", "assets/wiki/dubious-noobius-guardian.webp", "Eggxotic"],
+        ["ITeleporter", "assets/wiki/iteleporter.webp", "Eggxotic"],
+        ["Incendium Mine (Renegade)", "assets/wiki/incendium-mine.webp", "Renegade"],
+        ["Heavenly Flux", "assets/wiki/heavenly-flux.webp", "Evolved Reborn"],
+        ["Eggy Sentry Turret", "assets/wiki/eggy-sentry-turret.webp", "Eggxotic"]
+      ]
+    },
+    "pokemonmaster8619": {
+      "n": "PokemonMaster8619",
+      "items": [
+        ["Satellite Beam", "assets/wiki/satellite-beam.webp", "Advanced"],
+        ["Sword Master's Spirit", "assets/wiki/sword-master-s-spirit.webp", "Fabled"],
+        ["Angelic Grace", "assets/wiki/angelic-grace.webp", "Divine"],
+        ["Cell Collider", "assets/wiki/cell-collider.webp", "Mythic"]
+      ]
+    },
+    "hijacker2004": {
+      "n": "hijacker2004",
+      "items": [
+        ["Ore Steamer", "assets/wiki/ore-steamer.webp", "Novice"],
+        ["Fusion Reactor", "assets/wiki/fusion-reactor.webp", "Mythic"]
+      ]
+    },
+    "glossyyou": {
+      "n": "glossyyou",
+      "items": [
+        ["Eternal Fracture", "assets/wiki/eternal-fracture.webp", "Reborn Fusion"],
+        ["Freon Sprayer", "assets/wiki/freon-sprayer.webp", "Contraband"]
+      ]
+    },
+    "awfulunlawful": {
+      "n": "AwfulUnlawful",
+      "items": [
+        ["Equinox", "assets/wiki/equinox.webp", "Exotic"],
+        ["Blood Magic", "assets/wiki/blood-magic.webp", "Exotic"],
+        ["Drawbridge Gate", "assets/wiki/drawbridge-gate.webp", "Refined"],
+        ["Resetting Infuser", "assets/wiki/resetting-infuser.webp", "Vintage"],
+        ["SpookDemon-66,666", "assets/wiki/spookdemon-66-666.webp", "Exotic"],
+        ["The Abomination", "assets/wiki/the-abomination.webp", "Reborn"],
+        ["The Daegelart", "assets/wiki/the-daegelart.webp", "Evolved Reborn"],
+        ["Oblivion Weaver", "assets/wiki/oblivion-weaver.webp", "Slipstream"],
+        ["Candy Center", "assets/wiki/candy-center.webp", "Quest"],
+        ["Temporal Enchantment", "assets/wiki/temporal-enchantment.webp", "Evolved Reborn"],
+        ["Castle Wall", "assets/wiki/castle-wall.webp", "Premium"],
+        ["Castle Wall Segment", "assets/wiki/castle-wall-segment.webp", "Premium"],
+        ["The Dust Devil", "assets/wiki/the-dust-devil.webp", "Eggxotic"],
+        ["Obsidian Infusion Device", "assets/wiki/obsidian-infusion-device.webp", "Eggxotic"],
+        ["Nuclear Stronghold", "assets/wiki/nuclear-stronghold.webp", "Reborn"],
+        ["Shard City", "assets/wiki/shard-city.webp", "Evolved Reborn"],
+        ["Nuclear Castle", "assets/wiki/nuclear-castle.webp", "Evolved Reborn"],
+        ["Oblivion Weaver (Renegade)", "assets/wiki/oblivion-weaver.webp", "Renegade"]
+      ]
+    },
+    "cobaltv2": {
+      "n": "CobaltV2",
+      "items": [
+        ["Rush Upgrader", "assets/wiki/rush-upgrader.webp", "Intermediate"],
+        ["Overlord Device", "assets/wiki/overlord-device.webp", "Ultimate"],
+        ["Volcango", "assets/wiki/volcango.webp", "Exotic"],
+        ["Morning Star", "assets/wiki/morning-star.webp", "Reborn"],
+        ["Igloo Refiner", "assets/wiki/igloo-refiner.webp", "Collectible"]
+      ]
+    },
+    "elementninja645": {
+      "n": "elementninja645",
+      "items": [
+        ["Robotic Enhancer", "assets/wiki/robotic-enhancer.webp", "Contraband"],
+        ["The Great Parasite", "assets/wiki/the-great-parasite.webp", "Slipstream"],
+        ["Research Center", "assets/wiki/research-center.webp", "Advanced"],
+        ["Shortcake Conveyor", "assets/wiki/shortcake-conveyor.webp", "Collectible"],
+        ["Pizza Research Center", "assets/wiki/pizza-research-center.webp", "Collectible"],
+        ["Holiday Street Refiner", "assets/wiki/holiday-street-refiner.webp", "Collectible"],
+        ["Maintenance Supporter", "assets/wiki/maintenance-supporter.webp", "Contraband"],
+        ["Invasive Cyberlord", "assets/wiki/invasive-cyberlord.webp", "Reborn"],
+        ["The Great Parasite (Renegade)", "assets/wiki/the-great-parasite.webp", "Renegade"]
+      ]
+    },
+    "adminpro22": {
+      "n": "adminpro22",
+      "items": [
+        ["Hades' Fang", "assets/wiki/hades-fang.webp", "Exotic"]
+      ]
+    },
+    "nerd_man": {
+      "n": "nerd_man",
+      "items": [
+        ["Evil Clown", "assets/wiki/evil-clown.webp", "Collectible"],
+        ["Virtual Enhancer", "assets/wiki/virtual-enhancer.webp", "Advanced Reborn"],
+        ["Devourer of Nightmares", "assets/wiki/devourer-of-nightmares.webp", "Enchanted"]
+      ]
+    },
+    "negativize": {
+      "n": "Negativize",
+      "items": [
+        ["Dragonglass Mine", "assets/wiki/dragonglass-mine.webp", "Reborn"],
+        ["The Ultimate Sacrifice", "assets/wiki/the-ultimate-sacrifice.webp", "Ultimate"],
+        ["Statue of Sacrifice", "assets/wiki/statue-of-sacrifice.webp", "Fabled"],
+        ["The Darkest Upgrader", "assets/wiki/the-darkest-upgrader.webp", "Fabled"],
+        ["Schrodinger Chamber", "assets/wiki/schrodinger-chamber.webp", "Hydraulic"],
+        ["Dimension Extractor", "assets/wiki/dimension-extractor.webp", "Evolved Reborn"],
+        ["Draconicglass Mine", "assets/wiki/draconicglass-mine.webp", "Evolved Reborn"],
+        ["Crystal Altar", "assets/wiki/crystal-altar.webp", "Advanced Evolution"],
+        ["Ore Evaluator", "assets/wiki/ore-evaluator.webp", "Contraband"],
+        ["Santa's Castle", "assets/wiki/santa-s-castle.webp", "Exotic"],
+        ["Ore Repeater", "assets/wiki/ore-repeater.webp", "Contraband"],
+        ["Amber Fossilizer", "assets/wiki/amber-fossilizer.webp", "Eggxotic"],
+        ["Dragon Cannon", "assets/wiki/dragon-cannon.webp", "Advanced Fusion"],
+        ["Castle of Apocalypse", "assets/wiki/castle-of-apocalypse.webp", "Collectible"],
+        ["Ghastly Graveyard", "assets/wiki/ghastly-graveyard.webp", "Collectible"]
+      ]
+    },
+    "mikochi5p": {
+      "n": "Mikochi5p",
+      "items": [
+        ["Superunobtainium Mine", "assets/wiki/superunobtainium-mine.webp", "Contraband"]
+      ]
+    },
+    "theamazingkang": {
+      "n": "THEAMAZINGKANG",
+      "items": [
+        ["Chemical Refiner", "assets/wiki/chemical-refiner.webp", "Contraband"]
+      ]
+    },
+    "lawlzwuff": {
+      "n": "Lawlzwuff",
+      "items": [
+        ["The Great Parasite", "assets/wiki/the-great-parasite.webp", "Slipstream"],
+        ["Smore Cake", "assets/wiki/smore-cake.webp", "Exotic"],
+        ["Citrus Cake", "assets/wiki/citrus-cake.webp", "Exotic"],
+        ["All Star Sundae", "assets/wiki/all-star-sundae.webp", "Exotic"],
+        ["Ghastly Saloon", "assets/wiki/ghastly-saloon.webp", "Exotic"],
+        ["The Great Parasite (Renegade)", "assets/wiki/the-great-parasite.webp", "Renegade"],
+        ["Lucky Hat", "assets/wiki/lucky-hat.webp", "Eggxotic"]
+      ]
+    },
+    "quick_slash": {
+      "n": "Quick_Slash",
+      "items": [
+        ["Blind Justice", "assets/wiki/blind-justice.webp", "Reborn"]
+      ]
+    },
+    "planefreak34": {
+      "n": "planefreak34",
+      "items": [
+        ["Kappa Investor", "assets/wiki/kappa-investor-hd.webp", "Exotic"],
+        ["Aether Refinery", "assets/wiki/aether-refinery.webp", "Reborn"],
+        ["Ore Negator", "assets/wiki/ore-negator.webp", "Contraband"],
+        ["Molten Forge", "assets/wiki/molten-forge.webp", "Contraband"]
+      ]
+    },
+    "iz_0": {
+      "n": "Iz_0",
+      "items": [
+        ["Twitch Wall", "assets/wiki/twitch-wall.webp", "Collectible"]
+      ]
+    },
+    "valphex": {
+      "n": "valphex",
+      "items": [
+        ["Alien Relic", "assets/wiki/alien-relic.webp", "Contraband"],
+        ["Void Drive", "assets/wiki/void-drive.webp", "Enchanted"],
+        ["Arachnid Mine", "assets/wiki/arachnid-mine.webp", "Collectible"],
+        ["Aerogel Refiner", "assets/wiki/aerogel-refiner.webp", "Mythic"],
+        ["The Haunted House", "assets/wiki/the-haunted-house.webp", "Exotic"],
+        ["Scary Skeleton Wall", "assets/wiki/scary-skeleton-wall.webp", "Collectible"],
+        ["Cupid's Arrow", "assets/wiki/cupid-s-arrow.webp", "Exotic"],
+        ["Heart Wall", "assets/wiki/heart-wall.webp", "Collectible"],
+        ["Ore Basket", "assets/wiki/ore-basket.webp", "Collectible"],
+        ["Carrot Farm", "assets/wiki/carrot-farm.webp", "Collectible"],
+        ["Carrot Wall", "assets/wiki/carrot-wall.webp", "Collectible"],
+        ["Chocolate Cupcake", "assets/wiki/chocolate-cupcake.webp", "Exotic"]
+      ]
+    },
+    "baaaadmin": {
+      "n": "baaaadmin",
+      "items": [
+        ["Symmetrium Mine", "assets/wiki/symmetrium-mine.webp", "Reborn"]
+      ]
+    },
+    "pointil": {
+      "n": "pointil",
+      "items": [
+        ["Dragon Blaster", "assets/wiki/dragon-blaster.webp", "Advanced Reborn"]
+      ]
+    },
+    "novaseer": {
+      "n": "Novaseer",
+      "items": [
+        ["Breech Loader", "assets/wiki/breech-loader.webp", "Reborn"],
+        ["Ore Transponder", "assets/wiki/ore-transponder.webp", "Almighty"],
+        ["Ore Painter", "assets/wiki/ore-painter.webp", "Luxury"]
+      ]
+    },
+    "crushieyot": {
+      "n": "Crushieyot",
+      "items": [
+        ["Nature's Enchantment", "assets/wiki/nature-s-enchantment.webp", "Slipstream"],
+        ["Nature's Enchantment (Renegade)", "assets/wiki/nature-s-enchantment.webp", "Renegade"]
+      ]
+    },
+    "industrydev": {
+      "n": "IndustryDev",
+      "items": [
+        ["Clovium Mine", "assets/wiki/clovium-mine.webp", "Collectible"],
+        ["Ice Crusher", "assets/wiki/ice-crusher.webp", "Limited Reborn"],
+        ["Santa's Train", "assets/wiki/santa-s-train.webp", "Collectible"],
+        ["Anti-Gravity Scanner", "assets/wiki/anti-gravity-scanner.webp", "Hydraulic"],
+        ["Plasma Scanner", "assets/wiki/plasma-scanner.webp", "Reborn"],
+        ["Tropical Holidays", "assets/wiki/tropical-holidays.webp", "Collectible"]
+      ]
+    },
+    "lightofthecosmos": {
+      "n": "LightOfTheCosmos",
+      "items": [
+        ["Sakura Garden", "assets/wiki/sakura-garden.webp", "Reborn"],
+        ["Rainbow Refiner", "assets/wiki/rainbow-refiner.webp", "Exotic"],
+        ["Frosted Refiner", "assets/wiki/frosted-refiner.webp", "Collectible"],
+        ["Undead Assistance", "assets/wiki/undead-assistance.webp", "Collectible"],
+        ["Stardust Illuminator", "assets/wiki/stardust-illuminator.webp", "Advanced Fusion"],
+        ["Illuminator Evaluator", "assets/wiki/illuminator-evaluator.webp", "Reborn Fusion"],
+        ["Ore Nova", "assets/wiki/ore-nova.webp", "Advanced Fusion"]
+      ]
+    },
+    "rainbowfurryraver": {
+      "n": "rainbowfurryraver",
+      "items": [
+        ["Easter Wall", "assets/wiki/easter-wall.webp", "Collectible"],
+        ["Santa's Deluxe Sleigh", "assets/wiki/santa-s-deluxe-sleigh.webp", "Exotic"],
+        ["Arcane Lightning", "assets/wiki/arcane-lightning.webp", "Advanced Reborn"],
+        ["Golden Clover Wall", "assets/wiki/golden-clover-wall.webp", "Collectible"],
+        ["Vulcan's Grasp", "assets/wiki/vulcan-s-grasp.webp", "Advanced Reborn"],
+        ["Grand Birthday Cake", "assets/wiki/grand-birthday-cake.webp", "Exotic"],
+        ["Spinnerite Mine", "assets/wiki/spinnerite-mine.webp", "Premium"],
+        ["Vulcan's Destiny", "assets/wiki/vulcan-s-destiny.webp", "Advanced Evolution"],
+        ["Spooky Fruit Punch Processor", "assets/wiki/spooky-fruit-punch-processor.webp", "Collectible"],
+        ["Virtual Enchanter", "assets/wiki/virtual-enchanter.webp", "Advanced Evolution"],
+        ["Anguished Garden", "assets/wiki/anguished-garden.webp", "Reborn Fusion"],
+        ["Orbital Cataclysm", "assets/wiki/orbital-cataclysm.webp", "Slipstream"],
+        ["Fractured Reality", "assets/wiki/fractured-reality.webp", "Reborn"],
+        ["Temporal Armageddon", "assets/wiki/temporal-armageddon.webp", "Evolved Reborn"],
+        ["Orbital Cataclysm (Renegade)", "assets/wiki/orbital-cataclysm.webp", "Renegade"]
+      ]
+    },
+    "eroomad": {
+      "n": "eroomad",
+      "items": [
+        ["Easter Security Gate", "assets/wiki/easter-security-gate.webp", "Mythic"],
+        ["Easter Bunny", "assets/wiki/easter-bunny.webp", "Exotic"],
+        ["Ice Fortress Wall", "assets/wiki/ice-fortress-wall.webp", "Collectible"],
+        ["Lucky Research Center", "assets/wiki/lucky-research-center.webp", "Collectible"],
+        ["Astral Setter", "assets/wiki/astral-setter.webp", "Evolved Reborn"],
+        ["Vampire Wall", "assets/wiki/vampire-wall.webp", "Collectible"],
+        ["Hanging Wreath", "assets/wiki/hanging-wreath.webp", "Exotic"],
+        ["Cryogenic Upgrader", "assets/wiki/cryogenic-upgrader.webp", "Divine"],
+        ["Heart of Dusk", "assets/wiki/heart-of-dusk.webp", "Divine"],
+        ["The Cosmic Tower", "assets/wiki/the-cosmic-tower.webp", "Exotic"],
+        ["Hydraulic Teleporter", "assets/wiki/hydraulic-teleporter.webp", "Hydraulic"],
+        ["Spooklord Device", "assets/wiki/spooklord-device.webp", "Exotic"],
+        ["Void Star", "assets/wiki/void-star.webp", "Advanced Evolution"],
+        ["Dracula's Coffin", "assets/wiki/dracula-s-coffin.webp", "Exotic"],
+        ["Firecrystallized System", "assets/wiki/firecrystallized-system.webp", "Reborn Fusion"],
+        ["Fire-Blast Upgrader", "assets/wiki/fire-blast-upgrader.webp", "Epic"],
+        ["Chimney Wall Segment", "assets/wiki/chimney-wall-segment.webp", "Collectible"],
+        ["Ice Fortress Turret Wall", "assets/wiki/ice-fortress-turret-wall.webp", "Collectible"]
+      ]
+    },
+    "davidtloro": {
+      "n": "DavidTLoro",
+      "items": [
+        ["Frozen Eclipse", "assets/wiki/frozen-eclipse.webp", "Reborn Fusion"],
+        ["Symcorpium Mine", "assets/wiki/symcorpium-mine.webp", "Reborn Fusion"],
+        ["100M Upgrader", "assets/wiki/100m-upgrader.webp", "Collectible"],
+        ["Massive Diamond Drill", "assets/wiki/massive-diamond-drill.webp", "Evolved Reborn"],
+        ["Serpentine Upgrader", "assets/wiki/serpentine-upgrader.webp", "Epic"],
+        ["Deadly Spore", "assets/wiki/deadly-spore.webp", "Evolved Reborn"],
+        ["Spectral Upgrader", "assets/wiki/spectral-upgrader.webp", "Novice"],
+        ["Ambrosia Garden", "assets/wiki/ambrosia-garden.webp", "Reborn Fusion"]
+      ]
+    },
+    "kurosukii": {
+      "n": "Kurosukii",
+      "items": [
+        ["Diamond Egg", "assets/wiki/diamond-egg.webp", "Exotic"],
+        ["Aurora Borealis", "assets/wiki/aurora-borealis.webp", "Advanced Evolution"],
+        ["Timeless Enhancement", "assets/wiki/timeless-enhancement.webp", "Reborn"],
+        ["Guardian of the Gate", "assets/wiki/guardian-of-the-gate.webp", "Reborn"]
+      ]
+    },
+    "sidewayseight": {
+      "n": "SidewaysEight",
+      "items": [
+        ["Eggcelent Refiner", "assets/wiki/eggcelent-refiner.webp", "Collectible"],
+        ["Grand Christmas Tree", "assets/wiki/grand-christmas-tree.webp", "Exotic"],
+        ["Symmetryte Mine", "assets/wiki/symmetryte-mine.webp", "Evolved Reborn"],
+        ["Overhang Upgrader", "assets/wiki/overhang-upgrader.webp", "Novice"],
+        ["King Gold Mine", "assets/wiki/king-gold-mine.webp", "Rare Reborn"],
+        ["Black Dwarf", "assets/wiki/black-dwarf.webp", "Advanced Reborn"],
+        ["Hades' Palace", "assets/wiki/hades-palace.webp", "Advanced Reborn"],
+        ["The Fissure", "assets/wiki/the-fissure.webp", "Evolved Reborn"],
+        ["Team Colorizer", "assets/wiki/team-colorizer.webp", "Luxury"],
+        ["Swintite Mine", "assets/wiki/swintite-mine.webp", "Quest"],
+        ["Super Swintite Mine", "assets/wiki/super-swintite-mine.webp", "Exotic"],
+        ["Funky Town", "assets/wiki/funky-town.webp", "Rare Reborn"],
+        ["Supreme Christmas Tree", "assets/wiki/supreme-christmas-tree.webp", "Exotic"],
+        ["Frosty the Snowmine", "assets/wiki/frosty-the-snowmine.webp", "Collectible"],
+        ["Winter Snowflake", "assets/wiki/winter-snowflake.webp", "Exotic"],
+        ["Deluxe Santa's Workshop", "assets/wiki/deluxe-santa-s-workshop.webp", "Exotic"],
+        ["Everlasting Key", "assets/wiki/everlasting-key.webp", "Rare Reborn"]
+      ]
+    },
+    "cosmayday": {
+      "n": "cosMayday",
+      "items": [
+        ["Dark Illuminator", "assets/wiki/dark-illuminator.webp", "Reborn Fusion"]
+      ]
+    },
+    "thegrand_wiz": {
+      "n": "TheGrand_Wiz",
+      "items": [
+        ["Ambrosia Fountain", "assets/wiki/ambrosia-fountain.webp", "Reborn"],
+        ["Witch's Cauldron", "assets/wiki/witch-s-cauldron.webp", "Exotic"],
+        ["Goliath Skull", "assets/wiki/goliath-skull-sender.webp", "Exotic"]
+      ]
+    },
+    "lord_piro": {
+      "n": "Lord_Piro",
+      "items": [
+        ["Permafrost Refiner", "assets/wiki/permafrost-refiner.webp", "Exotic"],
+        ["Tropical Breeze", "assets/wiki/tropical-breeze.webp", "Ultimate"],
+        ["Birthday Candle", "assets/wiki/birthday-candle.webp", "Collectible"],
+        ["Great Pumpkin", "assets/wiki/great-pumpkin.webp", "Exotic"],
+        ["Pumpkin Patch", "assets/wiki/pumpkin-patch.webp", "Collectible"],
+        ["Frigid Dystopia", "assets/wiki/frigid-dystopia.webp", "Advanced Reborn"],
+        ["Brimstone Spires", "assets/wiki/brimstone-spires.webp", "Advanced Evolution"],
+        ["Zenith Will", "assets/wiki/zenith-will.webp", "Evolved Reborn"],
+        ["Father of Freon", "assets/wiki/father-of-freon.webp", "Advanced Reborn"],
+        ["Guardian of the Portal", "assets/wiki/guardian-of-the-portal.webp", "Evolved Reborn"],
+        ["Phase Bombarder", "assets/wiki/phase-bombarder.webp", "Evolved Reborn"],
+        ["Melancholy Holidays", "assets/wiki/melancholy-holidays.webp", "Collectible"],
+        ["Shiny Red Upgrader", "assets/wiki/shiny-red-upgrader.webp", "Collectible"]
+      ]
+    },
+    "opopopzxc": {
+      "n": "OPOPOPZXC",
+      "items": [
+        ["Ambrosia Forest", "assets/wiki/ambrosia-forest.webp", "Evolved Reborn"],
+        ["Methane Sky Fleet", "assets/wiki/methane-sky-fleet.webp", "Eggxotic"],
+        ["Witch Doge", "assets/wiki/witch-doge.webp", "Collectible"],
+        ["Silkweaver", "assets/wiki/silkweaver.webp", "Collectible"],
+        ["Vortex Singularity", "assets/wiki/vortex-singularity.webp", "Evolved Reborn"],
+        ["Present Refiner", "assets/wiki/present-refiner.webp", "Collectible"],
+        ["Firework Mine", "assets/wiki/firework-mine.webp", "Collectible"],
+        ["Wedding Cake", "assets/wiki/wedding-cake.webp", "Limited Reborn"]
+      ]
+    },
+    "mrcarrotnation": {
+      "n": "Mrcarrotnation",
+      "items": [
+        ["Ambrosia Forest", "assets/wiki/ambrosia-forest.webp", "Evolved Reborn"]
+      ]
+    },
+    "rightpadgram": {
+      "n": "rightpadgram",
+      "items": [
+        ["Igneous Forge", "assets/wiki/igneous-forge.webp", "Advanced Reborn"],
+        ["Octo Flood Light", "assets/wiki/octo-flood-light.webp", "Luxury"],
+        ["Freon Bombarder", "assets/wiki/freon-bombarder.webp", "Luxury"],
+        ["Blazing Annihilator", "assets/wiki/blazing-annihilator.webp", "Contraband"]
+      ]
+    },
+    "vonekorn": {
+      "n": "Vonekorn",
+      "items": [
+        ["Phase Processor", "assets/wiki/phase-processor.webp", "Reborn"],
+        ["Christmas Tree", "assets/wiki/christmas-tree.webp", "Collectible"],
+        ["Newtonium Excavator", "assets/wiki/newtonium-excavator.webp", "Evolved Reborn"],
+        ["Easter Egg Conveyor", "assets/wiki/easter-egg-conveyor.webp", "Collectible"],
+        ["Easter Egg Wall", "assets/wiki/easter-egg-wall.webp", "Collectible"],
+        ["Nova Star", "assets/wiki/nova-star.webp", "Advanced Reborn"],
+        ["Choconveyor", "assets/wiki/choconveyor.webp", "Collectible"],
+        ["Birthday Floodlight", "assets/wiki/birthday-floodlight.webp", "Collectible"],
+        ["Banana Split Upgrader", "assets/wiki/banana-split-upgrader.webp", "Reborn"],
+        ["Gargantium Mine", "assets/wiki/gargantium-mine.webp", "Enchanted"],
+        ["Precursor Mine", "assets/wiki/precursor-mine.webp", "Advanced Reborn"],
+        ["Precursor Furnace", "assets/wiki/precursor-furnace.webp", "Advanced Reborn"],
+        ["Pirate Cove", "assets/wiki/pirate-cove.webp", "Exotic"],
+        ["Ghost Particle", "assets/wiki/ghost-particle.webp", "Collectible"],
+        ["Weary Wall", "assets/wiki/weary-wall.webp", "Luxury"],
+        ["Nuclear Chamber", "assets/wiki/nuclear-chamber.webp", "Legendary"],
+        ["Firecrystal Excavator", "assets/wiki/firecrystal-excavator.webp", "Legendary"],
+        ["Repulsion Device", "assets/wiki/repulsion-device.webp", "Mythic"],
+        ["Ore Magmafier", "assets/wiki/ore-magmafier.webp", "Legendary"],
+        ["Cell Singularity", "assets/wiki/cell-singularity.webp", "Mythic"],
+        ["Dual Festive Refiner", "assets/wiki/dual-festive-refiner.webp", "Collectible"],
+        ["Atmospheric Steamwork", "assets/wiki/atmospheric-steamwork.webp", "Evolved Reborn"],
+        ["Snowge", "assets/wiki/snowge.webp", "Collectible"],
+        ["Ornament Blaster", "assets/wiki/ornament-blaster.webp", "Collectible"],
+        ["Palladium Drill", "assets/wiki/palladium-drill.webp", "Advanced Reborn"],
+        ["Infernal Guardian", "assets/wiki/infernal-guardian.webp", "Collectible"],
+        ["Candy Research Center", "assets/wiki/candy-research-center.webp", "Collectible"],
+        ["Ore Sawmill", "assets/wiki/ore-sawmill.webp", "Reborn"],
+        ["Son of Poison", "assets/wiki/son-of-poison.webp", "Advanced Reborn"],
+        ["Apollium Mine", "assets/wiki/apollium-mine.webp", "Advanced Reborn"],
+        ["Solarium Mine", "assets/wiki/solarium-mine.webp", "Advanced Evolution"],
+        ["V-tolite Mine", "assets/wiki/v-tolite-mine.webp", "Evolved Reborn"],
+        ["Phasecursor Mine", "assets/wiki/phasecursor-mine.webp", "Advanced Fusion"],
+        ["The Pizzalyst", "assets/wiki/the-pizzalyst.webp", "Reborn Fusion"],
+        ["Yuntonium Mine", "assets/wiki/yuntonium-mine.webp", "Reborn Fusion"],
+        ["The Cryolyst", "assets/wiki/the-cryolyst.webp", "Limited Reborn"]
+      ]
+    },
+    "hoshiisan": {
+      "n": "hoshiisan",
+      "items": [
+        ["Gift Conveyor", "assets/wiki/gift-conveyor.webp", "Collectible"],
+        ["Book of Knowledge", "assets/wiki/book-of-knowledge.webp", "Enchanted"],
+        ["Vesterian Upgrader", "assets/wiki/vesterian-upgrader.webp", "Fabled"],
+        ["Pizza Furnace", "assets/wiki/pizza-furnace.webp", "Enchanted"],
+        ["Present Center", "assets/wiki/present-center.webp", "Quest"],
+        ["Ore Wrapper", "assets/wiki/ore-wrapper.webp", "Quest"],
+        ["Gravitational Gearwork", "assets/wiki/gravitational-gearwork.webp", "Reborn"],
+        ["Portable Tractor Beam", "assets/wiki/portable-tractor-beam.webp", "Hydraulic"],
+        ["Crystallized Engine", "assets/wiki/crystallized-engine.webp", "Evolved Reborn"],
+        ["Rainbonite Mine", "assets/wiki/rainbonite-mine.webp", "Mythic"],
+        ["Hydraulic Freefall Upgrader", "assets/wiki/hydraulic-freefall-upgrader.webp", "Hydraulic"],
+        ["Tyrant's Forge", "assets/wiki/tyrant-s-forge.webp", "Advanced Evolution"],
+        ["The Death Cap", "assets/wiki/the-death-cap.webp", "Superstitious"],
+        ["True Book of Knowledge", "assets/wiki/true-book-of-knowledge.webp", "Ultimate"],
+        ["Pot of Gold-inator", "assets/wiki/pot-of-gold-inator.webp", "Exotic"],
+        ["Golden Horseshoe", "assets/wiki/golden-horseshoe.webp", "Exotic"],
+        ["Golden Clover Refiner", "assets/wiki/golden-clover-refiner.webp", "Exotic"],
+        ["Vertical Ore Launcher", "assets/wiki/vertical-ore-launcher.webp", "Contraband"],
+        ["Coconut Drencher", "assets/wiki/coconut-drencher.webp", "Eggxotic"],
+        ["Eggscream Refiner", "assets/wiki/eggscream-refiner.webp", "Eggxotic"],
+        ["Energy Core", "assets/wiki/energy-core.webp", "Eggxotic"],
+        ["Vaporwave Vibe Visualizer", "assets/wiki/vaporwave-vibe-visualizer.webp", "Eggxotic"],
+        ["Portable Pearl Enhancer", "assets/wiki/portable-pearl-enhancer.webp", "Eggxotic"],
+        ["Garden of Gaia", "assets/wiki/garden-of-gaia.webp", "Superstitious"],
+        ["Enchanted Library", "assets/wiki/enchanted-library.webp", "Superstitious"],
+        ["The Forbidden Tome", "assets/wiki/the-forbidden-tome.webp", "Ultimate"],
+        ["Desert Monument", "assets/wiki/desert-monument.webp", "Reborn"],
+        ["Ghoul Lagoon", "assets/wiki/ghoul-lagoon.webp", "Exotic"],
+        ["Sacred Totem", "assets/wiki/sacred-totem.webp", "Exotic"],
+        ["Blueberry Pie", "assets/wiki/blueberry-pie.webp", "Exotic"],
+        ["Doughnut Particle Giver", "assets/wiki/doughnut-particle-giver.webp", "Collectible"],
+        ["Bunch 'O Balloons", "assets/wiki/bunch-o-balloons.webp", "Collectible"],
+        ["Confetti Cannon", "assets/wiki/confetti-cannon.webp", "Collectible"],
+        ["Skyliner Flux", "assets/wiki/skyliner-flux.webp", "Reborn"],
+        ["Devil's Spore", "assets/wiki/devil-s-spore.webp", "Advanced Evolution"],
+        ["Blobcat Dab", "assets/wiki/blobcat-dab.webp", "Redeemed"],
+        ["Lunar Bombardment", "assets/wiki/lunar-bombardment.webp", "Evolved Reborn"],
+        ["Solar Eruption", "assets/wiki/solar-eruption.webp", "Evolved Reborn"],
+        ["Candy Dodecahedron Floodlight", "assets/wiki/candy-dodecahedron-floodlight.webp", "Collectible"],
+        ["Goliath Gumball Machine", "assets/wiki/goliath-gumball-machine.webp", "Exotic"],
+        ["The Guillotine", "assets/wiki/the-guillotine.webp", "Limited Reborn"],
+        ["Ghosdeeri's Antidote", "assets/wiki/ghosdeeri-s-antidote.webp", "Limited Reborn"],
+        ["Lollipop-inator", "assets/wiki/lollipop-inator.webp", "Collectible"],
+        ["Present Schrodinger", "assets/wiki/present-schrodinger.webp", "Limited Reborn"],
+        ["Dreamer's Devastation", "assets/wiki/dreamer-s-devastation.webp", "Advanced Evolution"]
+      ]
+    },
+    "luckily_dragon": {
+      "n": "luckily_dragon",
+      "items": [
+        ["Ore Crane", "assets/wiki/ore-crane.webp", "Novice"],
+        ["Vampire Spore", "assets/wiki/vampire-spore.webp", "Advanced Reborn"],
+        ["Clover Conveyor", "assets/wiki/clover-conveyor.webp", "Collectible"],
+        ["Clover Refiner", "assets/wiki/clover-refiner-new.webp", "Collectible"],
+        ["Fool's Conveyor", "assets/wiki/fool-s-conveyor.webp", "Collectible"],
+        ["Fool's Doge Plushy", "assets/wiki/fool-s-doge-plushy.webp", "Redeemed"],
+        ["Candycorn Guardian", "assets/wiki/candycorn-guardian.webp", "Collectible"],
+        ["Iron Flakes Mine", "assets/wiki/iron-flakes-mine.webp", "Redeemed"],
+        ["Candy Conveyor", "assets/wiki/candy-conveyor.webp", "Collectible"],
+        ["Chocolate Forest", "assets/wiki/chocolate-forest.webp", "Collectible"],
+        ["Gnome Particle", "assets/wiki/gnome-particle.webp", "Intermediate"],
+        ["Clown Doge", "assets/wiki/clown-doge.webp", "Redeemed"],
+        ["Atlantic Monolith", "assets/wiki/atlantic-monolith.webp", "Reborn"],
+        ["Santa's Workclock", "assets/wiki/santa-s-workclock.webp", "Limited Reborn"],
+        ["Lobster Telephone", "assets/wiki/lobster-telephone.webp", "Fabled"]
+      ]
+    },
+    "omplat": {
+      "n": "omplat",
+      "items": [
+        ["Drone Upgrader", "assets/wiki/drone-upgrader.webp", "Epic"]
+      ]
+    },
+    "fafieanie_123": {
+      "n": "fafieanie_123",
+      "items": [
+        ["Nova Star", "assets/wiki/nova-star.webp", "Advanced Reborn"],
+        ["Acorn Avenue", "assets/wiki/acorn-avenue.webp", "Exotic"],
+        ["Rose Palace", "assets/wiki/rose-palace.webp", "Limited Reborn"],
+        ["Stellar Bombardment", "assets/wiki/stellar-bombardment.webp", "Eggxotic"],
+        ["Eggmerald Geode", "assets/wiki/eggmerald-geode.webp", "Eggxotic"],
+        ["Inflatable Party Upgrader", "assets/wiki/inflatable-party-upgrader.webp", "Collectible"],
+        ["Eternal Cake", "assets/wiki/eternal-cake.webp", "Exotic"],
+        ["Quaint Skymill", "assets/wiki/quaint-skymill.webp", "Reborn"],
+        ["Tankium Mine", "assets/wiki/tankium-mine.webp", "Eggxotic"],
+        ["Whimsical Turbine", "assets/wiki/whimsical-turbine.webp", "Evolved Reborn"],
+        ["Skydance Serenade", "assets/wiki/skydance-serenade.webp", "Slipstream"],
+        ["Lunar Spectacle", "assets/wiki/lunar-spectacle.webp", "Slipstream"],
+        ["Skydance Serenade (Renegade)", "assets/wiki/skydance-serenade.webp", "Renegade"],
+        ["Lunar Spectacle (Renegade)", "assets/wiki/lunar-spectacle.webp", "Renegade"]
+      ]
+    },
+    "talonmidnight": {
+      "n": "TalonMidnight",
+      "items": [
+        ["Crystal Shrine", "assets/wiki/crystal-shrine.webp", "Advanced Reborn"],
+        ["Strawberry Cake", "assets/wiki/strawberry-cake.webp", "Exotic"],
+        ["Suspended Lava Refiner", "assets/wiki/suspended-lava-refiner.webp", "Divine"],
+        ["Stardust Pulsar", "assets/wiki/stardust-pulsar.webp", "Advanced Reborn"],
+        ["Glass Wall Segment", "assets/wiki/glass-wall-segment.webp", "Novice"],
+        ["Reinforced Glass Wall", "assets/wiki/reinforced-glass-wall.webp", "Novice"],
+        ["Icedagger Shrine", "assets/wiki/icedagger-shrine.webp", "Exotic"],
+        ["Elysium Solemnity", "assets/wiki/elysium-solemnity.webp", "Superstitious"],
+        ["Interstellar Conqueror", "assets/wiki/interstellar-conqueror.webp", "Rare Reborn"],
+        ["Talon's Bakeshop", "assets/wiki/talon-s-bakeshop.webp", "Divine"],
+        ["New Years Monument", "assets/wiki/new-years-monument.webp", "Collectible"]
+      ]
+    },
+    "olfert7000": {
+      "n": "olfert7000",
+      "items": [
+        ["Three Years Conveyor", "assets/wiki/three-years-conveyor.webp", "Collectible"],
+        ["Three Years Upgrader", "assets/wiki/three-years-upgrader.webp", "Collectible"],
+        ["Research Points Trophy", "assets/wiki/research-points-trophy.webp", "Fabled"],
+        ["Scorching Heat", "assets/wiki/scorching-heat.webp", "Reborn"],
+        ["North Star", "assets/wiki/north-star.webp", "Collectible"],
+        ["Pumpkin Possession", "assets/wiki/pumpkin-possession.webp", "Collectible"],
+        ["Searing Heat", "assets/wiki/searing-heat.webp", "Evolved Reborn"],
+        ["Mad Monstrous Melter", "assets/wiki/mad-monstrous-melter.webp", "Evolved Reborn"]
+      ]
+    },
+    "sk3let0n": {
+      "n": "sk3let0n",
+      "items": [
+        ["Haven Tree", "assets/wiki/haven-tree.webp", "Novice"]
+      ]
+    },
+    "alex228822": {
+      "n": "alex228822",
+      "items": [
+        ["Summer Grill", "assets/wiki/summer-grill.webp", "Hydraulic"]
+      ]
+    },
+    "locard": {
+      "n": "Locard",
+      "items": [
+        ["Hydraulic Conveyor", "assets/wiki/hydraulic-conveyor.webp", "Hydraulic"],
+        ["Hydraulic Ramp", "assets/wiki/hydraulic-ramp.webp", "Hydraulic"],
+        ["Hydraulic Centering Conveyor", "assets/wiki/hydraulic-centering-conveyor.webp", "Hydraulic"],
+        ["Small Platform", "assets/wiki/small-platform.webp", "Platform"],
+        ["Standard Platform", "assets/wiki/standard-platform.webp", "Platform"],
+        ["Hydraulic Standard Platform", "assets/wiki/hydraulic-standard-platform.webp", "Platform"],
+        ["Mega Platform", "assets/wiki/mega-platform.webp", "Platform"]
+      ]
+    },
+    "master35475": {
+      "n": "master35475",
+      "items": [
+        ["Pumpkin Spice Conveyor", "assets/wiki/pumpkin-spice-conveyor.webp", "Collectible"],
+        ["Snowflake Suppressor", "assets/wiki/snowflake-suppressor.webp", "Collectible"],
+        ["Hearty Refiner", "assets/wiki/hearty-refiner.webp", "Collectible"]
+      ]
+    },
+    "thexvinn": {
+      "n": "TheXvinn",
+      "items": [
+        ["SpookDemon-66,666", "assets/wiki/spookdemon-66-666.webp", "Exotic"],
+        ["Pot of Gold-inator", "assets/wiki/pot-of-gold-inator.webp", "Exotic"],
+        ["Golden Clover Refiner", "assets/wiki/golden-clover-refiner.webp", "Exotic"],
+        ["The Holy Cheese", "assets/wiki/the-holy-cheese.webp", "Vintage"],
+        ["Gummy Refiner", "assets/wiki/gummy-refiner.webp", "Collectible"],
+        ["Frank'n'Cupcake", "assets/wiki/frank-n-cupcake.webp", "Collectible"],
+        ["The Demon", "assets/wiki/the-demon.webp", "Phantasmal"],
+        ["Belated 4th Birthday Cake", "assets/wiki/belated-4th-birthday-cake.webp", "Exotic"],
+        ["Potted Pumpkin", "assets/wiki/potted-pumpkin.webp", "Collectible"],
+        ["Spires of Conquest", "assets/wiki/spires-of-conquest.webp", "Limited Reborn"],
+        ["Conquered Wasteland", "assets/wiki/conquered-wasteland.webp", "Collectible"]
+      ]
+    },
+    "vvariovvare": {
+      "n": "VVarioVVare",
+      "items": [
+        ["Emerald Mine", "assets/wiki/emerald-mine.webp", "Intermediate"],
+        ["Ore Roaster", "assets/wiki/ore-roaster.webp", "Intermediate"],
+        ["Spookboy-500", "assets/wiki/spookboy-500.webp", "Collectible"]
+      ]
+    },
+    "devilboy8": {
+      "n": "devilboy8",
+      "items": [
+        ["Jagged Enhancer", "assets/wiki/jagged-enhancer.webp", "Basic"]
+      ]
+    },
+    "younite": {
+      "n": "Younite",
+      "items": [
+        ["RBXDev Statue", "assets/wiki/rbxdev-statue.webp", "Fabled"]
+      ]
+    },
+    "rodash22": {
+      "n": "Rodash22",
+      "items": [
+        ["Natural Spring", "assets/wiki/natural-spring.webp", "Advanced"]
+      ]
+    },
+    "nayols": {
+      "n": "Nayols",
+      "items": [
+        ["Statue of Knowledge", "assets/wiki/statue-of-knowledge.webp", "Fabled"]
+      ]
+    },
+    "emi1o": {
+      "n": "Emi1o",
+      "items": [
+        ["Toy Altar", "assets/wiki/toy-altar.webp", "Fabled"],
+        ["Forsaken Cake", "assets/wiki/forsaken-cake.webp", "Exotic"],
+        ["L.I.M.E", "assets/wiki/l-i-m-e.webp", "Collectible"],
+        ["All Star Conveyor", "assets/wiki/all-star-conveyor.webp", "Collectible"],
+        ["All Star Behemoth Cake", "assets/wiki/all-star-behemoth-cake.webp", "Exotic"],
+        ["Gielded Conveyor", "assets/wiki/gielded-conveyor.webp", "Collectible"],
+        ["Whac-A-Gield", "assets/wiki/whac-a-gield.webp", "Fabled"],
+        ["Gield Gield Furevolution", "assets/wiki/gield-gield-furevolution.webp", "Fabled"],
+        ["The Grim Reaper", "assets/wiki/the-grim-reaper.webp", "Rare Reborn"],
+        ["The Harbinger of Destruction", "assets/wiki/the-harbinger-of-destruction.webp", "Evolved Reborn"],
+        ["The Eternal Overseer", "assets/wiki/the-eternal-overseer.webp", "Exotic"],
+        ["Sphinx of Luxor", "assets/wiki/sphinx-of-luxor.webp", "Eggxotic"],
+        ["Deceptive Sorcery", "assets/wiki/deceptive-sorcery.webp", "Eggxotic"],
+        ["Da Mechanism", "assets/wiki/da-mechanism.webp", "Eggxotic"],
+        ["Vulcanus Wyvern", "assets/wiki/vulcanus-wyvern.webp", "Eggxotic"],
+        ["Tea Eggle Gardens", "assets/wiki/tea-eggle-gardens.webp", "Eggxotic"],
+        ["Vanilla Scanner", "assets/wiki/vanilla-scanner.webp", "Collectible"],
+        ["Lucky Seven's Cake", "assets/wiki/lucky-seven-s-cake.webp", "Exotic"],
+        ["Pizza Cutter", "assets/wiki/pizza-cutter.webp", "Reborn Fusion"],
+        ["Haven Shelf", "assets/wiki/haven-shelf.webp", "Collectible"],
+        ["Bell Note Conveyor", "assets/wiki/bell-note-conveyor.webp", "Fabled"],
+        ["Drum Note Conveyor", "assets/wiki/drum-note-conveyor.webp", "Fabled"],
+        ["Guitar Note Conveyor", "assets/wiki/guitar-note-conveyor.webp", "Fabled"],
+        ["Piano Note Conveyor", "assets/wiki/piano-note-conveyor.webp", "Fabled"],
+        ["Flute Note Conveyor", "assets/wiki/flute-note-conveyor.webp", "Fabled"],
+        ["Ghost Vacuum", "assets/wiki/ghost-vacuum.webp", "Eggxotic"],
+        ["Wall of Rockstars", "assets/wiki/wall-of-rockstars.webp", "Eggxotic"],
+        ["Borker's Luxury Villa", "assets/wiki/borker-s-luxury-villa.webp", "Eggxotic"],
+        ["Photo Memoria", "assets/wiki/photo-memoria.webp", "Collectible"],
+        ["Retro Haven", "assets/wiki/retro-haven.webp", "Collectible"],
+        ["Pizza Oven", "assets/wiki/pizza-oven.webp", "Exotic"],
+        ["Chezburgor", "assets/wiki/chezburgor.webp", "Fabled"]
+      ]
+    },
+    "dahnoob": {
+      "n": "DahNoob",
+      "items": [
+        ["Noobite Mine", "assets/wiki/noobite-mine-hd.webp", "Vintage"]
+      ]
+    },
+    "stylishfreak": {
+      "n": "StylishFreak",
+      "items": [
+        ["Ambrosia Mine", "assets/wiki/ambrosia-mine-hd.webp", "Legendary"]
+      ]
+    },
+    "loandot": {
+      "n": "LoanDot",
+      "items": [
+        ["Birthday Conveyor", "assets/wiki/birthday-conveyor.webp", "Collectible"]
+      ]
+    },
+    "longconnpoo1234": {
+      "n": "longconnpoo1234",
+      "items": [
+        ["Oversized Full Shield Conveyor", "assets/wiki/oversized-full-shield-conveyor.webp", "Intermediate"],
+        ["Full Shield Conveyor", "assets/wiki/full-shield-conveyor.webp", "Intermediate"]
+      ]
+    },
+    "bluethlng": {
+      "n": "BlueThlng",
+      "items": [
+        ["Lord of Tenebrous", "assets/wiki/lord-of-tenebrous.webp", "Advanced Evolution"]
+      ]
+    },
+    "finalxbossxtommyb9": {
+      "n": "FinalxBossxtommyb9",
+      "items": [
+        ["King Gold Mine", "assets/wiki/king-gold-mine.webp", "Rare Reborn"]
+      ]
+    },
+    "ewitsfiddlestyx": {
+      "n": "ewitsfiddlestyx",
+      "items": [
+        ["Pumpkinite Mine", "assets/wiki/pumpkinite-mine.webp", "Exotic"],
+        ["Pizza Bombarder", "assets/wiki/pizza-bombarder.webp", "Evolved Reborn"],
+        ["Pizza Blaster", "assets/wiki/pizza-blaster.webp", "Reborn"],
+        ["Newtonic Corroder", "assets/wiki/newtonic-corroder.webp", "Reborn"]
+      ]
+    },
+    "lucaduke": {
+      "n": "lucaduke",
+      "items": [
+        ["PIZZA DOGE", "assets/wiki/pizza-doge.webp", "Collectible"],
+        ["Nuclear Castle", "assets/wiki/nuclear-castle.webp", "Evolved Reborn"]
+      ]
+    },
+    "theninjaofgames": {
+      "n": "TheNinjaOfGames",
+      "items": [
+        ["Suspicious Refrigerator", "assets/wiki/suspicious-refrigerator.webp", "Divine"],
+        ["Oof Particles", "assets/wiki/oof-particles.webp", "Redeemed"]
+      ]
+    },
+    "spectaqual": {
+      "n": "Spectaqual",
+      "items": [
+        ["Canis Processus", "assets/wiki/canis-processus.webp", "Vintage"]
+      ]
+    },
+    "charlesmegaxkill18": {
+      "n": "charlesmegaxkill18",
+      "items": [
+        ["Optic Origin", "assets/wiki/optic-origin.webp", "Superstitious"]
+      ]
+    },
+    "fireblazeice124": {
+      "n": "fireblazeice124",
+      "items": [
+        ["New Year's City", "assets/wiki/new-year-s-city.webp", "Collectible"]
+      ]
+    },
+    "electropix": {
+      "n": "ElectroPix",
+      "items": [
+        ["Valentine's Teleporter", "assets/wiki/valentine-s-teleporter-sender.webp", "Collectible"]
+      ]
+    },
+    "heverbord": {
+      "n": "HEVERBORD",
+      "items": [
+        ["Rotary Upgrader", "assets/wiki/rotary-upgrader.webp", "Legendary"],
+        ["Soul Blossom", "assets/wiki/soul-blossom.webp", "Rare Reborn"]
+      ]
+    },
+    "mustakilla": {
+      "n": "Mustakilla",
+      "items": [
+        ["Wholesome Doge", "assets/wiki/wholesome-doge.webp", "Collectible"]
+      ]
+    },
+    "flyingdoge29": {
+      "n": "FlyingDoge29",
+      "items": [
+        ["Leprechaun's Hat", "assets/wiki/leprechaun-s-hat.webp", "Exotic"],
+        ["Redwood Compass", "assets/wiki/redwood-compass.webp", "Exotic"],
+        ["Radio Tower", "assets/wiki/radio-tower.webp", "Eggxotic"]
+      ]
+    },
+    "ascimov": {
+      "n": "ascimov",
+      "items": [
+        ["Honeycomb Solace", "assets/wiki/honeycomb-solace.webp", "Exotic"],
+        ["Big Alberto", "assets/wiki/big-alberto.webp", "Advanced Reborn"],
+        ["Banana Sundae Refiner", "assets/wiki/banana-sundae-refiner.webp", "Evolved Reborn"],
+        ["Castle Bravo", "assets/wiki/castle-bravo.webp", "Advanced Evolution"]
+      ]
+    },
+    "farlorddeath": {
+      "n": "FarLordDeath",
+      "items": [
+        ["Vitamin C-Coater", "assets/wiki/vitamin-c-coater.webp", "Eggxotic"],
+        ["Pizza Conveyor", "assets/wiki/pizza-conveyor.webp", "Collectible"]
+      ]
+    },
+    "fortnitekid4792": {
+      "n": "fortnitekid4792",
+      "items": [
+        ["Big Bunny", "assets/wiki/big-bunny.webp", "Exotic"],
+        ["Pizza Flooring", "assets/wiki/pizza-flooring.webp", "Collectible"]
+      ]
+    },
+    "anexpia": {
+      "n": "anexpia",
+      "items": [
+        ["Cosmic Device", "assets/wiki/cosmic-device.webp", "Eggxotic"],
+        ["Malicious Incubator", "assets/wiki/malicious-incubator.webp", "Eggxotic"],
+        ["Bunny Infuser", "assets/wiki/bunny-infuser.webp", "Exotic"],
+        ["Ore Chainsaw", "assets/wiki/ore-chainsaw.webp", "Evolved Reborn"],
+        ["The Hourglass", "assets/wiki/the-hourglass.webp", "Superstitious"],
+        ["Universal Collapse", "assets/wiki/universal-collapse.webp", "Evolved Reborn"],
+        ["Blobcat Blanket", "assets/wiki/blobcat-blanket.webp", "Redeemed"],
+        ["Demon Core", "assets/wiki/demon-core.webp", "Evolved Reborn"],
+        ["Swag Iron Mine", "assets/wiki/swag-iron-mine.webp", "Fabled"]
+      ]
+    },
+    "6mikael6": {
+      "n": "6mikael6",
+      "items": [
+        ["Illusions of Void", "assets/wiki/illusions-of-void.webp", "Eggxotic"],
+        ["Industrial Scarab", "assets/wiki/industrial-scarab.webp", "Reborn"]
+      ]
+    },
+    "crusanfrye": {
+      "n": "Crusanfrye",
+      "items": [
+        ["Desert Monument", "assets/wiki/desert-monument.webp", "Reborn"]
+      ]
+    },
+    "isimpforsky": {
+      "n": "iSimpForSky",
+      "items": [
+        ["The Sporest", "assets/wiki/the-sporest.webp", "Reborn"]
+      ]
+    },
+    "magicalv": {
+      "n": "MagicalV",
+      "items": [
+        ["Blueberry Present", "assets/wiki/blueberry-present.webp", "Exotic"],
+        ["Oblivion Emission", "assets/wiki/oblivion-emission.webp", "Enchanted"],
+        ["Sugar Corroder", "assets/wiki/sugar-corroder.webp", "Exotic"],
+        ["The Baron", "assets/wiki/the-baron.webp", "Phantasmal"],
+        ["Pumpkin Carriage", "assets/wiki/pumpkin-carriage.webp", "Collectible"],
+        ["Pumpkin Blobcat", "assets/wiki/pumpkin-blobcat.webp", "Collectible"],
+        ["The Void Ritual", "assets/wiki/the-void-ritual.webp", "Exotic"],
+        ["Peppermint Conveyor", "assets/wiki/peppermint-conveyor.webp", "Collectible"],
+        ["Abominable Screaming Tree", "assets/wiki/abominable-screaming-tree.webp", "Exotic"],
+        ["Legendary Peppermint", "assets/wiki/legendary-peppermint.webp", "Relic"],
+        ["Mighty Sugar Cookie", "assets/wiki/mighty-sugar-cookie.webp", "Relic"],
+        ["Disco Flooring", "assets/wiki/disco-flooring.webp", "Collectible"],
+        ["Ore Striker", "assets/wiki/ore-striker.webp", "Exotic"]
+      ]
+    },
+    "patchiouli": {
+      "n": "Patchiouli",
+      "items": [
+        ["Scorponyte Mine", "assets/wiki/scorponyte-mine.webp", "Evolved Reborn"]
+      ]
+    },
+    "crazyyhamburger": {
+      "n": "CRAZYYHAMBURGER",
+      "items": [
+        ["Gift Blaster", "assets/wiki/gift-blaster.webp", "Collectible"],
+        ["Macaroon Upgrader", "assets/wiki/macaroon-upgrader.webp", "Collectible"],
+        ["Rock Candy Center", "assets/wiki/rock-candy-center.webp", "Quest"],
+        ["Pumpkin Pie Refiner", "assets/wiki/pumpkin-pie-refiner.webp", "Exotic"],
+        ["The Crazy Hamburger", "assets/wiki/the-crazy-hamburger.webp", "Collectible"],
+        ["Horseman's Cutlass", "assets/wiki/horseman-s-cutlass.webp", "Collectible"],
+        ["Spectral Research Center", "assets/wiki/spectral-research-center.webp", "Collectible"],
+        ["Parasitic Invader", "assets/wiki/parasitic-invader.webp", "Exotic"],
+        ["Pumpkin Spice Refiner", "assets/wiki/pumpkin-spice-refiner.webp", "Collectible"],
+        ["The Lord", "assets/wiki/the-lord.webp", "Phantasmal"],
+        ["Candycorn Refiner", "assets/wiki/candycorn-refiner.webp", "Collectible"],
+        ["Darkseedium Mine", "assets/wiki/darkseedium-mine.webp", "Collectible"],
+        ["Widow's Outpost", "assets/wiki/widow-s-outpost.webp", "Exotic"],
+        ["Bag of Stars", "assets/wiki/bag-of-stars.webp", "Collectible"],
+        ["Street Lamp", "assets/wiki/street-lamp.webp", "Collectible"]
+      ]
+    },
+    "tarisaway": {
+      "n": "TarIsAway",
+      "items": [
+        ["Doomsday Apparatus", "assets/wiki/doomsday-apparatus.webp", "Collectible"],
+        ["Dusekkar's Famine", "assets/wiki/dusekkar-s-famine.webp", "Collectible"],
+        ["Famished Wasteland", "assets/wiki/famished-wasteland.webp", "Limited Reborn"]
+      ]
+    },
+    "rockerite": {
+      "n": "Rockerite",
+      "items": [
+        ["Starlight Floodlight", "assets/wiki/starlight-floodlight.webp", "Collectible"],
+        ["Industrial Skeletal Salvation", "assets/wiki/industrial-skeletal-salvation.webp", "Collectible"],
+        ["The Boy", "assets/wiki/the-boy.webp", "Phantasmal"],
+        ["Nerd Table", "assets/wiki/nerd-table.webp", "Epic"],
+        ["Ze Chef Fargieldo", "assets/wiki/ze-chef-fargieldo.webp", "Collectible"]
+      ]
+    },
+    "gnome_s": {
+      "n": "Gnome_S",
+      "items": [
+        ["Methuselah's Mask", "assets/wiki/methuselah-s-mask.webp", "Superstitious"],
+        ["Blazing Agriculture", "assets/wiki/blazing-agriculture.webp", "Relic"],
+        ["Sporegg Hut", "assets/wiki/sporegg-hut.webp", "Eggxotic"]
+      ]
+    },
+    "xkiiyoko": {
+      "n": "xKiiyoko",
+      "items": [
+        ["Meralin's Sorcery", "assets/wiki/meralin-s-sorcery.webp", "Superstitious"],
+        ["Blobcat Plushie", "assets/wiki/blobcat-plushie.webp", "Redeemed"],
+        ["The Chaosrealm", "assets/wiki/the-chaosrealm.webp", "Enchanted"],
+        ["The Cornucopia", "assets/wiki/the-cornucopia.webp", "Enchanted"]
+      ]
+    },
+    "averagebobjoe": {
+      "n": "AverageBobJoe",
+      "items": [
+        ["Blobcat Wall", "assets/wiki/blobcat-wall.webp", "Redeemed"]
+      ]
+    },
+    "replaced": {
+      "n": "Replaced",
+      "items": [
+        ["Famished Wasteland", "assets/wiki/famished-wasteland.webp", "Limited Reborn"]
+      ]
+    },
+    "itsmethunderpikachu5": {
+      "n": "itsmethunderpikachu5",
+      "items": [
+        ["Famished Wasteland", "assets/wiki/famished-wasteland.webp", "Limited Reborn"],
+        ["The Lord", "assets/wiki/the-lord.webp", "Phantasmal"],
+        ["Dragon Cake", "assets/wiki/dragon-cake.webp", "Exotic"],
+        ["Grimstruct", "assets/wiki/grimstruct.webp", "Advanced Reborn"],
+        ["Speggtral Rose", "assets/wiki/speggtral-rose.webp", "Eggxotic"]
+      ]
+    },
+    "gamepawtis": {
+      "n": "GamePawtis",
+      "items": [
+        ["Industrial Ancient Gourd", "assets/wiki/industrial-ancient-gourd.webp", "Collectible"],
+        ["Orange Rock Candyizer", "assets/wiki/orange-rock-candyizer.webp", "Quest"],
+        ["Purple Rock Candyizer", "assets/wiki/purple-rock-candyizer.webp", "Quest"],
+        ["Green Rock Candyizer", "assets/wiki/green-rock-candyizer.webp", "Quest"],
+        ["Doomsekkar's Bastion", "assets/wiki/doomsekkar-s-bastion.webp", "Collectible"],
+        ["Pillars of Creation", "assets/wiki/pillars-of-creation.webp", "Relic"],
+        ["Birthday Gifts", "assets/wiki/birthday-gifts.webp", "Collectible"],
+        ["Birthday Table", "assets/wiki/birthday-table.webp", "Collectible"],
+        ["Decorated Table", "assets/wiki/decorated-table.webp", "Divine"],
+        ["Historic Television", "assets/wiki/historic-television.webp", "Divine"],
+        ["Spectral Purgatory", "assets/wiki/spectral-purgatory.webp", "Exotic"]
+      ]
+    },
+    "tekaflash": {
+      "n": "TekaFlash",
+      "items": [
+        ["Candy Corn Real Estate", "assets/wiki/candy-corn-real-estate.webp", "Exotic"],
+        ["Bat Floodlight", "assets/wiki/bat-floodlight.webp", "Collectible"],
+        ["Candy Castle", "assets/wiki/candy-castle.webp", "Collectible"],
+        ["Jake Plushie", "assets/wiki/jake-plushie.webp", "Collectible"]
+      ]
+    },
+    "soberbrew": {
+      "n": "SoberBrew",
+      "items": [
+        ["Forsaken Battleground", "assets/wiki/forsaken-battleground.webp", "Limited Reborn"],
+        ["The Cherry Pie", "assets/wiki/the-cherry-pie.webp", "Exotic"],
+        ["Carrot Village", "assets/wiki/carrot-village.webp", "Limited Reborn"],
+        ["Blizzard Predictor", "assets/wiki/blizzard-predictor.webp", "Limited Reborn"],
+        ["Hive Mind Extravaganza", "assets/wiki/hive-mind-extravaganza.webp", "Eggxotic"],
+        ["Purrñata", "assets/wiki/purrnata.webp", "Collectible"]
+      ]
+    },
+    "jessssssssss_s": {
+      "n": "Jessssssssss_s",
+      "items": [
+        ["The Guillotine", "assets/wiki/the-guillotine.webp", "Limited Reborn"],
+        ["Bubonic Plague", "assets/wiki/bubonic-plague.webp", "Limited Reborn"],
+        ["Spires of Conquest", "assets/wiki/spires-of-conquest.webp", "Limited Reborn"],
+        ["King Darkseed", "assets/wiki/king-darkseed.webp", "Limited Reborn"],
+        ["Mycolympus", "assets/wiki/mycolympus.webp", "Evolved Reborn"],
+        ["Airborne Pathogenic Spewer", "assets/wiki/airborne-pathogenic-spewer.webp", "Enchanted"],
+        ["Conqueror's Delusion", "assets/wiki/conqueror-s-delusion.webp", "Enchanted"]
+      ]
+    },
+    "cheetahknight": {
+      "n": "cheetahknight",
+      "items": [
+        ["Pumpkin Hut", "assets/wiki/pumpkin-hut.webp", "Limited Reborn"]
+      ]
+    },
+    "darkgia23": {
+      "n": "darkgia23",
+      "items": [
+        ["Spider Queen", "assets/wiki/spider-queen.webp", "Collectible"],
+        ["Corner Web Flooring", "assets/wiki/corner-web-flooring.webp", "Collectible"],
+        ["Webbed Conveyor", "assets/wiki/webbed-conveyor.webp", "Collectible"]
+      ]
+    },
+    "mrderpypikachu": {
+      "n": "MrDerpyPikachu",
+      "items": [
+        ["Bubonic Plague", "assets/wiki/bubonic-plague.webp", "Limited Reborn"]
+      ]
+    },
+    "moss787ishere": {
+      "n": "Moss787IsHere",
+      "items": [
+        ["Frankenstein Guardian", "assets/wiki/frankenstein-guardian.webp", "Collectible"]
+      ]
+    },
+    "rainbo1239": {
+      "n": "Rainbo1239",
+      "items": [
+        ["Peanut Butter Cake", "assets/wiki/peanut-butter-cake.webp", "Exotic"],
+        ["Jelly Cake", "assets/wiki/jelly-cake.webp", "Exotic"],
+        ["Time-Space Scrambler", "assets/wiki/time-space-scrambler.webp", "Eggxotic"],
+        ["Soaring Chopper", "assets/wiki/soaring-chopper.webp", "Eggxotic"],
+        ["Bouncy House!!!!111!!11!1", "assets/wiki/bouncy-house-111-11-1.webp", "Exotic"]
+      ]
+    },
+    "pengy_rbx": {
+      "n": "Pengy_Rbx",
+      "items": [
+        ["Industrial Gold Mine", "assets/wiki/industrial-gold-mine.webp", "Collectible"],
+        ["Clover Schrodinger", "assets/wiki/clover-schrodinger.webp", "Collectible"]
+      ]
+    },
+    "assong": {
+      "n": "Assong",
+      "items": [
+        ["Jack-o-Lantern Wall", "assets/wiki/jack-o-lantern-wall.webp", "Collectible"]
+      ]
+    },
+    "lazilyness": {
+      "n": "Lazilyness",
+      "items": [
+        ["Azurian Castle", "assets/wiki/azurian-castle.webp", "Exotic"]
+      ]
+    },
+    "robloxzac8520": {
+      "n": "robloxzac8520",
+      "items": [
+        ["Big Candy Cane", "assets/wiki/big-candy-cane.webp", "Collectible"]
+      ]
+    },
+    "gt6pro": {
+      "n": "GT6PRO",
+      "items": [
+        ["Snowflake Wheel", "assets/wiki/snowflake-wheel.webp", "Limited Reborn"]
+      ]
+    },
+    "albertmines": {
+      "n": "albertmines",
+      "items": [
+        ["Gingerbreadium Mine", "assets/wiki/gingerbreadium-mine.webp", "Exotic"],
+        ["Santa's Nice List", "assets/wiki/santa-s-nice-list.webp", "Exotic"]
+      ]
+    },
+    "pipogthomasgaming": {
+      "n": "PipOgThomasGaming",
+      "items": [
+        ["Noxious Containment", "assets/wiki/noxious-containment.webp", "Eggxotic"]
+      ]
+    },
+    "lightningboy_eric": {
+      "n": "Lightningboy_eric",
+      "items": [
+        ["Burgor Diner", "assets/wiki/burgor-diner.webp", "Eggxotic"],
+        ["Protector of the Passage", "assets/wiki/protector-of-the-passage.webp", "Reborn Fusion"],
+        ["Cactus Mirage", "assets/wiki/cactus-mirage.webp", "Eggxotic"],
+        ["The Darkest Aura", "assets/wiki/the-darkest-aura.webp", "Fabled"],
+        ["Famished Farm", "assets/wiki/famished-farm.webp", "Limited Reborn"],
+        ["Scales of Disparity", "assets/wiki/scales-of-disparity.webp", "Enchanted"]
+      ]
+    },
+    "cyancanbuild": {
+      "n": "CyanCanBuild",
+      "items": [
+        ["Berezaa Car Upgrader", "assets/wiki/berezaa-car-upgrader.webp", "Collectible"]
+      ]
+    },
+    "atombomberik": {
+      "n": "AtomBombErik",
+      "items": [
+        ["Pineapple! Stand", "assets/wiki/pineapple-stand.webp", "Collectible"]
+      ]
+    },
+    "mrjeffinizor": {
+      "n": "MrJeffinizor",
+      "items": [
+        ["Minecart Track", "assets/wiki/track.webp", "Fabled"]
+      ]
+    },
+    "drabloxerb": {
+      "n": "drabloxerb",
+      "items": [
+        ["Huge Firework", "assets/wiki/huge-firework.webp", "Collectible"]
+      ]
+    },
+    "abrahamabugri": {
+      "n": "abrahamabugri",
+      "items": [
+        ["Heart Floodlight", "assets/wiki/heart-floodlight.webp", "Collectible"]
+      ]
+    },
+    "mouseroo": {
+      "n": "mouseroo",
+      "items": [
+        ["Heart Balloons", "assets/wiki/heart-balloons.webp", "Collectible"]
+      ]
+    },
+    "shadowflame63": {
+      "n": "shadowflame63",
+      "items": [
+        ["Dropped Sinister Potion", "assets/wiki/dropped-sinister-potion.webp", "Fabled"],
+        ["Intimidating Horse", "assets/wiki/intimidating-horse.webp", "Fabled"],
+        ["Sinister Potion", "assets/wiki/sinister-potion-gear.webp", "Misc"]
+      ]
+    },
+    "solarworld50": {
+      "n": "SolarWorld50",
+      "items": [
+        ["DECADE HAVEN CONVEYOR", "assets/wiki/decade-haven-conveyor.webp", "Collectible"],
+        ["Eternal Conveyor", "assets/wiki/eternal-conveyor.webp", "Collectible"],
+        ["Hogog", "assets/wiki/hogog.webp", "Redeemed"]
+      ]
+    }
+  },
+  "eggItems": [
+    ["Vitamin C-Coater", "assets/wiki/vitamin-c-coater.webp"],
+    ["Amber Fossilizer", "assets/wiki/amber-fossilizer.webp"],
+    ["Cosmic Device", "assets/wiki/cosmic-device.webp"],
+    ["Shield Generator", "assets/wiki/shield-generator.webp"],
+    ["Methane Sky Fleet", "assets/wiki/methane-sky-fleet.webp"],
+    ["Coconut Drencher", "assets/wiki/coconut-drencher.webp"],
+    ["CYBEGG9000", "assets/wiki/cybegg9000.webp"],
+    ["Deviled Blaster", "assets/wiki/deviled-blaster.webp"],
+    ["The Dust Devil", "assets/wiki/the-dust-devil.webp"],
+    ["Illusions of Void", "assets/wiki/illusions-of-void.webp"],
+    ["Reaper's Fortress", "assets/wiki/reaper-s-fortress.webp"],
+    ["Eggscream Refiner", "assets/wiki/eggscream-refiner.webp"],
+    ["Energy Core", "assets/wiki/energy-core.webp"],
+    ["Gator's Cove", "assets/wiki/gator-s-cove.webp"],
+    ["Malicious Incubator", "assets/wiki/malicious-incubator.webp"],
+    ["Moai God", "assets/wiki/moai-god.webp"],
+    ["Obsidian Infusion Device", "assets/wiki/obsidian-infusion-device.webp"],
+    ["Octopi Council", "assets/wiki/octopi-council.webp"],
+    ["Sandshark", "assets/wiki/sandshark-sender.webp"],
+    ["Vaporwave Vibe Visualizer", "assets/wiki/vaporwave-vibe-visualizer.webp"],
+    ["Leggendary Black Hole", "assets/wiki/leggendary-black-hole.webp"],
+    ["Portable Pearl Enhancer", "assets/wiki/portable-pearl-enhancer.webp"],
+    ["Dubious Noobius Guardian", "assets/wiki/dubious-noobius-guardian.webp"],
+    ["Ruby Crystallizer", "assets/wiki/ruby-crystallizer.webp"],
+    ["ITeleporter", "assets/wiki/iteleporter.webp"],
+    ["The Stormcrow", "assets/wiki/the-stormcrow.webp"],
+    ["Sphinx of Luxor", "assets/wiki/sphinx-of-luxor.webp"],
+    ["Deceptive Sorcery", "assets/wiki/deceptive-sorcery.webp"],
+    ["Noxious Containment", "assets/wiki/noxious-containment.webp"],
+    ["Hive Mind Extravaganza", "assets/wiki/hive-mind-extravaganza.webp"],
+    ["Da Mechanism", "assets/wiki/da-mechanism.webp"],
+    ["Stellar Bombardment", "assets/wiki/stellar-bombardment.webp"],
+    ["Eggmerald Geode", "assets/wiki/eggmerald-geode.webp"],
+    ["Vulcanus Wyvern", "assets/wiki/vulcanus-wyvern.webp"],
+    ["Tea Eggle Gardens", "assets/wiki/tea-eggle-gardens.webp"],
+    ["Burgor Diner", "assets/wiki/burgor-diner.webp"],
+    ["Radio Tower", "assets/wiki/radio-tower.webp"],
+    ["Eggy Sentry Turret", "assets/wiki/eggy-sentry-turret.webp"],
+    ["Soapy Refiner", "assets/wiki/soapy-refiner.webp"],
+    ["Speggtral Rose", "assets/wiki/speggtral-rose.webp"],
+    ["Ghost Vacuum", "assets/wiki/ghost-vacuum.webp"],
+    ["Tankium Mine", "assets/wiki/tankium-mine.webp"],
+    ["Time-Space Scrambler", "assets/wiki/time-space-scrambler.webp"],
+    ["Eggplosive Refiner", "assets/wiki/eggplosive-refiner.webp"],
+    ["Cactus Mirage", "assets/wiki/cactus-mirage.webp"],
+    ["Chicken Legg Cookout", "assets/wiki/chicken-legg-cookout.webp"],
+    ["Wall of Rockstars", "assets/wiki/wall-of-rockstars.webp"],
+    ["The Vault", "assets/wiki/the-vault.webp"],
+    ["Soaring Chopper", "assets/wiki/soaring-chopper.webp"],
+    ["Sporegg Hut", "assets/wiki/sporegg-hut.webp"],
+    ["Lucky Hat", "assets/wiki/lucky-hat.webp"],
+    ["Final Fabergé", "assets/wiki/final-faberge.webp"],
+    ["Borker's Luxury Villa", "assets/wiki/borker-s-luxury-villa.webp"],
+    ["Winter Wonderworld", "assets/wiki/winter-wonderworld.webp"]
+  ],
+  "staff": {
+    "updated": "2026-11-23",
+    "people": [
+      {
+        "id": 2625946,
+        "name": "Ripint",
+        "dn": "Ripint",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Artist",
+            "group": "berezaa Games",
+            "rank": 200
+          }
+        ]
+      },
+      {
+        "id": 4771676,
+        "name": "olfert7000",
+        "dn": "olfert7000",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 5000861,
+        "name": "berezaa",
+        "dn": "Bereza",
+        "roles": [
+          {
+            "cat": "dev",
+            "role": "berezaa",
+            "group": "berezaa Games",
+            "rank": 255
+          },
+          {
+            "cat": "dev",
+            "role": "Lead Dev",
+            "group": "Area S-51",
+            "rank": 255
+          }
+        ]
+      },
+      {
+        "id": 9190668,
+        "name": "OutOfOrderFoxy",
+        "dn": "OutOfOrderFoxy",
+        "roles": [
+          {
+            "cat": "dev",
+            "role": "Admin",
+            "group": "berezaa Games",
+            "rank": 225
+          },
+          {
+            "cat": "dev",
+            "role": "Admin",
+            "group": "Area S-51",
+            "rank": 254
+          }
+        ]
+      },
+      {
+        "id": 9396335,
+        "name": "sk3let0n",
+        "dn": "sk3let0n",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Contributor",
+            "group": "berezaa Games",
+            "rank": 75
+          },
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 12913712,
+        "name": "vishkars",
+        "dn": "vishkars",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Artist",
+            "group": "berezaa Games",
+            "rank": 200
+          }
+        ]
+      },
+      {
+        "id": 13042729,
+        "name": "Younite",
+        "dn": "Younite",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Artist",
+            "group": "berezaa Games",
+            "rank": 200
+          }
+        ]
+      },
+      {
+        "id": 14219595,
+        "name": "papapyra",
+        "dn": "foshes",
+        "roles": [
+          {
+            "cat": "mod",
+            "role": "Moderator",
+            "group": "berezaa Games",
+            "rank": 100
+          }
+        ]
+      },
+      {
+        "id": 15138220,
+        "name": "PumpkinWhite",
+        "dn": "Tristan",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Artist",
+            "group": "berezaa Games",
+            "rank": 200
+          }
+        ]
+      },
+      {
+        "id": 16413954,
+        "name": "shadowflame63",
+        "dn": "MiniiMann",
+        "roles": [
+          {
+            "cat": "dev",
+            "role": "Lead Developer",
+            "group": "berezaa Games",
+            "rank": 215
+          },
+          {
+            "cat": "dev",
+            "role": "Dev",
+            "group": "Area S-51",
+            "rank": 253
+          }
+        ]
+      },
+      {
+        "id": 16451406,
+        "name": "Trqce",
+        "dn": "Trqce",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 16485297,
+        "name": "Negativize",
+        "dn": "Negativize",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 20716652,
+        "name": "superdave100",
+        "dn": "superdave100",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 23032307,
+        "name": "Frenzzyy",
+        "dn": "nick frnz",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Contributor",
+            "group": "berezaa Games",
+            "rank": 75
+          },
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 25048901,
+        "name": "valphex",
+        "dn": "valphex",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Contributor",
+            "group": "berezaa Games",
+            "rank": 75
+          },
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 25484931,
+        "name": "emforayewon_modtree",
+        "dn": "M4A1",
+        "roles": [
+          {
+            "cat": "mod",
+            "role": "Moderator",
+            "group": "berezaa Games",
+            "rank": 100
+          }
+        ]
+      },
+      {
+        "id": 29450075,
+        "name": "Scylen",
+        "dn": "Reggie",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Contributor",
+            "group": "berezaa Games",
+            "rank": 75
+          }
+        ]
+      },
+      {
+        "id": 29819622,
+        "name": "EvilArtist",
+        "dn": "EvilArtist",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Artist",
+            "group": "berezaa Games",
+            "rank": 200
+          }
+        ]
+      },
+      {
+        "id": 30483959,
+        "name": "maplestick",
+        "dn": "maplestick",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Artist",
+            "group": "berezaa Games",
+            "rank": 200
+          }
+        ]
+      },
+      {
+        "id": 33187252,
+        "name": "Qulic36",
+        "dn": "Qulic",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 33271377,
+        "name": "BeagleJonas",
+        "dn": "BeagleJonas",
+        "roles": [
+          {
+            "cat": "mod",
+            "role": "Moderator",
+            "group": "berezaa Games",
+            "rank": 100
+          },
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 33497278,
+        "name": "DarkHeIl",
+        "dn": "DarkTenebris",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 34148429,
+        "name": "Reah_x",
+        "dn": "rhx",
+        "roles": [
+          {
+            "cat": "mod",
+            "role": "Moderator",
+            "group": "berezaa Games",
+            "rank": 100
+          },
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 35323013,
+        "name": "koob85",
+        "dn": "koob85",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 35597904,
+        "name": "planefreak34",
+        "dn": "planefreak34",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 36957633,
+        "name": "kii_yoko",
+        "dn": "Kiiyoko",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Contributor",
+            "group": "berezaa Games",
+            "rank": 75
+          },
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 46886673,
+        "name": "ThetaTheDragon",
+        "dn": "saeur",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 47160767,
+        "name": "Lord_Springy",
+        "dn": "Eternity",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 47410071,
+        "name": "bma300",
+        "dn": "bma300",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 50564727,
+        "name": "SoftwareDoctor",
+        "dn": "scottricity",
+        "roles": [
+          {
+            "cat": "dev",
+            "role": "Admin",
+            "group": "berezaa Games",
+            "rank": 225
+          },
+          {
+            "cat": "dev",
+            "role": "Admin",
+            "group": "Area S-51",
+            "rank": 254
+          }
+        ]
+      },
+      {
+        "id": 51405726,
+        "name": "bruhpressed",
+        "dn": "bruhpressed",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 51469141,
+        "name": "cole20050",
+        "dn": "Cole",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 52685567,
+        "name": "Supz_Boi",
+        "dn": "Supz_Boi",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 52691190,
+        "name": "LadyTachyon",
+        "dn": "LadyTachyon",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 55693122,
+        "name": "clerical_ly",
+        "dn": "cleric",
+        "roles": [
+          {
+            "cat": "mod",
+            "role": "Moderator",
+            "group": "berezaa Games",
+            "rank": 100
+          },
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 59084150,
+        "name": "xtntt",
+        "dn": "tnt",
+        "roles": [
+          {
+            "cat": "dev",
+            "role": "Developer",
+            "group": "berezaa Games",
+            "rank": 210
+          }
+        ]
+      },
+      {
+        "id": 62675781,
+        "name": "SoberBrew",
+        "dn": "SoberBrew",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 66641387,
+        "name": "Icyycl",
+        "dn": "Icycl",
+        "roles": [
+          {
+            "cat": "mod",
+            "role": "Moderator",
+            "group": "berezaa Games",
+            "rank": 100
+          }
+        ]
+      },
+      {
+        "id": 75124078,
+        "name": "vlSapphire",
+        "dn": "Sapphire",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 75974130,
+        "name": "TalonMidnight",
+        "dn": "Talon",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Contributor",
+            "group": "berezaa Games",
+            "rank": 75
+          },
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          },
+          {
+            "cat": "dev",
+            "role": "Dev",
+            "group": "Area S-51",
+            "rank": 253
+          }
+        ]
+      },
+      {
+        "id": 83573928,
+        "name": "Frank9158",
+        "dn": "Frank9158",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 87972675,
+        "name": "UpsetDonut",
+        "dn": "UpsetDonut",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 92014578,
+        "name": "JusticeGaming123",
+        "dn": "TabularRobin",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 94067972,
+        "name": "idkaple",
+        "dn": "aple",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 94392740,
+        "name": "AtomBombErik",
+        "dn": "AtomBombErik",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 103774678,
+        "name": "hyrxxo",
+        "dn": "alex",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 107760866,
+        "name": "themewtofan05",
+        "dn": "Barg",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 108392817,
+        "name": "xPixillion",
+        "dn": "Pixillion",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Contributor",
+            "group": "berezaa Games",
+            "rank": 75
+          },
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 114787902,
+        "name": "TheReverbix",
+        "dn": "TheReverbix",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 117276238,
+        "name": "Rainbo1239",
+        "dn": "Rainbo",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 117959280,
+        "name": "stepicekcz12",
+        "dn": "Stepik",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 119703750,
+        "name": "DrSolarius",
+        "dn": "sol",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 120293699,
+        "name": "SolarWorld50",
+        "dn": "Solar",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 124505170,
+        "name": "NoobNearYou",
+        "dn": "NoobNearYou",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 130574188,
+        "name": "ZDZakk",
+        "dn": "ZDZakk",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 135180080,
+        "name": "SeenVerge",
+        "dn": "SeenVerge",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 136028194,
+        "name": "AIpharunner",
+        "dn": "AIpharunner",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 138383824,
+        "name": "GameingATW",
+        "dn": "MistarGameing",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 140167694,
+        "name": "LukesyLuke",
+        "dn": "LukesyLuke",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 146874200,
+        "name": "VarianceVictim",
+        "dn": "VarianceVictim",
+        "roles": [
+          {
+            "cat": "dev",
+            "role": "Developer",
+            "group": "berezaa Games",
+            "rank": 210
+          },
+          {
+            "cat": "dev",
+            "role": "Dev",
+            "group": "Area S-51",
+            "rank": 253
+          }
+        ]
+      },
+      {
+        "id": 147303126,
+        "name": "hurbious",
+        "dn": "hurbious",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 160677253,
+        "name": "DetWasTaken",
+        "dn": "Det",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 169764453,
+        "name": "roblox_user_169764453",
+        "dn": "roblox_user_169764453",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Contributor",
+            "group": "berezaa Games",
+            "rank": 75
+          },
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 177648324,
+        "name": "DestinyRaiders",
+        "dn": "Leah",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 179215831,
+        "name": "REDGREIF",
+        "dn": "glorpy",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 200074616,
+        "name": "Syncinus",
+        "dn": "Syncinus",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Contributor",
+            "group": "berezaa Games",
+            "rank": 75
+          }
+        ]
+      },
+      {
+        "id": 208817500,
+        "name": "UnableMuffin58",
+        "dn": "UnableMuffin58",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 214824102,
+        "name": "JetFighterGreen1",
+        "dn": "・・・",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 220051208,
+        "name": "Phlegethon5778",
+        "dn": "Phlegethon5778",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 281158185,
+        "name": "KidKongN",
+        "dn": "Kong",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 335501327,
+        "name": "swagagamer911",
+        "dn": "swagagamer911",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 356648070,
+        "name": "DelphoxDaPokemon",
+        "dn": "Mantis",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 365102646,
+        "name": "DisappointingToaster",
+        "dn": "DisappointingToaster",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Contributor",
+            "group": "berezaa Games",
+            "rank": 75
+          },
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 458788479,
+        "name": "CyanCanBuild",
+        "dn": "CyanCanBuild",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 474167665,
+        "name": "RoseGoldIsntGey",
+        "dn": "RoseGold",
+        "roles": [
+          {
+            "cat": "mod",
+            "role": "Moderator",
+            "group": "berezaa Games",
+            "rank": 100
+          },
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 524535207,
+        "name": "hendersonisadrip",
+        "dn": "Swift",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 848036342,
+        "name": "ThEDArKeStHoUr0fLiFe",
+        "dn": "AngelicDespair",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 889918695,
+        "name": "Jaudr3y",
+        "dn": "Audrey",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 905123379,
+        "name": "ThefeefeeMaster",
+        "dn": "ThefeefeeMaster",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 965073554,
+        "name": "GamePawtis",
+        "dn": "GamePawtis",
+        "roles": [
+          {
+            "cat": "mod",
+            "role": "Moderator",
+            "group": "berezaa Games",
+            "rank": 100
+          },
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 1242902085,
+        "name": "AuraLixius",
+        "dn": "AuraLixius",
+        "roles": [
+          {
+            "cat": "con",
+            "role": "Contributor",
+            "group": "berezaa Games",
+            "rank": 75
+          }
+        ]
+      },
+      {
+        "id": 1277950378,
+        "name": "Caesophen",
+        "dn": "Caesophen",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 1296852237,
+        "name": "Jesssssssss_s",
+        "dn": "Jess",
+        "roles": [
+          {
+            "cat": "dev",
+            "role": "Developer",
+            "group": "berezaa Games",
+            "rank": 210
+          },
+          {
+            "cat": "dev",
+            "role": "Jr. Dev",
+            "group": "Area S-51",
+            "rank": 5
+          }
+        ]
+      },
+      {
+        "id": 1343308718,
+        "name": "uyunyang",
+        "dn": "うゆめ",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 2498277887,
+        "name": "InfinittXC",
+        "dn": "InfinitXC",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 5079852412,
+        "name": "shadowflame6364",
+        "dn": "MiniiiMannn",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      },
+      {
+        "id": 5221575644,
+        "name": "Leachy_Jr",
+        "dn": "Leachy_Jr",
+        "roles": [
+          {
+            "cat": "test",
+            "role": "Tester",
+            "group": "Area S-51",
+            "rank": 1
+          }
+        ]
+      }
+    ]
+  },
+  "badges": [
+    {
+      "id": 697770868,
+      "name": "Welcome!",
+      "desc": "Thanks for playing Miner's Haven!",
+      "awarded": 22608636,
+      "created": "2017-03-17T04:22:40.357+00:00",
+      "icon": ""
+    },
+    {
+      "id": 258262122,
+      "name": "Getting Started",
+      "desc": "Place your first item.",
+      "awarded": 15017644,
+      "created": "2015-06-13T04:09:28.85+00:00",
+      "icon": ""
+    },
+    {
+      "id": 258264216,
+      "name": "Stepping It Up",
+      "desc": "Buy Ore Incinerator furnace from the shop.",
+      "awarded": 2726617,
+      "created": "2015-06-13T04:19:59.993+00:00",
+      "icon": ""
+    },
+    {
+      "id": 1612341794,
+      "name": "Upgraded",
+      "desc": "Upgrade a single ore ten times.",
+      "awarded": 1722297,
+      "created": "2018-04-13T22:20:29.42+00:00",
+      "icon": ""
+    },
+    {
+      "id": 258261279,
+      "name": "Millionaire",
+      "desc": "Obtain a million dollars.",
+      "awarded": 5465395,
+      "created": "2015-06-13T04:04:54.747+00:00",
+      "icon": ""
+    },
+    {
+      "id": 1613546105,
+      "name": "Trillionaire",
+      "desc": "Obtain a whopping trillion dollars.",
+      "awarded": 989989,
+      "created": "2018-04-14T03:38:33.83+00:00",
+      "icon": ""
+    },
+    {
+      "id": 258260444,
+      "name": "Reborn",
+      "desc": "Achieve your first Rebirth.",
+      "awarded": 647071,
+      "created": "2015-06-13T04:00:43.453+00:00",
+      "icon": ""
+    },
+    {
+      "id": 258842557,
+      "name": "Genesis",
+      "desc": "Be reborn into your 5th life.",
+      "awarded": 458605,
+      "created": "2015-06-14T21:19:14.817+00:00",
+      "icon": ""
+    },
+    {
+      "id": 697732653,
+      "name": "Slipstream",
+      "desc": "Obtain a Slipstream item.",
+      "awarded": 320176,
+      "created": "2017-03-17T03:22:12.387+00:00",
+      "icon": ""
+    },
+    {
+      "id": 285103430,
+      "name": "Overlord",
+      "desc": "Achieve a duodecillion dollars (That's ten with 38 zeros after it)",
+      "awarded": 237635,
+      "created": "2015-08-16T19:37:57.267+00:00",
+      "icon": ""
+    },
+    {
+      "id": 685937164,
+      "name": "The Ultimate Sacrifice",
+      "desc": "Reach life 1,000 and give it all up.",
+      "awarded": 131649,
+      "created": "2017-03-08T10:52:51.007+00:00",
+      "icon": ""
+    },
+    {
+      "id": 1055766390,
+      "name": "Evolved",
+      "desc": "Fuse your reborn items into an Evolved Reborn.",
+      "awarded": 164659,
+      "created": "2017-09-19T12:53:17.223+00:00",
+      "icon": ""
+    },
+    {
+      "id": 717159176,
+      "name": "Effortless",
+      "desc": "Rebirth with so much extra cash that you skip at least 3 lives.",
+      "awarded": 238445,
+      "created": "2017-03-30T20:57:06.96+00:00",
+      "icon": ""
+    },
+    {
+      "id": 1055729351,
+      "name": "Passer of Knowledge",
+      "desc": "Help a player rebirth for their first time.",
+      "awarded": 99060,
+      "created": "2017-09-19T12:10:31.617+00:00",
+      "icon": ""
+    },
+    {
+      "id": 849040191,
+      "name": "Hero",
+      "desc": "Obtain the Final Upgrader.",
+      "awarded": 94695,
+      "created": "2017-06-03T14:24:49.68+00:00",
+      "icon": ""
+    },
+    {
+      "id": 1911925958,
+      "name": "Enchanted",
+      "desc": "Forge a legendary enchanted item.",
+      "awarded": 41353,
+      "created": "2018-06-10T20:27:08.47+00:00",
+      "icon": ""
+    },
+    {
+      "id": 1604869571,
+      "name": "Blitz",
+      "desc": "Skip twenty lives in one Rebirth.",
+      "awarded": 87128,
+      "created": "2018-04-11T17:55:57.8+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124538977,
+      "name": "Superstitious",
+      "desc": "Forge a godly Superstitious-tiered item with the help from Draedon, the thunder god!",
+      "awarded": 29345,
+      "created": "2020-05-20T02:38:55.793+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124493986,
+      "name": "Centillionare",
+      "desc": "You've achieved the impossible... you've broken the system. Get this badge when you rebirth with a Centillion (10^303) dollars.",
+      "awarded": 25016,
+      "created": "2019-11-17T21:00:18.177+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124495069,
+      "name": "The Void",
+      "desc": "You have completed the eternal journey,  and uncovered the knowledge of a new Enchant item.",
+      "awarded": 26919,
+      "created": "2019-11-28T05:38:24.417+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124598655,
+      "name": "Void Hearted",
+      "desc": "Navigate through the Heart of Void, and gain the courage of performing the impossible.",
+      "awarded": 10479,
+      "created": "2020-08-30T02:55:23.013+00:00",
+      "icon": ""
+    },
+    {
+      "id": 1993527293,
+      "name": "Hands-on",
+      "desc": "Activate a remote item",
+      "awarded": 1671316,
+      "created": "2018-06-24T16:27:44.707+00:00",
+      "icon": ""
+    },
+    {
+      "id": 697782412,
+      "name": "Builder",
+      "desc": "Have fifty items placed down on your base at once.",
+      "awarded": 4576671,
+      "created": "2017-03-17T04:37:53.07+00:00",
+      "icon": ""
+    },
+    {
+      "id": 1613782880,
+      "name": "Merchant",
+      "desc": "Make a deal with the Masked Man.",
+      "awarded": 218648,
+      "created": "2018-04-14T04:53:58.95+00:00",
+      "icon": ""
+    },
+    {
+      "id": 1195310080,
+      "name": "Dedicated",
+      "desc": "Open your daily gift for seven days in a row.",
+      "awarded": 226564,
+      "created": "2017-11-23T04:39:58.997+00:00",
+      "icon": ""
+    },
+    {
+      "id": 697767975,
+      "name": "Island Life",
+      "desc": "Use the \"Play Solo\" option to play Miner's Haven on your own personal island.",
+      "awarded": 7141137,
+      "created": "2017-03-17T04:18:08.63+00:00",
+      "icon": ""
+    },
+    {
+      "id": 697776848,
+      "name": "V.I.P Server",
+      "desc": "Play Miner's Haven on a V.I.P. server.",
+      "awarded": 5039064,
+      "created": "2017-03-17T04:30:07.63+00:00",
+      "icon": ""
+    },
+    {
+      "id": 286700428,
+      "name": "Detective",
+      "desc": "Figure out what's inside a mystery box.",
+      "awarded": 9295616,
+      "created": "2015-08-20T05:51:03.973+00:00",
+      "icon": ""
+    },
+    {
+      "id": 264703739,
+      "name": "Yummy",
+      "desc": "Get your leg bitten off by an Undead Guardian!",
+      "awarded": 1406019,
+      "created": "2015-07-01T22:14:48.793+00:00",
+      "icon": ""
+    },
+    {
+      "id": 279834859,
+      "name": "Blinged",
+      "desc": "Obtained from a badge giver worth 999 crystals.",
+      "awarded": 957863,
+      "created": "2015-08-05T07:57:02.85+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124627863,
+      "name": "Apocalyptic",
+      "desc": "You managed to complete the Gauntlet of quests tasked by the four Horseman in the Halloween 2021 event!",
+      "awarded": 12012,
+      "created": "2020-10-26T04:02:59.147+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124516272,
+      "name": "Gladiator",
+      "desc": "You've successfully defeated John Doe yet again!",
+      "awarded": 132394,
+      "created": "2020-03-15T00:24:34.8+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124516336,
+      "name": "Triumphant",
+      "desc": "You have completed John Doe's more dangerous challenge, proving yourself worthy for a new Enchant!",
+      "awarded": 47627,
+      "created": "2020-03-15T06:30:34.227+00:00",
+      "icon": ""
+    },
+    {
+      "id": 685908096,
+      "name": "Verified",
+      "desc": "Verify your Roblox account in our community server.",
+      "awarded": 86171,
+      "created": "2017-03-08T09:48:53.71+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523205,
+      "name": "Amber Egg",
+      "desc": "You've found the Amber Egg!",
+      "awarded": 92866,
+      "created": "2020-04-07T21:21:39.993+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523206,
+      "name": "Antigravity Egg",
+      "desc": "You found the Antigravity Egg! Grants access to the Cosmic Device.",
+      "awarded": 83045,
+      "created": "2020-04-07T21:23:09.237+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523208,
+      "name": "Armored Egg",
+      "desc": "You found the Armored Egg! Grants access to the Shield Generator.",
+      "awarded": 90476,
+      "created": "2020-04-07T21:24:53.6+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523209,
+      "name": "Balloon Egg",
+      "desc": "You found the Balloon Egg! Grants access to the Methane Sky Fleet",
+      "awarded": 91677,
+      "created": "2020-04-07T21:26:39.65+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124722672,
+      "name": "Bomb Egg",
+      "desc": "You found the Bomb Egg! Grants access to the Eggplosive Refiner.",
+      "awarded": 59221,
+      "created": "2021-04-12T23:32:22.053+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124722673,
+      "name": "Cactus Egg",
+      "desc": "You found the Cactus Egg! Grants access to the Cactus Mirage.",
+      "awarded": 62396,
+      "created": "2021-04-12T23:32:47.767+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124722674,
+      "name": "Chicken Legg",
+      "desc": "You found the Chicken Legg! Grants access to the Chicken Legg Cookout.",
+      "awarded": 66344,
+      "created": "2021-04-12T23:33:15.01+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523210,
+      "name": "Coconut Egg",
+      "desc": "You found the Coconut Egg! Grants access to the Coconut Drencher.",
+      "awarded": 91361,
+      "created": "2020-04-07T21:28:40.01+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523211,
+      "name": "CYBEGG9000",
+      "desc": "You found the CYBEGG9000! Grants access to the CYBEGG9000.",
+      "awarded": 82473,
+      "created": "2020-04-07T21:30:52.117+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523212,
+      "name": "Deviled Egg",
+      "desc": "You found the Deviled Egg! Grants access to the Deviled Blaster.",
+      "awarded": 89084,
+      "created": "2020-04-07T21:32:02.69+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124722675,
+      "name": "Disco Egg",
+      "desc": "You found the Disco Egg! Grants access to the Wall of Rockstars.",
+      "awarded": 65279,
+      "created": "2021-04-12T23:33:39.397+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523214,
+      "name": "Dustdevil Egg",
+      "desc": "You found the Dustdevil Egg! Grants access to The Dust Devil.",
+      "awarded": 88739,
+      "created": "2020-04-07T21:33:02.61+00:00",
+      "icon": ""
+    },
+    {
+      "id": 1284166721308846,
+      "name": "Egg Ball",
+      "desc": "",
+      "awarded": 20983,
+      "created": "2024-04-07T21:05:20.327+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124722676,
+      "name": "Eggconomy",
+      "desc": "You discovered Eggconomy! Grants access to The Vault.",
+      "awarded": 64564,
+      "created": "2021-04-12T23:34:22.457+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124722677,
+      "name": "Eggicopter",
+      "desc": "You found the Eggicopter! Grants access to the Soaring Chopper",
+      "awarded": 64190,
+      "created": "2021-04-12T23:34:46.1+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523217,
+      "name": "Eggield",
+      "desc": "You found Eggield! Grants access to the Reaper's Fortress.",
+      "awarded": 13844,
+      "created": "2020-04-07T21:38:03.45+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523215,
+      "name": "Egg of Illusion",
+      "desc": "You found the Egg of Illusion! Grants access to the Illusions of Void.",
+      "awarded": 11362,
+      "created": "2020-04-07T21:34:41.087+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2143549526,
+      "name": "Eggmerald",
+      "desc": "This egg's reward shall become redeemable in a future update.",
+      "awarded": 30655,
+      "created": "2023-04-06T19:37:58.643+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523218,
+      "name": "Eggscream",
+      "desc": "You found the Eggscream! Grants access to the Eggscream Refiner.",
+      "awarded": 92903,
+      "created": "2020-04-07T21:41:09.33+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523219,
+      "name": "Energy Egg",
+      "desc": "You found the Energy Egg! Grants access to the Energy Core.",
+      "awarded": 78801,
+      "created": "2020-04-07T21:43:02.487+00:00",
+      "icon": ""
+    },
+    {
+      "id": 1064279931608805,
+      "name": "Garbage Egg",
+      "desc": "",
+      "awarded": 21623,
+      "created": "2024-04-07T21:06:21.732+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523220,
+      "name": "Gator Egg",
+      "desc": "You found the Gator Egg! Grants access to the Gator's Cove.",
+      "awarded": 86021,
+      "created": "2020-04-07T21:46:46.413+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2685377821936963,
+      "name": "Ham Burgor",
+      "desc": "",
+      "awarded": 22250,
+      "created": "2024-04-07T21:06:38.058+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2372456953124218,
+      "name": "Hive Egg",
+      "desc": "",
+      "awarded": 22767,
+      "created": "2024-04-09T07:01:12.816+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2143549531,
+      "name": "Idol Egg",
+      "desc": "This egg's reward shall become redeemable in a future update.",
+      "awarded": 29604,
+      "created": "2023-04-06T19:38:10.217+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523221,
+      "name": "iEgg",
+      "desc": "You found the iEgg! Grants access to the iTeleporter.",
+      "awarded": 88316,
+      "created": "2020-04-07T21:48:18.27+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523222,
+      "name": "Leggendary",
+      "desc": "You found the Leggendary! Grants access to the Leggendary Black Hole.",
+      "awarded": 88813,
+      "created": "2020-04-07T21:50:07.863+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124722681,
+      "name": "Lucky Egg",
+      "desc": "You found the Lucky Egg! Grants access to the Lucky Hat.",
+      "awarded": 67101,
+      "created": "2021-04-12T23:42:50.557+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523225,
+      "name": "Malicious Egg",
+      "desc": "You found the Malicious Egg! Grants access to the Malicious Incubator.",
+      "awarded": 82595,
+      "created": "2020-04-07T22:04:54.197+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523227,
+      "name": "Moai Egg",
+      "desc": "You found the Moai Egg! Grants access to the Moai God.",
+      "awarded": 80721,
+      "created": "2020-04-07T22:08:31.533+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523230,
+      "name": "Obsidian Egg",
+      "desc": "You found the Obsidian Egg! Grants access to the Obsidian Infusion Device.",
+      "awarded": 77824,
+      "created": "2020-04-07T22:19:14.72+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523231,
+      "name": "Octo Egg",
+      "desc": "You found the Octo Egg! Grants access to the Octopi Council.",
+      "awarded": 90712,
+      "created": "2020-04-07T22:20:17.187+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523232,
+      "name": "Pearl Egg",
+      "desc": "You found the Pearl Egg! Grants access to the Portable Pearl Enhancer.",
+      "awarded": 91211,
+      "created": "2020-04-07T22:21:08.533+00:00",
+      "icon": ""
+    },
+    {
+      "id": 4313454825272870,
+      "name": "Penguin Egg",
+      "desc": "You found the Penguin Egg! Grants access to the Winter Wonderworld.",
+      "awarded": 3050,
+      "created": "2026-04-12T15:24:34.165+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124722683,
+      "name": "Radio Egg",
+      "desc": "You found the Radio Egg! Grants access to the Radio Tower.",
+      "awarded": 65105,
+      "created": "2021-04-12T23:43:11.863+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523233,
+      "name": "Sandshark Egg",
+      "desc": "You found the Sandshark Egg! Grants access to the Sandshark Teleporter set.",
+      "awarded": 88027,
+      "created": "2020-04-07T22:22:36.68+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124722684,
+      "name": "Sentry Egg",
+      "desc": "You found the Sentry Egg! Grants access to the Eggy Sentry Turret.",
+      "awarded": 67334,
+      "created": "2021-04-12T23:43:40.587+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124722686,
+      "name": "Speggtral Rose",
+      "desc": "You found the Speggtral Rose! Grants access to the Speggtral Rose.",
+      "awarded": 66452,
+      "created": "2021-04-12T23:45:05.797+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124722680,
+      "name": "Sporegg",
+      "desc": "You found the Sporegg! Grants access to the Sporegg Hut.",
+      "awarded": 65751,
+      "created": "2021-04-12T23:42:20.36+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124722685,
+      "name": "Soapy Egg",
+      "desc": "You found the Soapy Egg! Grants access to the Soapy Refiner.",
+      "awarded": 63575,
+      "created": "2021-04-12T23:44:47.53+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124722687,
+      "name": "Spooky Egg",
+      "desc": "You found the Spooky Egg! Grants access to the Ghost Vacuum.",
+      "awarded": 65698,
+      "created": "2021-04-12T23:45:33.073+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124722688,
+      "name": "Tank Egg",
+      "desc": "You found the Tank Egg! Grants access to Tankium Mine.",
+      "awarded": 63473,
+      "created": "2021-04-12T23:45:51.877+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2143549535,
+      "name": "Tea Eggle",
+      "desc": "This egg's reward shall become redeemable in a future update.",
+      "awarded": 29168,
+      "created": "2023-04-06T19:38:23.017+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124722690,
+      "name": "Time Egg",
+      "desc": "You found the Time Egg! Grants access to the Time-Space Scrambler.",
+      "awarded": 65719,
+      "created": "2021-04-12T23:46:32.757+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523234,
+      "name": "Vaporwave Egg",
+      "desc": "You found the Vaporwave egg! Grants access to the Vaporwave Vibe  Visualizer.",
+      "awarded": 80441,
+      "created": "2020-04-07T22:24:04.66+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2143549791,
+      "name": "Volcano Egg",
+      "desc": "The egg's reward shall become redeemable in a future update.",
+      "awarded": 28294,
+      "created": "2023-04-06T19:46:03.363+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124523235,
+      "name": "Watermelon Egg",
+      "desc": "You found the Watermelon Egg! Grants access to the Vitamin C-Coater.",
+      "awarded": 92031,
+      "created": "2020-04-07T22:25:04.87+00:00",
+      "icon": ""
+    },
+    {
+      "id": 4036513582353364,
+      "name": "Wishing Egg",
+      "desc": "",
+      "awarded": 22012,
+      "created": "2024-04-07T21:06:00.076+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124723135,
+      "name": "Baby Borker",
+      "desc": "You found the rare Baby Borker! Grants access to Borker's Luxury Villa.",
+      "awarded": 32230,
+      "created": "2021-04-13T23:34:52.467+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2124722726,
+      "name": "Leggacy",
+      "desc": "You've found the rare Leggacy! Grants access to the Final Fabergé. (Egg made by JPG_LARGE)",
+      "awarded": 36656,
+      "created": "2021-04-13T00:56:17.287+00:00",
+      "icon": ""
+    },
+    {
+      "id": 3868117275347263,
+      "name": "Stormcrow",
+      "desc": "",
+      "awarded": 12501,
+      "created": "2024-04-07T21:07:00.141+00:00",
+      "icon": ""
+    },
+    {
+      "id": 2143549557,
+      "name": "Wisdom Egg",
+      "desc": "This egg's reward shall become redeemable in a future update.",
+      "awarded": 17352,
+      "created": "2023-04-06T19:38:54.23+00:00",
+      "icon": ""
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 /* =========================================================
    Status Effects page
-   Data: window.MH_STATUS (js/status-data.js)
+   Data: window.MH_STATUS (data/StatusEffects.json)
    ========================================================= */
 (() => {
   const D = window.MH_STATUS;
@@ -103,7 +103,7 @@
     return safe.replace(new RegExp("(" + tk.map(x => esc(x).replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|") + ")", "gi"), "<mark>$1</mark>");
   }
   const chip = it => it && it.in
-    ? `<a class="ichip" href="${ITEM_LINK(it.n)}" title="Open ${esc(it.n)} in the Item Index">${it.img ? `<img src="${esc(it.img)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.visibility='hidden'" />` : ""}${hl(it.n)}</a>`
+    ? `<a class="ichip" href="${ITEM_LINK(it.n)}" title="Open ${esc(it.n)} in the Item Index">${it.img ? `<img src="${esc(MH_SRC(it.img))}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.visibility='hidden'" />` : ""}${hl(it.n)}</a>`
     : it ? `<span class="ichip">${hl(it.n)}</span>` : "";
   const itemsByName = {};
   D.effects.forEach(e => { if (e.ex) itemsByName[e.ex.n] = e.ex; });
@@ -124,7 +124,7 @@
     return `<article class="ecard glass reveal" id="${e.slug}" data-slug="${e.slug}" style="--c:${color}; --i:${i}">
       <div class="e-top">
         <div class="e-name" data-fx="${e.slug}"></div>
-        ${e.img ? `<span class="e-part" title="In-game appearance"><img src="${esc(e.img)}/scale-to-width-down/80" alt="${esc(e.name)} particle" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.remove()" /></span>` : ""}
+        ${e.img ? `<span class="e-part" title="In-game appearance"><img src="${esc(MH_SRC(e.img))}" alt="${esc(e.name)} particle" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.remove()" /></span>` : ""}
       </div>
       <div class="e-badges">${badges.join("")}</div>
       <ul class="e-lines">${lines}</ul>
@@ -166,7 +166,7 @@
     moveInd(); render();
   });
   window.addEventListener("resize", moveInd);
-  window.addEventListener("load", moveInd);
+  if (document.readyState === "complete") requestAnimationFrame(moveInd); else window.addEventListener("load", moveInd);
   document.fonts && document.fonts.ready.then(moveInd);
   let qt;
   $("#q").addEventListener("input", e => { clearTimeout(qt); qt = setTimeout(() => { state.q = e.target.value.trim(); render(); }, 140); });

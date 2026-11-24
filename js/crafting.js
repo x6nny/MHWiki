@@ -1,12 +1,12 @@
 /* =========================================================
    Crafting page: Enchanted (The Craftsman) + Superstitious (Draedon)
-   Data: window.MH_CRAFT (js/crafting-data.js)
+   Data: window.MH_CRAFT (data/Crafting.json)
    ========================================================= */
 (() => {
-  const C = window.MH_CRAFT, BASE = window.MH_IMG_BASE;
+  const C = window.MH_CRAFT;
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const img = (p, size = 120) => p ? `${BASE}${p}/revision/latest/scale-to-width-down/${size}` : "";
+  const img = (p, size = 120) => p ? MH_SRC(p) : "";
   const pic = (p, size, name) => p
     ? `<img src="${esc(img(p, size))}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<span class=ph>${esc((name || "?")[0])}</span>'" />`
     : `<span class="ph">${esc((name || "?")[0])}</span>`;

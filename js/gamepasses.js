@@ -1,6 +1,6 @@
 /* =========================================================
    Gamepasses page
-   Data: window.GAMEPASSES (js/gamepasses-data.js)
+   Data: window.GAMEPASSES (data/Gamepasses.json)
    ========================================================= */
 (() => {
   const G = window.GAMEPASSES;
@@ -219,5 +219,5 @@
   /* ---------- Init ---------- */
   const initial = location.hash.slice(1);
   setTab(TABS[initial] ? initial : "current", false);
-  window.addEventListener("load", moveInd);
+  if (document.readyState === "complete") requestAnimationFrame(moveInd); else window.addEventListener("load", moveInd);
 })();

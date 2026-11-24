@@ -1,6 +1,6 @@
 /* =========================================================
    Daily Tasks page
-   Data: window.MH_TASKS (js/tasks-data.js)
+   Data: window.MH_TASKS (data/DailyTasks.json)
    ========================================================= */
 (() => {
   const D = window.MH_TASKS, R = D.reward;

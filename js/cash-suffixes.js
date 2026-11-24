@@ -1,14 +1,13 @@
 /* =========================================================
    Cash Suffixes page
-   Data: window.MH_SUFFIX (js/suffix-data.js)
+   Data: window.MH_SUFFIX (data/CashSuffixes.json)
    ========================================================= */
 (() => {
   const D = window.MH_SUFFIX;
-  const BASE = window.MH_IMG_BASE;
-  const SUF = D.suffixes;
+    const SUF = D.suffixes;
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const img = (p, size = 60) => p ? `${BASE}${p}/revision/latest/scale-to-width-down/${size}` : null;
+  const img = (p, size = 60) => p ? MH_SRC(p) : null;
   const ITEM_LINK = n => "item-index.html#item=" + encodeURIComponent(n);
   const CAP_E = Math.log10(1.7976931348623157e308); // ≈ 308.25
   const MAX_SUF = SUF[SUF.length - 1];

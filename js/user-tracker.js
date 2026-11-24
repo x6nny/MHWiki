@@ -2,16 +2,16 @@
    User Tracker page
    Live Roblox data through RoProxy (https://roproxy.com), which mirrors
    Roblox's web APIs with CORS headers so a static site can read them.
-   Static data: window.MH_TRACKER (js/tracker-data.js)
+   Static data: window.MH_TRACKER (data/UserTracker.json)
    ========================================================= */
 (() => {
-  const T = window.MH_TRACKER || { creators: {}, eggItems: [] }, BASE = window.MH_IMG_BASE;
+  const T = window.MH_TRACKER || { creators: {}, eggItems: [] };
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const fmt = n => Math.round(n).toLocaleString("en-US");
   const short = n => n >= 1e9 ? +(n / 1e9).toFixed(1) + "B" : n >= 1e6 ? +(n / 1e6).toFixed(1) + "M" : n >= 1e4 ? +(n / 1e3).toFixed(1) + "k" : fmt(n);
   const RM = MH.reduceMotion;
-  const wiki = (p, s = 80) => p ? `${BASE}${p}/revision/latest/scale-to-width-down/${s}` : "";
+  const wiki = (p, s = 80) => p ? MH_SRC(p) : "";
   const ITEM = n => "item-index.html#item=" + encodeURIComponent(n);
 
   const API = svc => `https://${svc}.roproxy.com`;
@@ -87,7 +87,7 @@
           all.push(...b.data); cur = b.nextPageCursor; if (!cur) break;
         }
       } catch (e) {
-        // Fall back to the snapshot in tracker-data.js
+        // Fall back to the snapshot in data/UserTracker.json
         all = (T.badges || []).map(b => ({ id: b.id, name: b.name, description: b.desc, statistics: { awardedCount: b.awarded }, created: b.created }));
         if (!all.length) throw e;
       }

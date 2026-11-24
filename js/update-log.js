@@ -1,6 +1,6 @@
 /* =========================================================
    Update Log page
-   Data: window.UPDATE_LOG (js/update-log-data.js), newest first.
+   Data: window.UPDATE_LOG (data/UpdateLog.json), newest first.
    ========================================================= */
 (() => {
   const DATA = window.UPDATE_LOG || [];

@@ -1,14 +1,13 @@
 /* =========================================================
    Mystery Boxes page
-   Data: window.MH_BOXES (js/mb-data.js)
+   Data: window.MH_BOXES (data/MysteryBoxes.json)
    ========================================================= */
 (() => {
   const D = window.MH_BOXES;
-  const BASE = window.MH_IMG_BASE;
-  const ICON = "../assets/boxes/";
+    const ICON = "../assets/boxes/";
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const img = (p, size = 120) => p ? `${BASE}${p}/revision/latest/scale-to-width-down/${size}` : null;
+  const img = (p, size = 120) => p ? MH_SRC(p) : null;
   const ITEM_LINK = n => "item-index.html#item=" + encodeURIComponent(n);
 
   const BOX_COLOR = {
@@ -227,7 +226,7 @@
     moveInd(); renderCirc(b.dataset.tab);
   });
   window.addEventListener("resize", moveInd);
-  window.addEventListener("load", moveInd);
+  if (document.readyState === "complete") requestAnimationFrame(moveInd); else window.addEventListener("load", moveInd);
   document.fonts && document.fonts.ready.then(moveInd);
   renderCirc(tabs[0]);
 

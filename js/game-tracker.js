@@ -1,6 +1,6 @@
 /* =========================================================
    Game Tracker page: Miner's Haven CCU + history
-   History: window.MH_CCU_HIST (js/ccu-history.js, Rolimon's snapshot)
+   History: window.MH_CCU_HIST (data/CCUHistory.json, Rolimon's snapshot)
    Newer:   ccu.json on this repo's "data" branch (written by .github/workflows/track-ccu.yml)
    Live:    games.roproxy.com (RoProxy mirror of Roblox's games API)
    ========================================================= */

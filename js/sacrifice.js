@@ -1,13 +1,12 @@
 /* =========================================================
    Sacrifice page
-   Data: window.MH_SAC (js/sacrifice-data.js)
+   Data: window.MH_SAC (data/Sacrifice.json)
    ========================================================= */
 (() => {
   const D = window.MH_SAC;
-  const BASE = window.MH_IMG_BASE;
-  const $ = s => document.querySelector(s);
+    const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const img = (p, size = 120) => p ? `${BASE}${p}/revision/latest/scale-to-width-down/${size}` : null;
+  const img = (p, size = 120) => p ? MH_SRC(p) : null;
   const ITEM_LINK = n => "item-index.html#item=" + encodeURIComponent(n);
   const seg = s => typeof s === "string" ? esc(s)
     : s && s.i ? `<a class="ilink" href="${ITEM_LINK(s.i)}">${s.img ? `<img src="${esc(img(s.img, 40))}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" />` : ""}${esc(s.i)}</a>` : "";

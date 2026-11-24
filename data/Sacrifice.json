@@ -1,0 +1,1272 @@
+{
+  "intro": [
+    "Sacrifice was added on 8 March, 2017 with The Ultimate Update. You give up most of your items in exchange for new mechanics and items, and start again from life 1.",
+    "You need to be life 1,000 or higher and click three buttons to confirm. You restart with a Basic Furnace, a Basic Iron Mine and 10 Basic Conveyors."
+  ],
+  "warning": "Sacrificing is permanent and can't be undone. It only affects the save you're playing on, and each sacrifice can only be done once per save.",
+  "kept": [
+    ["Research Points and uC (Unobtainium Crystals)"],
+    ["Mystery Boxes and Lucky Clovers"],
+    ["Shiny Reborn and Shiny Evolution items, including Limited Shinies (they're soulbound)"],
+    ["Fabled-tier items"],
+    [
+      "Soulbound items, like ",
+      {
+        "i": "Swag Conveyor",
+        "img": "assets/wiki/swag-conveyor.webp",
+        "tier": "Collectible"
+      },
+      " and ",
+      {
+        "i": "Statue of Knowledge",
+        "img": "assets/wiki/statue-of-knowledge.webp",
+        "tier": "Fabled"
+      },
+      " (with some exceptions)"
+    ],
+    [
+      "The recipes for ",
+      {
+        "i": "Void Drive",
+        "img": "assets/wiki/void-drive.webp",
+        "tier": "Enchanted"
+      },
+      " and ",
+      {
+        "i": "Coliseum Catharsis",
+        "img": "assets/wiki/coliseum-catharsis.webp",
+        "tier": "Enchanted"
+      },
+      ", so you don't redo those challenges"
+    ],
+    ["Gamepasses and their perks"],
+    ["Evolved Reborn recipes"]
+  ],
+  "gained": [
+    ["A unique Ultimate-tier upgrader that resets ores"],
+    ["Access to new item tiers: Reborn Fusions, then Superstitious items"],
+    ["A prefix in front of your life: s-, S+, then z- and Z+"],
+    ["A Roblox badge for each sacrifice"],
+    ["A bigger base: 6 more tiles in two directions each time"]
+  ],
+  "lost": [
+    ["Your previous sacrifice item, after the second sacrifice"],
+    ["Your old prefix"],
+    ["Non-limited Vintages, Reborn Fusions and other Reborn-related items"],
+    ["Enchanted and Superstitious items, except some time-limited Enchanted items"],
+    ["All your Shards of Life"],
+    ["Anything else not listed here, unless it goes into Escrow"]
+  ],
+  "escrow": [
+    ["Exotic and Collectible items"],
+    [
+      "Reborn-proof Contraband items, including ",
+      {
+        "i": "THE UNDERTAKER",
+        "img": "assets/wiki/the-undertaker.webp",
+        "tier": "Contraband"
+      }
+    ],
+    ["Shiny Reborn items, including Evolutions"],
+    ["Sacrifice-proof items"],
+    [
+      "Code-exclusive items, like the ",
+      {
+        "i": "Ancient Conveyor",
+        "img": "assets/wiki/ancient-conveyor-hd.webp",
+        "tier": "Redeemed"
+      }
+    ],
+    [
+      "Paid items, like the ",
+      {
+        "i": "Pineapple Refiner",
+        "img": "assets/wiki/pineapple-refiner-hd.webp",
+        "tier": "Collectible"
+      }
+    ],
+    [
+      "Twitch items, like the ",
+      {
+        "i": "Twitch Scanner",
+        "img": "assets/wiki/twitch-scanner.webp",
+        "tier": "Collectible"
+      },
+      " and ",
+      {
+        "i": "Twitch-Powered Upgrader",
+        "img": "assets/wiki/twitch-powered-upgrader.webp",
+        "tier": "Collectible"
+      }
+    ],
+    ["Luxury items"]
+  ],
+  "gone": "Mystery-box-only Vintage, Reborn and Ultimate items and UC Shop items are gone forever.",
+  "sacrifices": [
+    {
+      "k": "ultimate",
+      "name": "The Ultimate Sacrifice",
+      "badge": "badge-ultimate",
+      "badgeName": "The Ultimate Sacrifice",
+      "prefix": "s-",
+      "need": "Life 1,000+",
+      "released": "8 March, 2017",
+      "update": "The Ultimate Update",
+      "base": ["50×50", "56×56"],
+      "item": {
+        "i": "The Ultimate Sacrifice",
+        "img": "assets/wiki/the-ultimate-sacrifice.webp",
+        "tier": "Ultimate"
+      },
+      "status": "released",
+      "blurb": "Unlocks crafting Reborn Fusions at The Craftsman, like the Diamond Breech Loader and Eternal Fracture, using Research Points to unlock each recipe.",
+      "gain": [
+        [
+          "The ",
+          {
+            "i": "The Ultimate Sacrifice",
+            "img": "assets/wiki/the-ultimate-sacrifice.webp",
+            "tier": "Ultimate"
+          },
+          " item, right away"
+        ],
+        [
+          "10 ",
+          {
+            "i": "Ultimate Conveyor",
+            "img": "assets/wiki/ultimate-conveyor.webp",
+            "tier": "Collectible"
+          },
+          "s"
+        ],
+        ["The Ultimate Sacrifice badge"],
+        ["The s- prefix"],
+        ["Base grows from 50×50 to 56×56"]
+      ],
+      "lose": [
+        ["Non-limited Vintages and all Reborn-related items"],
+        ["Enchanted items, except some time-limited ones"],
+        ["All Shards of Life"]
+      ],
+      "escrow": "s-100"
+    },
+    {
+      "k": "second",
+      "name": "The Second Sacrifice",
+      "badge": "badge-hero",
+      "badgeName": "Hero",
+      "prefix": "S+",
+      "need": "Life s-1,000+",
+      "released": "10 June, 2017",
+      "update": "Summer Update 2017, Part 2",
+      "base": ["56×56", "62×62"],
+      "item": {
+        "i": "The Final Upgrader",
+        "img": "assets/wiki/the-final-upgrader.webp",
+        "tier": "Ultimate"
+      },
+      "status": "released",
+      "blurb": "Destroys The Ultimate Sacrifice, leaving the Statue of Sacrifice. At S+1,000 Draedon gives you the True Book of Knowledge to make Catalysts and craft Superstitious items.",
+      "gain": [
+        [
+          {
+            "i": "The Final Upgrader",
+            "img": "assets/wiki/the-final-upgrader.webp",
+            "tier": "Ultimate"
+          },
+          " (at life S+10)"
+        ],
+        [
+          "The ",
+          {
+            "i": "Statue of Sacrifice",
+            "img": "assets/wiki/statue-of-sacrifice.webp",
+            "tier": "Fabled"
+          }
+        ],
+        ["The Hero badge"],
+        ["The S+ prefix"],
+        ["Base grows from 56×56 to 62×62"]
+      ],
+      "lose": [
+        ["The Ultimate Sacrifice item"],
+        ["Non-limited Vintages, Reborn Fusions and other Reborn-related items"],
+        ["Enchanted items, except some time-limited ones"],
+        ["All Shards of Life"]
+      ],
+      "escrow": "S+100"
+    },
+    {
+      "k": "third",
+      "name": "The Forbidden Sacrifice",
+      "badge": "badge-forbidden",
+      "badgeName": "The Forbidden Sacrifice",
+      "prefix": "z- → Z+",
+      "need": "Likely S+1,000+ (the wiki also lists S+5,000)",
+      "released": "Not out yet",
+      "update": "In development",
+      "base": ["62×62", "68×68 (likely)"],
+      "item": null,
+      "status": "upcoming",
+      "blurb": "The third and final sacrifice, confirmed by OutOfOrderFoxy. You must beat the Heart of the Void and get The Forbidden Tome first. It opens the Void Gate to meet Daegel and make Reversion-tier items.",
+      "gain": [
+        ["A unique Ultimate upgrader at life Z-100 (not a resetter), for finishing the Trial of Will"],
+        ["The ruins of The Final Upgrader"],
+        ["The z- prefix, which becomes Z+ after you defeat Solumn"],
+        ["An item related to Shards of Life"],
+        ["Likely a base of 68×68"],
+        ["Crafting the “True” Ultimate Sacrifice and “True” Final Upgrader"]
+      ],
+      "lose": [
+        ["All Craftsman blueprints bought with Research Points"],
+        ["The Final Upgrader"],
+        ["Non-limited Vintages, Reborn Fusions and other Reborn-related items"],
+        ["Enchanted and Superstitious items, except some time-limited ones"],
+        ["All Shards of Life"]
+      ],
+      "escrow": "Grimstruct challenge"
+    }
+  ],
+  "third": [
+    "The base rebirth price becomes $25DD instead of $25Qn, and it only goes up from there.",
+    "Escrow and soulbound items are locked away until you finish the Grimstruct challenge. Gamepass items and The Forbidden Tome come back straight away.",
+    "Shiny Reborns are kept by a new NPC, Rob Boss, and traded back to you.",
+    "Cash suffixes past CENT, doubling to e+614.",
+    "Daegel helps you fight Solumn to free him from his corruption.",
+    "New music by Bobby Yarsulik (BSlick)."
+  ],
+  "ultItems": [
+    {
+      "item": {
+        "i": "The Ultimate Sacrifice",
+        "img": "assets/wiki/the-ultimate-sacrifice.webp",
+        "tier": "Ultimate"
+      },
+      "quote": "The culmination of pure dedication. A machine unmatched by any other.",
+      "fx": [
+        "Resets machine tags and status effects, multiplies by x2.5 and adds $5,000.",
+        "If the ore's upgrade counter is 0: x25 under $1B, x50 at $1B or more. Loopable if you can get the counter back to 0.",
+        "Loops x1.05 while the ore is under $1qd."
+      ],
+      "note": "Destroyed by the Second Sacrifice. It was the spirit of Magnar, the dead god of knowledge."
+    },
+    {
+      "item": {
+        "i": "The Final Upgrader",
+        "img": "assets/wiki/the-final-upgrader.webp",
+        "tier": "Ultimate"
+      },
+      "quote": "A testament to the power of the person who wields it. This upgrader trumps all.",
+      "fx": [
+        "1st use: x50, and resets machine tags and status effects.",
+        "2nd use: x5 to x1,000, based on time since the last upgrade.",
+        "3rd use: x1.35."
+      ],
+      "note": "Given at life S+10 after the Second Sacrifice."
+    },
+    {
+      "item": {
+        "i": "Statue of Sacrifice",
+        "img": "assets/wiki/statue-of-sacrifice.webp",
+        "tier": "Fabled"
+      },
+      "quote": "A statue built from the destroyed remains of The Ultimate Sacrifice. A constant reminder of everything you've accomplished.",
+      "fx": ["A Fabled decoration and soulbound, so you keep it.", "Adds +1,000 to the Book of Knowledge."],
+      "note": "What’s left of The Ultimate Sacrifice after the Second Sacrifice."
+    }
+  ],
+  "book": {
+    "i": "True Book of Knowledge",
+    "img": "assets/wiki/true-book-of-knowledge.webp",
+    "tier": "Ultimate"
+  },
+  "tome": {
+    "i": "The Forbidden Tome",
+    "img": "assets/wiki/the-forbidden-tome.webp",
+    "tier": "Ultimate"
+  },
+  "elements": ["Aether", "Earth", "Entropy", "Fire", "Order", "Water"],
+  "catalystInfo": "Rebirth with the True Book of Knowledge and the five items from a Catalyst's page on your base for a 1 in 3 chance of that Catalyst. Making it doesn't use up the items. Take it to Draedon in the Sporest and sacrifice Reborn items to balance six elements; once they're balanced you get the Superstitious item. Shiny items count towards making Catalysts but can't be used for forging.",
+  "catalysts": [
+    {
+      "n": "Catalyst of Blood Magic",
+      "img": "assets/wiki/catalyst-of-blood-magic.webp",
+      "crafts": [
+        {
+          "n": "Swag City",
+          "img": "assets/wiki/swag-city.webp",
+          "tier": "Superstitious",
+          "type": "Upgrader",
+          "fx": "During the day, each beam does 4.5x for a total multiplier of 91.125x · During the night, each beam does 5.7x for a total multiplier of 185.193x"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Draconicglass Mine",
+          "img": "assets/wiki/draconicglass-mine.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Azure Purifier",
+          "img": "assets/wiki/azure-purifier.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Dreamer's Nightmare",
+          "img": "assets/wiki/dreamer-s-nightmare.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Funky Town",
+          "img": "assets/wiki/funky-town.webp",
+          "tier": "Rare Reborn"
+        },
+        {
+          "n": "Devil's Spore",
+          "img": "assets/wiki/devil-s-spore.webp",
+          "tier": "Advanced Evolution"
+        }
+      ],
+      "life": "S+1,000+",
+      "added": "3 July, 2020",
+      "quote": "This catalyst strangely reminds you of an old [https://azuremines.fandom.com/wiki/Billy%27s_Swag_Shop Swag Shop].",
+      "lifeN": 1000
+    },
+    {
+      "n": "Catalyst of Knowledge",
+      "img": "assets/wiki/catalyst-of-knowledge.webp",
+      "crafts": [
+        {
+          "n": "Enchanted Library",
+          "img": "assets/wiki/enchanted-library.webp",
+          "tier": "Superstitious",
+          "type": "Upgrader",
+          "fx": "Base multiplier of x65 · Multiplier +1 per second on ore lifespan · Multiplier +5 per time upgrader used · 1 of 9 random effects · Ore color turned lime green"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Book of Knowledge",
+          "img": "assets/wiki/book-of-knowledge.webp",
+          "tier": "Enchanted"
+        },
+        {
+          "n": "Stardust Illuminator",
+          "img": "assets/wiki/stardust-illuminator.webp",
+          "tier": "Advanced Fusion"
+        },
+        {
+          "n": "Statue of Knowledge",
+          "img": "assets/wiki/statue-of-knowledge.webp",
+          "tier": "Fabled"
+        },
+        {
+          "n": "Ore Indoctrinator",
+          "img": "assets/wiki/ore-indoctrinator.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Ancient Coliseum",
+          "img": "assets/wiki/ancient-coliseum.webp",
+          "tier": "Evolved Reborn"
+        }
+      ],
+      "life": "S+1,000+",
+      "added": "The Trinity Update",
+      "quote": "This catalyst seems to remind you of The Ultimate Sacrifice, an upgrader you held onto long ago.",
+      "lifeN": 1000
+    },
+    {
+      "n": "Catalyst of Spirits",
+      "img": "assets/wiki/catalyst-of-spirits.webp",
+      "crafts": [
+        {
+          "n": "Delta Phantom",
+          "img": "assets/wiki/delta-phantom.webp",
+          "tier": "Superstitious",
+          "type": "Upgrader",
+          "fx": "First 10 ore: · Value multiplied by x100. · Absorbed into item. · 11th ore: · Releases absorbed ore. · Additional x50 (x5000 total). · Set on fire. · Turns ore neon pink."
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Eternal Limbo",
+          "img": "assets/wiki/eternal-limbo.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Brimstone Spires",
+          "img": "assets/wiki/brimstone-spires.webp",
+          "tier": "Advanced Evolution"
+        },
+        {
+          "n": "Dark Illuminator",
+          "img": "assets/wiki/dark-illuminator.webp",
+          "tier": "Reborn Fusion"
+        },
+        {
+          "n": "Forbidden Magic",
+          "img": "assets/wiki/forbidden-magic.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Anguished Guardian of the Gate",
+          "img": "assets/wiki/anguished-guardian-of-the-gate.webp",
+          "tier": "Reborn Fusion"
+        }
+      ],
+      "life": "S+1000+",
+      "added": "5 April, 2020",
+      "quote": "A rather spooky looking catalyst, for you can see right through it!",
+      "lifeN": 1000
+    },
+    {
+      "n": "Catalyst of Death",
+      "img": "assets/wiki/catalyst-of-death.webp",
+      "crafts": [
+        {
+          "n": "The Death Cap",
+          "img": "assets/wiki/the-death-cap.webp",
+          "tier": "Superstitious",
+          "type": "Upgrader",
+          "fx": "Base multiplier of x130 · Multiplier increases additively with status effects · Removes all status effects from ore · (Except Voided)"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Dreamer's Blight",
+          "img": "assets/wiki/dreamer-s-blight.webp",
+          "tier": "Advanced Reborn"
+        },
+        {
+          "n": "Deadly Spore",
+          "img": "assets/wiki/deadly-spore.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Azure Spore",
+          "img": "assets/wiki/azure-spore.webp",
+          "tier": "Reborn Fusion"
+        },
+        {
+          "n": "Delta Phantom",
+          "img": "assets/wiki/delta-phantom.webp",
+          "tier": "Superstitious"
+        },
+        {
+          "n": "Lord of Tenebrous",
+          "img": "assets/wiki/lord-of-tenebrous.webp",
+          "tier": "Advanced Evolution"
+        }
+      ],
+      "life": "S+2000+",
+      "added": "12 April, 2020",
+      "quote": "This catalyst appears to radiate the same aura the Catalyst of Spirits does. However this one seems to inflict pain upon you.",
+      "lifeN": 2000
+    },
+    {
+      "n": "Catalyst of Destruction",
+      "img": "assets/wiki/catalyst-of-destruction.webp",
+      "crafts": [
+        {
+          "n": "Pandora's Box",
+          "img": "assets/wiki/pandora-s-box.webp",
+          "tier": "Superstitious",
+          "type": "Furnace",
+          "fx": "Processes unupgraded ore between x1M and x1de"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Dreamer's Blight",
+          "img": "assets/wiki/dreamer-s-blight.webp",
+          "tier": "Advanced Reborn"
+        },
+        {
+          "n": "Dreamer's Valor",
+          "img": "assets/wiki/dreamer-s-valor.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Dreamer's Nightmare",
+          "img": "assets/wiki/dreamer-s-nightmare.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Dreamer's Terror",
+          "img": "assets/wiki/dreamer-s-terror.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Devourer of Nightmares",
+          "img": "assets/wiki/devourer-of-nightmares.webp",
+          "tier": "Enchanted"
+        }
+      ],
+      "life": "S+2000+",
+      "added": "5 April, 2020",
+      "quote": "To the typical individual this catalyst doesn't mean anything to you. To a dreamer however this catalyst is the embodiment of all evil.",
+      "lifeN": 2000
+    },
+    {
+      "n": "Catalyst of Nature",
+      "img": "assets/wiki/catalyst-of-nature.webp",
+      "crafts": [
+        {
+          "n": "Garden of Gaia",
+          "img": "assets/wiki/garden-of-gaia.webp",
+          "tier": "Superstitious",
+          "type": "Upgrader",
+          "fx": "Multiplies ore value by x90 · Changes ore material to Grass · Applies Gaia's Blessing to ore · Gaia's Blessing (15 seconds): · Marked by green particles · 2% bonus to…"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Gaia's Grasp",
+          "img": "assets/wiki/gaia-s-grasp.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Dreamer's Life",
+          "img": "assets/wiki/dreamer-s-life.webp",
+          "tier": "Enchanted"
+        },
+        {
+          "n": "Frozen Peaks",
+          "img": "assets/wiki/frozen-peaks.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Ambrosia Garden",
+          "img": "assets/wiki/ambrosia-garden.webp",
+          "tier": "Reborn Fusion"
+        },
+        {
+          "n": "Deadly Spore",
+          "img": "assets/wiki/deadly-spore.webp",
+          "tier": "Evolved Reborn"
+        }
+      ],
+      "life": "S+2000+",
+      "added": "20 May, 2020",
+      "quote": "This catalyst reminds you of the various landscapes you once wandered during your time here in the haven.",
+      "lifeN": 2000
+    },
+    {
+      "n": "Catalyst of Oblivion",
+      "img": "assets/wiki/catalyst-of-oblivion.webp",
+      "crafts": [
+        {
+          "n": "The Heart of Void",
+          "img": "assets/wiki/the-heart-of-void.webp",
+          "tier": "Superstitious",
+          "type": "Furnace",
+          "fx": "Processes ore at x66,666 their value · Spawns Eyes of Void onto conveyors · Eyes of Void: · Multiplies ores by a resettable x5"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Daestrophe",
+          "img": "assets/wiki/daestrophe.webp",
+          "tier": "Superstitious"
+        },
+        {
+          "n": "Void Star",
+          "img": "assets/wiki/void-star.webp",
+          "tier": "Advanced Evolution"
+        },
+        {
+          "n": "Devourer of Nightmares",
+          "img": "assets/wiki/devourer-of-nightmares.webp",
+          "tier": "Enchanted"
+        },
+        {
+          "n": "Oblivion Emission",
+          "img": "assets/wiki/oblivion-emission.webp",
+          "tier": "Enchanted"
+        },
+        {
+          "n": "The Forbidden Tome",
+          "img": "assets/wiki/the-forbidden-tome.webp",
+          "tier": "Ultimate"
+        }
+      ],
+      "life": "S+2,000+",
+      "added": "30 August, 2020",
+      "quote": "This Catalyst reminds you of the Eternal Overseers within the Void. Or maybe not?",
+      "lifeN": 2000
+    },
+    {
+      "n": "Catalyst of Power",
+      "img": "assets/wiki/catalyst-of-power.webp",
+      "crafts": [
+        {
+          "n": "Tyrant's Throne",
+          "img": "assets/wiki/tyrant-s-throne.webp",
+          "tier": "Superstitious",
+          "type": "Furnace",
+          "fx": "Multiplier from x500 to x85,000 based on ore value. · (see effects for more info)"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "V-tolite Mine",
+          "img": "assets/wiki/v-tolite-mine.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Tyrant's Forge",
+          "img": "assets/wiki/tyrant-s-forge.webp",
+          "tier": "Advanced Evolution"
+        },
+        {
+          "n": "Mystical Thunder",
+          "img": "assets/wiki/mystical-thunder.webp",
+          "tier": "Advanced Evolution"
+        },
+        {
+          "n": "Void Drive",
+          "img": "assets/wiki/void-drive.webp",
+          "tier": "Enchanted"
+        },
+        {
+          "n": "Gargantium Core",
+          "img": "assets/wiki/gargantium-core.webp",
+          "tier": "Enchanted"
+        }
+      ],
+      "life": "S+2000+",
+      "added": "12 April, 2020",
+      "quote": "This catalyst reminds you of a world where every person will control their own destiny, a land of the truly free!",
+      "lifeN": 2000
+    },
+    {
+      "n": "Catalyst of Thunder",
+      "img": "assets/wiki/catalyst-of-thunder.webp",
+      "crafts": [
+        {
+          "n": "Draedon's Gauntlet",
+          "img": "assets/wiki/draedon-s-gauntlet.webp",
+          "tier": "Superstitious",
+          "type": "Upgrader",
+          "fx": "Multiplies ore value by 250x then 1.05x 50 times over a period of 10s. · Total multiplier of ~2866.85x"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Tempest Refiner",
+          "img": "assets/wiki/tempest-refiner.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Lightningbolt Predictor",
+          "img": "assets/wiki/lightningbolt-predictor.webp",
+          "tier": "Reborn Fusion"
+        },
+        {
+          "n": "Azure Purifier",
+          "img": "assets/wiki/azure-purifier.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Mystical Thunder",
+          "img": "assets/wiki/mystical-thunder.webp",
+          "tier": "Advanced Evolution"
+        },
+        {
+          "n": "Tesla Refuter",
+          "img": "assets/wiki/tesla-refuter.webp",
+          "tier": "Evolved Reborn"
+        }
+      ],
+      "life": "S+2000+",
+      "added": "5 April, 2020",
+      "quote": "This catalyst reminds you a lot of the man in golden armor who you saw in the Sporest. It seems he was a god all this time!",
+      "lifeN": 2000
+    },
+    {
+      "n": "Catalyst of Void",
+      "img": "assets/wiki/catalyst-of-void.webp",
+      "crafts": [
+        {
+          "n": "Daestrophe",
+          "img": "assets/wiki/daestrophe.webp",
+          "tier": "Superstitious",
+          "type": "Upgrader",
+          "fx": "Resets Machine tags · Resets Status effects · Multiplies ores by x100 · If ore is on fire: · Additional x2 (x200 total)"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "The Fissure",
+          "img": "assets/wiki/the-fissure.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "The Daegelart",
+          "img": "assets/wiki/the-daegelart.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Overlord's Telamonster",
+          "img": "assets/wiki/overlord-s-telamonster.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Eternal Fracture",
+          "img": "assets/wiki/eternal-fracture.webp",
+          "tier": "Reborn Fusion"
+        },
+        {
+          "n": "Void Drive",
+          "img": "assets/wiki/void-drive.webp",
+          "tier": "Enchanted"
+        }
+      ],
+      "life": "S+2000+",
+      "added": "5 April, 2020",
+      "quote": "A catalyst that seems to echo out to you. Whether it's Daegel's Words, or the void calling out to you once again.",
+      "lifeN": 2000
+    },
+    {
+      "n": "Catalyst of Fire",
+      "img": "assets/wiki/catalyst-of-fire.webp",
+      "crafts": [
+        {
+          "n": "Vulcan's Wrath",
+          "img": "assets/wiki/vulcan-s-wrath.webp",
+          "tier": "Superstitious",
+          "type": "Upgrader",
+          "fx": "Standalone: · Multiplies ore value by 65x · Makes ores neon · Fully Charged: · Multiplier increased to 165x · Makes ores neon · Ignites ore · Makes ores lighter"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Igneous Forge",
+          "img": "assets/wiki/igneous-forge.webp",
+          "tier": "Advanced Reborn"
+        },
+        {
+          "n": "Searing Heat",
+          "img": "assets/wiki/searing-heat.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Spirit of Fire",
+          "img": "assets/wiki/spirit-of-fire.webp",
+          "tier": "Advanced Reborn"
+        },
+        {
+          "n": "Firecrystallized System",
+          "img": "assets/wiki/firecrystallized-system.webp",
+          "tier": "Reborn Fusion"
+        },
+        {
+          "n": "Vulcan's Destiny",
+          "img": "assets/wiki/vulcan-s-destiny.webp",
+          "tier": "Advanced Evolution"
+        }
+      ],
+      "life": "S+3000+",
+      "added": "12 April, 2020",
+      "quote": "Staring at this catalyst fills you with anger, as it reminds you of the eruption that destroyed your previous home.",
+      "lifeN": 3000
+    },
+    {
+      "n": "Catalyst of Fortune",
+      "img": "assets/wiki/catalyst-of-fortune.webp",
+      "crafts": [
+        {
+          "n": "Midas Blaster",
+          "img": "assets/wiki/midas-blaster.webp",
+          "tier": "Superstitious",
+          "type": "Upgrader",
+          "fx": "Multiplies ore value by 36x to 123x · Upgrade multiplier increases by +1 per use · Sets ore on fire · Colors ore gold · Makes ore incredibly dense"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "King Gold Mine",
+          "img": "assets/wiki/king-gold-mine.webp",
+          "tier": "Rare Reborn"
+        },
+        {
+          "n": "Massive Diamond Drill",
+          "img": "assets/wiki/massive-diamond-drill.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Sage Justice",
+          "img": "assets/wiki/sage-justice.webp",
+          "tier": "Reborn Fusion"
+        },
+        {
+          "n": "Coliseum Catharsis",
+          "img": "assets/wiki/coliseum-catharsis.webp",
+          "tier": "Enchanted"
+        },
+        {
+          "n": "Sage King",
+          "img": "assets/wiki/sage-king.webp",
+          "tier": "Evolved Reborn"
+        }
+      ],
+      "life": "S+3000+",
+      "added": "12 April, 2020",
+      "quote": "This catalyst seems to slowly give you the understanding to how the Baron has reached such tremendous life.",
+      "lifeN": 3000
+    },
+    {
+      "n": "Catalyst of Necromancy",
+      "img": "assets/wiki/catalyst-of-necromancy.webp",
+      "crafts": [
+        {
+          "n": "Methuselah's Mask",
+          "img": "assets/wiki/methuselah-s-mask.webp",
+          "tier": "Superstitious",
+          "type": "Upgrader",
+          "fx": "Before Meralin's Sorcery/standalone: · Multiplies ore value by x140 · Random status effect is applied (see Overview) · After Meralin's Sorcery: · Multiplies ore value by…"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "The Death Cap",
+          "img": "assets/wiki/the-death-cap.webp",
+          "tier": "Superstitious"
+        },
+        {
+          "n": "Lord of Tenebrous",
+          "img": "assets/wiki/lord-of-tenebrous.webp",
+          "tier": "Advanced Evolution"
+        },
+        {
+          "n": "Castle Bravo",
+          "img": "assets/wiki/castle-bravo.webp",
+          "tier": "Advanced Evolution"
+        },
+        {
+          "n": "Tsar Bomba",
+          "img": "assets/wiki/tsar-bomba.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Son of Poison",
+          "img": "assets/wiki/son-of-poison.webp",
+          "tier": "Advanced Reborn"
+        }
+      ],
+      "life": "S+3,000+",
+      "added": "3 July, 2020",
+      "quote": "I have heard enough of your shallow wisdom. It is I who is the strongest and it is evil that will ultimately prevail!",
+      "lifeN": 3000
+    },
+    {
+      "n": "Catalyst of the Supreme",
+      "img": "assets/wiki/catalyst-of-the-supreme.webp",
+      "crafts": [
+        {
+          "n": "Elysium Solemnity",
+          "img": "assets/wiki/elysium-solemnity.webp",
+          "tier": "Superstitious",
+          "type": "Furnace",
+          "fx": "Processes ores at x200k value"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "True Overlord Device",
+          "img": "assets/wiki/true-overlord-device.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Aethereal Synthesizer",
+          "img": "assets/wiki/aethereal-synthesizer.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Final Eclipse Gate",
+          "img": "assets/wiki/final-eclipse-gate.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Crystal Altar",
+          "img": "assets/wiki/crystal-altar.webp",
+          "tier": "Advanced Evolution"
+        },
+        {
+          "n": "Champion Infuser",
+          "img": "assets/wiki/champion-infuser.webp",
+          "tier": "Enchanted"
+        }
+      ],
+      "life": "S+3000+",
+      "added": "5 April, 2020",
+      "quote": "You can feel immense power flowing through your veins by simply standing by this. Whether it fuels you or destroys you is uncertain.",
+      "lifeN": 3000
+    },
+    {
+      "n": "Catalyst of Magic",
+      "img": "assets/wiki/catalyst-of-magic.webp",
+      "crafts": [
+        {
+          "n": "Meralin's Sorcery",
+          "img": "assets/wiki/meralin-s-sorcery.webp",
+          "tier": "Superstitious",
+          "type": "Upgrader",
+          "fx": "Before Methuselah's Mask/standalone: · Multiplies ores by 105x to 150x · Poisons ore · After Methuselah's Mask: · Multiplies ores by 150x to 220x · Locks ore size · Does…"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Forbidden Magic",
+          "img": "assets/wiki/forbidden-magic.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Mystical Thunder",
+          "img": "assets/wiki/mystical-thunder.webp",
+          "tier": "Advanced Evolution"
+        },
+        {
+          "n": "Swag City",
+          "img": "assets/wiki/swag-city.webp",
+          "tier": "Superstitious"
+        },
+        {
+          "n": "Methuselah's Mask",
+          "img": "assets/wiki/methuselah-s-mask.webp",
+          "tier": "Superstitious"
+        },
+        {
+          "n": "Soul Blossom",
+          "img": "assets/wiki/soul-blossom.webp",
+          "tier": "Rare Reborn"
+        }
+      ],
+      "life": "S+4,000+",
+      "added": "3 July, 2020",
+      "quote": "This catalyst doesn't seem to remind you of the wizard who lives in the tower.",
+      "lifeN": 4000
+    },
+    {
+      "n": "Catalyst of Chaos",
+      "img": "assets/wiki/catalyst-of-chaos.webp",
+      "crafts": [
+        {
+          "n": "SpookApocalypse-Ω",
+          "img": "assets/wiki/spookapocalypse.webp",
+          "tier": "Superstitious",
+          "type": "Dropper",
+          "fx": "Permanent Battle-Hardened tag · 10 seconds of Conqueror effect · Ores upgraded by Schrodinger have its multiplier doubled · +x7 to the Scales of Disparity's Rot…"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Conqueror's Delusion",
+          "img": "assets/wiki/conqueror-s-delusion.webp",
+          "tier": "Enchanted"
+        },
+        {
+          "n": "Scales of Disparity",
+          "img": "assets/wiki/scales-of-disparity.webp",
+          "tier": "Enchanted"
+        },
+        {
+          "n": "Airborne Pathogenic Spewer",
+          "img": "assets/wiki/airborne-pathogenic-spewer.webp",
+          "tier": "Enchanted"
+        },
+        {
+          "n": "Doom Incarnate",
+          "img": "assets/wiki/doom-incarnate.webp",
+          "tier": "Enchanted"
+        },
+        {
+          "n": "The Phantasm",
+          "img": "assets/wiki/the-phantasm.webp",
+          "tier": "Phantasmal"
+        }
+      ],
+      "life": "S+5,000+",
+      "added": "29 October, 2025",
+      "quote": "Seeing this catalyst makes you begin to second-guess everything going on around you.",
+      "lifeN": 5000
+    },
+    {
+      "n": "Catalyst of Earth",
+      "img": "assets/wiki/catalyst-of-earth.webp",
+      "crafts": [
+        {
+          "n": "Havium Mine",
+          "img": "assets/wiki/havium-mine.webp",
+          "tier": "Superstitious",
+          "type": "Dropper",
+          "fx": "Bonus attributes to ores: · Immune to Poison, Radiation, and Frostbite · 3 shields that protect against destruction"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Yuttrium Mine",
+          "img": "assets/wiki/yuttrium-mine.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Symmetryte Mine",
+          "img": "assets/wiki/symmetryte-mine.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Yuntonium Mine",
+          "img": "assets/wiki/yuntonium-mine.webp",
+          "tier": "Reborn Fusion"
+        },
+        {
+          "n": "Solarium Mine",
+          "img": "assets/wiki/solarium-mine.webp",
+          "tier": "Advanced Evolution"
+        },
+        {
+          "n": "Gargantium Mine",
+          "img": "assets/wiki/gargantium-mine.webp",
+          "tier": "Enchanted"
+        }
+      ],
+      "life": "S+5000+",
+      "added": "5 April, 2020",
+      "quote": "A catalyst which seems to radiate energy powerful enough to cause subtle quakes in the surrounding area.",
+      "lifeN": 5000
+    },
+    {
+      "n": "Catalyst of Light",
+      "img": "assets/wiki/catalyst-of-light.webp",
+      "crafts": [
+        {
+          "n": "Optic Origin",
+          "img": "assets/wiki/optic-origin.webp",
+          "tier": "Superstitious",
+          "type": "Upgrader",
+          "fx": "Upgrades based on material and time of day: · Forcefield: x400 + ignition · Neon: x300 · Anything else: x200"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Morning Star",
+          "img": "assets/wiki/morning-star.webp",
+          "tier": "Reborn"
+        },
+        {
+          "n": "Neutron Star",
+          "img": "assets/wiki/neutron-star.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Catalyzed Star",
+          "img": "assets/wiki/catalyzed-star.webp",
+          "tier": "Reborn Fusion"
+        },
+        {
+          "n": "Ore Nova",
+          "img": "assets/wiki/ore-nova.webp",
+          "tier": "Advanced Fusion"
+        },
+        {
+          "n": "Void Star",
+          "img": "assets/wiki/void-star.webp",
+          "tier": "Advanced Evolution"
+        }
+      ],
+      "life": "S+5000+",
+      "added": "5 April, 2020",
+      "quote": "This catalyst reminds you of the stars above. You also remember the unfortunate fate of those stars, and of your world.",
+      "lifeN": 5000
+    },
+    {
+      "n": "Catalyst of Time",
+      "img": "assets/wiki/catalyst-of-time.webp",
+      "crafts": [
+        {
+          "n": "The Hourglass",
+          "img": "assets/wiki/the-hourglass.webp",
+          "tier": "Superstitious",
+          "type": "Upgrader",
+          "fx": "Base multiplier of x90 · Multiplier increased by +1 per second · (Item has to be placed down) · Increases conveyor speed of all items on base"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Grandfather Clockwork",
+          "img": "assets/wiki/grandfather-clockwork.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Interstellar Conqueror",
+          "img": "assets/wiki/interstellar-conqueror.webp",
+          "tier": "Rare Reborn"
+        },
+        {
+          "n": "Temporal Enchantment",
+          "img": "assets/wiki/temporal-enchantment.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "Temporal Armageddon",
+          "img": "assets/wiki/temporal-armageddon.webp",
+          "tier": "Evolved Reborn"
+        },
+        {
+          "n": "The Trinity",
+          "img": "assets/wiki/the-trinity.webp",
+          "tier": "Enchanted"
+        }
+      ],
+      "life": "S+5,000+",
+      "added": "12 June, 2020",
+      "quote": "This catalyst reminds you of.. nothing, for you can't remember a time that didn't exist.",
+      "lifeN": 5000
+    },
+    {
+      "n": "Catalyst of Space",
+      "img": "assets/wiki/catalyst-of-space.webp",
+      "crafts": [
+        {
+          "n": "Ore Hypernova",
+          "img": "assets/wiki/ore-hypernova.webp",
+          "tier": "Superstitious",
+          "type": "Upgrader",
+          "fx": "Multiplies ore value by 1500x · Gives ore sparkles"
+        }
+      ],
+      "req": [
+        {
+          "n": "True Book of Knowledge",
+          "img": "assets/wiki/true-book-of-knowledge.webp",
+          "tier": "Ultimate"
+        },
+        {
+          "n": "Optic Origin",
+          "img": "assets/wiki/optic-origin.webp",
+          "tier": "Superstitious"
+        },
+        {
+          "n": "Blue Supergiant",
+          "img": "assets/wiki/blue-supergiant.webp",
+          "tier": "Advanced Reborn"
+        },
+        {
+          "n": "Aurora Borealis",
+          "img": "assets/wiki/aurora-borealis.webp",
+          "tier": "Advanced Evolution"
+        },
+        {
+          "n": "Stardust Pulsar",
+          "img": "assets/wiki/stardust-pulsar.webp",
+          "tier": "Advanced Reborn"
+        },
+        {
+          "n": "Stellarite Mine",
+          "img": "assets/wiki/stellarite-mine.webp",
+          "tier": "Rare Reborn"
+        }
+      ],
+      "life": "S+10,000+",
+      "added": "20 May, 2020",
+      "quote": "This catalyst reminds you of your inevitable cosmic destruction.",
+      "lifeN": 10000
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 /* =========================================================
    Research Points page
-   Data: window.MH_RP (js/rp-data.js)
+   Data: window.MH_RP (data/ResearchPoints.json)
    ========================================================= */
 (() => {
   const D = window.MH_RP;

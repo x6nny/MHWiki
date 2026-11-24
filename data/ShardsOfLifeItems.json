@@ -1,0 +1,2203 @@
+{
+  "reborn": [
+    {
+      "n": "Aether Refinery",
+      "img": "assets/wiki/aether-refinery.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 5,
+      "life": "300+",
+      "cost": 500,
+      "sell": 22,
+      "shiny": "Blazing"
+    },
+    {
+      "n": "Ambrosia Fountain",
+      "img": "assets/wiki/ambrosia-fountain.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 7,
+      "life": "150+",
+      "cost": 450,
+      "sell": 20,
+      "shiny": "Berry"
+    },
+    {
+      "n": "Ancient Temple",
+      "img": "assets/wiki/ancient-temple.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 7,
+      "life": "5+",
+      "cost": 450,
+      "sell": 20,
+      "shiny": "Dusk"
+    },
+    {
+      "n": "Apollium Mine",
+      "img": "assets/wiki/apollium-mine.webp",
+      "t": "A",
+      "type": "Dropper",
+      "r": 1,
+      "life": "5000+",
+      "cost": 720,
+      "sell": 26,
+      "shiny": "Supergiant"
+    },
+    {
+      "n": "Arcane Lightning",
+      "img": "assets/wiki/arcane-lightning.webp",
+      "t": "A",
+      "type": "Upgrader",
+      "r": 3,
+      "life": "2,000+",
+      "cost": 660,
+      "sell": 24,
+      "shiny": "Eclipse"
+    },
+    {
+      "n": "Astral Predictor",
+      "img": "assets/wiki/astral-predictor.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 15,
+      "life": "0+",
+      "cost": 250,
+      "sell": 12,
+      "shiny": "Storm\nContemporary"
+    },
+    {
+      "n": "Atlantic Monolith",
+      "img": "assets/wiki/atlantic-monolith.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 10,
+      "life": "100+",
+      "cost": 375,
+      "sell": 17,
+      "shiny": "Scorched"
+    },
+    {
+      "n": "Atomium Mine",
+      "img": "assets/wiki/atomium-mine.webp",
+      "t": "R",
+      "type": "Dropper",
+      "r": 12,
+      "life": "100+",
+      "cost": 325,
+      "sell": 15,
+      "shiny": "Negative"
+    },
+    {
+      "n": "Azure Refiner",
+      "img": "assets/wiki/azure-refiner.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 15,
+      "life": "5+",
+      "cost": 250,
+      "sell": 12,
+      "shiny": "Crimson"
+    },
+    {
+      "n": "Banana Split Upgrader",
+      "img": "assets/wiki/banana-split-upgrader.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 5,
+      "life": "0+",
+      "cost": 250,
+      "sell": 12,
+      "shiny": "Mint"
+    },
+    {
+      "n": "Big Alberto",
+      "img": "assets/wiki/big-alberto.webp",
+      "t": "A",
+      "type": "Upgrader",
+      "r": 3,
+      "life": "2000+",
+      "cost": 660,
+      "sell": 24,
+      "shiny": "Cyber"
+    },
+    {
+      "n": "Big Bad Blaster",
+      "img": "assets/wiki/big-bad-blaster.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 18,
+      "life": "10+",
+      "cost": 175,
+      "sell": 9,
+      "shiny": "Eternal\nConfetti"
+    },
+    {
+      "n": "Big Bertha",
+      "img": "assets/wiki/big-bertha.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 19,
+      "life": "20+",
+      "cost": 150,
+      "sell": 8,
+      "shiny": "Cyber"
+    },
+    {
+      "n": "Black Dwarf",
+      "img": "assets/wiki/black-dwarf.webp",
+      "t": "A",
+      "type": "Utility",
+      "r": 3,
+      "life": "2,000+",
+      "cost": 660,
+      "sell": 24,
+      "shiny": "Stargazed\nBeloved"
+    },
+    {
+      "n": "Blind Justice",
+      "img": "assets/wiki/blind-justice.webp",
+      "t": "R",
+      "type": "Other",
+      "r": 7,
+      "life": "100+",
+      "cost": 450,
+      "sell": 24,
+      "shiny": "Eldritch\nContemporary"
+    },
+    {
+      "n": "Blue Supergiant",
+      "img": "assets/wiki/blue-supergiant.webp",
+      "t": "A",
+      "type": "Upgrader",
+      "r": 2,
+      "life": "10,000+",
+      "cost": 690,
+      "sell": 25,
+      "shiny": "Hypergiant"
+    },
+    {
+      "n": "Breech Loader",
+      "img": "assets/wiki/breech-loader.webp",
+      "t": "R",
+      "type": "Dropper",
+      "r": 8,
+      "life": "500+",
+      "cost": 425,
+      "sell": 19,
+      "shiny": "Newtonic\nLord"
+    },
+    {
+      "n": "Clockwork",
+      "img": "assets/wiki/clockwork.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 8,
+      "life": "10+",
+      "cost": 425,
+      "sell": 19,
+      "shiny": "Eldritch"
+    },
+    {
+      "n": "Combustion Engine",
+      "img": "assets/wiki/combustion-engine.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 5,
+      "life": "1,000+",
+      "cost": 500,
+      "sell": 22,
+      "shiny": "Fallen\nLeprechaun's\nContemporary"
+    },
+    {
+      "n": "Cooling Chamber",
+      "img": "assets/wiki/cooling-chamber.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 8,
+      "life": "100+",
+      "cost": 425,
+      "sell": 19,
+      "shiny": "Bodacious\niSpin"
+    },
+    {
+      "n": "Crystal Shrine",
+      "img": "assets/wiki/crystal-shrine.webp",
+      "t": "A",
+      "type": "Furnace",
+      "r": 1,
+      "life": "3,000+",
+      "cost": 720,
+      "sell": 26,
+      "shiny": "Spectrum"
+    },
+    {
+      "n": "Crystallized System",
+      "img": "assets/wiki/crystallized-system.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 12,
+      "life": "600+",
+      "cost": 325,
+      "sell": 15,
+      "shiny": "Lapis\nCupid's"
+    },
+    {
+      "n": "Dark Magic",
+      "img": "assets/wiki/dark-magic.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 18,
+      "life": "100+",
+      "cost": 250,
+      "sell": 9,
+      "shiny": "Blazing"
+    },
+    {
+      "n": "Desert Monument",
+      "img": "assets/wiki/desert-monument.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 1,
+      "life": "7300+",
+      "cost": 720,
+      "sell": 26,
+      "shiny": "Elysium\nClover\nYe Olde"
+    },
+    {
+      "n": "Dragon Blaster",
+      "img": "assets/wiki/dragon-blaster.webp",
+      "t": "A",
+      "type": "Upgrader",
+      "r": 3,
+      "life": "500+",
+      "cost": 660,
+      "sell": 24,
+      "shiny": "Ghastly\nShamrock\nStormcrow"
+    },
+    {
+      "n": "Dragonglass Mine",
+      "img": "assets/wiki/dragonglass-mine.webp",
+      "t": "R",
+      "type": "Dropper",
+      "r": 8,
+      "life": "100+",
+      "cost": 425,
+      "sell": 19,
+      "shiny": "Azure\nStorm"
+    },
+    {
+      "n": "Dreamer's Anguish",
+      "img": "assets/wiki/dreamer-s-anguish.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 3,
+      "life": "200+",
+      "cost": 550,
+      "sell": 24,
+      "shiny": "Dusk\nNew Age"
+    },
+    {
+      "n": "Dreamer's Blight",
+      "img": "assets/wiki/dreamer-s-blight.webp",
+      "t": "A",
+      "type": "Furnace",
+      "r": 2,
+      "life": "2000+",
+      "cost": 690,
+      "sell": 26,
+      "shiny": "Autumnal"
+    },
+    {
+      "n": "Dreamer's Fright",
+      "img": "assets/wiki/dreamer-s-fright.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 18,
+      "life": "20+",
+      "cost": 175,
+      "sell": 9,
+      "shiny": "Mighty\nNightmare\nEscape"
+    },
+    {
+      "n": "Dreamer's Might",
+      "img": "assets/wiki/dreamer-s-might-high-quality.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 15,
+      "life": "20+",
+      "cost": 250,
+      "sell": 12,
+      "shiny": "Frightful"
+    },
+    {
+      "n": "Esoteric Citadel",
+      "img": "assets/wiki/esoteric-citadel.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 3,
+      "life": "5,000+",
+      "cost": 550,
+      "sell": 24,
+      "shiny": "Master's\nFabergé"
+    },
+    {
+      "n": "Eternal Journey",
+      "img": "assets/wiki/eternal-journey.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 10,
+      "life": "100+",
+      "cost": 375,
+      "sell": 17,
+      "shiny": "Dawn"
+    },
+    {
+      "n": "Father of Freon",
+      "img": "assets/wiki/father-of-freon.webp",
+      "t": "A",
+      "type": "Upgrader",
+      "r": 2,
+      "life": "1000+",
+      "cost": 690,
+      "sell": 25,
+      "shiny": "Blazing"
+    },
+    {
+      "n": "Flaming Schrodinger",
+      "img": "assets/wiki/flaming-schrodinger-hd.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 16,
+      "life": "5+",
+      "cost": 225,
+      "sell": 11,
+      "shiny": "Steamwork"
+    },
+    {
+      "n": "Fractured Reality",
+      "img": "assets/wiki/fractured-reality.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 5,
+      "life": "750+",
+      "cost": 500,
+      "sell": 22,
+      "shiny": "Oblivion\nLonely"
+    },
+    {
+      "n": "Frigid Dystopia",
+      "img": "assets/wiki/frigid-dystopia.webp",
+      "t": "A",
+      "type": "Upgrader",
+      "r": 3,
+      "life": "500+",
+      "cost": 660,
+      "sell": 23,
+      "shiny": "Ashen"
+    },
+    {
+      "n": "Frozen Justice",
+      "img": "assets/wiki/frozen-justice.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 15,
+      "life": "0+",
+      "cost": 250,
+      "sell": 12,
+      "shiny": "Ashen\nNew Age"
+    },
+    {
+      "n": "Gate of Eclipse",
+      "img": "assets/wiki/guys-its-a-door-not-a-gate-are-you-blind.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 15,
+      "life": "100+",
+      "cost": 250,
+      "sell": 12,
+      "shiny": "Void"
+    },
+    {
+      "n": "Gravitational Gearwork",
+      "img": "assets/wiki/gravitational-gearwork.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 13,
+      "life": "800+",
+      "cost": 300,
+      "sell": 14,
+      "shiny": "Gamma"
+    },
+    {
+      "n": "Gravitational Gyrocopter",
+      "img": "assets/wiki/gravitational-gyrocopter.webp",
+      "t": "A",
+      "type": "Furnace",
+      "r": 2,
+      "life": "1000+",
+      "cost": 690,
+      "sell": 26,
+      "shiny": "Pilot"
+    },
+    {
+      "n": "Green Tea Latte",
+      "img": "assets/wiki/green-tea-latte.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 10,
+      "life": "20+",
+      "cost": 375,
+      "sell": 17,
+      "shiny": "Vintage"
+    },
+    {
+      "n": "Guardian of the Gate",
+      "img": "assets/wiki/guardian-of-the-gate.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 5,
+      "life": "250+",
+      "cost": 500,
+      "sell": 22,
+      "shiny": "Eldritch"
+    },
+    {
+      "n": "Hades' Palace",
+      "img": "assets/wiki/hades-palace.webp",
+      "t": "A",
+      "type": "Upgrader",
+      "r": 3,
+      "life": "666+",
+      "cost": 660,
+      "sell": 24,
+      "shiny": "Styx\nTransylvanian\nYe Olde"
+    },
+    {
+      "n": "Igneous Forge",
+      "img": "assets/wiki/igneous-forge.webp",
+      "t": "A",
+      "type": "Furnace",
+      "r": 3,
+      "life": "1000+",
+      "cost": 660,
+      "sell": 24,
+      "shiny": "Newtonic"
+    },
+    {
+      "n": "Industrial Firecrystal Mine",
+      "img": "assets/wiki/helping-erik-firecrystal-dlc.webp",
+      "t": "R",
+      "type": "Dropper",
+      "r": 15,
+      "life": "0+",
+      "cost": 250,
+      "sell": 12,
+      "shiny": "Frozen"
+    },
+    {
+      "n": "Industrial Scarab",
+      "img": "assets/wiki/industrial-scarab.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 3,
+      "life": "5000+",
+      "cost": 550,
+      "sell": 24,
+      "shiny": "Galilean"
+    },
+    {
+      "n": "Invasive Cyberlord",
+      "img": "assets/wiki/invasive-cyberlord.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 10,
+      "life": "400+",
+      "cost": 375,
+      "sell": 17,
+      "shiny": "Binary"
+    },
+    {
+      "n": "Lightningbolt Refiner",
+      "img": "assets/wiki/lightningbolt-refiner-hd.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 18,
+      "life": "20+",
+      "cost": 175,
+      "sell": 9,
+      "shiny": "Martian"
+    },
+    {
+      "n": "Massive Diamond Mine",
+      "img": "assets/wiki/massive-diamond-mine.webp",
+      "t": "R",
+      "type": "Dropper",
+      "r": 15,
+      "life": "0+",
+      "cost": 250,
+      "sell": 12,
+      "shiny": "Dreamy\nBoy"
+    },
+    {
+      "n": "Mineral Wheel",
+      "img": "assets/wiki/mineral-wheel.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 17,
+      "life": "10+",
+      "cost": 200,
+      "sell": 10,
+      "shiny": "Toxic"
+    },
+    {
+      "n": "Morning Star",
+      "img": "assets/wiki/morning-star.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 14,
+      "life": "250+",
+      "cost": 300,
+      "sell": 13,
+      "shiny": "Celestial"
+    },
+    {
+      "n": "Nature's Grip",
+      "img": "assets/wiki/nature-s-grip.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 15,
+      "life": "0+",
+      "cost": 250,
+      "sell": 12,
+      "shiny": "Dawn"
+    },
+    {
+      "n": "Newtonic Corroder",
+      "img": "assets/wiki/newtonic-corroder.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 10,
+      "life": "1,000+",
+      "cost": 375,
+      "sell": 17,
+      "shiny": "Galilean"
+    },
+    {
+      "n": "Newtonium Mine",
+      "img": "assets/wiki/newtonium-mine.webp",
+      "t": "R",
+      "type": "Dropper",
+      "r": 18,
+      "life": "20+",
+      "cost": 175,
+      "sell": 9,
+      "shiny": "Cruel\nNew Age\nDemon"
+    },
+    {
+      "n": "Northern Lights",
+      "img": "assets/wiki/northern-lights.webp",
+      "t": "A",
+      "type": "Furnace",
+      "r": 1,
+      "life": "2,000+",
+      "cost": 720,
+      "sell": 26,
+      "shiny": "Cosmic\nDutchman's\nVaporwave"
+    },
+    {
+      "n": "Nova Star",
+      "img": "assets/wiki/nova-star.webp",
+      "t": "A",
+      "type": "Upgrader",
+      "r": 3,
+      "life": "5,000+",
+      "cost": 660,
+      "sell": 24,
+      "shiny": "Celestial\nNew Age"
+    },
+    {
+      "n": "Nuclear Stronghold",
+      "img": "assets/wiki/nuclear-stronghold.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 7,
+      "life": "400+",
+      "cost": 450,
+      "sell": 20,
+      "shiny": "Hades"
+    },
+    {
+      "n": "Ore Illuminator",
+      "img": "assets/wiki/ore-illuminator.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 15,
+      "life": "5+",
+      "cost": 325,
+      "sell": 12,
+      "shiny": "Spicy"
+    },
+    {
+      "n": "Ore Sawmill",
+      "img": "assets/wiki/ore-sawmill.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 10,
+      "life": "5+",
+      "cost": 375,
+      "sell": 17,
+      "shiny": "Wholesome"
+    },
+    {
+      "n": "Ore Skillet",
+      "img": "assets/wiki/ore-skillet.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 11,
+      "life": "753+",
+      "cost": 350,
+      "sell": 16,
+      "shiny": "BBQ\nGreen"
+    },
+    {
+      "n": "Palladium Drill",
+      "img": "assets/wiki/palladium-drill.webp",
+      "t": "A",
+      "type": "Dropper",
+      "r": 2,
+      "life": "1,000+",
+      "cost": 690,
+      "sell": 25,
+      "shiny": "Newtonic"
+    },
+    {
+      "n": "Phase Processor",
+      "img": "assets/wiki/phase-processor.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 7,
+      "life": "450+",
+      "cost": 450,
+      "sell": 20,
+      "shiny": "Neon"
+    },
+    {
+      "n": "Phase Refiner",
+      "img": "assets/wiki/phase-refiner.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 7,
+      "life": "200+",
+      "cost": 450,
+      "sell": 20,
+      "shiny": "Neon"
+    },
+    {
+      "n": "Pilotite Mine",
+      "img": "assets/wiki/pilotite-mine.webp",
+      "t": "R",
+      "type": "Dropper",
+      "r": 13,
+      "life": "200+",
+      "cost": 300,
+      "sell": 14,
+      "shiny": "Ultra\nPhantasm"
+    },
+    {
+      "n": "Pizza Blaster",
+      "img": "assets/wiki/pizza-blaster.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 15,
+      "life": "0+",
+      "cost": 250,
+      "sell": 12,
+      "shiny": "Void\nBirthday"
+    },
+    {
+      "n": "Plasma Scanner",
+      "img": "assets/wiki/plasma-scanner.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 19,
+      "life": "20+",
+      "cost": 150,
+      "sell": 8,
+      "shiny": "Timekeeper's\nDisco"
+    },
+    {
+      "n": "Precursor Furnace",
+      "img": "assets/wiki/precursor-furnace.webp",
+      "t": "A",
+      "type": "Furnace",
+      "r": 3,
+      "life": "500+",
+      "cost": 660,
+      "sell": 24,
+      "shiny": "Neon"
+    },
+    {
+      "n": "Precursor Mine",
+      "img": "assets/wiki/precursor-mine.webp",
+      "t": "A",
+      "type": "Dropper",
+      "r": 3,
+      "life": "500+",
+      "cost": 660,
+      "sell": 24,
+      "shiny": "Neon"
+    },
+    {
+      "n": "Quaint Skymill",
+      "img": "assets/wiki/quaint-skymill.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 8,
+      "life": "1000+",
+      "cost": 425,
+      "sell": 19,
+      "shiny": "Gloomy\nStellar"
+    },
+    {
+      "n": "Quantum Ore Cleaner",
+      "img": "assets/wiki/quantum-ore-cleaner.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 15,
+      "life": "0+",
+      "cost": 250,
+      "sell": 12,
+      "shiny": "Alpha\n.EXE\nNew Age\nSoapy"
+    },
+    {
+      "n": "Railgun Cannon",
+      "img": "assets/wiki/railgun-cannon.webp",
+      "t": "A",
+      "type": "Conveyor",
+      "r": 2,
+      "life": "8,000+",
+      "cost": 720,
+      "sell": 26,
+      "shiny": "Galilean"
+    },
+    {
+      "n": "Red Giant",
+      "img": "assets/wiki/red-giant.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 14,
+      "life": "1,000+",
+      "cost": 275,
+      "sell": 13,
+      "shiny": "Wholesome"
+    },
+    {
+      "n": "Righteous Will",
+      "img": "assets/wiki/righteous-will.webp",
+      "t": "R",
+      "type": "Utility",
+      "r": 6,
+      "life": "5+",
+      "cost": 475,
+      "sell": 21,
+      "shiny": "Delta\nPresent"
+    },
+    {
+      "n": "Sage Redeemer",
+      "img": "assets/wiki/sage-redeemer.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 15,
+      "life": "0+",
+      "cost": 250,
+      "sell": 12,
+      "shiny": "Wealthy\nCephalopod"
+    },
+    {
+      "n": "Sakura Garden",
+      "img": "assets/wiki/sakura-garden.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 3,
+      "life": "350+",
+      "cost": 550,
+      "sell": 24,
+      "shiny": "Abstract\nContemporary"
+    },
+    {
+      "n": "Scorching Heat",
+      "img": "assets/wiki/scorching-heat.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 10,
+      "life": "20+",
+      "cost": 375,
+      "sell": 17,
+      "shiny": "Frosted"
+    },
+    {
+      "n": "Scorpium Mine",
+      "img": "assets/wiki/scorpium-mine.webp",
+      "t": "R",
+      "type": "Dropper",
+      "r": 17,
+      "life": "20+",
+      "cost": 200,
+      "sell": 10,
+      "shiny": "Wholesome"
+    },
+    {
+      "n": "Shard Park",
+      "img": "assets/wiki/shard-park.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 9,
+      "life": "800+",
+      "cost": 400,
+      "sell": 18,
+      "shiny": "Solar"
+    },
+    {
+      "n": "Skyliner Flux",
+      "img": "assets/wiki/skyliner-flux.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 7,
+      "life": "1000+",
+      "cost": 450,
+      "sell": 20,
+      "shiny": "Citrus\nLoki's\nCYBEGG"
+    },
+    {
+      "n": "Solar Flare",
+      "img": "assets/wiki/solar-flare.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 18,
+      "life": "50+",
+      "cost": 250,
+      "sell": 9,
+      "shiny": "Supergiant"
+    },
+    {
+      "n": "Son of Poison",
+      "img": "assets/wiki/son-of-poison.webp",
+      "t": "A",
+      "type": "Upgrader",
+      "r": 2,
+      "life": "3000+",
+      "cost": 690,
+      "sell": 25,
+      "shiny": "Frozen\nYe Olde"
+    },
+    {
+      "n": "Spirit of Fire",
+      "img": "assets/wiki/spirit-of-fire.webp",
+      "t": "A",
+      "type": "Upgrader",
+      "r": 2,
+      "life": "3000+",
+      "cost": 690,
+      "sell": 25,
+      "shiny": "Toxic"
+    },
+    {
+      "n": "Stardust Pulsar",
+      "img": "assets/wiki/stardust-pulsar.webp",
+      "t": "A",
+      "type": "Upgrader",
+      "r": 2,
+      "life": "600+",
+      "cost": 690,
+      "sell": 25,
+      "shiny": "Nova"
+    },
+    {
+      "n": "Sword God Shrine",
+      "img": "assets/wiki/sword-god-shrine-hd.webp",
+      "t": "A",
+      "type": "Weapon",
+      "r": 1,
+      "life": "800+",
+      "cost": 720,
+      "sell": 25,
+      "shiny": "Bloodbane"
+    },
+    {
+      "n": "Symmetrium Mine",
+      "img": "assets/wiki/symmetrium-mine.webp",
+      "t": "R",
+      "type": "Dropper",
+      "r": 10,
+      "life": "300+",
+      "cost": 375,
+      "sell": 17,
+      "shiny": "Spiteful\nBaron"
+    },
+    {
+      "n": "Tesla Resetter",
+      "img": "assets/wiki/tesla-resetter.webp",
+      "t": "R",
+      "type": "Utility",
+      "r": 18,
+      "life": "10+",
+      "cost": 175,
+      "sell": 9,
+      "shiny": "Advanced\nSpooky"
+    },
+    {
+      "n": "The Abomination",
+      "img": "assets/wiki/the-abomination.webp",
+      "t": "R",
+      "type": "Dropper",
+      "r": 8,
+      "life": "500+",
+      "cost": 425,
+      "sell": 19,
+      "shiny": "Polished\nYe Olde"
+    },
+    {
+      "n": "The Catalyst",
+      "img": "assets/wiki/the-catalyst.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 12,
+      "life": "5+",
+      "cost": 325,
+      "sell": 15,
+      "shiny": "Charged\nContemporary"
+    },
+    {
+      "n": "The Fracture",
+      "img": "assets/wiki/the-fracture.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 4,
+      "life": "20+",
+      "cost": 525,
+      "sell": 23,
+      "shiny": "Void"
+    },
+    {
+      "n": "The Sporest",
+      "img": "assets/wiki/the-sporest.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 8,
+      "life": "400+",
+      "cost": 425,
+      "sell": 19,
+      "shiny": "Vampiric\nYe Olde"
+    },
+    {
+      "n": "Timeless Enhancement",
+      "img": "assets/wiki/timeless-enhancement.webp",
+      "t": "R",
+      "type": "Furnace",
+      "r": 7,
+      "life": "150+",
+      "cost": 450,
+      "sell": 20,
+      "shiny": "Dawn"
+    },
+    {
+      "n": "Toxic Waste Disposal",
+      "img": "assets/wiki/toxic-waste-disposal.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 13,
+      "life": "100+",
+      "cost": 300,
+      "sell": 14,
+      "shiny": "Blurptonium"
+    },
+    {
+      "n": "Vampire Spore",
+      "img": "assets/wiki/vampire-spore.webp",
+      "t": "A",
+      "type": "Upgrader",
+      "r": 1,
+      "life": "500+",
+      "cost": 720,
+      "sell": 26,
+      "shiny": "Wholesome"
+    },
+    {
+      "n": "Venomshank",
+      "img": "assets/wiki/venomshank.webp",
+      "t": "R",
+      "type": "Weapon",
+      "r": 3,
+      "life": "5+",
+      "cost": 660,
+      "sell": 24,
+      "shiny": "Aqua"
+    },
+    {
+      "n": "Virtual Enhancer",
+      "img": "assets/wiki/virtual-enhancer.webp",
+      "t": "A",
+      "type": "Upgrader",
+      "r": 3,
+      "life": "1,000+",
+      "cost": 660,
+      "sell": 20,
+      "shiny": "Crimson"
+    },
+    {
+      "n": "Vortex Chamber",
+      "img": "assets/wiki/vortex-chamber.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 15,
+      "life": "0+",
+      "cost": 250,
+      "sell": 12,
+      "shiny": "Minted"
+    },
+    {
+      "n": "Vulcan's Grasp",
+      "img": "assets/wiki/vulcan-s-grasp.webp",
+      "t": "A",
+      "type": "Upgrader",
+      "r": 1,
+      "life": "500+",
+      "cost": 720,
+      "sell": 26,
+      "shiny": "Frozen"
+    },
+    {
+      "n": "Wild Spore",
+      "img": "assets/wiki/wild-spore.webp",
+      "t": "R",
+      "type": "Upgrader",
+      "r": 17,
+      "life": "0+",
+      "cost": 200,
+      "sell": 10,
+      "shiny": "Autumnal\nPlagued"
+    },
+    {
+      "n": "Yunium Mine",
+      "img": "assets/wiki/yunium-mine.webp",
+      "t": "R",
+      "type": "Dropper",
+      "r": 17,
+      "life": "10+",
+      "cost": 200,
+      "sell": 10,
+      "shiny": "Paranormal\nMaster"
+    }
+  ],
+  "ench": [
+    {
+      "n": "Pizza Furnace",
+      "img": "assets/wiki/pizza-furnace.webp",
+      "type": "Furnace",
+      "life": "0+",
+      "shards": 50,
+      "reqs": [
+        {
+          "n": "Pizza Slice Wall",
+          "x": 1,
+          "img": "assets/wiki/pizza-slice-wall.webp",
+          "t": "Collectible"
+        },
+        {
+          "n": "Pizza Research Center",
+          "x": 1,
+          "img": "assets/wiki/pizza-research-center.webp",
+          "t": "Collectible"
+        },
+        {
+          "n": "Pizza Blaster",
+          "x": 3,
+          "img": "assets/wiki/pizza-blaster.webp",
+          "t": "Reborn"
+        },
+        {
+          "n": "PIZZA DOGE",
+          "x": 2,
+          "img": "assets/wiki/pizza-doge.webp",
+          "t": "Collectible"
+        }
+      ],
+      "other": [],
+      "eff": "Base multiplier of x1000 · Draws in power from pizza-themed items placed on the base.",
+      "quote": "The ultimate weapon, a machine that values ore at the price of pizza! Draws power from pizza-themed items in your base."
+    },
+    {
+      "n": "Dreamer's Birthday Cake",
+      "img": "assets/wiki/dreamer-s-birthday-cake.webp",
+      "type": "Upgrader",
+      "life": "2000+",
+      "shards": 100,
+      "reqs": [
+        {
+          "n": "Dreamer's Sight",
+          "x": 10,
+          "img": "assets/wiki/dreamer-s-sight.webp",
+          "t": "Mythic"
+        },
+        {
+          "n": "Dreamer's Might",
+          "x": 3,
+          "img": "assets/wiki/dreamer-s-might-high-quality.webp",
+          "t": "Reborn"
+        },
+        {
+          "n": "Dreamer's Fright",
+          "x": 3,
+          "img": "assets/wiki/dreamer-s-fright.webp",
+          "t": "Reborn"
+        },
+        {
+          "n": "Azure Refiner",
+          "x": 3,
+          "img": "assets/wiki/azure-refiner.webp",
+          "t": "Reborn"
+        },
+        {
+          "n": "Dreamer's Anguish",
+          "x": 2,
+          "img": "assets/wiki/dreamer-s-anguish.webp",
+          "t": "Reborn"
+        },
+        {
+          "n": "Dreamer's Blight",
+          "x": 1,
+          "img": "assets/wiki/dreamer-s-blight.webp",
+          "t": "Advanced Reborn"
+        }
+      ],
+      "other": [],
+      "eff": "",
+      "quote": "A cake devoted to the Dreamers who have perished defending their home town."
+    },
+    {
+      "n": "Angel's Blessing",
+      "img": "assets/wiki/angel-s-blessing.webp",
+      "type": "Upgrader",
+      "life": "S+800+",
+      "shards": 300,
+      "reqs": [
+        {
+          "n": "Swift Justice",
+          "x": 1,
+          "img": "assets/wiki/swift-justice.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Final Eclipse Gate",
+          "x": 2,
+          "img": "assets/wiki/final-eclipse-gate.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Dragonglass Blaster",
+          "x": 3,
+          "img": "assets/wiki/dragonglass-blaster.webp",
+          "t": "Advanced Fusion"
+        },
+        {
+          "n": "Angelic Grace",
+          "x": 7,
+          "img": "assets/wiki/angelic-grace.webp",
+          "t": "Divine"
+        },
+        {
+          "n": "Sword God Shrine",
+          "x": 1,
+          "img": "assets/wiki/sword-god-shrine-hd.webp",
+          "t": "Advanced Reborn"
+        }
+      ],
+      "other": [],
+      "eff": "Portable upgrade beam capable of up to x150 · Gives ores sparkles",
+      "quote": "The angel grants a great blessing onto the purest ore without altering their state."
+    },
+    {
+      "n": "Scales of Disparity",
+      "img": "assets/wiki/scales-of-disparity.webp",
+      "type": "Upgrader",
+      "life": null,
+      "shards": 500,
+      "reqs": [
+        {
+          "n": "Famished Farm",
+          "x": 5,
+          "img": "assets/wiki/famished-farm.webp",
+          "t": "Limited Reborn"
+        },
+        {
+          "n": "Famished Wasteland",
+          "x": 10,
+          "img": "assets/wiki/famished-wasteland.webp",
+          "t": "Limited Reborn"
+        },
+        {
+          "n": "Searing Heat",
+          "x": 1,
+          "img": "assets/wiki/searing-heat.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Dreamer's Devastation",
+          "x": 1,
+          "img": "assets/wiki/dreamer-s-devastation.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "The Daegelart",
+          "x": 1,
+          "img": "assets/wiki/the-daegelart.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Deadly Spore",
+          "x": 2,
+          "img": "assets/wiki/deadly-spore.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "The Great Parasite",
+          "x": 1,
+          "img": "assets/wiki/the-great-parasite.webp",
+          "t": "Slipstream"
+        }
+      ],
+      "other": ["500,000 Candy"],
+      "eff": "Make all food items Rot · (x0.925 multiplier to all food items while also applying 1 stack of Rot)",
+      "quote": "Nothing in life comes without a cost. For individuals to prosper certain sacrifices must be made, and too often do they push the pain onto the less fortunate."
+    },
+    {
+      "n": "Book of Knowledge",
+      "img": "assets/wiki/book-of-knowledge.webp",
+      "type": "Furnace",
+      "life": "1000+",
+      "shards": 700,
+      "reqs": [
+        {
+          "n": "Sage King",
+          "x": 2,
+          "img": "assets/wiki/sage-king.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Neutron Star",
+          "x": 1,
+          "img": "assets/wiki/neutron-star.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "True Overlord Device",
+          "x": 1,
+          "img": "assets/wiki/true-overlord-device.webp",
+          "t": "Ultimate"
+        },
+        {
+          "n": "Aethereal Synthesizer",
+          "x": 2,
+          "img": "assets/wiki/aethereal-synthesizer.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Ore Supernova",
+          "x": 1,
+          "img": "assets/wiki/ore-supernova.webp",
+          "t": "Slipstream"
+        }
+      ],
+      "other": [],
+      "eff": "Base multiplier of x1. · Placing down knowledge items increases multiplier.",
+      "quote": "A mystical book that can draw great power from the knowledge on your base."
+    },
+    {
+      "n": "Airborne Pathogenic Spewer",
+      "img": "assets/wiki/airborne-pathogenic-spewer.webp",
+      "type": "Upgrader",
+      "life": null,
+      "shards": 750,
+      "reqs": [
+        {
+          "n": "Scorponyte Mine",
+          "x": 3,
+          "img": "assets/wiki/scorponyte-mine.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Mycolympus",
+          "x": 1,
+          "img": "assets/wiki/mycolympus.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Son of Poison",
+          "x": 6,
+          "img": "assets/wiki/son-of-poison.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "Bubonic Plague",
+          "x": 10,
+          "img": "assets/wiki/bubonic-plague.webp",
+          "t": "Limited Reborn"
+        },
+        {
+          "n": "Venomshank",
+          "x": 5,
+          "img": "assets/wiki/venomshank.webp",
+          "t": "Reborn"
+        },
+        {
+          "n": "Sinister Sepulcher",
+          "x": 1,
+          "img": "assets/wiki/sinister-sepulcher.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Ghosdeeri's Antidote",
+          "x": 5,
+          "img": "assets/wiki/ghosdeeri-s-antidote.webp",
+          "t": "Limited Reborn"
+        }
+      ],
+      "other": ["500,000 Candy"],
+      "eff": "Base multiplier of x200 · Increased multiplier with certain status effect",
+      "quote": "One of the most efficient methods of transmitting disease is through the very air people need to live. Ghosdeeri took advantage of this cruel fact and constructed an airship to serve that sole purpose."
+    },
+    {
+      "n": "Coliseum Catharsis",
+      "img": "assets/wiki/coliseum-catharsis.webp",
+      "type": "Furnace",
+      "life": "3000+",
+      "shards": 753,
+      "reqs": [
+        {
+          "n": "Final Eclipse Gate",
+          "x": 1,
+          "img": "assets/wiki/final-eclipse-gate.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Crystal Altar",
+          "x": 1,
+          "img": "assets/wiki/crystal-altar.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Tyrant's Forge",
+          "x": 1,
+          "img": "assets/wiki/tyrant-s-forge.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Sage King",
+          "x": 2,
+          "img": "assets/wiki/sage-king.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Utopian Refiner",
+          "x": 1,
+          "img": "assets/wiki/utopian-refiner.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Ancient Coliseum",
+          "x": 2,
+          "img": "assets/wiki/ancient-coliseum.webp",
+          "t": "Evolved Reborn"
+        }
+      ],
+      "other": ["Triumphant Badge"],
+      "eff": "High base multiplier of x42500",
+      "quote": "Ruins of a civilization which fell billions of years ago. It's amazing how it has survived for this long, by now it should've been lost to time."
+    },
+    {
+      "n": "Empyrean Monument",
+      "img": "assets/wiki/empyrean-monument.webp",
+      "type": "Upgrader",
+      "life": "5000+",
+      "shards": 800,
+      "reqs": [
+        {
+          "n": "Neutron Star",
+          "x": 1,
+          "img": "assets/wiki/neutron-star.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Nova Star",
+          "x": 5,
+          "img": "assets/wiki/nova-star.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "Ancient Coliseum",
+          "x": 2,
+          "img": "assets/wiki/ancient-coliseum.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Suitopian Refiner",
+          "x": 1,
+          "img": "assets/wiki/suitopian-refiner.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Arcane Lightning",
+          "x": 5,
+          "img": "assets/wiki/arcane-lightning.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "Atmospheric Steamwork",
+          "x": 2,
+          "img": "assets/wiki/atmospheric-steamwork.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Astral Setter",
+          "x": 3,
+          "img": "assets/wiki/astral-setter.webp",
+          "t": "Evolved Reborn"
+        }
+      ],
+      "other": [],
+      "eff": "Base multiplier of x15. · Multiplier increases by +15 per elevation.",
+      "quote": "This monument pierces the heavenly skies, blessing ore with the holiest power. Like an angel, your ore must fly through the monoliths."
+    },
+    {
+      "n": "Gargantium Mine",
+      "img": "assets/wiki/gargantium-mine.webp",
+      "type": "Dropper",
+      "life": "S+1000+",
+      "shards": 1000,
+      "reqs": [
+        {
+          "n": "Palladium Drill",
+          "x": 3,
+          "img": "assets/wiki/palladium-drill.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "Symcorpium Mine",
+          "x": 3,
+          "img": "assets/wiki/symcorpium-mine.webp",
+          "t": "Reborn Fusion"
+        },
+        {
+          "n": "Newtonium Excavator",
+          "x": 3,
+          "img": "assets/wiki/newtonium-excavator.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "V-tolite Mine",
+          "x": 3,
+          "img": "assets/wiki/v-tolite-mine.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Diamond Breech Loader",
+          "x": 4,
+          "img": "assets/wiki/diamond-breech-loader.webp",
+          "t": "Reborn Fusion"
+        },
+        {
+          "n": "Pulsar Octagnium Mine",
+          "x": 1,
+          "img": "assets/wiki/pulsar-octagnium-mine.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Phasecursor Mine",
+          "x": 3,
+          "img": "assets/wiki/phasecursor-mine.webp",
+          "t": "Advanced Fusion"
+        }
+      ],
+      "other": [],
+      "eff": "Dropper and its ores are affected by Pulsars, giving unique effects",
+      "quote": "A behemoth of a machine whose incredibly dense ores react strangely to pulsars."
+    },
+    {
+      "n": "Devourer of Nightmares",
+      "img": "assets/wiki/devourer-of-nightmares.webp",
+      "type": "Furnace",
+      "life": "s-666+",
+      "shards": 1000,
+      "reqs": [
+        {
+          "n": "Eternal Fracture",
+          "x": 2,
+          "img": "assets/wiki/eternal-fracture.webp",
+          "t": "Reborn Fusion"
+        },
+        {
+          "n": "Brimstone Spires",
+          "x": 1,
+          "img": "assets/wiki/brimstone-spires.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Oblivion Weaver",
+          "x": 1,
+          "img": "assets/wiki/oblivion-weaver.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Dreamer's Nightmare",
+          "x": 1,
+          "img": "assets/wiki/dreamer-s-nightmare.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Dreamer's Terror",
+          "x": 1,
+          "img": "assets/wiki/dreamer-s-terror.webp",
+          "t": "Evolved Reborn"
+        }
+      ],
+      "other": [],
+      "eff": "Furnace: x10k · Cell: x500Qn",
+      "quote": "There's nothing to fear but fear itself. This cell furnace will disobey its owner, it will only feed on ore when it wishes to."
+    },
+    {
+      "n": "Dreamer's Life",
+      "img": "assets/wiki/dreamer-s-life.webp",
+      "type": "Upgrader",
+      "life": "s-2000+",
+      "shards": 1000,
+      "reqs": [
+        {
+          "n": "Dreamer's Sight",
+          "x": 500,
+          "img": "assets/wiki/dreamer-s-sight.webp",
+          "t": "Mythic"
+        },
+        {
+          "n": "Dreamer's Terror",
+          "x": 1,
+          "img": "assets/wiki/dreamer-s-terror.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Dreamer's Blight",
+          "x": 5,
+          "img": "assets/wiki/dreamer-s-blight.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "Eternal Fracture",
+          "x": 3,
+          "img": "assets/wiki/eternal-fracture.webp",
+          "t": "Reborn Fusion"
+        },
+        {
+          "n": "Dreamer's Valor",
+          "x": 2,
+          "img": "assets/wiki/dreamer-s-valor.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Dreamer's Nightmare",
+          "x": 2,
+          "img": "assets/wiki/dreamer-s-nightmare.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Nature's Enchantment",
+          "x": 1,
+          "img": "assets/wiki/nature-s-enchantment.webp",
+          "t": "Slipstream"
+        }
+      ],
+      "other": [],
+      "eff": "Base multiplier of x125. · Each unique Dreamer's item placed down increases multiplier.",
+      "quote": "Your might overcame the fright, your anguish has subsided, the disease has perished, and your [sic] now have a vision of your new life, your dreamer's life."
+    },
+    {
+      "n": "The Cornucopia",
+      "img": "assets/wiki/the-cornucopia.webp",
+      "type": "Upgrader",
+      "life": "1337+",
+      "shards": 1000,
+      "reqs": [
+        {
+          "n": "Pizza Bombarder",
+          "x": 3,
+          "img": "assets/wiki/pizza-bombarder.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Banana Sundae Refiner",
+          "x": 2,
+          "img": "assets/wiki/banana-sundae-refiner.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Green Tea Kettle",
+          "x": 3,
+          "img": "assets/wiki/green-tea-kettle.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Lemon Land",
+          "x": 1000,
+          "img": "assets/wiki/lemon-land.webp",
+          "t": "Legendary"
+        },
+        {
+          "n": "Behemoth Blossom",
+          "x": 1,
+          "img": "assets/wiki/behemoth-blossom.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Meatball Sandwich",
+          "x": 1,
+          "img": "assets/wiki/meatball-sandwich.webp",
+          "t": "Rare Reborn"
+        }
+      ],
+      "other": [],
+      "eff": "x10 multiplier with an added 50% buff to all subsequent food upgraders · Effect is removable via Resetting Devices",
+      "quote": "This upgrader is a symbol of nourishment. As a sign of thankfulness, this upgrader will upgrade ore belonging to every player in the server randomly."
+    },
+    {
+      "n": "Doom Incarnate",
+      "img": "assets/wiki/doom-incarnate.webp",
+      "type": "Upgrader",
+      "life": "4,000",
+      "shards": 1000,
+      "reqs": [
+        {
+          "n": "Forsaken Battleground",
+          "x": 10,
+          "img": "assets/wiki/forsaken-battleground.webp",
+          "t": "Limited Reborn"
+        },
+        {
+          "n": "The Guillotine",
+          "x": 5,
+          "img": "assets/wiki/the-guillotine.webp",
+          "t": "Limited Reborn"
+        },
+        {
+          "n": "Ore Chainsaw",
+          "x": 1,
+          "img": "assets/wiki/ore-chainsaw.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Lord of Tenebrous",
+          "x": 1,
+          "img": "assets/wiki/lord-of-tenebrous.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Demon Core",
+          "x": 2,
+          "img": "assets/wiki/demon-core.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Turtle Dignifier",
+          "x": 1,
+          "img": "assets/wiki/turtle-dignifier.webp",
+          "t": "Rare Reborn"
+        },
+        {
+          "n": "Incendium Mine",
+          "x": 1,
+          "img": "assets/wiki/incendium-mine.webp",
+          "t": "Slipstream"
+        }
+      ],
+      "other": ["125,000 Candy"],
+      "eff": "",
+      "quote": "The ever-evolving race of arms produces weapons capable of devastation beyond sane comprehension, enabling those who wish to wreak havoc to commit unspeakable acts on huge scales."
+    },
+    {
+      "n": "Oblivion Emission",
+      "img": "assets/wiki/oblivion-emission.webp",
+      "type": "Furnace",
+      "life": "s-2000+",
+      "shards": 1200,
+      "reqs": [
+        {
+          "n": "Eternal Limbo",
+          "x": 1,
+          "img": "assets/wiki/eternal-limbo.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Heart of Dusk",
+          "x": 1000,
+          "img": "assets/wiki/heart-of-dusk.webp",
+          "t": "Divine"
+        },
+        {
+          "n": "Nuclear Castle",
+          "x": 2,
+          "img": "assets/wiki/nuclear-castle.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Cell Singularity",
+          "x": 1000,
+          "img": "assets/wiki/cell-singularity.webp",
+          "t": "Mythic"
+        },
+        {
+          "n": "Anguished Garden",
+          "x": 2,
+          "img": "assets/wiki/anguished-garden.webp",
+          "t": "Reborn Fusion"
+        },
+        {
+          "n": "Oblivion Weaver",
+          "x": 1,
+          "img": "assets/wiki/oblivion-weaver.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Overlord Device",
+          "x": 1,
+          "img": "assets/wiki/overlord-device.webp",
+          "t": "Ultimate"
+        },
+        {
+          "n": "Castle Bravo",
+          "x": 2,
+          "img": "assets/wiki/castle-bravo.webp",
+          "t": "Advanced Evolution"
+        }
+      ],
+      "other": [],
+      "eff": "Processes ore at x25,000 to x33,000 their value and teleports them to other furnaces.",
+      "quote": "Like the Fargields, when an Eternal Overseer within the Void perishes, it also duplicates itself, only after expelling all of it's energy in dangerously unstable emissions like this."
+    },
+    {
+      "n": "Conqueror's Delusion",
+      "img": "assets/wiki/conqueror-s-delusion.webp",
+      "type": "Upgrader",
+      "life": null,
+      "shards": 1250,
+      "reqs": [
+        {
+          "n": "Tyrant's Forge",
+          "x": 2,
+          "img": "assets/wiki/tyrant-s-forge.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Phasecursor Furnace",
+          "x": 2,
+          "img": "assets/wiki/phasecursor-furnace.webp",
+          "t": "Advanced Fusion"
+        },
+        {
+          "n": "Interstellar Conqueror",
+          "x": 1,
+          "img": "assets/wiki/interstellar-conqueror.webp",
+          "t": "Rare Reborn"
+        },
+        {
+          "n": "King Darkseed",
+          "x": 10,
+          "img": "assets/wiki/king-darkseed.webp",
+          "t": "Limited Reborn"
+        },
+        {
+          "n": "True Overlord Device",
+          "x": 1,
+          "img": "assets/wiki/true-overlord-device.webp",
+          "t": "Ultimate"
+        },
+        {
+          "n": "Orbital Cataclysm",
+          "x": 1,
+          "img": "assets/wiki/orbital-cataclysm.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Spires of Conquest",
+          "x": 5,
+          "img": "assets/wiki/spires-of-conquest.webp",
+          "t": "Limited Reborn"
+        }
+      ],
+      "other": ["500,000 Candy"],
+      "eff": "Multiplies ore value by x80 then x1.4 every 0.5 seconds six times · Multiplies ore value by x20 then x2 every 0.5 seconds for six times",
+      "quote": "The never-ending hunger of power spiralling out of control, devolving into nothing more than sheer destruction of what lies out there."
+    },
+    {
+      "n": "Gargantium Core",
+      "img": "assets/wiki/gargantium-core.webp",
+      "type": "Furnace",
+      "life": "S+2000+",
+      "shards": 1500,
+      "reqs": [
+        {
+          "n": "Heart of Dusk",
+          "x": 1000,
+          "img": "assets/wiki/heart-of-dusk.webp",
+          "t": "Divine"
+        },
+        {
+          "n": "Breached Motherboard",
+          "x": 3,
+          "img": "assets/wiki/breached-motherboard.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Tyrant's Forge",
+          "x": 2,
+          "img": "assets/wiki/tyrant-s-forge.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Sakura Falls",
+          "x": 3,
+          "img": "assets/wiki/sakura-falls.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "The Fissure",
+          "x": 2,
+          "img": "assets/wiki/the-fissure.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Phasecursor Furnace",
+          "x": 3,
+          "img": "assets/wiki/phasecursor-furnace.webp",
+          "t": "Advanced Fusion"
+        },
+        {
+          "n": "Aurora Borealis",
+          "x": 3,
+          "img": "assets/wiki/aurora-borealis.webp",
+          "t": "Advanced Evolution"
+        }
+      ],
+      "other": [],
+      "eff": "Applies an effect to all ores dropped",
+      "quote": "Gargantium is by far the best nuclear power source, being capable of emitting devestating beams of nuclear plasma. A single core alone can power an entire planet for decades."
+    },
+    {
+      "n": "The Trinity",
+      "img": "assets/wiki/the-trinity.webp",
+      "type": "Upgrader",
+      "life": "3000+",
+      "shards": 1500,
+      "reqs": [
+        {
+          "n": "Searing Heat",
+          "x": 3,
+          "img": "assets/wiki/searing-heat.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Spirit of Fire",
+          "x": 3,
+          "img": "assets/wiki/spirit-of-fire.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "Toxic Waste Disposal",
+          "x": 10,
+          "img": "assets/wiki/toxic-waste-disposal.webp",
+          "t": "Reborn"
+        },
+        {
+          "n": "Frigid Dystopia",
+          "x": 3,
+          "img": "assets/wiki/frigid-dystopia.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "Son of Poison",
+          "x": 3,
+          "img": "assets/wiki/son-of-poison.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "Father of Freon",
+          "x": 3,
+          "img": "assets/wiki/father-of-freon.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "The Grand Prism",
+          "x": 1,
+          "img": "assets/wiki/the-grand-prism.webp",
+          "t": "Slipstream"
+        }
+      ],
+      "other": [],
+      "eff": "Multiplies ore value by x65. · Applies poison, frostbite, or flaming at random.",
+      "quote": "A device forged with enhanced abilities compared to the previous trio of upgraders. This device is said to bless ores which contain its signature effects."
+    },
+    {
+      "n": "The Chaosrealm",
+      "img": "assets/wiki/the-chaosrealm.webp",
+      "type": "Upgrader",
+      "life": "5000+",
+      "shards": 1500,
+      "reqs": [
+        {
+          "n": "Demon Core",
+          "x": 3,
+          "img": "assets/wiki/demon-core.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Vulcan's Destiny",
+          "x": 2,
+          "img": "assets/wiki/vulcan-s-destiny.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Industrial Scarab",
+          "x": 5,
+          "img": "assets/wiki/industrial-scarab.webp",
+          "t": "Reborn"
+        },
+        {
+          "n": "Devil's Spore",
+          "x": 2,
+          "img": "assets/wiki/devil-s-spore.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Void Star",
+          "x": 1,
+          "img": "assets/wiki/void-star.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Suitopian Refiner",
+          "x": 1,
+          "img": "assets/wiki/suitopian-refiner.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Draconicglass Mine",
+          "x": 2,
+          "img": "assets/wiki/draconicglass-mine.webp",
+          "t": "Evolved Reborn"
+        }
+      ],
+      "other": [],
+      "eff": "Upgrades ore by ×7-11. · Applies green fire effect that lasts forever and will increase ore value by 5%.",
+      "quote": "Considering our own home-realm as a Chaosrealm is far from being a hyperbole, it's already reality"
+    },
+    {
+      "n": "Champion Infuser",
+      "img": "assets/wiki/champion-infuser.webp",
+      "type": "Utility",
+      "life": "5+",
+      "shards": 1750,
+      "reqs": [
+        {
+          "n": "Haste Infuser",
+          "x": 10,
+          "img": "assets/wiki/haste-infuser-hd.webp",
+          "t": "Premium"
+        },
+        {
+          "n": "Cursed Infuser",
+          "x": 10,
+          "img": "assets/wiki/cursed-infuser-hd.webp",
+          "t": "Premium"
+        },
+        {
+          "n": "Heavenly Infuser",
+          "x": 10,
+          "img": "assets/wiki/heavenly-infuser-hd.webp",
+          "t": "Premium"
+        },
+        {
+          "n": "Zenith Will",
+          "x": 2,
+          "img": "assets/wiki/zenith-will.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Speed Infuser",
+          "x": 10,
+          "img": "assets/wiki/speed-infuser-hd.webp",
+          "t": "Premium"
+        },
+        {
+          "n": "Infinite Infuser",
+          "x": 10,
+          "img": "assets/wiki/infinite-infuser.webp",
+          "t": "Premium"
+        }
+      ],
+      "other": [],
+      "eff": "Gives wings; allows user to fly. · Combines other infusers effects.",
+      "quote": "This infuser causes champions to be born! Granting all who are infused with wings, and the leeched power of other infusers placed along with it."
+    },
+    {
+      "n": "Void Drive",
+      "img": "assets/wiki/void-drive.webp",
+      "type": "Upgrader",
+      "life": "2000+",
+      "shards": 2000,
+      "reqs": [
+        {
+          "n": "Eternal Limbo",
+          "x": 1,
+          "img": "assets/wiki/eternal-limbo.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Overlord Device",
+          "x": 1,
+          "img": "assets/wiki/overlord-device.webp",
+          "t": "Ultimate"
+        },
+        {
+          "n": "Hydra Blaster",
+          "x": 1,
+          "img": "assets/wiki/hydra-blaster.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Void Star",
+          "x": 1,
+          "img": "assets/wiki/void-star.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Overlord's Telamonster",
+          "x": 1,
+          "img": "assets/wiki/overlord-s-telamonster.webp",
+          "t": "Ultimate"
+        },
+        {
+          "n": "The Daegelart",
+          "x": 1,
+          "img": "assets/wiki/the-daegelart.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Dystopian Refiner",
+          "x": 1,
+          "img": "assets/wiki/dystopian-refiner.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Crystallized Engine",
+          "x": 3,
+          "img": "assets/wiki/crystallized-engine.webp",
+          "t": "Evolved Reborn"
+        }
+      ],
+      "other": ["The Void Badge"],
+      "eff": "Multiplies ore value by x100. · Gives ores 15 shields.",
+      "quote": "Void follows no laws of physics. It is questionable whether or not using this is ethical, but its power is so immense, to pass this up is foolish. Grants 15 shields but ores cease to exist after 3 seconds"
+    }
+  ],
+  "plat": [
+    {
+      "n": "Standard Platform",
+      "img": "assets/wiki/standard-platform.webp",
+      "cost": "25 Shards of Life\n(Price increases as more are bought)",
+      "quote": "The standard patented platform™. It is much higher up, capable of even allowing you to make a small base!",
+      "size": "12x12 · height 8",
+      "src": "Premium Shop",
+      "sac": "No"
+    },
+    {
+      "n": "Hydraulic Standard Platform",
+      "img": "assets/wiki/hydraulic-standard-platform.webp",
+      "cost": "100 Shards of Life\n(Price increases by 150 Shards of Life each time one is bought)",
+      "quote": "As if a floating base extension wasn't already enough... Ascend to even greater heights with this adjustable platform!",
+      "size": "12x12 · height 1-16",
+      "src": "Premium Shop",
+      "sac": "No"
+    },
+    {
+      "n": "Mega Platform",
+      "img": "assets/wiki/mega-platform.webp",
+      "cost": "200 Shards of Life\n(Price increases as more are bought)",
+      "quote": "The largest platform on the market. While the price is hefty compared to the rest, the possibilities are endless!",
+      "size": "20x20 · height 8",
+      "src": "Premium Shop",
+      "sac": "No"
+    },
+    {
+      "n": "Small Platform",
+      "img": "assets/wiki/small-platform.webp",
+      "cost": "117 to 221 uC",
+      "quote": "A platform that is slightly elevated from your base. While not very reliable on its own, plenty of them should have a greater use.",
+      "size": "8x8 · height 4",
+      "src": "The Masked Man",
+      "sac": "Yes"
+    }
+  ],
+  "misc": [
+    {
+      "n": "Unstable Conveyor",
+      "img": "assets/wiki/unstable-conveyor-hd.webp",
+      "cost": "1 Shards of Life",
+      "quote": "A conveyor without walls that moves ores very fast. This definitely breaks safety code.",
+      "size": "2x2 · height 1",
+      "src": "The Masked Man",
+      "sac": "Yes"
+    },
+    {
+      "n": "Shard Park",
+      "img": "assets/wiki/shard-park.webp",
+      "cost": "400 Shards of Life",
+      "quote": "Shards of Life are believed to be remnants of Solumn's Soul. However he never perished. so this is a mere myth.",
+      "size": "6x8 · height 3",
+      "src": "Rebirth",
+      "sac": "No"
+    },
+    {
+      "n": "Shard City",
+      "img": "assets/wiki/shard-city.webp",
+      "cost": "Can't buy",
+      "quote": "Believe it or not, cities represented by this upgrader are look at being more underwhelming and poor regions, compared to the D.U.C's mega-cities.",
+      "size": "7x10 · height 7",
+      "src": "Evolve with 15 Shard Parks at The Craftsman.",
+      "sac": "No"
+    },
+    {
+      "n": "Gift of Life",
+      "img": "assets/wiki/gift-of-life.webp",
+      "cost": "Can't Buy",
+      "quote": "This gift reminds you of that strange meteor from the previous location. Better get these before Draedon hordes them.",
+      "size": "1x1 · height 1",
+      "src": "Santa",
+      "sac": "Yes"
+    },
+    {
+      "n": "Yunium Mine",
+      "img": "assets/wiki/yunium-mine.webp",
+      "cost": "200 Shards of Life",
+      "quote": "A monstrous merge of mine and machine. Promises great profits to those who can harness its unpredictable ore. Increased ore value when used with cannons.",
+      "size": "3x2 · height 5",
+      "src": "Rebirth",
+      "sac": "No"
+    },
+    {
+      "n": "Sword God Shrine",
+      "img": "assets/wiki/sword-god-shrine-hd.webp",
+      "cost": "720 Shards of Life",
+      "quote": "Those who worship the Sword God find themselves surviving many battles.",
+      "size": "4x4 · height 4.66",
+      "src": "Rebirth",
+      "sac": "No"
+    }
+  ]
+}

@@ -1,0 +1,3931 @@
+{
+  "tiers": {
+    "Reborn": ["#4498ff", "#000"],
+    "Advanced Reborn": ["#3dccb9", "#000"],
+    "Ultimate": ["#ff0004", "#ffff00"],
+    "Evolved Reborn": ["#5AD063", "#000"],
+    "Advanced Evolution": ["#12a479", "#000"],
+    "Limited Reborn": ["#db6bc1", "#000"],
+    "Rare Reborn": ["#4498ff", "#000"],
+    "Superstitious": ["#000", "#ff8097"],
+    "Enchanted": ["#ff8688", "#000"],
+    "Renegade": ["#692891", "#e31e00"]
+  },
+  "items": [
+    {
+      "n": "Massive Diamond Mine",
+      "t": "Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/massive-diamond-mine.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Dreamy",
+          "k": "S",
+          "u": "assets/wiki/dreamy-massive-diamond-mine.webp"
+        },
+        {
+          "nm": "Boy",
+          "k": "L",
+          "u": "assets/wiki/boy-massive-diamond-mine.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "Dreamer's Fright",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/dreamer-s-fright.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Mighty",
+          "k": "S",
+          "u": "assets/wiki/mighty-dreamer-s-fright.webp"
+        },
+        {
+          "nm": "Nightmare",
+          "k": "L",
+          "u": "assets/wiki/nightmare-dreamer-s-fright.webp",
+          "ev": "Halloween"
+        },
+        {
+          "nm": "Escape",
+          "k": "L",
+          "u": "assets/wiki/escape-dreamer-s-fright.webp",
+          "ev": "Easter"
+        }
+      ]
+    },
+    {
+      "n": "Tesla Resetter",
+      "t": "Reborn",
+      "ty": "Utility",
+      "img": "assets/wiki/tesla-resetter.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Advanced",
+          "k": "S",
+          "u": "assets/wiki/advanced-tesla-resetter.webp"
+        },
+        {
+          "nm": "Spooky",
+          "k": "L",
+          "u": "assets/wiki/spooky-tesla-resetter.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "Big Bertha",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/big-bertha.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Cyber",
+          "k": "S",
+          "u": "assets/wiki/cyber-big-bertha.webp"
+        }
+      ]
+    },
+    {
+      "n": "Big Bad Blaster",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/big-bad-blaster.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Eternal",
+          "k": "S",
+          "u": "assets/wiki/eternal-big-bad-blaster.webp"
+        },
+        {
+          "nm": "Confetti",
+          "k": "L",
+          "u": "assets/wiki/confetti-big-bad-blaster.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "The Catalyst",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/the-catalyst.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Charged",
+          "k": "S",
+          "u": "assets/wiki/charged-catalyst.webp"
+        },
+        {
+          "nm": "Contemporary",
+          "k": "L",
+          "u": "assets/wiki/contemporary-catalyst.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Flaming Schrodinger",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/flaming-schrodinger-hd.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Steamwork",
+          "k": "S",
+          "u": "assets/wiki/steamwork-flaming-schrodinger.webp"
+        }
+      ]
+    },
+    {
+      "n": "Lightningbolt Refiner",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/lightningbolt-refiner-hd.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Martian",
+          "k": "S",
+          "u": "assets/wiki/martian-lightningbolt-refiner.webp"
+        }
+      ]
+    },
+    {
+      "n": "Frozen Justice",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/frozen-justice.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Ashen",
+          "k": "S",
+          "u": "assets/wiki/ashen-frozen-justice.webp"
+        },
+        {
+          "nm": "New Age",
+          "k": "L",
+          "u": "assets/wiki/new-age-frozen-justice.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Atomium Mine",
+      "t": "Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/atomium-mine.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Negative",
+          "k": "S",
+          "u": "assets/wiki/negative-atomium-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Clockwork",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/clockwork.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Eldritch",
+          "k": "S",
+          "u": "assets/wiki/eldritch-clockwork.webp"
+        }
+      ]
+    },
+    {
+      "n": "Eternal Journey",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/eternal-journey.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Dawn",
+          "k": "S",
+          "u": "assets/wiki/dawn-eternal-journey.webp"
+        }
+      ]
+    },
+    {
+      "n": "The Fracture",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/the-fracture.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Void",
+          "k": "S",
+          "u": "assets/wiki/void-fracture.webp"
+        }
+      ]
+    },
+    {
+      "n": "Gate of Eclipse",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/guys-its-a-door-not-a-gate-are-you-blind.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Void",
+          "k": "S",
+          "u": "assets/wiki/void-gate-of-eclipse.webp"
+        }
+      ]
+    },
+    {
+      "n": "Yunium Mine",
+      "t": "Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/yunium-mine.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Paranormal",
+          "k": "S",
+          "u": "assets/wiki/paranormal-yunium-mine.webp"
+        },
+        {
+          "nm": "Master",
+          "k": "L",
+          "u": "assets/wiki/master-yunium-mine.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "Sage Redeemer",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/sage-redeemer.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Wealthy",
+          "k": "S",
+          "u": "assets/wiki/wealthy-sage-redeemer.webp"
+        },
+        {
+          "nm": "Cephalopod",
+          "k": "L",
+          "u": "assets/wiki/cephalopod-sage-redeemer.webp",
+          "ev": "Easter"
+        }
+      ]
+    },
+    {
+      "n": "Solar Flare",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/solar-flare.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Supergiant",
+          "k": "S",
+          "u": "assets/wiki/supergiant-solar-flare-split.webp"
+        }
+      ]
+    },
+    {
+      "n": "Newtonium Mine",
+      "t": "Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/newtonium-mine.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Cruel",
+          "k": "S",
+          "u": "assets/wiki/cruel-newtonium-mine.webp"
+        },
+        {
+          "nm": "New Age",
+          "k": "L",
+          "u": "assets/wiki/new-age-newtonium-mine.webp",
+          "ev": "Birthday"
+        },
+        {
+          "nm": "Demon",
+          "k": "L",
+          "u": "assets/wiki/demon-newtonium-mine.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "Nature's Grip",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/nature-s-grip.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Dawn",
+          "k": "S",
+          "u": "assets/wiki/dawn-nature-s-grip.webp"
+        }
+      ]
+    },
+    {
+      "n": "Righteous Will",
+      "t": "Reborn",
+      "ty": "Utility",
+      "img": "assets/wiki/righteous-will.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Delta",
+          "k": "S",
+          "u": "assets/wiki/delta-righteous-will.webp"
+        },
+        {
+          "nm": "Present",
+          "k": "L",
+          "u": "assets/wiki/present-righteous-will.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Ore Illuminator",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/ore-illuminator.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Spicy",
+          "k": "S",
+          "u": "assets/wiki/spicy-ore-illuminator.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dark Magic",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/dark-magic.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Blazing",
+          "k": "S",
+          "u": "assets/wiki/blazing-dark-magic.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dreamer's Might",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/dreamer-s-might-high-quality.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Frightful",
+          "k": "S",
+          "u": "assets/wiki/frightful-dreamer-s-might.webp"
+        }
+      ]
+    },
+    {
+      "n": "Sword God Shrine",
+      "t": "Advanced Reborn",
+      "ty": "Weapon",
+      "img": "assets/wiki/sword-god-shrine-hd.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Bloodbane",
+          "k": "S",
+          "u": "assets/wiki/bloodbane-sword-god-shrine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Quantum Ore Cleaner",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/quantum-ore-cleaner.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Alpha",
+          "k": "S",
+          "u": "assets/wiki/alpha-quantum-ore-cleaner.webp"
+        },
+        {
+          "nm": ".EXE",
+          "k": "L",
+          "u": "assets/wiki/quantum-ore-cleaner-exe.webp",
+          "ev": "Halloween"
+        },
+        {
+          "nm": "New Age",
+          "k": "L",
+          "u": "assets/wiki/new-age-quantum-ore-cleaner.webp",
+          "ev": "Birthday"
+        },
+        {
+          "nm": "Soapy",
+          "k": "L",
+          "u": "assets/wiki/soapy-quantum-ore-cleaner.webp",
+          "ev": "Easter"
+        }
+      ]
+    },
+    {
+      "n": "Dreamer's Anguish",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/dreamer-s-anguish.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Dusk",
+          "k": "S",
+          "u": "assets/wiki/dusk-dreamer-s-anguish.webp"
+        },
+        {
+          "nm": "New Age",
+          "k": "L",
+          "u": "assets/wiki/new-age-dreamer-s-anguish.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Dragonglass Mine",
+      "t": "Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/dragonglass-mine.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Azure",
+          "k": "S",
+          "u": "assets/wiki/azure-dragonglass-mine.webp"
+        },
+        {
+          "nm": "Storm",
+          "k": "L",
+          "u": "assets/wiki/storm-dragonglass-mine.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "Northern Lights",
+      "t": "Advanced Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/northern-lights.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Cosmic",
+          "k": "S",
+          "u": "assets/wiki/cosmic-northern-lights.webp"
+        },
+        {
+          "nm": "Dutchman's",
+          "k": "L",
+          "u": "assets/wiki/dutchman-s-northern-lights.webp",
+          "ev": "Halloween"
+        },
+        {
+          "nm": "Vaporwave",
+          "k": "L",
+          "u": "assets/wiki/vaporwave-northern-lights.webp",
+          "ev": "Easter"
+        }
+      ]
+    },
+    {
+      "n": "Blind Justice",
+      "t": "Reborn",
+      "ty": "Other",
+      "img": "assets/wiki/blind-justice.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Eldritch",
+          "k": "S",
+          "u": "assets/wiki/eldritch-blind-justice.webp"
+        },
+        {
+          "nm": "Contemporary",
+          "k": "L",
+          "u": "assets/wiki/contemporary-blind-justice.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Wild Spore",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/wild-spore.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Autumnal",
+          "k": "S",
+          "u": "assets/wiki/autumnal-wild-spore.webp"
+        },
+        {
+          "nm": "Plagued",
+          "k": "L",
+          "u": "assets/wiki/plagued-wild-spore.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "Ancient Temple",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/ancient-temple.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Dusk",
+          "k": "S",
+          "u": "assets/wiki/dusk-ancient-temple.webp"
+        }
+      ]
+    },
+    {
+      "n": "Overlord Device",
+      "t": "Ultimate",
+      "ty": "Upgrader",
+      "img": "assets/wiki/overlord-device.webp",
+      "r": 99,
+      "sh": [
+        {
+          "nm": "Overseer",
+          "k": "L",
+          "u": "assets/wiki/overseer-overlord-device.webp",
+          "ev": "Discord Giveaway"
+        }
+      ]
+    },
+    {
+      "n": "Scorpium Mine",
+      "t": "Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/scorpium-mine.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Rose",
+          "k": "S",
+          "u": "assets/wiki/rose-scorpium-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Azure Refiner",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/azure-refiner.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Crimson",
+          "k": "S",
+          "u": "assets/wiki/crimson-azure-refiner.webp"
+        },
+        {
+          "nm": "Amber",
+          "k": "L",
+          "u": "assets/wiki/amber-azure-refiner-beta-thumbnail.webp",
+          "ev": "Easter"
+        }
+      ]
+    },
+    {
+      "n": "Symmetrium Mine",
+      "t": "Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/symmetrium-mine.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Spiteful",
+          "k": "S",
+          "u": "assets/wiki/spiteful-symmetrium-mine.webp"
+        },
+        {
+          "nm": "Baron",
+          "k": "L",
+          "u": "assets/wiki/baron-symmetrium-mine.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "Morning Star",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/morning-star.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Celestial",
+          "k": "S",
+          "u": "assets/wiki/celestial-morning-star.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dragon Blaster",
+      "t": "Advanced Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/dragon-blaster.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Ghastly",
+          "k": "S",
+          "u": "assets/wiki/ghastly-dragon-blaster.webp"
+        },
+        {
+          "nm": "Shamrock",
+          "k": "L",
+          "u": "assets/wiki/shamrock-dragon-blaster.webp",
+          "ev": "St. Patrick's"
+        },
+        {
+          "nm": "Stormcrow",
+          "k": "L",
+          "u": "assets/wiki/stormcrow-dragon-blaster.webp",
+          "ev": "Easter"
+        }
+      ]
+    },
+    {
+      "n": "Astral Predictor",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/astral-predictor.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Storm",
+          "k": "S",
+          "u": "assets/wiki/storm-astral-predictor.webp"
+        },
+        {
+          "nm": "Contemporary",
+          "k": "L",
+          "u": "assets/wiki/contemporary-astral-predictor.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "True Overlord Device",
+      "t": "Ultimate",
+      "ty": "Upgrader",
+      "img": "assets/wiki/true-overlord-device.webp",
+      "r": 99,
+      "sh": [
+        {
+          "nm": "Galactic",
+          "k": "L",
+          "u": "assets/wiki/galactic-true-overlord-device.webp",
+          "ev": "Discord Giveaway"
+        }
+      ]
+    },
+    {
+      "n": "Breech Loader",
+      "t": "Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/breech-loader.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Newtonic",
+          "k": "S",
+          "u": "assets/wiki/newtonic-breech-loader.webp"
+        },
+        {
+          "nm": "Lord",
+          "k": "L",
+          "u": "assets/wiki/lord-breech-loader.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "Aether Refinery",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/aether-refinery.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Blazing",
+          "k": "S",
+          "u": "assets/wiki/blazing-aether-refinery.webp"
+        }
+      ]
+    },
+    {
+      "n": "Sakura Garden",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/sakura-garden.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Abstract",
+          "k": "S",
+          "u": "assets/wiki/abstract-sakura-garden.webp"
+        },
+        {
+          "nm": "Contemporary",
+          "k": "L",
+          "u": "assets/wiki/contemporary-sakura-garden.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Crystallized System",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/crystallized-system.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Lapis",
+          "k": "S",
+          "u": "assets/wiki/lapis-crystallized-system.webp"
+        },
+        {
+          "nm": "Cupid's",
+          "k": "L",
+          "u": "assets/wiki/cupid-s-crystallized-system-beta-thumbnail.webp",
+          "ev": "Valentine's"
+        }
+      ]
+    },
+    {
+      "n": "Green Tea Latte",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/green-tea-latte.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Vintage",
+          "k": "S",
+          "u": "assets/wiki/vintage-green-tea-latte.webp"
+        }
+      ]
+    },
+    {
+      "n": "Ambrosia Fountain",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/ambrosia-fountain.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Berry",
+          "k": "S",
+          "u": "assets/wiki/berry-ambrosia-fountain.webp"
+        }
+      ]
+    },
+    {
+      "n": "Ambrosia Forest",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/ambrosia-forest.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Berry",
+          "k": "S",
+          "u": "assets/wiki/berry-ambrosia-forest.webp"
+        }
+      ]
+    },
+    {
+      "n": "Igneous Forge",
+      "t": "Advanced Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/igneous-forge.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Newtonic",
+          "k": "S",
+          "u": "assets/wiki/newtonic-igneous-forge.webp"
+        }
+      ]
+    },
+    {
+      "n": "Phase Processor",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/phase-processor.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Neon",
+          "k": "S",
+          "u": "assets/wiki/neon-phase-processor.webp"
+        }
+      ]
+    },
+    {
+      "n": "Ancient Coliseum",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/ancient-coliseum.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Dusk",
+          "k": "S",
+          "u": "assets/wiki/dusk-ancient-coliseum.webp"
+        }
+      ]
+    },
+    {
+      "n": "Arcane Lightning",
+      "t": "Advanced Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/arcane-lightning.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Eclipse",
+          "k": "S",
+          "u": "assets/wiki/eclipse-arcane-lightning.webp"
+        }
+      ]
+    },
+    {
+      "n": "Vampire Spore",
+      "t": "Advanced Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/vampire-spore.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Wholesome",
+          "k": "S",
+          "u": "assets/wiki/wholesome-vampire-spore.webp"
+        }
+      ]
+    },
+    {
+      "n": "Virtual Enhancer",
+      "t": "Advanced Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/virtual-enhancer.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Crimson",
+          "k": "S",
+          "u": "assets/wiki/crimson-virtual-enhancer.webp"
+        }
+      ]
+    },
+    {
+      "n": "Newtonium Excavator",
+      "t": "Evolved Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/newtonium-excavator.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Supercharged",
+          "k": "S",
+          "u": "assets/wiki/supercharged-newtonium-excavator.webp"
+        }
+      ]
+    },
+    {
+      "n": "Tesla Refuter",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/tesla-refuter.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Advanced",
+          "k": "S",
+          "u": "assets/wiki/advanced-tesla-refuter.webp"
+        }
+      ]
+    },
+    {
+      "n": "Nova Star",
+      "t": "Advanced Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/nova-star.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Celestial",
+          "k": "S",
+          "u": "assets/wiki/celestial-nova-star.webp"
+        },
+        {
+          "nm": "New Age",
+          "k": "L",
+          "u": "assets/wiki/new-age-nova-star.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Super Schrodinger",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/super-schrodinger.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Steamwork",
+          "k": "S",
+          "u": "assets/wiki/steamwork-super-schrodinger.webp"
+        }
+      ]
+    },
+    {
+      "n": "Crystal Shrine",
+      "t": "Advanced Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/crystal-shrine.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Spectrum",
+          "k": "S",
+          "u": "assets/wiki/spectrum-crystal-shrine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Vulcan's Grasp",
+      "t": "Advanced Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/vulcan-s-grasp.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Frozen",
+          "k": "S",
+          "u": "assets/wiki/frozen-vulcan-s-grasp.webp"
+        }
+      ]
+    },
+    {
+      "n": "Massive Diamond Drill",
+      "t": "Evolved Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/massive-diamond-drill.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Stained",
+          "k": "S",
+          "u": "assets/wiki/stained-massive-diamond-drill.webp"
+        }
+      ]
+    },
+    {
+      "n": "Frozen Peaks",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/frozen-peaks.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Ashen",
+          "k": "S",
+          "u": "assets/wiki/ashen-frozen-peaks.webp"
+        }
+      ]
+    },
+    {
+      "n": "Forbidden Magic",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/forbidden-magic.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Blazing",
+          "k": "S",
+          "u": "assets/wiki/blazing-forbidden-magic.webp"
+        }
+      ]
+    },
+    {
+      "n": "Banana Split Upgrader",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/banana-split-upgrader.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Mint",
+          "k": "S",
+          "u": "assets/wiki/mint-banana-split-upgrader.webp"
+        }
+      ]
+    },
+    {
+      "n": "Ore Indoctrinator",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/ore-indoctrinator.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Spicy",
+          "k": "S",
+          "u": "assets/wiki/spicy-ore-indoctrinator.webp"
+        }
+      ]
+    },
+    {
+      "n": "Sakura Falls",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/sakura-falls.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Abstract",
+          "k": "S",
+          "u": "assets/wiki/abstract-sakura-falls.webp"
+        }
+      ]
+    },
+    {
+      "n": "Swift Justice",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/swift-justice.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Eldritch",
+          "k": "S",
+          "u": "assets/wiki/eldritch-swift-justice.webp"
+        }
+      ]
+    },
+    {
+      "n": "Deadly Spore",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/deadly-spore.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Autumnal",
+          "k": "S",
+          "u": "assets/wiki/autumnal-deadly-spore.webp"
+        }
+      ]
+    },
+    {
+      "n": "Neutron Star",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/neutron-star.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Wholesome",
+          "k": "S",
+          "u": "assets/wiki/wholesome-neutron-star.webp"
+        }
+      ]
+    },
+    {
+      "n": "Hydra Blaster",
+      "t": "Advanced Evolution",
+      "ty": "Upgrader",
+      "img": "assets/wiki/hydra-blaster.webp",
+      "r": 35,
+      "sh": [
+        {
+          "nm": "Ghastly",
+          "k": "S",
+          "u": "assets/wiki/ghastly-hydra-blaster.webp"
+        }
+      ]
+    },
+    {
+      "n": "Quantum Ore Polisher",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/quantum-ore-polisher.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Alpha",
+          "k": "S",
+          "u": "assets/wiki/alpha-quantum-ore-polisher.webp"
+        }
+      ]
+    },
+    {
+      "n": "Aurora Borealis",
+      "t": "Advanced Evolution",
+      "ty": "Furnace",
+      "img": "assets/wiki/aurora-borealis.webp",
+      "r": 35,
+      "sh": [
+        {
+          "nm": "Cosmic",
+          "k": "S",
+          "u": "assets/wiki/cosmic-aurora-borealis.webp"
+        }
+      ]
+    },
+    {
+      "n": "Saturated Catalyst",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/saturated-catalyst.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Charged",
+          "k": "S",
+          "u": "assets/wiki/charged-saturated-catalyst.webp"
+        }
+      ]
+    },
+    {
+      "n": "Astral Setter",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/astral-setter.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Storm",
+          "k": "S",
+          "u": "assets/wiki/storm-astral-setter.webp"
+        }
+      ]
+    },
+    {
+      "n": "Symmetryte Mine",
+      "t": "Evolved Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/symmetryte-mine.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Abstract",
+          "k": "S",
+          "u": "assets/wiki/abstract-symmetryte-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Precursor Mine",
+      "t": "Advanced Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/precursor-mine.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Neon",
+          "k": "S",
+          "u": "assets/wiki/neon-precursor-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Precursor Furnace",
+      "t": "Advanced Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/precursor-furnace.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Neon",
+          "k": "S",
+          "u": "assets/wiki/neon-precursor-furnace.webp"
+        }
+      ]
+    },
+    {
+      "n": "Timeless Enhancement",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/timeless-enhancement.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Dawn",
+          "k": "S",
+          "u": "assets/wiki/dawn-timeless-enhancement.webp"
+        }
+      ]
+    },
+    {
+      "n": "Scorching Heat",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/scorching-heat.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Frosted",
+          "k": "S",
+          "u": "assets/wiki/frosted-scorching-heat.webp"
+        }
+      ]
+    },
+    {
+      "n": "Guardian of the Gate",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/guardian-of-the-gate.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Eldritch",
+          "k": "S",
+          "u": "assets/wiki/eldritch-guardian-of-the-gate.webp"
+        }
+      ]
+    },
+    {
+      "n": "Final Eclipse Gate",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/final-eclipse-gate.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Void",
+          "k": "S",
+          "u": "assets/wiki/void-final-eclipse-gate.webp"
+        }
+      ]
+    },
+    {
+      "n": "Sage King",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/sage-king.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Glowing",
+          "k": "S",
+          "u": "assets/wiki/glowing-sage-king.webp"
+        }
+      ]
+    },
+    {
+      "n": "Venomshank",
+      "t": "Reborn",
+      "ty": "Weapon",
+      "img": "assets/wiki/venomshank.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Aqua",
+          "k": "S",
+          "u": "assets/wiki/aqua-venomshank.webp"
+        }
+      ]
+    },
+    {
+      "n": "Industrial Firecrystal Mine",
+      "t": "Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/helping-erik-firecrystal-dlc.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Frozen",
+          "k": "S",
+          "u": "assets/wiki/frozen-industrial-firecrystal-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Lord of Tenebrous",
+      "t": "Advanced Evolution",
+      "ty": "Weapon",
+      "img": "assets/wiki/lord-of-tenebrous.webp",
+      "r": 35,
+      "sh": [
+        {
+          "nm": "Bloodbane",
+          "k": "S",
+          "u": "assets/wiki/bloodbane-lord-of-tenebrous.webp"
+        }
+      ]
+    },
+    {
+      "n": "Candy Cane Cannon",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/candy-cane-cannon.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Sour",
+          "k": "S",
+          "u": "assets/wiki/sour-candy-cane-cannon.webp",
+          "ev": "Christmas"
+        }
+      ]
+    },
+    {
+      "n": "Ice Crusher",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/ice-crusher.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Oblivion",
+          "k": "S",
+          "u": "assets/wiki/oblivion-ice-crusher.webp",
+          "ev": "Christmas"
+        }
+      ]
+    },
+    {
+      "n": "Fruitcake Blaster",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/fruitcake-blaster.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Clown",
+          "k": "S",
+          "u": "assets/wiki/clown-fruitcake-blaster.webp",
+          "ev": "Christmas"
+        }
+      ]
+    },
+    {
+      "n": "Yuttrium Mine",
+      "t": "Evolved Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/yuttrium-mine.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Paranormal",
+          "k": "S",
+          "u": "assets/wiki/paranormal-yuttrium-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Overlord's Telamonster",
+      "t": "Ultimate",
+      "ty": "Weapon",
+      "img": "assets/wiki/overlord-s-telamonster.webp",
+      "r": 99,
+      "sh": [
+        {
+          "nm": "Joyful",
+          "k": "L",
+          "u": "assets/wiki/joyful-overlord-s-telamonster-beta-thumb.webp",
+          "ev": "Discord Giveaway"
+        }
+      ]
+    },
+    {
+      "n": "Stardust Pulsar",
+      "t": "Advanced Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/stardust-pulsar.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Nova",
+          "k": "S",
+          "u": "assets/wiki/nova-stardust-pulsar.webp"
+        }
+      ]
+    },
+    {
+      "n": "Pilotite Mine",
+      "t": "Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/pilotite-mine.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Ultra",
+          "k": "S",
+          "u": "assets/wiki/ultra-pilotite-mine.webp"
+        },
+        {
+          "nm": "Phantasm",
+          "k": "L",
+          "u": "assets/wiki/phantasm-pilotite-mine.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "Gravitational Gearwork",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/gravitational-gearwork.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Gamma",
+          "k": "S",
+          "u": "assets/wiki/gamma-gravitational-gearwork.webp"
+        }
+      ]
+    },
+    {
+      "n": "Crystallized Engine",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/crystallized-engine.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Lapis",
+          "k": "S",
+          "u": "assets/wiki/lapis-crystallized-engine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Ore Memer",
+      "t": "Rare Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/ore-memer.webp",
+      "r": 30.5,
+      "sh": [
+        {
+          "nm": "Ghost",
+          "k": "S",
+          "u": "assets/wiki/ghost-ore-memer.webp"
+        }
+      ]
+    },
+    {
+      "n": "Eternal Limbo",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/eternal-limbo.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Dawn",
+          "k": "S",
+          "u": "assets/wiki/dawn-eternal-limbo.webp"
+        }
+      ]
+    },
+    {
+      "n": "Stellarite Mine",
+      "t": "Rare Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/stellarite-mine.webp",
+      "r": 30.5,
+      "sh": [
+        {
+          "nm": "Eldritch",
+          "k": "S",
+          "u": "assets/wiki/eldritch-stellarite-mine.webp"
+        },
+        {
+          "nm": "Hearty",
+          "k": "L",
+          "u": "assets/wiki/hearty-stellarite-mine-beta-thumbnail.webp",
+          "ev": "Valentine's"
+        }
+      ]
+    },
+    {
+      "n": "Tempest Refiner",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/tempest-refiner.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Martian",
+          "k": "S",
+          "u": "assets/wiki/martian-tempest-refiner.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dimension Extractor",
+      "t": "Evolved Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/dimension-extractor.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Blazing",
+          "k": "S",
+          "u": "assets/wiki/blazing-dimension-extractor.webp"
+        }
+      ]
+    },
+    {
+      "n": "Grandfather Clockwork",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/grandfather-clockwork.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Eldritch",
+          "k": "S",
+          "u": "assets/wiki/eldritch-grandfather-clockwork.webp"
+        }
+      ]
+    },
+    {
+      "n": "King Gold Mine",
+      "t": "Rare Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/king-gold-mine.webp",
+      "r": 30.5,
+      "sh": [
+        {
+          "nm": "Ascended",
+          "k": "S",
+          "u": "assets/wiki/ascended-king-gold-mine-alternate.webp"
+        },
+        {
+          "nm": "Party",
+          "k": "L",
+          "u": "assets/wiki/party-king-gold-mine.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Atomyke Mine",
+      "t": "Evolved Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/atomyke-mine.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Negative",
+          "k": "S",
+          "u": "assets/wiki/negative-atomyke-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Atmospheric Steamwork",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/atmospheric-steamwork.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Gamma",
+          "k": "S",
+          "u": "assets/wiki/gamma-atmospheric-steamwork.webp"
+        }
+      ]
+    },
+    {
+      "n": "Vulcan's Destiny",
+      "t": "Advanced Evolution",
+      "ty": "Upgrader",
+      "img": "assets/wiki/vulcan-s-destiny.webp",
+      "r": 35,
+      "sh": [
+        {
+          "nm": "Frozen",
+          "k": "S",
+          "u": "assets/wiki/frozen-vulcan-s-destiny.webp"
+        }
+      ]
+    },
+    {
+      "n": "Gift of Trolling",
+      "t": "Limited Reborn",
+      "ty": "Decoration",
+      "img": "assets/wiki/gift-of-trolling.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Supernatural",
+          "k": "S",
+          "u": "assets/wiki/supernatural-gift-of-trolling.webp",
+          "ev": "Christmas"
+        }
+      ]
+    },
+    {
+      "n": "Frigid Dystopia",
+      "t": "Advanced Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/frigid-dystopia.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Ashen",
+          "k": "S",
+          "u": "assets/wiki/ashen-frigid-dystopia.webp"
+        }
+      ]
+    },
+    {
+      "n": "The Abomination",
+      "t": "Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/the-abomination.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Polished",
+          "k": "S",
+          "u": "assets/wiki/polished-abomination.webp"
+        },
+        {
+          "nm": "Ye Olde",
+          "k": "L",
+          "u": "assets/wiki/ye-olde-abomination.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "The Daegelart",
+      "t": "Evolved Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/the-daegelart.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Polished",
+          "k": "S",
+          "u": "assets/wiki/polished-daegelart.webp"
+        }
+      ]
+    },
+    {
+      "n": "Black Dwarf",
+      "t": "Advanced Reborn",
+      "ty": "Utility",
+      "img": "assets/wiki/black-dwarf.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Stargazed",
+          "k": "S",
+          "u": "assets/wiki/stargazed-black-dwarf.webp"
+        },
+        {
+          "nm": "Beloved",
+          "k": "L",
+          "u": "assets/wiki/beloved-black-dwarf-beta-thumbnail.webp",
+          "ev": "Valentine's"
+        }
+      ]
+    },
+    {
+      "n": "Draedon's Gauntlet",
+      "t": "Superstitious",
+      "ty": "Upgrader",
+      "img": "assets/wiki/draedon-s-gauntlet.webp",
+      "r": 101,
+      "sh": [
+        {
+          "nm": "Inevitable",
+          "k": "L",
+          "u": "assets/wiki/inevitable-draedon-s-gauntlet.webp",
+          "ev": "Discord Giveaway"
+        }
+      ]
+    },
+    {
+      "n": "Blue Supergiant",
+      "t": "Advanced Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/blue-supergiant.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Hypergiant",
+          "k": "S",
+          "u": "assets/wiki/hypergiant-blue-supergiant.webp"
+        }
+      ]
+    },
+    {
+      "n": "Tsar Bomba",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/tsar-bomba.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Cyber",
+          "k": "S",
+          "u": "assets/wiki/cyber-tsar-bomba.webp"
+        }
+      ]
+    },
+    {
+      "n": "Red Giant",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/red-giant.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Wholesome",
+          "k": "S",
+          "u": "assets/wiki/wholesome-red-giant.webp"
+        }
+      ]
+    },
+    {
+      "n": "Empyrean Monument",
+      "t": "Enchanted",
+      "ty": "Upgrader",
+      "img": "assets/wiki/empyrean-monument.webp",
+      "r": 100,
+      "sh": [
+        {
+          "nm": "Antithesis",
+          "k": "L",
+          "u": "assets/wiki/antithesis-empyrean-monument.webp",
+          "ev": "Discord Giveaway"
+        }
+      ]
+    },
+    {
+      "n": "Tyrant's Forge",
+      "t": "Advanced Evolution",
+      "ty": "Furnace",
+      "img": "assets/wiki/tyrant-s-forge.webp",
+      "r": 35,
+      "sh": [
+        {
+          "nm": "Newtonic",
+          "k": "S",
+          "u": "assets/wiki/newtonic-tyrant-s-forge.webp"
+        }
+      ]
+    },
+    {
+      "n": "Aethereal Synthesizer",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/aethereal-synthesizer.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Blazing",
+          "k": "S",
+          "u": "assets/wiki/blazing-aethereal-synthesizer.webp"
+        }
+      ]
+    },
+    {
+      "n": "Pizza Bombarder",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/pizza-bombarder.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Void",
+          "k": "S",
+          "u": "assets/wiki/void-pizza-bombarder.webp"
+        }
+      ]
+    },
+    {
+      "n": "Pizza Blaster",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/pizza-blaster.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Void",
+          "k": "S",
+          "u": "assets/wiki/void-pizza-blaster-remodel-beta.webp"
+        },
+        {
+          "nm": "Birthday",
+          "k": "L",
+          "u": "assets/wiki/birthday-pizza-blaster.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Hades' Palace",
+      "t": "Advanced Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/hades-palace.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Styx",
+          "k": "S",
+          "u": "assets/wiki/styx-hades-palace.webp"
+        },
+        {
+          "nm": "Transylvanian",
+          "k": "L",
+          "u": "assets/wiki/transylvanian-hades-palace.webp",
+          "ev": "Halloween"
+        },
+        {
+          "nm": "Ye Olde",
+          "k": "L",
+          "u": "assets/wiki/ye-olde-hades-palace.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Palladium Drill",
+      "t": "Advanced Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/palladium-drill.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Newtonic",
+          "k": "S",
+          "u": "assets/wiki/newtonic-palladium-drill.webp"
+        }
+      ]
+    },
+    {
+      "n": "The Fissure",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/the-fissure.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Purified",
+          "k": "S",
+          "u": "assets/wiki/purified-fissure.webp"
+        }
+      ]
+    },
+    {
+      "n": "Draconicglass Mine",
+      "t": "Evolved Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/draconicglass-mine.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Azure",
+          "k": "S",
+          "u": "assets/wiki/azure-draconicglass-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dreamer's Nightmare",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/dreamer-s-nightmare.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Dusk",
+          "k": "S",
+          "u": "assets/wiki/dusk-dreamer-s-nightmare.webp"
+        }
+      ]
+    },
+    {
+      "n": "Void Star",
+      "t": "Advanced Evolution",
+      "ty": "Upgrader",
+      "img": "assets/wiki/void-star.webp",
+      "r": 35,
+      "sh": [
+        {
+          "nm": "Stargazed",
+          "k": "S",
+          "u": "assets/wiki/stargazed-void-star.webp"
+        }
+      ]
+    },
+    {
+      "n": "Crystal Altar",
+      "t": "Advanced Evolution",
+      "ty": "Furnace",
+      "img": "assets/wiki/crystal-altar.webp",
+      "r": 35,
+      "sh": [
+        {
+          "nm": "Spectrum",
+          "k": "S",
+          "u": "assets/wiki/spectrum-crystal-altar.webp"
+        }
+      ]
+    },
+    {
+      "n": "Brimstone Spires",
+      "t": "Advanced Evolution",
+      "ty": "Upgrader",
+      "img": "assets/wiki/brimstone-spires.webp",
+      "r": 35,
+      "sh": [
+        {
+          "nm": "Frozen",
+          "k": "S",
+          "u": "assets/wiki/frozen-brimstone-spires.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dreamer's Terror",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/dreamer-s-terror.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Mighty",
+          "k": "S",
+          "u": "assets/wiki/mighty-dreamer-s-terror.webp"
+        }
+      ]
+    },
+    {
+      "n": "Zenith Will",
+      "t": "Evolved Reborn",
+      "ty": "Utility",
+      "img": "assets/wiki/zenith-will.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Delta",
+          "k": "S",
+          "u": "assets/wiki/delta-zenith-will-beta-thumbnail.webp"
+        }
+      ]
+    },
+    {
+      "n": "Mineral Wheel",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/mineral-wheel.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Toxic",
+          "k": "S",
+          "u": "assets/wiki/toxic-mineral-wheel.webp"
+        }
+      ]
+    },
+    {
+      "n": "Ore Sawmill",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/ore-sawmill.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Wholesome",
+          "k": "S",
+          "u": "assets/wiki/wholesome-ore-sawmill.webp"
+        }
+      ]
+    },
+    {
+      "n": "Invasive Cyberlord",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/invasive-cyberlord.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Binary",
+          "k": "S",
+          "u": "assets/wiki/binary-invasive-cyberlord.webp"
+        }
+      ]
+    },
+    {
+      "n": "Funky Town",
+      "t": "Rare Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/funky-town.webp",
+      "r": 30.5,
+      "sh": [
+        {
+          "nm": "Swag",
+          "k": "S",
+          "u": "assets/wiki/swag-funky-town.webp"
+        },
+        {
+          "nm": "Malicious",
+          "k": "L",
+          "u": "assets/wiki/malicious-funky-town.webp",
+          "ev": "Easter"
+        }
+      ]
+    },
+    {
+      "n": "Dreamer's Blight",
+      "t": "Advanced Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/dreamer-s-blight.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Autumnal",
+          "k": "S",
+          "u": "assets/wiki/autumnal-dreamer-s-blight.webp"
+        }
+      ]
+    },
+    {
+      "n": "Midas Blaster",
+      "t": "Superstitious",
+      "ty": "Upgrader",
+      "img": "assets/wiki/midas-blaster.webp",
+      "r": 101,
+      "sh": [
+        {
+          "nm": "Sage",
+          "k": "L",
+          "u": "assets/wiki/sage-midas-blaster.webp",
+          "ev": "Discord Giveaway"
+        }
+      ]
+    },
+    {
+      "n": "Son of Poison",
+      "t": "Advanced Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/son-of-poison.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Frozen",
+          "k": "S",
+          "u": "assets/wiki/frozen-son-of-poison.webp"
+        },
+        {
+          "nm": "Ye Olde",
+          "k": "L",
+          "u": "assets/wiki/ye-olde-son-of-poison.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Father of Freon",
+      "t": "Advanced Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/father-of-freon.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Blazing",
+          "k": "S",
+          "u": "assets/wiki/blazing-father-of-freon.webp"
+        }
+      ]
+    },
+    {
+      "n": "Spirit of Fire",
+      "t": "Advanced Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/spirit-of-fire.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Toxic",
+          "k": "S",
+          "u": "assets/wiki/toxic-spirit-of-fire.webp"
+        }
+      ]
+    },
+    {
+      "n": "Shard Park",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/shard-park.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Solar",
+          "k": "S",
+          "u": "assets/wiki/solar-shard-park.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dreamer's Life",
+      "t": "Enchanted",
+      "ty": "Upgrader",
+      "img": "assets/wiki/dreamer-s-life.webp",
+      "r": 100,
+      "sh": [
+        {
+          "nm": "Hallow",
+          "k": "L",
+          "u": "assets/wiki/hallow-dreamer-s-life.webp",
+          "ev": "Discord Giveaway"
+        }
+      ]
+    },
+    {
+      "n": "Apollium Mine",
+      "t": "Advanced Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/apollium-mine.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Supergiant",
+          "k": "S",
+          "u": "assets/wiki/supergiant-apollium-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Solarium Mine",
+      "t": "Advanced Evolution",
+      "ty": "Dropper",
+      "img": "assets/wiki/solarium-mine.webp",
+      "r": 35,
+      "sh": [
+        {
+          "nm": "Supergiant",
+          "k": "S",
+          "u": "assets/wiki/supergiant-solarium-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "V-tolite Mine",
+      "t": "Evolved Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/v-tolite-mine.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Lightning",
+          "k": "S",
+          "u": "assets/wiki/lightning-v-tolite-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dreamer's Valor",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/dreamer-s-valor.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Frightful",
+          "k": "S",
+          "u": "assets/wiki/frightful-dreamer-s-valor.webp"
+        }
+      ]
+    },
+    {
+      "n": "Atlantic Monolith",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/atlantic-monolith.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Scorched",
+          "k": "S",
+          "u": "assets/wiki/scorched-atlantic-monolith.webp"
+        }
+      ]
+    },
+    {
+      "n": "Guardian of the Portal",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/guardian-of-the-portal.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Eldritch",
+          "k": "S",
+          "u": "assets/wiki/eldritch-guardian-of-the-portal.webp"
+        }
+      ]
+    },
+    {
+      "n": "Breached Motherboard",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/breached-motherboard.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Binary",
+          "k": "S",
+          "u": "assets/wiki/binary-breached-motherboard.webp"
+        }
+      ]
+    },
+    {
+      "n": "Atlantic Monument",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/atlantic-monument.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Scorched",
+          "k": "S",
+          "u": "assets/wiki/scorched-atlantic-monument.webp"
+        }
+      ]
+    },
+    {
+      "n": "Plasma Scanner",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/plasma-scanner.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Timekeeper's",
+          "k": "S",
+          "u": "assets/wiki/timekeeper-s-plasma-scanner.webp"
+        },
+        {
+          "nm": "Disco",
+          "k": "L",
+          "u": "assets/wiki/disco-plasma-scanner.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Newtonic Corroder",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/newtonic-corroder.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Galilean",
+          "k": "S",
+          "u": "assets/wiki/galilean-newtonic-corroder.webp"
+        }
+      ]
+    },
+    {
+      "n": "Vortex Chamber",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/vortex-chamber.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Minted",
+          "k": "S",
+          "u": "assets/wiki/minted-vortex-chamber.webp"
+        }
+      ]
+    },
+    {
+      "n": "Toxic Waste Disposal",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/toxic-waste-disposal.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Blurptonium",
+          "k": "S",
+          "u": "assets/wiki/blurptonium-toxic-waste-disposal.webp"
+        }
+      ]
+    },
+    {
+      "n": "Phase Bombarder",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/phase-bombarder.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Neon",
+          "k": "S",
+          "u": "assets/wiki/neon-phase-bombarder.webp"
+        }
+      ]
+    },
+    {
+      "n": "Digital Peppermint Refiner",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/digital-peppermint-refiner.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Frozen",
+          "k": "S",
+          "u": "assets/wiki/frozen-digital-peppermint-refiner.webp",
+          "ev": "Christmas"
+        }
+      ]
+    },
+    {
+      "n": "Santa's Workclock",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/santa-s-workclock.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Sour",
+          "k": "S",
+          "u": "assets/wiki/sour-santa-s-workclock.webp",
+          "ev": "Christmas"
+        }
+      ]
+    },
+    {
+      "n": "The Cryolyst",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/the-cryolyst.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Pine",
+          "k": "S",
+          "u": "assets/wiki/pine-cryolyst.webp",
+          "ev": "Christmas"
+        }
+      ]
+    },
+    {
+      "n": "Walrus Blaster",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/walrus-blaster.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Awesome",
+          "k": "S",
+          "u": "assets/wiki/awesome-walrus-blaster.webp",
+          "ev": "Christmas"
+        }
+      ]
+    },
+    {
+      "n": "Temporal Enchantment",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/temporal-enchantment.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Dawn",
+          "k": "S",
+          "u": "assets/wiki/dawn-temporal-enchantment.webp"
+        }
+      ]
+    },
+    {
+      "n": "Virtual Enchanter",
+      "t": "Advanced Evolution",
+      "ty": "Upgrader",
+      "img": "assets/wiki/virtual-enchanter.webp",
+      "r": 35,
+      "sh": [
+        {
+          "nm": "Crimson",
+          "k": "S",
+          "u": "assets/wiki/crimson-virtual-enchanter.webp"
+        }
+      ]
+    },
+    {
+      "n": "Mystical Thunder",
+      "t": "Advanced Evolution",
+      "ty": "Upgrader",
+      "img": "assets/wiki/mystical-thunder.webp",
+      "r": 35,
+      "sh": [
+        {
+          "nm": "Eclipse",
+          "k": "S",
+          "u": "assets/wiki/eclipse-mystical-thunder.webp"
+        }
+      ]
+    },
+    {
+      "n": "Azure Purifier",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/azure-purifier.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Crimson",
+          "k": "S",
+          "u": "assets/wiki/crimson-azure-purifier.webp"
+        }
+      ]
+    },
+    {
+      "n": "Searing Heat",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/searing-heat.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Frosted",
+          "k": "S",
+          "u": "assets/wiki/frosted-searing-heat.webp"
+        }
+      ]
+    },
+    {
+      "n": "Gaia's Grasp",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/gaia-s-grasp.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Dawn",
+          "k": "S",
+          "u": "assets/wiki/dawn-gaia-s-grasp.webp"
+        }
+      ]
+    },
+    {
+      "n": "Phase Refiner",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/phase-refiner.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Neon",
+          "k": "S",
+          "u": "assets/wiki/neon-phase-refiner.webp"
+        }
+      ]
+    },
+    {
+      "n": "Glass Butterfly",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/glass-butterfly.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Moth",
+          "k": "S",
+          "u": "assets/wiki/moth-glass-butterfly-beta-thumbnail.webp",
+          "ev": "Valentine's"
+        }
+      ]
+    },
+    {
+      "n": "Everlasting Key",
+      "t": "Rare Reborn",
+      "ty": "Utility",
+      "img": "assets/wiki/everlasting-key.webp",
+      "r": 30.5,
+      "sh": [
+        {
+          "nm": "Deathly",
+          "k": "S",
+          "u": "assets/wiki/deathly-everlasting-key.webp"
+        }
+      ]
+    },
+    {
+      "n": "The Grand Banana",
+      "t": "Rare Reborn",
+      "ty": "Weapon",
+      "img": "assets/wiki/the-grand-banana.webp",
+      "r": 30.5,
+      "sh": [
+        {
+          "nm": "Unripe",
+          "k": "S",
+          "u": "assets/wiki/unripe-grand-banana.webp"
+        }
+      ]
+    },
+    {
+      "n": "Cooling Chamber",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/cooling-chamber.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Bodacious",
+          "k": "S",
+          "u": "assets/wiki/bodacious-cooling-chamber.webp"
+        },
+        {
+          "nm": "ISpin",
+          "k": "L",
+          "u": "assets/wiki/ispin-cooling-chamber.webp",
+          "ev": "Easter"
+        }
+      ]
+    },
+    {
+      "n": "Turbine Chamber",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/turbine-chamber.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Bodacious",
+          "k": "S",
+          "u": "assets/wiki/bodacious-turbine-chamber.webp"
+        }
+      ]
+    },
+    {
+      "n": "Ooftopian Refiner",
+      "t": "Rare Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/ooftopian-refiner.webp",
+      "r": 30.5,
+      "sh": [
+        {
+          "nm": "Cherry",
+          "k": "S",
+          "u": "assets/wiki/cherry-ooftopian-refiner-remodel-beta.webp"
+        },
+        {
+          "nm": "Pomegranate",
+          "k": "L",
+          "u": "assets/wiki/pomegranate-ooftopian-refiner-beta-thumbnail.webp",
+          "ev": "Valentine's"
+        }
+      ]
+    },
+    {
+      "n": "Interstellar Conqueror",
+      "t": "Rare Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/interstellar-conqueror.webp",
+      "r": 30.5,
+      "sh": [
+        {
+          "nm": "Stargazed",
+          "k": "S",
+          "u": "assets/wiki/stargazed-interstellar-conqueror-beta-thumbnail.webp"
+        }
+      ]
+    },
+    {
+      "n": "Fractured Reality",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/fractured-reality.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Oblivion",
+          "k": "S",
+          "u": "assets/wiki/oblivion-fractured-reality.webp"
+        },
+        {
+          "nm": "Lonely",
+          "k": "L",
+          "u": "assets/wiki/lonely-fractured-reality-beta-thumbnail.webp",
+          "ev": "Valentine's"
+        }
+      ]
+    },
+    {
+      "n": "Railgun Cannon",
+      "t": "Advanced Reborn",
+      "ty": "Conveyor",
+      "img": "assets/wiki/railgun-cannon.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Galilean",
+          "k": "S",
+          "u": "assets/wiki/galilean-railgun-cannon.webp"
+        }
+      ]
+    },
+    {
+      "n": "Meatball Sandwich",
+      "t": "Rare Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/meatball-sandwich.webp",
+      "r": 30.5,
+      "sh": [
+        {
+          "nm": "Icecream",
+          "k": "S",
+          "u": "assets/wiki/icecream-meatball-sandwich.webp"
+        },
+        {
+          "nm": "Pearl",
+          "k": "L",
+          "u": "assets/wiki/pearl-meatball-sandwich.webp",
+          "ev": "Easter"
+        }
+      ]
+    },
+    {
+      "n": "Enchanted Library",
+      "t": "Superstitious",
+      "ty": "Upgrader",
+      "img": "assets/wiki/enchanted-library.webp",
+      "r": 101,
+      "sh": [
+        {
+          "nm": "Knowledgeful",
+          "k": "L",
+          "u": "assets/wiki/knowledgeful-enchanted-library.webp",
+          "ev": "Special Requirement"
+        }
+      ]
+    },
+    {
+      "n": "Desert Monument",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/desert-monument.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Elysium",
+          "k": "S",
+          "u": "assets/wiki/elysium-desert-monument.webp"
+        },
+        {
+          "nm": "Clover",
+          "k": "L",
+          "u": "assets/wiki/clover-desert-monument.webp",
+          "ev": "St. Patrick's"
+        },
+        {
+          "nm": "Ye Olde",
+          "k": "L",
+          "u": "assets/wiki/ye-olde-desert-monument.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Big Alberto",
+      "t": "Advanced Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/big-alberto.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Cyber",
+          "k": "S",
+          "u": "assets/wiki/cyber-big-alberto.webp"
+        }
+      ]
+    },
+    {
+      "n": "The Sporest",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/the-sporest.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Vampiric",
+          "k": "S",
+          "u": "assets/wiki/vampiric-sporest.webp"
+        },
+        {
+          "nm": "Ye Olde",
+          "k": "L",
+          "u": "assets/wiki/ye-olde-sporest.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Mad Monstrous Melter",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/mad-monstrous-melter.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Eternal",
+          "k": "S",
+          "u": "assets/wiki/eternal-mad-monstrous-melter-beta-thumbnail.webp"
+        }
+      ]
+    },
+    {
+      "n": "Scorponyte Mine",
+      "t": "Evolved Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/scorponyte-mine.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Wholesome",
+          "k": "S",
+          "u": "assets/wiki/wholesome-scorponyte-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Ore Chainsaw",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/ore-chainsaw.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Wholesome",
+          "k": "S",
+          "u": "assets/wiki/wholesome-ore-chainsaw.webp"
+        }
+      ]
+    },
+    {
+      "n": "The Hourglass",
+      "t": "Superstitious",
+      "ty": "Upgrader",
+      "img": "assets/wiki/the-hourglass.webp",
+      "r": 101,
+      "sh": [
+        {
+          "nm": "First",
+          "k": "L",
+          "u": "assets/wiki/first-hourglass.webp",
+          "ev": "Discord Giveaway"
+        }
+      ]
+    },
+    {
+      "n": "Universal Collapse",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/universal-collapse.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Oblivion",
+          "k": "S",
+          "u": "assets/wiki/oblivion-universal-collapse.webp"
+        }
+      ]
+    },
+    {
+      "n": "Temporal Armageddon",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/temporal-armageddon.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Oblivion",
+          "k": "S",
+          "u": "assets/wiki/oblivion-temporal-armageddon.webp"
+        }
+      ]
+    },
+    {
+      "n": "Banana Sundae Refiner",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/banana-sundae-refiner.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Mint",
+          "k": "S",
+          "u": "assets/wiki/mint-banana-sundae.webp"
+        }
+      ]
+    },
+    {
+      "n": "King Birthday Cake",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/king-birthday-cake.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Caramel",
+          "k": "S",
+          "u": "assets/wiki/caramel-king-birthday-cake.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Queen Birthday Cake",
+      "t": "Limited Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/queen-birthday-cake.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Velvet",
+          "k": "S",
+          "u": "assets/wiki/velvet-queen-birthday-cake.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Skyliner Flux",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/skyliner-flux.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Citrus",
+          "k": "S",
+          "u": "assets/wiki/citrus-skyliner-flux.webp"
+        },
+        {
+          "nm": "Loki's",
+          "k": "L",
+          "u": "assets/wiki/loki-s-skyliner-flux.webp",
+          "ev": "Halloween"
+        },
+        {
+          "nm": "CYBEGG",
+          "k": "L",
+          "u": "assets/wiki/cybegg-skyliner-flux.webp",
+          "ev": "Easter"
+        }
+      ]
+    },
+    {
+      "n": "Castle Bravo",
+      "t": "Advanced Evolution",
+      "ty": "Upgrader",
+      "img": "assets/wiki/castle-bravo.webp",
+      "r": 35,
+      "sh": [
+        {
+          "nm": "Cyber",
+          "k": "S",
+          "u": "assets/wiki/cyber-castle-bravo.webp"
+        }
+      ]
+    },
+    {
+      "n": "Devil's Spore",
+      "t": "Advanced Evolution",
+      "ty": "Upgrader",
+      "img": "assets/wiki/devil-s-spore.webp",
+      "r": 35,
+      "sh": [
+        {
+          "nm": "Wholesome",
+          "k": "S",
+          "u": "assets/wiki/wholesome-devil-s-spore.webp"
+        }
+      ]
+    },
+    {
+      "n": "Soul Blossom",
+      "t": "Rare Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/soul-blossom.webp",
+      "r": 30.5,
+      "sh": [
+        {
+          "nm": "Corrupt",
+          "k": "S",
+          "u": "assets/wiki/corrupt-soul-blossom.webp"
+        }
+      ]
+    },
+    {
+      "n": "Nuclear Stronghold",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/nuclear-stronghold.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Hades",
+          "k": "S",
+          "u": "assets/wiki/hades-nuclear-stronghold.webp"
+        }
+      ]
+    },
+    {
+      "n": "Australis Fornacem",
+      "t": "Rare Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/australis-fornacem.webp",
+      "r": 30.5,
+      "sh": [
+        {
+          "nm": "Endothermic",
+          "k": "S",
+          "u": "assets/wiki/endothermic-australis-fornacem.webp"
+        }
+      ]
+    },
+    {
+      "n": "Shard City",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/shard-city.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Solar",
+          "k": "S",
+          "u": "assets/wiki/solar-shard-city.webp"
+        }
+      ]
+    },
+    {
+      "n": "Lunar Bombardment",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/lunar-bombardment.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Blood",
+          "k": "S",
+          "u": "assets/wiki/blood-lunar-bombardment.webp"
+        }
+      ]
+    },
+    {
+      "n": "Solar Eruption",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/solar-eruption.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Supergiant",
+          "k": "S",
+          "u": "assets/wiki/supergiant-solar-eruption.webp"
+        }
+      ]
+    },
+    {
+      "n": "Nuclear Castle",
+      "t": "Evolved Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/nuclear-castle.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Hades",
+          "k": "S",
+          "u": "assets/wiki/hades-nuclear-castle.webp"
+        }
+      ]
+    },
+    {
+      "n": "Industrial Scarab",
+      "t": "Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/industrial-scarab.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Galilean",
+          "k": "S",
+          "u": "assets/wiki/galilean-industrial-scarab.webp"
+        }
+      ]
+    },
+    {
+      "n": "Demon Core",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/demon-core.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Blurptonium",
+          "k": "S",
+          "u": "assets/wiki/blurptonium-demon-core.webp"
+        }
+      ]
+    },
+    {
+      "n": "Industrial Firegem Quarry",
+      "t": "Evolved Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/industrial-firegem-quarry.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Frozen",
+          "k": "S",
+          "u": "assets/wiki/frozen-industrial-firegem-quarry.webp"
+        }
+      ]
+    },
+    {
+      "n": "Famished Wasteland",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/famished-wasteland.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Delusional",
+          "k": "S",
+          "u": "assets/wiki/delusional-famished-wasteland.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "Forsaken Battleground",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/forsaken-battleground.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Blistering",
+          "k": "S",
+          "u": "assets/wiki/blistering-forsaken-battleground.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "The Guillotine",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/the-guillotine.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Gruesome",
+          "k": "S",
+          "u": "assets/wiki/gruesome-the-guillotine.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "Green Tea Kettle",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/green-tea-kettle.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Vintage",
+          "k": "S",
+          "u": "assets/wiki/vintage-green-tea-kettle.webp"
+        }
+      ]
+    },
+    {
+      "n": "Pumpkin Hut",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/pumpkin-hut.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Darkseed",
+          "k": "S",
+          "u": "assets/wiki/darkseed-pumpkin-hut.webp",
+          "ev": "Halloween"
+        },
+        {
+          "nm": "Dusekkar",
+          "k": "S",
+          "u": "assets/wiki/dusekkar-pumpkin-hut.webp",
+          "ev": "Halloween"
+        },
+        {
+          "nm": "Doomsekkar",
+          "k": "S",
+          "u": "assets/wiki/doomsekkar-pumpkin-hut.webp",
+          "ev": "Halloween"
+        },
+        {
+          "nm": "Ghosdeeri",
+          "k": "S",
+          "u": "assets/wiki/ghosdeeri-pumpkin-hut.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "Ghosdeeri's Antidote",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/ghosdeeri-s-antidote.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Inoculating",
+          "k": "S",
+          "u": "assets/wiki/inoculating-ghosdeeri-s-antidote.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "Bubonic Plague",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/bubonic-plague.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Cured",
+          "k": "S",
+          "u": "assets/wiki/cured-bubonic-plague.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "Vortex Singularity",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/vortex-singularity.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Minted",
+          "k": "S",
+          "u": "assets/wiki/minted-vortex-singularity-beta-thumbnail.webp"
+        }
+      ]
+    },
+    {
+      "n": "Turtle Dignifier",
+      "t": "Rare Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/turtle-dignifier.webp",
+      "r": 30.5,
+      "sh": [
+        {
+          "nm": "Retro",
+          "k": "S",
+          "u": "assets/wiki/retro-turtle-dignifier.webp"
+        },
+        {
+          "nm": "Lucky",
+          "k": "L",
+          "u": "assets/wiki/lucky-turtle-dignifier.webp",
+          "ev": "St. Patrick's"
+        }
+      ]
+    },
+    {
+      "n": "Ore Skillet",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/ore-skillet.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "BBQ",
+          "k": "S",
+          "u": "assets/wiki/bbq-ore-skillet-beta-thumbnail.webp"
+        },
+        {
+          "nm": "Green",
+          "k": "L",
+          "u": "assets/wiki/green-ore-skillet.webp",
+          "ev": "St. Patrick's"
+        }
+      ]
+    },
+    {
+      "n": "Auroral Metropolis",
+      "t": "Advanced Evolution",
+      "ty": "Upgrader",
+      "img": "assets/wiki/auroral-metropolis.webp",
+      "r": 35,
+      "sh": [
+        {
+          "nm": "Ashen",
+          "k": "S",
+          "u": "assets/wiki/ashen-auroral-metropolis.webp"
+        }
+      ]
+    },
+    {
+      "n": "Grimstruct",
+      "t": "Advanced Reborn",
+      "ty": "Dropper",
+      "img": "assets/wiki/grimstruct.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Deceptive",
+          "k": "S",
+          "u": ""
+        }
+      ]
+    },
+    {
+      "n": "Esoteric Citadel",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/esoteric-citadel.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Master's",
+          "k": "S",
+          "u": "assets/wiki/master-s-esoteric-citadel-beta-thumbnail.webp"
+        },
+        {
+          "nm": "Fabergé",
+          "k": "L",
+          "u": "assets/wiki/faberge-esoteric-citadel.webp",
+          "ev": "Easter"
+        }
+      ]
+    },
+    {
+      "n": "Combustion Engine",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/combustion-engine.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Fallen",
+          "k": "S",
+          "u": "assets/wiki/fallencomb.webp"
+        },
+        {
+          "nm": "Leprechaun's",
+          "k": "L",
+          "u": "assets/wiki/leprechaun-s-combustion-engine-beta-thumbnail.webp",
+          "ev": "St. Patrick's"
+        },
+        {
+          "nm": "Contemporary",
+          "k": "L",
+          "u": "assets/wiki/contemporary-combustion-engine.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "The Grim Reaper",
+      "t": "Rare Reborn",
+      "ty": "Other",
+      "img": "assets/wiki/the-grim-reaper.webp",
+      "r": 30.5,
+      "sh": [
+        {
+          "nm": "Dumb",
+          "k": "S",
+          "u": ""
+        },
+        {
+          "nm": "Luxurious",
+          "k": "L",
+          "u": "assets/wiki/luxurious-grim-reaper.webp",
+          "ev": "Easter"
+        }
+      ]
+    },
+    {
+      "n": "The Harbinger of Destruction",
+      "t": "Evolved Reborn",
+      "ty": "Other",
+      "img": "assets/wiki/the-harbinger-of-destruction.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Dumb",
+          "k": "S",
+          "u": "assets/wiki/dumb-the-harbinger-of-destruction.webp"
+        }
+      ]
+    },
+    {
+      "n": "Rose Palace",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/rose-palace.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Bitter",
+          "k": "S",
+          "u": "assets/wiki/bitter-rose-palace-beta-thumbnail.webp",
+          "ev": "Valentine's"
+        }
+      ]
+    },
+    {
+      "n": "Lepretron",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/lepretron.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Golden",
+          "k": "S",
+          "u": "assets/wiki/golden-lepretron.webp",
+          "ev": "St. Patrick's"
+        },
+        {
+          "nm": "Diamond",
+          "k": "S",
+          "u": "assets/wiki/diamond-lepretron.webp",
+          "ev": "St. Patrick's"
+        }
+      ]
+    },
+    {
+      "n": "Carrot Village",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/carrot-village.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Parsnip",
+          "k": "S",
+          "u": "assets/wiki/parsnip-carrot-village-beta-thumbnail.webp",
+          "ev": "Easter"
+        }
+      ]
+    },
+    {
+      "n": "Spires of Conquest",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/spires-of-conquest.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Eerie",
+          "k": "S",
+          "u": "assets/wiki/eerie-spires-of-conquest.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "King Darkseed",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/king-darkseed.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Deity",
+          "k": "S",
+          "u": "assets/wiki/deity-king-darkseed.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "Blizzard Predictor",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/blizzard-predictor.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Carrot",
+          "k": "S",
+          "u": "assets/wiki/carrot-blizzard-predictor.webp",
+          "ev": "Christmas"
+        }
+      ]
+    },
+    {
+      "n": "Frostbite Chamber",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/frostbite-chamber.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Cranberry",
+          "k": "S",
+          "u": "assets/wiki/cranberry-frostbite-chamber.webp",
+          "ev": "Christmas"
+        }
+      ]
+    },
+    {
+      "n": "Snowflake Wheel",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/snowflake-wheel.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Oofy",
+          "k": "S",
+          "u": "assets/wiki/oofy-snowflake-wheel.webp",
+          "ev": "Christmas"
+        }
+      ]
+    },
+    {
+      "n": "Present Schrodinger",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/present-schrodinger.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Auroral",
+          "k": "S",
+          "u": "assets/wiki/auroral-present-schrodinger.webp",
+          "ev": "Christmas"
+        }
+      ]
+    },
+    {
+      "n": "Behemoth Blossom (Renegade)",
+      "t": "Renegade",
+      "ty": "Upgrader",
+      "img": "assets/wiki/behemoth-blossom.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Elder",
+          "k": "S",
+          "u": "assets/wiki/elder-behemoth-blossom.webp"
+        }
+      ]
+    },
+    {
+      "n": "Burst Refiner (Renegade)",
+      "t": "Renegade",
+      "ty": "Upgrader",
+      "img": "assets/wiki/burst-refiner.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Smoke",
+          "k": "S",
+          "u": "assets/wiki/smoke-burst-refiner.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dystopian Refiner (Renegade)",
+      "t": "Renegade",
+      "ty": "Upgrader",
+      "img": "assets/wiki/dystopian-refiner.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Grape",
+          "k": "S",
+          "u": "assets/wiki/grape-dystopian-refiner.webp"
+        }
+      ]
+    },
+    {
+      "n": "Incendium Mine (Renegade)",
+      "t": "Renegade",
+      "ty": "Dropper",
+      "img": "assets/wiki/incendium-mine.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Searing",
+          "k": "S",
+          "u": "assets/wiki/searing-incendium-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Nature's Enchantment (Renegade)",
+      "t": "Renegade",
+      "ty": "Other",
+      "img": "assets/wiki/nature-s-enchantment.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Ancient",
+          "k": "S",
+          "u": "assets/wiki/ancient-nature-s-enchantment.webp"
+        }
+      ]
+    },
+    {
+      "n": "Neutropian Refiner (Renegade)",
+      "t": "Renegade",
+      "ty": "Upgrader",
+      "img": "assets/wiki/neutropian-refiner.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Kiwi",
+          "k": "S",
+          "u": "assets/wiki/kiwi-neutropian-refiner.webp"
+        }
+      ]
+    },
+    {
+      "n": "Oblivion Weaver (Renegade)",
+      "t": "Renegade",
+      "ty": "Dropper",
+      "img": "assets/wiki/oblivion-weaver.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Silly",
+          "k": "S",
+          "u": "assets/wiki/silly-oblivion-weaver.webp"
+        }
+      ]
+    },
+    {
+      "n": "Orbital Cataclysm (Renegade)",
+      "t": "Renegade",
+      "ty": "Upgrader",
+      "img": "assets/wiki/orbital-cataclysm.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Daybreak",
+          "k": "S",
+          "u": "assets/wiki/daybreak-orbital-cataclysm.webp"
+        }
+      ]
+    },
+    {
+      "n": "Ore Supernova (Renegade)",
+      "t": "Renegade",
+      "ty": "Other",
+      "img": "assets/wiki/ore-supernova.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Horizen",
+          "k": "S",
+          "u": "assets/wiki/horizen-ore-supernova.webp"
+        }
+      ]
+    },
+    {
+      "n": "Suitopian Refiner (Renegade)",
+      "t": "Renegade",
+      "ty": "Upgrader",
+      "img": "assets/wiki/suitopian-refiner.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Lemon",
+          "k": "S",
+          "u": "assets/wiki/lemon-suitopian-refiner.webp"
+        }
+      ]
+    },
+    {
+      "n": "Pulsar Octagnium Mine (Renegade)",
+      "t": "Renegade",
+      "ty": "Dropper",
+      "img": "assets/wiki/pulsar-octagnium-mine.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Nebula",
+          "k": "S",
+          "u": "assets/wiki/nebula-pulsar-octagnium-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "The Grand Prism (Renegade)",
+      "t": "Renegade",
+      "ty": "Upgrader",
+      "img": "assets/wiki/the-grand-prism.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Prideful",
+          "k": "S",
+          "u": "assets/wiki/prideful-the-grand-prism.webp"
+        }
+      ]
+    },
+    {
+      "n": "The Great Parasite (Renegade)",
+      "t": "Renegade",
+      "ty": "Other",
+      "img": "assets/wiki/the-great-parasite.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Tomfoolish",
+          "k": "S",
+          "u": "assets/wiki/tomfoolish-the-great-parasite.webp"
+        }
+      ]
+    },
+    {
+      "n": "Utopian Refiner (Renegade)",
+      "t": "Renegade",
+      "ty": "Upgrader",
+      "img": "assets/wiki/utopian-refiner.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Blueberry",
+          "k": "S",
+          "u": "assets/wiki/blueberry-utopian-refiner.webp"
+        }
+      ]
+    },
+    {
+      "n": "Sinister Sepulcher (Renegade)",
+      "t": "Renegade",
+      "ty": "Upgrader",
+      "img": "assets/wiki/sinister-sepulcher.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Ornate",
+          "k": "S",
+          "u": "assets/wiki/ornate-sinister-sepulcher.webp"
+        }
+      ]
+    },
+    {
+      "n": "BUNZILLA",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/bunzilla.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "ATOMIC",
+          "k": "S",
+          "u": "assets/wiki/atomic-bunzilla.webp",
+          "ev": "Birthday"
+        }
+      ]
+    },
+    {
+      "n": "Quaint Skymill",
+      "t": "Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/quaint-skymill.webp",
+      "r": 30,
+      "sh": [
+        {
+          "nm": "Gloomy",
+          "k": "S",
+          "u": "assets/wiki/gloomy-quaint-skymill.webp"
+        },
+        {
+          "nm": "Stellar",
+          "k": "L",
+          "u": "assets/wiki/stellar-quaint-skymill.webp",
+          "ev": "Easter"
+        }
+      ]
+    },
+    {
+      "n": "Heavenly Flux",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/heavenly-flux.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Poindexter",
+          "k": "S",
+          "u": "assets/wiki/poindexter-heavenly-flux.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dreamer's Devastation",
+      "t": "Advanced Evolution",
+      "ty": "Furnace",
+      "img": "assets/wiki/dreamer-s-devastation.webp",
+      "r": 35,
+      "sh": [
+        {
+          "nm": "Autumnal",
+          "k": "S",
+          "u": "assets/wiki/autumnal-dreamer-s-devastation.webp"
+        }
+      ]
+    },
+    {
+      "n": "Wedding Cake",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/wedding-cake.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Void",
+          "k": "S",
+          "u": "assets/wiki/void-wedding-cake.webp",
+          "ev": "Valentine's"
+        }
+      ]
+    },
+    {
+      "n": "Gravitational Gyrocopter",
+      "t": "Advanced Reborn",
+      "ty": "Furnace",
+      "img": "assets/wiki/gravitational-gyrocopter.webp",
+      "r": 33,
+      "sh": [
+        {
+          "nm": "Pilot",
+          "k": "S",
+          "u": "assets/wiki/pilot-gravitational-gyrocopter.webp"
+        }
+      ]
+    },
+    {
+      "n": "Spaghetti & Meatballs",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/spaghetti-meatballs.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Icecream",
+          "k": "S",
+          "u": "assets/wiki/icecream-spaghetti-meatballs.webp"
+        }
+      ]
+    },
+    {
+      "n": "Tortoise Fortifier",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/tortoise-fortifier.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Retro",
+          "k": "S",
+          "u": "assets/wiki/retro-tortoise-fortifier.webp"
+        }
+      ]
+    },
+    {
+      "n": "Whimsical Turbine",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/whimsical-turbine.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Gloomy",
+          "k": "S",
+          "u": "assets/wiki/gloomy-whimsical-turbine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Skydance Serenade (Renegade)",
+      "t": "Renegade",
+      "ty": "Upgrader",
+      "img": "assets/wiki/skydance-serenade.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Monochrome",
+          "k": "S",
+          "u": "assets/wiki/monochrome-skydance-serenade.webp"
+        }
+      ]
+    },
+    {
+      "n": "Lunar Spectacle (Renegade)",
+      "t": "Renegade",
+      "ty": "Upgrader",
+      "img": "assets/wiki/lunar-spectacle.webp",
+      "r": 102,
+      "sh": [
+        {
+          "nm": "Scarlet",
+          "k": "S",
+          "u": "assets/wiki/scarlet-lunar-spectacle.webp"
+        }
+      ]
+    },
+    {
+      "n": "Famished Farm",
+      "t": "Limited Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/famished-farm.webp",
+      "r": 30.7,
+      "sh": [
+        {
+          "nm": "Rejuvenated",
+          "k": "S",
+          "u": "assets/wiki/rejuvenated-famished-farm.webp",
+          "ev": "Halloween"
+        }
+      ]
+    },
+    {
+      "n": "Mycolympus",
+      "t": "Evolved Reborn",
+      "ty": "Upgrader",
+      "img": "assets/wiki/mycolympus.webp",
+      "r": 32,
+      "sh": [
+        {
+          "nm": "Vampiric",
+          "k": "S",
+          "u": "assets/wiki/vampiric-mycolympus.webp"
+        }
+      ]
+    }
+  ],
+  "renamed": {
+    "Scorpium Mine|Wholesome": "Scorpium Mine|Rose",
+    "Newtonium Excavator|Cruel": "Newtonium Excavator|Supercharged",
+    "Massive Diamond Drill|Dreamy": "Massive Diamond Drill|Stained",
+    "Symmetryte Mine|Spiteful": "Symmetryte Mine|Abstract",
+    "Sage King|Wealthy": "Sage King|Glowing",
+    "Dimension Extractor|Newtonic": "Dimension Extractor|Blazing",
+    "V-tolite Mine|Ultra": "V-tolite Mine|Lightning",
+    "Ore Supernova (Renegade)|Horizen [sic]": "Ore Supernova (Renegade)|Horizen",
+    "Pulsar Octagnium Mine (Renegade)|Nebula Pulsar": "Pulsar Octagnium Mine (Renegade)|Nebula"
+  }
+}

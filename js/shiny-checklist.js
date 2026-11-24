@@ -1,16 +1,16 @@
 /* =========================================================
    Shiny Checklist page
-   Data: window.MH_SHINY (js/shiny-data.js)
+   Data: window.MH_SHINY (data/Shinies.json)
    Progress is saved in localStorage ("mh-shiny-checklist-v1") and can be
    downloaded / loaded as a JSON backup.
    ========================================================= */
 (() => {
-  const D = window.MH_SHINY, BASE = window.MH_IMG_BASE;
+  const D = window.MH_SHINY;
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const fmt = n => Math.round(n).toLocaleString("en-US");
   const RM = MH.reduceMotion;
-  const img = (u, s = 120) => u ? `${BASE}${u}/revision/latest/scale-to-width-down/${s}` : "";
+  const img = (u, s = 120) => u ? MH_SRC(u) : "";
   const ITEM = n => "item-index.html#item=" + encodeURIComponent(n);
   const KEY = "mh-shiny-checklist-v1";
   const tierCol = t => D.tiers[t] || ["#666", "#fff"];

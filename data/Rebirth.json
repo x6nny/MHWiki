@@ -1,0 +1,2347 @@
+{
+  "items": [
+    {
+      "k": "reborn",
+      "n": "Banana Split Upgrader",
+      "img": "assets/wiki/banana-split-upgrader.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 0,
+      "rar": 5,
+      "fx": ["Multiplies ore value by x5.5"],
+      "evo": {
+        "n": "Banana Sundae Refiner",
+        "img": "assets/wiki/banana-sundae-refiner.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Nature's Grip",
+      "img": "assets/wiki/nature-s-grip.webp",
+      "tier": "Reborn",
+      "type": "Cell Furnace",
+      "life": 0,
+      "rar": 15,
+      "fx": ["Processes ores worth under $1k at x200B value.\nProcesses ores worth over $1k at x200M value."],
+      "evo": {
+        "n": "Gaia's Grasp",
+        "img": "assets/wiki/gaia-s-grasp.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Quantum Ore Cleaner",
+      "img": "assets/wiki/quantum-ore-cleaner.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 0,
+      "rar": 15,
+      "fx": ["Quadruples (x4) ore value, can upgrade an ore one time only."],
+      "evo": {
+        "n": "Quantum Ore Polisher",
+        "img": "assets/wiki/quantum-ore-polisher.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Massive Diamond Mine",
+      "img": "assets/wiki/massive-diamond-mine.webp",
+      "tier": "Reborn",
+      "type": "Dropper",
+      "life": 0,
+      "rar": 15,
+      "fx": [
+        "Drops a special diamond ore worth $10M every 10 seconds. Ore can be upgraded and still be accepted by a cell furnace."
+      ],
+      "evo": {
+        "n": "Massive Diamond Drill",
+        "img": "assets/wiki/massive-diamond-drill.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Frozen Justice",
+      "img": "assets/wiki/frozen-justice.webp",
+      "tier": "Reborn",
+      "type": "Furnace",
+      "life": 0,
+      "rar": 15,
+      "fx": ["Processes ore at x10 normally.\nProcesses ore at x26 if ore is on fire."],
+      "evo": {
+        "n": "Frozen Peaks",
+        "img": "assets/wiki/frozen-peaks.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Industrial Firecrystal Mine",
+      "img": "assets/wiki/helping-erik-firecrystal-dlc.webp",
+      "tier": "Reborn",
+      "type": "Industrial Dropper",
+      "life": 0,
+      "rar": 15,
+      "fx": [
+        "A coal-powered mine that drops ore worth $15M to $1.5B. Some ore produced are compatible with cell furnaces."
+      ],
+      "evo": {
+        "n": "Industrial Firegem Quarry",
+        "img": "assets/wiki/industrial-firegem-quarry.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Sage Redeemer",
+      "img": "assets/wiki/sage-redeemer.webp",
+      "tier": "Reborn",
+      "type": "Furnace",
+      "life": 0,
+      "rar": 15,
+      "fx": ["Processes ore by the number of times it has been upgraded divided by 2, with a cap of 50x."],
+      "evo": {
+        "n": "Sage King",
+        "img": "assets/wiki/sage-king.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Pizza Blaster",
+      "img": "assets/wiki/pizza-blaster.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 0,
+      "rar": 15,
+      "fx": ["Multiplies ore value by x4"],
+      "evo": {
+        "n": "Pizza Bombarder",
+        "img": "assets/wiki/pizza-bombarder.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Astral Predictor",
+      "img": "assets/wiki/astral-predictor.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 0,
+      "rar": 15,
+      "fx": ["Multiplies ore value randomly from ~1.71x to ~5.79x over 2.2 to 7.2 seconds."],
+      "evo": {
+        "n": "Astral Setter",
+        "img": "assets/wiki/astral-setter.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Vortex Chamber",
+      "img": "assets/wiki/vortex-chamber.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 0,
+      "rar": 15,
+      "fx": ["Multiplies ore value by x5"],
+      "evo": {
+        "n": "Vortex Singularity",
+        "img": "assets/wiki/vortex-singularity.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Wild Spore",
+      "img": "assets/wiki/wild-spore.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 0,
+      "rar": 17,
+      "fx": [
+        "Multiplies ore value by 5x once while removing negative status effects from ores an unlimited number of times."
+      ],
+      "evo": {
+        "n": "Deadly Spore",
+        "img": "assets/wiki/deadly-spore.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Righteous Will",
+      "img": "assets/wiki/righteous-will.webp",
+      "tier": "Reborn",
+      "type": "Infuser",
+      "life": 5,
+      "rar": 6,
+      "fx": [
+        "This infuser will grant complete immunity to ",
+        {
+          "i": "Explosive Infuser",
+          "l": null
+        },
+        " enemies, a higher chance to survive ",
+        {
+          "i": "Adowable Guardian",
+          "l": null
+        },
+        "s, as well as +30 health, +15 speed, and you can jump higher. Increased resistance to Blaster explosions."
+      ],
+      "evo": {
+        "n": "Zenith Will",
+        "img": "assets/wiki/zenith-will.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Ancient Temple",
+      "img": "assets/wiki/ancient-temple.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 5,
+      "rar": 7,
+      "fx": ["If the ore value is:\nWhole Number: 5x\nDecimal Number: 3x"],
+      "evo": {
+        "n": "Ancient Coliseum",
+        "img": "assets/wiki/ancient-coliseum.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Ore Sawmill",
+      "img": "assets/wiki/ore-sawmill.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 5,
+      "rar": 10,
+      "fx": ["Ores is split in two ore, halving value and size."],
+      "evo": {
+        "n": "Ore Chainsaw",
+        "img": "assets/wiki/ore-chainsaw.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "The Catalyst",
+      "img": "assets/wiki/the-catalyst.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 5,
+      "rar": 12,
+      "fx": ["Quadruples (x4) ore value. Can only be used once."],
+      "evo": {
+        "n": "Saturated Catalyst",
+        "img": "assets/wiki/saturated-catalyst.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Azure Refiner",
+      "img": "assets/wiki/azure-refiner.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 5,
+      "rar": 15,
+      "fx": ["Quadruples (x4) ore value. Destroys ore with status effects."],
+      "evo": {
+        "n": "Azure Purifier",
+        "img": "assets/wiki/azure-purifier.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Ore Illuminator",
+      "img": "assets/wiki/ore-illuminator.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 5,
+      "rar": 15,
+      "fx": [
+        "Multiplies ore value by x7 after 5 seconds but destroys ore if upgraded in that time. Ore is given Illuminati particles during the 5 seconds."
+      ],
+      "evo": {
+        "n": "Ore Indoctrinator",
+        "img": "assets/wiki/ore-indoctrinator.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Flaming Schrodinger",
+      "img": "assets/wiki/flaming-schrodinger-hd.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 5,
+      "rar": 16,
+      "fx": [
+        "Randomly multiplies ore value by x2, x2.6, x4, or x6. Can set ore value to - ($100) or add $100B to ore value. Has a chance to fling or destroy ore."
+      ],
+      "evo": {
+        "n": "Super Schrodinger",
+        "img": "assets/wiki/super-schrodinger.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Venomshank",
+      "img": "assets/wiki/venomshank.webp",
+      "tier": "Reborn",
+      "type": "Weapon Giver",
+      "life": 5,
+      "rar": 3,
+      "fx": [
+        "Dispenses a Venomshank sword, which boosts the player's speed on equip. On critical hit, the victim is poisoned, losing a chunk of health over time after the initial hit and turning them green."
+      ],
+      "evo": null
+    },
+    {
+      "k": "reborn",
+      "n": "Tesla Resetter",
+      "img": "assets/wiki/tesla-resetter.webp",
+      "tier": "Reborn",
+      "type": "Resetting Device",
+      "life": 10,
+      "rar": 18,
+      "fx": ["Removes all machine tags, including status effects, can only affect ores once."],
+      "evo": {
+        "n": "Tesla Refuter",
+        "img": "assets/wiki/tesla-refuter.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Yunium Mine",
+      "img": "assets/wiki/yunium-mine.webp",
+      "tier": "Reborn",
+      "type": "Dropper",
+      "life": 10,
+      "rar": 17,
+      "fx": [
+        "A mine that spits out ore worth $25M to $2.5B in any direction. Ores from this mine are lighter than ore from other mines, and will receive bonus upgrades from Cannon items."
+      ],
+      "evo": {
+        "n": "Yuttrium Mine",
+        "img": "assets/wiki/yuttrium-mine.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Big Bad Blaster",
+      "img": "assets/wiki/big-bad-blaster.webp",
+      "tier": "Reborn",
+      "type": "Portable Upgrader/Blaster",
+      "life": 10,
+      "rar": 18,
+      "fx": [
+        "Multiplies ore value by 2.65x with no limit, but has a chance to destroy ores. will set ores on fire unless the ores resilient to fire or put out with spore"
+      ],
+      "evo": {
+        "n": "Mad Monstrous Melter",
+        "img": "assets/wiki/mad-monstrous-melter.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Mineral Wheel",
+      "img": "assets/wiki/mineral-wheel.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 10,
+      "rar": 17,
+      "fx": ["Multiplies ore value by x6"],
+      "evo": null
+    },
+    {
+      "k": "reborn",
+      "n": "Clockwork",
+      "img": "assets/wiki/clockwork.webp",
+      "tier": "Reborn",
+      "type": "Fine-Point Upgrader",
+      "life": 10,
+      "rar": 8,
+      "fx": ["Multiplies ore value by x5.\nHas a very thin upgrade beam."],
+      "evo": {
+        "n": "Grandfather Clockwork",
+        "img": "assets/wiki/grandfather-clockwork.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Dreamer's Might",
+      "img": "assets/wiki/dreamer-s-might-high-quality.webp",
+      "tier": "Reborn",
+      "type": "Furnace",
+      "life": 20,
+      "rar": 15,
+      "fx": ["Subtracts $1T from ore value, then processes ore at x40."],
+      "evo": {
+        "n": "Dreamer's Valor",
+        "img": "assets/wiki/dreamer-s-valor.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Big Bertha",
+      "img": "assets/wiki/big-bertha.webp",
+      "tier": "Reborn",
+      "type": "Beam-Raised Upgrader",
+      "life": 20,
+      "rar": 19,
+      "fx": [
+        "Normally requires an ore cannon, a drop from a hydraulic conveyor, or a drop from a platform to use. Multiplies ore value by x10 (Some mines such as Atomium and Newtonium can drop directly into Big Bertha)"
+      ],
+      "evo": {
+        "n": "Tsar Bomba",
+        "img": "assets/wiki/tsar-bomba.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Scorpium Mine",
+      "img": "assets/wiki/scorpium-mine.webp",
+      "tier": "Reborn",
+      "type": "Dropper",
+      "life": 20,
+      "rar": 17,
+      "fx": [
+        "Initially drops ore worth $0. Every ore after that is worth 1.2 multiplied by the number of seconds the mine is on the base, with a cap of $69.2B. Ore from this mine is immune to poison."
+      ],
+      "evo": {
+        "n": "Scorponyte Mine",
+        "img": "assets/wiki/scorponyte-mine.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Newtonium Mine",
+      "img": "assets/wiki/newtonium-mine.webp",
+      "tier": "Reborn",
+      "type": "Dropper",
+      "life": 20,
+      "rar": 18,
+      "fx": [
+        "Drops an ore worth $100M to $5B every half second. Ores from this mine are dense, resisting knockback. They also will get bonus upgrades from radioactive upgraders."
+      ],
+      "evo": {
+        "n": "Newtonium Excavator",
+        "img": "assets/wiki/newtonium-excavator.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Dreamer's Fright",
+      "img": "assets/wiki/dreamer-s-fright.webp",
+      "tier": "Reborn",
+      "type": "Furnace",
+      "life": 20,
+      "rar": 18,
+      "fx": ["Randomly processes ore from (-x5)-x45 while slowly depleting your Research Points."],
+      "evo": {
+        "n": "Dreamer's Terror",
+        "img": "assets/wiki/dreamer-s-terror.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Plasma Scanner",
+      "img": "assets/wiki/plasma-scanner.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 20,
+      "rar": 19,
+      "fx": [
+        "Multiplies ore value by x6 if they successfully collide with the moving upgrade beam. Can be used with other scanner variants. Attempting to repeat upgrades will destroy the ore."
+      ],
+      "evo": null
+    },
+    {
+      "k": "reborn",
+      "n": "Lightningbolt Refiner",
+      "img": "assets/wiki/lightningbolt-refiner-hd.webp",
+      "tier": "Reborn",
+      "type": "Button-Powered Upgrader",
+      "life": 20,
+      "rar": 18,
+      "fx": [
+        "An upgrader that multiplies ore value by 1x-7x. Requires clicks on a button to work. Ore has a chance to be destroyed if used more than twice."
+      ],
+      "evo": {
+        "n": "Tempest Refiner",
+        "img": "assets/wiki/tempest-refiner.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Green Tea Latte",
+      "img": "assets/wiki/green-tea-latte.webp",
+      "tier": "Reborn",
+      "type": "Way-Up-High Upgrader",
+      "life": 20,
+      "rar": 10,
+      "fx": ["Multiplies ore value by 5x"],
+      "evo": {
+        "n": "Green Tea Kettle",
+        "img": "assets/wiki/green-tea-kettle.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Scorching Heat",
+      "img": "assets/wiki/scorching-heat.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 20,
+      "rar": 10,
+      "fx": ["Will upgrade fireproof or flaming ores by x5, but will destroy other ores."],
+      "evo": {
+        "n": "Searing Heat",
+        "img": "assets/wiki/searing-heat.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "The Fracture",
+      "img": "assets/wiki/the-fracture.webp",
+      "tier": "Reborn",
+      "type": "Cell Furnace",
+      "life": 20,
+      "rar": 4,
+      "fx": ["Raises ore to the power of 1.12 then multiplies it by x300M. Does not accept upgraded ore."],
+      "evo": {
+        "n": "The Fissure",
+        "img": "assets/wiki/the-fissure.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Solar Flare",
+      "img": "assets/wiki/solar-flare.webp",
+      "tier": "Reborn",
+      "type": "Furnace",
+      "life": 50,
+      "rar": 18,
+      "fx": ["Processes ore at x25 value during the day.\nProcesses ore randomly from x0 to x50 during nighttime."],
+      "evo": {
+        "n": "Solar Eruption",
+        "img": "assets/wiki/solar-eruption.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Atomium Mine",
+      "img": "assets/wiki/atomium-mine.webp",
+      "tier": "Reborn",
+      "type": "Dropper",
+      "life": 100,
+      "rar": 12,
+      "fx": [
+        "Drops one ore every 0.3 seconds, worth $3.5B to $25B. Receives bonus upgrades if the ore is sparkling, but the ore can get destroyed when sparkling."
+      ],
+      "evo": {
+        "n": "Atomyke Mine",
+        "img": "assets/wiki/atomyke-mine.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Dark Magic",
+      "img": "assets/wiki/dark-magic.webp",
+      "tier": "Reborn",
+      "type": "Remote-Powered Furnace",
+      "life": 100,
+      "rar": 18,
+      "fx": ["Normally processes ore at x12 its value. When remotely activated, it processes ore value by x45."],
+      "evo": {
+        "n": "Forbidden Magic",
+        "img": "assets/wiki/forbidden-magic.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Eternal Journey",
+      "img": "assets/wiki/eternal-journey.webp",
+      "tier": "Reborn",
+      "type": "Furnace",
+      "life": 100,
+      "rar": 10,
+      "fx": [
+        "A furnace that needs 1-15 seconds to process a single ore at 100x. Additional ore will be destroyed but still award Research Points."
+      ],
+      "evo": {
+        "n": "Eternal Limbo",
+        "img": "assets/wiki/eternal-limbo.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Toxic Waste Disposal",
+      "img": "assets/wiki/toxic-waste-disposal.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 100,
+      "rar": 13,
+      "fx": [
+        "Multiplies ore value by x3 to x6, applying a radioactive effect on ores. The radiation will cause ores to explode after 6 seconds. Makes ore lighter."
+      ],
+      "evo": {
+        "n": "Demon Core",
+        "img": "assets/wiki/demon-core.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Blind Justice",
+      "img": "assets/wiki/blind-justice.webp",
+      "tier": "Reborn",
+      "type": "Cell Furnace",
+      "life": 100,
+      "rar": 7,
+      "fx": [
+        "Base x700M value, every +1 upgrade counter reduces multiplier by 70M, every -1 upgrade counter increases multiplier by 70M."
+      ],
+      "evo": {
+        "n": "Swift Justice",
+        "img": "assets/wiki/swift-justice.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Cooling Chamber",
+      "img": "assets/wiki/cooling-chamber.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 100,
+      "rar": 8,
+      "fx": [
+        "Normally upgrades ore by x7; flaming ores get extinguished and an x11 upgrade. However, over-usage will cause the item to overheat, weakening its multiplier and preventing it from extinguishing fire.\nOverheating can be prevented by frozen ore."
+      ],
+      "evo": {
+        "n": "Turbine Chamber",
+        "img": "assets/wiki/turbine-chamber.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Atlantic Monolith",
+      "img": "assets/wiki/atlantic-monolith.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 100,
+      "rar": 10,
+      "fx": ["Multiplies ore value by x4, turns them blue, and makes them fireproof."],
+      "evo": {
+        "n": "Atlantic Monument",
+        "img": "assets/wiki/atlantic-monument.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Dragonglass Mine",
+      "img": "assets/wiki/dragonglass-mine.webp",
+      "tier": "Reborn",
+      "type": "Remote-Powered Dropper",
+      "life": 100,
+      "rar": 8,
+      "fx": [
+        "Remote Dropper in which its ore value will increase depending on how long the remote is activated from $4B - $10T. Three ores are produced each click-- but only one of them is compatible with cell furnaces. Receives bonus upgrades from Blasters."
+      ],
+      "evo": {
+        "n": "Draconicglass Mine",
+        "img": "assets/wiki/draconicglass-mine.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Gate of Eclipse",
+      "img": "assets/wiki/guys-its-a-door-not-a-gate-are-you-blind.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 100,
+      "rar": 15,
+      "fx": ["Multiplies ore value by x4 during the day, and x10 during the night."],
+      "evo": {
+        "n": "Final Eclipse Gate",
+        "img": "assets/wiki/final-eclipse-gate.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Timeless Enhancement",
+      "img": "assets/wiki/timeless-enhancement.webp",
+      "tier": "Reborn",
+      "type": "Furnace",
+      "life": 150,
+      "rar": 7,
+      "fx": ["Processes depending on how short the ore's lifespan from 30x to 80x."],
+      "evo": {
+        "n": "Temporal Enchantment",
+        "img": "assets/wiki/temporal-enchantment.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Ambrosia Fountain",
+      "img": "assets/wiki/ambrosia-fountain.webp",
+      "tier": "Reborn",
+      "type": "Furnace",
+      "life": 150,
+      "rar": 7,
+      "fx": ["Processes ores depending on how long they have existed. Caps at 10 minutes = 110x."],
+      "evo": {
+        "n": "Ambrosia Forest",
+        "img": "assets/wiki/ambrosia-forest.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Dreamer's Anguish",
+      "img": "assets/wiki/dreamer-s-anguish.webp",
+      "tier": "Reborn",
+      "type": "Cell Furnace",
+      "life": 200,
+      "rar": 3,
+      "fx": [
+        "Processes un-upgraded ore at $20k to $79.9qd times its value based on how much money you have (similar to ",
+        {
+          "i": "Noobite Mine",
+          "l": null
+        },
+        ")."
+      ],
+      "evo": {
+        "n": "Dreamer's Nightmare",
+        "img": "assets/wiki/dreamer-s-nightmare.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Phase Refiner",
+      "img": "assets/wiki/phase-refiner.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 200,
+      "rar": 7,
+      "fx": [
+        "Multiplies ore value by x4. Boosts the ",
+        {
+          "i": "Phase Processor",
+          "l": null
+        },
+        "'s multiplier."
+      ],
+      "evo": {
+        "n": "Phase Bombarder",
+        "img": "assets/wiki/phase-bombarder.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Pilotite Mine",
+      "img": "assets/wiki/pilotite-mine.webp",
+      "tier": "Reborn",
+      "type": "Hydraulic Dropper",
+      "life": 200,
+      "rar": 13,
+      "fx": [
+        "The higher this mine is raised into the sky, the more valuable the ore is. This ore is also more resilient to fire, lasting twice as long compared to other ore types."
+      ],
+      "evo": {
+        "n": "V-tolite Mine",
+        "img": "assets/wiki/v-tolite-mine.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Guardian of the Gate",
+      "img": "assets/wiki/guardian-of-the-gate.webp",
+      "tier": "Reborn",
+      "type": "Furnace",
+      "life": 250,
+      "rar": 5,
+      "fx": ["x20 when the owner is is within the base, and x200 when away from the base."],
+      "evo": {
+        "n": "Guardian of the Portal",
+        "img": "assets/wiki/guardian-of-the-portal.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Morning Star",
+      "img": "assets/wiki/morning-star.webp",
+      "tier": "Reborn",
+      "type": "Star Upgrader",
+      "life": 250,
+      "rar": 14,
+      "fx": ["Multiplies ore value by 70% up to $1N. Sets ore on fire."],
+      "evo": null
+    },
+    {
+      "k": "reborn",
+      "n": "Aether Refinery",
+      "img": "assets/wiki/aether-refinery.webp",
+      "tier": "Reborn",
+      "type": "Furnace",
+      "life": 300,
+      "rar": 5,
+      "fx": [
+        "Processes ores at x90. Afterwards, a barrier is set up blocking ore access for 5 seconds. If an ore was upgraded by Aether Schrodinger, this processes ores at x300 instead."
+      ],
+      "evo": {
+        "n": "Aethereal Synthesizer",
+        "img": "assets/wiki/aethereal-synthesizer.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Symmetrium Mine",
+      "img": "assets/wiki/symmetrium-mine.webp",
+      "tier": "Reborn",
+      "type": "Dropper",
+      "life": 300,
+      "rar": 10,
+      "fx": [
+        "Drops 1 ore worth $500M to $10B and cannot produce another until the ore is processed or destroyed. The ore has a self-upgrading flame, but the upgrade stops if flame is removed. Ore is fireproof."
+      ],
+      "evo": {
+        "n": "Symmetryte Mine",
+        "img": "assets/wiki/symmetryte-mine.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Sakura Garden",
+      "img": "assets/wiki/sakura-garden.webp",
+      "tier": "Reborn",
+      "type": "Furnace",
+      "life": 350,
+      "rar": 3,
+      "fx": [
+        "Processes pure ore at x300. Every ore processed will lower the multiplier by x1. Processing ore with flames will lower the multiplier by x25, down to a minimum of -x144."
+      ],
+      "evo": {
+        "n": "Sakura Falls",
+        "img": "assets/wiki/sakura-falls.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Invasive Cyberlord",
+      "img": "assets/wiki/invasive-cyberlord.webp",
+      "tier": "Reborn",
+      "type": "Furnace",
+      "life": 400,
+      "rar": 10,
+      "fx": [
+        "Processes ore at a base value of x125. If an ore hits the third of the three upgrade beams it gets multiplied by x2, with a total multiplier of of ~x250."
+      ],
+      "evo": {
+        "n": "Breached Motherboard",
+        "img": "assets/wiki/breached-motherboard.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "The Sporest",
+      "img": "assets/wiki/the-sporest.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 400,
+      "rar": 8,
+      "fx": ["Multiplies ore value by x8 and poisons them."],
+      "evo": {
+        "n": "Mycolympus",
+        "img": "assets/wiki/mycolympus.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Nuclear Stronghold",
+      "img": "assets/wiki/nuclear-stronghold.webp",
+      "tier": "Reborn",
+      "type": "Furnace",
+      "life": 400,
+      "rar": 7,
+      "fx": ["Processes ore at a 200x rate. If ore is radioactive, processes at 290x."],
+      "evo": {
+        "n": "Nuclear Castle",
+        "img": "assets/wiki/nuclear-castle.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Phase Processor",
+      "img": "assets/wiki/phase-processor.webp",
+      "tier": "Reborn",
+      "type": "Furnace",
+      "life": 450,
+      "rar": 7,
+      "fx": [
+        "Processes ore at x90 normally. If an ore has been upgraded by ",
+        {
+          "i": "Phase Refiner",
+          "l": null
+        },
+        " or ",
+        {
+          "i": "Phase Bombarder",
+          "l": null
+        },
+        ", the furnace will be activated and will process every ore from there by x500."
+      ],
+      "evo": null
+    },
+    {
+      "k": "reborn",
+      "n": "Breech Loader",
+      "img": "assets/wiki/breech-loader.webp",
+      "tier": "Reborn",
+      "type": "Dropper",
+      "life": 500,
+      "rar": 8,
+      "fx": ["Drops 5 ores every second. Ore is worth $90B to $900B. Ore has a chance to randomly duplicate itself."],
+      "evo": {
+        "n": "Dimension Extractor",
+        "img": "assets/wiki/dimension-extractor.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "The Abomination",
+      "img": "assets/wiki/the-abomination.webp",
+      "tier": "Reborn",
+      "type": "Dropper",
+      "life": 500,
+      "rar": 8,
+      "fx": [
+        "Base ore value of $10M\nWhen ore from this mine touches ore from another mine, that ore is destroyed and ore from this mine is upgraded by x2. Can only take in 5 ores."
+      ],
+      "evo": {
+        "n": "The Daegelart",
+        "img": "assets/wiki/the-daegelart.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Crystallized System",
+      "img": "assets/wiki/crystallized-system.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 600,
+      "rar": 12,
+      "fx": ["Multiplies ore value by x6"],
+      "evo": {
+        "n": "Crystallized Engine",
+        "img": "assets/wiki/crystallized-engine.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Fractured Reality",
+      "img": "assets/wiki/fractured-reality.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 750,
+      "rar": 5,
+      "fx": [
+        "Upgrader depends on the status effects the ore has; said status effect is also swapped with another effect."
+      ],
+      "evo": {
+        "n": "Universal Collapse",
+        "img": "assets/wiki/universal-collapse.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Ore Skillet",
+      "img": "assets/wiki/ore-skillet.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 753,
+      "rar": 11,
+      "fx": [
+        "Multiplies ore value by a base of 2x. Each ore dropped onto the frying pan increases the multiplier by 1 up to 10x"
+      ],
+      "evo": null
+    },
+    {
+      "k": "reborn",
+      "n": "Gravitational Gearwork",
+      "img": "assets/wiki/gravitational-gearwork.webp",
+      "tier": "Reborn",
+      "type": "Hydraulic Anti-Gravity Upgrader",
+      "life": 800,
+      "rar": 13,
+      "fx": ["Multiplies ore value by x7. Upgrade beam is on the bottom of the item."],
+      "evo": {
+        "n": "Atmospheric Steamwork",
+        "img": "assets/wiki/atmospheric-steamwork.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Shard Park",
+      "img": "assets/wiki/shard-park.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 800,
+      "rar": 9,
+      "fx": [
+        "Upgrader is dependent on the amount of Shard of Life the user currently has divided by 2, capping out at x10."
+      ],
+      "evo": {
+        "n": "Shard City",
+        "img": "assets/wiki/shard-city.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Newtonic Corroder",
+      "img": "assets/wiki/newtonic-corroder.webp",
+      "tier": "Reborn",
+      "type": "Upgrader",
+      "life": 1000,
+      "rar": 10,
+      "fx": ["Multiplies ore value by x7, and poisons ore. Upgrade beam is above item."],
+      "evo": null
+    },
+    {
+      "k": "reborn",
+      "n": "Red Giant",
+      "img": "assets/wiki/red-giant.webp",
+      "tier": "Reborn",
+      "type": "Star Upgrader",
+      "life": 1000,
+      "rar": 14,
+      "fx": ["Upgrades ores by 70% up to $1NvD. Sets ore on fire."],
+      "evo": {
+        "n": "Neutron Star",
+        "img": "assets/wiki/neutron-star.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Skyliner Flux",
+      "img": "assets/wiki/skyliner-flux.webp",
+      "tier": "Reborn",
+      "type": "Hydraulic Upgrader",
+      "life": 1000,
+      "rar": 7,
+      "fx": ["Vertical-oriented refiner that upgrades ore by x4. Works up to 3 times, for a total of x64."],
+      "evo": {
+        "n": "Heavenly Flux",
+        "img": "assets/wiki/heavenly-flux.webp",
+        "tier": "Evolved Reborn"
+      }
+    },
+    {
+      "k": "reborn",
+      "n": "Combustion Engine",
+      "img": "assets/wiki/combustion-engine.webp",
+      "tier": "Reborn",
+      "type": "Utility Upgrader",
+      "life": 1000,
+      "rar": 5,
+      "fx": ["Base multiplier of x5. When infused by coal, multiplies by x9 and launches ore forward."],
+      "evo": null
+    },
+    {
+      "k": "reborn",
+      "n": "Industrial Scarab",
+      "img": "assets/wiki/industrial-scarab.webp",
+      "tier": "Reborn",
+      "type": "Furnace",
+      "life": 5000,
+      "rar": 3,
+      "fx": ["Processes ore by 7,750x to 9,100x"],
+      "evo": null
+    },
+    {
+      "k": "reborn",
+      "n": "Esoteric Citadel",
+      "img": "assets/wiki/esoteric-citadel.webp",
+      "tier": "Reborn",
+      "type": "Hydraulic-Height Upgrader",
+      "life": 5000,
+      "rar": 3,
+      "fx": ["Copy the last upgrade applied, maximum of x40"],
+      "evo": null
+    },
+    {
+      "k": "reborn",
+      "n": "Desert Monument",
+      "img": "assets/wiki/desert-monument.webp",
+      "tier": "Reborn",
+      "type": "Raised Upgrader",
+      "life": 7300,
+      "rar": 1,
+      "fx": ["Multiplies ore value by x13 and renders them immune to negative cash results from Schrodinger items."],
+      "evo": null
+    },
+    {
+      "k": "advanced",
+      "n": "Dragon Blaster",
+      "img": "assets/wiki/dragon-blaster.webp",
+      "tier": "Advanced Reborn",
+      "type": "Portable Upgrader/Blaster",
+      "life": 500,
+      "rar": 3,
+      "fx": [
+        "Multiplies ore value by 4x with a 20% chance of explosion and 10% chance of destroying ore. Sets ore on fire."
+      ],
+      "evo": {
+        "n": "Hydra Blaster",
+        "img": "assets/wiki/hydra-blaster.webp",
+        "tier": "Advanced Evolution"
+      }
+    },
+    {
+      "k": "advanced",
+      "n": "Frigid Dystopia",
+      "img": "assets/wiki/frigid-dystopia.webp",
+      "tier": "Advanced Reborn",
+      "type": "Upgrader",
+      "life": 500,
+      "rar": 3,
+      "fx": ["Multiplies ore value by 15x, but only if the ore is frozen."],
+      "evo": {
+        "n": "Auroral Metropolis",
+        "img": "assets/wiki/auroral-metropolis.webp",
+        "tier": "Advanced Evolution"
+      }
+    },
+    {
+      "k": "advanced",
+      "n": "Precursor Furnace",
+      "img": "assets/wiki/precursor-furnace.webp",
+      "tier": "Advanced Reborn",
+      "type": "Furnace",
+      "life": 500,
+      "rar": 3,
+      "fx": [
+        "Processes ore value by 70x their value normally, but if an ore from the ",
+        {
+          "i": "Precursor Mine",
+          "l": null
+        },
+        " is processed, the multiplier raises to 500x."
+      ],
+      "evo": null
+    },
+    {
+      "k": "advanced",
+      "n": "Precursor Mine",
+      "img": "assets/wiki/precursor-mine.webp",
+      "tier": "Advanced Reborn",
+      "type": "Dropper",
+      "life": 500,
+      "rar": 3,
+      "fx": [
+        "Drops ore worth between $1B - $5B. If an ore from this mine enters the ",
+        {
+          "i": "Precursor Furnace",
+          "l": null
+        },
+        ", the furnace will have its multiplier raised."
+      ],
+      "evo": null
+    },
+    {
+      "k": "advanced",
+      "n": "Vampire Spore",
+      "img": "assets/wiki/vampire-spore.webp",
+      "tier": "Advanced Reborn",
+      "type": "Upgrader",
+      "life": 500,
+      "rar": 1,
+      "fx": ["Multiplies ore value by 11x, but applies one negative effect."],
+      "evo": {
+        "n": "Devil's Spore",
+        "img": "assets/wiki/devil-s-spore.webp",
+        "tier": "Advanced Evolution"
+      }
+    },
+    {
+      "k": "advanced",
+      "n": "Vulcan's Grasp",
+      "img": "assets/wiki/vulcan-s-grasp.webp",
+      "tier": "Advanced Reborn",
+      "type": "Upgrader",
+      "life": 500,
+      "rar": 1,
+      "fx": [
+        "Multiplier increases based on the number of rebirth-related items on base. Cannot be re-used with resetters."
+      ],
+      "evo": {
+        "n": "Vulcan's Destiny",
+        "img": "assets/wiki/vulcan-s-destiny.webp",
+        "tier": "Advanced Evolution"
+      }
+    },
+    {
+      "k": "advanced",
+      "n": "Stardust Pulsar",
+      "img": "assets/wiki/stardust-pulsar.webp",
+      "tier": "Advanced Reborn",
+      "type": "Pulsar Upgrader",
+      "life": 600,
+      "rar": 2,
+      "fx": ["Multiplies of your ores value by 35x when pulsed, and cannot be re-used, even with resetters."],
+      "evo": null
+    },
+    {
+      "k": "advanced",
+      "n": "Hades' Palace",
+      "img": "assets/wiki/hades-palace.webp",
+      "tier": "Advanced Reborn",
+      "type": "Upgrader",
+      "life": 666,
+      "rar": 3,
+      "fx": [
+        "Multiplies ore with upgrade counter 20 or less by 6x. Every upgrade count increases multiplier by 0.3 up to 30x at 100 upgrades."
+      ],
+      "evo": {
+        "n": "Brimstone Spires",
+        "img": "assets/wiki/brimstone-spires.webp",
+        "tier": "Advanced Evolution"
+      }
+    },
+    {
+      "k": "advanced",
+      "n": "Sword God Shrine",
+      "img": "assets/wiki/sword-god-shrine-hd.webp",
+      "tier": "Advanced Reborn",
+      "type": "Weapon Giver",
+      "life": 800,
+      "rar": 1,
+      "fx": ["Dispenses Darkheart sword."],
+      "evo": {
+        "n": "Lord of Tenebrous",
+        "img": "assets/wiki/lord-of-tenebrous.webp",
+        "tier": "Advanced Evolution"
+      }
+    },
+    {
+      "k": "advanced",
+      "n": "Igneous Forge",
+      "img": "assets/wiki/igneous-forge.webp",
+      "tier": "Advanced Reborn",
+      "type": "Furnace",
+      "life": 1000,
+      "rar": 3,
+      "fx": ["Feeds off coal to power its multiplier. Capped at x975."],
+      "evo": {
+        "n": "Tyrant's Forge",
+        "img": "assets/wiki/tyrant-s-forge.webp",
+        "tier": "Advanced Evolution"
+      }
+    },
+    {
+      "k": "advanced",
+      "n": "Virtual Enhancer",
+      "img": "assets/wiki/virtual-enhancer.webp",
+      "tier": "Advanced Reborn",
+      "type": "Upgrader",
+      "life": 1000,
+      "rar": 3,
+      "fx": [
+        "Multiplies ores based how far the dropper is from the upgrader, with a cap of x30. If mine of the ore is removed, it will always upgrade by 1x."
+      ],
+      "evo": {
+        "n": "Virtual Enchanter",
+        "img": "assets/wiki/virtual-enchanter.webp",
+        "tier": "Advanced Evolution"
+      }
+    },
+    {
+      "k": "advanced",
+      "n": "Palladium Drill",
+      "img": "assets/wiki/palladium-drill.webp",
+      "tier": "Advanced Reborn",
+      "type": "Dropper",
+      "life": 1000,
+      "rar": 2,
+      "fx": [
+        "Two types of ores are dispensed from this mine. One is bigger orange which drops directly in front of the mine with a value of $100B. The other is smaller blue which scatters like a ",
+        {
+          "i": "Yunium Mine",
+          "l": null
+        },
+        " with a value of $100T."
+      ],
+      "evo": null
+    },
+    {
+      "k": "advanced",
+      "n": "Father of Freon",
+      "img": "assets/wiki/father-of-freon.webp",
+      "tier": "Advanced Reborn",
+      "type": "Upgrader",
+      "life": 1000,
+      "rar": 2,
+      "fx": [
+        "Upgrades ore by 9x and freezes them, removing fire. Bonus effects when used alongside ",
+        {
+          "i": "Son of Poison",
+          "l": null
+        },
+        " and ",
+        {
+          "i": "Spirit of Fire",
+          "l": null
+        },
+        "."
+      ],
+      "evo": null
+    },
+    {
+      "k": "advanced",
+      "n": "Northern Lights",
+      "img": "assets/wiki/northern-lights.webp",
+      "tier": "Advanced Reborn",
+      "type": "Furnace",
+      "life": 2000,
+      "rar": 1,
+      "fx": ["Feeds off sparkling coal ore to increase its power. Caps at a multiplier of x2000."],
+      "evo": {
+        "n": "Aurora Borealis",
+        "img": "assets/wiki/aurora-borealis.webp",
+        "tier": "Advanced Evolution"
+      }
+    },
+    {
+      "k": "advanced",
+      "n": "Arcane Lightning",
+      "img": "assets/wiki/arcane-lightning.webp",
+      "tier": "Advanced Reborn",
+      "type": "Button-Powered Upgrader",
+      "life": 2000,
+      "rar": 3,
+      "fx": [
+        "Each button click adds x1 to a multiplier which caps at x51. The multiplier will quickly decline if left inactive for a minute."
+      ],
+      "evo": {
+        "n": "Mystical Thunder",
+        "img": "assets/wiki/mystical-thunder.webp",
+        "tier": "Advanced Evolution"
+      }
+    },
+    {
+      "k": "advanced",
+      "n": "Black Dwarf",
+      "img": "assets/wiki/black-dwarf.webp",
+      "tier": "Advanced Reborn",
+      "type": "Resetting Device",
+      "life": 2000,
+      "rar": 3,
+      "fx": [
+        "Acts as a resetting device, allowing you to re-use most use limited items again, but destroys ores that have been upgraded by a star loop item (the ",
+        {
+          "i": "Catalyzed Star",
+          "l": "Catalyzed Star's"
+        },
+        " first upgrade doesn't count). Ores upgraded by the Black Dwarf cannot be upgraded by stars."
+      ],
+      "evo": {
+        "n": "Void Star",
+        "img": "assets/wiki/void-star.webp",
+        "tier": "Advanced Evolution"
+      }
+    },
+    {
+      "k": "advanced",
+      "n": "Dreamer's Blight",
+      "img": "assets/wiki/dreamer-s-blight.webp",
+      "tier": "Advanced Reborn",
+      "type": "Furnace",
+      "life": 2000,
+      "rar": 2,
+      "fx": [
+        "Grants bonuses to spore items while gaining bonuses from them. While bonuses are active, furnace power will \"decay\" until drained completely. Once decayed, all bonuses stop and the furnace does not process ore."
+      ],
+      "evo": {
+        "n": "Dreamer's Devastation",
+        "img": "assets/wiki/dreamer-s-devastation.webp",
+        "tier": "Advanced Evolution"
+      }
+    },
+    {
+      "k": "advanced",
+      "n": "Big Alberto",
+      "img": "assets/wiki/big-alberto.webp",
+      "tier": "Advanced Reborn",
+      "type": "Upgrader",
+      "life": 2000,
+      "rar": 3,
+      "fx": [
+        "Features two upgrade upgrade parts: hexagon-shaped above conveyor multiplies ore value by x25 while bottom by x10. Only one beam can be used."
+      ],
+      "evo": {
+        "n": "Castle Bravo",
+        "img": "assets/wiki/castle-bravo.webp",
+        "tier": "Advanced Evolution"
+      }
+    },
+    {
+      "k": "advanced",
+      "n": "Crystal Shrine",
+      "img": "assets/wiki/crystal-shrine.webp",
+      "tier": "Advanced Reborn",
+      "type": "Furnace",
+      "life": 3000,
+      "rar": 1,
+      "fx": [
+        "Processes ores at x3000 if unlocked, but requires a specific method to be unlocked first. Ores are processed at x0 if the furnace is locked."
+      ],
+      "evo": {
+        "n": "Crystal Altar",
+        "img": "assets/wiki/crystal-altar.webp",
+        "tier": "Advanced Evolution"
+      }
+    },
+    {
+      "k": "advanced",
+      "n": "Son of Poison",
+      "img": "assets/wiki/son-of-poison.webp",
+      "tier": "Advanced Reborn",
+      "type": "Upgrader",
+      "life": 3000,
+      "rar": 2,
+      "fx": [
+        "Upgrades ore by 12x and poisons them. Bonus effects when used alongside Father of Freon and Spirit of Fire."
+      ],
+      "evo": null
+    },
+    {
+      "k": "advanced",
+      "n": "Spirit of Fire",
+      "img": "assets/wiki/spirit-of-fire.webp",
+      "tier": "Advanced Reborn",
+      "type": "Upgrader",
+      "life": 3000,
+      "rar": 2,
+      "fx": [
+        "Upgrades ore by 10x and sets them on fire. Bonus effects when used alongside Father of Freon and Son of Poison."
+      ],
+      "evo": null
+    },
+    {
+      "k": "advanced",
+      "n": "Nova Star",
+      "img": "assets/wiki/nova-star.webp",
+      "tier": "Advanced Reborn",
+      "type": "Star Upgrader",
+      "life": 5000,
+      "rar": 3,
+      "fx": [
+        "Multiplies the effectiveness of other stars by x4 for 5 seconds, with the exception of the Blue Supergiant, which is instead buffed by 25x."
+      ],
+      "evo": null
+    },
+    {
+      "k": "advanced",
+      "n": "Apollium Mine",
+      "img": "assets/wiki/apollium-mine.webp",
+      "tier": "Advanced Reborn",
+      "type": "Dropper",
+      "life": 5000,
+      "rar": 1,
+      "fx": ["Produces ore that receives a bonus upgrade from fire, but cannot be extinguished."],
+      "evo": {
+        "n": "Solarium Mine",
+        "img": "assets/wiki/solarium-mine.webp",
+        "tier": "Advanced Evolution"
+      }
+    },
+    {
+      "k": "advanced",
+      "n": "Railgun Cannon",
+      "img": "assets/wiki/railgun-cannon.webp",
+      "tier": "Advanced Reborn",
+      "type": "Cannon",
+      "life": 8000,
+      "rar": 2,
+      "fx": ["Sets ore on fire (Regardless of immunity) and launches them a far distance."],
+      "evo": null
+    },
+    {
+      "k": "advanced",
+      "n": "Blue Supergiant",
+      "img": "assets/wiki/blue-supergiant.webp",
+      "tier": "Advanced Reborn",
+      "type": "Star Upgrader",
+      "life": 10000,
+      "rar": 2,
+      "fx": ["Multiplies ore value by x3 with a cap of $1NVG. Sets ores on fire."],
+      "evo": null
+    },
+    {
+      "k": "decimal",
+      "n": "Stellarite Mine",
+      "img": "assets/wiki/stellarite-mine.webp",
+      "tier": "Rare Reborn",
+      "type": "Dropper",
+      "life": 500,
+      "rar": 0.5,
+      "fx": ["Produces ore which receive a bonus multiplier when used with Star upgraders."],
+      "added": "1 December, 2019"
+    },
+    {
+      "k": "decimal",
+      "n": "Funky Town",
+      "img": "assets/wiki/funky-town.webp",
+      "tier": "Rare Reborn",
+      "type": "Furnace",
+      "life": 731,
+      "rar": 0.25,
+      "fx": ["Base multiplier of 600x. Increased multiplier depending on the ore status effects."],
+      "added": "Reincarnation Update"
+    },
+    {
+      "k": "decimal",
+      "n": "Meatball Sandwich",
+      "img": "assets/wiki/meatball-sandwich.webp",
+      "tier": "Rare Reborn",
+      "type": "Upgrader",
+      "life": 1337,
+      "rar": 0.35,
+      "fx": ["Multiplies ore value by x10 and turns the ore into a meatball."],
+      "added": "The Trinity Update"
+    },
+    {
+      "k": "decimal",
+      "n": "Ore Memer",
+      "img": "assets/wiki/ore-memer.webp",
+      "tier": "Rare Reborn",
+      "type": "Upgrader",
+      "life": 1337,
+      "rar": 0.1,
+      "fx": ["Base multiplier of 7.77x, with chances to upgrade by other meme numbers such as 13.37x and 42x."],
+      "added": "18 November, 2019"
+    },
+    {
+      "k": "decimal",
+      "n": "King Gold Mine",
+      "img": "assets/wiki/king-gold-mine.webp",
+      "tier": "Rare Reborn",
+      "type": "Dropper",
+      "life": 2000,
+      "rar": 0.25,
+      "fx": ["Produces large, high value ore with a significant negative upgrade counter."],
+      "added": "13 December, 2019"
+    },
+    {
+      "k": "decimal",
+      "n": "Soul Blossom",
+      "img": "assets/wiki/soul-blossom.webp",
+      "tier": "Rare Reborn",
+      "type": "Furnace",
+      "life": 4000,
+      "rar": 0.4,
+      "fx": [
+        "Clears ore around it of negative effects. Processes ores by x0. Ores upgraded by The Sporest are processed by x1."
+      ],
+      "added": "3 July, 2020"
+    },
+    {
+      "k": "decimal",
+      "n": "Turtle Dignifier",
+      "img": "assets/wiki/turtle-dignifier.webp",
+      "tier": "Rare Reborn",
+      "type": "Raised Upgrader",
+      "life": 4000,
+      "rar": 0.3,
+      "fx": ["Multiplies ore value by x8. If an ore is wet, the ore gains a shield until the wet effect runs out."],
+      "added": "12 June, 2021"
+    },
+    {
+      "k": "decimal",
+      "n": "The Grand Banana",
+      "img": "assets/wiki/the-grand-banana.webp",
+      "tier": "Rare Reborn",
+      "type": "Weapon Giver",
+      "life": 4011,
+      "rar": 0.15,
+      "fx": ["Hand-held gear that slips other players and explodes."],
+      "added": "15 March, 2020"
+    },
+    {
+      "k": "decimal",
+      "n": "Interstellar Conqueror",
+      "img": "assets/wiki/interstellar-conqueror.webp",
+      "tier": "Rare Reborn",
+      "type": "Cell Furnace",
+      "life": 5000,
+      "rar": 0.75,
+      "fx": ["Base multiplier in the billions. Multiplier increases with Pulsar items placed on base."],
+      "added": "Reincarnation Update"
+    },
+    {
+      "k": "decimal",
+      "n": "Ooftopian Refiner",
+      "img": "assets/wiki/ooftopian-refiner.webp",
+      "tier": "Rare Reborn",
+      "type": "Upgrader",
+      "life": 7331,
+      "rar": 0.15,
+      "fx": ["Multiplies ore value based on the number of digits in the ores value."],
+      "added": "31 March, 2020"
+    },
+    {
+      "k": "decimal",
+      "n": "The Grim Reaper",
+      "img": "assets/wiki/the-grim-reaper.webp",
+      "tier": "Rare Reborn",
+      "type": "Guardian",
+      "life": 8888,
+      "rar": 0.2,
+      "fx": ["Ragdoll intruders."],
+      "added": "1 February, 2024"
+    },
+    {
+      "k": "decimal",
+      "n": "Australis Fornacem",
+      "img": "assets/wiki/australis-fornacem.webp",
+      "tier": "Rare Reborn",
+      "type": "Furnace",
+      "life": 10000,
+      "rar": 0.1,
+      "fx": ["An empty vessel for some power out of your control..."],
+      "added": "2 August, 2020"
+    },
+    {
+      "k": "ultimate",
+      "n": "Overlord Device",
+      "img": "assets/wiki/overlord-device.webp",
+      "tier": "Ultimate",
+      "type": "Upgrader",
+      "src": ["Rebirth with money between $1DD (10^39) - $inf."],
+      "fx": ["Multiplies ore value by x10"],
+      "added": "02 June, 2016"
+    },
+    {
+      "k": "ultimate",
+      "n": "Spooklord Device",
+      "img": "assets/wiki/spooklord-device.webp",
+      "tier": "Exotic",
+      "type": "Fine-Point Upgrader",
+      "src": ["Rebirth with money between $1DD (10^39) - $inf during any of the Halloween events."],
+      "fx": [
+        "Multiplies ore value by x7\nStacks with the ",
+        {
+          "i": "Overlord Device",
+          "img": "assets/wiki/overlord-device.webp"
+        },
+        " and ",
+        {
+          "i": "True Overlord Device",
+          "img": "assets/wiki/true-overlord-device.webp"
+        }
+      ],
+      "added": "26 October, 2019"
+    },
+    {
+      "k": "ultimate",
+      "n": "True Overlord Device",
+      "img": "assets/wiki/true-overlord-device.webp",
+      "tier": "Ultimate",
+      "type": "Fine-Point Upgrader",
+      "src": ["Rebirth with money between $1tsTG (10^102) - $inf."],
+      "fx": ["Multiplies ore value by x100"],
+      "added": "07 August, 2016"
+    },
+    {
+      "k": "ultimate",
+      "n": "The Ultimate Sacrifice",
+      "img": "assets/wiki/the-ultimate-sacrifice.webp",
+      "tier": "Ultimate",
+      "type": "Resetting Device",
+      "src": [
+        "Perform ",
+        {
+          "i": "The Ultimate Sacrifice",
+          "l": null
+        },
+        "\n(available at Life 1000 and above)"
+      ],
+      "fx": ["Multiplies ore value based on chronological interaction\n(see this page)."],
+      "added": "08 March, 2017"
+    },
+    {
+      "k": "ultimate",
+      "n": "The Final Upgrader",
+      "img": "assets/wiki/the-final-upgrader.webp",
+      "tier": "Ultimate",
+      "type": "Resetting Device/Upgrader",
+      "src": [
+        "Perform The Second Sacrifice\n(available at Life s-1000 and above. You must then reach Life S+10 to obtain this terminal item)"
+      ],
+      "fx": [
+        "Resets all ore tags, and has an increased multiplier depending on the time delay before touching the upgrader."
+      ],
+      "added": "10 June, 2017"
+    },
+    {
+      "k": "ultimate",
+      "n": "Tropical Breeze",
+      "img": "assets/wiki/tropical-breeze.webp",
+      "tier": "Ultimate",
+      "type": "Upgrader",
+      "src": ["Skip at least 10 lives in 1 Rebirth on the Solo Island (Private Island)."],
+      "fx": ["Multiplies ore value by x6"],
+      "added": "28 April, 2018"
+    },
+    {
+      "k": "ultimate",
+      "n": "Overlord's Telamonster",
+      "img": "assets/wiki/overlord-s-telamonster.webp",
+      "tier": "Ultimate",
+      "type": "Weapon Giver",
+      "src": ["Rebirth with money $1CENT+ (10^303)"],
+      "fx": ["Grants a powerful sword."],
+      "added": "18 November, 2019"
+    },
+    {
+      "k": "ultimate",
+      "n": "True Book of Knowledge",
+      "img": "assets/wiki/true-book-of-knowledge.webp",
+      "tier": "Ultimate",
+      "type": "Decoration",
+      "src": ["At S+1000 onwards, talk to Draedon in the Sporest."],
+      "fx": ["Contains information regarding deities, their lore, and their related items."],
+      "added": "Reincarnation Update"
+    },
+    {
+      "k": "ultimate",
+      "n": "Catalysts",
+      "img": null,
+      "tier": null,
+      "type": "Decoration",
+      "src": [
+        "For one Catalyst, rebirth with only the items displayed in their respective deity's page in the ",
+        {
+          "i": "True Book of Knowledge",
+          "l": null
+        },
+        " placed on the base."
+      ],
+      "fx": ["Allows for the crafting of their corresponding Superstitious item\n(see this page for more info)"],
+      "added": "Reincarnation Update"
+    },
+    {
+      "k": "ultimate",
+      "n": "The Forbidden Tome",
+      "img": "assets/wiki/the-forbidden-tome.webp",
+      "tier": "Ultimate",
+      "type": "Decoration",
+      "src": [
+        "Defeat Oblivion Hendrix and pass through the Heart of The Void to receive a key from Daegel which opens the chest in the attic of The Craftsman's tower."
+      ],
+      "fx": [
+        "Contains information similar to that of the ",
+        {
+          "i": "True Book of Knowledge",
+          "l": null
+        },
+        ", but with the ability to create even more powerful Superstitious items at a cost."
+      ],
+      "added": "The Trinity Update"
+    },
+    {
+      "k": "slipstream",
+      "n": "The Great Parasite",
+      "img": "assets/wiki/the-great-parasite.webp",
+      "tier": "Slipstream",
+      "type": "Cell Furnace",
+      "fx": [
+        "Processes unupgraded ore by x7B. Each ore inserted increases multiplier by x7B, and also increased by ore on your base. Every so often, it will sacrifice 12-19 ore and increase multiplier by (14B x ore sacrificed). If there are not enough ore on the base for it to do this, multiplier is reduced by 350B. Multiplier caps at x350T."
+      ],
+      "added": "08 March, 2017"
+    },
+    {
+      "k": "slipstream",
+      "n": "Pulsar Octagnium Mine",
+      "img": "assets/wiki/pulsar-octagnium-mine.webp",
+      "tier": "Slipstream",
+      "type": "Pulsar Dropper",
+      "fx": [
+        "An eight-spouted dropper which produces ore based on the ore already present on the users base. However, these ores are destroyed in the process."
+      ],
+      "added": "08 March, 2017"
+    },
+    {
+      "k": "slipstream",
+      "n": "Incendium Mine",
+      "img": "assets/wiki/incendium-mine.webp",
+      "tier": "Slipstream",
+      "type": "Dropper",
+      "fx": ["Produces ore that make other ore fireproof."],
+      "added": "08 March, 2017"
+    },
+    {
+      "k": "slipstream",
+      "n": "Utopian Refiner",
+      "img": "assets/wiki/utopian-refiner.webp",
+      "tier": "Slipstream",
+      "type": "Upgrader",
+      "fx": ["Multiplies ore value by 50x and gives ore a random color of sparkles."],
+      "added": "08 March, 2017"
+    },
+    {
+      "k": "slipstream",
+      "n": "Dystopian Refiner",
+      "img": "assets/wiki/dystopian-refiner.webp",
+      "tier": "Slipstream",
+      "type": "Upgrader",
+      "fx": [
+        "Multiplies ore value by a base of 40x. This is increased additively based on any status effects the ore has."
+      ],
+      "added": "08 March, 2017"
+    },
+    {
+      "k": "slipstream",
+      "n": "Nature's Enchantment",
+      "img": "assets/wiki/nature-s-enchantment.webp",
+      "tier": "Slipstream",
+      "type": "Furnace",
+      "fx": ["Furnace which processes ore at (Life÷2)x its value. Caps at x55k, or life 110k respectively."],
+      "added": "11 March, 2017"
+    },
+    {
+      "k": "slipstream",
+      "n": "Burst Refiner",
+      "img": "assets/wiki/burst-refiner.webp",
+      "tier": "Slipstream",
+      "type": "Upgrader",
+      "fx": ["Upgrades ore by x15, but every 9th ore gets upgraded by a whopping x500."],
+      "added": "11 March, 2017"
+    },
+    {
+      "k": "slipstream",
+      "n": "Ore Supernova",
+      "img": "assets/wiki/ore-supernova.webp",
+      "tier": "Slipstream",
+      "type": "Pulsar Upgrader",
+      "fx": [
+        "Multiplies all present ore on base by x500. Only usable once even with a resetting device. If used with a ",
+        {
+          "i": "Gargantium Mine",
+          "l": null
+        },
+        ", it will drop blue fireproof ore instead. This takes the place of the ",
+        {
+          "i": "Ore Pulsar",
+          "l": null
+        },
+        " when placed."
+      ],
+      "added": "11 March, 2017"
+    },
+    {
+      "k": "slipstream",
+      "n": "The Grand Prism",
+      "img": "assets/wiki/the-grand-prism.webp",
+      "tier": "Slipstream",
+      "type": "Upgrader",
+      "fx": ["Multiplies ore value by x100. This is rarer than the other slipstreams."],
+      "added": "10 June, 2017"
+    },
+    {
+      "k": "slipstream",
+      "n": "Oblivion Weaver",
+      "img": "assets/wiki/oblivion-weaver.webp",
+      "tier": "Slipstream",
+      "type": "Dropper",
+      "fx": [
+        "Dropper that drops $144B ore. Similarly to the ",
+        {
+          "i": "Boomite Mine",
+          "l": "Boomite Mine's effects"
+        },
+        ", this dropper's ore upgrades other ores that touch its ore by 9x. This causes the Oblivion Weaver ore to explode and ignites the other ore, destroying it with a 1/10 chance and setting it on fire."
+      ],
+      "added": "26 October, 2019"
+    },
+    {
+      "k": "slipstream",
+      "n": "Neutropian Refiner",
+      "img": "assets/wiki/neutropian-refiner.webp",
+      "tier": "Slipstream",
+      "type": "Upgrader",
+      "fx": ["Upgrader that multiplies ore value by 90x, 125x if the ore has a negative status effect."],
+      "added": "Reincarnation Update"
+    },
+    {
+      "k": "slipstream",
+      "n": "Suitopian Refiner",
+      "img": "assets/wiki/suitopian-refiner.webp",
+      "tier": "Slipstream",
+      "type": "Upgrader",
+      "fx": ["Multiplies ore value by 0x to 10x. Can be used infinitely."],
+      "added": "Reincarnation Update"
+    },
+    {
+      "k": "slipstream",
+      "n": "Behemoth Blossom",
+      "img": "assets/wiki/behemoth-blossom.webp",
+      "tier": "Slipstream",
+      "type": "Upgrader",
+      "fx": [
+        "Multiplies ore with under 20 upgrade counter by x100. Multiplies ore with 20< upgrade counter by x60. Doubles all dimensions of ore size. (total ore volume is octupled)"
+      ],
+      "added": "Reincarnation Update"
+    },
+    {
+      "k": "slipstream",
+      "n": "Orbital Cataclysm",
+      "img": "assets/wiki/orbital-cataclysm.webp",
+      "tier": "Slipstream",
+      "type": "Upgrader",
+      "fx": [
+        "Multiplies ore based on its reflectance (upgrade counter). The very first ore that enters is destroyed to upgrade the second, however after this it will stop destroying ore. Negative upgrade counter ore is multiplied by x1.\n|}\n</tabber></div>\n\n"
+      ],
+      "added": "Reincarnation Update"
+    }
+  ],
+  "prices": [
+    {
+      "life": 1,
+      "price": "25Qn",
+      "note": "First rebirth price"
+    },
+    {
+      "life": 40,
+      "price": "1sx",
+      "note": "End of first rebirth multiplier"
+    },
+    {
+      "life": 41,
+      "price": "70.7sx",
+      "note": "Price jump"
+    },
+    {
+      "life": 96,
+      "price": "1.00Sp",
+      "note": ""
+    },
+    {
+      "life": 99,
+      "price": "1.04Sp",
+      "note": "Rebirthing into life 100; escrowed items from sacrifice return after this rebirth"
+    },
+    {
+      "life": 380,
+      "price": "1.01O",
+      "note": ""
+    },
+    {
+      "life": 501,
+      "price": "23N",
+      "note": "Price jump; life 500 price is $9.26O"
+    },
+    {
+      "life": 698,
+      "price": "1.01de",
+      "note": ""
+    },
+    {
+      "life": 999,
+      "price": "274de",
+      "note": "Rebirthing into life 1000, the minimum life to perform the Ultimate Sacrifice and Second Sacrifice."
+    },
+    {
+      "life": 1023,
+      "price": "1.00Ud",
+      "note": ""
+    },
+    {
+      "life": 1401,
+      "price": "1DD",
+      "note": "Minimum amount of cash to obtain the Overlord Device. Only 1 can be obtained per day."
+    },
+    {
+      "life": 1754,
+      "price": "1.00tdD",
+      "note": ""
+    },
+    {
+      "life": 2116,
+      "price": "1.00qdD",
+      "note": ""
+    },
+    {
+      "life": 2501,
+      "price": "1.00QnD",
+      "note": ""
+    },
+    {
+      "life": 2868,
+      "price": "1.00sxD",
+      "note": ""
+    },
+    {
+      "life": 3236,
+      "price": "1.00SpD",
+      "note": ""
+    },
+    {
+      "life": 3606,
+      "price": "1.00OcD",
+      "note": ""
+    },
+    {
+      "life": 3992,
+      "price": "1.00NvD",
+      "note": ""
+    },
+    {
+      "life": 4361,
+      "price": "1.00Vgn",
+      "note": ""
+    },
+    {
+      "life": 4733,
+      "price": "1.00UVg",
+      "note": ""
+    },
+    {
+      "life": 5000,
+      "price": "122UVg",
+      "note": "After life 5000, rebirth prices increase slower than before."
+    },
+    {
+      "life": 5175,
+      "price": "1.00DVg",
+      "note": ""
+    },
+    {
+      "life": 5827,
+      "price": "1.00TVg",
+      "note": ""
+    },
+    {
+      "life": 6500,
+      "price": "1.00qtV",
+      "note": ""
+    },
+    {
+      "life": 7211,
+      "price": "1.00QnV",
+      "note": ""
+    },
+    {
+      "life": 7500,
+      "price": "13.8QnV",
+      "note": ""
+    },
+    {
+      "life": 7958,
+      "price": "1.00SeV",
+      "note": ""
+    },
+    {
+      "life": 8719,
+      "price": "1.00SPG",
+      "note": ""
+    },
+    {
+      "life": 9511,
+      "price": "1.00OVG",
+      "note": ""
+    },
+    {
+      "life": 9999,
+      "price": "53.3OVG",
+      "note": "Rebirthing into life 10000; unlocking every single rebirth item"
+    },
+    {
+      "life": 10351,
+      "price": "1.00NVG",
+      "note": ""
+    },
+    {
+      "life": 11199,
+      "price": "1.00TGN",
+      "note": ""
+    },
+    {
+      "life": 12081,
+      "price": "1.00UTG",
+      "note": ""
+    },
+    {
+      "life": 13000,
+      "price": "1.00DTG",
+      "note": ""
+    },
+    {
+      "life": 13941,
+      "price": "1.00tsTG",
+      "note": "Minimum required amount of cash for a True Overlord Device.\nThe Overlord Device will still be obtainable after this point."
+    },
+    {
+      "life": 14901,
+      "price": "1.00qtTG",
+      "note": ""
+    },
+    {
+      "life": 15892,
+      "price": "1.00QnTG",
+      "note": ""
+    },
+    {
+      "life": 16909,
+      "price": "1.00ssTG",
+      "note": ""
+    },
+    {
+      "life": 17953,
+      "price": "1.00SpTG",
+      "note": ""
+    },
+    {
+      "life": 19006,
+      "price": "1.00OcTG",
+      "note": ""
+    },
+    {
+      "life": 20100,
+      "price": "1.00NoTG",
+      "note": ""
+    },
+    {
+      "life": 21224,
+      "price": "1.00QdDR",
+      "note": ""
+    },
+    {
+      "life": 22370,
+      "price": "1.00uQDR",
+      "note": ""
+    },
+    {
+      "life": 23522,
+      "price": "1.00dQDR",
+      "note": ""
+    },
+    {
+      "life": 24717,
+      "price": "1.00tQDR",
+      "note": ""
+    },
+    {
+      "life": 25939,
+      "price": "1.00qdQDR",
+      "note": ""
+    },
+    {
+      "life": 27165,
+      "price": "1.00QnQDR",
+      "note": ""
+    },
+    {
+      "life": 28432,
+      "price": "1.00sxQDR",
+      "note": ""
+    },
+    {
+      "life": 29709,
+      "price": "1.00SpQDR",
+      "note": ""
+    },
+    {
+      "life": 31009,
+      "price": "1.00OQDDr",
+      "note": ""
+    },
+    {
+      "life": 32341,
+      "price": "1.00NQDDr",
+      "note": ""
+    },
+    {
+      "life": 33689,
+      "price": "1.00qQGNT",
+      "note": ""
+    },
+    {
+      "life": 35059,
+      "price": "1.00uQGNT",
+      "note": ""
+    },
+    {
+      "life": 36462,
+      "price": "1.00dQGNT",
+      "note": ""
+    },
+    {
+      "life": 37876,
+      "price": "1.00tQGNT",
+      "note": ""
+    },
+    {
+      "life": 39313,
+      "price": "1.00qdQGNT",
+      "note": ""
+    },
+    {
+      "life": 40765,
+      "price": "1.00QnQGNT",
+      "note": ""
+    },
+    {
+      "life": 42251,
+      "price": "1.00sxQGNT",
+      "note": ""
+    },
+    {
+      "life": 43752,
+      "price": "1.00SpQGNT",
+      "note": ""
+    },
+    {
+      "life": 45275,
+      "price": "1.00OQQGNT",
+      "note": ""
+    },
+    {
+      "life": 46816,
+      "price": "1.00NQQGNT",
+      "note": ""
+    },
+    {
+      "life": 47531,
+      "price": "25NQQGNT",
+      "note": "Previous maximum rebirth price."
+    },
+    {
+      "life": 80351,
+      "price": "10NVSPTGNTL",
+      "note": "Maximum rebirth price in the game."
+    }
+  ],
+  "trivia": [
+    [
+      "The ",
+      {
+        "i": "True Overlord Device",
+        "l": null
+      },
+      " is obtained like the ",
+      {
+        "i": "Overlord Device",
+        "l": null
+      },
+      ", but the player instead needs to reach $1tsTG."
+    ],
+    [
+      "Searching \"reborn\" in the in-game search bar will show almost all of the Rebirth-related items you currently own."
+    ],
+    [
+      "The ",
+      {
+        "i": "Blood Magic",
+        "l": null
+      },
+      " furnace was the first, event-only rebirth item, which was turned into an Exotic-tier item after the event ended."
+    ],
+    [
+      "If your Discord Account is integrated with Miner's Haven, Berezaa Games Discord on your Discord account. If you sacrificed, you receive the <span style=\"color:#ffffff;border:2px solid #866D99;padding:1px 3px;\">Sacrificed</span> Discord role. If you performed the second sacrifice, you receive the <span style=\"color:#ffffff;border:2px solid #893CA9;padding:1px 3px;\">Second Sacrifice</span> Discord role. If you have obtained the ",
+      {
+        "i": "Overlord's Telamonster",
+        "l": null
+      },
+      ", you receive <span style=\"color:#ffffff;border:2px solid #8B0000;padding:1px 3px;\">Centillionaire</span> Discord role. However, some roles require a re-verification to obtain (given you have the requirements)."
+    ],
+    [
+      "Recently (as of February 2020), OutOfOrderFoxy sent a tweet saying that all Reborn-tier mines will get a gimmick, such as the ",
+      {
+        "i": "Pilotite Mine",
+        "l": null
+      },
+      "'s ores being able to withstand the Flaming Status Effect longer than other ores. This was intended to provide balance and purpose to most mines which had subjectively underperformed and been commonly unused; as of more recently, most all mines have their own strengths in different styles of setups."
+    ],
+    [
+      "Rebirthing with $1DD During Halloween Event, you could earn a ",
+      {
+        "i": "Spooklord Device",
+        "l": null
+      },
+      ", instead of a ",
+      {
+        "i": "Overlord Device",
+        "l": null
+      },
+      " (wherein Spooklord Device could be used together with either an Overlord Device, or True Overlord Device, without their machine tags conflicting/superseding one-another)."
+    ],
+    [
+      "If a player receives a decimal-rarity Reborn item when they rebirth, then [https://www.roblox.com/library/380625120/Sound-effect this] sound plays."
+    ]
+  ],
+  "skip": [
+    ["0–1", 100, 0, 0],
+    ["2–5", 75, 25, 0],
+    ["6–8", 60, 30, 10],
+    ["9–13", 55.55, 33.33, 11.11],
+    ["14–16", 33.33, 33.33, 33.33],
+    ["17–20", 0, 33, 66]
+  ],
+  "intro": [
+    "Rebirthing starts you on a new life. Your base is wiped and every item that isn't Reborn-proof or soulbound is deleted from your inventory. The option is in Settings.",
+    "In return you get at least one powerful Reborn item. The further you go, the rarer and stronger the items get: some only unlock after thousands of lives, and every item is unlocked by life 10,000.",
+    "You can also land a Slipstream item, which is very strong but vanishes when you next rebirth. Rebirths can also give Inferno Boxes, and event boxes or currency during events."
+  ],
+  "inferno": [2, 3, 100, 500, 1000]
+}

@@ -1,0 +1,151 @@
+{
+  "facts": {
+    "added": "28 April 2018",
+    "update": "Menu Refresh Update",
+    "rebornProof": true,
+    "sacrificeProof": false
+  },
+  "sources": [
+    {
+      "id": "skip",
+      "title": "Skip lives when you rebirth",
+      "tag": "Main source",
+      "img": "../assets/icons/rebirth.png",
+      "text": "Rebirth with far more money than you need and you can skip up to 20 lives at once (turn it on in Settings). You get half the lives you skipped as shards, rounded up.",
+      "formula": "Shards = ⌈lives skipped ÷ 2⌉"
+    },
+    {
+      "id": "salvage",
+      "title": "Salvage Reborn items",
+      "tag": "The Craftsman",
+      "img": "../assets/icons/craftsman.png",
+      "link": "npcs.html#npc=the-craftsman",
+      "text": "The Craftsman turns Reborn and Advanced Reborn items you don't need into shards. Rarer items give more.",
+      "formula": "Shards = 27 − rarity  (8 to 26)"
+    },
+    {
+      "id": "gift",
+      "title": "Gift of Life",
+      "tag": "Winter events",
+      "gen": "Gift of Life",
+      "text": "A Collectible present from Santa that unwraps into 5 to 15 shards. Handed out in Winter 2020, 2021 and 2025.",
+      "formula": "5 – 15 shards each"
+    }
+  ],
+  "uses": [
+    {
+      "title": "The Reborn Shop",
+      "range": "150 – 720",
+      "text": "The Craftsman sells 10 random Reborn and Advanced Reborn items a day for shards.",
+      "jump": "#shop"
+    },
+    {
+      "title": "Enchanted crafting",
+      "range": "50 – 2,000",
+      "text": "Every Enchanted recipe at The Craftsman needs shards on top of its items.",
+      "jump": "#enchanted"
+    },
+    {
+      "title": "Platforms",
+      "range": "25+",
+      "text": "Standard, Hydraulic and Mega Platforms in the Premium Shop cost shards, and get pricier with each one you buy.",
+      "jump": "#platforms"
+    },
+    {
+      "title": "Unstable Conveyor",
+      "range": "1",
+      "text": "The Masked Man sells it for a single shard.",
+      "jump": "#platforms"
+    },
+    {
+      "title": "Shard Park & Shard City",
+      "range": "Hold 36–64",
+      "text": "These upgraders get stronger the more shards you're holding, so saving them pays off.",
+      "jump": "#park"
+    }
+  ],
+  "shop": {
+    "reset": "12:00 PM UTC",
+    "note": "The shop shows 10 random items and resets every day at 12:00 PM UTC, the same time as your daily gift. Items only show up once you're a high enough life to rebirth for them.",
+    "rebornFormula": "25 × (19 − rarity) + 150",
+    "advFormula": "30 × (3 − rarity) + 660",
+    "quirks": "The formulas aren't perfect: Railgun Cannon (Adv. rarity 2), Desert Monument (Reborn rarity 1) and Venomshank (Reborn rarity 3) are priced like the top Advanced Reborns."
+  },
+  "platforms": {
+    "Standard Platform": {
+      "start": 25,
+      "rise": "Price goes up with each one you buy",
+      "note": "12×12 and stackable, so you can build a second floor."
+    },
+    "Hydraulic Standard Platform": {
+      "start": 100,
+      "step": 150,
+      "rise": "+150 shards each time, roughly",
+      "note": "Same 12×12 footprint, but you can change its height."
+    },
+    "Mega Platform": {
+      "start": 200,
+      "rise": "Price goes up with each one you buy",
+      "note": "20×20, the biggest platform in the game. It was planned as a life 1,000+ rebirth item."
+    },
+    "Small Platform": {
+      "uc": "117 – 221 uC",
+      "rise": "Sold by The Masked Man for uC, not shards",
+      "note": "The only platform that's Sacrifice-Proof."
+    }
+  },
+  "park": {
+    "parkQuote": "Shards of Life are believed to be remnants of Solumn's Soul. However he never perished, so this is a mere myth.",
+    "parkText": "A Reborn upgrader (life 800+, or 400 shards in the Reborn Shop). +0.25x for every shard you hold, up to 10x at 36 shards. With 0 shards it doesn't upgrade at all.",
+    "cityText": "Evolves from 15 Shard Parks at The Craftsman (250k RP blueprint). Multiplies by shards ÷ 4, up to 16x at 64 shards. Careful: at 3 shards or fewer it lowers ore value, and at 0 it does 0x."
+  },
+  "warnings": [
+    "Shards are Reborn-proof: rebirthing never takes them.",
+    "They are not Sacrifice-proof. The Second Sacrifice takes all of your shards, and they've been lost on sacrifice since the Reincarnation Update."
+  ],
+  "history": [
+    {
+      "date": "28 Apr 2018",
+      "title": "Shards arrive",
+      "text": "Added in the Menu Refresh Update, bought with life skips."
+    },
+    {
+      "date": "11 Jun 2018",
+      "title": "The Craftsman",
+      "text": "Enchanted crafting starts costing shards."
+    },
+    {
+      "date": "18 Nov 2019",
+      "title": "Platforms",
+      "text": "The New Heights Update sells Standard and Mega Platforms for shards."
+    },
+    {
+      "date": "10 Feb 2020",
+      "title": "Shard Park",
+      "text": "A Reborn upgrader that scales with your shards."
+    },
+    {
+      "date": "5 Apr 2020",
+      "title": "Reincarnation",
+      "text": "The Reborn Shop and salvaging arrive. Shards stop being Sacrifice-proof."
+    },
+    {
+      "date": "30 Aug 2020",
+      "title": "Shard City",
+      "text": "Shard Park's evolution, up to 16x."
+    },
+    {
+      "date": "23 Dec 2020",
+      "title": "Gift of Life",
+      "text": "Santa starts handing out shards."
+    }
+  ],
+  "trivia": [
+    "Before the Reincarnation Update, Draedon had miners digging up a meteor on the old map. They said it was made of Shards of Life.",
+    "Berezaa once said on Twitter that the Crystal Shrine would cost 300 shards. It ended up as an Advanced Reborn item instead.",
+    "Shard Park and Shard City were going to turn pink when shards got a pink redesign, but the developers dropped the change.",
+    "The Coliseum Catharsis recipe asks for 753 shards, a nod to 753 BC, the year Rome was founded.",
+    "The Sword God Shrine used to cost 200 shards from The Masked Man. It's now an Advanced Reborn for 720.",
+    "Spook McDooks claims he skips millions of lives every month, which is why he has so many boxes to spare."
+  ]
+}

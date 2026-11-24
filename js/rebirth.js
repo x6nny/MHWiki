@@ -1,14 +1,13 @@
 /* =========================================================
    Rebirth page
-   Data: window.MH_REBIRTH (js/rebirth-data.js), suffixes from window.MH_SUFFIX
+   Data: window.MH_REBIRTH (data/Rebirth.json), suffixes from window.MH_SUFFIX
    ========================================================= */
 (() => {
   const D = window.MH_REBIRTH;
   const SUF = window.MH_SUFFIX.suffixes;
-  const BASE = window.MH_IMG_BASE;
-  const $ = s => document.querySelector(s);
+    const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const img = (p, size = 120) => p ? `${BASE}${p}/revision/latest/scale-to-width-down/${size}` : null;
+  const img = (p, size = 120) => p ? MH_SRC(p) : null;
   const ITEM_LINK = n => "item-index.html#item=" + encodeURIComponent(n);
   const ITEMS = D.items;
   const CAP = 241; // log10 of $10NVSPTGNTL

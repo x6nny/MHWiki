@@ -1,13 +1,12 @@
 /* =========================================================
    Codes page
-   Data: window.MH_CODES (js/codes-data.js)
+   Data: window.MH_CODES (data/Codes.json)
    ========================================================= */
 (() => {
   const D = window.MH_CODES;
-  const BASE = window.MH_IMG_BASE;
-  const $ = s => document.querySelector(s);
+    const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const img = (p, size = 96) => p ? `${BASE}${p}/revision/latest/scale-to-width-down/${size}` : null;
+  const img = (p, size = 96) => p ? MH_SRC(p) : null;
   const ITEM_LINK = n => "item-index.html#item=" + encodeURIComponent(n);
   const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const parseDate = s => new Date(s + "T12:00:00Z");

@@ -1,12 +1,12 @@
 /* =========================================================
    Shards of Life page
-   Data: window.MH_SOL (js/sol-data.js) + window.MH_SOL_GEN (js/sol-gen.js)
+   Data: window.MH_SOL (data/ShardsOfLife.json) + window.MH_SOL_GEN (data/ShardsOfLifeItems.json)
    ========================================================= */
 (() => {
-  const D = window.MH_SOL, G = window.MH_SOL_GEN, BASE = window.MH_IMG_BASE;
+  const D = window.MH_SOL, G = window.MH_SOL_GEN;
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const img = (p, size = 120) => p ? `${BASE}${p}/revision/latest/scale-to-width-down/${size}` : "";
+  const img = (p, size = 120) => p ? MH_SRC(p) : "";
   const pic = (p, size, name) => p
     ? `<img src="${esc(img(p, size))}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.outerHTML='<span class=ph>${esc((name || "?")[0])}</span>'" />`
     : `<span class="ph">${esc((name || "?")[0])}</span>`;
@@ -84,7 +84,7 @@
 
   /* ================= Sources ================= */
   $("#sources").innerHTML = D.sources.map(s => {
-    const icon = s.gen ? img(misc[s.gen].img, 160) : s.img;
+    const icon = s.gen ? img(misc[s.gen].img, 160) : MH_SRC(s.img);
     return `<article class="src glass reveal">
       <div class="src-top"><img src="${esc(icon)}" alt="" referrerpolicy="no-referrer" /><div><em>${esc(s.tag)}</em><h3>${esc(s.title)}</h3></div></div>
       <p>${esc(s.text)}</p>

@@ -1,14 +1,13 @@
 /* =========================================================
    Events page
-   Data: window.MH_EVENTS (js/events-data.js)
+   Data: window.MH_EVENTS (data/Events.json)
    ========================================================= */
 (() => {
   const D = window.MH_EVENTS;
-  const BASE = window.MH_IMG_BASE;
-  const ICON = "../assets/icons/";
+    const ICON = "../assets/icons/";
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const img = (p, size = 80) => p ? `${BASE}${p}/revision/latest/scale-to-width-down/${size}` : null;
+  const img = (p, size = 80) => p ? MH_SRC(p) : null;
   const ITEM_LINK = n => "item-index.html#item=" + encodeURIComponent(n);
   const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   const plural = (n, w) => `${n.toLocaleString("en-US")} ${w}${n === 1 ? "" : "s"}`;

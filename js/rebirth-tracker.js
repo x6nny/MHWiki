@@ -1,15 +1,15 @@
 /* =========================================================
    Rebirth Tracker page
-   Data: window.MH_REBIRTH (js/rebirth-data.js) for item unlocks
+   Data: window.MH_REBIRTH (data/Rebirth.json) for item unlocks
    Saved in localStorage ("mh-rebirth-tracker-v1")
    ========================================================= */
 (() => {
-  const RB = window.MH_REBIRTH || { items: [] }, BASE = window.MH_IMG_BASE;
+  const RB = window.MH_REBIRTH || { items: [] };
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const fmt = n => Math.round(n).toLocaleString("en-US");
   const RM = MH.reduceMotion;
-  const img = (p, size = 80) => p ? `${BASE}${p}/revision/latest/scale-to-width-down/${size}` : "";
+  const img = (p, size = 80) => p ? MH_SRC(p) : "";
   const ITEM = n => "item-index.html#item=" + encodeURIComponent(n);
   const KEY = "mh-rebirth-tracker-v1";
   const DAY = 864e5;

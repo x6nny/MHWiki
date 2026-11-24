@@ -1,6 +1,6 @@
 /* =========================================================
    Item Index page
-   Data: window.MH_ITEMS, window.MH_TIERS (js/items-data.js)
+   Data: window.MH_ITEMS, window.MH_TIERS (data/Items.json, data/Tiers.json)
    ========================================================= */
 (() => {
   const ITEMS = window.MH_ITEMS || [];
@@ -51,10 +51,9 @@
     return idx < 0 ? Date.UTC(y, 0, 1) : Date.UTC(y, idx, d);
   }
   const tierColors = t => TIERS[t] || ["#666", "#fff"];
-  const IMG_BASE = window.MH_IMG_BASE || "";
-  const vUrl = (v, size) => IMG_BASE + v.u + "/scale-to-width-down/" + size;
+    const vUrl = (v, size) => MH_SRC(v.u);
   const hasShiny = it => !!(it.v && it.v.some(v => v.s));
-  const imgUrl = (u, size) => u ? u.replace(/scale-to-width-down\/\d+/, "scale-to-width-down/" + size) : null;
+  const imgUrl = (u, size) => u ? MH_SRC(u) : null;
 
   /* ---------- Types ---------- */
   const TYPES = [
@@ -201,7 +200,7 @@
     const sh = hasShiny(it) ? `<span class="shiny-badge" title="Has a shiny variant"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z" fill="currentColor"/></svg></span>` : "";
     return `<div class="icard ${sh ? "has-shiny" : ""}" role="button" tabindex="0" data-i="${it._i}" style="--tb:${bg};--tf:${fg};--i:${i % PAGE}">
       ${ev}${sh}
-      <div class="ic-img">${it.img ? `<img src="${esc(it.img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />` : ""}<span class="ph" ${it.img ? "hidden" : ""}>${esc(it.n[0])}</span></div>
+      <div class="ic-img">${it.img ? `<img src="${esc(MH_SRC(it.img))}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />` : ""}<span class="ph" ${it.img ? "hidden" : ""}>${esc(it.n[0])}</span></div>
       <h3>${esc(it.n)}</h3>
       <span class="tier-pill">${esc(it.tier)}</span>
       <span class="ic-type">${esc(type.replace(/s$/, ""))}</span>

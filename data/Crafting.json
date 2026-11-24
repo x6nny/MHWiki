@@ -1,0 +1,3742 @@
+{
+  "elements": [
+    {
+      "k": "Aether",
+      "c": "#d9dde6",
+      "img": "assets/wiki/aether.webp"
+    },
+    {
+      "k": "Water",
+      "c": "#4f9bff",
+      "img": "assets/wiki/water.webp"
+    },
+    {
+      "k": "Earth",
+      "c": "#3ccf6e",
+      "img": "assets/wiki/earth.webp"
+    },
+    {
+      "k": "Fire",
+      "c": "#ff6a2b",
+      "img": "assets/wiki/fire.webp"
+    },
+    {
+      "k": "Order",
+      "c": "#fff4c2",
+      "img": "assets/wiki/order.webp"
+    },
+    {
+      "k": "Entropy",
+      "c": "#c0306a",
+      "img": "assets/wiki/entropy.webp"
+    }
+  ],
+  "tiers": {
+    "Enchanted": ["#ff8688", "#000"],
+    "Collectible": ["#a946ff", "#000"],
+    "Reborn": ["#4498ff", "#000"],
+    "Mythic": ["#eb0790", "#ee94ea"],
+    "Advanced Reborn": ["#3dccb9", "#000"],
+    "Evolved Reborn": ["#5AD063", "#000"],
+    "Advanced Fusion": ["#FC9447", "#000"],
+    "Divine": ["#8612eb", "#b388ee"],
+    "Limited Reborn": ["#db6bc1", "#000"],
+    "Advanced Evolution": ["#12a479", "#000"],
+    "Slipstream": ["#7e7fcc", "#000"],
+    "Ultimate": ["#ff0004", "#ffff00"],
+    "Reborn Fusion": ["#FFE070", "#000"],
+    "Legendary": ["#e60000", "#eea3a3"],
+    "Rare Reborn": ["#4498ff", "#000"],
+    "Premium": ["#FF4B87", "#fff"],
+    "Superstitious": ["#000", "#ff8097"],
+    "Fabled": ["#513aff", "#9eff54"],
+    "Phantasmal": ["#040821", "#7f91ff"]
+  },
+  "ench": [
+    {
+      "n": "Pizza Furnace",
+      "img": "assets/wiki/pizza-furnace.webp",
+      "type": "Furnace",
+      "life": "0+",
+      "shards": 50,
+      "reqs": [
+        {
+          "n": "Pizza Slice Wall",
+          "x": 1,
+          "img": "assets/wiki/pizza-slice-wall.webp",
+          "t": "Collectible"
+        },
+        {
+          "n": "Pizza Research Center",
+          "x": 1,
+          "img": "assets/wiki/pizza-research-center.webp",
+          "t": "Collectible"
+        },
+        {
+          "n": "Pizza Blaster",
+          "x": 3,
+          "img": "assets/wiki/pizza-blaster.webp",
+          "t": "Reborn"
+        },
+        {
+          "n": "PIZZA DOGE",
+          "x": 2,
+          "img": "assets/wiki/pizza-doge.webp",
+          "t": "Collectible"
+        }
+      ],
+      "other": [],
+      "eff": "Base multiplier of x1000 · Draws in power from pizza-themed items placed on the base.",
+      "added": "19 March, 2019"
+    },
+    {
+      "n": "Dreamer's Birthday Cake",
+      "img": "assets/wiki/dreamer-s-birthday-cake.webp",
+      "type": "Upgrader",
+      "life": "2000+",
+      "shards": 100,
+      "reqs": [
+        {
+          "n": "Dreamer's Sight",
+          "x": 10,
+          "img": "assets/wiki/dreamer-s-sight.webp",
+          "t": "Mythic"
+        },
+        {
+          "n": "Dreamer's Might",
+          "x": 3,
+          "img": "assets/wiki/dreamer-s-might-high-quality.webp",
+          "t": "Reborn"
+        },
+        {
+          "n": "Dreamer's Fright",
+          "x": 3,
+          "img": "assets/wiki/dreamer-s-fright.webp",
+          "t": "Reborn"
+        },
+        {
+          "n": "Azure Refiner",
+          "x": 3,
+          "img": "assets/wiki/azure-refiner.webp",
+          "t": "Reborn"
+        },
+        {
+          "n": "Dreamer's Anguish",
+          "x": 2,
+          "img": "assets/wiki/dreamer-s-anguish.webp",
+          "t": "Reborn"
+        },
+        {
+          "n": "Dreamer's Blight",
+          "x": 1,
+          "img": "assets/wiki/dreamer-s-blight.webp",
+          "t": "Advanced Reborn"
+        }
+      ],
+      "other": [],
+      "eff": "A cake devoted to the Dreamers who have perished defending their home town.",
+      "added": "25 June, 2024"
+    },
+    {
+      "n": "Angel's Blessing",
+      "img": "assets/wiki/angel-s-blessing.webp",
+      "type": "Upgrader",
+      "life": "S+800+",
+      "shards": 300,
+      "reqs": [
+        {
+          "n": "Swift Justice",
+          "x": 1,
+          "img": "assets/wiki/swift-justice.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Final Eclipse Gate",
+          "x": 2,
+          "img": "assets/wiki/final-eclipse-gate.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Dragonglass Blaster",
+          "x": 3,
+          "img": "assets/wiki/dragonglass-blaster.webp",
+          "t": "Advanced Fusion"
+        },
+        {
+          "n": "Angelic Grace",
+          "x": 7,
+          "img": "assets/wiki/angelic-grace.webp",
+          "t": "Divine"
+        },
+        {
+          "n": "Sword God Shrine",
+          "x": 1,
+          "img": "assets/wiki/sword-god-shrine-hd.webp",
+          "t": "Advanced Reborn"
+        }
+      ],
+      "other": [],
+      "eff": "Portable upgrade beam capable of up to x150 · Gives ores sparkles",
+      "added": "11 June, 2018"
+    },
+    {
+      "n": "Scales of Disparity",
+      "img": "assets/wiki/scales-of-disparity.webp",
+      "type": "Upgrader",
+      "life": null,
+      "shards": 500,
+      "reqs": [
+        {
+          "n": "Famished Farm",
+          "x": 5,
+          "img": "assets/wiki/famished-farm.webp",
+          "t": "Limited Reborn"
+        },
+        {
+          "n": "Famished Wasteland",
+          "x": 10,
+          "img": "assets/wiki/famished-wasteland.webp",
+          "t": "Limited Reborn"
+        },
+        {
+          "n": "Searing Heat",
+          "x": 1,
+          "img": "assets/wiki/searing-heat.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Dreamer's Devastation",
+          "x": 1,
+          "img": "assets/wiki/dreamer-s-devastation.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "The Daegelart",
+          "x": 1,
+          "img": "assets/wiki/the-daegelart.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Deadly Spore",
+          "x": 2,
+          "img": "assets/wiki/deadly-spore.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "The Great Parasite",
+          "x": 1,
+          "img": "assets/wiki/the-great-parasite.webp",
+          "t": "Slipstream"
+        }
+      ],
+      "other": ["500,000 Candy"],
+      "eff": "Make all food items Rot · (x0.925 multiplier to all food items while also applying 1 stack of Rot)",
+      "added": "29 October, 2025"
+    },
+    {
+      "n": "Book of Knowledge",
+      "img": "assets/wiki/book-of-knowledge.webp",
+      "type": "Furnace",
+      "life": "1000+",
+      "shards": 700,
+      "reqs": [
+        {
+          "n": "Sage King",
+          "x": 2,
+          "img": "assets/wiki/sage-king.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Neutron Star",
+          "x": 1,
+          "img": "assets/wiki/neutron-star.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "True Overlord Device",
+          "x": 1,
+          "img": "assets/wiki/true-overlord-device.webp",
+          "t": "Ultimate"
+        },
+        {
+          "n": "Aethereal Synthesizer",
+          "x": 2,
+          "img": "assets/wiki/aethereal-synthesizer.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Ore Supernova",
+          "x": 1,
+          "img": "assets/wiki/ore-supernova.webp",
+          "t": "Slipstream"
+        }
+      ],
+      "other": [],
+      "eff": "Base multiplier of x1. · Placing down knowledge items increases multiplier.",
+      "added": "30 June, 2018"
+    },
+    {
+      "n": "Airborne Pathogenic Spewer",
+      "img": "assets/wiki/airborne-pathogenic-spewer.webp",
+      "type": "Upgrader",
+      "life": null,
+      "shards": 750,
+      "reqs": [
+        {
+          "n": "Scorponyte Mine",
+          "x": 3,
+          "img": "assets/wiki/scorponyte-mine.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Mycolympus",
+          "x": 1,
+          "img": "assets/wiki/mycolympus.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Son of Poison",
+          "x": 6,
+          "img": "assets/wiki/son-of-poison.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "Bubonic Plague",
+          "x": 10,
+          "img": "assets/wiki/bubonic-plague.webp",
+          "t": "Limited Reborn"
+        },
+        {
+          "n": "Venomshank",
+          "x": 5,
+          "img": "assets/wiki/venomshank.webp",
+          "t": "Reborn"
+        },
+        {
+          "n": "Sinister Sepulcher",
+          "x": 1,
+          "img": "assets/wiki/sinister-sepulcher.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Ghosdeeri's Antidote",
+          "x": 5,
+          "img": "assets/wiki/ghosdeeri-s-antidote.webp",
+          "t": "Limited Reborn"
+        }
+      ],
+      "other": ["500,000 Candy"],
+      "eff": "Base multiplier of x200 · Increased multiplier with certain status effect",
+      "added": "29 October, 2025"
+    },
+    {
+      "n": "Coliseum Catharsis",
+      "img": "assets/wiki/coliseum-catharsis.webp",
+      "type": "Furnace",
+      "life": "3000+",
+      "shards": 753,
+      "reqs": [
+        {
+          "n": "Final Eclipse Gate",
+          "x": 1,
+          "img": "assets/wiki/final-eclipse-gate.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Crystal Altar",
+          "x": 1,
+          "img": "assets/wiki/crystal-altar.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Tyrant's Forge",
+          "x": 1,
+          "img": "assets/wiki/tyrant-s-forge.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Sage King",
+          "x": 2,
+          "img": "assets/wiki/sage-king.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Utopian Refiner",
+          "x": 1,
+          "img": "assets/wiki/utopian-refiner.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Ancient Coliseum",
+          "x": 2,
+          "img": "assets/wiki/ancient-coliseum.webp",
+          "t": "Evolved Reborn"
+        }
+      ],
+      "other": ["Triumphant Badge"],
+      "eff": "High base multiplier of x42500",
+      "added": "15 March, 2020"
+    },
+    {
+      "n": "Empyrean Monument",
+      "img": "assets/wiki/empyrean-monument.webp",
+      "type": "Upgrader",
+      "life": "5000+",
+      "shards": 800,
+      "reqs": [
+        {
+          "n": "Neutron Star",
+          "x": 1,
+          "img": "assets/wiki/neutron-star.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Nova Star",
+          "x": 5,
+          "img": "assets/wiki/nova-star.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "Ancient Coliseum",
+          "x": 2,
+          "img": "assets/wiki/ancient-coliseum.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Suitopian Refiner",
+          "x": 1,
+          "img": "assets/wiki/suitopian-refiner.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Arcane Lightning",
+          "x": 5,
+          "img": "assets/wiki/arcane-lightning.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "Atmospheric Steamwork",
+          "x": 2,
+          "img": "assets/wiki/atmospheric-steamwork.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Astral Setter",
+          "x": 3,
+          "img": "assets/wiki/astral-setter.webp",
+          "t": "Evolved Reborn"
+        }
+      ],
+      "other": [],
+      "eff": "Base multiplier of x15. · Multiplier increases by +15 per elevation.",
+      "added": "18 November, 2019"
+    },
+    {
+      "n": "Gargantium Mine",
+      "img": "assets/wiki/gargantium-mine.webp",
+      "type": "Dropper",
+      "life": "S+1000+",
+      "shards": 1000,
+      "reqs": [
+        {
+          "n": "Palladium Drill",
+          "x": 3,
+          "img": "assets/wiki/palladium-drill.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "Symcorpium Mine",
+          "x": 3,
+          "img": "assets/wiki/symcorpium-mine.webp",
+          "t": "Reborn Fusion"
+        },
+        {
+          "n": "Newtonium Excavator",
+          "x": 3,
+          "img": "assets/wiki/newtonium-excavator.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "V-tolite Mine",
+          "x": 3,
+          "img": "assets/wiki/v-tolite-mine.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Diamond Breech Loader",
+          "x": 4,
+          "img": "assets/wiki/diamond-breech-loader.webp",
+          "t": "Reborn Fusion"
+        },
+        {
+          "n": "Pulsar Octagnium Mine",
+          "x": 1,
+          "img": "assets/wiki/pulsar-octagnium-mine.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Phasecursor Mine",
+          "x": 3,
+          "img": "assets/wiki/phasecursor-mine.webp",
+          "t": "Advanced Fusion"
+        }
+      ],
+      "other": [],
+      "eff": "Dropper and its ores are affected by Pulsars, giving unique effects",
+      "added": "11 June, 2018"
+    },
+    {
+      "n": "Devourer of Nightmares",
+      "img": "assets/wiki/devourer-of-nightmares.webp",
+      "type": "Furnace",
+      "life": "s-666+",
+      "shards": 1000,
+      "reqs": [
+        {
+          "n": "Eternal Fracture",
+          "x": 2,
+          "img": "assets/wiki/eternal-fracture.webp",
+          "t": "Reborn Fusion"
+        },
+        {
+          "n": "Brimstone Spires",
+          "x": 1,
+          "img": "assets/wiki/brimstone-spires.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Oblivion Weaver",
+          "x": 1,
+          "img": "assets/wiki/oblivion-weaver.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Dreamer's Nightmare",
+          "x": 1,
+          "img": "assets/wiki/dreamer-s-nightmare.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Dreamer's Terror",
+          "x": 1,
+          "img": "assets/wiki/dreamer-s-terror.webp",
+          "t": "Evolved Reborn"
+        }
+      ],
+      "other": [],
+      "eff": "Furnace: x10k · Cell: x500Qn",
+      "added": "26 October, 2019"
+    },
+    {
+      "n": "Dreamer's Life",
+      "img": "assets/wiki/dreamer-s-life.webp",
+      "type": "Upgrader",
+      "life": "s-2000+",
+      "shards": 1000,
+      "reqs": [
+        {
+          "n": "Dreamer's Sight",
+          "x": 500,
+          "img": "assets/wiki/dreamer-s-sight.webp",
+          "t": "Mythic"
+        },
+        {
+          "n": "Dreamer's Terror",
+          "x": 1,
+          "img": "assets/wiki/dreamer-s-terror.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Dreamer's Blight",
+          "x": 5,
+          "img": "assets/wiki/dreamer-s-blight.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "Eternal Fracture",
+          "x": 3,
+          "img": "assets/wiki/eternal-fracture.webp",
+          "t": "Reborn Fusion"
+        },
+        {
+          "n": "Dreamer's Valor",
+          "x": 2,
+          "img": "assets/wiki/dreamer-s-valor.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Dreamer's Nightmare",
+          "x": 2,
+          "img": "assets/wiki/dreamer-s-nightmare.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Nature's Enchantment",
+          "x": 1,
+          "img": "assets/wiki/nature-s-enchantment.webp",
+          "t": "Slipstream"
+        }
+      ],
+      "other": [],
+      "eff": "Base multiplier of x125. · Each unique Dreamer's item placed down increases multiplier.",
+      "added": "5 April, 2020"
+    },
+    {
+      "n": "The Cornucopia",
+      "img": "assets/wiki/the-cornucopia.webp",
+      "type": "Upgrader",
+      "life": "1337+",
+      "shards": 1000,
+      "reqs": [
+        {
+          "n": "Pizza Bombarder",
+          "x": 3,
+          "img": "assets/wiki/pizza-bombarder.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Banana Sundae Refiner",
+          "x": 2,
+          "img": "assets/wiki/banana-sundae-refiner.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Green Tea Kettle",
+          "x": 3,
+          "img": "assets/wiki/green-tea-kettle.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Lemon Land",
+          "x": 1000,
+          "img": "assets/wiki/lemon-land.webp",
+          "t": "Legendary"
+        },
+        {
+          "n": "Behemoth Blossom",
+          "x": 1,
+          "img": "assets/wiki/behemoth-blossom.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Meatball Sandwich",
+          "x": 1,
+          "img": "assets/wiki/meatball-sandwich.webp",
+          "t": "Rare Reborn"
+        }
+      ],
+      "other": [],
+      "eff": "x10 multiplier with an added 50% buff to all subsequent food upgraders · Effect is removable via Resetting Devices",
+      "added": "30 August, 2020"
+    },
+    {
+      "n": "Doom Incarnate",
+      "img": "assets/wiki/doom-incarnate.webp",
+      "type": "Upgrader",
+      "life": "4,000",
+      "shards": 1000,
+      "reqs": [
+        {
+          "n": "Forsaken Battleground",
+          "x": 10,
+          "img": "assets/wiki/forsaken-battleground.webp",
+          "t": "Limited Reborn"
+        },
+        {
+          "n": "The Guillotine",
+          "x": 5,
+          "img": "assets/wiki/the-guillotine.webp",
+          "t": "Limited Reborn"
+        },
+        {
+          "n": "Ore Chainsaw",
+          "x": 1,
+          "img": "assets/wiki/ore-chainsaw.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Lord of Tenebrous",
+          "x": 1,
+          "img": "assets/wiki/lord-of-tenebrous.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Demon Core",
+          "x": 2,
+          "img": "assets/wiki/demon-core.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Turtle Dignifier",
+          "x": 1,
+          "img": "assets/wiki/turtle-dignifier.webp",
+          "t": "Rare Reborn"
+        },
+        {
+          "n": "Incendium Mine",
+          "x": 1,
+          "img": "assets/wiki/incendium-mine.webp",
+          "t": "Slipstream"
+        }
+      ],
+      "other": ["125,000 Candy"],
+      "eff": "The ever-evolving race of arms produces weapons capable of devastation beyond sane comprehension, enabling those who wish to wreak havoc to commit unspeakable acts on huge scales.",
+      "added": "29 October, 2025"
+    },
+    {
+      "n": "Oblivion Emission",
+      "img": "assets/wiki/oblivion-emission.webp",
+      "type": "Furnace",
+      "life": "s-2000+",
+      "shards": 1200,
+      "reqs": [
+        {
+          "n": "Eternal Limbo",
+          "x": 1,
+          "img": "assets/wiki/eternal-limbo.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Heart of Dusk",
+          "x": 1000,
+          "img": "assets/wiki/heart-of-dusk.webp",
+          "t": "Divine"
+        },
+        {
+          "n": "Nuclear Castle",
+          "x": 2,
+          "img": "assets/wiki/nuclear-castle.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Cell Singularity",
+          "x": 1000,
+          "img": "assets/wiki/cell-singularity.webp",
+          "t": "Mythic"
+        },
+        {
+          "n": "Anguished Garden",
+          "x": 2,
+          "img": "assets/wiki/anguished-garden.webp",
+          "t": "Reborn Fusion"
+        },
+        {
+          "n": "Oblivion Weaver",
+          "x": 1,
+          "img": "assets/wiki/oblivion-weaver.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Overlord Device",
+          "x": 1,
+          "img": "assets/wiki/overlord-device.webp",
+          "t": "Ultimate"
+        },
+        {
+          "n": "Castle Bravo",
+          "x": 2,
+          "img": "assets/wiki/castle-bravo.webp",
+          "t": "Advanced Evolution"
+        }
+      ],
+      "other": [],
+      "eff": "Processes ore at x25,000 to x33,000 their value and teleports them to other furnaces.",
+      "added": "30 August, 2020"
+    },
+    {
+      "n": "Conqueror's Delusion",
+      "img": "assets/wiki/conqueror-s-delusion.webp",
+      "type": "Upgrader",
+      "life": null,
+      "shards": 1250,
+      "reqs": [
+        {
+          "n": "Tyrant's Forge",
+          "x": 2,
+          "img": "assets/wiki/tyrant-s-forge.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Phasecursor Furnace",
+          "x": 2,
+          "img": "assets/wiki/phasecursor-furnace.webp",
+          "t": "Advanced Fusion"
+        },
+        {
+          "n": "Interstellar Conqueror",
+          "x": 1,
+          "img": "assets/wiki/interstellar-conqueror.webp",
+          "t": "Rare Reborn"
+        },
+        {
+          "n": "King Darkseed",
+          "x": 10,
+          "img": "assets/wiki/king-darkseed.webp",
+          "t": "Limited Reborn"
+        },
+        {
+          "n": "True Overlord Device",
+          "x": 1,
+          "img": "assets/wiki/true-overlord-device.webp",
+          "t": "Ultimate"
+        },
+        {
+          "n": "Orbital Cataclysm",
+          "x": 1,
+          "img": "assets/wiki/orbital-cataclysm.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Spires of Conquest",
+          "x": 5,
+          "img": "assets/wiki/spires-of-conquest.webp",
+          "t": "Limited Reborn"
+        }
+      ],
+      "other": ["500,000 Candy"],
+      "eff": "Multiplies ore value by x80 then x1.4 every 0.5 seconds six times · Multiplies ore value by x20 then x2 every 0.5 seconds for six times",
+      "added": "29 October, 2025"
+    },
+    {
+      "n": "Gargantium Core",
+      "img": "assets/wiki/gargantium-core.webp",
+      "type": "Furnace",
+      "life": "S+2000+",
+      "shards": 1500,
+      "reqs": [
+        {
+          "n": "Heart of Dusk",
+          "x": 1000,
+          "img": "assets/wiki/heart-of-dusk.webp",
+          "t": "Divine"
+        },
+        {
+          "n": "Breached Motherboard",
+          "x": 3,
+          "img": "assets/wiki/breached-motherboard.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Tyrant's Forge",
+          "x": 2,
+          "img": "assets/wiki/tyrant-s-forge.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Sakura Falls",
+          "x": 3,
+          "img": "assets/wiki/sakura-falls.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "The Fissure",
+          "x": 2,
+          "img": "assets/wiki/the-fissure.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Phasecursor Furnace",
+          "x": 3,
+          "img": "assets/wiki/phasecursor-furnace.webp",
+          "t": "Advanced Fusion"
+        },
+        {
+          "n": "Aurora Borealis",
+          "x": 3,
+          "img": "assets/wiki/aurora-borealis.webp",
+          "t": "Advanced Evolution"
+        }
+      ],
+      "other": [],
+      "eff": "Applies an effect to all ores dropped",
+      "added": "5 April, 2020"
+    },
+    {
+      "n": "The Trinity",
+      "img": "assets/wiki/the-trinity.webp",
+      "type": "Upgrader",
+      "life": "3000+",
+      "shards": 1500,
+      "reqs": [
+        {
+          "n": "Searing Heat",
+          "x": 3,
+          "img": "assets/wiki/searing-heat.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Spirit of Fire",
+          "x": 3,
+          "img": "assets/wiki/spirit-of-fire.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "Toxic Waste Disposal",
+          "x": 10,
+          "img": "assets/wiki/toxic-waste-disposal.webp",
+          "t": "Reborn"
+        },
+        {
+          "n": "Frigid Dystopia",
+          "x": 3,
+          "img": "assets/wiki/frigid-dystopia.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "Son of Poison",
+          "x": 3,
+          "img": "assets/wiki/son-of-poison.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "Father of Freon",
+          "x": 3,
+          "img": "assets/wiki/father-of-freon.webp",
+          "t": "Advanced Reborn"
+        },
+        {
+          "n": "The Grand Prism",
+          "x": 1,
+          "img": "assets/wiki/the-grand-prism.webp",
+          "t": "Slipstream"
+        }
+      ],
+      "other": [],
+      "eff": "Multiplies ore value by x65. · Applies poison, frostbite, or flaming at random.",
+      "added": ""
+    },
+    {
+      "n": "The Chaosrealm",
+      "img": "assets/wiki/the-chaosrealm.webp",
+      "type": "Upgrader",
+      "life": "5000+",
+      "shards": 1500,
+      "reqs": [
+        {
+          "n": "Demon Core",
+          "x": 3,
+          "img": "assets/wiki/demon-core.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Vulcan's Destiny",
+          "x": 2,
+          "img": "assets/wiki/vulcan-s-destiny.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Industrial Scarab",
+          "x": 5,
+          "img": "assets/wiki/industrial-scarab.webp",
+          "t": "Reborn"
+        },
+        {
+          "n": "Devil's Spore",
+          "x": 2,
+          "img": "assets/wiki/devil-s-spore.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Void Star",
+          "x": 1,
+          "img": "assets/wiki/void-star.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Suitopian Refiner",
+          "x": 1,
+          "img": "assets/wiki/suitopian-refiner.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Draconicglass Mine",
+          "x": 2,
+          "img": "assets/wiki/draconicglass-mine.webp",
+          "t": "Evolved Reborn"
+        }
+      ],
+      "other": [],
+      "eff": "Upgrades ore by ×7-11. · Applies green fire effect that lasts forever and will increase ore value by 5%.",
+      "added": "30 August, 2020"
+    },
+    {
+      "n": "Champion Infuser",
+      "img": "assets/wiki/champion-infuser.webp",
+      "type": "Utility",
+      "life": "5+",
+      "shards": 1750,
+      "reqs": [
+        {
+          "n": "Haste Infuser",
+          "x": 10,
+          "img": "assets/wiki/haste-infuser-hd.webp",
+          "t": "Premium"
+        },
+        {
+          "n": "Cursed Infuser",
+          "x": 10,
+          "img": "assets/wiki/cursed-infuser-hd.webp",
+          "t": "Premium"
+        },
+        {
+          "n": "Heavenly Infuser",
+          "x": 10,
+          "img": "assets/wiki/heavenly-infuser-hd.webp",
+          "t": "Premium"
+        },
+        {
+          "n": "Zenith Will",
+          "x": 2,
+          "img": "assets/wiki/zenith-will.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Speed Infuser",
+          "x": 10,
+          "img": "assets/wiki/speed-infuser-hd.webp",
+          "t": "Premium"
+        },
+        {
+          "n": "Infinite Infuser",
+          "x": 10,
+          "img": "assets/wiki/infinite-infuser.webp",
+          "t": "Premium"
+        }
+      ],
+      "other": [],
+      "eff": "Gives wings; allows user to fly. · Combines other infusers effects.",
+      "added": "5 April, 2020"
+    },
+    {
+      "n": "Void Drive",
+      "img": "assets/wiki/void-drive.webp",
+      "type": "Upgrader",
+      "life": "2000+",
+      "shards": 2000,
+      "reqs": [
+        {
+          "n": "Eternal Limbo",
+          "x": 1,
+          "img": "assets/wiki/eternal-limbo.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Overlord Device",
+          "x": 1,
+          "img": "assets/wiki/overlord-device.webp",
+          "t": "Ultimate"
+        },
+        {
+          "n": "Hydra Blaster",
+          "x": 1,
+          "img": "assets/wiki/hydra-blaster.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Void Star",
+          "x": 1,
+          "img": "assets/wiki/void-star.webp",
+          "t": "Advanced Evolution"
+        },
+        {
+          "n": "Overlord's Telamonster",
+          "x": 1,
+          "img": "assets/wiki/overlord-s-telamonster.webp",
+          "t": "Ultimate"
+        },
+        {
+          "n": "The Daegelart",
+          "x": 1,
+          "img": "assets/wiki/the-daegelart.webp",
+          "t": "Evolved Reborn"
+        },
+        {
+          "n": "Dystopian Refiner",
+          "x": 1,
+          "img": "assets/wiki/dystopian-refiner.webp",
+          "t": "Slipstream"
+        },
+        {
+          "n": "Crystallized Engine",
+          "x": 3,
+          "img": "assets/wiki/crystallized-engine.webp",
+          "t": "Evolved Reborn"
+        }
+      ],
+      "other": ["The Void Badge"],
+      "eff": "Multiplies ore value by x100. · Gives ores 15 shields.",
+      "added": "29 November, 2019"
+    }
+  ],
+  "sup": [
+    {
+      "n": "Swag City",
+      "img": "assets/wiki/swag-city.webp",
+      "type": "Upgrader",
+      "el": [50, 25, 75, 75, 25, 100],
+      "eff": "During the day, each beam does 4.5x for a total multiplier of 91.125x · During the night, each beam does 5.7x for a total multiplier of 185.193x",
+      "quote": "An accurate portrayal of the Underworld once Billy Lucifer became its demigod. While the world is on ruins, the Underworld thrives.",
+      "life": "S+1,000+",
+      "cat": {
+        "n": "Catalyst of Blood Magic",
+        "img": "assets/wiki/catalyst-of-blood-magic.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Draconicglass Mine",
+            "img": "assets/wiki/draconicglass-mine.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Azure Purifier",
+            "img": "assets/wiki/azure-purifier.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Dreamer's Nightmare",
+            "img": "assets/wiki/dreamer-s-nightmare.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Funky Town",
+            "img": "assets/wiki/funky-town.webp",
+            "t": "Rare Reborn"
+          },
+          {
+            "n": "Devil's Spore",
+            "img": "assets/wiki/devil-s-spore.webp",
+            "t": "Advanced Evolution"
+          }
+        ],
+        "added": "3 July, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Plasma Scanner", 13],
+            ["Ancient Temple", 11],
+            ["Dreamer's Fright", 8],
+            ["Flaming Schrodinger", 2],
+            ["Big Bad Blaster", 1],
+            ["Atomium Mine", 1],
+            ["Sage Redeemer", 1],
+            ["Newtonium Mine", 1],
+            ["Scorpium Mine", 1],
+            ["Mineral Wheel", 1],
+            ["Toxic Waste Disposal", 1]
+          ]
+        },
+        {
+          "label": "Common Reborns",
+          "src": "calc",
+          "items": [
+            ["Mineral Wheel", 13],
+            ["Dreamer's Fright", 11],
+            ["Big Bertha", 8],
+            ["Plasma Scanner", 5],
+            ["Big Bad Blaster", 4],
+            ["Tesla Resetter", 1],
+            ["Solar Flare", 1],
+            ["Scorpium Mine", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Enchanted Library",
+      "img": "assets/wiki/enchanted-library.webp",
+      "type": "Upgrader",
+      "el": [75, 10, 20, 0, 175, 20],
+      "eff": "Base multiplier of x65 · Multiplier +1 per second on ore lifespan · Multiplier +5 per time upgrader used",
+      "quote": "Magnar once had a library believed to be full of magical tomes. Those tomes are capable of enchanting your ore with various of helping effects.",
+      "life": "S+1,000+",
+      "cat": {
+        "n": "Catalyst of Knowledge",
+        "img": "assets/wiki/catalyst-of-knowledge.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Book of Knowledge",
+            "img": "assets/wiki/book-of-knowledge.webp",
+            "t": "Enchanted"
+          },
+          {
+            "n": "Stardust Illuminator",
+            "img": "assets/wiki/stardust-illuminator.webp",
+            "t": "Advanced Fusion"
+          },
+          {
+            "n": "Statue of Knowledge",
+            "img": "assets/wiki/statue-of-knowledge.webp",
+            "t": "Fabled"
+          },
+          {
+            "n": "Ore Indoctrinator",
+            "img": "assets/wiki/ore-indoctrinator.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Ancient Coliseum",
+            "img": "assets/wiki/ancient-coliseum.webp",
+            "t": "Evolved Reborn"
+          }
+        ],
+        "added": "The Trinity Update"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Ore Illuminator", 14],
+            ["Righteous Will", 9],
+            ["Blind Justice", 4],
+            ["Dreamer's Might", 2],
+            ["Timeless Enhancement", 2],
+            ["Quaint Skymill", 2],
+            ["Clockwork", 1],
+            ["Ancient Temple", 1],
+            ["Pilotite Mine", 1]
+          ]
+        },
+        {
+          "label": "Common Reborns",
+          "src": "calc",
+          "items": [
+            ["Dreamer's Might", 16],
+            ["Ore Illuminator", 13],
+            ["Tesla Resetter", 10]
+          ]
+        },
+        {
+          "label": "Wiki recipe 1",
+          "src": "wiki",
+          "items": [
+            ["Clockwork", 18],
+            ["Dreamer's Might", 11],
+            ["Shard Park", 6],
+            ["Ore Illuminator", 2],
+            ["Pilotite Mine", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Delta Phantom",
+      "img": "assets/wiki/delta-phantom.webp",
+      "type": "Upgrader",
+      "el": [65, 55, 35, 0, 0, 130],
+      "eff": "First 10 ore: Value multiplied by x100. · Absorbed into item.",
+      "quote": "The transition to the afterlife is a challenge whether or not your soul is capable of passing into the spirit world. Those who do are capable of altering the real world, in upgraders like this.",
+      "life": "S+1000+",
+      "cat": {
+        "n": "Catalyst of Spirits",
+        "img": "assets/wiki/catalyst-of-spirits.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Eternal Limbo",
+            "img": "assets/wiki/eternal-limbo.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Brimstone Spires",
+            "img": "assets/wiki/brimstone-spires.webp",
+            "t": "Advanced Evolution"
+          },
+          {
+            "n": "Dark Illuminator",
+            "img": "assets/wiki/dark-illuminator.webp",
+            "t": "Reborn Fusion"
+          },
+          {
+            "n": "Forbidden Magic",
+            "img": "assets/wiki/forbidden-magic.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Anguished Guardian of the Gate",
+            "img": "assets/wiki/anguished-guardian-of-the-gate.webp",
+            "t": "Reborn Fusion"
+          }
+        ],
+        "added": "5 April, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Toxic Waste Disposal", 10],
+            ["Newtonium Mine", 6],
+            ["Lightningbolt Refiner", 5],
+            ["Big Bertha", 4],
+            ["Dark Magic", 4],
+            ["Yunium Mine", 2]
+          ]
+        },
+        {
+          "label": "Wiki recipe 1",
+          "src": "wiki",
+          "items": [
+            ["Toxic Waste Disposal", 12],
+            ["Dark Magic", 8],
+            ["Lightningbolt Refiner", 7],
+            ["Wild Spore", 4]
+          ]
+        },
+        {
+          "label": "Wiki recipe 2",
+          "src": "wiki",
+          "items": [
+            ["Lightningbolt Refiner", 9],
+            ["Gate of Eclipse", 7],
+            ["Green Tea Latte", 4],
+            ["Newtonic Corroder", 4],
+            ["Sinister Sepulcher", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 3",
+          "src": "wiki",
+          "items": [
+            ["Newtonium Mine", 19],
+            ["Dark Magic", 4],
+            ["Lightningbolt Refiner", 3],
+            ["Utopian Refiner", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 4",
+          "src": "wiki",
+          "items": [
+            ["Lightningbolt Refiner", 10],
+            ["Toxic Waste Disposal", 7],
+            ["Dark Magic", 4],
+            ["Yunium Mine", 1],
+            ["Big Bertha", 1],
+            ["Oblivion Weaver", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "The Death Cap",
+      "img": "assets/wiki/the-death-cap.webp",
+      "type": "Upgrader",
+      "el": [35, 20, 50, 15, 5, 125],
+      "eff": "Base multiplier of x130 · Multiplier increases additively with status effects · Removes all status effects from ore",
+      "quote": "Old fables say when spores like this grow nearby, it foreshadows inevitable death. Did you sign a death wish by forging this?",
+      "life": "S+2000+",
+      "cat": {
+        "n": "Catalyst of Death",
+        "img": "assets/wiki/catalyst-of-death.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Dreamer's Blight",
+            "img": "assets/wiki/dreamer-s-blight.webp",
+            "t": "Advanced Reborn"
+          },
+          {
+            "n": "Deadly Spore",
+            "img": "assets/wiki/deadly-spore.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Azure Spore",
+            "img": "assets/wiki/azure-spore.webp",
+            "t": "Reborn Fusion"
+          },
+          {
+            "n": "Delta Phantom",
+            "img": "assets/wiki/delta-phantom.webp",
+            "t": "Superstitious"
+          },
+          {
+            "n": "Lord of Tenebrous",
+            "img": "assets/wiki/lord-of-tenebrous.webp",
+            "t": "Advanced Evolution"
+          }
+        ],
+        "added": "12 April, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Dreamer's Fright", 9],
+            ["Big Bertha", 7],
+            ["Ancient Temple", 5],
+            ["Invasive Cyberlord", 3],
+            ["Toxic Waste Disposal", 3],
+            ["Newtonic Corroder", 2],
+            ["Nuclear Stronghold", 1]
+          ]
+        },
+        {
+          "label": "Common Reborns",
+          "src": "calc",
+          "items": [
+            ["Dreamer's Fright", 11],
+            ["Big Bertha", 9],
+            ["Newtonium Mine", 5],
+            ["Mineral Wheel", 4],
+            ["Sage Redeemer", 1],
+            ["Plasma Scanner", 1],
+            ["Toxic Waste Disposal", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 3",
+          "src": "wiki",
+          "items": [
+            ["Gate of Eclipse", 7],
+            ["Toxic Waste Disposal", 5],
+            ["Ore Skillet", 5],
+            ["Mineral Wheel", 5],
+            ["Green Tea Latte", 3],
+            ["Plasma Scanner", 3],
+            ["Big Bertha", 2],
+            ["Oblivion Weaver", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Pandora's Box",
+      "img": "assets/wiki/pandora-s-box.webp",
+      "type": "Furnace",
+      "el": [35, 12, 35, 80, 12, 130],
+      "eff": "Processes unupgraded ore between x1M and x1de",
+      "quote": "",
+      "life": "S+2000+",
+      "cat": {
+        "n": "Catalyst of Destruction",
+        "img": "assets/wiki/catalyst-of-destruction.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Dreamer's Blight",
+            "img": "assets/wiki/dreamer-s-blight.webp",
+            "t": "Advanced Reborn"
+          },
+          {
+            "n": "Dreamer's Valor",
+            "img": "assets/wiki/dreamer-s-valor.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Dreamer's Nightmare",
+            "img": "assets/wiki/dreamer-s-nightmare.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Dreamer's Terror",
+            "img": "assets/wiki/dreamer-s-terror.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Devourer of Nightmares",
+            "img": "assets/wiki/devourer-of-nightmares.webp",
+            "t": "Enchanted"
+          }
+        ],
+        "added": "5 April, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Plasma Scanner", 10],
+            ["Dreamer's Fright", 8],
+            ["Big Bertha", 4],
+            ["Ancient Temple", 4],
+            ["Flaming Schrodinger", 3],
+            ["Atomium Mine", 2],
+            ["Toxic Waste Disposal", 2],
+            ["Nuclear Stronghold", 2],
+            ["Dark Magic", 1],
+            ["Scorpium Mine", 1]
+          ]
+        },
+        {
+          "label": "Common Reborns",
+          "src": "calc",
+          "items": [
+            ["Dreamer's Fright", 14],
+            ["Plasma Scanner", 11],
+            ["Big Bertha", 3],
+            ["Gate of Eclipse", 3],
+            ["Dreamer's Might", 3],
+            ["Flaming Schrodinger", 1],
+            ["Atomium Mine", 1],
+            ["Sage Redeemer", 1],
+            ["Mineral Wheel", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Garden of Gaia",
+      "img": "assets/wiki/garden-of-gaia.webp",
+      "type": "Upgrader",
+      "el": [45, 80, 150, 5, 45, 10],
+      "eff": "Multiplies ore value by x90 · Changes ore material to Grass · Applies Gaia's Blessing to ore",
+      "quote": "The earth began as a molten rock. Thanks to Gaia, that \"rock\" would later flourish with life and beautiful nature.",
+      "life": "S+2000+",
+      "cat": {
+        "n": "Catalyst of Nature",
+        "img": "assets/wiki/catalyst-of-nature.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Gaia's Grasp",
+            "img": "assets/wiki/gaia-s-grasp.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Dreamer's Life",
+            "img": "assets/wiki/dreamer-s-life.webp",
+            "t": "Enchanted"
+          },
+          {
+            "n": "Frozen Peaks",
+            "img": "assets/wiki/frozen-peaks.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Ambrosia Garden",
+            "img": "assets/wiki/ambrosia-garden.webp",
+            "t": "Reborn Fusion"
+          },
+          {
+            "n": "Deadly Spore",
+            "img": "assets/wiki/deadly-spore.webp",
+            "t": "Evolved Reborn"
+          }
+        ],
+        "added": "20 May, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Ancient Temple", 17],
+            ["Yunium Mine", 9],
+            ["Massive Diamond Mine", 5],
+            ["Flaming Schrodinger", 4],
+            ["Nuclear Stronghold", 2],
+            ["Mineral Wheel", 1]
+          ]
+        },
+        {
+          "label": "Common Reborns",
+          "src": "calc",
+          "items": [
+            ["Mineral Wheel", 24],
+            ["Newtonium Mine", 5],
+            ["Dreamer's Fright", 4],
+            ["Lightningbolt Refiner", 4],
+            ["Solar Flare", 2],
+            ["Tesla Resetter", 1],
+            ["Big Bad Blaster", 1],
+            ["Yunium Mine", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 4",
+          "src": "wiki",
+          "items": [
+            ["Mineral Wheel", 11],
+            ["Yunium Mine", 10],
+            ["Newtonium Mine", 6],
+            ["Dreamer's Fright", 5],
+            ["Massive Diamond Mine", 1],
+            ["Nature's Grip", 1],
+            ["Scorpium Mine", 1],
+            ["Pulsar Octagnium Mine", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "The Heart of Void",
+      "img": "assets/wiki/the-heart-of-void.webp",
+      "type": "Furnace",
+      "el": [90, 50, 170, 50, 25, 250],
+      "eff": "Processes ore at x66,666 their value · Spawns Eyes of Void onto conveyors · Eyes of Void:",
+      "quote": "Who ever believed that the Void ended up containing a rather stable core? Unfortunately this core is slowly erased as the Universe expands into the Void, destroying the beauty the oblivion.",
+      "life": "S+2,000+",
+      "cat": {
+        "n": "Catalyst of Oblivion",
+        "img": "assets/wiki/catalyst-of-oblivion.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Daestrophe",
+            "img": "assets/wiki/daestrophe.webp",
+            "t": "Superstitious"
+          },
+          {
+            "n": "Void Star",
+            "img": "assets/wiki/void-star.webp",
+            "t": "Advanced Evolution"
+          },
+          {
+            "n": "Devourer of Nightmares",
+            "img": "assets/wiki/devourer-of-nightmares.webp",
+            "t": "Enchanted"
+          },
+          {
+            "n": "Oblivion Emission",
+            "img": "assets/wiki/oblivion-emission.webp",
+            "t": "Enchanted"
+          },
+          {
+            "n": "The Forbidden Tome",
+            "img": "assets/wiki/the-forbidden-tome.webp",
+            "t": "Ultimate"
+          }
+        ],
+        "added": "30 August, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Dreamer's Fright", 26],
+            ["Ancient Temple", 22],
+            ["Big Bertha", 9],
+            ["Invasive Cyberlord", 5],
+            ["Plasma Scanner", 4],
+            ["Toxic Waste Disposal", 4],
+            ["Nuclear Stronghold", 2],
+            ["Big Bad Blaster", 1],
+            ["Dark Magic", 1]
+          ]
+        },
+        {
+          "label": "Common Reborns",
+          "src": "calc",
+          "items": [
+            ["Dreamer's Fright", 24],
+            ["Mineral Wheel", 19],
+            ["Big Bertha", 17],
+            ["Newtonium Mine", 14],
+            ["Plasma Scanner", 4],
+            ["Solar Flare", 1],
+            ["Scorpium Mine", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Tyrant's Throne",
+      "img": "assets/wiki/tyrant-s-throne.webp",
+      "type": "Furnace",
+      "el": [10, 0, 50, 25, 130, 20],
+      "eff": "Multiplier from x500 to x85,000 based on ore value. · (see effects for more info)",
+      "quote": "While not a god, the tyrant that ruled over the land strived to find unlimited power. However the gods of the Haven would soon destroy his empire, ending his tyranny.",
+      "life": "S+2000+",
+      "cat": {
+        "n": "Catalyst of Power",
+        "img": "assets/wiki/catalyst-of-power.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "V-tolite Mine",
+            "img": "assets/wiki/v-tolite-mine.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Tyrant's Forge",
+            "img": "assets/wiki/tyrant-s-forge.webp",
+            "t": "Advanced Evolution"
+          },
+          {
+            "n": "Mystical Thunder",
+            "img": "assets/wiki/mystical-thunder.webp",
+            "t": "Advanced Evolution"
+          },
+          {
+            "n": "Void Drive",
+            "img": "assets/wiki/void-drive.webp",
+            "t": "Enchanted"
+          },
+          {
+            "n": "Gargantium Core",
+            "img": "assets/wiki/gargantium-core.webp",
+            "t": "Enchanted"
+          }
+        ],
+        "added": "12 April, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Atomium Mine", 12],
+            ["Solar Flare", 5],
+            ["Ore Illuminator", 4],
+            ["Timeless Enhancement", 4],
+            ["Dreamer's Might", 3],
+            ["Righteous Will", 1]
+          ]
+        },
+        {
+          "label": "Common Reborns",
+          "src": "calc",
+          "items": [
+            ["Atomium Mine", 8],
+            ["Dreamer's Might", 8],
+            ["Ore Illuminator", 6],
+            ["Solar Flare", 4],
+            ["Crystallized System", 3],
+            ["Tesla Resetter", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Draedon's Gauntlet",
+      "img": "assets/wiki/draedon-s-gauntlet.webp",
+      "type": "Upgrader",
+      "el": [130, 20, 10, 0, 50, 20],
+      "eff": "Multiplies ore value by 250x then 1.05x 50 times over a period of 10s. · Total multiplier of ~2866.85x",
+      "quote": "An item spoken only in legends. Behold greatness, mortal, for this item is a symbol of Draedon: The Thunder God. Do not mess with him, for he is a furious deity!",
+      "life": "S+2000+",
+      "cat": {
+        "n": "Catalyst of Thunder",
+        "img": "assets/wiki/catalyst-of-thunder.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Tempest Refiner",
+            "img": "assets/wiki/tempest-refiner.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Lightningbolt Predictor",
+            "img": "assets/wiki/lightningbolt-predictor.webp",
+            "t": "Reborn Fusion"
+          },
+          {
+            "n": "Azure Purifier",
+            "img": "assets/wiki/azure-purifier.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Mystical Thunder",
+            "img": "assets/wiki/mystical-thunder.webp",
+            "t": "Advanced Evolution"
+          },
+          {
+            "n": "Tesla Refuter",
+            "img": "assets/wiki/tesla-refuter.webp",
+            "t": "Evolved Reborn"
+          }
+        ],
+        "added": "5 April, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Pilotite Mine", 8],
+            ["Tesla Resetter", 6],
+            ["Lightningbolt Refiner", 6],
+            ["Quantum Ore Cleaner", 4],
+            ["Astral Predictor", 2]
+          ]
+        },
+        {
+          "label": "Wiki recipe 1",
+          "src": "wiki",
+          "items": [
+            ["Pilotite Mine", 11],
+            ["Quantum Ore Cleaner", 7],
+            ["Vortex Chamber", 4],
+            ["Lightningbolt Refiner", 4]
+          ]
+        },
+        {
+          "label": "Wiki recipe 2",
+          "src": "wiki",
+          "items": [
+            ["Pilotite Mine", 11],
+            ["Frozen Justice", 3],
+            ["Lightningbolt Refiner", 3],
+            ["Gate of Eclipse", 3],
+            ["The Grand Prism", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 3",
+          "src": "wiki",
+          "items": [
+            ["Frozen Justice", 8],
+            ["Tesla Resetter", 5],
+            ["Pilotite Mine", 4],
+            ["Lightningbolt Refiner", 3],
+            ["Quantum Ore Cleaner", 1],
+            ["Ore Supernova", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Daestrophe",
+      "img": "assets/wiki/daestrophe.webp",
+      "type": "Upgrader",
+      "el": [0, 45, 40, 95, 0, 145],
+      "eff": "Resets Machine tags · Resets Status effects · Multiplies ores by x100",
+      "quote": "Losing trust, ending friendship, and rage escalating. Right on the road to your sadness. Watching closely as your courage turns into madness.",
+      "life": "S+2000+",
+      "cat": {
+        "n": "Catalyst of Void",
+        "img": "assets/wiki/catalyst-of-void.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "The Fissure",
+            "img": "assets/wiki/the-fissure.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "The Daegelart",
+            "img": "assets/wiki/the-daegelart.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Overlord's Telamonster",
+            "img": "assets/wiki/overlord-s-telamonster.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Eternal Fracture",
+            "img": "assets/wiki/eternal-fracture.webp",
+            "t": "Reborn Fusion"
+          },
+          {
+            "n": "Void Drive",
+            "img": "assets/wiki/void-drive.webp",
+            "t": "Enchanted"
+          }
+        ],
+        "added": "5 April, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Nuclear Stronghold", 18],
+            ["Dreamer's Fright", 7],
+            ["Scorpium Mine", 7],
+            ["Plasma Scanner", 2],
+            ["Yunium Mine", 1]
+          ]
+        },
+        {
+          "label": "Common Reborns",
+          "src": "calc",
+          "items": [
+            ["Plasma Scanner", 13],
+            ["Dreamer's Fright", 10],
+            ["Toxic Waste Disposal", 10],
+            ["Yunium Mine", 4],
+            ["Flaming Schrodinger", 2]
+          ]
+        },
+        {
+          "label": "Wiki recipe 1",
+          "src": "wiki",
+          "items": [
+            ["Toxic Waste Disposal", 18],
+            ["Plasma Scanner", 10],
+            ["Scorching Heat", 8],
+            ["Yunium Mine", 2],
+            ["Scorpium Mine", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 2",
+          "src": "wiki",
+          "items": [
+            ["Toxic Waste Disposal", 18],
+            ["Plasma Scanner", 7],
+            ["Yunium Mine", 3],
+            ["Dragonglass Mine", 3],
+            ["Scorching Heat", 1],
+            ["Burst Refiner", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 3",
+          "src": "wiki",
+          "items": [
+            ["Dreamer's Fright", 13],
+            ["Plasma Scanner", 10],
+            ["Yunium Mine", 9],
+            ["Orbital Cataclysm", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 4",
+          "src": "wiki",
+          "items": [
+            ["Dreamer's Fright", 20],
+            ["Plasma Scanner", 6],
+            ["Scorpium Mine", 5],
+            ["Yunium Mine", 1],
+            ["Utopian Refiner", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Vulcan's Wrath",
+      "img": "assets/wiki/vulcan-s-wrath.webp",
+      "type": "Upgrader",
+      "el": [35, 0, 40, 125, 5, 55],
+      "eff": "Standalone: Multiplies ore value by 65x · Makes ores neon",
+      "quote": "After defeating Daegel, Vulcan created a volcano over where he won, to live at forever. Each eruption of this volcano is a symbol of his rage.",
+      "life": "S+3000+",
+      "cat": {
+        "n": "Catalyst of Fire",
+        "img": "assets/wiki/catalyst-of-fire.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Igneous Forge",
+            "img": "assets/wiki/igneous-forge.webp",
+            "t": "Advanced Reborn"
+          },
+          {
+            "n": "Searing Heat",
+            "img": "assets/wiki/searing-heat.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Spirit of Fire",
+            "img": "assets/wiki/spirit-of-fire.webp",
+            "t": "Advanced Reborn"
+          },
+          {
+            "n": "Firecrystallized System",
+            "img": "assets/wiki/firecrystallized-system.webp",
+            "t": "Reborn Fusion"
+          },
+          {
+            "n": "Vulcan's Destiny",
+            "img": "assets/wiki/vulcan-s-destiny.webp",
+            "t": "Advanced Evolution"
+          }
+        ],
+        "added": "12 April, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Scorpium Mine", 12],
+            ["Red Giant", 7],
+            ["Big Bad Blaster", 3],
+            ["Flaming Schrodinger", 2],
+            ["Tesla Resetter", 1],
+            ["Solar Flare", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 2",
+          "src": "wiki",
+          "items": [
+            ["Big Bad Blaster", 8],
+            ["Scorpium Mine", 8],
+            ["Dark Magic", 2],
+            ["Big Bertha", 1],
+            ["Incendium Mine", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 3",
+          "src": "wiki",
+          "items": [
+            ["Scorpium Mine", 10],
+            ["Big Bad Blaster", 5],
+            ["Nature's Grip", 2],
+            ["Tesla Resetter", 2],
+            ["Burst Refiner", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 4",
+          "src": "wiki",
+          "items": [
+            ["Scorpium Mine", 14],
+            ["Big Bad Blaster", 5],
+            ["Solar Flare", 2],
+            ["Ore Supernova", 1],
+            ["Big Bertha", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Midas Blaster",
+      "img": "assets/wiki/midas-blaster.webp",
+      "type": "Upgrader",
+      "el": [0, 0, 100, 50, 25, 25],
+      "eff": "Multiplies ore value by 36x to 123x · Upgrade multiplier increases by +1 per use · Sets ore on fire",
+      "quote": "Old tales follow the life of a king who turned everything he touched into gold, including those he loved. Dare risk everything you have just for a bit of cash? Upgrade Limit: 0.333s/upgrade",
+      "life": "S+3000+",
+      "cat": {
+        "n": "Catalyst of Fortune",
+        "img": "assets/wiki/catalyst-of-fortune.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "King Gold Mine",
+            "img": "assets/wiki/king-gold-mine.webp",
+            "t": "Rare Reborn"
+          },
+          {
+            "n": "Massive Diamond Drill",
+            "img": "assets/wiki/massive-diamond-drill.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Sage Justice",
+            "img": "assets/wiki/sage-justice.webp",
+            "t": "Reborn Fusion"
+          },
+          {
+            "n": "Coliseum Catharsis",
+            "img": "assets/wiki/coliseum-catharsis.webp",
+            "t": "Enchanted"
+          },
+          {
+            "n": "Sage King",
+            "img": "assets/wiki/sage-king.webp",
+            "t": "Evolved Reborn"
+          }
+        ],
+        "added": "12 April, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Crystallized System", 11],
+            ["Dreamer's Fright", 7],
+            ["Massive Diamond Mine", 5]
+          ]
+        },
+        {
+          "label": "Wiki recipe 4",
+          "src": "wiki",
+          "items": [
+            ["Crystallized System", 11],
+            ["Massive Diamond Mine", 6],
+            ["Oblivion Weaver", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 5",
+          "src": "wiki",
+          "items": [
+            ["Dreamer's Fright", 10],
+            ["Mineral Wheel", 5],
+            ["Scorpium Mine", 5],
+            ["Massive Diamond Mine", 2],
+            ["Pulsar Octagnium Mine", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 7",
+          "src": "wiki",
+          "items": [
+            ["Massive Diamond Mine", 11],
+            ["Scorpium Mine", 7],
+            ["Wild Spore", 7],
+            ["Atomium Mine", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 8",
+          "src": "wiki",
+          "items": [
+            ["Crystallized System", 11],
+            ["Dragonglass Mine", 7],
+            ["Massive Diamond Mine", 5]
+          ]
+        },
+        {
+          "label": "Wiki recipe 9",
+          "src": "wiki",
+          "items": [
+            ["Shard Park", 14],
+            ["Scorpium Mine", 9],
+            ["Eternal Journey", 1],
+            ["Big Bad Blaster", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Methuselah's Mask",
+      "img": "assets/wiki/methuselah-s-mask.webp",
+      "type": "Upgrader",
+      "el": [50, 50, 100, 50, 50, 150],
+      "eff": "Before Meralin's Sorcery/standalone: Multiplies ore value by x140 · Random status effect is applied (see Overview)",
+      "quote": "This mask is believed to contain the spirit of Methuselah. His necromantic powers are said to curse all which surround his mask.",
+      "life": "S+3,000+",
+      "cat": {
+        "n": "Catalyst of Necromancy",
+        "img": "assets/wiki/catalyst-of-necromancy.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "The Death Cap",
+            "img": "assets/wiki/the-death-cap.webp",
+            "t": "Superstitious"
+          },
+          {
+            "n": "Lord of Tenebrous",
+            "img": "assets/wiki/lord-of-tenebrous.webp",
+            "t": "Advanced Evolution"
+          },
+          {
+            "n": "Castle Bravo",
+            "img": "assets/wiki/castle-bravo.webp",
+            "t": "Advanced Evolution"
+          },
+          {
+            "n": "Tsar Bomba",
+            "img": "assets/wiki/tsar-bomba.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Son of Poison",
+            "img": "assets/wiki/son-of-poison.webp",
+            "t": "Advanced Reborn"
+          }
+        ],
+        "added": "3 July, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Ancient Temple", 17],
+            ["Dreamer's Fright", 11],
+            ["Nuclear Stronghold", 8],
+            ["Plasma Scanner", 6],
+            ["Big Bertha", 3],
+            ["Flaming Schrodinger", 2],
+            ["Ore Illuminator", 2],
+            ["Gate of Eclipse", 1],
+            ["Solar Flare", 1],
+            ["Invasive Cyberlord", 1]
+          ]
+        },
+        {
+          "label": "Common Reborns",
+          "src": "calc",
+          "items": [
+            ["Dreamer's Fright", 18],
+            ["Big Bertha", 14],
+            ["Mineral Wheel", 13],
+            ["Dreamer's Might", 4],
+            ["Plasma Scanner", 3],
+            ["Dark Magic", 2],
+            ["Sage Redeemer", 1],
+            ["Ore Illuminator", 1],
+            ["Scorpium Mine", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Elysium Solemnity",
+      "img": "assets/wiki/elysium-solemnity.webp",
+      "type": "Furnace",
+      "el": [65, 20, 15, 35, 130, 35],
+      "eff": "Processes ores at x200k value",
+      "quote": "The creator of reality, Solumn, is said to reside in a temple located in the center of the universe. But there has never been a documented sighting of him.",
+      "life": "S+3000+",
+      "cat": {
+        "n": "Catalyst of the Supreme",
+        "img": "assets/wiki/catalyst-of-the-supreme.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "True Overlord Device",
+            "img": "assets/wiki/true-overlord-device.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Aethereal Synthesizer",
+            "img": "assets/wiki/aethereal-synthesizer.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Final Eclipse Gate",
+            "img": "assets/wiki/final-eclipse-gate.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Crystal Altar",
+            "img": "assets/wiki/crystal-altar.webp",
+            "t": "Advanced Evolution"
+          },
+          {
+            "n": "Champion Infuser",
+            "img": "assets/wiki/champion-infuser.webp",
+            "t": "Enchanted"
+          }
+        ],
+        "added": "5 April, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["The Catalyst", 11],
+            ["Ore Illuminator", 11],
+            ["Ancient Temple", 10],
+            ["Atomium Mine", 2],
+            ["Breech Loader", 1]
+          ]
+        },
+        {
+          "label": "Common Reborns",
+          "src": "calc",
+          "items": [
+            ["Dreamer's Might", 14],
+            ["Big Bertha", 11],
+            ["Solar Flare", 7],
+            ["Ore Illuminator", 4],
+            ["Astral Predictor", 1],
+            ["Mineral Wheel", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Meralin's Sorcery",
+      "img": "assets/wiki/meralin-s-sorcery.webp",
+      "type": "Upgrader",
+      "el": [75, 75, 75, 75, 75, 75],
+      "eff": "Before Methuselah's Mask/standalone: Multiplies ores by 105x to 150x · Poisons ore",
+      "quote": "Upon being casted into an eternity of imprisonment, Meralin had casted a spell to try to combat Solumn, this sorcery is a portrayal of his power.",
+      "life": "S+4,000+",
+      "cat": {
+        "n": "Catalyst of Magic",
+        "img": "assets/wiki/catalyst-of-magic.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Forbidden Magic",
+            "img": "assets/wiki/forbidden-magic.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Mystical Thunder",
+            "img": "assets/wiki/mystical-thunder.webp",
+            "t": "Advanced Evolution"
+          },
+          {
+            "n": "Swag City",
+            "img": "assets/wiki/swag-city.webp",
+            "t": "Superstitious"
+          },
+          {
+            "n": "Methuselah's Mask",
+            "img": "assets/wiki/methuselah-s-mask.webp",
+            "t": "Superstitious"
+          },
+          {
+            "n": "Soul Blossom",
+            "img": "assets/wiki/soul-blossom.webp",
+            "t": "Rare Reborn"
+          }
+        ],
+        "added": "3 July, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Plasma Scanner", 21],
+            ["Ancient Temple", 17],
+            ["Sage Redeemer", 6],
+            ["Mineral Wheel", 3],
+            ["Nuclear Stronghold", 2],
+            ["Dreamer's Fright", 1],
+            ["Flaming Schrodinger", 1],
+            ["Ore Skillet", 1]
+          ]
+        },
+        {
+          "label": "Common Reborns",
+          "src": "calc",
+          "items": [
+            ["Mineral Wheel", 25],
+            ["Plasma Scanner", 16],
+            ["Big Bertha", 12],
+            ["Dark Magic", 2],
+            ["Dreamer's Fright", 1],
+            ["Newtonium Mine", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "SpookApocalypse-Ω",
+      "img": "assets/wiki/spookapocalypse.webp",
+      "type": "Dropper",
+      "el": [25, 35, 75, 100, -50, 200],
+      "eff": "Permanent Battle-Hardened tag · 10 seconds of Conqueror effect · Ores upgraded by Schrodinger have its multiplier doubled",
+      "quote": "A testament to the absolute rule that Loki has, proving himself to be the true being pulling the strings of the Horsemen's destruction. Be weary, as there is only pure chaos ahead for those who cross his path.",
+      "life": "S+5,000+",
+      "cat": {
+        "n": "Catalyst of Chaos",
+        "img": "assets/wiki/catalyst-of-chaos.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Conqueror's Delusion",
+            "img": "assets/wiki/conqueror-s-delusion.webp",
+            "t": "Enchanted"
+          },
+          {
+            "n": "Scales of Disparity",
+            "img": "assets/wiki/scales-of-disparity.webp",
+            "t": "Enchanted"
+          },
+          {
+            "n": "Airborne Pathogenic Spewer",
+            "img": "assets/wiki/airborne-pathogenic-spewer.webp",
+            "t": "Enchanted"
+          },
+          {
+            "n": "Doom Incarnate",
+            "img": "assets/wiki/doom-incarnate.webp",
+            "t": "Enchanted"
+          },
+          {
+            "n": "The Phantasm",
+            "img": "assets/wiki/the-phantasm.webp",
+            "t": "Phantasmal"
+          }
+        ],
+        "added": "29 October, 2025"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Dreamer's Fright", 26],
+            ["Plasma Scanner", 10],
+            ["Toxic Waste Disposal", 4],
+            ["Big Bertha", 2],
+            ["Nuclear Stronghold", 2],
+            ["Yunium Mine", 1],
+            ["Sage Redeemer", 1],
+            ["Ancient Temple", 1],
+            ["Atlantic Monolith", 1]
+          ]
+        },
+        {
+          "label": "Common Reborns",
+          "src": "calc",
+          "items": [
+            ["Dreamer's Fright", 28],
+            ["Plasma Scanner", 11],
+            ["Sage Redeemer", 4],
+            ["Toxic Waste Disposal", 4],
+            ["Big Bertha", 1],
+            ["Lightningbolt Refiner", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 1",
+          "src": "wiki",
+          "items": [
+            ["Dreamer's Fright", 38],
+            ["Yunium Mine", 7],
+            ["The Catalyst", 7],
+            ["Blind Justice", 5]
+          ]
+        },
+        {
+          "label": "Wiki recipe 2",
+          "src": "wiki",
+          "items": [
+            ["The Abomination", 25],
+            ["Plasma Scanner", 15],
+            ["Scorching Heat", 10],
+            ["Sage Redeemer", 5]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Havium Mine",
+      "img": "assets/wiki/havium-mine.webp",
+      "type": "Dropper",
+      "el": [40, 0, 130, 25, 50, 0],
+      "eff": "Bonus attributes to ores: Immune to Poison, Radiation, and Frostbite · 3 shields that protect against destruction",
+      "quote": "Born underground, grown inside a rocky womb. The earth is our cradle; the mountains shall become our tomb. Face us on the battlefield; you will meet your doom. We do not fear what lies beneath. We can never dig too deep.",
+      "life": "S+5000+",
+      "cat": {
+        "n": "Catalyst of Earth",
+        "img": "assets/wiki/catalyst-of-earth.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Yuttrium Mine",
+            "img": "assets/wiki/yuttrium-mine.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Symmetryte Mine",
+            "img": "assets/wiki/symmetryte-mine.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Yuntonium Mine",
+            "img": "assets/wiki/yuntonium-mine.webp",
+            "t": "Reborn Fusion"
+          },
+          {
+            "n": "Solarium Mine",
+            "img": "assets/wiki/solarium-mine.webp",
+            "t": "Advanced Evolution"
+          },
+          {
+            "n": "Gargantium Mine",
+            "img": "assets/wiki/gargantium-mine.webp",
+            "t": "Enchanted"
+          }
+        ],
+        "added": "5 April, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Nature's Grip", 14],
+            ["Massive Diamond Mine", 9],
+            ["Mineral Wheel", 3]
+          ]
+        },
+        {
+          "label": "Wiki recipe 1",
+          "src": "wiki",
+          "items": [
+            ["Shard Park", 11],
+            ["Massive Diamond Mine", 9],
+            ["Nature's Grip", 6]
+          ]
+        },
+        {
+          "label": "Wiki recipe 2",
+          "src": "wiki",
+          "items": [
+            ["Nature's Grip", 9],
+            ["Massive Diamond Mine", 7],
+            ["Tesla Resetter", 2],
+            ["Solar Flare", 1],
+            ["Behemoth Blossom", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 4",
+          "src": "wiki",
+          "items": [
+            ["Mineral Wheel", 11],
+            ["Nature's Grip", 10],
+            ["Dreamer's Might", 2],
+            ["Incendium Mine", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Optic Origin",
+      "img": "assets/wiki/optic-origin.webp",
+      "type": "Upgrader",
+      "el": [50, 0, 0, 25, 100, 25],
+      "eff": "Upgrades based on material and time of day: Forcefield: x400 + ignition · Neon: x300",
+      "quote": "In the beginning, a light sparked and the universe lit up. Giving birth to dust, into rocks, into planets, into stars, into galaxies. Such power can work wonders to your ore.",
+      "life": "S+5000+",
+      "cat": {
+        "n": "Catalyst of Light",
+        "img": "assets/wiki/catalyst-of-light.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Morning Star",
+            "img": "assets/wiki/morning-star.webp",
+            "t": "Reborn"
+          },
+          {
+            "n": "Neutron Star",
+            "img": "assets/wiki/neutron-star.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Catalyzed Star",
+            "img": "assets/wiki/catalyzed-star.webp",
+            "t": "Reborn Fusion"
+          },
+          {
+            "n": "Ore Nova",
+            "img": "assets/wiki/ore-nova.webp",
+            "t": "Advanced Fusion"
+          },
+          {
+            "n": "Void Star",
+            "img": "assets/wiki/void-star.webp",
+            "t": "Advanced Evolution"
+          }
+        ],
+        "added": "5 April, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Ore Illuminator", 11],
+            ["The Catalyst", 5],
+            ["Quaint Skymill", 5],
+            ["Clockwork", 1]
+          ]
+        },
+        {
+          "label": "Common Reborns",
+          "src": "calc",
+          "items": [
+            ["Ore Illuminator", 18],
+            ["Solar Flare", 5]
+          ]
+        },
+        {
+          "label": "Wiki recipe 1",
+          "src": "wiki",
+          "items": [
+            ["Ore Illuminator", 16],
+            ["The Catalyst", 5],
+            ["Tesla Resetter", 2]
+          ]
+        },
+        {
+          "label": "Wiki recipe 2",
+          "src": "wiki",
+          "items": [
+            ["Ore Illuminator", 5],
+            ["Solar Flare", 5],
+            ["Tesla Resetter", 5],
+            ["Neutropian Refiner", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 3",
+          "src": "wiki",
+          "items": [
+            ["Ore Illuminator", 8],
+            ["Big Bad Blaster", 4],
+            ["Tesla Resetter", 2],
+            ["Big Bertha", 1],
+            ["Solar Flare", 1],
+            ["Pulsar Octagnium Mine", 1]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "The Hourglass",
+      "img": "assets/wiki/the-hourglass.webp",
+      "type": "Upgrader",
+      "el": [200, 50, 50, 50, 200, 100],
+      "eff": "Base multiplier of x90 · Multiplier increased by +1 per second · (Item has to be placed down)",
+      "quote": "This construct was believed to be used by Kromos. Of course this isn't his exact hourglass, but a mortal like you couldn't understand the immense value each grain of sand contains.",
+      "life": "S+5,000+",
+      "cat": {
+        "n": "Catalyst of Time",
+        "img": "assets/wiki/catalyst-of-time.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Grandfather Clockwork",
+            "img": "assets/wiki/grandfather-clockwork.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Interstellar Conqueror",
+            "img": "assets/wiki/interstellar-conqueror.webp",
+            "t": "Rare Reborn"
+          },
+          {
+            "n": "Temporal Enchantment",
+            "img": "assets/wiki/temporal-enchantment.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "Temporal Armageddon",
+            "img": "assets/wiki/temporal-armageddon.webp",
+            "t": "Evolved Reborn"
+          },
+          {
+            "n": "The Trinity",
+            "img": "assets/wiki/the-trinity.webp",
+            "t": "Enchanted"
+          }
+        ],
+        "added": "12 June, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Ancient Temple", 25],
+            ["Ore Illuminator", 12],
+            ["Quantum Ore Cleaner", 11],
+            ["Plasma Scanner", 11],
+            ["Solar Flare", 8],
+            ["Big Bertha", 5],
+            ["Tesla Resetter", 2],
+            ["Scorpium Mine", 1]
+          ]
+        },
+        {
+          "label": "Common Reborns",
+          "src": "calc",
+          "items": [
+            ["Big Bertha", 25],
+            ["Mineral Wheel", 18],
+            ["Tesla Resetter", 13],
+            ["Solar Flare", 11],
+            ["Dreamer's Might", 6],
+            ["Frozen Justice", 5],
+            ["Quantum Ore Cleaner", 2],
+            ["Astral Predictor", 1],
+            ["Plasma Scanner", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 1",
+          "src": "wiki",
+          "items": [
+            ["Dark Magic", 24],
+            ["Solar Flare", 17],
+            ["Mineral Wheel", 14],
+            ["Clockwork", 11],
+            ["Cooling Chamber", 9],
+            ["Dreamer's Might", 7],
+            ["Green Tea Latte", 2]
+          ]
+        }
+      ]
+    },
+    {
+      "n": "Ore Hypernova",
+      "img": "assets/wiki/ore-hypernova.webp",
+      "type": "Upgrader",
+      "el": [200, 0, 10, 50, 25, 100],
+      "eff": "Multiplies ore value by 1500x · Gives ore sparkles",
+      "quote": "The Ore Supernova once proved to be the king of all spacial entities. But beyond our vision was the Ore Hypernova, believe to be so chaotic that it melts time and space around it.",
+      "life": "S+10,000+",
+      "cat": {
+        "n": "Catalyst of Space",
+        "img": "assets/wiki/catalyst-of-space.webp",
+        "items": [
+          {
+            "n": "True Book of Knowledge",
+            "img": "assets/wiki/true-book-of-knowledge.webp",
+            "t": "Ultimate"
+          },
+          {
+            "n": "Optic Origin",
+            "img": "assets/wiki/optic-origin.webp",
+            "t": "Superstitious"
+          },
+          {
+            "n": "Blue Supergiant",
+            "img": "assets/wiki/blue-supergiant.webp",
+            "t": "Advanced Reborn"
+          },
+          {
+            "n": "Aurora Borealis",
+            "img": "assets/wiki/aurora-borealis.webp",
+            "t": "Advanced Evolution"
+          },
+          {
+            "n": "Stardust Pulsar",
+            "img": "assets/wiki/stardust-pulsar.webp",
+            "t": "Advanced Reborn"
+          },
+          {
+            "n": "Stellarite Mine",
+            "img": "assets/wiki/stellarite-mine.webp",
+            "t": "Rare Reborn"
+          }
+        ],
+        "added": "20 May, 2020"
+      },
+      "recipes": [
+        {
+          "label": "Fewest items",
+          "src": "calc",
+          "items": [
+            ["Tesla Resetter", 32],
+            ["Red Giant", 9],
+            ["Eternal Journey", 3],
+            ["Big Bad Blaster", 1],
+            ["Phase Refiner", 1]
+          ]
+        },
+        {
+          "label": "Common Reborns",
+          "src": "calc",
+          "items": [
+            ["Tesla Resetter", 35],
+            ["Big Bad Blaster", 7],
+            ["Red Giant", 2],
+            ["Eternal Journey", 1],
+            ["Nature's Grip", 1],
+            ["Scorpium Mine", 1]
+          ]
+        },
+        {
+          "label": "Wiki recipe 2",
+          "src": "wiki",
+          "items": [
+            ["Tesla Resetter", 28],
+            ["Big Bad Blaster", 5],
+            ["Dreamer's Fright", 4],
+            ["Ore Supernova", 1]
+          ]
+        }
+      ]
+    }
+  ],
+  "pool": [
+    {
+      "n": "Massive Diamond Mine",
+      "img": "assets/wiki/massive-diamond-mine.webp",
+      "t": "Reborn",
+      "r": 15,
+      "life": "0+",
+      "el": [0, 0, 5, 3, 2, -2]
+    },
+    {
+      "n": "Dreamer's Fright",
+      "img": "assets/wiki/dreamer-s-fright.webp",
+      "t": "Reborn",
+      "r": 18,
+      "life": "20+",
+      "el": [0, 0, 3, 2, -2, 5]
+    },
+    {
+      "n": "Tesla Resetter",
+      "img": "assets/wiki/tesla-resetter.webp",
+      "t": "Reborn",
+      "r": 18,
+      "life": "10+",
+      "el": [5, -2, 0, 0, 3, 2]
+    },
+    {
+      "n": "Big Bertha",
+      "img": "assets/wiki/big-bertha.webp",
+      "t": "Reborn",
+      "r": 19,
+      "life": "20+",
+      "el": [3, 0, -2, 0, 2, 5]
+    },
+    {
+      "n": "Big Bad Blaster",
+      "img": "assets/wiki/big-bad-blaster.webp",
+      "t": "Reborn",
+      "r": 18,
+      "life": "10+",
+      "el": [2, -2, 0, 5, 0, 3]
+    },
+    {
+      "n": "The Catalyst",
+      "img": "assets/wiki/the-catalyst.webp",
+      "t": "Reborn",
+      "r": 12,
+      "life": "5+",
+      "el": [2, 0, -2, 5, 3, 0]
+    },
+    {
+      "n": "Flaming Schrodinger",
+      "img": "assets/wiki/flaming-schrodinger-hd.webp",
+      "t": "Reborn",
+      "r": 16,
+      "life": "5+",
+      "el": [0, -2, 2, 5, 0, 3]
+    },
+    {
+      "n": "Lightningbolt Refiner",
+      "img": "assets/wiki/lightningbolt-refiner-hd.webp",
+      "t": "Reborn",
+      "r": 18,
+      "life": "20+",
+      "el": [5, 3, 0, -2, 0, 2]
+    },
+    {
+      "n": "Frozen Justice",
+      "img": "assets/wiki/frozen-justice.webp",
+      "t": "Reborn",
+      "r": 15,
+      "life": "0+",
+      "el": [2, 5, 0, -2, 3, 0]
+    },
+    {
+      "n": "Atomium Mine",
+      "img": "assets/wiki/atomium-mine.webp",
+      "t": "Reborn",
+      "r": 12,
+      "life": "100+",
+      "el": [-2, 0, 3, 0, 5, 2]
+    },
+    {
+      "n": "Clockwork",
+      "img": "assets/wiki/clockwork.webp",
+      "t": "Reborn",
+      "r": 8,
+      "life": "10+",
+      "el": [3, 0, -2, 0, 5, 2]
+    },
+    {
+      "n": "Eternal Journey",
+      "img": "assets/wiki/eternal-journey.webp",
+      "t": "Reborn",
+      "r": 10,
+      "life": "100+",
+      "el": [2, 0, 3, 0, -2, 5]
+    },
+    {
+      "n": "The Fracture",
+      "img": "assets/wiki/the-fracture.webp",
+      "t": "Reborn",
+      "r": 4,
+      "life": "20+",
+      "el": [2, 0, 3, 0, -2, 5]
+    },
+    {
+      "n": "Gate of Eclipse",
+      "img": "assets/wiki/guys-its-a-door-not-a-gate-are-you-blind.webp",
+      "t": "Reborn",
+      "r": 15,
+      "life": "100+",
+      "el": [2, 0, 0, -2, 3, 5]
+    },
+    {
+      "n": "Yunium Mine",
+      "img": "assets/wiki/yunium-mine.webp",
+      "t": "Reborn",
+      "r": 17,
+      "life": "10+",
+      "el": [2, 5, 3, 0, -2, 0]
+    },
+    {
+      "n": "Sage Redeemer",
+      "img": "assets/wiki/sage-redeemer.webp",
+      "t": "Reborn",
+      "r": 15,
+      "life": "0+",
+      "el": [0, 5, 2, -2, 3, 0]
+    },
+    {
+      "n": "Solar Flare",
+      "img": "assets/wiki/solar-flare.webp",
+      "t": "Reborn",
+      "r": 18,
+      "life": "50+",
+      "el": [3, -2, 0, 5, 2, 0]
+    },
+    {
+      "n": "Newtonium Mine",
+      "img": "assets/wiki/newtonium-mine.webp",
+      "t": "Reborn",
+      "r": 18,
+      "life": "20+",
+      "el": [2, 0, 3, -2, 0, 5]
+    },
+    {
+      "n": "Nature's Grip",
+      "img": "assets/wiki/nature-s-grip.webp",
+      "t": "Reborn",
+      "r": 15,
+      "life": "0+",
+      "el": [3, 0, 5, 0, 2, -2]
+    },
+    {
+      "n": "Righteous Will",
+      "img": "assets/wiki/righteous-will.webp",
+      "t": "Reborn",
+      "r": 6,
+      "life": "5+",
+      "el": [3, 0, 2, 0, 5, -2]
+    },
+    {
+      "n": "Ore Illuminator",
+      "img": "assets/wiki/ore-illuminator.webp",
+      "t": "Reborn",
+      "r": 15,
+      "life": "5+",
+      "el": [2, 0, -2, 0, 5, 3]
+    },
+    {
+      "n": "Dark Magic",
+      "img": "assets/wiki/dark-magic.webp",
+      "t": "Reborn",
+      "r": 18,
+      "life": "100+",
+      "el": [3, 0, 0, -2, 2, 5]
+    },
+    {
+      "n": "Dreamer's Might",
+      "img": "assets/wiki/dreamer-s-might-high-quality.webp",
+      "t": "Reborn",
+      "r": 15,
+      "life": "20+",
+      "el": [0, 2, 3, 0, 5, -2]
+    },
+    {
+      "n": "Sword God Shrine",
+      "img": "assets/wiki/sword-god-shrine-hd.webp",
+      "t": "Advanced Reborn",
+      "r": 1,
+      "life": "800+",
+      "el": [5, 0, 0, 3, -5, 10]
+    },
+    {
+      "n": "Quantum Ore Cleaner",
+      "img": "assets/wiki/quantum-ore-cleaner.webp",
+      "t": "Reborn",
+      "r": 15,
+      "life": "0+",
+      "el": [5, 2, -2, 0, 3, 0]
+    },
+    {
+      "n": "Dystopian Refiner",
+      "img": "assets/wiki/dystopian-refiner.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "2+",
+      "el": [10, 0, -20, 20, 0, 50]
+    },
+    {
+      "n": "Utopian Refiner",
+      "img": "assets/wiki/utopian-refiner.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "2+",
+      "el": [10, 50, -20, 0, 10, 20]
+    },
+    {
+      "n": "Pulsar Octagnium Mine",
+      "img": "assets/wiki/pulsar-octagnium-mine.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "2+",
+      "el": [10, 0, 20, 0, 50, -20]
+    },
+    {
+      "n": "Incendium Mine",
+      "img": "assets/wiki/incendium-mine.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "2+",
+      "el": [10, -20, 20, 50, 0, 0]
+    },
+    {
+      "n": "Dreamer's Anguish",
+      "img": "assets/wiki/dreamer-s-anguish.webp",
+      "t": "Reborn",
+      "r": 3,
+      "life": "200+",
+      "el": [0, 0, 3, 2, -2, 5]
+    },
+    {
+      "n": "Dragonglass Mine",
+      "img": "assets/wiki/dragonglass-mine.webp",
+      "t": "Reborn",
+      "r": 8,
+      "life": "100+",
+      "el": [0, 0, 3, 2, -2, 5]
+    },
+    {
+      "n": "Northern Lights",
+      "img": "assets/wiki/northern-lights.webp",
+      "t": "Advanced Reborn",
+      "r": 1,
+      "life": "2,000+",
+      "el": [5, 10, 0, -5, 3, 0]
+    },
+    {
+      "n": "The Great Parasite",
+      "img": "assets/wiki/the-great-parasite.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "2+",
+      "el": [10, 0, 20, 0, -20, 40]
+    },
+    {
+      "n": "Blind Justice",
+      "img": "assets/wiki/blind-justice.webp",
+      "t": "Reborn",
+      "r": 7,
+      "life": "100+",
+      "el": [0, 0, 3, -2, 5, 2]
+    },
+    {
+      "n": "Wild Spore",
+      "img": "assets/wiki/wild-spore.webp",
+      "t": "Reborn",
+      "r": 17,
+      "life": "0+",
+      "el": [2, 0, 3, -2, 0, 5]
+    },
+    {
+      "n": "Ancient Temple",
+      "img": "assets/wiki/ancient-temple.webp",
+      "t": "Reborn",
+      "r": 7,
+      "life": "5+",
+      "el": [2, 2, 5, -2, 3, 0]
+    },
+    {
+      "n": "Scorpium Mine",
+      "img": "assets/wiki/scorpium-mine.webp",
+      "t": "Reborn",
+      "r": 17,
+      "life": "20+",
+      "el": [0, -2, 3, 5, 0, 2]
+    },
+    {
+      "n": "Azure Refiner",
+      "img": "assets/wiki/azure-refiner.webp",
+      "t": "Reborn",
+      "r": 15,
+      "life": "5+",
+      "el": [0, 3, 5, -2, 2, 0]
+    },
+    {
+      "n": "Symmetrium Mine",
+      "img": "assets/wiki/symmetrium-mine.webp",
+      "t": "Reborn",
+      "r": 10,
+      "life": "300+",
+      "el": [0, 5, 3, -2, 2, 0]
+    },
+    {
+      "n": "Morning Star",
+      "img": "assets/wiki/morning-star.webp",
+      "t": "Reborn",
+      "r": 14,
+      "life": "250+",
+      "el": [3, -2, 0, 5, 0, 2]
+    },
+    {
+      "n": "Dragon Blaster",
+      "img": "assets/wiki/dragon-blaster.webp",
+      "t": "Advanced Reborn",
+      "r": 3,
+      "life": "500+",
+      "el": [3, -5, 0, 10, 0, 5]
+    },
+    {
+      "n": "Astral Predictor",
+      "img": "assets/wiki/astral-predictor.webp",
+      "t": "Reborn",
+      "r": 15,
+      "life": "0+",
+      "el": [5, 3, -2, 0, 2, 0]
+    },
+    {
+      "n": "Breech Loader",
+      "img": "assets/wiki/breech-loader.webp",
+      "t": "Reborn",
+      "r": 8,
+      "life": "500+",
+      "el": [5, 0, 3, 0, 2, -2]
+    },
+    {
+      "n": "Aether Refinery",
+      "img": "assets/wiki/aether-refinery.webp",
+      "t": "Reborn",
+      "r": 5,
+      "life": "300+",
+      "el": [5, 0, 2, 0, 3, -2]
+    },
+    {
+      "n": "Ore Supernova",
+      "img": "assets/wiki/ore-supernova.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "2+",
+      "el": [50, -20, 0, 20, 0, 10]
+    },
+    {
+      "n": "Nature's Enchantment",
+      "img": "assets/wiki/nature-s-enchantment.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "2+",
+      "el": [10, 20, 50, -20, 0, 0]
+    },
+    {
+      "n": "Burst Refiner",
+      "img": "assets/wiki/burst-refiner.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "2+",
+      "el": [10, -20, 0, 50, 0, 20]
+    },
+    {
+      "n": "Sakura Garden",
+      "img": "assets/wiki/sakura-garden.webp",
+      "t": "Reborn",
+      "r": 3,
+      "life": "350+",
+      "el": [2, 3, 5, -2, 0, 0]
+    },
+    {
+      "n": "Crystallized System",
+      "img": "assets/wiki/crystallized-system.webp",
+      "t": "Reborn",
+      "r": 12,
+      "life": "600+",
+      "el": [0, -2, 5, 2, 3, 0]
+    },
+    {
+      "n": "The Grand Prism",
+      "img": "assets/wiki/the-grand-prism.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "2+",
+      "el": [50, 0, -20, 20, 10, 0]
+    },
+    {
+      "n": "Green Tea Latte",
+      "img": "assets/wiki/green-tea-latte.webp",
+      "t": "Reborn",
+      "r": 10,
+      "life": "20+",
+      "el": [0, 5, 3, -2, 0, 2]
+    },
+    {
+      "n": "Ambrosia Fountain",
+      "img": "assets/wiki/ambrosia-fountain.webp",
+      "t": "Reborn",
+      "r": 7,
+      "life": "150+",
+      "el": [5, 2, 3, -2, 0, 0]
+    },
+    {
+      "n": "Igneous Forge",
+      "img": "assets/wiki/igneous-forge.webp",
+      "t": "Advanced Reborn",
+      "r": 3,
+      "life": "1000+",
+      "el": [0, -5, 5, 10, 0, 3]
+    },
+    {
+      "n": "Phase Processor",
+      "img": "assets/wiki/phase-processor.webp",
+      "t": "Reborn",
+      "r": 7,
+      "life": "450+",
+      "el": [5, -2, 2, 0, 3, 0]
+    },
+    {
+      "n": "Arcane Lightning",
+      "img": "assets/wiki/arcane-lightning.webp",
+      "t": "Advanced Reborn",
+      "r": 3,
+      "life": "2,000+",
+      "el": [10, 5, 0, -5, 0, 3]
+    },
+    {
+      "n": "Vampire Spore",
+      "img": "assets/wiki/vampire-spore.webp",
+      "t": "Advanced Reborn",
+      "r": 1,
+      "life": "500+",
+      "el": [0, -5, 3, 5, 0, 10]
+    },
+    {
+      "n": "Virtual Enhancer",
+      "img": "assets/wiki/virtual-enhancer.webp",
+      "t": "Advanced Reborn",
+      "r": 3,
+      "life": "1,000+",
+      "el": [3, 0, 5, 0, 10, -5]
+    },
+    {
+      "n": "Nova Star",
+      "img": "assets/wiki/nova-star.webp",
+      "t": "Advanced Reborn",
+      "r": 3,
+      "life": "5,000+",
+      "el": [5, -5, 0, 10, 0, 3]
+    },
+    {
+      "n": "Crystal Shrine",
+      "img": "assets/wiki/crystal-shrine.webp",
+      "t": "Advanced Reborn",
+      "r": 1,
+      "life": "3,000+",
+      "el": [-5, 0, 10, 3, 5, 0]
+    },
+    {
+      "n": "Vulcan's Grasp",
+      "img": "assets/wiki/vulcan-s-grasp.webp",
+      "t": "Advanced Reborn",
+      "r": 1,
+      "life": "500+",
+      "el": [3, -5, 0, 10, 5, 0]
+    },
+    {
+      "n": "Precursor Mine",
+      "img": "assets/wiki/precursor-mine.webp",
+      "t": "Advanced Reborn",
+      "r": 3,
+      "life": "500+",
+      "el": [10, 0, 0, -5, 5, 3]
+    },
+    {
+      "n": "Precursor Furnace",
+      "img": "assets/wiki/precursor-furnace.webp",
+      "t": "Advanced Reborn",
+      "r": 3,
+      "life": "500+",
+      "el": [10, 0, 0, -5, 5, 3]
+    },
+    {
+      "n": "Timeless Enhancement",
+      "img": "assets/wiki/timeless-enhancement.webp",
+      "t": "Reborn",
+      "r": 7,
+      "life": "150+",
+      "el": [2, 0, 3, 0, 5, -2]
+    },
+    {
+      "n": "Scorching Heat",
+      "img": "assets/wiki/scorching-heat.webp",
+      "t": "Reborn",
+      "r": 10,
+      "life": "20+",
+      "el": [0, -2, 2, 5, 0, 3]
+    },
+    {
+      "n": "Guardian of the Gate",
+      "img": "assets/wiki/guardian-of-the-gate.webp",
+      "t": "Reborn",
+      "r": 5,
+      "life": "250+",
+      "el": [0, 0, 3, -2, 5, 2]
+    },
+    {
+      "n": "Venomshank",
+      "img": "assets/wiki/venomshank.webp",
+      "t": "Reborn",
+      "r": 3,
+      "life": "5+",
+      "el": [0, 2, 3, 0, -2, 5]
+    },
+    {
+      "n": "Industrial Firecrystal Mine",
+      "img": "assets/wiki/helping-erik-firecrystal-dlc.webp",
+      "t": "Reborn",
+      "r": 15,
+      "life": "0+",
+      "el": [0, -2, 3, 5, 0, 2]
+    },
+    {
+      "n": "Stardust Pulsar",
+      "img": "assets/wiki/stardust-pulsar.webp",
+      "t": "Advanced Reborn",
+      "r": 2,
+      "life": "600+",
+      "el": [10, -5, 0, 5, 0, 3]
+    },
+    {
+      "n": "Pilotite Mine",
+      "img": "assets/wiki/pilotite-mine.webp",
+      "t": "Reborn",
+      "r": 13,
+      "life": "200+",
+      "el": [5, 0, 3, -2, 2, 0]
+    },
+    {
+      "n": "Gravitational Gearwork",
+      "img": "assets/wiki/gravitational-gearwork.webp",
+      "t": "Reborn",
+      "r": 13,
+      "life": "800+",
+      "el": [5, 0, -2, 2, 3, 0]
+    },
+    {
+      "n": "Frigid Dystopia",
+      "img": "assets/wiki/frigid-dystopia.webp",
+      "t": "Advanced Reborn",
+      "r": 3,
+      "life": "500+",
+      "el": [3, 10, 0, -5, 0, 5]
+    },
+    {
+      "n": "The Abomination",
+      "img": "assets/wiki/the-abomination.webp",
+      "t": "Reborn",
+      "r": 8,
+      "life": "500+",
+      "el": [0, 2, 3, 0, -2, 5]
+    },
+    {
+      "n": "Black Dwarf",
+      "img": "assets/wiki/black-dwarf.webp",
+      "t": "Advanced Reborn",
+      "r": 3,
+      "life": "2,000+",
+      "el": [5, 0, 3, -5, 0, 10]
+    },
+    {
+      "n": "Blue Supergiant",
+      "img": "assets/wiki/blue-supergiant.webp",
+      "t": "Advanced Reborn",
+      "r": 2,
+      "life": "10,000+",
+      "el": [5, -5, 0, 10, 0, 3]
+    },
+    {
+      "n": "Red Giant",
+      "img": "assets/wiki/red-giant.webp",
+      "t": "Reborn",
+      "r": 14,
+      "life": "1,000+",
+      "el": [3, -2, 0, 5, 0, 2]
+    },
+    {
+      "n": "Pizza Blaster",
+      "img": "assets/wiki/pizza-blaster.webp",
+      "t": "Reborn",
+      "r": 15,
+      "life": "0+",
+      "el": [3, -2, 0, 5, 2, 0]
+    },
+    {
+      "n": "Hades' Palace",
+      "img": "assets/wiki/hades-palace.webp",
+      "t": "Advanced Reborn",
+      "r": 3,
+      "life": "666+",
+      "el": [0, -5, 0, 10, 3, 5]
+    },
+    {
+      "n": "Palladium Drill",
+      "img": "assets/wiki/palladium-drill.webp",
+      "t": "Advanced Reborn",
+      "r": 2,
+      "life": "1,000+",
+      "el": [0, -5, 10, 3, 0, 5]
+    },
+    {
+      "n": "Oblivion Weaver",
+      "img": "assets/wiki/oblivion-weaver.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "2+",
+      "el": [0, 0, 20, 10, -20, 50]
+    },
+    {
+      "n": "Mineral Wheel",
+      "img": "assets/wiki/mineral-wheel.webp",
+      "t": "Reborn",
+      "r": 17,
+      "life": "10+",
+      "el": [0, 3, 5, 0, 2, -2]
+    },
+    {
+      "n": "Ore Sawmill",
+      "img": "assets/wiki/ore-sawmill.webp",
+      "t": "Reborn",
+      "r": 10,
+      "life": "5+",
+      "el": [2, 0, 0, -2, 3, 5]
+    },
+    {
+      "n": "Invasive Cyberlord",
+      "img": "assets/wiki/invasive-cyberlord.webp",
+      "t": "Reborn",
+      "r": 10,
+      "life": "400+",
+      "el": [2, -2, 0, 3, 0, 5]
+    },
+    {
+      "n": "Dreamer's Blight",
+      "img": "assets/wiki/dreamer-s-blight.webp",
+      "t": "Advanced Reborn",
+      "r": 2,
+      "life": "2000+",
+      "el": [0, 5, 3, 0, -5, 10]
+    },
+    {
+      "n": "Son of Poison",
+      "img": "assets/wiki/son-of-poison.webp",
+      "t": "Advanced Reborn",
+      "r": 2,
+      "life": "3000+",
+      "el": [-5, 3, 5, 0, 0, 10]
+    },
+    {
+      "n": "Father of Freon",
+      "img": "assets/wiki/father-of-freon.webp",
+      "t": "Advanced Reborn",
+      "r": 2,
+      "life": "1000+",
+      "el": [5, 10, 0, -5, 0, 3]
+    },
+    {
+      "n": "Spirit of Fire",
+      "img": "assets/wiki/spirit-of-fire.webp",
+      "t": "Advanced Reborn",
+      "r": 2,
+      "life": "3000+",
+      "el": [3, -5, 0, 10, 0, 5]
+    },
+    {
+      "n": "Behemoth Blossom",
+      "img": "assets/wiki/behemoth-blossom.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "",
+      "el": [0, 20, 50, 0, 10, -20]
+    },
+    {
+      "n": "Shard Park",
+      "img": "assets/wiki/shard-park.webp",
+      "t": "Reborn",
+      "r": 9,
+      "life": "800+",
+      "el": [2, -2, 5, 0, 3, 0]
+    },
+    {
+      "n": "Apollium Mine",
+      "img": "assets/wiki/apollium-mine.webp",
+      "t": "Advanced Reborn",
+      "r": 1,
+      "life": "5000+",
+      "el": [5, -5, 0, 10, 0, 3]
+    },
+    {
+      "n": "Atlantic Monolith",
+      "img": "assets/wiki/atlantic-monolith.webp",
+      "t": "Reborn",
+      "r": 10,
+      "life": "100+",
+      "el": [0, 5, 3, -2, 2, 0]
+    },
+    {
+      "n": "Plasma Scanner",
+      "img": "assets/wiki/plasma-scanner.webp",
+      "t": "Reborn",
+      "r": 19,
+      "life": "20+",
+      "el": [2, 0, -2, 5, 0, 3]
+    },
+    {
+      "n": "Newtonic Corroder",
+      "img": "assets/wiki/newtonic-corroder.webp",
+      "t": "Reborn",
+      "r": 10,
+      "life": "1,000+",
+      "el": [0, 2, 3, -2, 0, 5]
+    },
+    {
+      "n": "Vortex Chamber",
+      "img": "assets/wiki/vortex-chamber.webp",
+      "t": "Reborn",
+      "r": 15,
+      "life": "0+",
+      "el": [5, 0, -2, 0, 2, 3]
+    },
+    {
+      "n": "Toxic Waste Disposal",
+      "img": "assets/wiki/toxic-waste-disposal.webp",
+      "t": "Reborn",
+      "r": 13,
+      "life": "100+",
+      "el": [0, 3, 2, 0, -2, 5]
+    },
+    {
+      "n": "Suitopian Refiner",
+      "img": "assets/wiki/suitopian-refiner.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "",
+      "el": [50, 0, -20, 10, 0, 20]
+    },
+    {
+      "n": "Neutropian Refiner",
+      "img": "assets/wiki/neutropian-refiner.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "",
+      "el": [10, 20, -20, 0, 50, 0]
+    },
+    {
+      "n": "Orbital Cataclysm",
+      "img": "assets/wiki/orbital-cataclysm.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "2+",
+      "el": [10, 0, 0, 20, -20, 50]
+    },
+    {
+      "n": "Phase Refiner",
+      "img": "assets/wiki/phase-refiner.webp",
+      "t": "Reborn",
+      "r": 7,
+      "life": "200+",
+      "el": [5, -2, 2, 0, 3, 0]
+    },
+    {
+      "n": "Cooling Chamber",
+      "img": "assets/wiki/cooling-chamber.webp",
+      "t": "Reborn",
+      "r": 8,
+      "life": "100+",
+      "el": [5, 2, -2, 3, 0, 0]
+    },
+    {
+      "n": "Fractured Reality",
+      "img": "assets/wiki/fractured-reality.webp",
+      "t": "Reborn",
+      "r": 5,
+      "life": "750+",
+      "el": [1, 0, 0, -2, 5, 3]
+    },
+    {
+      "n": "Railgun Cannon",
+      "img": "assets/wiki/railgun-cannon.webp",
+      "t": "Advanced Reborn",
+      "r": 2,
+      "life": "8,000+",
+      "el": [3, -2, 0, 5, 0, 1]
+    },
+    {
+      "n": "Desert Monument",
+      "img": "assets/wiki/desert-monument.webp",
+      "t": "Reborn",
+      "r": 1,
+      "life": "7300+",
+      "el": [0, -2, 3, 5, 0, 1]
+    },
+    {
+      "n": "Big Alberto",
+      "img": "assets/wiki/big-alberto.webp",
+      "t": "Advanced Reborn",
+      "r": 3,
+      "life": "2000+",
+      "el": [5, -5, 3, 0, 0, 10]
+    },
+    {
+      "n": "The Sporest",
+      "img": "assets/wiki/the-sporest.webp",
+      "t": "Reborn",
+      "r": 8,
+      "life": "400+",
+      "el": [0, 1, 5, -2, 0, 3]
+    },
+    {
+      "n": "Skyliner Flux",
+      "img": "assets/wiki/skyliner-flux.webp",
+      "t": "Reborn",
+      "r": 7,
+      "life": "1000+",
+      "el": [5, 0, -2, 0, 3, 0]
+    },
+    {
+      "n": "Nuclear Stronghold",
+      "img": "assets/wiki/nuclear-stronghold.webp",
+      "t": "Reborn",
+      "r": 7,
+      "life": "400+",
+      "el": [-2, 3, 0, 2, 0, 5]
+    },
+    {
+      "n": "Industrial Scarab",
+      "img": "assets/wiki/industrial-scarab.webp",
+      "t": "Reborn",
+      "r": 3,
+      "life": "5000+",
+      "el": [0, 3, 2, -2, 0, 5]
+    },
+    {
+      "n": "Ore Skillet",
+      "img": "assets/wiki/ore-skillet.webp",
+      "t": "Reborn",
+      "r": 11,
+      "life": "753+",
+      "el": [3, -2, 0, 5, 2, 0]
+    },
+    {
+      "n": "Esoteric Citadel",
+      "img": "assets/wiki/esoteric-citadel.webp",
+      "t": "Reborn",
+      "r": 3,
+      "life": "5,000+",
+      "el": [-1, 1, -2, 3, 1, 3]
+    },
+    {
+      "n": "Combustion Engine",
+      "img": "assets/wiki/combustion-engine.webp",
+      "t": "Reborn",
+      "r": 5,
+      "life": "1,000+",
+      "el": [2, 0, -2, 0, 5, 3]
+    },
+    {
+      "n": "Sinister Sepulcher",
+      "img": "assets/wiki/sinister-sepulcher.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "2+",
+      "el": [10, 0, 20, 0, -20, 50]
+    },
+    {
+      "n": "Quaint Skymill",
+      "img": "assets/wiki/quaint-skymill.webp",
+      "t": "Reborn",
+      "r": 8,
+      "life": "1000+",
+      "el": [3, 2, 0, 0, 5, -2]
+    },
+    {
+      "n": "Gravitational Gyrocopter",
+      "img": "assets/wiki/gravitational-gyrocopter.webp",
+      "t": "Advanced Reborn",
+      "r": 2,
+      "life": "1000+",
+      "el": [0, 5, 3, 0, -5, 10]
+    },
+    {
+      "n": "Skydance Serenade",
+      "img": "assets/wiki/skydance-serenade.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "",
+      "el": [50, 0, -20, 20, 10, 0]
+    },
+    {
+      "n": "Lunar Spectacle",
+      "img": "assets/wiki/lunar-spectacle.webp",
+      "t": "Slipstream",
+      "r": 0,
+      "life": "",
+      "el": [50, 0, -20, 20, 10, 0]
+    }
+  ]
+}

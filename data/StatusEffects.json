@@ -1,0 +1,834 @@
+{
+  "intro": [
+    "This page lists down ore properties relevant to the game. These properties are properties that are crucial to gameplay or properties that some upgraders base their upgrades on.",
+    "There are a variety of status effects in the game, usually applied from a specific or group of upgrader/s. Most of these can be removed by Wild Spore, Deadly Spore, Azure Spore, The Death Cap and Resetting Devices.",
+    "Below is the most common status effect that you can apply to you ores.",
+    "Below is effect that grant immunity to certain status effects.",
+    "The table below illustrates specific cases regarding status effects. It will show an original status effect, then the result when passed through another.",
+    "Various ore materials are used in correspondence with status effects or as a way to signify change. An ore can only have one material at a time. Its material can be known by simply looking at its texture.",
+    "These properties do not retain to a specific category, but can still impact the way ores interact with items and effects."
+  ],
+  "effects": [
+    {
+      "name": "Fire",
+      "group": "common",
+      "destructive": true,
+      "img": "assets/wiki/fire-particle.webp",
+      "lines": [
+        "Ignites ore for 4 seconds.",
+        "Can be extinguished with the use of items such as the Wild Spore or Freon Sprayer."
+      ],
+      "removers": [
+        {
+          "n": "Freon Sprayer",
+          "img": "assets/wiki/freon-sprayer.webp",
+          "in": true
+        },
+        {
+          "n": "Wild Spore",
+          "img": "assets/wiki/wild-spore.webp",
+          "in": true
+        }
+      ],
+      "ex": {
+        "n": "Portable Flamethrower",
+        "img": "assets/wiki/portable-flamethrower-hd.webp",
+        "in": true
+      },
+      "slug": "fire"
+    },
+    {
+      "name": "Frostbite",
+      "group": "common",
+      "destructive": true,
+      "img": "assets/wiki/frostbite-particle.webp",
+      "lines": [
+        "The polar opposite of fire. Ore inflicted with frostbite are set on a destruction timer unless the ore is set on fire, reverting the frostbite effect. The ore will still need to be extinguished.",
+        "Additionally, frostbite changes ore material to ice and paints ore blue."
+      ],
+      "removers": [],
+      "ex": {
+        "n": "Father of Freon",
+        "img": "assets/wiki/father-of-freon.webp",
+        "in": true
+      },
+      "slug": "frostbite"
+    },
+    {
+      "name": "Radioactive",
+      "group": "common",
+      "destructive": true,
+      "img": "assets/wiki/radioactive-effect.webp",
+      "lines": ["Will explode ore after a period of time, destroying them.", "Can be removed by Spore-related items."],
+      "removers": [],
+      "ex": {
+        "n": "Radioactive Refiner",
+        "img": "assets/wiki/radioactive-refiner-hd.webp",
+        "in": true
+      },
+      "slug": "radioactive"
+    },
+    {
+      "name": "Sparkles",
+      "group": "common",
+      "destructive": false,
+      "img": "assets/wiki/sparkling-particle.webp",
+      "lines": [
+        "Makes ores sparkle. Such ores may power the Northern Lights, but render the Azure Spore useless.",
+        "Can be removed by The Death Cap, Fractured Reality, Soul Blossom, or a Resetting Device."
+      ],
+      "removers": [
+        {
+          "n": "Fractured Reality",
+          "img": "assets/wiki/fractured-reality.webp",
+          "in": true
+        },
+        {
+          "n": "The Death Cap",
+          "img": "assets/wiki/the-death-cap.webp",
+          "in": true
+        },
+        {
+          "n": "Soul Blossom",
+          "img": "assets/wiki/soul-blossom.webp",
+          "in": true
+        }
+      ],
+      "ex": {
+        "n": "Angel's Blessing",
+        "img": "assets/wiki/angel-s-blessing.webp",
+        "in": true
+      },
+      "slug": "sparkles"
+    },
+    {
+      "name": "Poison",
+      "group": "common",
+      "destructive": true,
+      "img": "assets/wiki/poison-particle.webp",
+      "lines": [
+        "Poisons the ore, gives green smoke particles, typically destroys it in 4 seconds if not removed.",
+        "Can be removed by Spore-related items."
+      ],
+      "removers": [],
+      "ex": {
+        "n": "Chemical Refiner",
+        "img": "assets/wiki/chemical-refiner.webp",
+        "in": true
+      },
+      "slug": "poison"
+    },
+    {
+      "name": "Smoking",
+      "group": "common",
+      "destructive": false,
+      "img": "assets/wiki/smoke-particle.webp",
+      "lines": [
+        "A variant of Poison given by the Robotic Enhancer, with grey smoke particles.",
+        "Shares almost the exact same attributes as Poison, but does not have a destruction timer.",
+        "Can be removed by Maintenance Supporter."
+      ],
+      "removers": [
+        {
+          "n": "Maintenance Supporter",
+          "img": "assets/wiki/maintenance-supporter.webp",
+          "in": true
+        }
+      ],
+      "ex": {
+        "n": "Robotic Enhancer",
+        "img": "assets/wiki/robotic-enhancer.webp",
+        "in": true
+      },
+      "slug": "smoking"
+    },
+    {
+      "name": "Wet",
+      "group": "common",
+      "destructive": false,
+      "img": "assets/wiki/wet-effect.webp",
+      "lines": ["Extinguishes fire and gives ore a temporary fireproof effect."],
+      "removers": [],
+      "ex": {
+        "n": "Atlantic Monolith",
+        "img": "assets/wiki/atlantic-monolith.webp",
+        "in": true
+      },
+      "slug": "wet"
+    },
+    {
+      "name": "Anti-Gravity",
+      "group": "common",
+      "destructive": false,
+      "img": null,
+      "lines": [
+        "Applied by items such as Anti-Gravity Device.",
+        "Flips gravity of an ore, making it float upwards.",
+        "Can be removed by Gravity Normalizer."
+      ],
+      "removers": [
+        {
+          "n": "Gravity Normalizer",
+          "img": "assets/wiki/gravity-normalizer.webp",
+          "in": true
+        }
+      ],
+      "ex": {
+        "n": "Anti-Gravity Device",
+        "img": "assets/wiki/anti-gravity-device.webp",
+        "in": true
+      },
+      "slug": "anti-gravity"
+    },
+    {
+      "name": "Fireproof",
+      "group": "immunity",
+      "destructive": null,
+      "img": "assets/wiki/fireproof-effect.webp",
+      "lines": [
+        "Extinguishes fire and gives ore an immunity to \"Fire\".",
+        "Can be removed by Blazing Annihilator.",
+        "(Not to be confused with the Ice material.)"
+      ],
+      "removers": [
+        {
+          "n": "Blazing Annihilator",
+          "img": "assets/wiki/blazing-annihilator.webp",
+          "in": true
+        }
+      ],
+      "ex": {
+        "n": "Freon Bombarder",
+        "img": "assets/wiki/freon-bombarder.webp",
+        "in": true
+      },
+      "slug": "fireproof"
+    },
+    {
+      "name": "Poison Immunity",
+      "group": "immunity",
+      "destructive": null,
+      "img": null,
+      "lines": ["Grants immunity to the effect.", "Can be removed by certain upgraders."],
+      "removers": [],
+      "ex": {
+        "n": "Havium Mine",
+        "img": "assets/wiki/havium-mine.webp",
+        "in": true
+      },
+      "slug": "poison-immunity"
+    },
+    {
+      "name": "Radioactive Immunity",
+      "group": "immunity",
+      "destructive": null,
+      "img": null,
+      "lines": ["Grants immunity to the effect.", "Can be removed by certain upgraders."],
+      "removers": [],
+      "ex": {
+        "n": "Havium Mine",
+        "img": "assets/wiki/havium-mine.webp",
+        "in": true
+      },
+      "slug": "radioactive-immunity"
+    },
+    {
+      "name": "Frostbite Immunity",
+      "group": "immunity",
+      "destructive": null,
+      "img": null,
+      "lines": ["Grants immunity to the effect.", "Can be removed by certain upgraders."],
+      "removers": [],
+      "ex": {
+        "n": "Havium Mine",
+        "img": "assets/wiki/havium-mine.webp",
+        "in": true
+      },
+      "slug": "frostbite-immunity"
+    },
+    {
+      "name": "Plague Immunity",
+      "group": "immunity",
+      "destructive": null,
+      "img": null,
+      "lines": ["Grants a temporary immunity to \"Plagued\"."],
+      "removers": [],
+      "ex": {
+        "n": "Ghosdeeri's Antidote",
+        "img": "assets/wiki/ghosdeeri-s-antidote.webp",
+        "in": true
+      },
+      "slug": "plague-immunity"
+    },
+    {
+      "name": "Hydrophobic",
+      "group": "immunity",
+      "destructive": null,
+      "img": null,
+      "lines": [
+        "Given exclusively by the Honeycomb Cake and Famished Farm.",
+        "Prevents ores from being affected by wet effect.",
+        "Can be removed by Skydance Serenade."
+      ],
+      "removers": [
+        {
+          "n": "Skydance Serenade",
+          "img": "assets/wiki/skydance-serenade.webp",
+          "in": true
+        }
+      ],
+      "ex": {
+        "n": "Honeycomb Cake",
+        "img": "assets/wiki/honeycomb-cake.webp",
+        "in": true
+      },
+      "slug": "hydrophobic"
+    },
+    {
+      "name": "Education",
+      "group": "other",
+      "destructive": true,
+      "img": "assets/wiki/education-particle.webp",
+      "lines": [
+        "Has green illuminati-symbol particles.",
+        "Both effects have a period of waiting in which an ore cannot have its upgrade count changed, otherwise the ore is destroyed, and shields do not protect against it.",
+        "Both effects can be made instantaneous by using a Gargantium Core and their corresponding Pulsar.",
+        "Bypasses shields."
+      ],
+      "removers": [],
+      "ex": {
+        "n": "Ore Illuminator",
+        "img": "assets/wiki/ore-illuminator.webp",
+        "in": true
+      },
+      "slug": "education"
+    },
+    {
+      "name": "Draedon",
+      "group": "other",
+      "destructive": true,
+      "img": "assets/wiki/draedon-particle.webp",
+      "lines": [
+        "Has blue polygonal particles.",
+        "Both effects have a period of waiting in which an ore cannot have its upgrade count changed, otherwise the ore is destroyed, and shields do not protect against it.",
+        "Both effects can be made instantaneous by using a Gargantium Core and their corresponding Pulsar.",
+        "Bypasses shields."
+      ],
+      "removers": [],
+      "ex": {
+        "n": "Draedon's Gauntlet",
+        "img": "assets/wiki/draedon-s-gauntlet.webp",
+        "in": true
+      },
+      "slug": "draedon"
+    },
+    {
+      "name": "Void",
+      "group": "other",
+      "destructive": true,
+      "img": "assets/wiki/void-effect.webp",
+      "lines": [
+        "Given exclusively by the Void Drive. Grants ore 3 seconds of complete immunity to destruction, it will be destroyed after the time is up."
+      ],
+      "removers": [],
+      "ex": {
+        "n": "Void Drive",
+        "img": "assets/wiki/void-drive.webp",
+        "in": true
+      },
+      "slug": "void"
+    },
+    {
+      "name": "Shield",
+      "group": "other",
+      "destructive": false,
+      "img": "assets/wiki/shield-effect.webp",
+      "lines": [
+        "Prevents ores from being destroyed.",
+        "Given exclusively by certain upgraders and dropped from certain mines(Not to be confused with the Forcefield material.)"
+      ],
+      "removers": [],
+      "ex": {
+        "n": "Illusions of Void",
+        "img": "assets/wiki/illusions-of-void.webp",
+        "in": true
+      },
+      "slug": "shield"
+    },
+    {
+      "name": "Gaia's Blessing",
+      "group": "other",
+      "destructive": false,
+      "img": "assets/wiki/gaia-effect.webp",
+      "lines": [
+        "Given exclusively by the Garden of Gaia.",
+        "Has the appearance of green particles. Adds a bonus x1.02 multiplier to all upgrades. Stacks with The Chaosrealm."
+      ],
+      "removers": [],
+      "ex": {
+        "n": "Garden of Gaia",
+        "img": "assets/wiki/garden-of-gaia.webp",
+        "in": true
+      },
+      "slug": "gaia-s-blessing"
+    },
+    {
+      "name": "Chaotic Fire",
+      "group": "other",
+      "destructive": false,
+      "img": null,
+      "lines": [
+        "Given exclusively by the The Chaosrealm.",
+        "Has the appearance of green fire particle. Adds a bonus x1.05 multiplier to all upgrades. Stacks with Garden of Gaia."
+      ],
+      "removers": [],
+      "ex": {
+        "n": "The Chaosrealm",
+        "img": "assets/wiki/the-chaosrealm.webp",
+        "in": true
+      },
+      "slug": "chaotic-fire"
+    },
+    {
+      "name": "Replicator Banned",
+      "group": "other",
+      "destructive": false,
+      "img": "assets/wiki/replicator-banned-effect.webp",
+      "lines": [
+        "Given exclusively by the Methuselah's Mask, Leggendary Black Hole, and certain Quest-tier items.",
+        "Renders an ore incapable of being duplicated.",
+        "Cannot be removed by any means."
+      ],
+      "removers": [],
+      "ex": {
+        "n": "Methuselah's Mask",
+        "img": "assets/wiki/methuselah-s-mask.webp",
+        "in": true
+      },
+      "slug": "replicator-banned"
+    },
+    {
+      "name": "Teleporter Banned",
+      "group": "other",
+      "destructive": false,
+      "img": null,
+      "lines": [
+        "Given exclusively by the Leggendary Black Hole while being upgraded.",
+        "Renders an ore incapable of being teleported by Teleporters. Despite this, you can still use Ore Nebula to teleport them."
+      ],
+      "removers": [],
+      "ex": {
+        "n": "Leggendary Black Hole",
+        "img": "assets/wiki/leggendary-black-hole.webp",
+        "in": true
+      },
+      "slug": "teleporter-banned"
+    },
+    {
+      "name": "DON Banned",
+      "group": "other",
+      "destructive": false,
+      "img": null,
+      "lines": [
+        "Given exclusively by the Void Drive.",
+        "Renders the ore to be incapable to being \"Pulse\" by Devourer of Nightmares."
+      ],
+      "removers": [],
+      "ex": {
+        "n": "Void Drive",
+        "img": "assets/wiki/void-drive.webp",
+        "in": true
+      },
+      "slug": "don-banned"
+    },
+    {
+      "name": "Nova",
+      "group": "other",
+      "destructive": false,
+      "img": null,
+      "lines": ["Grants a x4 boost to Star multipliers, or x25 boost to the Blue Supergiant."],
+      "removers": [],
+      "ex": {
+        "n": "Nova Star",
+        "img": "assets/wiki/nova-star.webp",
+        "in": true
+      },
+      "slug": "nova"
+    },
+    {
+      "name": "Nova-Schro",
+      "group": "other",
+      "destructive": false,
+      "img": null,
+      "lines": ["Applies a 5-second x1.3 bonus to Schrodinger multipliers (not applied to Shop Schrodingers)."],
+      "removers": [],
+      "ex": {
+        "n": "Nova Evaluator",
+        "img": "assets/wiki/nova-evaluator.webp",
+        "in": true
+      },
+      "slug": "nova-schro"
+    },
+    {
+      "name": "Golden",
+      "group": "other",
+      "destructive": false,
+      "img": null,
+      "lines": [
+        "Given by various gold mines and certain upgraders.",
+        "Set ore material into foil and turn their color to yellow."
+      ],
+      "removers": [],
+      "ex": {
+        "n": "King Gold Mine",
+        "img": "assets/wiki/king-gold-mine.webp",
+        "in": true
+      },
+      "slug": "golden"
+    },
+    {
+      "name": "Plague",
+      "group": "other",
+      "destructive": true,
+      "img": "assets/wiki/plague-effect.webp",
+      "lines": [
+        "Ore gradually grow in size by 10% and destroys it once it reach 15 iteration.",
+        "Ores have a 5 seconds windows to remove the effect. After it is expired it cannot be removed.",
+        "Can be removed by Ghosdeeri's Antidote."
+      ],
+      "removers": [
+        {
+          "n": "Ghosdeeri's Antidote",
+          "img": "assets/wiki/ghosdeeri-s-antidote.webp",
+          "in": true
+        }
+      ],
+      "ex": {
+        "n": "Bubonic Plague",
+        "img": "assets/wiki/bubonic-plague.webp",
+        "in": true
+      },
+      "slug": "plague"
+    },
+    {
+      "name": "Swag Factor",
+      "group": "other",
+      "destructive": false,
+      "img": "assets/wiki/swag-factor-beta.webp",
+      "lines": ["Given exclusively by the Lucky Hat.", "Swag."],
+      "removers": [],
+      "ex": {
+        "n": "Lucky Hat",
+        "img": "assets/wiki/lucky-hat.webp",
+        "in": true
+      },
+      "slug": "swag-factor"
+    },
+    {
+      "name": "Stasis",
+      "group": "other",
+      "destructive": false,
+      "img": null,
+      "lines": [
+        "Ore becomes stationary for a specified amount of time.",
+        "The Eggscream Refiner can stasis ores for 7 seconds."
+      ],
+      "removers": [],
+      "ex": {
+        "n": "Eggscream Refiner",
+        "img": "assets/wiki/eggscream-refiner.webp",
+        "in": true
+      },
+      "slug": "stasis"
+    },
+    {
+      "name": "Eternal Flame",
+      "group": "other",
+      "destructive": false,
+      "img": null,
+      "lines": [
+        "Given exclusively by the Solar Apocalypse.",
+        "It has the same appearance as \"Fire\" but does not destroy ores.",
+        "Ores with Eternal Flames are processed at a higher rate by the Awakened Jack O Lantern.",
+        "Ores with \"Fireproof\" will not be set on fire."
+      ],
+      "removers": [],
+      "ex": {
+        "n": "Solar Apocalypse",
+        "img": "assets/wiki/solar-apocalypse.webp",
+        "in": true
+      },
+      "slug": "eternal-flame"
+    }
+  ],
+  "reactions": [
+    [
+      "Immune to X",
+      "X",
+      ["Ore proceeds normally and will not get the effect."]
+    ],
+    [
+      "X",
+      "Immune to X",
+      [
+        "Ore proceeds with its original effect and can be killed if original effect is not removed, but can no longer be inflicted with said effect, if removed.",
+        "EXCEPTION: Unless otherwise noted."
+      ]
+    ],
+    [
+      "Fireproof or Wet",
+      "Blazing Annihilator",
+      ["Fireproof/Wet effect is removed."]
+    ],
+    [
+      "Fireproof or Wet",
+      "Frostbite",
+      ["Ore is inflicted with frostbite."]
+    ],
+    [
+      "Fireproof or Wet",
+      "Fireproof or Wet",
+      [
+        "Effects will not stack. Given wet effect, fireproof will not be applied, and given fireproof effect, wet will not be applied."
+      ]
+    ],
+    [
+      "Blazing Annihilator",
+      "Fireproof or Wet",
+      ["Ore is given fireproof/wet."]
+    ],
+    [
+      "Frostbite",
+      "Fireproof or Wet",
+      ["Ore proceeds with frostbite."]
+    ],
+    [
+      "Frostbite",
+      "Fire",
+      [
+        "Frostbite is removed and replaced with fire.",
+        "EXCEPTION: If ore is fireproof/wet before being given the fire, frostbite will not be removed."
+      ]
+    ],
+    [
+      "Smoking",
+      "Poison",
+      ["And vice versa: smoking and poison can coexist in one ore."]
+    ],
+    [
+      "Fire",
+      "Stasis",
+      ["Ore will not be held frozen in place; instead it will proceed normally. Fire will not be extinguished."]
+    ],
+    [
+      "Education or Draedon",
+      "Upgraders",
+      [
+        "Ore will be destroyed, unless timer is finished.",
+        "EXCEPTION: If succeeding upgraders all have exactly 0 upgrade counter, ore will not be destroyed while the timer goes on. Negative counter will still destroy ore.",
+        "EXCEPTION 2: Instant Draedon/Instant Education effects will reduce the timer to 0; however, ore needs to get its upgrade counter changed after, for it to be upgraded."
+      ]
+    ],
+    [
+      "Shield",
+      "Blaster",
+      [
+        "100% guarantee that first blaster after gaining a shield will always upgrade and never destroy ore. Void Drive gives 15 shields and the voided effect."
+      ]
+    ]
+  ],
+  "materials": [
+    {
+      "name": "Ice",
+      "lines": [
+        "Corresponding material for frozen status effect. Ores have less friction and can slide off of conveyor turns.",
+        "By changing the ore's material, the frozen status effect can be reverted.",
+        "(Note: The ice material does not correspond to the fireproof effect.)"
+      ],
+      "ex": {
+        "n": "Behemoth Snowflake",
+        "img": "assets/wiki/behemoth-snowflake.webp",
+        "in": true
+      }
+    },
+    {
+      "name": "Neon",
+      "lines": ["Makes ore glow.", "Requirement for using The Cosmic Tower, or a larger multiplier from the Optic Origin."],
+      "ex": {
+        "n": "Vaporwave Vibe Visualizer",
+        "img": "assets/wiki/vaporwave-vibe-visualizer.webp",
+        "in": true
+      }
+    },
+    {
+      "name": "Diamond Plate",
+      "lines": ["Used to show an ore has been forged; increased density.", "Required to power the Radio Tower."],
+      "ex": {
+        "n": "Molten Forge",
+        "img": "assets/wiki/molten-forge.webp",
+        "in": true
+      }
+    },
+    {
+      "name": "Pebble",
+      "lines": ["Corresponding to The Death Cap's ability to clear (almost) all status effects.", "Has no in-game purpose."],
+      "ex": {
+        "n": "The Death Cap",
+        "img": "assets/wiki/the-death-cap.webp",
+        "in": true
+      }
+    },
+    {
+      "name": "Forcefield",
+      "lines": [
+        "Material that allows the Optic Origin to give its highest multiplier. Exclusively given by the Helium Blaster, Soaring Chopper and Forsaken Battleground. Despite the name, this type of material won't give your ores any resistance.",
+        "(Not to be confused with the Shield effect.)"
+      ],
+      "ex": {
+        "n": "Helium Blaster",
+        "img": "assets/wiki/helium-blaster.webp",
+        "in": true
+      }
+    },
+    {
+      "name": "Glass",
+      "lines": [
+        "Material usually used corresponding to the \"Wet\" status effect. Also given by the Shiny Red Upgrader.",
+        "This material has no gameplay significance as no upgraders have effects to this material."
+      ],
+      "ex": {
+        "n": "Shiny Red Upgrader",
+        "img": "assets/wiki/shiny-red-upgrader.webp",
+        "in": true
+      }
+    },
+    {
+      "name": "Granite",
+      "lines": [
+        "A material that is given to ore dropped by the Witch's Cauldron and a few selected droppers.",
+        "Required to power The Eternal Overseer."
+      ],
+      "ex": {
+        "n": "Witch's Cauldron",
+        "img": "assets/wiki/witch-s-cauldron.webp",
+        "in": true
+      }
+    },
+    {
+      "name": "CrackedLava",
+      "lines": ["Material given exclusively by Doom Incarnate's Flamethrower upgrade.", "Has no in-game purpose."],
+      "ex": {
+        "n": "Doom Incarnate",
+        "img": "assets/wiki/doom-incarnate.webp",
+        "in": true
+      }
+    },
+    {
+      "name": "Sand",
+      "lines": ["Material given by the Chocolate Cupcake, and Aromatic Holidays.", "Has no in-game purpose."],
+      "ex": {
+        "n": "Chocolate Cupcake",
+        "img": "assets/wiki/chocolate-cupcake.webp",
+        "in": true
+      }
+    }
+  ],
+  "properties": [
+    {
+      "name": "Ore Value",
+      "lines": [
+        "The value of an ore.",
+        "The Tyrant's Throne and Ooftopian Refiner both have stats that are dependent on the ores value."
+      ],
+      "ex": {
+        "n": "Ore Tracker",
+        "img": "assets/wiki/ore-tracker-hd.webp",
+        "in": true
+      }
+    },
+    {
+      "name": "Volume",
+      "lines": [
+        "The size of an ore in terms of length, width, and height. Different dropper types produce different size ore.",
+        "In the unique case of The Dust Devil, its multiplier is based on the ores size."
+      ],
+      "ex": {
+        "n": "The Dust Devil",
+        "img": "assets/wiki/the-dust-devil.webp",
+        "in": true
+      }
+    },
+    {
+      "name": "Density",
+      "lines": [
+        "The measurement of an ore's mass per unit of volume. A small ore may be heavy and a large ore may be light depending on their densities.",
+        "Not to be confused with the ore's mass, directly proportional to its volume and density, which is what should be taken into account when using an Ore Cannon or similar items."
+      ],
+      "ex": {
+        "n": "Molten Forge",
+        "img": "assets/wiki/molten-forge.webp",
+        "in": true
+      }
+    },
+    {
+      "name": "Transparency",
+      "lines": [
+        "Defines the transparency of an ore.",
+        "The only item in the game that processes an ore based on its transparency is the Hungry Spirit.",
+        "The only item in the game that can set an ore's transparency to 1 (i.e., invisible) is the Hopeless Bog."
+      ],
+      "ex": {
+        "n": "Hopeless Bog",
+        "img": "assets/wiki/hopeless-bog.webp",
+        "in": true
+      }
+    },
+    {
+      "name": "Elasticity",
+      "lines": [
+        "Bounciness of an ore.",
+        "This property determines how much does ore bounce against the collision surface. Only item that currently modifies the property is Jelly Cake."
+      ],
+      "ex": {
+        "n": "Jelly Cake",
+        "img": "assets/wiki/jelly-cake.webp",
+        "in": true
+      }
+    },
+    {
+      "name": "Color",
+      "lines": [
+        "The color of an ore.",
+        "Some items such as the Santa's Castle have additional effects if the ore is a certain color. In this case, a +3 to the multiplier if the ores color is red or green."
+      ],
+      "ex": {
+        "n": "Ore Painter",
+        "img": "assets/wiki/ore-painter.webp",
+        "in": true
+      }
+    },
+    {
+      "name": "Upgrade Count",
+      "lines": [
+        "The upgrade count of an ore is measured by its reflectance multiplied by 20.",
+        "Some upgraders base their upgrades on the ore's upgrade count, such as the Hades' Palace."
+      ],
+      "ex": {
+        "n": "Purity Tracker",
+        "img": "assets/wiki/purity-tracker.webp",
+        "in": true
+      }
+    },
+    {
+      "name": "Machine Tag",
+      "lines": [
+        "A tag that prevents ore from being used passed a certain number of times for certain upgraders. When an ore passes through a Resetting Device, all of the ore's machine tags are removed (except for tags from upgraders that are not resettable)."
+      ],
+      "ex": {
+        "n": "Spectral Upgrader",
+        "img": "assets/wiki/spectral-upgrader.webp",
+        "in": true
+      }
+    }
+  ]
+}

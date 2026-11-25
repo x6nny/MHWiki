@@ -184,12 +184,12 @@
       {
         "n": "VIP",
         "kind": "Gamepass",
-        "text": "A blue VIP gift with better luck, and a chance of a wooden or diamond crate."
+        "text": "A blue VIP gift with better luck that drops a Golden or Diamond Crate."
       },
       {
         "n": "Premium Mining",
         "kind": "Gamepass",
-        "text": "+10 uC in every Daily Gift."
+        "text": "10 uC in every Daily Gift instead of 1 (20 if you buy a second gift)."
       },
       {
         "n": "Executive",
@@ -241,6 +241,118 @@
         "kind": "Black Friday 2019",
         "text": "A Blazing Crate: 2.5k RP, an Inferno Box and a chance of a Spectral Box."
       }
-    ]
+    ],
+    "tracker": {
+      "_note": "Rewards used by the streak tracker. uc: [lowest, highest] extra uC. setBase: replaces the normal uC. crates/boxes: names shown to the player (img = picture in assets/rp, slug = picture in assets/boxes, draw = basic/golden/diamond crate drawing).",
+      "baseUC": 1,
+      "repeatAfter": null,
+      "always": {
+        "crates": [
+          {
+            "n": "Gift Crate",
+            "img": "gift"
+          }
+        ]
+      },
+      "boosters": [
+        {
+          "id": "premium",
+          "n": "Premium Mining",
+          "kind": "Gamepass",
+          "setBase": 10
+        },
+        {
+          "id": "executive",
+          "n": "Executive",
+          "kind": "Gamepass",
+          "uc": [0, 6],
+          "crates": [
+            {
+              "n": "Executive Crate",
+              "img": "executive"
+            }
+          ]
+        },
+        {
+          "id": "vip",
+          "n": "VIP",
+          "kind": "Gamepass",
+          "crates": [
+            {
+              "n": "Golden or Diamond Crate",
+              "draw": "golden"
+            }
+          ]
+        },
+        {
+          "id": "group",
+          "n": "Berezaa Games group",
+          "kind": "Free",
+          "uc": [2, 2],
+          "boxes": [
+            {
+              "n": "Regular Box",
+              "slug": "regular-box"
+            }
+          ]
+        },
+        {
+          "id": "shirt",
+          "n": "Miner's Haven Shirt",
+          "kind": "Retired",
+          "uc": [1, 1]
+        },
+        {
+          "id": "dice",
+          "n": "Gambler's Dice",
+          "kind": "Black Friday 2015",
+          "uc": [-3, 6]
+        },
+        {
+          "id": "shoddy",
+          "n": "Shoddy Crate",
+          "kind": "Black Friday 2015",
+          "crates": [
+            {
+              "n": "1–3 Wooden Crates",
+              "draw": "basic"
+            }
+          ]
+        },
+        {
+          "id": "giant",
+          "n": "Giant Crate",
+          "kind": "Black Friday 2016",
+          "crates": [
+            {
+              "n": "Giant Crate",
+              "img": "giant"
+            }
+          ]
+        },
+        {
+          "id": "pearl",
+          "n": "Corrupt Pearl",
+          "kind": "Black Friday 2017",
+          "crates": [
+            {
+              "n": "Cursed Crate",
+              "img": "cursed"
+            }
+          ]
+        },
+        {
+          "id": "scuti",
+          "n": "UY Scuti",
+          "kind": "Black Friday 2019",
+          "crates": [
+            {
+              "n": "Blazing Crate",
+              "img": "blazing"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

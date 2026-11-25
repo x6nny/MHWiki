@@ -10,9 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/style.css?v=44" />
-  <link rel="stylesheet" href="../css/subpage.css?v=44" />
-  <link rel="stylesheet" href="../css/daily-tasks.css?v=44" />
+  <link rel="stylesheet" href="../css/style.css?v=47" />
+  <link rel="stylesheet" href="../css/subpage.css?v=47" />
+  <link rel="stylesheet" href="../css/daily-tasks.css?v=47" />
 </head>
 <body class="subpage dt-page">
   <div class="backdrop" aria-hidden="true">
@@ -193,6 +193,40 @@
           <div class="gf-days" id="gfDays"></div>
         </div>
       </div>
+      <div class="gs glass reveal" id="giftTracker">
+        <div class="gs-head">
+          <div><h3>Your streak tracker</h3><p>Enter the streak the game shows you, tick what you own, and press <b>Claimed</b> each day you open your gift. Saved in this browser.</p></div>
+          <div class="gs-status" id="gsStatus"></div>
+        </div>
+        <div class="gs-grid">
+          <div class="gs-col gs-you">
+            <label class="gs-lbl" for="gsStreak">Current streak</label>
+            <div class="gs-num">
+              <button type="button" data-d="-1" aria-label="One day less">−</button>
+              <input id="gsStreak" type="number" min="0" max="9999" inputmode="numeric" value="0" />
+              <button type="button" data-d="1" aria-label="One day more">+</button>
+              <span>days</span>
+            </div>
+            <button type="button" class="gs-claim" id="gsClaim"></button>
+            <button type="button" class="gs-link" id="gsAlready" hidden>Already opened today's gift? Mark today as claimed without adding a day</button>
+            <p class="gs-note" id="gsNote"></p>
+          </div>
+          <div class="gs-col gs-today">
+            <small class="gs-lbl" id="gsTodayLbl">Today's gift</small>
+            <div class="gs-uc"><b id="gsUc">1</b><span>uC</span><em id="gsRange"></em></div>
+            <div class="gs-drops" id="gsDrops"></div>
+            <p class="gs-next" id="gsNext"></p>
+          </div>
+          <div class="gs-col gs-own">
+            <small class="gs-lbl">What do you own?</small>
+            <div class="gs-boost" id="gsBoost"></div>
+          </div>
+        </div>
+        <div class="gs-week">
+          <div class="gs-week-h"><b>Your next 7 gifts</b><span id="gsWeekTotal"></span></div>
+          <div class="gs-strip" id="gsStrip"></div>
+        </div>
+      </div>
       <h3 class="gf-h reveal">Things that boost your Daily Gift</h3>
       <div class="gf-boost" id="gfBoost"></div>
     </section>
@@ -231,7 +265,7 @@
   </button>
   <div class="toast glass" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="../js/common.js?v=44"></script>
-  <script src="../js/data.js?v=44" data-load="DailyTasks:MH_TASKS" data-run="daily-tasks.js"></script>
+  <script src="../js/common.js?v=47"></script>
+  <script src="../js/data.js?v=47" data-load="DailyTasks:MH_TASKS" data-run="daily-tasks.js"></script>
 </body>
 </html>

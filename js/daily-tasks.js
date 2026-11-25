@@ -273,6 +273,130 @@
     tick(); setInterval(tick, 1000);
   })();
 
+  /* ================= Streak tracker ================= */
+  (function streak() {
+    const G = D.gifts, T = G.tracker;
+    if (!T) return;
+    const SKEY = "mh-gift-streak-v1";
+    const CRATE = n => `../assets/rp/${n}.webp`;
+    let S = { streak: 0, last: "", prevLast: "", own: {} };
+    try { const v = JSON.parse(localStorage.getItem(SKEY) || "null"); if (v && typeof v.streak === "number") S = { ...S, ...v }; } catch (e) {}
+    const save = () => { try { localStorage.setItem(SKEY, JSON.stringify(S)); } catch (e) {} };
+    const milestones = Object.fromEntries(G.streak.map(s => [s.day, s]));
+    const lastMilestone = Math.max(...G.streak.map(s => s.day));
+    const boxFor = day => {
+      if (T.repeatAfter) day = ((day - 1) % T.repeatAfter) + 1;
+      return milestones[day] || null;
+    };
+    const dayKeyAdd = (key, n) => { const d = new Date(key + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+    const daysBetween = (a, b) => Math.round((new Date(b + "T12:00:00Z") - new Date(a + "T12:00:00Z")) / 864e5);
+
+    /* the reward for one gift, from what the player owns */
+    function gift(day) {
+      let base = T.baseUC, lo = 0, hi = 0;
+      const crates = [...(T.always.crates || [])], boxes = [...(T.always.boxes || [])];
+      T.boosters.forEach(b => {
+        if (!S.own[b.id]) return;
+        if (b.setBase != null) base = Math.max(base, b.setBase);
+        if (b.uc) { lo += b.uc[0]; hi += b.uc[1]; }
+        (b.crates || []).forEach(c => crates.push(c));
+        (b.boxes || []).forEach(x => boxes.push(x));
+      });
+      const sb = boxFor(day);
+      if (sb) boxes.unshift({ n: sb.box, slug: sb.slug, streak: true });
+      const min = Math.max(0, base + lo), max = Math.max(0, base + hi);
+      return { min, max, est: Math.round((min + max) / 2), crates, boxes };
+    }
+
+    const inp = $("#gsStreak"), claimBtn = $("#gsClaim"), already = $("#gsAlready");
+    $("#gsBoost").innerHTML = T.boosters.map(b => `<label class="gs-own-i"><input type="checkbox" data-id="${esc(b.id)}" /><span class="gs-tick"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><b>${esc(b.n)}</b><small>${esc(b.kind)}</small></label>`).join("");
+    $("#gsBoost").addEventListener("change", e => { const c = e.target.closest("input[data-id]"); if (!c) return; S.own[c.dataset.id] = c.checked; save(); draw(); });
+
+    function draw() {
+      const r = MH.dailyReset(), today = r.key, claimed = S.last === today;
+      const day = claimed ? S.streak : S.streak + 1; // the gift shown as "today's"
+      if (document.activeElement !== inp) inp.value = S.streak;
+      $("#gsBoost").querySelectorAll("input[data-id]").forEach(c => { c.checked = !!S.own[c.dataset.id]; });
+
+      // status + claim button
+      $("#gsStatus").innerHTML = claimed
+        ? `<span class="ok">Today's gift claimed</span>`
+        : `<span class="wait">Today's gift is waiting</span>`;
+      claimBtn.classList.toggle("done", claimed);
+      claimBtn.innerHTML = claimed
+        ? `<svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Claimed for today <small>Tap to undo</small>`
+        : `<svg viewBox="0 0 24 24" width="18" height="18"><path d="M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7c-1.5-3-5-3.5-5-1 0 1.5 2.5 1 5 1zm0 0c1.5-3 5-3.5 5-1 0 1.5-2.5 1-5 1z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>Claimed today's gift <small>Day ${day}</small>`;
+      already.hidden = claimed || S.streak === 0;
+      const gap = S.last ? daysBetween(S.last, today) : 0;
+      $("#gsNote").textContent = !S.last ? "" : gap > 1
+        ? `You last marked a gift ${gap} days ago. The wiki says missing a day doesn't end your streak, but if the game reset it, change the number above.`
+        : "";
+
+      // today's (or the next) gift
+      const g = gift(day);
+      $("#gsTodayLbl").textContent = claimed ? `Today's gift (day ${day}) · claimed` : `Today's gift · day ${day}`;
+      $("#gsUc").textContent = fmt(g.est);
+      $("#gsRange").textContent = g.min !== g.max ? `${fmt(g.min)}–${fmt(g.max)} uC` : "";
+      const chip = (art, n, cls = "") => `<span class="gs-chip${cls}">${art}${esc(n)}</span>`;
+      $("#gsDrops").innerHTML =
+        g.boxes.map(b => chip(`<img src="${BOX(b.slug)}" alt="" />`, b.n, b.streak ? " streak" : "")).join("") +
+        g.crates.map(c => chip(c.draw ? `<i class="gs-cr">${crate(c.draw)}</i>` : `<img src="${CRATE(c.img)}" alt="" />`, c.n)).join("");
+      // next streak box
+      let nb = null;
+      for (let d = day + (claimed ? 1 : 0); d <= day + 60; d++) { const b = boxFor(d); if (b) { nb = { d, b }; break; } }
+      $("#gsNext").innerHTML = nb
+        ? (nb.d === day && !claimed ? `Open it today for your <b>${esc(nb.b.box)}</b>.` : `Next streak box: <b>${esc(nb.b.box)}</b> on day ${nb.d}, ${nb.d - day === 1 ? "tomorrow" : `in ${nb.d - day} days`}.`)
+        : (day >= lastMilestone ? "You've collected every streak box the wiki lists." : "");
+
+      // next 7 gifts
+      const startDay = claimed ? day + 1 : day, startKey = claimed ? dayKeyAdd(today, 1) : today;
+      let tot = 0; const streakBoxes = [];
+      $("#gsStrip").innerHTML = Array.from({ length: 7 }, (_, i) => {
+        const d = startDay + i, k = dayKeyAdd(startKey, i), gg = gift(d), sb = boxFor(d);
+        tot += gg.est; if (sb) streakBoxes.push(sb.box);
+        const when = i === 0 && !claimed ? "Today" : (i === 0 && claimed) || (i === 1 && !claimed) ? "Tomorrow" : new Date(k + "T12:00:00Z").toLocaleDateString([], { weekday: "short", day: "numeric", timeZone: "UTC" });
+        return `<div class="gs-d${sb ? " prize" : ""}${i === 0 && !claimed ? " now" : ""}" style="--i:${i}">
+          <small>${esc(when)}</small><b>Day ${d}</b>
+          ${sb ? `<img src="${BOX(sb.slug)}" alt="" /><em>${esc(sb.box)}</em>` : `<span class="gs-gift"></span><em>Gift</em>`}
+          <span class="gs-d-uc">≈ ${fmt(gg.est)} uC</span>
+        </div>`;
+      }).join("");
+      const crateCount = gift(1).crates.map(c => c.n);
+      $("#gsWeekTotal").innerHTML = `≈ <b>${fmt(tot)} uC</b>${streakBoxes.length ? ` · ${streakBoxes.map(esc).join(", ")}` : ""} · 7× ${crateCount.map(esc).join(", 7× ")}`;
+
+      // highlight the login-streak strip above
+      const shown = T.repeatAfter ? ((day - 1) % T.repeatAfter) + 1 : day;
+      document.querySelectorAll("#gfDays .gd").forEach((el, i) => {
+        const n = i + 1;
+        el.classList.toggle("got", claimed ? n <= shown : n < shown);
+        el.classList.toggle("today", n === shown && !claimed);
+      });
+    }
+
+    function setStreak(n) { S.streak = Math.max(0, Math.min(9999, n | 0)); save(); draw(); }
+    inp.addEventListener("input", () => { const v = parseInt(inp.value, 10); if (!isNaN(v)) setStreak(v); });
+    inp.addEventListener("blur", () => { inp.value = S.streak; });
+    document.querySelector(".gs-num").addEventListener("click", e => { const b = e.target.closest("button[data-d]"); if (b) setStreak(S.streak + +b.dataset.d); });
+    claimBtn.addEventListener("click", () => {
+      const today = MH.dailyReset().key;
+      if (S.last === today) { S.streak = Math.max(0, S.streak - 1); S.last = S.prevLast || ""; S.prevLast = ""; MH.toast("Today's claim undone"); }
+      else {
+        S.prevLast = S.last; S.last = today; S.streak += 1;
+        const b = boxFor(S.streak);
+        MH.toast(b ? `Day ${S.streak} claimed: enjoy your ${b.box}!` : `Day ${S.streak} claimed`);
+        if (!RM) { claimBtn.classList.remove("pop"); void claimBtn.offsetWidth; claimBtn.classList.add("pop"); }
+      }
+      save(); draw();
+    });
+    already.addEventListener("click", () => { S.prevLast = S.last; S.last = MH.dailyReset().key; save(); draw(); MH.toast("Today marked as claimed"); });
+
+    draw();
+    // roll over at the daily reset
+    let lastKey = MH.dailyReset().key;
+    setInterval(() => { const k = MH.dailyReset().key; if (k !== lastKey) { lastKey = k; draw(); } }, 15000);
+    window.addEventListener("storage", e => { if (e.key === SKEY) { try { S = { ...S, ...JSON.parse(e.newValue) }; } catch (er) {} draw(); } });
+  })();
+
   /* ================= History ================= */
   $("#timeline").innerHTML = D.history.map(h => `<li class="reveal"><span class="tl-dot"></span><small>${esc(h.date)}</small><b>${esc(h.name)}</b><p>${esc(h.text)}</p></li>`).join("");
   $("#timeline").querySelectorAll(".reveal").forEach(MH.reveal);

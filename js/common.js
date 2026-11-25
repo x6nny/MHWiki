@@ -3,7 +3,7 @@
    (animated backdrop, nav, toast, scroll reveal, count-up)
    ========================================================= */
 const MH = (() => {
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches || !!(window.MH_SETTINGS && MH_SETTINGS.reduceMotion());
 
   /* Nav shrink on scroll */
   const nav = document.getElementById("nav");
@@ -50,9 +50,12 @@ const MH = (() => {
   /* Floating ore particles */
   (function oreField() {
     const canvas = document.getElementById("ore-field");
-    if (!canvas || reduceMotion) return;
+    if (!canvas) return;
     const ctx = canvas.getContext("2d");
-    const colors = ["#34f5a4", "#38d9ff", "#a77bff", "#ffc857", "#ff6b9a"];
+    const still = () => window.MH_SETTINGS ? MH_SETTINGS.stillBackground() : reduceMotion;
+    const themeColors = () => ["--emerald", "--cyan", "--violet", "--amber", "--rose"].map(v => getComputedStyle(document.documentElement).getPropertyValue(v).trim() || "#38d9ff");
+    let colors = themeColors();
+    window.addEventListener("mh-settings", () => { colors = themeColors(); ores.forEach(o => { o.c = colors[(Math.random() * colors.length) | 0]; }); });
     let w, h, ores = [];
     const spawn = anywhere => ({
       x: Math.random() * w, y: anywhere ? Math.random() * h : h + 20,
@@ -69,6 +72,7 @@ const MH = (() => {
     }
     function tick() {
       ctx.clearRect(0, 0, w, h);
+      if (still()) { setTimeout(() => requestAnimationFrame(tick), 600); return; }
       ores.forEach((o, i) => {
         o.y -= o.v; o.r += o.vr; o.sway += 0.01;
         if (o.y < -20) ores[i] = spawn(false);
@@ -145,6 +149,7 @@ const MH = (() => {
   const curRe = new RegExp(CUR.map(c => `(?<${c.k}>${c.re.replace(/\((?!\?)/g, "(?:")})`).join("|"), "g");
   const SKIP = new Set(["SCRIPT", "STYLE", "TEXTAREA", "INPUT", "SELECT", "OPTION", "CODE", "NOSCRIPT"]);
   function curNode(t) {
+    if (document.documentElement.classList.contains("no-cur")) return;
     const txt = t.nodeValue;
     if (!txt || txt.length < 2 || !/\d/.test(txt)) return;
     const host = t.parentElement;

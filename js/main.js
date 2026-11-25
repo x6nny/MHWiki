@@ -16,6 +16,7 @@ const SECTIONS = [
   { id: "status-effects", name: "Status Effects", icon: null,                             desc: "Fire, frostbite, radioactive, poison…",      cat: "items",       keys: "ore properties fire frostbite radioactive poison sparkles wet anti-gravity shield", ready: true },
   { id: "update-log",     name: "Update Log",     icon: "assets/icons/halloween.png",     desc: "Patch notes, newest first",                  cat: "news",        keys: "updates patch notes changelog halloween 2026",               ready: true },
   { id: "game-tracker",   name: "Game Tracker",   icon: "assets/icons/money.png",         desc: "Live player count & CCU history since 2019", cat: "news", keys: "game tracker ccu players playing live player count concurrent history graph chart peak visits favorites rating rolimons stats", ready: true },
+  { id: "settings",       name: "Settings",       icon: "assets/icons/rebirth.png",       desc: "Themes, animations and your saved data", cat: "world", keys: "settings options preferences theme themes dark black oled colors colours animations motion reduce background blur glass currency icons backup export import clear data", ready: true },
   { id: "events",         name: "Events",         icon: "assets/icons/winter.png",        desc: "Seasonal events since 2015",                 cat: "news",        keys: "valentines st patricks spring easter birthday summer halloween black friday winter christmas", ready: true },
   { id: "mystery-boxes",  name: "Mystery Boxes",  icon: "assets/icons/spook-mcdooks.png", desc: "Box types, odds & Lucky Clovers",            cat: "economy",     keys: "boxes crates inferno lucky clover spook mcdooks unreal magnificent", ready: true },
   { id: "daily-tasks",    name: "Daily Tasks",    icon: "assets/icons/uc.png",            desc: "Daily & weekly tasks, uC rewards, Daily Gifts", cat: "economy", keys: "daily tasks task weekly quests objectives uc unobtainium rewards daily gift gifts login streak reset tracker", ready: true },
@@ -25,7 +26,7 @@ const SECTIONS = [
   { id: "npcs",           name: "NPCs",           icon: "assets/icons/craftsman.png",     desc: "Masked Man, Craftsman, Draedon & more",      cat: "world",       keys: "npc masked man craftsman spook mcdooks draedon daegel fargield john doe zalgo characters guardians santa leprechaun", ready: true },
 ];
 const byId = Object.fromEntries(SECTIONS.map(s => [s.id, s]));
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches || !!(window.MH_SETTINGS && MH_SETTINGS.reduceMotion());
 
 /* ---------- Toast ---------- */
 const toastEl = document.getElementById("toast");
@@ -58,9 +59,12 @@ onScroll();
 /* ---------- Floating ore particles ---------- */
 (function oreField() {
   const canvas = document.getElementById("ore-field");
-  if (!canvas || reduceMotion) return;
+  if (!canvas) return;
   const ctx = canvas.getContext("2d");
-  const colors = ["#34f5a4", "#38d9ff", "#a77bff", "#ffc857", "#ff6b9a"];
+  const still = () => window.MH_SETTINGS ? MH_SETTINGS.stillBackground() : reduceMotion;
+  const themeColors = () => ["--emerald", "--cyan", "--violet", "--amber", "--rose"].map(v => getComputedStyle(document.documentElement).getPropertyValue(v).trim() || "#38d9ff");
+  let colors = themeColors();
+  window.addEventListener("mh-settings", () => { colors = themeColors(); ores.forEach(o => { o.c = colors[(Math.random() * colors.length) | 0]; }); });
   let w, h, dpr, ores = [];
 
   function resize() {
@@ -86,6 +90,7 @@ onScroll();
   }
   function tick() {
     ctx.clearRect(0, 0, w, h);
+    if (still()) { setTimeout(() => requestAnimationFrame(tick), 600); return; }
     for (let i = 0; i < ores.length; i++) {
       const o = ores[i];
       o.y -= o.v; o.r += o.vr; o.sway += 0.01;
@@ -229,7 +234,7 @@ document.querySelectorAll(".code").forEach(btn => {
 const filtersEl = document.querySelector(".filters");
 const indicator = document.querySelector(".filter-indicator");
 const groups = [...document.querySelectorAll(".cat-group")];
-const RM_SCROLL = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const RM_SCROLL = reduceMotion;
 function moveIndicator(btn) {
   if (!btn) return;
   indicator.style.width = `${btn.offsetWidth}px`;

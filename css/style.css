@@ -30,6 +30,12 @@
   --font-display: "Sora", system-ui, sans-serif;
   --font-body: "Manrope", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* theme-only colours (see Themes below) */
+  --bd1: #142046;
+  --bd2: #0d2a2a;
+  --nav-bg: rgba(10, 14, 28, .62);
+  --panel-solid: rgba(14, 18, 32, .94);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -80,8 +86,8 @@ kbd {
 .backdrop {
   position: fixed; inset: 0; z-index: -1; overflow: hidden;
   background:
-    radial-gradient(1200px 800px at 80% -10%, #142046 0%, transparent 60%),
-    radial-gradient(900px 700px at -10% 30%, #0d2a2a 0%, transparent 60%),
+    radial-gradient(1200px 800px at 80% -10%, var(--bd1) 0%, transparent 60%),
+    radial-gradient(900px 700px at -10% 30%, var(--bd2) 0%, transparent 60%),
     linear-gradient(180deg, var(--bg-2), var(--bg) 60%);
 }
 .blob {
@@ -132,7 +138,7 @@ kbd {
   transition: background .4s var(--ease), box-shadow .4s var(--ease);
 }
 .nav.scrolled { padding-top: 10px; padding-bottom: 10px; }
-.nav.scrolled .nav-inner { background: rgba(10, 14, 28, .62); }
+.nav.scrolled .nav-inner { background: var(--nav-bg); }
 
 .brand {
   display: flex; align-items: center; gap: 10px;
@@ -958,3 +964,47 @@ mh-cur.cur-money img { width: 1.25em; height: 1.25em; vertical-align: -.28em; ma
 @media (max-width: 680px) { .sc-mini { width: 190px; height: 90px; } .sc-mini i { width: 46px; height: 46px; border-radius: 13px; margin: 0 -5px; } }
 @media (prefers-reduced-motion: reduce) { .sc-mini i, .sc-mini i::after, .scm-spark { animation: none; } }
 @media (prefers-reduced-motion: reduce) { .gtm-ln { stroke-dashoffset: 0; animation: none; } }
+
+
+/* =========================================================
+   Settings (pages/settings.html, js/settings.js)
+   ========================================================= */
+
+/* ---------- Themes ---------- */
+html[data-theme="midnight"] { --bg: #04060d; --bg-2: #0a1024; --emerald: #5ea8ff; --cyan: #7cc4ff; --violet: #7b7bff; --amber: #ffd27a; --rose: #ff7aa8; --bd1: #12205a; --bd2: #0a1838; --nav-bg: rgba(8, 12, 30, .66); --panel-solid: rgba(10, 14, 34, .95); }
+html[data-theme="inferno"]  { --bg: #0b0505; --bg-2: #1a0907; --emerald: #ff8a3d; --cyan: #ffb547; --violet: #ff4d6d; --amber: #ffd166; --rose: #ff3b5c; --bd1: #3d0f0a; --bd2: #2e1405; --nav-bg: rgba(26, 10, 8, .66); --panel-solid: rgba(28, 12, 10, .95); }
+html[data-theme="spectral"] { --bg: #07040d; --bg-2: #140a24; --emerald: #c77dff; --cyan: #7ad7ff; --violet: #ff7ad9; --amber: #ffd36b; --rose: #ff6bd5; --bd1: #2c104c; --bd2: #10183c; --nav-bg: rgba(18, 10, 32, .66); --panel-solid: rgba(20, 12, 36, .95); }
+html[data-theme="toxic"]    { --bg: #040904; --bg-2: #0a170b; --emerald: #7cff6b; --cyan: #c6ff4d; --violet: #2bd9a5; --amber: #e8ff5a; --rose: #ff6b9a; --bd1: #12361a; --bd2: #1f3a0a; --nav-bg: rgba(8, 20, 10, .66); --panel-solid: rgba(10, 22, 12, .95); }
+html[data-theme="frost"]    { --bg: #050a10; --bg-2: #0b1726; --emerald: #9fe8ff; --cyan: #d2f5ff; --violet: #8fb4ff; --amber: #fff1b8; --rose: #ffb3d1; --bd1: #143450; --bd2: #0e2c3c; --nav-bg: rgba(10, 20, 32, .66); --panel-solid: rgba(12, 22, 34, .95); }
+html[data-theme="gilded"]   { --bg: #0a0805; --bg-2: #18110a; --emerald: #ffd36b; --cyan: #ffe9a8; --violet: #e0a64a; --amber: #ffc857; --rose: #ff8f6b; --bd1: #3c2a0c; --bd2: #2c1d0a; --nav-bg: rgba(24, 18, 8, .68); --panel-solid: rgba(26, 20, 10, .95); }
+html[data-theme="oled"]     { --bg: #000; --bg-2: #000; --bd1: transparent; --bd2: transparent; --nav-bg: rgba(0, 0, 0, .78); --panel-solid: rgba(10, 10, 12, .96); --glass: rgba(255, 255, 255, .045); }
+html[data-theme="oled"] .blob { opacity: .1; }
+html[data-theme] ::selection { background: color-mix(in srgb, var(--cyan) 35%, transparent); }
+
+/* ---------- Motion ---------- */
+html.calm .blob, html.calm .grid-lines { animation: none !important; }
+html.calm *, html.calm *::before, html.calm *::after { animation-iteration-count: 1 !important; }
+html.no-motion { scroll-behavior: auto; }
+html.no-motion *, html.no-motion *::before, html.no-motion *::after { animation-duration: .001ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; transition-delay: 0s !important; scroll-behavior: auto !important; }
+html.no-motion .reveal, html.no-motion .intro { opacity: 1; transform: none; filter: none; }
+
+/* ---------- Background ---------- */
+html.bg-still .blob, html.bg-still .grid-lines { animation: none !important; }
+html.bg-still #ore-field, html.bg-plain #ore-field { display: none; }
+html.bg-plain .blob, html.bg-plain .grid-lines, html.bg-plain .grain { display: none; }
+
+/* ---------- Frosted glass off ---------- */
+html.no-blur *, html.no-blur *::before, html.no-blur *::after { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+html.no-blur .glass { background: linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.015) 60%), var(--panel-solid); }
+
+/* ---------- Settings button in the nav ---------- */
+.settings-btn {
+  flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 999px;
+  color: var(--muted); background: rgba(255,255,255,.05); border: 1px solid var(--glass-border);
+  transition: color .25s, border-color .25s, transform .35s var(--spring), background .25s;
+}
+.settings-btn svg { transition: transform .7s var(--spring); }
+.settings-btn:hover { color: var(--text); border-color: var(--glass-highlight); transform: translateY(-1px); }
+.settings-btn:hover svg { transform: rotate(90deg); }
+.settings-btn.current { color: #0a0f1c; background: linear-gradient(135deg, var(--emerald), var(--cyan)); border-color: transparent; }
+.search-trigger + .settings-btn { margin-left: -12px; }

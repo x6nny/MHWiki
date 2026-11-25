@@ -26,13 +26,17 @@
   const loadSources = () => sources || (sources = fetch(ROOT + "data/ImageSources.json" + q).then(r => r.ok ? r.json() : {}).catch(() => ({})));
   window.addEventListener("error", e => {
     const img = e.target;
-    if (!(img instanceof HTMLImageElement) || img.dataset.wikiFallback) return;
-    const at = img.src.indexOf("/assets/wiki/");
+    if (!(img instanceof HTMLImageElement)) return;
+    const failed = img.src, at = failed.indexOf("/assets/wiki/");
     if (at < 0) return;
-    const key = decodeURIComponent(img.src.slice(at + 1).split(/[?#]/)[0]);
+    const key = decodeURIComponent(failed.slice(at + 1).split(/[?#]/)[0]);
+    // Tracked per image path (not per element), so an <img> that is reused for
+    // different items (e.g. the rotating orb on the Crafting page) still falls back each time.
+    if (img.dataset.wikiFallback === key) return;
     e.stopImmediatePropagation(); e.stopPropagation(); // keep the image's own onerror until the fallback has been tried
-    img.dataset.wikiFallback = "1";
+    img.dataset.wikiFallback = key;
     loadSources().then(map => {
+      if (img.src !== failed) return; // the page already moved this <img> on to another picture
       if (map[key]) { img.referrerPolicy = "no-referrer"; img.src = map[key]; }
       else img.dispatchEvent(new Event("error"));
     });

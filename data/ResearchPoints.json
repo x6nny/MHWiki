@@ -310,10 +310,10 @@
     {
       "id": "craft",
       "title": "Craftsman blueprints",
-      "range": "50k – 1M RP",
+      "range": "50k – 2.5M RP",
       "icon": "craft",
       "link": "npcs.html#npc=the-craftsman",
-      "text": "You need a blueprint before The Craftsman will fuse or evolve a Reborn item. Blueprints are paid for with RP."
+      "text": "You need a blueprint before The Craftsman will fuse or evolve a Reborn item. Blueprints are paid for with RP. The priciest is Tortoise Fortifier at 2.5M RP."
     },
     {
       "id": "lb",
@@ -321,6 +321,1907 @@
       "range": "Bragging rights",
       "icon": "lb",
       "text": "There's a public RP leaderboard by the tower, next to the other leaderboards."
+    }
+  ],
+  "blueprints": [
+    {
+      "n": "Tortoise Fortifier",
+      "img": "assets/wiki/tortoise-fortifier.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 2500000,
+      "from": [
+        {
+          "n": "Turtle Dignifier",
+          "x": 10,
+          "img": "assets/wiki/turtle-dignifier.webp"
+        }
+      ]
+    },
+    {
+      "n": "Spaghetti & Meatballs",
+      "img": "assets/wiki/spaghetti-meatballs.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 2000000,
+      "from": [
+        {
+          "n": "Meatball Sandwich",
+          "x": 10,
+          "img": "assets/wiki/meatball-sandwich.webp"
+        }
+      ]
+    },
+    {
+      "n": "Big Fluxxus",
+      "img": "assets/wiki/big-fluxxus.webp",
+      "tier": "Advanced Fusion",
+      "kind": "Fusion",
+      "rp": 1500000,
+      "life": "S+2,000+",
+      "from": [
+        {
+          "n": "Big Alberto",
+          "x": 15,
+          "img": "assets/wiki/big-alberto.webp"
+        },
+        {
+          "n": "Skyliner Flux",
+          "x": 30,
+          "img": "assets/wiki/skyliner-flux.webp"
+        }
+      ]
+    },
+    {
+      "n": "Castle Bravo",
+      "img": "assets/wiki/castle-bravo.webp",
+      "tier": "Advanced Evolution",
+      "kind": "Evolution",
+      "rp": 1000000,
+      "life": "2,000+",
+      "from": [
+        {
+          "n": "Big Alberto",
+          "x": 25,
+          "img": "assets/wiki/big-alberto.webp"
+        }
+      ]
+    },
+    {
+      "n": "Tsar Bomba",
+      "img": "assets/wiki/tsar-bomba.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 1000000,
+      "life": "20+",
+      "from": [
+        {
+          "n": "Big Bertha",
+          "x": 100,
+          "img": "assets/wiki/big-bertha.webp"
+        }
+      ]
+    },
+    {
+      "n": "Auroral Metropolis",
+      "img": "assets/wiki/auroral-metropolis.webp",
+      "tier": "Advanced Evolution",
+      "kind": "Evolution",
+      "rp": 750000,
+      "from": [
+        {
+          "n": "Frigid Dystopia",
+          "x": 8,
+          "img": "assets/wiki/frigid-dystopia.webp"
+        }
+      ]
+    },
+    {
+      "n": "Big Fungus",
+      "img": "assets/wiki/big-fungus.webp",
+      "tier": "Advanced Fusion",
+      "kind": "Fusion",
+      "rp": 750000,
+      "life": "S+2,000+",
+      "from": [
+        {
+          "n": "The Sporest",
+          "x": 4,
+          "img": "assets/wiki/the-sporest.webp"
+        },
+        {
+          "n": "Big Alberto",
+          "x": 8,
+          "img": "assets/wiki/big-alberto.webp"
+        }
+      ]
+    },
+    {
+      "n": "Nova Evaluator",
+      "img": "assets/wiki/nova-evaluator.webp",
+      "tier": "Advanced Fusion",
+      "kind": "Fusion",
+      "rp": 750000,
+      "life": "S+5,000+",
+      "from": [
+        {
+          "n": "Flaming Schrodinger",
+          "x": 10,
+          "img": "assets/wiki/flaming-schrodinger-hd.webp"
+        },
+        {
+          "n": "Nova Star",
+          "x": 5,
+          "img": "assets/wiki/nova-star.webp"
+        }
+      ]
+    },
+    {
+      "n": "Ore Indoctrinator",
+      "img": "assets/wiki/ore-indoctrinator.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 666000,
+      "life": "5+",
+      "from": [
+        {
+          "n": "Ore Illuminator",
+          "x": 66,
+          "img": "assets/wiki/ore-illuminator.webp"
+        }
+      ]
+    },
+    {
+      "n": "Temporal Armageddon",
+      "img": "assets/wiki/temporal-armageddon.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 600000,
+      "life": "750+",
+      "from": [
+        {
+          "n": "Fractured Reality",
+          "x": 30,
+          "img": "assets/wiki/fractured-reality.webp"
+        }
+      ]
+    },
+    {
+      "n": "Universal Collapse",
+      "img": "assets/wiki/universal-collapse.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 600000,
+      "life": "750+",
+      "from": [
+        {
+          "n": "Fractured Reality",
+          "x": 30,
+          "img": "assets/wiki/fractured-reality.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dragon Cannon",
+      "img": "assets/wiki/dragon-cannon.webp",
+      "tier": "Advanced Fusion",
+      "kind": "Fusion",
+      "rp": 500000,
+      "life": "S+8,000+",
+      "from": [
+        {
+          "n": "Railgun Cannon",
+          "x": 6,
+          "img": "assets/wiki/railgun-cannon.webp"
+        },
+        {
+          "n": "Dragon Blaster",
+          "x": 3,
+          "img": "assets/wiki/dragon-blaster.webp"
+        }
+      ]
+    },
+    {
+      "n": "Nuclear Castle",
+      "img": "assets/wiki/nuclear-castle.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 500000,
+      "from": [
+        {
+          "n": "Nuclear Stronghold",
+          "x": 20,
+          "img": "assets/wiki/nuclear-stronghold.webp"
+        }
+      ]
+    },
+    {
+      "n": "The Harbinger of Destruction",
+      "img": "assets/wiki/the-harbinger-of-destruction.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 500000,
+      "life": "8,888+",
+      "from": [
+        {
+          "n": "The Grim Reaper",
+          "x": 8,
+          "img": "assets/wiki/the-grim-reaper.webp"
+        }
+      ]
+    },
+    {
+      "n": "Vortex Singularity",
+      "img": "assets/wiki/vortex-singularity.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 400000,
+      "life": "0+",
+      "from": [
+        {
+          "n": "Vortex Chamber",
+          "x": 15,
+          "img": "assets/wiki/vortex-chamber.webp"
+        }
+      ]
+    },
+    {
+      "n": "Massive Quantum Diamond Cleaner",
+      "img": "assets/wiki/massive-quantum-diamond-cleaner.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 350000,
+      "life": "s-0+",
+      "from": [
+        {
+          "n": "Quantum Ore Cleaner",
+          "x": 13,
+          "img": "assets/wiki/quantum-ore-cleaner.webp"
+        },
+        {
+          "n": "Massive Diamond Mine",
+          "x": 6,
+          "img": "assets/wiki/massive-diamond-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Devil's Spore",
+      "img": "assets/wiki/devil-s-spore.webp",
+      "tier": "Advanced Evolution",
+      "kind": "Evolution",
+      "rp": 300000,
+      "from": [
+        {
+          "n": "Vampire Spore",
+          "x": 15,
+          "img": "assets/wiki/vampire-spore.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dreamer's Devastation",
+      "img": "assets/wiki/dreamer-s-devastation.webp",
+      "tier": "Advanced Evolution",
+      "kind": "Evolution",
+      "rp": 300000,
+      "life": "2,000+",
+      "from": [
+        {
+          "n": "Dreamer's Blight",
+          "x": 5,
+          "img": "assets/wiki/dreamer-s-blight.webp"
+        }
+      ]
+    },
+    {
+      "n": "Hydra Blaster",
+      "img": "assets/wiki/hydra-blaster.webp",
+      "tier": "Advanced Evolution",
+      "kind": "Evolution",
+      "rp": 300000,
+      "life": "500+",
+      "from": [
+        {
+          "n": "Dragon Blaster",
+          "x": 10,
+          "img": "assets/wiki/dragon-blaster.webp"
+        }
+      ]
+    },
+    {
+      "n": "Mad Monstrous Melter",
+      "img": "assets/wiki/mad-monstrous-melter.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 300000,
+      "from": [
+        {
+          "n": "Big Bad Blaster",
+          "x": 20,
+          "img": "assets/wiki/big-bad-blaster.webp"
+        }
+      ]
+    },
+    {
+      "n": "Ore Chainsaw",
+      "img": "assets/wiki/ore-chainsaw.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 300000,
+      "life": "5+",
+      "from": [
+        {
+          "n": "Ore Sawmill",
+          "x": 28,
+          "img": "assets/wiki/ore-sawmill.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dimension Extractor",
+      "img": "assets/wiki/dimension-extractor.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 250000,
+      "life": "500+",
+      "from": [
+        {
+          "n": "Breech Loader",
+          "x": 12,
+          "img": "assets/wiki/breech-loader.webp"
+        }
+      ]
+    },
+    {
+      "n": "Heavenly Flux",
+      "img": "assets/wiki/heavenly-flux.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 250000,
+      "life": "1,000+",
+      "from": [
+        {
+          "n": "Skyliner Flux",
+          "x": 8,
+          "img": "assets/wiki/skyliner-flux.webp"
+        }
+      ]
+    },
+    {
+      "n": "Mycolympus",
+      "img": "assets/wiki/mycolympus.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 250000,
+      "life": "400+",
+      "from": [
+        {
+          "n": "The Sporest",
+          "x": 12,
+          "img": "assets/wiki/the-sporest.webp"
+        }
+      ]
+    },
+    {
+      "n": "Sage Justice",
+      "img": "assets/wiki/sage-justice.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 250000,
+      "life": "s-100+",
+      "from": [
+        {
+          "n": "Sage Redeemer",
+          "x": 5,
+          "img": "assets/wiki/sage-redeemer.webp"
+        },
+        {
+          "n": "Blind Justice",
+          "x": 10,
+          "img": "assets/wiki/blind-justice.webp"
+        }
+      ]
+    },
+    {
+      "n": "Shard City",
+      "img": "assets/wiki/shard-city.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 250000,
+      "life": "800+",
+      "from": [
+        {
+          "n": "Shard Park",
+          "x": 15,
+          "img": "assets/wiki/shard-park.webp"
+        }
+      ]
+    },
+    {
+      "n": "Symcorpium Mine",
+      "img": "assets/wiki/symcorpium-mine.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 250000,
+      "life": "s-300+",
+      "from": [
+        {
+          "n": "Scorpium Mine",
+          "x": 10,
+          "img": "assets/wiki/scorpium-mine.webp"
+        },
+        {
+          "n": "Symmetrium Mine",
+          "x": 5,
+          "img": "assets/wiki/symmetrium-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Whimsical Turbine",
+      "img": "assets/wiki/whimsical-turbine.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 225000,
+      "life": "1,000+",
+      "from": [
+        {
+          "n": "Quaint Skymill",
+          "x": 25,
+          "img": "assets/wiki/quaint-skymill.webp"
+        }
+      ]
+    },
+    {
+      "n": "Anguished Guardian of the Gate",
+      "img": "assets/wiki/anguished-guardian-of-the-gate.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 200000,
+      "life": "s-250+",
+      "from": [
+        {
+          "n": "Dreamer's Anguish",
+          "x": 4,
+          "img": "assets/wiki/dreamer-s-anguish.webp"
+        },
+        {
+          "n": "Guardian of the Gate",
+          "x": 8,
+          "img": "assets/wiki/guardian-of-the-gate.webp"
+        }
+      ]
+    },
+    {
+      "n": "Crystal Altar",
+      "img": "assets/wiki/crystal-altar.webp",
+      "tier": "Advanced Evolution",
+      "kind": "Evolution",
+      "rp": 200000,
+      "life": "3,000+",
+      "from": [
+        {
+          "n": "Crystal Shrine",
+          "x": 5,
+          "img": "assets/wiki/crystal-shrine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dark Illuminator",
+      "img": "assets/wiki/dark-illuminator.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 200000,
+      "life": "s-100+",
+      "from": [
+        {
+          "n": "Ore Illuminator",
+          "x": 4,
+          "img": "assets/wiki/ore-illuminator.webp"
+        },
+        {
+          "n": "Dark Magic",
+          "x": 8,
+          "img": "assets/wiki/dark-magic.webp"
+        }
+      ]
+    },
+    {
+      "n": "Diamond Breech Loader",
+      "img": "assets/wiki/diamond-breech-loader.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 200000,
+      "life": "s-500+",
+      "from": [
+        {
+          "n": "Massive Diamond Mine",
+          "x": 10,
+          "img": "assets/wiki/massive-diamond-mine.webp"
+        },
+        {
+          "n": "Breech Loader",
+          "x": 5,
+          "img": "assets/wiki/breech-loader.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dragonglass Blaster",
+      "img": "assets/wiki/dragonglass-blaster.webp",
+      "tier": "Advanced Fusion",
+      "kind": "Fusion",
+      "rp": 200000,
+      "life": "S+500+",
+      "from": [
+        {
+          "n": "Dragon Blaster",
+          "x": 6,
+          "img": "assets/wiki/dragon-blaster.webp"
+        },
+        {
+          "n": "Dragonglass Mine",
+          "x": 3,
+          "img": "assets/wiki/dragonglass-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Lord of Tenebrous",
+      "img": "assets/wiki/lord-of-tenebrous.webp",
+      "tier": "Advanced Evolution",
+      "kind": "Evolution",
+      "rp": 200000,
+      "life": "800+",
+      "from": [
+        {
+          "n": "Sword God Shrine",
+          "x": 10,
+          "img": "assets/wiki/sword-god-shrine-hd.webp"
+        }
+      ]
+    },
+    {
+      "n": "Ore Nova",
+      "img": "assets/wiki/ore-nova.webp",
+      "tier": "Advanced Fusion",
+      "kind": "Fusion",
+      "rp": 200000,
+      "life": "S+5,000+",
+      "from": [
+        {
+          "n": "Nova Star",
+          "x": 3,
+          "img": "assets/wiki/nova-star.webp"
+        },
+        {
+          "n": "Stardust Pulsar",
+          "x": 6,
+          "img": "assets/wiki/stardust-pulsar.webp"
+        }
+      ]
+    },
+    {
+      "n": "Phasecursor Furnace",
+      "img": "assets/wiki/phasecursor-furnace.webp",
+      "tier": "Advanced Fusion",
+      "kind": "Fusion",
+      "rp": 200000,
+      "life": "S+500+",
+      "from": [
+        {
+          "n": "Precursor Furnace",
+          "x": 8,
+          "img": "assets/wiki/precursor-furnace.webp"
+        },
+        {
+          "n": "Phase Processor",
+          "x": 4,
+          "img": "assets/wiki/phase-processor.webp"
+        }
+      ]
+    },
+    {
+      "n": "Symmetryte Mine",
+      "img": "assets/wiki/symmetryte-mine.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 200000,
+      "life": "300+",
+      "from": [
+        {
+          "n": "Symmetrium Mine",
+          "x": 8,
+          "img": "assets/wiki/symmetrium-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Tempest Refiner",
+      "img": "assets/wiki/tempest-refiner.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 200000,
+      "life": "25+",
+      "from": [
+        {
+          "n": "Lightningbolt Refiner",
+          "x": 20,
+          "img": "assets/wiki/lightningbolt-refiner-hd.webp"
+        }
+      ]
+    },
+    {
+      "n": "Void Star",
+      "img": "assets/wiki/void-star.webp",
+      "tier": "Advanced Evolution",
+      "kind": "Evolution",
+      "rp": 200000,
+      "life": "2,000+",
+      "from": [
+        {
+          "n": "Black Dwarf",
+          "x": 10,
+          "img": "assets/wiki/black-dwarf.webp"
+        }
+      ]
+    },
+    {
+      "n": "Zenith Will",
+      "img": "assets/wiki/zenith-will.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 200000,
+      "life": "5+",
+      "from": [
+        {
+          "n": "Righteous Will",
+          "x": 20,
+          "img": "assets/wiki/righteous-will.webp"
+        }
+      ]
+    },
+    {
+      "n": "Atomyke Mine",
+      "img": "assets/wiki/atomyke-mine.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 150000,
+      "life": "100+",
+      "from": [
+        {
+          "n": "Atomium Mine",
+          "x": 15,
+          "img": "assets/wiki/atomium-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Aurora Borealis",
+      "img": "assets/wiki/aurora-borealis.webp",
+      "tier": "Advanced Evolution",
+      "kind": "Evolution",
+      "rp": 150000,
+      "life": "2,000+",
+      "from": [
+        {
+          "n": "Northern Lights",
+          "x": 5,
+          "img": "assets/wiki/northern-lights.webp"
+        }
+      ]
+    },
+    {
+      "n": "Catalyzed Star",
+      "img": "assets/wiki/catalyzed-star.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 150000,
+      "life": "s-250+",
+      "from": [
+        {
+          "n": "The Catalyst",
+          "x": 10,
+          "img": "assets/wiki/the-catalyst.webp"
+        },
+        {
+          "n": "Morning Star",
+          "x": 5,
+          "img": "assets/wiki/morning-star.webp"
+        }
+      ]
+    },
+    {
+      "n": "Draconicglass Mine",
+      "img": "assets/wiki/draconicglass-mine.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 150000,
+      "life": "100+",
+      "from": [
+        {
+          "n": "Dragonglass Mine",
+          "x": 15,
+          "img": "assets/wiki/dragonglass-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dreamer's Nightmare",
+      "img": "assets/wiki/dreamer-s-nightmare.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 150000,
+      "life": "200+",
+      "from": [
+        {
+          "n": "Dreamer's Anguish",
+          "x": 7,
+          "img": "assets/wiki/dreamer-s-anguish.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dreamer's Terror",
+      "img": "assets/wiki/dreamer-s-terror.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 150000,
+      "life": "20+",
+      "from": [
+        {
+          "n": "Dreamer's Fright",
+          "x": 50,
+          "img": "assets/wiki/dreamer-s-fright.webp"
+        }
+      ]
+    },
+    {
+      "n": "Igneous Lightning",
+      "img": "assets/wiki/igneous-lightning.webp",
+      "tier": "Advanced Fusion",
+      "kind": "Fusion",
+      "rp": 150000,
+      "life": "S+2,000+",
+      "from": [
+        {
+          "n": "Igneous Forge",
+          "x": 3,
+          "img": "assets/wiki/igneous-forge.webp"
+        },
+        {
+          "n": "Arcane Lightning",
+          "x": 6,
+          "img": "assets/wiki/arcane-lightning.webp"
+        }
+      ]
+    },
+    {
+      "n": "Nature's Temple",
+      "img": "assets/wiki/nature-s-temple.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 150000,
+      "life": "s-5+",
+      "from": [
+        {
+          "n": "Nature's Grip",
+          "x": 10,
+          "img": "assets/wiki/nature-s-grip.webp"
+        },
+        {
+          "n": "Ancient Temple",
+          "x": 5,
+          "img": "assets/wiki/ancient-temple.webp"
+        }
+      ]
+    },
+    {
+      "n": "Newtonium Excavator",
+      "img": "assets/wiki/newtonium-excavator.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 150000,
+      "life": "20+",
+      "from": [
+        {
+          "n": "Newtonium Mine",
+          "x": 14,
+          "img": "assets/wiki/newtonium-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Protector of the Passage",
+      "img": "assets/wiki/protector-of-the-passage.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 150000,
+      "life": "s-250+",
+      "from": [
+        {
+          "n": "Gate of Eclipse",
+          "x": 9,
+          "img": "assets/wiki/guys-its-a-door-not-a-gate-are-you-blind.webp"
+        },
+        {
+          "n": "Guardian of the Gate",
+          "x": 9,
+          "img": "assets/wiki/guardian-of-the-gate.webp"
+        }
+      ]
+    },
+    {
+      "n": "Solarium Mine",
+      "img": "assets/wiki/solarium-mine.webp",
+      "tier": "Advanced Evolution",
+      "kind": "Evolution",
+      "rp": 150000,
+      "life": "5,000+",
+      "from": [
+        {
+          "n": "Apollium Mine",
+          "x": 6,
+          "img": "assets/wiki/apollium-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Stardust Illuminator",
+      "img": "assets/wiki/stardust-illuminator.webp",
+      "tier": "Advanced Fusion",
+      "kind": "Fusion",
+      "rp": 150000,
+      "life": "S+600+",
+      "from": [
+        {
+          "n": "Ore Illuminator",
+          "x": 2,
+          "img": "assets/wiki/ore-illuminator.webp"
+        },
+        {
+          "n": "Stardust Pulsar",
+          "x": 4,
+          "img": "assets/wiki/stardust-pulsar.webp"
+        }
+      ]
+    },
+    {
+      "n": "The Daegelart",
+      "img": "assets/wiki/the-daegelart.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 150000,
+      "life": "500+",
+      "from": [
+        {
+          "n": "The Abomination",
+          "x": 10,
+          "img": "assets/wiki/the-abomination.webp"
+        }
+      ]
+    },
+    {
+      "n": "V-tolite Mine",
+      "img": "assets/wiki/v-tolite-mine.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 150000,
+      "life": "200+",
+      "from": [
+        {
+          "n": "Pilotite Mine",
+          "x": 7,
+          "img": "assets/wiki/pilotite-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Yuntonium Mine",
+      "img": "assets/wiki/yuntonium-mine.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 150000,
+      "life": "s-20+",
+      "from": [
+        {
+          "n": "Newtonium Mine",
+          "x": 6,
+          "img": "assets/wiki/newtonium-mine.webp"
+        },
+        {
+          "n": "Yunium Mine",
+          "x": 3,
+          "img": "assets/wiki/yunium-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Demon Core",
+      "img": "assets/wiki/demon-core.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 125000,
+      "life": "100+",
+      "from": [
+        {
+          "n": "Toxic Waste Disposal",
+          "x": 10,
+          "img": "assets/wiki/toxic-waste-disposal.webp"
+        }
+      ]
+    },
+    {
+      "n": "Scorponyte Mine",
+      "img": "assets/wiki/scorponyte-mine.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 125000,
+      "from": [
+        {
+          "n": "Scorpium Mine",
+          "x": 17,
+          "img": "assets/wiki/scorpium-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Turbine Chamber",
+      "img": "assets/wiki/turbine-chamber.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 125000,
+      "life": "100+",
+      "from": [
+        {
+          "n": "Cooling Chamber",
+          "x": 11,
+          "img": "assets/wiki/cooling-chamber.webp"
+        }
+      ]
+    },
+    {
+      "n": "Tyrant's Forge",
+      "img": "assets/wiki/tyrant-s-forge.webp",
+      "tier": "Advanced Evolution",
+      "kind": "Evolution",
+      "rp": 125000,
+      "life": "1,000+",
+      "from": [
+        {
+          "n": "Igneous Forge",
+          "x": 10,
+          "img": "assets/wiki/igneous-forge.webp"
+        }
+      ]
+    },
+    {
+      "n": "Aethereal Synthesizer",
+      "img": "assets/wiki/aethereal-synthesizer.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 100000,
+      "life": "300+",
+      "from": [
+        {
+          "n": "Aether Refinery",
+          "x": 15,
+          "img": "assets/wiki/aether-refinery.webp"
+        }
+      ]
+    },
+    {
+      "n": "Ambrosia Garden",
+      "img": "assets/wiki/ambrosia-garden.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 100000,
+      "life": "s-350+",
+      "from": [
+        {
+          "n": "Sakura Garden",
+          "x": 6,
+          "img": "assets/wiki/sakura-garden.webp"
+        },
+        {
+          "n": "Ambrosia Fountain",
+          "x": 3,
+          "img": "assets/wiki/ambrosia-fountain.webp"
+        }
+      ]
+    },
+    {
+      "n": "Anguished Garden",
+      "img": "assets/wiki/anguished-garden.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 100000,
+      "life": "s-350+",
+      "from": [
+        {
+          "n": "Dreamer's Anguish",
+          "x": 5,
+          "img": "assets/wiki/dreamer-s-anguish.webp"
+        },
+        {
+          "n": "Sakura Garden",
+          "x": 10,
+          "img": "assets/wiki/sakura-garden.webp"
+        }
+      ]
+    },
+    {
+      "n": "Banana Sundae Refiner",
+      "img": "assets/wiki/banana-sundae-refiner.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 100000,
+      "life": "0+",
+      "from": [
+        {
+          "n": "Banana Split Upgrader",
+          "x": 7,
+          "img": "assets/wiki/banana-split-upgrader.webp"
+        }
+      ]
+    },
+    {
+      "n": "Breached Motherboard",
+      "img": "assets/wiki/breached-motherboard.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 100000,
+      "life": "400+",
+      "from": [
+        {
+          "n": "Invasive Cyberlord",
+          "x": 10,
+          "img": "assets/wiki/invasive-cyberlord.webp"
+        }
+      ]
+    },
+    {
+      "n": "Brimstone Spires",
+      "img": "assets/wiki/brimstone-spires.webp",
+      "tier": "Advanced Evolution",
+      "kind": "Evolution",
+      "rp": 100000,
+      "life": "666+",
+      "from": [
+        {
+          "n": "Hades' Palace",
+          "x": 10,
+          "img": "assets/wiki/hades-palace.webp"
+        }
+      ]
+    },
+    {
+      "n": "Deadly Spore",
+      "img": "assets/wiki/deadly-spore.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 100000,
+      "life": "0+",
+      "from": [
+        {
+          "n": "Wild Spore",
+          "x": 12,
+          "img": "assets/wiki/wild-spore.webp"
+        }
+      ]
+    },
+    {
+      "n": "Dreamer's Valor",
+      "img": "assets/wiki/dreamer-s-valor.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 100000,
+      "life": "20+",
+      "from": [
+        {
+          "n": "Dreamer's Might",
+          "x": 25,
+          "img": "assets/wiki/dreamer-s-might-high-quality.webp"
+        }
+      ]
+    },
+    {
+      "n": "Eternal Fracture",
+      "img": "assets/wiki/eternal-fracture.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 100000,
+      "life": "s-100+",
+      "from": [
+        {
+          "n": "Eternal Journey",
+          "x": 6,
+          "img": "assets/wiki/eternal-journey.webp"
+        },
+        {
+          "n": "The Fracture",
+          "x": 3,
+          "img": "assets/wiki/the-fracture.webp"
+        }
+      ]
+    },
+    {
+      "n": "Eternal Limbo",
+      "img": "assets/wiki/eternal-limbo.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 100000,
+      "life": "100+",
+      "from": [
+        {
+          "n": "Eternal Journey",
+          "x": 20,
+          "img": "assets/wiki/eternal-journey.webp"
+        }
+      ]
+    },
+    {
+      "n": "Gaia's Grasp",
+      "img": "assets/wiki/gaia-s-grasp.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 100000,
+      "life": "20+",
+      "from": [
+        {
+          "n": "Nature's Grip",
+          "x": 20,
+          "img": "assets/wiki/nature-s-grip.webp"
+        }
+      ]
+    },
+    {
+      "n": "Grandfather Clockwork",
+      "img": "assets/wiki/grandfather-clockwork.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 100000,
+      "life": "10+",
+      "from": [
+        {
+          "n": "Clockwork",
+          "x": 11,
+          "img": "assets/wiki/clockwork.webp"
+        }
+      ]
+    },
+    {
+      "n": "Mystical Thunder",
+      "img": "assets/wiki/mystical-thunder.webp",
+      "tier": "Advanced Evolution",
+      "kind": "Evolution",
+      "rp": 100000,
+      "life": "2,000+",
+      "from": [
+        {
+          "n": "Arcane Lightning",
+          "x": 8,
+          "img": "assets/wiki/arcane-lightning.webp"
+        }
+      ]
+    },
+    {
+      "n": "Neutron Star",
+      "img": "assets/wiki/neutron-star.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 100000,
+      "life": "1,000+",
+      "from": [
+        {
+          "n": "Red Giant",
+          "x": 10,
+          "img": "assets/wiki/red-giant.webp"
+        }
+      ]
+    },
+    {
+      "n": "Phasecursor Mine",
+      "img": "assets/wiki/phasecursor-mine.webp",
+      "tier": "Advanced Fusion",
+      "kind": "Fusion",
+      "rp": 100000,
+      "life": "S+500+",
+      "from": [
+        {
+          "n": "Precursor Mine",
+          "x": 6,
+          "img": "assets/wiki/precursor-mine.webp"
+        },
+        {
+          "n": "Phase Refiner",
+          "x": 3,
+          "img": "assets/wiki/phase-refiner.webp"
+        }
+      ]
+    },
+    {
+      "n": "Pizza Cutter",
+      "img": "assets/wiki/pizza-cutter.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 100000,
+      "life": "s-5+",
+      "from": [
+        {
+          "n": "Ore Sawmill",
+          "x": 8,
+          "img": "assets/wiki/ore-sawmill.webp"
+        },
+        {
+          "n": "Pizza Blaster",
+          "x": 4,
+          "img": "assets/wiki/pizza-blaster.webp"
+        }
+      ]
+    },
+    {
+      "n": "Sakura Falls",
+      "img": "assets/wiki/sakura-falls.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 100000,
+      "life": "350+",
+      "from": [
+        {
+          "n": "Sakura Garden",
+          "x": 7,
+          "img": "assets/wiki/sakura-garden.webp"
+        }
+      ]
+    },
+    {
+      "n": "Temporal Enchantment",
+      "img": "assets/wiki/temporal-enchantment.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 100000,
+      "life": "150+",
+      "from": [
+        {
+          "n": "Timeless Enhancement",
+          "x": 25,
+          "img": "assets/wiki/timeless-enhancement.webp"
+        }
+      ]
+    },
+    {
+      "n": "Tesla Refuter",
+      "img": "assets/wiki/tesla-refuter.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 100000,
+      "life": "10+",
+      "from": [
+        {
+          "n": "Tesla Resetter",
+          "x": 10,
+          "img": "assets/wiki/tesla-resetter.webp"
+        }
+      ]
+    },
+    {
+      "n": "Virtual Gearwork",
+      "img": "assets/wiki/virtual-gearwork.webp",
+      "tier": "Advanced Fusion",
+      "kind": "Fusion",
+      "rp": 100000,
+      "life": "S+1,000+",
+      "from": [
+        {
+          "n": "Virtual Enhancer",
+          "x": 5,
+          "img": "assets/wiki/virtual-enhancer.webp"
+        },
+        {
+          "n": "Gravitational Gearwork",
+          "x": 10,
+          "img": "assets/wiki/gravitational-gearwork.webp"
+        }
+      ]
+    },
+    {
+      "n": "Vulcan's Destiny",
+      "img": "assets/wiki/vulcan-s-destiny.webp",
+      "tier": "Advanced Evolution",
+      "kind": "Evolution",
+      "rp": 100000,
+      "life": "500+",
+      "from": [
+        {
+          "n": "Vulcan's Grasp",
+          "x": 6,
+          "img": "assets/wiki/vulcan-s-grasp.webp"
+        }
+      ]
+    },
+    {
+      "n": "Industrial Firegem Quarry",
+      "img": "assets/wiki/industrial-firegem-quarry.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 80000,
+      "from": [
+        {
+          "n": "Industrial Firecrystal Mine",
+          "x": 7,
+          "img": "assets/wiki/helping-erik-firecrystal-dlc.webp"
+        }
+      ]
+    },
+    {
+      "n": "Aether Schrodinger",
+      "img": "assets/wiki/aether-schrodinger.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 75000,
+      "life": "s-300+",
+      "from": [
+        {
+          "n": "Flaming Schrodinger",
+          "x": 8,
+          "img": "assets/wiki/flaming-schrodinger-hd.webp"
+        },
+        {
+          "n": "Aether Refinery",
+          "x": 4,
+          "img": "assets/wiki/aether-refinery.webp"
+        }
+      ]
+    },
+    {
+      "n": "Ancient Catalyst",
+      "img": "assets/wiki/ancient-catalyst.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 75000,
+      "life": "s-5+",
+      "from": [
+        {
+          "n": "Ancient Temple",
+          "x": 4,
+          "img": "assets/wiki/ancient-temple.webp"
+        },
+        {
+          "n": "The Catalyst",
+          "x": 8,
+          "img": "assets/wiki/the-catalyst.webp"
+        }
+      ]
+    },
+    {
+      "n": "Atlantic Monument",
+      "img": "assets/wiki/atlantic-monument.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 75000,
+      "life": "100+",
+      "from": [
+        {
+          "n": "Atlantic Monolith",
+          "x": 10,
+          "img": "assets/wiki/atlantic-monolith.webp"
+        }
+      ]
+    },
+    {
+      "n": "Azure Purifier",
+      "img": "assets/wiki/azure-purifier.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 75000,
+      "life": "5+",
+      "from": [
+        {
+          "n": "Azure Refiner",
+          "x": 9,
+          "img": "assets/wiki/azure-refiner.webp"
+        }
+      ]
+    },
+    {
+      "n": "Azure Spore",
+      "img": "assets/wiki/azure-spore.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 75000,
+      "life": "s-5+",
+      "from": [
+        {
+          "n": "Wild Spore",
+          "x": 3,
+          "img": "assets/wiki/wild-spore.webp"
+        },
+        {
+          "n": "Azure Refiner",
+          "x": 6,
+          "img": "assets/wiki/azure-refiner.webp"
+        }
+      ]
+    },
+    {
+      "n": "Crystallized Engine",
+      "img": "assets/wiki/crystallized-engine.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 75000,
+      "life": "600+",
+      "from": [
+        {
+          "n": "Crystallized System",
+          "x": 8,
+          "img": "assets/wiki/crystallized-system.webp"
+        }
+      ]
+    },
+    {
+      "n": "Final Eclipse Gate",
+      "img": "assets/wiki/final-eclipse-gate.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 75000,
+      "life": "100+",
+      "from": [
+        {
+          "n": "Gate of Eclipse",
+          "x": 10,
+          "img": "assets/wiki/guys-its-a-door-not-a-gate-are-you-blind.webp"
+        }
+      ]
+    },
+    {
+      "n": "Firecrystallized System",
+      "img": "assets/wiki/firecrystallized-system.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 75000,
+      "life": "s-600+",
+      "from": [
+        {
+          "n": "Industrial Firecrystal Mine",
+          "x": 4,
+          "img": "assets/wiki/helping-erik-firecrystal-dlc.webp"
+        },
+        {
+          "n": "Crystallized System",
+          "x": 8,
+          "img": "assets/wiki/crystallized-system.webp"
+        }
+      ]
+    },
+    {
+      "n": "Forbidden Magic",
+      "img": "assets/wiki/forbidden-magic.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 75000,
+      "life": "10+",
+      "from": [
+        {
+          "n": "Dark Magic",
+          "x": 12,
+          "img": "assets/wiki/dark-magic.webp"
+        }
+      ]
+    },
+    {
+      "n": "Frozen Eclipse",
+      "img": "assets/wiki/frozen-eclipse.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 75000,
+      "life": "s-100+",
+      "from": [
+        {
+          "n": "Frozen Justice",
+          "x": 3,
+          "img": "assets/wiki/frozen-justice.webp"
+        },
+        {
+          "n": "Gate of Eclipse",
+          "x": 6,
+          "img": "assets/wiki/guys-its-a-door-not-a-gate-are-you-blind.webp"
+        }
+      ]
+    },
+    {
+      "n": "Guardian of the Portal",
+      "img": "assets/wiki/guardian-of-the-portal.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 75000,
+      "life": "250+",
+      "from": [
+        {
+          "n": "Guardian of the Gate",
+          "x": 12,
+          "img": "assets/wiki/guardian-of-the-gate.webp"
+        }
+      ]
+    },
+    {
+      "n": "Illuminator Evaluator",
+      "img": "assets/wiki/illuminator-evaluator.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 75000,
+      "life": "s-10+",
+      "from": [
+        {
+          "n": "Ore Illuminator",
+          "x": 4,
+          "img": "assets/wiki/ore-illuminator.webp"
+        },
+        {
+          "n": "Flaming Schrodinger",
+          "x": 8,
+          "img": "assets/wiki/flaming-schrodinger-hd.webp"
+        }
+      ]
+    },
+    {
+      "n": "Lightningbolt Predictor",
+      "img": "assets/wiki/lightningbolt-predictor.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 75000,
+      "life": "s-20+",
+      "from": [
+        {
+          "n": "Lightningbolt Refiner",
+          "x": 6,
+          "img": "assets/wiki/lightningbolt-refiner-hd.webp"
+        },
+        {
+          "n": "Astral Predictor",
+          "x": 3,
+          "img": "assets/wiki/astral-predictor.webp"
+        }
+      ]
+    },
+    {
+      "n": "Phase Bombarder",
+      "img": "assets/wiki/phase-bombarder.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 75000,
+      "life": "200+",
+      "from": [
+        {
+          "n": "Phase Refiner",
+          "x": 11,
+          "img": "assets/wiki/phase-refiner.webp"
+        }
+      ]
+    },
+    {
+      "n": "Pizza Bombarder",
+      "img": "assets/wiki/pizza-bombarder.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 75000,
+      "life": "0+",
+      "from": [
+        {
+          "n": "Pizza Blaster",
+          "x": 10,
+          "img": "assets/wiki/pizza-blaster.webp"
+        }
+      ]
+    },
+    {
+      "n": "Quantum Clockwork",
+      "img": "assets/wiki/quantum-clockwork.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 75000,
+      "life": "s-10+",
+      "from": [
+        {
+          "n": "Quantum Ore Cleaner",
+          "x": 10,
+          "img": "assets/wiki/quantum-ore-cleaner.webp"
+        },
+        {
+          "n": "Clockwork",
+          "x": 5,
+          "img": "assets/wiki/clockwork.webp"
+        }
+      ]
+    },
+    {
+      "n": "Saturated Catalyst",
+      "img": "assets/wiki/saturated-catalyst.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 75000,
+      "life": "5+",
+      "from": [
+        {
+          "n": "The Catalyst",
+          "x": 10,
+          "img": "assets/wiki/the-catalyst.webp"
+        }
+      ]
+    },
+    {
+      "n": "Searing Heat",
+      "img": "assets/wiki/searing-heat.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 75000,
+      "life": "20+",
+      "from": [
+        {
+          "n": "Scorching Heat",
+          "x": 8,
+          "img": "assets/wiki/scorching-heat.webp"
+        }
+      ]
+    },
+    {
+      "n": "Super Schrodinger",
+      "img": "assets/wiki/super-schrodinger.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 75000,
+      "life": "5+",
+      "from": [
+        {
+          "n": "Flaming Schrodinger",
+          "x": 12,
+          "img": "assets/wiki/flaming-schrodinger-hd.webp"
+        }
+      ]
+    },
+    {
+      "n": "Swift Justice",
+      "img": "assets/wiki/swift-justice.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 75000,
+      "life": "100+",
+      "from": [
+        {
+          "n": "Blind Justice",
+          "x": 7,
+          "img": "assets/wiki/blind-justice.webp"
+        }
+      ]
+    },
+    {
+      "n": "The Fissure",
+      "img": "assets/wiki/the-fissure.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 75000,
+      "life": "20+",
+      "from": [
+        {
+          "n": "The Fracture",
+          "x": 10,
+          "img": "assets/wiki/the-fracture.webp"
+        }
+      ]
+    },
+    {
+      "n": "The Pizzalyst",
+      "img": "assets/wiki/the-pizzalyst.webp",
+      "tier": "Reborn Fusion",
+      "kind": "Fusion",
+      "rp": 75000,
+      "life": "s-5+",
+      "from": [
+        {
+          "n": "The Catalyst",
+          "x": 6,
+          "img": "assets/wiki/the-catalyst.webp"
+        },
+        {
+          "n": "Pizza Blaster",
+          "x": 3,
+          "img": "assets/wiki/pizza-blaster.webp"
+        }
+      ]
+    },
+    {
+      "n": "Virtual Enchanter",
+      "img": "assets/wiki/virtual-enchanter.webp",
+      "tier": "Advanced Evolution",
+      "kind": "Evolution",
+      "rp": 75000,
+      "life": "1,000+",
+      "from": [
+        {
+          "n": "Virtual Enhancer",
+          "x": 15,
+          "img": "assets/wiki/virtual-enhancer.webp"
+        }
+      ]
+    },
+    {
+      "n": "Yuttrium Mine",
+      "img": "assets/wiki/yuttrium-mine.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 75000,
+      "life": "10+",
+      "from": [
+        {
+          "n": "Yunium Mine",
+          "x": 11,
+          "img": "assets/wiki/yunium-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Ambrosia Forest",
+      "img": "assets/wiki/ambrosia-forest.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 50000,
+      "life": "150+",
+      "from": [
+        {
+          "n": "Ambrosia Fountain",
+          "x": 7,
+          "img": "assets/wiki/ambrosia-fountain.webp"
+        }
+      ]
+    },
+    {
+      "n": "Ancient Coliseum",
+      "img": "assets/wiki/ancient-coliseum.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 50000,
+      "life": "15+",
+      "from": [
+        {
+          "n": "Ancient Temple",
+          "x": 10,
+          "img": "assets/wiki/ancient-temple.webp"
+        }
+      ]
+    },
+    {
+      "n": "Astral Setter",
+      "img": "assets/wiki/astral-setter.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 50000,
+      "life": "0+",
+      "from": [
+        {
+          "n": "Astral Predictor",
+          "x": 12,
+          "img": "assets/wiki/astral-predictor.webp"
+        }
+      ]
+    },
+    {
+      "n": "Atmospheric Steamwork",
+      "img": "assets/wiki/atmospheric-steamwork.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 50000,
+      "life": "800+",
+      "from": [
+        {
+          "n": "Gravitational Gearwork",
+          "x": 13,
+          "img": "assets/wiki/gravitational-gearwork.webp"
+        }
+      ]
+    },
+    {
+      "n": "Frozen Peaks",
+      "img": "assets/wiki/frozen-peaks.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 50000,
+      "life": "0+",
+      "from": [
+        {
+          "n": "Frozen Justice",
+          "x": 9,
+          "img": "assets/wiki/frozen-justice.webp"
+        }
+      ]
+    },
+    {
+      "n": "Green Tea Kettle",
+      "img": "assets/wiki/green-tea-kettle.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 50000,
+      "from": [
+        {
+          "n": "Green Tea Latte",
+          "x": 7,
+          "img": "assets/wiki/green-tea-latte.webp"
+        }
+      ]
+    },
+    {
+      "n": "Lunar Bombardment",
+      "img": "assets/wiki/lunar-bombardment.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 50000,
+      "from": [
+        {
+          "n": "Solar Flare",
+          "x": 16,
+          "img": "assets/wiki/solar-flare.webp"
+        }
+      ]
+    },
+    {
+      "n": "Massive Diamond Drill",
+      "img": "assets/wiki/massive-diamond-drill.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 50000,
+      "life": "0+",
+      "from": [
+        {
+          "n": "Massive Diamond Mine",
+          "x": 9,
+          "img": "assets/wiki/massive-diamond-mine.webp"
+        }
+      ]
+    },
+    {
+      "n": "Quantum Ore Polisher",
+      "img": "assets/wiki/quantum-ore-polisher.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 50000,
+      "life": "0+",
+      "from": [
+        {
+          "n": "Quantum Ore Cleaner",
+          "x": 7,
+          "img": "assets/wiki/quantum-ore-cleaner.webp"
+        }
+      ]
+    },
+    {
+      "n": "Sage King",
+      "img": "assets/wiki/sage-king.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 50000,
+      "life": "0+",
+      "from": [
+        {
+          "n": "Sage Redeemer",
+          "x": 12,
+          "img": "assets/wiki/sage-redeemer.webp"
+        }
+      ]
+    },
+    {
+      "n": "Solar Eruption",
+      "img": "assets/wiki/solar-eruption.webp",
+      "tier": "Evolved Reborn",
+      "kind": "Evolution",
+      "rp": 50000,
+      "from": [
+        {
+          "n": "Solar Flare",
+          "x": 16,
+          "img": "assets/wiki/solar-flare.webp"
+        }
+      ]
     }
   ],
   "furnaces": [

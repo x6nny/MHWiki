@@ -8,6 +8,8 @@
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const A = n => `../assets/rp/${n}.webp`;
   const ITEM = n => "item-index.html#item=" + encodeURIComponent(n);
+  const BP = (D.blueprints || []).slice().sort((a, b) => b.rp - a.rp);
+  const BP_MAX = BP.length ? BP[0].rp : 2.5e6, BP_MIN = BP.length ? BP[BP.length - 1].rp : 50000;
   const RM = MH.reduceMotion;
 
   /* Isometric research crate as inline SVG */
@@ -79,7 +81,7 @@
     MH.countUp($("#stCrates"), natural.length, 900);
     tween($("#stTop"), TOP, v => v.toFixed(1), 1400);
     tween($("#stAlmighty"), 400000, short, 1500);
-    tween($("#stBp"), 1e6, short, 1600);
+    tween($("#stBp"), BP_MAX, short, 1600);
   }, 500);
 
   /* ================= Crate catcher ================= */
@@ -91,7 +93,7 @@
     const SIZE = { basic: 54, uc: 52, shadow: 50, "giant-uc": 74, golden: 64, lucky: 58, diamond: 72 };
     const LIFE = { basic: 6500, uc: 6500, shadow: 7000, "giant-uc": 7000, golden: 6500, lucky: 7500, diamond: 9000 };
     const GLOW = { golden: "rgba(255,214,92,.6)", lucky: "rgba(124,255,107,.55)", diamond: "rgba(120,220,255,.7)", "giant-uc": "rgba(190,120,255,.5)" };
-    const GOALS = [...D.tiers.map(t => ({ name: t.name + " tier", rp: t.rp })), { name: "the priciest blueprint", rp: 1e6 }];
+    const GOALS = [...D.tiers.map(t => ({ name: t.name + " tier", rp: t.rp })), { name: "the priciest blueprint", rp: BP_MAX }];
     let total = 0, night = false, live = new Set(), timer = null, visible = true, cycleT = null, clicked = false;
 
     function goal() {
@@ -165,7 +167,7 @@
       const crossed = GOALS.filter(g => g.rp > before && g.rp <= total);
       if (crossed.length) {
         const g = crossed[crossed.length - 1];
-        MH.toast(g.rp === 1e6 ? "1M RP! That's enough for any Craftsman blueprint." : `${g.name.replace(" tier", "")} shop tier unlocked!`);
+        MH.toast(g.rp === BP_MAX ? `${short(BP_MAX)} RP! That's enough for any Craftsman blueprint.` : `${g.name.replace(" tier", "")} shop tier unlocked!`);
         goalBox.classList.remove("levelup"); void goalBox.offsetWidth; goalBox.classList.add("levelup");
       }
       goal();
@@ -269,11 +271,11 @@
       <article class="use glass reveal" data-u="${u.id}">
         <div class="ui">${icons[u.icon]}</div>
         <div><h3>${esc(u.title)} <em>${esc(u.range)}</em></h3><p>${esc(u.text)}</p>
-        <span class="afford"></span>${u.link ? `<a class="more" href="${u.link}">See the NPC →</a>` : ""}</div>
+        <span class="afford"></span>${u.id === "craft" && BP.length ? `<a class="more" href="#blueprints">See all ${BP.length} blueprints ↓</a> ` : ""}${u.link ? `<a class="more" href="${u.link}">See the NPC →</a>` : ""}</div>
       </article>`).join("");
     document.querySelectorAll("#uses .reveal").forEach(MH.reveal);
 
-    const MAXS = 1.5e6;
+    const MAXS = Math.max(1.5e6, BP_MAX * 1.2);
     const toSlider = v => Math.round(1000 * Math.cbrt(Math.min(v, MAXS) / MAXS));
     const fromSlider = s => Math.round(MAXS * Math.pow(s / 1000, 3) / 100) * 100;
     let prevOpen = new Set();
@@ -297,7 +299,8 @@
       const aff = (id, t, yes) => { const el = document.querySelector(`[data-u="${id}"] .afford`); el.textContent = t; el.classList.toggle("yes", yes); };
       aff("shop", `${open.size}/${D.tiers.length} tiers open with ${short(myRp)} RP`, open.size === D.tiers.length);
       aff("mm", myRp >= 1.25e6 ? "Enough for anything he sells for RP" : myRp >= 18500 ? "Enough for his cheaper RP items" : `${short(18500 - myRp)} RP short of his cheapest RP item`, myRp >= 18500);
-      aff("craft", myRp >= 1e6 ? "Enough for any blueprint" : myRp >= 50000 ? "Enough for the cheaper blueprints" : `${short(50000 - myRp)} RP short of the cheapest blueprint`, myRp >= 50000);
+      const canBp = BP.filter(b => b.rp <= myRp).length;
+      aff("craft", canBp === BP.length ? "Enough for any blueprint" : canBp ? `Enough for ${canBp} of ${BP.length} blueprints` : `${short(BP_MIN - myRp)} RP short of the cheapest blueprint`, canBp > 0);
       aff("lb", "Every RP you earn counts", true);
       listeners.forEach(f => f());
     }
@@ -305,6 +308,67 @@
     input.addEventListener("blur", () => { input.value = short(myRp); input.parentElement.style.borderColor = ""; });
     slider.addEventListener("input", () => update(fromSlider(+slider.value), "slider"));
     update(myRp);
+  })();
+
+  /* ================= Blueprints ================= */
+  (function blueprints() {
+    const grid = $("#bpGrid"); if (!grid || !BP.length) return;
+    const q = $("#bpQ"), kinds = $("#bpKind"), sortBox = $("#bpSort"), only = $("#bpAfford"), sum = $("#bpSum"), more = $("#bpMore");
+    const IMG = p => p ? MH_SRC(p) : "";
+    const pic = (p, n) => p ? `<img src="${esc(IMG(p))}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'ph',textContent:${esc(JSON.stringify(n[0] || "?"))}}))" />` : `<span class="ph">${esc(n[0] || "?")}</span>`;
+    const norm = s => s.toLowerCase().normalize("NFKD").replace(/[^\w ]/g, "");
+    const LMAX = Math.sqrt(BP_MAX);
+    const PAGE = 24;
+    let kind = "all", sort = "high", shown = PAGE;
+    kinds.innerHTML = [["all", "All"], ["Evolution", "Evolutions"], ["Fusion", "Fusions"]].map(([k, n]) =>
+      `<button type="button" data-k="${k}" class="${k === "all" ? "on" : ""}">${n} <span>${k === "all" ? BP.length : BP.filter(b => b.kind === k).length}</span></button>`).join("");
+    const card = (b, i) => `
+      <article class="bp${b.rp === BP_MAX ? " top" : ""}${b.rp <= myRp ? " can" : ""}" style="animation-delay:${Math.min(i, 12) * 30}ms" data-rp="${b.rp}">
+        <a class="bp-pic" href="${ITEM(b.n)}">${pic(b.img, b.n)}</a>
+        <div class="bp-id">
+          <a class="bp-nm" href="${ITEM(b.n)}">${esc(b.n)}</a>
+          <div class="bp-tags"><span class="k ${b.kind === "Fusion" ? "fu" : "ev"}">${esc(b.tier)}</span>${b.life ? `<span class="life">Life ${esc(b.life)}</span>` : ""}${b.rp === BP_MAX ? `<span class="hot">Priciest</span>` : ""}</div>
+        </div>
+        <div class="bp-cost"><b>${short(b.rp)}</b><small>RP</small></div>
+        <div class="bp-bar"><i style="--w:${(Math.sqrt(b.rp) / LMAX) * 100}%"></i></div>
+        <div class="bp-from"><span class="lbl">${b.kind === "Fusion" ? "Fuse" : "Evolve"}</span>${b.from.map(f => `<a class="bp-ing" href="${ITEM(f.n)}" title="${esc(f.n)}">${f.img ? `<img src="${esc(IMG(f.img))}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" />` : ""}<em>${f.x}×</em>${esc(f.n)}</a>`).join("")}</div>
+        <span class="bp-ok"></span>
+      </article>`;
+    function list() {
+      const t = norm(q.value.trim());
+      let arr = BP.filter(b => (kind === "all" || b.kind === kind) && (!only.checked || b.rp <= myRp)
+        && (!t || norm(b.n).includes(t) || b.from.some(f => norm(f.n).includes(t))));
+      if (sort === "low") arr = [...arr].reverse();
+      else if (sort === "name") arr = [...arr].sort((a, b) => a.n.localeCompare(b.n));
+      return arr;
+    }
+    function draw() {
+      const arr = list();
+      grid.innerHTML = arr.length ? arr.slice(0, shown).map(card).join("") : `<div class="bp-empty glass">No blueprints match.</div>`;
+      more.hidden = arr.length <= shown;
+      more.textContent = `Show all ${arr.length} blueprints`;
+      mark();
+    }
+    function mark() {
+      grid.querySelectorAll(".bp").forEach(el => {
+        const rp = +el.dataset.rp, ok = rp <= myRp;
+        el.classList.toggle("can", ok);
+        el.querySelector(".bp-ok").textContent = ok ? "You can afford this" : `${short(rp - myRp)} RP to go`;
+      });
+      const can = BP.filter(b => b.rp <= myRp).length;
+      sum.innerHTML = can === BP.length ? `With <b>${short(myRp)} RP</b> you can afford <b>every blueprint</b>.`
+        : `With <b>${short(myRp)} RP</b> you can afford <b>${can} of ${BP.length}</b> blueprints. ${can ? "" : `The cheapest is <b>${short(BP_MIN)}</b>. `}The priciest, <b>${esc(BP[0].n)}</b>, costs <b>${short(BP_MAX)}</b>.`;
+    }
+    const reset = () => { shown = PAGE; draw(); };
+    q.addEventListener("input", reset);
+    only.addEventListener("change", reset);
+    kinds.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; kind = b.dataset.k; kinds.querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b)); reset(); });
+    sortBox.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; sort = b.dataset.sort; sortBox.querySelectorAll("button").forEach(x => x.classList.toggle("on", x === b)); reset(); });
+    more.addEventListener("click", () => { shown = Infinity; draw(); });
+    // the "Your RP" box above updates which blueprints you can afford
+    let raf = 0;
+    listeners.push(() => { cancelAnimationFrame(raf); raf = requestAnimationFrame(only.checked ? draw : mark); });
+    draw();
   })();
 
   /* ================= Furnaces ================= */
@@ -344,8 +408,8 @@
     fill.style.strokeDasharray = C;
     const GOAL = [
       { n: "Super Rare", rp: 2500 }, { n: "Legendary", rp: 50000 }, { n: "Mythic", rp: 100000 },
-      { n: "Divine", rp: 200000 }, { n: "Almighty", rp: 400000 }, { n: "Any blueprint", rp: 1e6 }, { n: "Masked Man's top price", rp: 1.25e6 },
-    ];
+      { n: "Divine", rp: 200000 }, { n: "Almighty", rp: 400000 }, { n: "Masked Man's top price", rp: 1.25e6 }, { n: "Any blueprint", rp: BP_MAX },
+    ].sort((a, b) => a.rp - b.rp);
     const dur = s => s < 60 ? `${Math.ceil(s)} sec` : s < 3600 ? `${Math.ceil(s / 60)} min` : s < 86400 ? `${(s / 3600).toFixed(s < 36000 ? 1 : 0)} h` : `${(s / 86400).toFixed(1)} days`;
     function run() {
       const f = FZ[+sel.value], o = +ops.value, h = +hrs.value;

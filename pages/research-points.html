@@ -13,7 +13,7 @@
   <script src="../js/settings.js?v=51"></script>
   <link rel="stylesheet" href="../css/style.css?v=51" />
   <link rel="stylesheet" href="../css/subpage.css?v=51" />
-  <link rel="stylesheet" href="../css/research-points.css?v=51" />
+  <link rel="stylesheet" href="../css/research-points.css?v=53" />
 </head>
 <body class="subpage rp-page">
   <div class="backdrop" aria-hidden="true">
@@ -105,7 +105,7 @@
           <div class="stat glass"><strong id="stBp">0</strong><span>Priciest blueprint</span></div>
         </div>
         <nav class="rp-jump intro" style="--d:4" aria-label="On this page">
-          <a href="#earn">Crates</a><a href="#spend">Spending</a><a href="#furnaces">Furnaces</a><a href="#calc">Calculator</a><a href="#guide">Farming guide</a><a href="#history">History</a>
+          <a href="#earn">Crates</a><a href="#spend">Spending</a><a href="#blueprints">Blueprints</a><a href="#furnaces">Furnaces</a><a href="#calc">Calculator</a><a href="#guide">Farming guide</a><a href="#history">History</a>
         </nav>
       </div>
 
@@ -162,6 +162,28 @@
         </div>
         <div class="uses" id="uses"></div>
       </div>
+    </section>
+
+    <!-- ================= BLUEPRINTS ================= -->
+    <section class="rp-block" id="blueprints">
+      <div class="rp-head reveal">
+        <span class="rp-kicker">The Craftsman</span>
+        <h2>Every blueprint</h2>
+        <p>Before The Craftsman will evolve or fuse a Reborn item, you have to buy its blueprint with RP. Here's each one with its price and what you need to bring. The "Your RP" box above shows which ones you can afford.</p>
+      </div>
+      <div class="bp-tools reveal">
+        <label class="bp-q"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input id="bpQ" type="search" placeholder="Search a blueprint or ingredient…" autocomplete="off" spellcheck="false" aria-label="Search blueprints" /></label>
+        <div class="fz-chips" id="bpKind"></div>
+        <div class="fz-sort" id="bpSort">
+          <button type="button" data-sort="high" class="on">Priciest</button>
+          <button type="button" data-sort="low">Cheapest</button>
+          <button type="button" data-sort="name">A–Z</button>
+        </div>
+        <label class="bp-only"><input type="checkbox" id="bpAfford" /><span>Only ones I can afford</span></label>
+      </div>
+      <p class="bp-sum reveal" id="bpSum"></p>
+      <div class="bp-grid" id="bpGrid"></div>
+      <button type="button" class="bp-more" id="bpMore" hidden>Show all</button>
     </section>
 
     <!-- ================= FURNACES ================= -->
@@ -275,6 +297,6 @@
 
   <script src="../js/common.js?v=51"></script>
   <script src="../js/sidebar.js?v=51"></script>
-  <script src="../js/data.js?v=52" data-load="ResearchPoints:MH_RP" data-run="research-points.js"></script>
+  <script src="../js/data.js?v=53" data-load="ResearchPoints:MH_RP" data-run="research-points.js"></script>
 </body>
 </html>

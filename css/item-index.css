@@ -35,7 +35,7 @@
 
 /* ---------- Toolbar ---------- */
 .ii-bar {
-  position: sticky; top: 92px; z-index: 40;
+  position: sticky; top: calc(var(--stick) + 20px); z-index: 40;
   display: grid; grid-template-columns: 1fr auto auto auto auto auto auto; gap: 10px; align-items: center;
   padding: 10px; border-radius: 20px; margin: 10px 0 14px; background: rgba(12,16,32,.62);
 }
@@ -239,7 +239,7 @@ body.modal-open { overflow: hidden; }
 /* ---------- Responsive ---------- */
 @media (max-width: 1180px) { .type-tiles { grid-template-columns: repeat(5, 1fr); } }
 @media (max-width: 1080px) {
-  .ii-bar { grid-template-columns: 1fr 1fr; top: 84px; }
+  .ii-bar { grid-template-columns: 1fr 1fr; top: calc(var(--stick) + 12px); }
   .ii-bar .tb-search { grid-column: 1 / -1; }
   .result-count { text-align: left; }
 }
@@ -386,3 +386,9 @@ body.modal-open { overflow: hidden; }
 .size-f button:hover { color: var(--text); background: rgba(255,255,255,.07); }
 .size-f button.on { color: #04131c; background: #38d9ff; }
 @media (max-width: 1180px) { .size-f { justify-content: center; } }
+
+/* narrower laptop screens (menu rail beside the page): search gets its own row */
+@media (min-width: 1081px) and (max-width: 1380px) {
+  .ii-bar { grid-template-columns: auto auto auto auto auto 1fr; }
+  .ii-bar .tb-search { grid-column: 1 / -1; }
+}

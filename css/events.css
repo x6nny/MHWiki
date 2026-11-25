@@ -64,7 +64,7 @@
 .w-core .nx em { font-style: normal; color: var(--text); font-weight: 800; }
 
 /* ---------- Blocks ---------- */
-.ev-block { margin: 20px 0 76px; scroll-margin-top: 100px; }
+.ev-block { margin: 20px 0 76px; scroll-margin-top: calc(var(--stick) + 28px); }
 .ev-head { margin-bottom: 22px; }
 .ev-head h2 { font-size: clamp(28px, 3.2vw, 42px); }
 .ev-head p { margin: 8px 0 0; color: var(--muted); max-width: 720px; }
@@ -97,7 +97,7 @@
 .sc:hover .sc-go i { transform: translateX(5px); }
 
 /* ---------- Toolbar ---------- */
-.ev-toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 12px; border-radius: 20px; position: sticky; top: 86px; z-index: 20; }
+.ev-toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 12px; border-radius: 20px; position: sticky; top: calc(var(--stick) + 14px); z-index: 20; }
 .ev-toolbar .tb-search { flex: 1 1 260px; }
 .ev-sort {
   display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 14px; border-radius: 14px; font-weight: 700; font-size: 14px; color: var(--muted);

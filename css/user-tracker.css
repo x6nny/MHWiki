@@ -27,7 +27,7 @@
 .ut-recent .clr { width: 28px; padding: 5px 0; }
 
 /* ---------- Loading / messages ---------- */
-.ut-result { margin: 18px 0 70px; scroll-margin-top: 100px; display: flex; flex-direction: column; gap: 18px; }
+.ut-result { margin: 18px 0 70px; scroll-margin-top: calc(var(--stick) + 28px); display: flex; flex-direction: column; gap: 18px; }
 .ut-loading { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 40px; border-radius: 26px; color: var(--muted); }
 .ut-loading b { font: 700 17px var(--font-display); }
 .ld-orb { width: 34px; height: 34px; border-radius: 50%; border: 3px solid rgba(63,224,160,.2); border-top-color: var(--ut); border-right-color: var(--ut2); animation: spin .8s linear infinite; }
@@ -195,7 +195,7 @@
 .rs-more { margin: 10px 0 0; font-size: 13px; color: var(--faint); }
 
 /* ---------- Staff directory ---------- */
-.ut-block { margin: 20px 0 84px; scroll-margin-top: 100px; }
+.ut-block { margin: 20px 0 84px; scroll-margin-top: calc(var(--stick) + 28px); }
 .ut-head { margin-bottom: 18px; }
 .ut-kicker { font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--ut); }
 .ut-head h2 { font-size: clamp(26px, 3vw, 40px); }

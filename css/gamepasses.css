@@ -32,7 +32,7 @@
 
 /* ---------- Toolbar ---------- */
 .gp-bar {
-  position: sticky; top: 92px; z-index: 40;
+  position: sticky; top: calc(var(--stick) + 20px); z-index: 40;
   display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center;
   padding: 10px; border-radius: 20px; margin: 6px 0 30px; background: rgba(12,16,32,.6);
 }
@@ -218,7 +218,7 @@
   .gp-hero-art { height: 260px; order: -1; }
   .fan img { width: 130px; height: 130px; }
   .fan .f3 { width: 156px; height: 156px; }
-  .gp-bar { grid-template-columns: 1fr; top: 84px; }
+  .gp-bar { grid-template-columns: 1fr; top: calc(var(--stick) + 12px); }
   .seg { overflow-x: auto; scrollbar-width: none; }
   .lrow { grid-template-columns: 30px 130px 1fr 74px; }
 }

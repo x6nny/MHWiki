@@ -62,7 +62,7 @@
 .burst i { position: absolute; width: 12px; height: 18px; background: linear-gradient(160deg, #fff, var(--sh) 55%, var(--shdeep)); clip-path: polygon(50% 0, 100% 40%, 50% 100%, 0 40%); filter: drop-shadow(0 0 6px var(--sh)); }
 
 /* ---------- Blocks ---------- */
-.sol-block { margin: 30px 0 84px; scroll-margin-top: 100px; }
+.sol-block { margin: 30px 0 84px; scroll-margin-top: calc(var(--stick) + 28px); }
 .sol-head { margin-bottom: 24px; }
 .sol-kicker { display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--sh); margin-bottom: 6px; }
 .sol-head h2 { font-size: clamp(28px, 3.2vw, 42px); }

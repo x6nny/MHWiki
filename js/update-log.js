@@ -192,7 +192,7 @@
     if (!a) return;
     ev.preventDefault();
     const g = groups[a.dataset.year];
-    if (g && !g.hidden) window.scrollTo({ top: g.getBoundingClientRect().top + scrollY - 190, behavior: MH.reduceMotion ? "auto" : "smooth" });
+    if (g && !g.hidden) window.scrollTo({ top: g.getBoundingClientRect().top + scrollY - (118 + MH_STICK()), behavior: MH.reduceMotion ? "auto" : "smooth" });
   });
 
   /* ---------- filtering ---------- */
@@ -301,7 +301,7 @@
     setTimeout(() => {
       const el = cards.get(target).el;
       el.classList.add("in", "flash");
-      window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - 200 });
+      window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - (128 + MH_STICK()) });
     }, 200);
   } else if (DATA[0]) {
     open(DATA[0].id, true);

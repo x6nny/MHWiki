@@ -70,7 +70,7 @@
     const t = e.target.closest("[data-try]");
     if (!t) return;
     selectBox(t.dataset.try);
-    window.scrollTo({ top: $("#opener").getBoundingClientRect().top + scrollY - 110, behavior: MH.reduceMotion ? "auto" : "smooth" });
+    window.scrollTo({ top: $("#opener").getBoundingClientRect().top + scrollY - (38 + MH_STICK()), behavior: MH.reduceMotion ? "auto" : "smooth" });
   });
 
   /* ---------- Opener ---------- */

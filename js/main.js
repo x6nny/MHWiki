@@ -52,7 +52,7 @@ function openSection(id) {
 
 /* ---------- Nav shrink on scroll ---------- */
 const nav = document.getElementById("nav");
-const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 20);
+const onScroll = () => nav && nav.classList.toggle("scrolled", window.scrollY > 20);
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
@@ -324,7 +324,7 @@ function closePalette() {
   palette.classList.remove("open");
   palette.setAttribute("aria-hidden", "true");
 }
-document.getElementById("openPalette").addEventListener("click", openPalette);
+const openBtn = document.getElementById("openPalette"); if (openBtn) openBtn.addEventListener("click", openPalette);
 document.getElementById("heroSearch").addEventListener("click", openPalette);
 palette.addEventListener("click", e => { if (e.target === palette) closePalette(); });
 pInput.addEventListener("input", () => { sel = 0; renderPalette(); });

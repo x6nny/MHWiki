@@ -23,7 +23,7 @@
 
 /* ---------- Toolbar ---------- */
 .toolbar {
-  position: sticky; top: 92px; z-index: 40;
+  position: sticky; top: calc(var(--stick) + 20px); z-index: 40;
   display: grid; grid-template-columns: minmax(240px, 340px) 1fr auto; align-items: center; gap: 14px;
   padding: 10px; border-radius: 20px; margin-bottom: 34px;
   background: rgba(12, 16, 32, .6);
@@ -72,7 +72,7 @@
 .log-layout { display: grid; grid-template-columns: 150px 1fr; gap: 34px; align-items: start; margin-bottom: 80px; }
 
 .years {
-  position: sticky; top: 182px; padding: 14px 10px; border-radius: 20px;
+  position: sticky; top: calc(var(--stick) + 110px); padding: 14px 10px; border-radius: 20px;
   display: flex; flex-direction: column; gap: 2px; max-height: calc(100vh - 210px); overflow: auto; scrollbar-width: none;
 }
 .years-title { margin: 0 8px 8px; font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--faint); }
@@ -285,21 +285,21 @@ mark { background: rgba(255,214,10,.28); color: #fff3b0; border-radius: 4px; pad
   .kinds { grid-column: 1 / -1; grid-row: 2; }
   .log-layout { grid-template-columns: 1fr; }
   .years {
-    position: sticky; top: 196px; z-index: 30; flex-direction: row; overflow-x: auto; max-height: none;
+    position: sticky; top: calc(var(--stick) + 124px); z-index: 30; flex-direction: row; overflow-x: auto; max-height: none;
     padding: 8px; border-radius: 16px; background: rgba(12,16,32,.65);
   }
   .years-title { display: none; }
   .years a { flex: none; gap: 8px; }
   .years a.active { padding-left: 10px; }
   .years a.active::before { display: none; }
-  .toolbar { top: 84px; }
+  .toolbar { top: calc(var(--stick) + 12px); }
 }
 @media (max-width: 680px) {
   .hero-pumpkin { display: none; }
   .toolbar { position: relative; top: 0; grid-template-columns: 1fr; }
   .tb-actions { justify-content: space-between; }
   .tb-search kbd { display: none; }
-  .years { top: 76px; }
+  .years { top: calc(var(--stick) + 4px); }
   .log-timeline { padding-left: 26px; }
   .log-rail { left: 5px; }
   .entry .node { left: -27px; width: 12px; height: 12px; }

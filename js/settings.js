@@ -23,6 +23,10 @@
     html.classList.toggle("no-cur", !S.cur);
   }
   apply();
+  // height of the phone top bar (0 on desktop, where the menu is a sidebar)
+  window.MH_STICK = () => parseFloat(getComputedStyle(html).getPropertyValue("--stick")) || 0;
+  // sidebar shrunk to icons (saved by js/sidebar.js)
+  try { if ((JSON.parse(localStorage.getItem("mh-sidebar-v1") || "{}")).mini) html.classList.add("sb-mini"); } catch (e) {}
 
   const changed = () => window.dispatchEvent(new CustomEvent("mh-settings", { detail: { ...S } }));
   window.MH_SETTINGS = {

@@ -22,7 +22,7 @@
 .stage { position: absolute; bottom: 40px; left: 50%; width: 460px; height: 70px; margin-left: -230px; border-radius: 50%; background: radial-gradient(ellipse, rgba(56,217,255,.25), transparent 70%); filter: blur(6px); }
 
 /* ---------- Blocks ---------- */
-.np-block { margin: 20px 0 76px; scroll-margin-top: 100px; }
+.np-block { margin: 20px 0 76px; scroll-margin-top: calc(var(--stick) + 28px); }
 .np-head { margin-bottom: 22px; }
 .np-head h2 { font-size: clamp(28px, 3.2vw, 42px); }
 .np-head p { margin: 8px 0 0; color: var(--muted); max-width: 780px; }
@@ -50,7 +50,7 @@
 .sc .bar i { display: block; height: 100%; width: var(--w); background: linear-gradient(90deg, var(--c), color-mix(in srgb, var(--c) 50%, white)); border-radius: inherit; transition: width 1s linear; }
 
 /* ---------- Tools ---------- */
-.np-tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; padding: 10px; border-radius: 20px; position: sticky; top: 86px; z-index: 20; }
+.np-tools { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; padding: 10px; border-radius: 20px; position: sticky; top: calc(var(--stick) + 14px); z-index: 20; }
 .np-tools .tb-search { flex: 1 1 220px; }
 .seg { position: relative; display: inline-flex; gap: 2px; padding: 4px; border-radius: 14px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); max-width: 100%; overflow-x: auto; scrollbar-width: none; }
 .seg button { position: relative; z-index: 1; height: 36px; padding: 0 14px; border-radius: 11px; font-weight: 700; font-size: 14px; color: var(--muted); white-space: nowrap; transition: color .3s; }

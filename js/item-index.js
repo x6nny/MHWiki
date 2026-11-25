@@ -165,7 +165,7 @@
     shown = 0;
     more();
     if (scrollUp) {
-      const top = $("#bar").getBoundingClientRect().top + scrollY - 92;
+      const top = $("#bar").getBoundingClientRect().top + scrollY - (20 + MH_STICK());
       if (scrollY > top + 10) window.scrollTo({ top, behavior: "auto" });
     }
   }

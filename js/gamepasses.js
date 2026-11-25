@@ -61,7 +61,7 @@
       if (!row) return;
       const card = [...grid.querySelectorAll(".pass")].find(c => c.dataset.name === row.dataset.name);
       if (card) {
-        window.scrollTo({ top: card.getBoundingClientRect().top + scrollY - 180, behavior: MH.reduceMotion ? "auto" : "smooth" });
+        window.scrollTo({ top: card.getBoundingClientRect().top + scrollY - (108 + MH_STICK()), behavior: MH.reduceMotion ? "auto" : "smooth" });
         card.animate([{ boxShadow: `0 0 0 0 ${row.style.getPropertyValue("--c")}` }, { boxShadow: `0 0 0 4px ${row.style.getPropertyValue("--c")}` }, { boxShadow: "0 0 0 0 transparent" }], { duration: 1400, delay: 350 });
       }
     });
@@ -180,7 +180,7 @@
     if (push) {
       history.replaceState(null, "", id === "current" ? location.pathname : "#" + id);
       const bar = document.querySelector(".gp-bar");
-      const top = bar.getBoundingClientRect().top + scrollY - 92;
+      const top = bar.getBoundingClientRect().top + scrollY - (20 + MH_STICK());
       if (scrollY > top + 40) window.scrollTo({ top, behavior: MH.reduceMotion ? "auto" : "smooth" });
     }
   }

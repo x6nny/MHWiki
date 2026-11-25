@@ -46,7 +46,7 @@
 
 /* ---------- Toolbar ---------- */
 .sc-block { padding: 10px 0 70px; }
-.sc-bar { position: sticky; top: 84px; z-index: 20; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 12px; border-radius: 20px; }
+.sc-bar { position: sticky; top: calc(var(--stick) + 12px); z-index: 20; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 12px; border-radius: 20px; }
 .sc-bar .tb-search { flex: 1 1 240px; min-width: 0; }
 .sc-seg { display: inline-flex; }
 .sc-bar .seg { display: inline-flex; padding: 4px; border-radius: 13px; background: rgba(0,0,0,.28); border: 1px solid rgba(255,255,255,.09); }

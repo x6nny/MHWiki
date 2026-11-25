@@ -63,7 +63,7 @@
 .ck-card .linkish { color: var(--c); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- Blocks ---------- */
-.cd-block { margin: 20px 0 76px; scroll-margin-top: 100px; }
+.cd-block { margin: 20px 0 76px; scroll-margin-top: calc(var(--stick) + 28px); }
 .cd-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; margin-bottom: 22px; }
 .cd-head h2 { font-size: clamp(28px, 3.2vw, 42px); }
 .cd-head p { margin: 8px 0 0; color: var(--muted); max-width: 720px; }
@@ -215,7 +215,7 @@ a.rw:hover { transform: translateY(-2px); border-color: var(--c); background: co
 .fact p { margin: 0; color: var(--muted); font-size: 13.5px; }
 
 /* ---------- Archive toolbar ---------- */
-.toolbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; padding: 12px; border-radius: 20px; position: sticky; top: 86px; z-index: 20; }
+.toolbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; padding: 12px; border-radius: 20px; position: sticky; top: calc(var(--stick) + 14px); z-index: 20; }
 .toolbar .tb-search { flex: 1 1 240px; }
 .kinds { display: flex; gap: 6px; flex-wrap: wrap; }
 .kind {

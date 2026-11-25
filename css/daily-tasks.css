@@ -48,7 +48,7 @@
 .board-foot { position: relative; margin-top: 14px; text-align: center; font-size: 12px; font-weight: 700; color: var(--faint); }
 
 /* ---------- Sections ---------- */
-.dt-block { margin: 30px 0 84px; scroll-margin-top: 100px; }
+.dt-block { margin: 30px 0 84px; scroll-margin-top: calc(var(--stick) + 28px); }
 .dt-head { margin-bottom: 20px; }
 .dt-kicker { font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--uc); }
 .dt-head h2 { font-size: clamp(28px, 3.2vw, 42px); }

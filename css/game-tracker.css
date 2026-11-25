@@ -33,7 +33,7 @@
 .live-grid b.down, .ch-sum b.down { color: #ff9aa9; }
 
 /* ---------- Sections ---------- */
-.gt-block { margin: 30px 0 84px; scroll-margin-top: 100px; }
+.gt-block { margin: 30px 0 84px; scroll-margin-top: calc(var(--stick) + 28px); }
 .gt-head { margin-bottom: 18px; }
 .gt-kicker { font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--gt); }
 .gt-head h2 { font-size: clamp(28px, 3.2vw, 42px); }

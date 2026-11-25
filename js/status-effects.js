@@ -209,7 +209,7 @@
     if (!card) { $("#clearAll").click(); card = document.getElementById(slug); }
     if (!card) return;
     card.classList.add("in");
-    window.scrollTo({ top: card.getBoundingClientRect().top + scrollY - 190, behavior: MH.reduceMotion ? "auto" : "smooth" });
+    window.scrollTo({ top: card.getBoundingClientRect().top + scrollY - (118 + MH_STICK()), behavior: MH.reduceMotion ? "auto" : "smooth" });
     card.classList.remove("flash"); void card.offsetWidth; card.classList.add("flash");
     history.replaceState(null, "", "#" + slug);
   }
@@ -275,7 +275,7 @@
     const el = document.getElementById(h) || document.getElementById("materials");
     if (!el) return;
     el.classList.add("in");
-    window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - 120, behavior: MH.reduceMotion ? "auto" : "smooth" });
+    window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - (48 + MH_STICK()), behavior: MH.reduceMotion ? "auto" : "smooth" });
     if (el.classList.contains("mcard")) { el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); }
   }, 400);
 })();

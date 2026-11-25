@@ -38,7 +38,7 @@
 @keyframes cfFly { to { transform: translate(var(--x), var(--y)) rotate(var(--r)); opacity: 0; } }
 
 /* ---------- Sections ---------- */
-.rt-block { margin: 30px 0 84px; scroll-margin-top: 100px; }
+.rt-block { margin: 30px 0 84px; scroll-margin-top: calc(var(--stick) + 28px); }
 .rt-head { margin-bottom: 20px; }
 .rt-kicker { font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--rb2); }
 .rt-head h2 { font-size: clamp(28px, 3.2vw, 42px); }

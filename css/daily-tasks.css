@@ -330,6 +330,7 @@
 .gs-d { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 4px; border-radius: 16px; text-align: center; background: rgba(13,17,32,.7); border: 1px solid rgba(255,255,255,.07); animation: riseIn .45s var(--spring) both; animation-delay: calc(var(--i) * 50ms); }
 .gs-d small { font-size: 10.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--faint); white-space: nowrap; }
 .gs-d > b { font-size: 13px; color: #fff; }
+.gs-cyc { font-style: normal; margin-top: -3px; font: 700 10.5px var(--font-mono); color: var(--faint); }
 .gs-d > img { width: 40px; height: 40px; object-fit: contain; filter: drop-shadow(0 6px 10px rgba(0,0,0,.5)); }
 .gs-gift { width: 22px; height: 22px; margin: 9px 0; border-radius: 7px; background: linear-gradient(135deg, rgba(255,122,217,.4), rgba(199,125,255,.3)); border: 1px solid rgba(255,255,255,.12); }
 .gs-d em { font-style: normal; font-size: 11px; font-weight: 700; color: var(--muted); line-height: 1.2; }

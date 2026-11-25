@@ -334,7 +334,8 @@
 
       // today's (or the next) gift
       const g = gift(day);
-      $("#gsTodayLbl").textContent = claimed ? `Today's gift (day ${day}) · claimed` : `Today's gift · day ${day}`;
+      const cyc = d => T.repeatAfter && d > T.repeatAfter ? ` (day ${((d - 1) % T.repeatAfter) + 1} of ${T.repeatAfter})` : "";
+      $("#gsTodayLbl").textContent = claimed ? `Today's gift · day ${day}${cyc(day)} · claimed` : `Today's gift · day ${day}${cyc(day)}`;
       $("#gsUc").textContent = fmt(g.est);
       $("#gsRange").textContent = g.min !== g.max ? `${fmt(g.min)}–${fmt(g.max)} uC` : "";
       const chip = (art, n, cls = "") => `<span class="gs-chip${cls}">${art}${esc(n)}</span>`;
@@ -346,7 +347,7 @@
       for (let d = day + (claimed ? 1 : 0); d <= day + 60; d++) { const b = boxFor(d); if (b) { nb = { d, b }; break; } }
       $("#gsNext").innerHTML = nb
         ? (nb.d === day && !claimed ? `Open it today for your <b>${esc(nb.b.box)}</b>.` : `Next streak box: <b>${esc(nb.b.box)}</b> on day ${nb.d}, ${nb.d - day === 1 ? "tomorrow" : `in ${nb.d - day} days`}.`)
-        : (day >= lastMilestone ? "You've collected every streak box the wiki lists." : "");
+        : (!T.repeatAfter && day >= lastMilestone ? "You've collected every streak box the wiki lists." : "");
 
       // next 7 gifts
       const startDay = claimed ? day + 1 : day, startKey = claimed ? dayKeyAdd(today, 1) : today;
@@ -356,7 +357,7 @@
         tot += gg.est; if (sb) streakBoxes.push(sb.box);
         const when = i === 0 && !claimed ? "Today" : (i === 0 && claimed) || (i === 1 && !claimed) ? "Tomorrow" : new Date(k + "T12:00:00Z").toLocaleDateString([], { weekday: "short", day: "numeric", timeZone: "UTC" });
         return `<div class="gs-d${sb ? " prize" : ""}${i === 0 && !claimed ? " now" : ""}" style="--i:${i}">
-          <small>${esc(when)}</small><b>Day ${d}</b>
+          <small>${esc(when)}</small><b>Day ${d}</b>${T.repeatAfter && d > T.repeatAfter ? `<i class="gs-cyc">${((d - 1) % T.repeatAfter) + 1}/${T.repeatAfter}</i>` : ""}
           ${sb ? `<img src="${BOX(sb.slug)}" alt="" /><em>${esc(sb.box)}</em>` : `<span class="gs-gift"></span><em>Gift</em>`}
           <span class="gs-d-uc">≈ ${fmt(gg.est)} uC</span>
         </div>`;

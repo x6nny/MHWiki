@@ -179,7 +179,7 @@
         "slug": "spectral-box"
       }
     ],
-    "streakNote": "Buying a second Daily Gift, or opening one again after a server restart, doesn't add to your streak. A long streak also improves what Spook McDooks gives you.",
+    "streakNote": "Buying a second Daily Gift, or opening one again after a server restart, doesn't add to your streak. After day 7 the rewards start over from day 1, so day 10 gives an Unreal Box again. A long streak also improves what Spook McDooks gives you.",
     "boosters": [
       {
         "n": "VIP",
@@ -243,9 +243,9 @@
       }
     ],
     "tracker": {
-      "_note": "Rewards used by the streak tracker. uc: [lowest, highest] extra uC. setBase: replaces the normal uC. crates/boxes: names shown to the player (img = picture in assets/rp, slug = picture in assets/boxes, draw = basic/golden/diamond crate drawing).",
+      "_note": "Rewards used by the streak tracker. repeatAfter: the login streak starts over after this many days (day 8 = day 1 again). uc: [lowest, highest] extra uC. setBase: replaces the normal uC. crates/boxes: names shown to the player (img = picture in assets/rp, slug = picture in assets/boxes, draw = basic/golden/diamond crate drawing).",
       "baseUC": 1,
-      "repeatAfter": null,
+      "repeatAfter": 7,
       "always": {
         "crates": [
           {

@@ -204,7 +204,7 @@
   qEl.addEventListener("input", () => { clearTimeout(qt); qt = setTimeout(() => { state.q = qEl.value.trim(); render(); }, 140); });
   $("#clearSearch").addEventListener("click", () => { qEl.value = ""; state.q = ""; render(); qEl.focus(); });
   document.addEventListener("keydown", e => {
-    if (e.key === "/" && document.activeElement !== qEl) { e.preventDefault(); qEl.focus(); }
+    if (e.key === "/" && !(e.target.closest && e.target.closest("input, textarea, select, [contenteditable]"))) { e.preventDefault(); qEl.focus(); }
     if (e.key === "Escape" && document.activeElement === qEl) { qEl.value = ""; state.q = ""; render(); }
   });
 

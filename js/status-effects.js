@@ -175,7 +175,7 @@
     Object.assign(state, { g: "all", q: "", bad: false }); $("#q").value = ""; $("#onlyBad").checked = false;
     seg.querySelectorAll("button").forEach(x => x.classList.toggle("active", x.dataset.g === "all")); moveInd(); render();
   });
-  document.addEventListener("keydown", e => { if (e.key === "/" && document.activeElement !== $("#q")) { e.preventDefault(); $("#q").focus(); } });
+  document.addEventListener("keydown", e => { if (e.key === "/" && !(e.target.closest && e.target.closest("input, textarea, select, [contenteditable]"))) { e.preventDefault(); $("#q").focus(); } });
 
   /* ---------- Hero showcase: cycles through the effects ---------- */
   const order = D.effects.filter(e => !/banned|immunity/.test(e.slug) || e.slug === "replicator-banned");

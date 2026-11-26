@@ -104,7 +104,7 @@
   let qt;
   $("#q").addEventListener("input", e => { clearTimeout(qt); qt = setTimeout(() => { state.q = e.target.value.trim().toLowerCase(); apply(true); }, 150); });
   document.addEventListener("keydown", e => {
-    if (e.key === "/" && document.activeElement !== $("#q") && !modalOpen()) { e.preventDefault(); $("#q").focus(); }
+    if (e.key === "/" && !(e.target.closest && e.target.closest("input, textarea, select, [contenteditable]")) && !modalOpen()) { e.preventDefault(); $("#q").focus(); }
   });
   $("#clearAll").addEventListener("click", clearAll);
   function clearAll() {
@@ -413,6 +413,11 @@
       MH.toast("Link copied");
     });
     bindVariants(it);
+    if (window.MH_ACCOUNT && MH_ACCOUNT.ready && window.MH_COMMENTS) {
+      const slot = document.createElement("section");
+      body.querySelector(".m-main").appendChild(slot);
+      MH_COMMENTS.mount(slot, "item:" + it.n, { compact: true, title: "Comments", eager: true });
+    }
     const pos = list.indexOf(it);
     $("#mPrev").disabled = pos <= 0;
     $("#mNext").disabled = pos < 0 || pos >= list.length - 1;
@@ -553,6 +558,7 @@
   $("#mNext").addEventListener("click", () => step(1));
   document.addEventListener("keydown", e => {
     if (!modalOpen()) return;
+    if (e.key !== "Escape" && e.target.closest && e.target.closest("input, textarea, select, [contenteditable]")) return; // typing a comment
     if (e.key === "Escape") closeModal();
     else if (e.key === "ArrowLeft") step(-1);
     else if (e.key === "ArrowRight") step(1);

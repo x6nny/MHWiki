@@ -340,7 +340,7 @@ pList.addEventListener("mousemove", e => {
 });
 document.addEventListener("keydown", e => {
   if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); palette.classList.contains("open") ? closePalette() : openPalette(); return; }
-  if (e.key === "/" && !palette.classList.contains("open") && document.activeElement.tagName !== "INPUT") { e.preventDefault(); openPalette(); return; }
+  if (e.key === "/" && !palette.classList.contains("open") && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName) && !document.activeElement.isContentEditable) { e.preventDefault(); openPalette(); return; }
   if (!palette.classList.contains("open")) return;
   if (e.key === "Escape") closePalette();
   else if (e.key === "ArrowDown" || e.key === "ArrowUp") {

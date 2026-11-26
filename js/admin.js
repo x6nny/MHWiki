@@ -300,14 +300,17 @@
       if (e.status === 409) $("#adDone").hidden = false, $("#adDone").innerHTML = `<span class="ad-err">${esc(e.message)}</span>`;
     } finally { btn.disabled = false; btn.textContent = "Publish to GitHub"; }
   });
-  /* ---------- users: reset a password, unban ---------- */
+  /* ---------- users: reset a password, unban, clear a profile ---------- */
   $("#adUserForm").addEventListener("submit", async e => {
     e.preventDefault();
     const btn = e.submitter, name = $("#adUserName").value.trim(), out = $("#adUserMsg");
     if (!name) { $("#adUserName").focus(); return; }
     out.className = "ad-dim"; out.textContent = "One moment…";
     try {
-      if (btn && btn.dataset.do === "unban") {
+      if (btn && btn.dataset.do === "clearprofile") {
+        const r = await A.api("admin.clearProfile", { username: name, what: "all" });
+        out.className = "ad-ok"; out.textContent = `${r.username}'s picture, bio and banner were removed.`;
+      } else if (btn && btn.dataset.do === "unban") {
         const r = await A.api("admin.unban", { username: name });
         out.className = "ad-ok"; out.textContent = `${r.username} can comment again.`;
       } else {

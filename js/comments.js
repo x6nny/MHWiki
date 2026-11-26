@@ -19,7 +19,9 @@
     if (s < 86400 * 30) return `${Math.floor(s / 86400)}d ago`;
     return new Date(iso).toLocaleDateString([], { day: "numeric", month: "short", year: "numeric" });
   };
-  const ava = (name, admin) => `<span class="cm-ava${admin ? " adm" : ""}" aria-hidden="true">${esc((name || "?")[0].toUpperCase())}</span>`;
+  const pics = {};   // user id → profile picture, filled in from comments.list
+  const ava = (name, admin, pic) => A.avatar({ username: name, avatar: pic }, "cm-ava" + (admin ? " adm" : ""));
+  const profileUrl = name => A.root + "pages/profiles.html#u=" + encodeURIComponent(name);
 
   function mount(el, thread, opt = {}) {
     if (!el || !thread) return;
@@ -47,7 +49,7 @@
       const u = s.user || {};
       top.innerHTML = `
         <form class="cm-form">
-          ${ava(u.username, u.admin)}
+          ${ava(u.username, u.admin, u.avatar)}
           <div class="cm-in">
             <textarea maxlength="${MAX + 50}" placeholder="Write a comment as ${esc(u.username)}…" aria-label="Write a comment"></textarea>
             <div class="cm-bar"><span class="cm-count">0 / ${MAX}</span><button class="cm-post" type="submit" disabled>Post</button></div>
@@ -71,6 +73,7 @@
         try {
           const { item } = await A.api("comments.add", { thread, body: ta.value.trim() });
           draft = ""; ta.value = "";
+          if (A.state.user && A.state.user.avatar) pics[item.user_id] = A.state.user.avatar;
           items.unshift(item); total++;
           list.insertAdjacentHTML("afterbegin", row(item));
           nEl.textContent = total; note.hidden = true;
@@ -85,10 +88,10 @@
       const canDel = mine || (me && me.admin);
       const canBan = me && me.admin && !mine && !c.admin;
       return `<li class="cm-item" data-id="${esc(c.id)}" data-uid="${esc(c.user_id)}">
-        ${ava(c.author, c.admin)}
+        <a class="cm-who" href="${esc(profileUrl(c.author))}" title="${esc(c.author)}'s profile" tabindex="-1">${ava(c.author, c.admin, pics[c.user_id])}</a>
         <div>
           <div class="cm-meta">
-            <b>${esc(c.author)}</b>
+            <a class="cm-name" href="${esc(profileUrl(c.author))}"><b>${esc(c.author)}</b></a>
             ${c.admin ? `<span class="adm">Admin</span>` : ""}
             <time datetime="${esc(c.created_at)}" title="${esc(new Date(c.created_at).toLocaleString())}">${ago(c.created_at)}</time>
             ${canDel || canBan ? `<span class="cm-acts">${canDel ? `<button type="button" data-del>${mine ? "Delete" : "Remove"}</button>` : ""}${canBan ? `<button type="button" data-ban>Ban</button>` : ""}</span>` : ""}
@@ -108,6 +111,7 @@
       try {
         const r = await A.api("comments.list", { thread, limit: PAGE, before: older ? lastId : undefined });
         total = r.total;
+        Object.assign(pics, r.avatars || {});
         items = older ? items.concat(r.items) : r.items;
         if (items.length) lastId = items[items.length - 1].id;
         redraw();

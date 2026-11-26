@@ -5,7 +5,8 @@
 
    window.MH_ACCOUNT = {
      ready, state: { status, user: {id, username, admin, banned}, sync },
-     onChange(fn), api(action, data), openSignIn(mode), signOut(), syncNow(), toast(msg)
+     onChange(fn), api(action, data), openSignIn(mode), signOut(), syncNow(), toast(msg),
+     avatarSrc(value), avatar(user, className), updateUser(patch)
    }
    ========================================================= */
 (() => {
@@ -62,8 +63,26 @@
     return j;
   }
 
+  /* Profile pictures: "" (show the first letter), a small uploaded picture (data:image/…),
+     or a wiki item picture (assets/wiki/…). Anything else is ignored, so it can never run code. */
+  const AV_DATA = /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/]+={0,2}$/;
+  const AV_ITEM = /^assets\/wiki\/[A-Za-z0-9._-]{1,120}\.(webp|png|jpe?g|gif)$/;
+  const avatarSrc = v => {
+    v = String(v || "");
+    if (AV_DATA.test(v)) return v;
+    if (AV_ITEM.test(v) && !v.includes("..")) return ROOT + v;
+    return "";
+  };
+  const avatar = (u, cls = "") => {
+    const name = (u && u.username) || "?", src = avatarSrc(u && u.avatar), letter = esc(name[0].toUpperCase());
+    return src
+      ? `<span class="mh-av has-pic${src.startsWith("data:") ? "" : " is-item"} ${cls}" data-l="${letter}"><img src="${esc(src)}" alt="" loading="lazy" decoding="async" onerror="this.parentNode.classList.remove('has-pic');this.parentNode.textContent=this.parentNode.dataset.l" /></span>`
+      : `<span class="mh-av ${cls}">${letter}</span>`;
+  };
+
   window.MH_ACCOUNT = {
-    ready: READY, state, SYNC, toast, api,
+    ready: READY, root: ROOT, state, SYNC, toast, api, avatarSrc, avatar,
+    updateUser: p => updateUser(p),
     onChange(fn) { subs.add(fn); fn(state); return () => subs.delete(fn); },
     openSignIn: mode => openDialog(mode || "signin"),
     signOut, syncNow: () => sync(true),
@@ -296,6 +315,14 @@
     });
   }
 
+  // e.g. after changing your profile picture, so the sidebar shows it straight away
+  function updateUser(patch) {
+    if (!session || !state.user) return;
+    state.user = { ...state.user, ...patch };
+    saveSession({ token: session.token, user: state.user });
+    emit();
+  }
+
   async function setVisibility(hidden) {
     try {
       const r = await api("profiles.visibility", { hidden });
@@ -366,12 +393,13 @@
     const u = state.user || {};
     box.innerHTML = `
       <button type="button" class="sb-link sb-me${u.admin ? " is-admin" : ""}" data-act="menu" aria-haspopup="true" aria-expanded="${menuOpen}" title="${esc(u.username)}">
-        <span class="sb-ic sb-ava"><b>${esc((u.username || "?")[0].toUpperCase())}</b><i class="sb-dot ${state.sync}"></i></span>
+        <span class="sb-ic sb-ava">${avatar(u, "sb-pic")}<i class="sb-dot ${state.sync}"></i></span>
         <span class="sb-t">${esc(u.username)}<small>${u.admin ? "Admin · " : ""}${SYNC_TXT[state.sync] || ""}</small></span>
       </button>
       <div class="sb-menu glass" role="menu" ${menuOpen ? "" : "hidden"}>
         <div class="sb-menu-who"><b>${esc(u.username)}</b><span>${u.admin ? `<em>Admin</em>` : "Signed in"}</span></div>
         <a role="menuitem" href="${ROOT}pages/profiles.html#u=${encodeURIComponent(u.username)}">My profile</a>
+        <a role="menuitem" href="${ROOT}pages/profiles.html#u=${encodeURIComponent(u.username)}&edit=1">Edit profile</a>
         ${u.admin ? `<a role="menuitem" href="${ROOT}pages/admin.html">Admin area</a>` : ""}
         <button role="menuitem" type="button" data-act="visibility">${u.hidden ? "Show my profile" : "Hide my profile"}</button>
         <button role="menuitem" type="button" data-act="sync">Sync trackers now</button>

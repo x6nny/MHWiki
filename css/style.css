@@ -1278,3 +1278,20 @@ html.sb-mini { --sbw: 74px; }
 .cm.compact { margin: 22px 0 6px; }
 .cm.compact .cm-head h2 { font-size: 17px; }
 .cm.compact .cm-box { padding: 12px; border-radius: 18px; }
+
+/* ---------- profile pictures (account menu, comments, profiles) ---------- */
+.mh-av { display: grid; place-items: center; overflow: hidden; flex: none; font-weight: 800; line-height: 1; color: var(--text); user-select: none; }
+.mh-av img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.mh-av.is-item { background: radial-gradient(circle at 50% 35%, rgba(255,255,255,.16), rgba(255,255,255,.03) 70%), rgba(0,0,0,.25); }
+.mh-av.is-item img { object-fit: contain; padding: 12%; filter: drop-shadow(0 3px 6px rgba(0,0,0,.55)); }
+.sb-ava .mh-av { width: 100%; height: 100%; border-radius: inherit; font-size: 14px; }
+.sb-ic.sb-ava .mh-av img { width: 100%; height: 100%; filter: none; }
+.sb-ic.sb-ava .mh-av.is-item img { filter: drop-shadow(0 2px 3px rgba(0,0,0,.5)); }
+.cm-ava.mh-av { font-size: 16px; }
+.cm-ava.has-pic { background: none; }
+.cm-ava.is-item { background: radial-gradient(circle at 50% 35%, rgba(255,255,255,.16), rgba(255,255,255,.03) 70%), rgba(0,0,0,.25); }
+.cm-who { display: block; width: 40px; height: 40px; border-radius: 50%; }
+.cm-who .cm-ava { width: 40px; height: 40px; transition: transform .25s var(--spring); }
+.cm-who:hover .cm-ava { transform: scale(1.08); }
+.cm-name { color: inherit; text-decoration: none; }
+.cm-name:hover b { text-decoration: underline; text-underline-offset: 3px; }

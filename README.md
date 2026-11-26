@@ -2,7 +2,7 @@
 
 A fast, modern wiki for the Roblox game **[Miner's Haven](https://www.roblox.com/games/258258996)**. It has every item, rebirth, event and code, plus calculators and trackers that save your progress.
 
-**🌐 Live site: [x6nny.github.io/MHWiki](https://x6nny.github.io/MHWiki)** · **💬 [Join the Discord](https://discord.gg/minershaven)**
+**🌐 Live site: [x6nny.github.io/MHWiki](https://x6nny.github.io/MHWiki/)** · **💬 [Join the Discord](https://discord.gg/minershaven)**
 
 It's a plain static site: HTML, CSS and JavaScript with no build step and no framework. All the game data is kept in JSON files in this repo, so the site never depends on another wiki staying online.
 
@@ -45,7 +45,7 @@ It's a plain static site: HTML, CSS and JavaScript with no build step and no fra
 | **Update Log** | Patch notes for every update, newest first. |
 | **Game Tracker** | Live player count and CCU history going back to 2019. |
 | **User Tracker** | Look up any Roblox player's Miner's Haven badges, Eggxotic eggs and staff roles. |
-| **Profiles** | Look up wiki accounts to see their shiny progress, current rebirth and daily streak. |
+| **Profiles** | Look up wiki accounts to see their picture, bio, shiny progress, current rebirth and daily streak. |
 
 Plus a **Settings** page for themes, animations, text and number display, and managing what's saved in your browser, and a search on the home page that finds any section.
 
@@ -57,8 +57,8 @@ People can create a wiki account with a username and password. With an account:
 
 - **Trackers sync between devices.** This covers the Shiny Checklist, Rebirth Tracker, Daily Tasks, Daily Gift streak and Settings.
 - **Comments** work at the bottom of every page and on each item in the Item Index.
-- **Profiles** show other players your shiny progress, rebirth and streak. You can hide yours from the account menu.
-- **Admins** get an admin area where they can edit the wiki's data files and publish the changes straight to this repo, reset passwords and unban people.
+- **Profiles** show other players your picture, bio and banner colour along with your shiny progress, rebirth and streak. Pick a picture by uploading one (it's cropped and shrunk to 128×128 in your browser) or by choosing any wiki item. You can hide your profile from the account menu.
+- **Admins** get an admin area where they can edit the wiki's data files and publish the changes straight to this repo, reset passwords, unban people and remove profile pictures or bios that break the rules.
 
 Accounts are stored in a **private Google Sheet**. The sheet is never shared or published. The site only talks to a small Apps Script web app inside it (`google-sheets/Code.gs`). Passwords are salted and hashed with PBKDF2 plus a secret pepper, so even the sheet's owner can't read them. The script also has rate limits for sign-in attempts, new accounts and comments.
 
@@ -72,7 +72,7 @@ If `api` in `js/account-config.js` is left empty, the whole account system is sw
    - Open **Extensions → Apps Script** and paste in everything from `google-sheets/Code.gs`.
    - Save, pick **setupSheet** in the function menu and click **Run**.
    - Allow the permissions. On the "hasn't verified this app" screen, click **Advanced → Go to HavenWiki**.
-   - This creates the **Users**, **Sessions**, **Trackers** and **Comments** tabs and a **HavenWiki** menu.
+   - This creates the **Users**, **Sessions**, **Trackers**, **Comments** and **Profiles** tabs and a **HavenWiki** menu.
 3. **Publish it.**
    - Go to **Deploy → New deployment → Web app**.
    - Set **Execute as: Me** and **Who has access: Anyone**.

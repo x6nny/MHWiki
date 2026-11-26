@@ -25,6 +25,11 @@ var CFG = {
   COMMENTS_PER_MINUTE: 3,
   LOGIN_FAILS: 8,                // wrong passwords in a row before a 15 minute lock
   SIGNUPS_PER_HOUR: 60,
+  BIO_MAX: 200,                  // characters in a profile bio
+  BIO_LINES: 6,
+  AVATAR_MAX: 40000,             // an uploaded picture is resized in the browser first; this caps what's stored
+  PROFILE_EDITS_PER_HOUR: 40,
+  BANNERS: ['emerald', 'ocean', 'violet', 'sunset', 'rose', 'gold', 'ice', 'mono'],
   GITHUB_REPO: 'x6nny/MHWiki',
   GITHUB_BRANCH: 'main',
 };
@@ -34,6 +39,7 @@ var TABS = {
   Sessions: ['token_hash', 'user_id', 'created_at', 'expires_at'],
   Trackers: ['user_id', 'key', 'updated_at', 'value'],
   Comments: ['id', 'thread', 'user_id', 'author', 'body', 'created_at'],
+  Profiles: ['user_id', 'bio', 'avatar', 'banner', 'updated_at'],
 };
 // Text written by users is stored with a one-letter prefix so Google Sheets never
 // treats it as a formula, number or date. It's removed again when read.
@@ -71,7 +77,7 @@ var ACTIONS = {
   register: register_,
   login: login_,
   logout: logout_,
-  me: function (r) { var u = auth_(r); return { user: publicUser_(u) }; },
+  me: function (r) { var u = auth_(r); return { user: withLook_(publicUser_(u)) }; },
   changePassword: changePassword_,
   deleteAccount: deleteAccount_,
 
@@ -82,6 +88,7 @@ var ACTIONS = {
   'profiles.search': profilesSearch_,
   'profiles.get': profilesGet_,
   'profiles.visibility': profilesVisibility_,
+  'profiles.update': profilesUpdate_,
 
   'comments.list': commentsList_,
   'comments.add': commentsAdd_,
@@ -90,6 +97,7 @@ var ACTIONS = {
   'admin.ban': adminBan_,
   'admin.unban': adminUnban_,
   'admin.resetPassword': adminResetPassword_,
+  'admin.clearProfile': adminClearProfile_,
   'admin.files': adminFiles_,
   'admin.read': adminRead_,
   'admin.save': adminSave_,
@@ -110,7 +118,9 @@ function tab_(name) {
   return s;
 }
 function makeTab_(name) {
-  var s = ss_().insertSheet(name);
+  var s;
+  try { s = ss_().insertSheet(name); }
+  catch (e) { s = ss_().getSheetByName(name); if (s) return s; throw e; }   // another request made it a moment ago
   var head = TABS[name];
   s.getRange(1, 1, 1, head.length).setValues([head]).setFontWeight('bold');
   s.setFrozenRows(1);
@@ -254,7 +264,7 @@ function register_(req) {
     tab_('Users').getRange(r, U.hidden + 1).insertCheckboxes();
     cache.put(hour, String(Number(cache.get(hour) || 0) + 1), 3600);
     var token = newSession_(id);
-    return { token: token, user: { id: id, username: name, admin: false, banned: false, hidden: false } };
+    return { token: token, user: { id: id, username: name, admin: false, banned: false, hidden: false, avatar: '' } };
   });
 }
 
@@ -277,7 +287,7 @@ function login_(req) {
     // tidy up this user's expired sign-ins
     var now = Date.now(), old = rows_('Sessions').filter(function (r) { return r[1] === u[U.id] && Number(r[3]) < now; }).map(function (r) { return r._r; });
     deleteRows_('Sessions', old);
-    return { token: newSession_(u[U.id]), user: publicUser_(u) };
+    return { token: newSession_(u[U.id]), user: withLook_(publicUser_(u)) };
   });
 }
 
@@ -311,6 +321,7 @@ function deleteAccount_(req) {
     endSessions_(id, null);
     deleteRows_('Trackers', rows_('Trackers').filter(function (r) { return r[0] === id; }).map(function (r) { return r._r; }));
     deleteRows_('Comments', rows_('Comments').filter(function (r) { return r[2] === id; }).map(function (r) { return r._r; }));
+    deleteRows_('Profiles', rows_('Profiles').filter(function (r) { return r[0] === id; }).map(function (r) { return r._r; }));
     var cur = findUser_(users_(), function (r) { return r[U.id] === id; });
     if (cur) deleteRows_('Users', [cur._r]);
   });
@@ -367,7 +378,8 @@ function profilesSearch_(req) {
     var as = String(a[U.lower]).indexOf(q) === 0 ? 0 : 1, bs = String(b[U.lower]).indexOf(q) === 0 ? 0 : 1;
     return as - bs || String(a[U.lower]).localeCompare(String(b[U.lower]));
   });
-  return { users: list.slice(0, 20).map(function (r) { return { username: r[U.username], admin: r[U.admin] === true }; }) };
+  var looks = looks_();
+  return { users: list.slice(0, 20).map(function (r) { return { username: r[U.username], admin: r[U.admin] === true, avatar: (looks[r[U.id]] || {}).avatar || '' }; }) };
 }
 // Only these parts of someone's trackers are ever shown on a profile.
 function profilesGet_(req) {
@@ -376,7 +388,11 @@ function profilesGet_(req) {
   if (!u) fail_('There\'s no account called "' + String(req.username || '').trim() + '".', 'notfound');
   var me = optionalUser_(req), self = !!me && me[U.id] === u[U.id];
   var out = { user: { username: u[U.username], admin: u[U.admin] === true, joined: new Date(Number(u[U.created]) || 0).toISOString(), hidden: u[U.hidden] === true }, self: self };
+  var look = looks_()[u[U.id]] || {};
+  out.user.avatar = look.avatar || '';
   if (u[U.hidden] === true && !self) { out.private = true; return out; }
+  out.user.bio = look.bio || '';
+  out.user.banner = look.banner || '';
   rows_('Trackers').forEach(function (r) {
     if (r[0] !== u[U.id]) return;
     var t;
@@ -404,6 +420,85 @@ function profilesVisibility_(req) {
   return { hidden: hidden };
 }
 
+/* ============================== profile customization ============================== */
+// Bio, picture and banner colour live in the Profiles tab, one row per account that has set any of them.
+// avatar is either "" (first letter of the name), a small picture uploaded by the user
+// ("data:image/jpeg;base64,…", already resized to 128×128 in their browser), or a wiki item picture ("assets/wiki/…").
+
+function looks_() {
+  var map = {};
+  rows_('Profiles').forEach(function (r) {
+    map[r[0]] = { bio: untxt_(r[1]), avatar: untxt_(r[2]), banner: untxt_(r[3]), _r: r._r };
+  });
+  return map;
+}
+function withLook_(pub) { pub.avatar = (looks_()[pub.id] || {}).avatar || ''; return pub; }
+
+var AVATAR_DATA = /^data:image\/(jpeg|png|webp);base64,([A-Za-z0-9+\/]+={0,2})$/;
+var AVATAR_ITEM = /^assets\/wiki\/[A-Za-z0-9._-]{1,120}\.(webp|png|jpe?g|gif)$/;
+function checkAvatar_(v) {
+  v = String(v == null ? '' : v).trim();
+  if (!v) return '';
+  if (AVATAR_ITEM.test(v) && v.indexOf('..') < 0) return v;
+  var m = AVATAR_DATA.exec(v);
+  if (!m) fail_('That picture can\'t be used. Try a JPG, PNG or WebP image.');
+  if (v.length > CFG.AVATAR_MAX) fail_('That picture is too big. Try a smaller image.');
+  // make sure the bytes really are the kind of image the label says
+  var b = Utilities.base64Decode(m[2].slice(0, 24)), h = function (i) { return (b[i] + 256) % 256; };
+  var real = h(0) === 0xFF && h(1) === 0xD8 && h(2) === 0xFF ? 'jpeg'
+    : h(0) === 0x89 && h(1) === 0x50 && h(2) === 0x4E && h(3) === 0x47 ? 'png'
+    : h(0) === 0x52 && h(1) === 0x49 && h(2) === 0x46 && h(3) === 0x46 && h(8) === 0x57 && h(9) === 0x45 && h(10) === 0x42 && h(11) === 0x50 ? 'webp' : '';
+  if (real !== m[1]) fail_('That picture can\'t be used. Try a JPG, PNG or WebP image.');
+  return v;
+}
+function checkBio_(v) {
+  v = String(v == null ? '' : v).replace(/\r\n?/g, '\n').replace(/[\u0000-\u0009\u000B-\u001F\u007F]/g, '').replace(/\n{3,}/g, '\n\n').trim();
+  if (v.length > CFG.BIO_MAX) fail_('Bios can be up to ' + CFG.BIO_MAX + ' characters.');
+  if (v.split('\n').length > CFG.BIO_LINES) fail_('Bios can be up to ' + CFG.BIO_LINES + ' lines.');
+  return v;
+}
+function saveLook_(userId, look) {
+  var cur = looks_()[userId], row = [userId, txt_(look.bio || ''), txt_(look.avatar || ''), txt_(look.banner || ''), Date.now()];
+  var empty = !look.bio && !look.avatar && !look.banner;
+  if (cur && empty) deleteRows_('Profiles', [cur._r]);
+  else if (cur) tab_('Profiles').getRange(cur._r, 1, 1, row.length).setValues([row]);
+  else if (!empty) appendRow_('Profiles', row);
+}
+// Change any of bio, avatar, banner; fields left out stay as they are.
+function profilesUpdate_(req) {
+  var u = auth_(req);
+  if (u[U.banned] === true) fail_('You can\'t change your profile on this wiki.');
+  var patch = {};
+  if ('bio' in req) patch.bio = checkBio_(req.bio);
+  if ('avatar' in req) patch.avatar = checkAvatar_(req.avatar);
+  if ('banner' in req) {
+    patch.banner = String(req.banner || '');
+    if (patch.banner && CFG.BANNERS.indexOf(patch.banner) < 0) fail_('Pick one of the banner colours.');
+  }
+  var cache = CacheService.getScriptCache(), key = 'pe:' + u[U.id] + ':' + Math.floor(Date.now() / 36e5);
+  if (Number(cache.get(key) || 0) >= CFG.PROFILE_EDITS_PER_HOUR) fail_('You\'ve changed your profile a lot this hour. Try again later.');
+  var out;
+  withLock_(function () {
+    var cur = looks_()[u[U.id]] || {};
+    out = { bio: 'bio' in patch ? patch.bio : cur.bio || '', avatar: 'avatar' in patch ? patch.avatar : cur.avatar || '', banner: 'banner' in patch ? patch.banner : cur.banner || '' };
+    saveLook_(u[U.id], out);
+  });
+  cache.put(key, String(Number(cache.get(key) || 0) + 1), 3600);
+  return { profile: out };
+}
+// Admins: remove someone's picture and/or bio (what: "avatar", "bio" or "all").
+function adminClearProfile_(req) {
+  requireAdmin_(req);
+  var t = userByName_(req.username), what = String(req.what || 'all');
+  if (['avatar', 'bio', 'all'].indexOf(what) < 0) fail_('Bad request.');
+  withLock_(function () {
+    var cur = looks_()[t[U.id]] || {};
+    var next = { bio: what === 'avatar' ? cur.bio || '' : '', avatar: what === 'bio' ? cur.avatar || '' : '', banner: what === 'all' ? '' : cur.banner || '' };
+    saveLook_(t[U.id], next);
+  });
+  return { username: t[U.username], what: what };
+}
+
 /* ============================== comments ============================== */
 
 function adminIds_() {
@@ -422,8 +517,9 @@ function commentsList_(req) {
   // "before" is the id of the last comment already shown, so "Show older" carries on after it
   var start = 0;
   if (req.before) { for (var i = 0; i < all.length; i++) if (all[i][0] === String(req.before)) { start = i + 1; break; } }
-  var page = all.slice(start, start + limit);
-  return { total: all.length, items: page.map(function (r) { return commentOut_(r, admins); }) };
+  var page = all.slice(start, start + limit), looks = looks_(), avatars = {};
+  page.forEach(function (r) { var a = (looks[r[2]] || {}).avatar; if (a) avatars[r[2]] = a; });
+  return { total: all.length, items: page.map(function (r) { return commentOut_(r, admins); }), avatars: avatars };
 }
 function commentsAdd_(req) {
   var u = auth_(req);
@@ -467,6 +563,7 @@ function adminBan_(req) {
     if (target[U.admin] === true) fail_('Admins can\'t be banned.');
     tab_('Users').getRange(target._r, U.banned + 1).setValue(true);
     deleteRows_('Comments', rows_('Comments').filter(function (r) { return r[2] === target[U.id]; }).map(function (r) { return r._r; }));
+    deleteRows_('Profiles', rows_('Profiles').filter(function (r) { return r[0] === target[U.id]; }).map(function (r) { return r._r; }));
   });
   return { username: target[U.username] };
 }

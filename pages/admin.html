@@ -12,9 +12,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
   <script src="../js/settings.js?v=51"></script>
-  <link rel="stylesheet" href="../css/style.css?v=56" />
+  <link rel="stylesheet" href="../css/style.css?v=60" />
   <link rel="stylesheet" href="../css/subpage.css?v=56" />
-  <link rel="stylesheet" href="../css/admin.css?v=56" />
+  <link rel="stylesheet" href="../css/admin.css?v=60" />
 </head>
 <body class="subpage ad-page">
   <div class="backdrop" aria-hidden="true">
@@ -126,12 +126,13 @@
       </div>
       <section class="ad-users glass">
         <h2>Users</h2>
-        <p class="ad-dim">Reset someone's password if they forgot it, or let a banned user comment again. To make someone an admin, tick the <b>admin</b> box next to their name in the sheet's Users tab.</p>
+        <p class="ad-dim">Reset someone's password if they forgot it, let a banned user comment again, or take down a profile picture and bio that break the rules (you can also do this from their profile). To make someone an admin, tick the <b>admin</b> box next to their name in the sheet's Users tab.</p>
         <form id="adUserForm" class="ad-userform" autocomplete="off">
           <input type="text" id="adUserName" placeholder="Username" aria-label="Username" spellcheck="false" />
           <input type="text" id="adUserPw" placeholder="New password (8+ characters)" aria-label="New password" spellcheck="false" />
           <button type="submit" class="ad-btn primary" data-do="reset">Reset password</button>
           <button type="submit" class="ad-btn" data-do="unban">Unban</button>
+          <button type="submit" class="ad-btn" data-do="clearprofile">Remove picture &amp; bio</button>
         </form>
         <p id="adUserMsg" class="ad-dim" aria-live="polite"></p>
       </section>
@@ -166,7 +167,7 @@
   <script src="../js/common.js?v=56"></script>
   <script src="../js/sidebar.js?v=56"></script>
   <script src="../js/account-config.js?v=56"></script>
-  <script src="../js/account.js?v=59"></script>
-  <script src="../js/admin.js?v=56"></script>
+  <script src="../js/account.js?v=60"></script>
+  <script src="../js/admin.js?v=60"></script>
 </body>
 </html>

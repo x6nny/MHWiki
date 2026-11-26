@@ -57,6 +57,37 @@
   const cget = k => cache[k] && Date.now() - cache[k].t < TTL ? cache[k].d : null;
   const cset = (k, d) => { cache[k] = { t: Date.now(), d }; try { localStorage.setItem(CK, JSON.stringify(cache)); } catch (e) {} };
 
+  /* Badge results per player, kept in this browser.
+     Only badge ownership is stored here: usernames, display names and avatars are always fetched fresh.
+     A badge Roblox couldn't answer for isn't stored, so it's the only kind asked again next time. */
+  const BK = "mh-ut-badges-v1", BMAX = 40;
+  let bcache = {}; try { bcache = JSON.parse(localStorage.getItem(BK) || "{}") || {}; } catch (e) { bcache = {}; }
+  function bcGet(id) {
+    const c = bcache[id];
+    return { own: new Set(c ? c.own : []), no: new Set(c ? c.no : []), t: c ? c.t : 0 };
+  }
+  function bcSet(id, k) {
+    bcache[id] = { t: Date.now(), own: [...k.own], no: [...k.no] };
+    const ids = Object.keys(bcache);
+    if (ids.length > BMAX) ids.sort((a, b) => bcache[a].t - bcache[b].t).slice(0, ids.length - BMAX).forEach(x => delete bcache[x]);
+    try { localStorage.setItem(BK, JSON.stringify(bcache)); } catch (e) {}
+  }
+  function bcDrop(id) { delete bcache[id]; try { localStorage.setItem(BK, JSON.stringify(bcache)); } catch (e) {} }
+  // Ask Roblox only about badges we don't already know, then remember the answers.
+  async function checkWithCache(id, badges, onEach) {
+    const k = bcGet(id);
+    const need = badges.filter(b => !k.own.has(b.id) && !k.no.has(b.id));
+    const fromCache = badges.length - need.length;
+    let unk = new Set();
+    if (need.length) {
+      const res = await checkOwned(id, need, onEach);
+      need.forEach(b => { if (res.own.has(b.id)) k.own.add(b.id); else if (!res.unk.has(b.id)) k.no.add(b.id); });
+      unk = res.unk;
+      bcSet(id, k);
+    }
+    return { own: k.own, unk, fromCache, asked: need.length, t: k.t };
+  }
+
   async function headshots(ids, size = 150) {
     const map = {};
     for (let i = 0; i < ids.length; i += 100) {
@@ -210,17 +241,13 @@
 
       // 3. Badge ownership, one check per badge (only possible with a public inventory)
       if (view) {
-        const SK = "mh-ut-own-" + id;
-        let prev = null; try { prev = JSON.parse(sessionStorage.getItem(SK) || "null"); } catch (e) {}
-        if (prev && Date.now() - prev.t < 15 * 60e3) { fillBadges(P, new Set(prev.own), new Set()); return; }
         const st = $("#bdgState");
-        const res = await checkOwned(id, badges, (d, n) => {
+        const res = await checkWithCache(id, badges, (d, n) => {
           if (my !== token || !st) return;
           st.querySelector("b").textContent = `${d} / ${n}`; st.querySelector("i").style.width = d / n * 100 + "%";
         });
         if (my !== token) return;
-        if (!res.unk.size) try { sessionStorage.setItem(SK, JSON.stringify({ t: Date.now(), own: [...res.own] })); } catch (e) {}
-        fillBadges(P, res.own, res.unk);
+        fillBadges(P, res.own, res.unk, res);
       }
     } catch (e) {
       if (my !== token) return;
@@ -353,7 +380,8 @@
       <span class="eg-ic">${b.icon ? `<img src="${esc(b.icon)}" alt="" loading="lazy" />` : ""}</span>
       <b>${esc(b.name)}</b>${it ? `<a href="${ITEM(it[0])}">${esc(it[0])}</a>` : /future/i.test(b.desc) ? `<small>Reward coming later</small>` : ""}</div>`;
   }
-  function fillBadges(P, own, unk) {
+  function fillBadges(P, own, unk, info) {
+    cacheNote(P, info);
     const nonEgg = P.badges.filter(b => !isEgg(b)), eggs = P.badges.filter(isEgg);
     const nOwn = nonEgg.filter(b => own.has(b.id)).length, eOwn = eggs.filter(b => own.has(b.id)).length;
     document.querySelectorAll(".bd, .eg").forEach((el, i) => {
@@ -387,15 +415,31 @@
     const btn = $("#recheck");
     if (btn) btn.addEventListener("click", async () => {
       btn.disabled = true; btn.textContent = "Checking…";
-      const list = P.badges.filter(b => unk.has(b.id));
-      const r = await checkOwned(P.id, list);
-      r.own.forEach(x => own.add(x));
-      const still = new Set([...unk].filter(x => r.unk.has(x)));
-      if (!still.size) try { sessionStorage.setItem("mh-ut-own-" + P.id, JSON.stringify({ t: Date.now(), own: [...own] })); } catch (e) {}
-      fillBadges(P, own, still);
-      MH.toast(still.size ? `${still.size} still couldn't be checked` : "All badges checked");
+      // only the badges that failed are asked again; the rest stay from the saved results
+      const r = await checkWithCache(P.id, P.badges);
+      fillBadges(P, r.own, r.unk, r);
+      MH.toast(r.unk.size ? `${r.unk.size} still couldn't be checked` : "All badges checked");
     });
   }
+
+  // "12 from saved results · checked 3h ago · Check all again"
+  function cacheNote(P, info) {
+    let el = $("#bdgCache");
+    const head = $("#bdgSum");
+    if (!head) return;
+    if (!el) { el = document.createElement("p"); el.id = "bdgCache"; el.className = "bd-cache"; head.insertAdjacentElement("afterend", el); }
+    if (!info || !info.fromCache) { el.innerHTML = ""; el.hidden = true; return; }
+    const ago = info.t ? since(info.t) : "earlier";
+    el.hidden = false;
+    el.innerHTML = info.asked
+      ? `${info.fromCache} badge${info.fromCache === 1 ? "" : "s"} from saved results (${ago}), ${info.asked} checked with Roblox now. <button type="button" id="bdgFresh">Check all again</button>`
+      : `All badges from saved results (${ago}). <button type="button" id="bdgFresh">Check all again</button>`;
+    $("#bdgFresh").addEventListener("click", () => { bcDrop(P.id); search(P.name); });
+  }
+  const since = t => {
+    const m = (Date.now() - t) / 60000;
+    return m < 1 ? "just now" : m < 60 ? `${Math.round(m)} min ago` : m < 1440 ? `${Math.round(m / 60)}h ago` : `${Math.round(m / 1440)}d ago`;
+  };
 
   /* ---------- Staff directory ---------- */
   let staffCat = "dev", staffList = null, subList = null;

@@ -67,6 +67,7 @@
     onChange(fn) { subs.add(fn); fn(state); return () => subs.delete(fn); },
     openSignIn: mode => openDialog(mode || "signin"),
     signOut, syncNow: () => sync(true),
+    setVisibility: h => setVisibility(h),
   };
   if (!READY) return;
 
@@ -295,6 +296,17 @@
     });
   }
 
+  async function setVisibility(hidden) {
+    try {
+      const r = await api("profiles.visibility", { hidden });
+      state.user = { ...state.user, hidden: r.hidden };
+      saveSession({ token: session.token, user: state.user });
+      emit();
+      window.dispatchEvent(new CustomEvent("mh-profile-visibility", { detail: r.hidden }));
+      toast(r.hidden ? "Your profile is hidden. Only you can see it." : "Your profile is public again.");
+    } catch (e) { toast(e.message); }
+  }
+
   function openChangePassword() {
     const box = modal(`
       <h3 id="acctDlgT">Change password</h3>
@@ -359,7 +371,9 @@
       </button>
       <div class="sb-menu glass" role="menu" ${menuOpen ? "" : "hidden"}>
         <div class="sb-menu-who"><b>${esc(u.username)}</b><span>${u.admin ? `<em>Admin</em>` : "Signed in"}</span></div>
+        <a role="menuitem" href="${ROOT}pages/profiles.html#u=${encodeURIComponent(u.username)}">My profile</a>
         ${u.admin ? `<a role="menuitem" href="${ROOT}pages/admin.html">Admin area</a>` : ""}
+        <button role="menuitem" type="button" data-act="visibility">${u.hidden ? "Show my profile" : "Hide my profile"}</button>
         <button role="menuitem" type="button" data-act="sync">Sync trackers now</button>
         <button role="menuitem" type="button" data-act="password">Change password</button>
         <button role="menuitem" type="button" data-act="signout">Sign out</button>
@@ -383,6 +397,7 @@
     else if (act === "password") openChangePassword();
     else if (act === "signout") signOut();
     else if (act === "delete") openDeleteAccount();
+    else if (act === "visibility") setVisibility(!state.user.hidden);
   }
   subs.add(renderSidebar);
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", renderSidebar); else renderSidebar();

@@ -30,7 +30,7 @@ var CFG = {
 };
 
 var TABS = {
-  Users:    ['id', 'username', 'username_lower', 'password_hash', 'salt', 'iterations', 'admin', 'banned', 'created_at', 'last_login'],
+  Users:    ['id', 'username', 'username_lower', 'password_hash', 'salt', 'iterations', 'admin', 'banned', 'created_at', 'last_login', 'profile_hidden'],
   Sessions: ['token_hash', 'user_id', 'created_at', 'expires_at'],
   Trackers: ['user_id', 'key', 'updated_at', 'value'],
   Comments: ['id', 'thread', 'user_id', 'author', 'body', 'created_at'],
@@ -78,6 +78,10 @@ var ACTIONS = {
   'trackers.get': trackersGet_,
   'trackers.put': trackersPut_,
   'trackers.delete': trackersDelete_,
+
+  'profiles.search': profilesSearch_,
+  'profiles.get': profilesGet_,
+  'profiles.visibility': profilesVisibility_,
 
   'comments.list': commentsList_,
   'comments.add': commentsAdd_,
@@ -189,10 +193,10 @@ function checkPassword_(pw) {
 
 /* ============================== users & sessions ============================== */
 
-var U = { id: 0, username: 1, lower: 2, hash: 3, salt: 4, iter: 5, admin: 6, banned: 7, created: 8, last: 9 };
+var U = { id: 0, username: 1, lower: 2, hash: 3, salt: 4, iter: 5, admin: 6, banned: 7, created: 8, last: 9, hidden: 10 };
 function users_() { return rows_('Users'); }
 function findUser_(list, pred) { for (var i = 0; i < list.length; i++) if (pred(list[i])) return list[i]; return null; }
-function publicUser_(u) { return { id: u[U.id], username: u[U.username], admin: u[U.admin] === true, banned: u[U.banned] === true }; }
+function publicUser_(u) { return { id: u[U.id], username: u[U.username], admin: u[U.admin] === true, banned: u[U.banned] === true, hidden: u[U.hidden] === true }; }
 
 function newSession_(userId) {
   var token = Utilities.getUuid() + '.' + Utilities.getUuid();
@@ -239,11 +243,12 @@ function register_(req) {
     var list = users_(), lower = name.toLowerCase();
     if (findUser_(list, function (r) { return r[U.lower] === lower; })) fail_('That username is taken.');
     var salt = newSalt_(), id = randomId_('u'), now = Date.now();
-    var r = appendRow_('Users', [id, name, lower, txt_(hashPassword_(pw, salt, CFG.ITERATIONS)), txt_(salt), CFG.ITERATIONS, false, false, now, now]);
+    var r = appendRow_('Users', [id, name, lower, txt_(hashPassword_(pw, salt, CFG.ITERATIONS)), txt_(salt), CFG.ITERATIONS, false, false, now, now, false]);
     tab_('Users').getRange(r, U.admin + 1, 1, 2).insertCheckboxes();
+    tab_('Users').getRange(r, U.hidden + 1).insertCheckboxes();
     cache.put(hour, String(Number(cache.get(hour) || 0) + 1), 3600);
     var token = newSession_(id);
-    return { token: token, user: { id: id, username: name, admin: false, banned: false } };
+    return { token: token, user: { id: id, username: name, admin: false, banned: false, hidden: false } };
   });
 }
 
@@ -339,6 +344,58 @@ function trackersDelete_(req) {
     deleteRows_('Trackers', rows_('Trackers').filter(function (r) { return r[0] === u[U.id] && r[1] === key; }).map(function (r) { return r._r; }));
   });
   return {};
+}
+
+/* ============================== profiles ============================== */
+
+// Who's signed in, if anyone (profiles work signed out too).
+function optionalUser_(req) {
+  if (!req.token) return null;
+  try { return auth_(req); } catch (e) { return null; }
+}
+function profilesSearch_(req) {
+  var q = String(req.q || '').trim().toLowerCase();
+  if (q.length < 1) return { users: [] };
+  var list = users_().filter(function (r) { return r[U.hidden] !== true && String(r[U.lower]).indexOf(q) >= 0; });
+  list.sort(function (a, b) {
+    var as = String(a[U.lower]).indexOf(q) === 0 ? 0 : 1, bs = String(b[U.lower]).indexOf(q) === 0 ? 0 : 1;
+    return as - bs || String(a[U.lower]).localeCompare(String(b[U.lower]));
+  });
+  return { users: list.slice(0, 20).map(function (r) { return { username: r[U.username], admin: r[U.admin] === true }; }) };
+}
+// Only these parts of someone's trackers are ever shown on a profile.
+function profilesGet_(req) {
+  var name = String(req.username || '').trim().toLowerCase();
+  var u = findUser_(users_(), function (r) { return r[U.lower] === name; });
+  if (!u) fail_('There\'s no account called "' + String(req.username || '').trim() + '".', 'notfound');
+  var me = optionalUser_(req), self = !!me && me[U.id] === u[U.id];
+  var out = { user: { username: u[U.username], admin: u[U.admin] === true, joined: new Date(Number(u[U.created]) || 0).toISOString(), hidden: u[U.hidden] === true }, self: self };
+  if (u[U.hidden] === true && !self) { out.private = true; return out; }
+  rows_('Trackers').forEach(function (r) {
+    if (r[0] !== u[U.id]) return;
+    var t;
+    try { t = trackerRow_(r); } catch (e) { return; }
+    var v = t.value || {};
+    if (t.key === 'mh-shiny-checklist-v1' && v.items) {
+      var owned = [];
+      Object.keys(v.items).forEach(function (k) { if (v.items[k] && v.items[k].got) owned.push(k); });
+      out.shiny = { owned: owned, updated_at: t.updated_at };
+    } else if (t.key === 'mh-rebirth-tracker-v1' && v.plan) {
+      out.rebirth = { life: Math.max(0, Math.floor(Number(v.plan.life) || 0)), s: v.plan.s === true, goal: Math.floor(Number(v.plan.goal) || 0), updated_at: t.updated_at };
+    } else if (t.key === 'mh-gift-streak-v1' && typeof v.streak === 'number') {
+      out.streak = { streak: Math.max(0, Math.floor(v.streak)), last: /^\d{4}-\d{2}-\d{2}$/.test(v.last || '') ? v.last : '', today: new Date().toISOString().slice(0, 10), updated_at: t.updated_at };
+    }
+  });
+  return out;
+}
+function profilesVisibility_(req) {
+  var u = auth_(req), hidden = req.hidden === true;
+  withLock_(function () {
+    var s = tab_('Users');
+    if (s.getRange(1, U.hidden + 1).getValue() !== TABS.Users[U.hidden]) s.getRange(1, U.hidden + 1).setValue(TABS.Users[U.hidden]).setFontWeight('bold');   // sheets made before this column existed
+    s.getRange(u._r, U.hidden + 1).insertCheckboxes().setValue(hidden);
+  });
+  return { hidden: hidden };
 }
 
 /* ============================== comments ============================== */
@@ -492,7 +549,10 @@ function onOpen() {
 }
 function setupSheet() {
   PropertiesService.getScriptProperties().setProperty('SHEET_ID', SpreadsheetApp.getActiveSpreadsheet().getId());
-  Object.keys(TABS).forEach(function (name) { tab_(name); });
+  Object.keys(TABS).forEach(function (name) {
+    var t = tab_(name), head = TABS[name];
+    t.getRange(1, 1, 1, head.length).setValues([head]).setFontWeight('bold');   // adds any newer columns
+  });
   secret_();
   var d = ss_().getSheetByName('Sheet1');
   if (d && d.getLastRow() === 0 && ss_().getSheets().length > 1) ss_().deleteSheet(d);

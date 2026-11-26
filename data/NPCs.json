@@ -11,7 +11,7 @@
       "added": "5 May 2016",
       "when": "Every day",
       "where": "Somewhere new every day",
-      "desc": "The Masked Man is around every day with his whole stock for sale, offering a unique selection of items for various amounts of currency. A few items are discounted each day, changing at the daily reset (8:00 PM New York time), with bigger discounts on weekends. He doesn't stand in one position all the time--he's constantly on the run, shifting his position every day.",
+      "desc": "The Masked Man is around every day with his whole stock for sale, offering a unique selection of items for various amounts of currency. A few items are discounted each day, changing at the daily reset (00:00 UTC), with bigger discounts on weekends. He doesn't stand in one position all the time--he's constantly on the run, shifting his position every day.",
       "more": "The Masked Man is a mysterious character and the mascot to his own theme park. He is one of the primary NPC merchants in Miner's Haven, offering exquisite and unique Contraband-tier items for a price that can range between a handful to a hefty amount of Research Points (RP), Unobtainium Crystals, or Shards of Life. He used to appear only from Friday to Sunday, but he is now always available with his entire stock, and a different selection of items is discounted every day, with larger discounts at the weekend.",
       "role": "Merchant"
     },
@@ -87,7 +87,7 @@
       "when": "",
       "where": "Wooden Bridge over river",
       "desc": "He hates Tuesdays, but loves doomsdays. Every day, Fargield will give players various gifts.",
-      "more": "First added to the map in Part II of the 2019 Halloween Event, Fargield is a deity-like NPC that gives you rewards daily, similar to Spook McDooks. Like all daily reward givers, once you receive the reward, you can only get another one after the daily reset at 8:00 PM New York time.",
+      "more": "First added to the map in Part II of the 2019 Halloween Event, Fargield is a deity-like NPC that gives you rewards daily, similar to Spook McDooks. Like all daily reward givers, once you receive the reward, you can only get another one after the daily reset at 00:00 UTC.",
       "role": "Daily gift giver"
     },
     {

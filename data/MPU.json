@@ -1,0 +1,5638 @@
+{
+  "_about": "MPU (multiplier per unit) = multiplier ^ (1 / length). Upgraders are built from Items.json; \"mult\" is the default multiplier (edit any of them). Mines are hand-picked ones that upgrade ore themselves; \"uses\" is the default number of times the upgrade applies, \"maxUses\" the most allowed.",
+  "items": [
+    {
+      "n": "100M Upgrader",
+      "img": "assets/wiki/100m-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 2,
+      "mult": 2,
+      "note": "Multiplies ore value by 2x",
+      "wikiMpu": "x1.41"
+    },
+    {
+      "n": "Abominable Screaming Tree",
+      "img": "assets/wiki/abominable-screaming-tree.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 8,
+      "note": "Multiplier is based on 2 things: · Time of day: · Day: x8Blueness of an ore: · Multiplier = (Blue/255)"
+    },
+    {
+      "n": "Acorn Avenue",
+      "img": "assets/wiki/acorn-avenue.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 5,
+      "mult": 3,
+      "note": "Multiplies ore value by x3",
+      "wikiMpu": "x1.25"
+    },
+    {
+      "n": "Advanced Ore Atomizer",
+      "img": "assets/wiki/advanced-ore-atomizer-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Mythic",
+      "len": 8,
+      "mult": 1.4,
+      "note": "Increases ore value by 40%",
+      "wikiMpu": "x1.04"
+    },
+    {
+      "n": "Advanced Ore Scanner",
+      "img": "assets/wiki/advanced-ore-scanner-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced",
+      "len": 4,
+      "mult": 3,
+      "note": "Multiplies ore value by 3x",
+      "wikiMpu": "x1.32"
+    },
+    {
+      "n": "Aerogel Refiner",
+      "img": "assets/wiki/aerogel-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Mythic",
+      "len": 2,
+      "mult": 2,
+      "note": "Initial multiplier of x2 · Multiplier reduced by x0.33 per upgrade to a minimum of x1",
+      "wikiMpu": "1st upgrade - x1.41 · 2nd upgrade - x1.29 · 3rd upgrade - x1.15"
+    },
+    {
+      "n": "Aether Schrodinger",
+      "img": "assets/wiki/aether-schrodinger.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn Fusion",
+      "len": 4,
+      "mult": 311,
+      "varies": true,
+      "wikiMpu": "x4.2 (45%) - x1.432 · x7 (5%) - x1.627 · x9 (5%) - x1.732 · x20 (5%) - x2.115 · "
+    },
+    {
+      "n": "Airborne Pathogenic Spewer",
+      "img": "assets/wiki/airborne-pathogenic-spewer.webp",
+      "kind": "Upgrader",
+      "tier": "Enchanted",
+      "len": 9,
+      "mult": 3200,
+      "varies": true,
+      "note": "Base multiplier of x200 · Increased multiplier with certain status effect · Maximum upgrade of x3200",
+      "wikiMpu": "x1.801 (base) · x2.451 (max)"
+    },
+    {
+      "n": "Alien Relic",
+      "img": "assets/wiki/alien-relic.webp",
+      "kind": "Upgrader",
+      "tier": "Contraband",
+      "len": 2,
+      "mult": 4,
+      "note": "Multiplies ore value by x4 · Decreases ore upgrade counter by 3",
+      "wikiMpu": "x2.000"
+    },
+    {
+      "n": "All Star Sundae",
+      "img": "assets/wiki/all-star-sundae.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 8,
+      "mult": 25,
+      "varies": true,
+      "note": "Upgrades ore value by x15 · Every 6th ore receives a x25 upgrade",
+      "wikiMpu": "First 5 ores: · x1.403 · Every 6th ore: · x1.495"
+    },
+    {
+      "n": "Amber Fossilizer",
+      "img": "assets/wiki/amber-fossilizer.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 2,
+      "mult": 2.5,
+      "note": "Base multiplier of x2.5 · Multiplier increases by x0.125x/s (1min to cap)",
+      "wikiMpu": "30 seconds: x0.707 · 1 minute: x1.000 · 3 minutes: x1.732 · 5 minutes: x2.236 · "
+    },
+    {
+      "n": "Ancient Catalyst",
+      "img": "assets/wiki/ancient-catalyst.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn Fusion",
+      "len": 6,
+      "mult": 65,
+      "varies": true,
+      "note": "Odd value: x55 · Even value: x65",
+      "wikiMpu": "Odd: x1.95 · Even: x2.01 · Average: x1.98"
+    },
+    {
+      "n": "Ancient Coliseum",
+      "img": "assets/wiki/ancient-coliseum.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 5,
+      "mult": 19,
+      "varies": true,
+      "note": "Upgrades ore based on digits: · Decimal: x10 · Odd integer: x13 · Even integer: x19",
+      "wikiMpu": "Decimal: x1.585 · Odd integer: x1.670 · Even integer: x1.810"
+    },
+    {
+      "n": "Ancient Temple",
+      "img": "assets/wiki/ancient-temple.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 5,
+      "mult": 5,
+      "varies": true,
+      "note": "If ore suffix value is · Odd: x3 · Even: x5",
+      "wikiMpu": "Whole Number - x1.380 · Decimal - 1.246"
+    },
+    {
+      "n": "Angel's Blessing",
+      "img": "assets/wiki/angel-s-blessing.webp",
+      "kind": "Upgrader",
+      "tier": "Enchanted",
+      "len": 6,
+      "mult": 150,
+      "note": "Portable upgrade beam capable of up to x150 · Gives ores sparkles",
+      "wikiMpu": "No tags: x2.30"
+    },
+    {
+      "n": "Angel's Cake",
+      "img": "assets/wiki/angel-s-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 10,
+      "varies": true,
+      "note": "Base multiplier of x6 · Removes negative effects (Once) · Multiplier increases based off of effect on ore (refer to overview) · ----Maximum of x10",
+      "wikiMpu": "x1.291 (base) · x1.389 (max)"
+    },
+    {
+      "n": "Anti-Gravity Scanner",
+      "img": "assets/wiki/anti-gravity-scanner.webp",
+      "kind": "Upgrader",
+      "tier": "Hydraulic",
+      "len": 4,
+      "mult": 7,
+      "note": "Upgrades ores by x7",
+      "wikiMpu": "x1.627"
+    },
+    {
+      "n": "Arcane Lightning",
+      "img": "assets/wiki/arcane-lightning.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Reborn",
+      "len": 6,
+      "mult": 51,
+      "note": "Base multiplier of x1 · Each click increases multiplier by +1",
+      "wikiMpu": "Maximum - x1.926"
+    },
+    {
+      "n": "Aromatic Holidays",
+      "img": "assets/wiki/aromatic-holidays.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 3,
+      "mult": null,
+      "note": "Present: · +1 to Present Value · Sets present on fire · Makes present fireproof"
+    },
+    {
+      "n": "Astral Predictor",
+      "img": "assets/wiki/astral-predictor.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 4,
+      "mult": 1.08,
+      "note": "Multiplies ore value by 1.08x every 0.2s for a total duration between 2.2s (11 times) and 5.2s (26 times)",
+      "wikiMpu": "Minimum - x1.144 · Maximum - x1.551 · Average - x1.33"
+    },
+    {
+      "n": "Astral Setter",
+      "img": "assets/wiki/astral-setter.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 4,
+      "mult": 1.2,
+      "note": "Multiplies ore value by 1.2x every 0.2s for a total duration between 2.2s to 5.2s",
+      "wikiMpu": "Minimum - x1.65 · Maximum - x3.27 · Average - x2.32"
+    },
+    {
+      "n": "Atlantic Monolith",
+      "img": "assets/wiki/atlantic-monolith.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 5,
+      "mult": 4,
+      "note": "Multiplies ore value by 4x · Applies wet status effect for 5s · Extinguishes flames · Turns ore blue + glass material",
+      "wikiMpu": "x1.32"
+    },
+    {
+      "n": "Atlantic Monument",
+      "img": "assets/wiki/atlantic-monument.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 13,
+      "note": "Multiplies ore value by 13x · Gives wet status effect for 7s · Extinguishes flames · Turns ore blue",
+      "wikiMpu": "x1.533"
+    },
+    {
+      "n": "Atmospheric Steamwork",
+      "img": "assets/wiki/atmospheric-steamwork.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 14,
+      "note": "Multiplies ore value by x14",
+      "wikiMpu": "1.552"
+    },
+    {
+      "n": "Auroral Metropolis",
+      "img": "assets/wiki/auroral-metropolis.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Evolution",
+      "len": 7,
+      "mult": 25,
+      "varies": true,
+      "note": "Multiplies value of non-frozen ore by 10x · Multiplies value of frozen ore by 25x.",
+      "wikiMpu": "Normal: · 1.39x · Frozen: · 1.58x"
+    },
+    {
+      "n": "Auroral Wings",
+      "img": "assets/wiki/auroral-wings.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 2,
+      "mult": 2,
+      "note": "Multiplies ore value by 2x. · Every 8th ore receives sparkles.",
+      "wikiMpu": "x1.41"
+    },
+    {
+      "n": "Azure Purifier",
+      "img": "assets/wiki/azure-purifier.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 7,
+      "mult": 9,
+      "note": "Multiplies ore value by x9",
+      "wikiMpu": "x1.37"
+    },
+    {
+      "n": "Azure Refiner",
+      "img": "assets/wiki/azure-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 3,
+      "mult": 4,
+      "note": "Multiplies ore value by x4",
+      "wikiMpu": "x1.578"
+    },
+    {
+      "n": "Azure Spore",
+      "img": "assets/wiki/azure-spore.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn Fusion",
+      "len": 6,
+      "mult": 56,
+      "varies": true,
+      "note": "Clears negative effects. · First upgrade: · Second upgrade+: · Adds remainder of ore value ÷ 50k",
+      "wikiMpu": "< $1k ore value: 1.919 · < $1k ore value with blight: 1.956 · ≥ $1k ore value: 1"
+    },
+    {
+      "n": "Azurian Castle",
+      "img": "assets/wiki/azurian-castle.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 5,
+      "mult": 9,
+      "note": "Multiplies ore value by x9 · Adds blue sparkles"
+    },
+    {
+      "n": "Banana Split Upgrader",
+      "img": "assets/wiki/banana-split-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 4,
+      "mult": 5.5,
+      "note": "Multiplies ore value by 5.5x",
+      "wikiMpu": "x1.531"
+    },
+    {
+      "n": "Banana Sundae Refiner",
+      "img": "assets/wiki/banana-sundae-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 9,
+      "note": "Multiplies ore value by x9",
+      "wikiMpu": "x1.44"
+    },
+    {
+      "n": "Basic Ore Purifier",
+      "img": "assets/wiki/basic-ore-purifier.webp",
+      "kind": "Upgrader",
+      "tier": "Basic",
+      "len": 4,
+      "mult": 1.1,
+      "note": "Adds $9 · Upgrades ores worth under 1k by x1.1"
+    },
+    {
+      "n": "Behemoth Blossom",
+      "img": "assets/wiki/behemoth-blossom.webp",
+      "kind": "Upgrader",
+      "tier": "Slipstream",
+      "len": 8,
+      "mult": 100,
+      "varies": true,
+      "note": "Ore with <20 upgrade counter: 100x · Ore with ≥20 upgrade counter: 60x · Ore size is increased",
+      "wikiMpu": "x1.78 (x100 upgrade) · x1.67 (x60 upgrade)"
+    },
+    {
+      "n": "Behemoth Blossom (Renegade)",
+      "img": "assets/wiki/behemoth-blossom.webp",
+      "kind": "Upgrader",
+      "tier": "Renegade",
+      "len": 8,
+      "mult": 30,
+      "varies": true,
+      "note": "Ore with <20 upgrade counter: x30 · Ore with ≥20 upgrade counter: x9 · Ore size is increased"
+    },
+    {
+      "n": "Behemoth Snowflake",
+      "img": "assets/wiki/behemoth-snowflake.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 3,
+      "note": "Multiplies ore value by x3 · Freezes ore",
+      "wikiMpu": "x1.316"
+    },
+    {
+      "n": "Berezaa Car Upgrader",
+      "img": "assets/wiki/berezaa-car-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 10,
+      "varies": true,
+      "note": "Multiplies ore value by x5, x10 if the user is sitting on the car",
+      "wikiMpu": "1.495x (base) · 1.778x (max)"
+    },
+    {
+      "n": "Big Alberto",
+      "img": "assets/wiki/big-alberto.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Reborn",
+      "len": 6,
+      "mult": 25,
+      "varies": true,
+      "note": "Top (Ring) Upgrader: · x25 · Bottom Upgrader: · x10",
+      "wikiMpu": "x1.71 (top) · x1.47 (bottom)"
+    },
+    {
+      "n": "Big Bad Blaster",
+      "img": "assets/wiki/big-bad-blaster.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 2,
+      "mult": 2.65,
+      "note": "Multiplies ore value by x2.65 · Sets ore on fire"
+    },
+    {
+      "n": "Big Bertha",
+      "img": "assets/wiki/big-bertha.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 5,
+      "mult": 10,
+      "note": "Multiplies ore value by x10",
+      "wikiMpu": "1.584"
+    },
+    {
+      "n": "Big Bunny",
+      "img": "assets/wiki/big-bunny.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 3,
+      "mult": 4,
+      "note": "Multiplies ore value by 4x · Ignites ore"
+    },
+    {
+      "n": "Big Candy Cane",
+      "img": "assets/wiki/big-candy-cane.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 2,
+      "mult": 2,
+      "note": "Multiplies ore value by 2x"
+    },
+    {
+      "n": "Big Fluxxus",
+      "img": "assets/wiki/big-fluxxus.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Fusion",
+      "len": 6,
+      "mult": 300,
+      "varies": true,
+      "note": "First Upgrade: Multiplies ore value by x100 · Second Upgrade: Multiplies ore value by x300",
+      "wikiMpu": "First Upgrade: x2.154 · Second Upgrade: x2.587 · Combined: x2.361"
+    },
+    {
+      "n": "Big Fungus",
+      "img": "assets/wiki/big-fungus.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Fusion",
+      "len": 6,
+      "mult": 48.6,
+      "varies": true,
+      "note": "Bottom upgrader multiplies by x30. · Top upgrader multiplies by x50. · Both inflict poison.",
+      "wikiMpu": "Top: x1.91 · Bottom: x1.76"
+    },
+    {
+      "n": "Birthday Upgrader",
+      "img": "assets/wiki/birthday-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 3,
+      "note": "Multiplies ore value by x3",
+      "wikiMpu": "1.316"
+    },
+    {
+      "n": "Blazing Agriculture",
+      "img": "assets/wiki/blazing-agriculture.webp",
+      "kind": "Upgrader",
+      "tier": "Relic",
+      "len": 6,
+      "mult": 10.9,
+      "varies": true,
+      "note": "Multiplies ore value based on: · Base multiplier of 1x · Fieriness: (Red/255)*5 · Fire: +5",
+      "wikiMpu": "Not on Fire: · x1 (minumum) · x1.31 (maximum) · On Fire: · x1.31 (minimum) · x1."
+    },
+    {
+      "n": "Blazing Annihilator",
+      "img": "assets/wiki/blazing-annihilator.webp",
+      "kind": "Upgrader",
+      "tier": "Contraband",
+      "len": 5,
+      "mult": null,
+      "note": "Removes frozen (ice) effect from ores; reverts slipperiness. · Removes wet effect from ores. · Removes fireproof effect from ores. · Colors ores black."
+    },
+    {
+      "n": "Blizzard Predictor",
+      "img": "assets/wiki/blizzard-predictor.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 4,
+      "mult": 1.08,
+      "note": "Multiplies ore value by x1.08 every 0.2s for a total duration between 2.2s and 5.2s · +1, +2 or +3 to Present Value",
+      "wikiMpu": "Initial: x1.015 · Maximum: x1.357"
+    },
+    {
+      "n": "Blue Supergiant",
+      "img": "assets/wiki/blue-supergiant.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Reborn",
+      "len": 6,
+      "mult": 75,
+      "varies": true,
+      "note": "Multiplies ore value by x3 · (x75 with ⟦Nova Star⟧, +4 to multiplier with ⟦Stellarite Mine⟧ ore)",
+      "wikiMpu": "1.200 · With stellarite ore: 1.383 · With nova star: 2.053 · With nova star and "
+    },
+    {
+      "n": "Blueberry Pie",
+      "img": "assets/wiki/blueberry-pie.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 5,
+      "mult": 5,
+      "note": "Multiplies ore value by 5x · Makes ores blueberry shaped",
+      "wikiMpu": "x1.38"
+    },
+    {
+      "n": "Borker's Luxury Villa",
+      "img": "assets/wiki/borker-s-luxury-villa.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 3,
+      "mult": 7,
+      "varies": true,
+      "note": "Does 7x · 4x for ores bigger than 1x1x1 in size · Gives the \"Dog Water\" effect which applies fireproof to the ore · (broken, the 7x is applied to all ores)",
+      "wikiMpu": "x4 multiplier: x1.587 (currently broken) · x7 multiplier: x1.913"
+    },
+    {
+      "n": "Bouncy House!!!!111!!11!1",
+      "img": "assets/wiki/bouncy-house-111-11-1.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 9,
+      "varies": true,
+      "note": "Multiplies ore value by 6x, 7x, 8x or 9x · Changes ore color to one of pink, green, blue or yellow · Turns the ore into a balloon · Adds random number between -0.2 to 0.2 to the or",
+      "wikiMpu": "Pink: x1.291 · Green: x1.320 · Blue: x1.345 · Yellow: x1.368 · Average: x1.333"
+    },
+    {
+      "n": "Brick Wall Enhancer",
+      "img": "assets/wiki/brick-wall-enhancer.webp",
+      "kind": "Upgrader",
+      "tier": "Fabled",
+      "len": 3,
+      "mult": null,
+      "note": "Collide-able brick wall stands in-front of the conveyor."
+    },
+    {
+      "n": "Brimstone Spires",
+      "img": "assets/wiki/brimstone-spires.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Evolution",
+      "len": 8,
+      "mult": 10,
+      "note": "Upgrades ore based on upgrade count: · ≤ 20: x10 · > 20: x(upgrade count * 0.5)",
+      "wikiMpu": "x1.63"
+    },
+    {
+      "n": "Bubonic Plague",
+      "img": "assets/wiki/bubonic-plague.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 7,
+      "mult": 15,
+      "note": "Multiplies ore value by x15 · Applies Plague to oreApplies UberPlague when the ore is previously upgraded by ⟦Airborne Pathogenic Spewer⟧UberPlague: · Same effects as Plague · Appl",
+      "wikiMpu": "x1.472"
+    },
+    {
+      "n": "BUNZILLA",
+      "img": "assets/wiki/bunzilla.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 4,
+      "mult": 7,
+      "note": "Multiplies ore value by 7x",
+      "wikiMpu": "1.626x"
+    },
+    {
+      "n": "Burgor Diner",
+      "img": "assets/wiki/burgor-diner.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 4,
+      "mult": 4,
+      "varies": true,
+      "note": "x4 multiplier · Increase ore size by 25%.",
+      "wikiMpu": "x1.414"
+    },
+    {
+      "n": "Burst Refiner",
+      "img": "assets/wiki/burst-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Slipstream",
+      "len": 6,
+      "mult": 500,
+      "varies": true,
+      "note": "Upgrades ore by 15x · Upgrades every 9th ore by 500x · 9th ore turns red and neon",
+      "wikiMpu": "x1.72 (standard) · x3.47 (9th ore)"
+    },
+    {
+      "n": "Burst Refiner (Renegade)",
+      "img": "assets/wiki/burst-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Renegade",
+      "len": 6,
+      "mult": 12,
+      "varies": true,
+      "note": "Upgrades ore by x5 · Upgrades every 9th ore by x12 · 9th ore is turned red and neon.",
+      "wikiMpu": "x1.307 (base) · x1.513 (9th ore)"
+    },
+    {
+      "n": "Cactus Mirage",
+      "img": "assets/wiki/cactus-mirage.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 6,
+      "mult": 5,
+      "note": "Multiplies ore value by x5 · Applies wet status effect for 8 seconds"
+    },
+    {
+      "n": "Candy Cane Cannon",
+      "img": "assets/wiki/candy-cane-cannon.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 2,
+      "mult": 2.65,
+      "note": "Multiplies ore value by 2.65x, sets ore on fire. · +1 to Present Value"
+    },
+    {
+      "n": "Candy Castle",
+      "img": "assets/wiki/candy-castle.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 6,
+      "mult": 3,
+      "note": "Multiplies ore value by x3 · Adds 4 Candy to candy ore.",
+      "wikiMpu": "x1.20"
+    },
+    {
+      "n": "Candy Core",
+      "img": "assets/wiki/candy-core.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 3,
+      "mult": 3,
+      "note": "Boost the drop rate of candy mines by 30-50% when placed · Multiplies ore value by x3 when activated"
+    },
+    {
+      "n": "Candy Corn Real Estate",
+      "img": "assets/wiki/candy-corn-real-estate.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 1.8,
+      "note": "Multiplies ore value by 1.8x · Adds 2 Candy",
+      "wikiMpu": "x1.10"
+    },
+    {
+      "n": "Candy Refiner",
+      "img": "assets/wiki/candy-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 2,
+      "mult": 1.1,
+      "note": "Multiplies ores by x1.1 · +1 Candy to Candy ore · +2 Candy to every 10th Candy ore",
+      "wikiMpu": "x1.05"
+    },
+    {
+      "n": "Candycorn Refiner",
+      "img": "assets/wiki/candycorn-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 1.4,
+      "note": "Multiplies ore value x1.4 · +1 Candy Value",
+      "wikiMpu": "x1.09"
+    },
+    {
+      "n": "Caramel Birthday Cake",
+      "img": "assets/wiki/caramel-birthday-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 9,
+      "mult": 14.9,
+      "note": "Multiplies ore value by x15.",
+      "wikiMpu": "x1.35"
+    },
+    {
+      "n": "Carrot Farm",
+      "img": "assets/wiki/carrot-farm.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 3,
+      "note": "Multiplies ore value by x3. · Ores grow in size.",
+      "wikiMpu": "x1.316"
+    },
+    {
+      "n": "Carrot Village",
+      "img": "assets/wiki/carrot-village.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 5,
+      "mult": 36,
+      "varies": true,
+      "note": "Top: · Multiplies ore value by x9 if bottom was used first, otherwise x6. · changes ore material to grass. · Changes ore color to the carrot leaves' color. · Increases ore size by ",
+      "wikiMpu": "x1.43 (top min) | x1.55 (top max) · x1.31 (bottom) · ---- x1.88 (combined min) |"
+    },
+    {
+      "n": "Castle Bravo",
+      "img": "assets/wiki/castle-bravo.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Evolution",
+      "len": 6,
+      "mult": 120,
+      "varies": true,
+      "note": "Top (Ring) Upgrader: · x120 · Bottom Upgrader: · x90",
+      "wikiMpu": "x2.05 (top) · x1.85 (bottom)"
+    },
+    {
+      "n": "Castle of Apocalypse",
+      "img": "assets/wiki/castle-of-apocalypse.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 7,
+      "mult": 5,
+      "note": "Multiply ores value by x5",
+      "wikiMpu": "x1.26"
+    },
+    {
+      "n": "Catalyzed Star",
+      "img": "assets/wiki/catalyzed-star.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn Fusion",
+      "len": 6,
+      "mult": 5,
+      "varies": true,
+      "note": "1st upgrade: · Multiplies ore value by 5x · Does not set ore on fire · Compatible with ⟦Black Dwarf⟧/⟦Void Star⟧ · 2nd upgrade onward: · Ignites ore · Multiplies ore value by x1.6 ",
+      "wikiMpu": "1.308"
+    },
+    {
+      "n": "Chemical Refiner",
+      "img": "assets/wiki/chemical-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Contraband",
+      "len": 6,
+      "mult": 7,
+      "note": "Multiplies ore value by x7 · Applies Poison effect",
+      "wikiMpu": "x1.38"
+    },
+    {
+      "n": "Chicken Legg Cookout",
+      "img": "assets/wiki/chicken-legg-cookout.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 4,
+      "mult": 3.5,
+      "note": "Multiply ore by 3.5x · Makes a chicken gobble noise when an ore passes through",
+      "wikiMpu": "x1.368"
+    },
+    {
+      "n": "Chocolate Coater",
+      "img": "assets/wiki/chocolate-coater.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 1.666666,
+      "note": "Multiplies ore value by x1.666666 · Extinguishes fire · +1 Candy Value",
+      "wikiMpu": "x1.14"
+    },
+    {
+      "n": "Chocolate Cupcake",
+      "img": "assets/wiki/chocolate-cupcake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 5,
+      "mult": 7,
+      "note": "Multiplies ore value by 7x · Sets ore color to brown or beige",
+      "wikiMpu": "x1.258"
+    },
+    {
+      "n": "Chocolate Forest",
+      "img": "assets/wiki/chocolate-forest.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 5,
+      "mult": 1.4,
+      "note": "Upgrades ore value by x1.4 · Adds 1 Candy to Candy ore",
+      "wikiMpu": "x1.07"
+    },
+    {
+      "n": "Citrus Cake",
+      "img": "assets/wiki/citrus-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 10,
+      "varies": true,
+      "note": "Multiplies ore by x5 · Ore that has been previously upgraded by Citrus Enhancer gets a 10x multiplier.",
+      "wikiMpu": "x1.25 · With Citrus Enhancer: x1.39"
+    },
+    {
+      "n": "Citrus Enhancer",
+      "img": "assets/wiki/citrus-enhancer.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 5,
+      "mult": 4.83,
+      "note": "Upgrades ore by x4.75. · Turns ores into oranges. · Plays \"Yummy!\" sound.",
+      "wikiMpu": "x1.37"
+    },
+    {
+      "n": "Clockwork",
+      "img": "assets/wiki/clockwork.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 3,
+      "mult": 5,
+      "note": "Multiplies ore value by x5",
+      "wikiMpu": "x1.71"
+    },
+    {
+      "n": "Clover Refiner",
+      "img": "assets/wiki/clover-refiner-new.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 2,
+      "mult": 1.8,
+      "note": "Multiplies ore value by x1.8"
+    },
+    {
+      "n": "Clover Rune",
+      "img": "assets/wiki/clover-rune.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 1,
+      "mult": 2,
+      "varies": true,
+      "note": "First Upgrade: x2 · Second Upgrade: x1.5 · Third Upgrade: x1.33 · Fourth Upgrade: x1.25 · In general, the xth upgrade gives a multiplier of 1 + (1/x)",
+      "wikiMpu": "x2 (first upgrade only)"
+    },
+    {
+      "n": "Clover Schrodinger",
+      "img": "assets/wiki/clover-schrodinger.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 7.06,
+      "varies": true,
+      "wikiMpu": "2x: 1.19x | 4x: 1.41x | 7x: 1.63x"
+    },
+    {
+      "n": "Clover Shrine",
+      "img": "assets/wiki/clover-shrine.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 3,
+      "note": "Multiplies ore value by x3",
+      "wikiMpu": "x1.17"
+    },
+    {
+      "n": "Combustion Engine",
+      "img": "assets/wiki/combustion-engine.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 5,
+      "mult": 9,
+      "note": "Base Multiplier of x5. · When infused with coal: · Multiplier increased to 9x · Launches ores forward",
+      "wikiMpu": "x1.258 (base) · x1.368 (max)"
+    },
+    {
+      "n": "Condensed Upgrader",
+      "img": null,
+      "kind": "Upgrader",
+      "tier": "Intermediate",
+      "len": 1,
+      "mult": null,
+      "note": "Adds value depending on the ores value · (Check other notes)"
+    },
+    {
+      "n": "Conqueror's Delusion",
+      "img": "assets/wiki/conqueror-s-delusion.webp",
+      "kind": "Upgrader",
+      "tier": "Enchanted",
+      "len": 8,
+      "mult": 1280,
+      "varies": true,
+      "note": "Unconquered: · Multiplies ore value by x80 then x1.4 every 0.5 seconds six times · Total multiplier of ~x602.36Conquered: · Multiplies ore value by x20 then x2 every 0.5 seconds fo",
+      "wikiMpu": "x2.226 (standalone) · x2.446 (conquered)"
+    },
+    {
+      "n": "CONTRALAND",
+      "img": "assets/wiki/contraland.webp",
+      "kind": "Upgrader",
+      "tier": "Relic",
+      "len": 6,
+      "mult": 15,
+      "varies": true,
+      "note": "Multiplies ore value by 11x. · (15x if the Masked Man is present) · Chance of sparkles, smoking or size change. (see overview)",
+      "wikiMpu": "x1.491 (minimum) · x1.57 (maximum)"
+    },
+    {
+      "n": "Cooling Chamber",
+      "img": "assets/wiki/cooling-chamber.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 4,
+      "mult": 11,
+      "varies": true,
+      "note": "Internal variable of 36 · Flaming ore: 11x (7x if overheated) · Non-flaming ore: 7x (5x if overheated) · Extinguishes fire unless overheated",
+      "wikiMpu": "x1.63 (normal) · x1.82 (fire)"
+    },
+    {
+      "n": "Cosmic Device",
+      "img": "assets/wiki/cosmic-device.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 4,
+      "mult": 13,
+      "note": "Multiplies ore value by x13",
+      "wikiMpu": "x1.90"
+    },
+    {
+      "n": "Cryogenic Upgrader",
+      "img": "assets/wiki/cryogenic-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Divine",
+      "len": 4,
+      "mult": 1.45,
+      "note": "Multiplies ore value by 1.45x",
+      "wikiMpu": "x1.097"
+    },
+    {
+      "n": "Cryptic Graveyard",
+      "img": "assets/wiki/cryptic-graveyard.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 5,
+      "note": "Upgrades ore by x5 · Reduces transparency by 0.2",
+      "wikiMpu": "x1.308"
+    },
+    {
+      "n": "Crystallized Engine",
+      "img": "assets/wiki/crystallized-engine.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 11,
+      "note": "Multiplies ore value by 11x",
+      "wikiMpu": "x1.49"
+    },
+    {
+      "n": "Crystallized System",
+      "img": "assets/wiki/crystallized-system.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 5,
+      "mult": 6,
+      "note": "Multiplies ore value by 6x",
+      "wikiMpu": "x1.43"
+    },
+    {
+      "n": "Cupid's Arrow",
+      "img": "assets/wiki/cupid-s-arrow.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 2,
+      "mult": 5,
+      "note": "Upgrades ore by x5, turns it light pink"
+    },
+    {
+      "n": "Cursed Ore Purifier",
+      "img": "assets/wiki/cursed-ore-purifier-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Proficient",
+      "len": 4,
+      "mult": null,
+      "note": "Adds $40k to ore value"
+    },
+    {
+      "n": "CYBEGG9000",
+      "img": "assets/wiki/cybegg9000.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 5,
+      "mult": 10,
+      "note": "Multiplies ore value by x10 · Sets ore on fire"
+    },
+    {
+      "n": "Da Mechanism",
+      "img": "assets/wiki/da-mechanism.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 8,
+      "mult": 7.77,
+      "note": "Upgrades ore by 7.77x · Sets ore on fire"
+    },
+    {
+      "n": "Daestrophe",
+      "img": "assets/wiki/daestrophe.webp",
+      "kind": "Upgrader",
+      "tier": "Superstitious",
+      "len": 6,
+      "mult": 200,
+      "varies": true,
+      "note": "Resets Machine tags · Resets Status effects · Multiplies ores by x100 · If ore is on fire: · Additional x2 (x200 total)"
+    },
+    {
+      "n": "Deadly Spore",
+      "img": "assets/wiki/deadly-spore.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 4,
+      "mult": 7,
+      "varies": true,
+      "note": "Removes negative status effects · Multiplies ore value by 7x, x10 if ⟦Dreamer's Blight⟧ is on the base, x11 if ⟦Dreamer's Devastation⟧ is on the base",
+      "wikiMpu": "x1.63"
+    },
+    {
+      "n": "DECADE HAVEN UPGRADER",
+      "img": "assets/wiki/decade-haven-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 51.7,
+      "note": "Upgrade ores based on your Life and Mastery Completion.",
+      "wikiMpu": "x1.93 (1200+ items)"
+    },
+    {
+      "n": "Deceptive Sorcery",
+      "img": "assets/wiki/deceptive-sorcery.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 5,
+      "mult": null
+    },
+    {
+      "n": "Delightful Minty Cake",
+      "img": "assets/wiki/delightful-minty-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 7,
+      "note": "Multiply ore value by x7 and applies Fireproof.",
+      "wikiMpu": "x1.383"
+    },
+    {
+      "n": "Delta Phantom",
+      "img": "assets/wiki/delta-phantom.webp",
+      "kind": "Upgrader",
+      "tier": "Superstitious",
+      "len": 6,
+      "mult": 5000,
+      "varies": true,
+      "note": "First 10 ore: · Value multiplied by x100. · Absorbed into item. · 11th ore: · Releases absorbed ore. · Additional x50 (x5000 total). · Set on fire. · Turns ore neon pink.",
+      "wikiMpu": "x2.15 · x4.14 (11th ore)"
+    },
+    {
+      "n": "Deluxe Beehive",
+      "img": "assets/wiki/deluxe-beehive.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 2,
+      "mult": 7,
+      "varies": true,
+      "note": "Standalone: · Multiplies ore value by x3.5 · After The Beehive: · Base multiplier is doubled · Total: x7",
+      "wikiMpu": "x1.87 (standalone) · x2.65 (With The Beehive)"
+    },
+    {
+      "n": "Demon Core",
+      "img": "assets/wiki/demon-core.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 14,
+      "varies": true,
+      "note": "Multiplies ore value by 8x to 14x · Gives ores Radioactivity",
+      "wikiMpu": "x1.41 (minimum) · x1.55 (maximum)"
+    },
+    {
+      "n": "Desert Monument",
+      "img": "assets/wiki/desert-monument.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 5,
+      "mult": 13,
+      "note": "Multiplies ore value by x13. · Prevents schrodingers from decreasing ore value.",
+      "wikiMpu": "x1.670"
+    },
+    {
+      "n": "Devil's Cake",
+      "img": "assets/wiki/devil-s-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 7,
+      "note": "Multiplies ore by 7x · Multiplier increases depending on ore effects (refer to overview)"
+    },
+    {
+      "n": "Devil's Spore",
+      "img": "assets/wiki/devil-s-spore.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Evolution",
+      "len": 6,
+      "mult": 27,
+      "varies": true,
+      "note": "x22 base multiplier · x26 if a ⟦Dreamer's Blight⟧ is placed. · x27 if a ⟦Dreamer's Devastation⟧ is placed.",
+      "wikiMpu": "x1.674 (Base Multiplier) · x1.721 (Dreamer's Blight) · 1.732 (Dreamer's Devastat"
+    },
+    {
+      "n": "Deviled Blaster",
+      "img": "assets/wiki/deviled-blaster.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 5,
+      "mult": 13,
+      "note": "Multiplies ore value by x13 · Sets ore on fire · 20% chance of explosion · 25% chance of destroying and exploding the ore"
+    },
+    {
+      "n": "Diamond Egg",
+      "img": "assets/wiki/diamond-egg.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 2,
+      "mult": 2.5,
+      "note": "Multiplies ore value by x2.5",
+      "wikiMpu": "x1.58"
+    },
+    {
+      "n": "Digital Ore Cleaner",
+      "img": "assets/wiki/digital-ore-cleaner-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced",
+      "len": 4,
+      "mult": 2.01,
+      "varies": true,
+      "wikiMpu": "x1.19 (<$10M) · x1.07 ($10M-$100M) · x1.02 ($100M-$1B) · x1.01 ($1B-$10B)"
+    },
+    {
+      "n": "Digital Peppermint Refiner",
+      "img": "assets/wiki/digital-peppermint-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 5,
+      "mult": 4,
+      "note": "Multiplies ore value by x4 · +3 to Present Value",
+      "wikiMpu": "x1.32"
+    },
+    {
+      "n": "Donut Refiner",
+      "img": "assets/wiki/donut-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 2,
+      "mult": 1.75,
+      "note": "Multiplies ore by 1.75x",
+      "wikiMpu": "x1.32"
+    },
+    {
+      "n": "Doom Incarnate",
+      "img": "assets/wiki/doom-incarnate.webp",
+      "kind": "Upgrader",
+      "tier": "Enchanted",
+      "len": 6,
+      "mult": null
+    },
+    {
+      "n": "Draedon's Gauntlet",
+      "img": "assets/wiki/draedon-s-gauntlet.webp",
+      "kind": "Upgrader",
+      "tier": "Superstitious",
+      "len": 4,
+      "mult": 2866.85,
+      "varies": true,
+      "note": "Multiplies ore value by 250x then 1.05x 50 times over a period of 10s. · Total multiplier of ~2866.85x",
+      "wikiMpu": "Normal: · x7.32 · Instant: · x7.41"
+    },
+    {
+      "n": "Dragon Blaster",
+      "img": "assets/wiki/dragon-blaster.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Reborn",
+      "len": 4,
+      "mult": 4,
+      "note": "Multiplies ore value by 4x · Sets ore on fire"
+    },
+    {
+      "n": "Dragon Cake",
+      "img": "assets/wiki/dragon-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 8,
+      "mult": 8,
+      "note": "Multiplies ore value by 8x. · Has a chance to set ore on fire · Has a chance to cause explosions",
+      "wikiMpu": "x1.297"
+    },
+    {
+      "n": "Dragon Cannon",
+      "img": "assets/wiki/dragon-cannon.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Fusion",
+      "len": 5,
+      "mult": 15,
+      "note": "Multiplies ores by x15 · Ignites ore · Dragon blasters increase velocity by +10: · ⟦Dragonglass Blaster⟧ · ⟦Hydra Blaster⟧",
+      "wikiMpu": "x1.719"
+    },
+    {
+      "n": "Dragonglass Blaster",
+      "img": "assets/wiki/dragonglass-blaster.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Fusion",
+      "len": 4,
+      "mult": 9,
+      "note": "Multiplies ore value by x9 · Sets ores on fire."
+    },
+    {
+      "n": "Dreamer's Birthday Cake",
+      "img": "assets/wiki/dreamer-s-birthday-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Enchanted",
+      "len": 11,
+      "mult": null
+    },
+    {
+      "n": "Dreamer's Life",
+      "img": "assets/wiki/dreamer-s-life.webp",
+      "kind": "Upgrader",
+      "tier": "Enchanted",
+      "len": 6,
+      "mult": 571,
+      "varies": true,
+      "note": "Base multiplier of x125. · Each unique Dreamer's item placed down increases multiplier.",
+      "wikiMpu": "x2.24 (base) · x2.88 (max)"
+    },
+    {
+      "n": "Drone Upgrader",
+      "img": "assets/wiki/drone-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Epic",
+      "len": 4,
+      "mult": 2,
+      "note": "Adds $5k to ore value and then upgrades ore by x2",
+      "wikiMpu": "x1.19"
+    },
+    {
+      "n": "Dual Festive Refiner",
+      "img": "assets/wiki/dual-festive-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 2,
+      "mult": 2,
+      "varies": true,
+      "note": "Green: x2 · Red: x2 · Total: x4",
+      "wikiMpu": "x1.414 · (one side)x2 · (both)"
+    },
+    {
+      "n": "Dystopian Refiner",
+      "img": "assets/wiki/dystopian-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Slipstream",
+      "len": 6,
+      "mult": 40,
+      "note": "Base multiplier of 40x. · Multiplier increased additively from different effects. (see overview)",
+      "wikiMpu": "Base: x1.590 · With effects: x1.71"
+    },
+    {
+      "n": "Dystopian Refiner (Renegade)",
+      "img": "assets/wiki/dystopian-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Renegade",
+      "len": 6,
+      "mult": 5,
+      "note": "Base multiplier of 5x. · Multiplier increased additively from different effects. (see overview)",
+      "wikiMpu": "Base: x1.307 · With effects: x1.833"
+    },
+    {
+      "n": "Easter Statues 🗿",
+      "img": "assets/wiki/easter-statues.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 6,
+      "varies": true,
+      "note": "Top upgrader multiplies ore value by 3x · Bottom upgrader multiplies ore value by 6x",
+      "wikiMpu": "x1.20 (top) · x1.35 (bottom) · x1.27 (both)"
+    },
+    {
+      "n": "Eerie Marsh",
+      "img": "assets/wiki/eerie-marsh.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 7,
+      "varies": true,
+      "note": "Multiplies ore value by x3 · Multiplier increased by: · +1 at night · +3 if ore is Wet · Max multiplier : x7",
+      "wikiMpu": "x1.20 - x1.38"
+    },
+    {
+      "n": "Eggcelent Refiner",
+      "img": "assets/wiki/eggcelent-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 1,
+      "mult": 2,
+      "note": "Ores worth $1M: one time x2",
+      "wikiMpu": "$1M - x2"
+    },
+    {
+      "n": "Eggmerald Geode",
+      "img": "assets/wiki/eggmerald-geode.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 5,
+      "mult": 4,
+      "note": "x4 multiplier · Has a chance to duplicate the ore.",
+      "wikiMpu": "x1.319"
+    },
+    {
+      "n": "Eggplosive Refiner",
+      "img": "assets/wiki/eggplosive-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 4,
+      "mult": 10,
+      "varies": true,
+      "note": "Multiplies ore value by x4 · Multiplies Boomite Mine ore by x10",
+      "wikiMpu": "1.41x | If Boomite: 1.78x"
+    },
+    {
+      "n": "Eggscream Refiner",
+      "img": "assets/wiki/eggscream-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 3,
+      "mult": 4,
+      "note": "Multiplies ore value by x4 · Not on fire: Put in stasis for 15s · On fire: Bypasses stasis effect",
+      "wikiMpu": "x1.58"
+    },
+    {
+      "n": "Empyrean Monument",
+      "img": "assets/wiki/empyrean-monument.webp",
+      "kind": "Upgrader",
+      "tier": "Enchanted",
+      "len": 6,
+      "mult": 201,
+      "varies": true,
+      "note": "Base multiplier of x15. · Multiplier increases by +15 per elevation.",
+      "wikiMpu": "x1.96 (base) · x2.42 (max)"
+    },
+    {
+      "n": "Enchanted Library",
+      "img": "assets/wiki/enchanted-library.webp",
+      "kind": "Upgrader",
+      "tier": "Superstitious",
+      "len": 6,
+      "mult": 65,
+      "note": "Base multiplier of x65 · Multiplier +1 per second on ore lifespan · Multiplier +5 per time upgrader used · 1 of 9 random effects · Ore color turned lime green",
+      "wikiMpu": "x2.01 (x65, no bonuses) · x2.42 (x200, no bonuses)"
+    },
+    {
+      "n": "Endpoint Refiner",
+      "img": "assets/wiki/endpoint-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced",
+      "len": 2,
+      "mult": null
+    },
+    {
+      "n": "Energy Core",
+      "img": "assets/wiki/energy-core.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 3,
+      "mult": 4,
+      "note": "Multiplies ore value by x4 · Emits an upgrade aura of around 6 units radius"
+    },
+    {
+      "n": "Eros Elixir",
+      "img": "assets/wiki/eros-elixir.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 5,
+      "note": "x5 and applies a custom mesh.",
+      "wikiMpu": "x1.495"
+    },
+    {
+      "n": "Esoteric Citadel",
+      "img": "assets/wiki/esoteric-citadel.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 4,
+      "mult": 39.7,
+      "note": "Multiplies ore value by the number of Machine Tags the ore has +1, up to x40.",
+      "wikiMpu": "x2.51 (max)"
+    },
+    {
+      "n": "Eternal Cake",
+      "img": "assets/wiki/eternal-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 8,
+      "varies": true,
+      "note": "Multiplies value by x8 · Additional x2, if still in anti-gravity after 3 seconds",
+      "wikiMpu": "x1.681 (standalone) · x2 (max)"
+    },
+    {
+      "n": "Executive Pillars",
+      "img": "assets/wiki/executive-pillars.webp",
+      "kind": "Upgrader",
+      "tier": "Fabled",
+      "len": 2,
+      "mult": 5.5,
+      "note": "Multiplies ore value by 5.5x",
+      "wikiMpu": "2.35x"
+    },
+    {
+      "n": "Famished Farm",
+      "img": "assets/wiki/famished-farm.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 5,
+      "mult": 8,
+      "note": "Multiplies ore value by x8 · Applies 2 stack of Rot · Applies Hydrophobic",
+      "wikiMpu": "x1.515"
+    },
+    {
+      "n": "Famished Wasteland",
+      "img": "assets/wiki/famished-wasteland.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 6,
+      "mult": 4,
+      "note": "Multiplies ore value by x4 · Applies 2 stack of Rot · Applies Poison effect",
+      "wikiMpu": "x1.260"
+    },
+    {
+      "n": "Father of Freon",
+      "img": "assets/wiki/father-of-freon.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Reborn",
+      "len": 6,
+      "mult": 45,
+      "varies": true,
+      "note": "Standalone: · Multiplies ore value by x9 · Extinguishes ore · Freezes ore · Last: · Multiplies ore value by x45 · Freezes ore · Applies Frostbite",
+      "wikiMpu": "x1.35 (standalone) · x1.89 (last)"
+    },
+    {
+      "n": "Festive Spirit",
+      "img": "assets/wiki/festive-spirit.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 5,
+      "note": "Multiplies ore value by x5",
+      "wikiMpu": "x1.31"
+    },
+    {
+      "n": "Fidget Spinner-ifier",
+      "img": "assets/wiki/fidget-spinner-ifier.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": null,
+      "note": "Turns silicon ore into fidget spinners that can be wrapped in the ⟦Ore Wrapper⟧ and turned into presents in the ⟦Present Center⟧."
+    },
+    {
+      "n": "Final Eclipse Gate",
+      "img": "assets/wiki/final-eclipse-gate.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 8,
+      "mult": 25,
+      "varies": true,
+      "note": "Day: x10 · Night: x25",
+      "wikiMpu": "x1.33 (Day) · x1.50 (night)"
+    },
+    {
+      "n": "Final Fabergé",
+      "img": "assets/wiki/final-faberge.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 5,
+      "mult": 6,
+      "varies": true,
+      "note": "Upgrade Counter ≤0 · Changes gem type into Diamond · Multiplies ore value by x6 · Gives ore sparkles · Upgrade Counter >0 · Changes gem type into either: · Gold · Emerald · Ruby · "
+    },
+    {
+      "n": "Fine-Point Upgrader",
+      "img": "assets/wiki/fine-point-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Basic",
+      "len": 2,
+      "mult": null,
+      "note": "Adds $10 to the ore's value"
+    },
+    {
+      "n": "Fire-Blast Upgrader",
+      "img": "assets/wiki/fire-blast-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Epic",
+      "len": 4,
+      "mult": 2,
+      "note": "Multiplies ores by x2",
+      "wikiMpu": "x1.190"
+    },
+    {
+      "n": "Firecrystallized System",
+      "img": "assets/wiki/firecrystallized-system.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn Fusion",
+      "len": 6,
+      "mult": 12.75,
+      "note": "Multiplies ore value by 12.75x · Each coal ore powers it for 1s",
+      "wikiMpu": "x1.52"
+    },
+    {
+      "n": "Flaming Ore Scanner",
+      "img": "assets/wiki/flaming-ore-scanner-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Epic",
+      "len": 5,
+      "mult": 5,
+      "note": "Multiplies ore value by 5x · Sets ore on fire",
+      "wikiMpu": "x1.380"
+    },
+    {
+      "n": "Flaming Schrodinger",
+      "img": "assets/wiki/flaming-schrodinger-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 4,
+      "mult": null
+    },
+    {
+      "n": "Forsaken Battleground",
+      "img": "assets/wiki/forsaken-battleground.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 5,
+      "mult": 12,
+      "note": "Multiplies ore value by x12 · Makes ore Forcefield material · Replace a random immunity with the corresponding effect.",
+      "wikiMpu": "x1.643"
+    },
+    {
+      "n": "Fractured Reality",
+      "img": "assets/wiki/fractured-reality.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 4,
+      "mult": 13,
+      "varies": true,
+      "note": "Multiplies ore value based on status effect and reverses affected status effect: · None: x7 · Sparkling: x13, replaced with Smoking · Frozen: x11, Frozen effect reverted · Flaming:",
+      "wikiMpu": "No effects: x1.63 · Sparkling: x1.90 · Frozen: x1.82 · Flaming: x1.78"
+    },
+    {
+      "n": "Frank'n'Cupcake",
+      "img": "assets/wiki/frank-n-cupcake.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 1.5,
+      "note": "Multiples ore value by x1.5 · Adds 1 to Candy value",
+      "wikiMpu": "x1.11"
+    },
+    {
+      "n": "Freon Bombarder",
+      "img": "assets/wiki/freon-bombarder.webp",
+      "kind": "Upgrader",
+      "tier": "Luxury",
+      "len": 4,
+      "mult": null,
+      "note": "Makes ores fireproof and frozen. · Gives ores an icy texture."
+    },
+    {
+      "n": "Freon Sprayer",
+      "img": "assets/wiki/freon-sprayer.webp",
+      "kind": "Upgrader",
+      "tier": "Contraband",
+      "len": 4,
+      "mult": null,
+      "note": "Extinguishes fire."
+    },
+    {
+      "n": "Freon Supressor",
+      "img": "assets/wiki/freon-suppressor-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Mythic",
+      "len": 4,
+      "mult": 1.7,
+      "note": "Increases ore value by 70% (x1.7) · Removes fire from ores",
+      "wikiMpu": "x1.14"
+    },
+    {
+      "n": "Freon-Blast Upgrader",
+      "img": "assets/wiki/freon-blast-upgrader-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Proficient",
+      "len": 2,
+      "mult": 1.5,
+      "note": "Multiply ore value by x1.5 · Extinguishes fire.",
+      "wikiMpu": "x1.225"
+    },
+    {
+      "n": "Freshly Baked Upsidedown Pineapple Cake",
+      "img": "assets/wiki/freshly-baked-upsidedown-pineapple-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 10,
+      "note": "x10 to ore value, turns the ore into a yellow sponge, applies wet to every other ore for ~4 seconds"
+    },
+    {
+      "n": "Friends Forever",
+      "img": "assets/wiki/friends-forever.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 5,
+      "mult": 10,
+      "varies": true,
+      "note": "Multiplies ore value by x10 · Adds +2 multi for each friend in the server (x20 max)",
+      "wikiMpu": "x1.58"
+    },
+    {
+      "n": "FRIGHT FOLLY",
+      "img": "assets/wiki/fright-folly.webp",
+      "kind": "Upgrader",
+      "tier": "Fabled",
+      "len": 4,
+      "mult": 6.66,
+      "note": "Multiplies ore value by x6.66"
+    },
+    {
+      "n": "Frightful Cotton Candy",
+      "img": "assets/wiki/frightful-cotton-candy.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 3,
+      "mult": 3,
+      "note": "Multiplies ore value by x3 and increases ore size · +1 Candy candy value",
+      "wikiMpu": "x1.442"
+    },
+    {
+      "n": "Frigid Dystopia",
+      "img": "assets/wiki/frigid-dystopia.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Reborn",
+      "len": 6,
+      "mult": 15,
+      "note": "Multiplies ore value by x15",
+      "wikiMpu": "x1.57"
+    },
+    {
+      "n": "Frostbite Chamber",
+      "img": "assets/wiki/frostbite-chamber.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 5,
+      "mult": 5,
+      "note": "Cash: · Multiplies ore value by x5 · Present: · +2 to Present value · +4 if on Fire.",
+      "wikiMpu": "x1.32"
+    },
+    {
+      "n": "Frosted Refiner",
+      "img": "assets/wiki/frosted-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 1,
+      "mult": 1.75,
+      "note": "Adds +1 to Present Value. · Multiplies the ore value by x1.75",
+      "wikiMpu": "1.75"
+    },
+    {
+      "n": "Frozen Eclipse",
+      "img": "assets/wiki/frozen-eclipse.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn Fusion",
+      "len": 7,
+      "mult": 40,
+      "varies": true,
+      "note": "Multiplies ore value based on time of day: · Day: 20x · Night: 40x · Additional effects: · Multiplier +5 if the ore is on fire · Multiplier +7 if the ore has sparkles · Ore turns b",
+      "wikiMpu": "x1.53 (day) · x1.69 (night)"
+    },
+    {
+      "n": "Fruitcake Blaster",
+      "img": "assets/wiki/fruitcake-blaster.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 6,
+      "mult": 2.99,
+      "note": "Multiplies ores by x4. · +2 to Present Value",
+      "wikiMpu": "x1.200"
+    },
+    {
+      "n": "Funnel Cake",
+      "img": "assets/wiki/funnel-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 44,
+      "note": "Multiplies ore value by x44",
+      "wikiMpu": "x1.717"
+    },
+    {
+      "n": "Garden of Gaia",
+      "img": "assets/wiki/garden-of-gaia.webp",
+      "kind": "Upgrader",
+      "tier": "Superstitious",
+      "len": 7,
+      "mult": 90,
+      "note": "Multiplies ore value by x90 · Changes ore material to Grass · Applies Gaia's Blessing to ore · Gaia's Blessing (15 seconds): · Marked by green particles · 2% bonus to all upgrades",
+      "wikiMpu": "Base (x90 only): x1.902 · With 10 upgrades: x1.956 · With 20 upgrades: x2.013 · "
+    },
+    {
+      "n": "Gate of Eclipse",
+      "img": "assets/wiki/guys-its-a-door-not-a-gate-are-you-blind.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 7,
+      "mult": 10,
+      "varies": true,
+      "note": "Day: x4 · Night: x10",
+      "wikiMpu": "Day: x1.2 · Night: x1.30"
+    },
+    {
+      "n": "Gator's Cove",
+      "img": "assets/wiki/gator-s-cove.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 4,
+      "mult": 10,
+      "varies": true,
+      "note": "Ore's upgrade counter ≤0: x10 · Ore's upgrade counter >0: x5",
+      "wikiMpu": "x1.78 (upgrade counter of 0) · x1.50 (upgrade counter > 0)"
+    },
+    {
+      "n": "Ghastly Graveyard",
+      "img": "assets/wiki/ghastly-graveyard.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 2,
+      "note": "Multiplies ore value by x2 · Decreases transparency of ores"
+    },
+    {
+      "n": "Ghastly Saloon",
+      "img": "assets/wiki/ghastly-saloon.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 10,
+      "note": "Multiplies Ore Value by x10-12"
+    },
+    {
+      "n": "Ghosdeeri's Antidote",
+      "img": "assets/wiki/ghosdeeri-s-antidote.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 5,
+      "mult": 12,
+      "note": "Multiplies ore value by x12Cures Plague and grant Plague immunity for 10 seconds",
+      "wikiMpu": "x1.643"
+    },
+    {
+      "n": "Ghost of Christmas Past",
+      "img": "assets/wiki/ghost-of-christmas-past.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 2,
+      "mult": 3,
+      "note": "Standalone: · Multiplies ore value by x3 · Each Christmas Ghost used before, doubles the multiplier."
+    },
+    {
+      "n": "Ghost Town",
+      "img": "assets/wiki/ghost-town.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 6,
+      "mult": 3.5,
+      "note": "Multiplies ore value by x3.5"
+    },
+    {
+      "n": "Ghoul Lagoon",
+      "img": "assets/wiki/ghoul-lagoon.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 5.51,
+      "note": "Multiplies ore value by x5.5. · Extinguishes flames. · Makes ore wet for 7s.",
+      "wikiMpu": "x1.329"
+    },
+    {
+      "n": "Giant Pretzel",
+      "img": "assets/wiki/giant-pretzel.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 2,
+      "mult": null,
+      "note": "+ 1 Candy Value"
+    },
+    {
+      "n": "Gift Blaster",
+      "img": "assets/wiki/gift-blaster.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 5,
+      "mult": 3.15,
+      "note": "Multiplies ore value by x3.15"
+    },
+    {
+      "n": "Gingerbread Boat",
+      "img": "assets/wiki/gingerbread-boat.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 3,
+      "mult": 5,
+      "note": "Multiplies ore value by x5 · Replicates sphere ore",
+      "wikiMpu": "x1.71"
+    },
+    {
+      "n": "Gingerbread House",
+      "img": "assets/wiki/gingerbread-house.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 2,
+      "mult": 5,
+      "note": "Multiplies ore value by x5 · Applies spherical mesh (hitbox not affected)",
+      "wikiMpu": "x2.24"
+    },
+    {
+      "n": "Gingerbread Mansion",
+      "img": "assets/wiki/gingerbread-mansion.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 9,
+      "varies": true,
+      "note": "Standalone: · Multiplies ore value by x6 · After ⟦Gingerbread House⟧: · x1.5 is applied to base multiplier · Total: x9",
+      "wikiMpu": "x1.565 (standalone) · x1.732 (Gingerbread House)"
+    },
+    {
+      "n": "Glass Butterfly",
+      "img": "assets/wiki/glass-butterfly.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 3,
+      "mult": 8,
+      "note": "Multiplies ore value by 8x",
+      "wikiMpu": "x2"
+    },
+    {
+      "n": "Gloom Refiner",
+      "img": "assets/wiki/gloom-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 3,
+      "mult": 3,
+      "note": "x3 ore value",
+      "wikiMpu": "1.442"
+    },
+    {
+      "n": "Golden Bell Upgrader",
+      "img": "assets/wiki/golden-bell-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 2,
+      "mult": 3,
+      "note": "Multiplies ore value by 3x",
+      "wikiMpu": "x1.73"
+    },
+    {
+      "n": "Golden Clover Blaster",
+      "img": "assets/wiki/golden-clover-blaster.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 4,
+      "note": "Multiplies ore value by x4"
+    },
+    {
+      "n": "Golden Clover Refiner",
+      "img": "assets/wiki/golden-clover-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 17.5,
+      "varies": true,
+      "note": "Base multiplier of x5 · Machine tags from other St. Patricks items additively increase multiplier: · ⟦Golden Horseshoe⟧: +2.5 · ⟦Pot of Gold-inator⟧: +5 · ⟦Golden Clover Blaster⟧: ",
+      "wikiMpu": "Min: 1.5x Max: 2.05x"
+    },
+    {
+      "n": "Golden Horseshoe",
+      "img": "assets/wiki/golden-horseshoe.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 5,
+      "note": "Multiplies ore value by x5",
+      "wikiMpu": "x1.495"
+    },
+    {
+      "n": "Goliath Skull",
+      "img": "assets/wiki/goliath-skull-sender.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 10,
+      "mult": 20,
+      "note": "Teleports ore · Multiplies ore value by 20x · Ore color set to Crimson Red"
+    },
+    {
+      "n": "Grand Fruitcake",
+      "img": "assets/wiki/grand-fruitcake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 6,
+      "note": "Multiplies ore by x6 and changes the ore's colour to red, white or green."
+    },
+    {
+      "n": "Grand Wafer",
+      "img": "assets/wiki/grand-wafer.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 3,
+      "mult": 1.4,
+      "note": "Multiply ore value by 1.4x · +1 Candy value",
+      "wikiMpu": "x1.12"
+    },
+    {
+      "n": "Grandfather Clockwork",
+      "img": "assets/wiki/grandfather-clockwork.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 4,
+      "mult": 28,
+      "varies": true,
+      "note": "Multiplier determined by: · 5 + (Current Time in UTC)",
+      "wikiMpu": "x1.50 (minimum) · x2.30 (maximum)"
+    },
+    {
+      "n": "Gravitational Gearwork",
+      "img": "assets/wiki/gravitational-gearwork.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 5,
+      "mult": 7,
+      "note": "Multiplies ore value by x7"
+    },
+    {
+      "n": "Great Pumpkin",
+      "img": "assets/wiki/great-pumpkin.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 3,
+      "varies": true,
+      "note": "Base multiplier of x3 · Machine tags from Pumpkin items increase multiplier: · ⟦Pumpkin Hero⟧: x2 · ⟦Pumpkin Patch⟧: x2 · Ores from the below Halloween-themed droppers receive bonu",
+      "wikiMpu": "x1.200"
+    },
+    {
+      "n": "Green Giant",
+      "img": "assets/wiki/green-giant.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 5,
+      "mult": 8,
+      "note": "x8",
+      "wikiMpu": "x1.515"
+    },
+    {
+      "n": "Green Rock Candyizer",
+      "img": "assets/wiki/green-rock-candyizer.webp",
+      "kind": "Upgrader",
+      "tier": "Quest",
+      "len": 4,
+      "mult": 1.5,
+      "note": "Multiplies ore value by x1.5 · Transforms Candy Ore into Green Rock Candy. · Turns ores green and changes ore material to foil.",
+      "wikiMpu": "x1.107"
+    },
+    {
+      "n": "Green Tea Kettle",
+      "img": "assets/wiki/green-tea-kettle.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 9,
+      "note": "Multiplies ore by x9 · Turns ores green (orange if shiny)"
+    },
+    {
+      "n": "Green Tea Latte",
+      "img": "assets/wiki/green-tea-latte.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 3,
+      "mult": 5,
+      "note": "Multiplies ore value by 5x · Turns ores green"
+    },
+    {
+      "n": "Gummy Refiner",
+      "img": "assets/wiki/gummy-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 3,
+      "mult": 2,
+      "note": "2x Ore Value. · +1 Candy to candy ore.",
+      "wikiMpu": "x1.26"
+    },
+    {
+      "n": "Hades' Palace",
+      "img": "assets/wiki/hades-palace.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Reborn",
+      "len": 6,
+      "mult": 6,
+      "note": "Upgrades ore based on upgrade count: · ≤ 20: x6 · > 20: x(upgrade count * 0.3)",
+      "wikiMpu": "x1.34 (min) · x1.76 (max)"
+    },
+    {
+      "n": "Hanging Wreath",
+      "img": "assets/wiki/hanging-wreath.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 12,
+      "note": "Multiplies ore value by 12x",
+      "wikiMpu": "x1.50"
+    },
+    {
+      "n": "Havenpreneur Upgrader",
+      "img": "assets/wiki/havenpreneur-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 5,
+      "mult": 3,
+      "note": "Multiplies ore value by 3x · Visually turns ores into Research Crates.",
+      "wikiMpu": "1.245x"
+    },
+    {
+      "n": "Hearty Refiner",
+      "img": "assets/wiki/hearty-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 1,
+      "mult": 3.43,
+      "varies": true,
+      "note": "1st Upgrade: Multiples ore by x1.25 · 2nd, 3rd and 4th Upgrades: Multiplies ore by x1.4 · Total: Multiplies ore by x3.43"
+    },
+    {
+      "n": "Heat Condenser",
+      "img": "assets/wiki/heat-condenser.webp",
+      "kind": "Upgrader",
+      "tier": "Intermediate",
+      "len": 5,
+      "mult": 3,
+      "varies": true,
+      "note": "Processes flaming ore as follows: · 1st Upgrade: Multiplies by x3, then adds $10k to orevalue · 2nd Upgrade onwards: x2 ore value",
+      "wikiMpu": "1st upgrade - x1.246 · 2nd upgrade - x1.149"
+    },
+    {
+      "n": "Heavenly Flux",
+      "img": "assets/wiki/heavenly-flux.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 7,
+      "note": "Multiplies ore value by x7"
+    },
+    {
+      "n": "Helium Blaster",
+      "img": "assets/wiki/helium-blaster.webp",
+      "kind": "Upgrader",
+      "tier": "Contraband",
+      "len": 4,
+      "mult": null,
+      "note": "Makes ore lighter/less dense and transparent · Makes ore Forcefield material"
+    },
+    {
+      "n": "Hellish Bat Cookie",
+      "img": "assets/wiki/hellish-bat-cookie.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 3,
+      "varies": true,
+      "note": "Base multiplier of x3, increases up to x5 based on the ore Red RGB value · Adds 1 Candy",
+      "wikiMpu": "x1.316"
+    },
+    {
+      "n": "Hive Mind Extravaganza",
+      "img": "assets/wiki/hive-mind-extravaganza.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 5,
+      "mult": 6.98,
+      "note": "Multiplies ore value by x7. · Make the ore \"stationary\" for 2 seconds after 5 seconds of being upgraded.",
+      "wikiMpu": "x1.475"
+    },
+    {
+      "n": "Hogog",
+      "img": "assets/wiki/hogog.webp",
+      "kind": "Upgrader",
+      "tier": "Redeemed",
+      "len": 5,
+      "mult": 5,
+      "note": "x5 Ore Value · change ore color to either red or yellow",
+      "wikiMpu": "x1.379"
+    },
+    {
+      "n": "Holiday Street Refiner",
+      "img": "assets/wiki/holiday-street-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 6,
+      "mult": null,
+      "note": "Does not increase ore value · Every 6th ore turns into a present, dropping along with it 5 ores. · 5 replicated ores: · Retain machine tags and status effects · Value of replicated"
+    },
+    {
+      "n": "Honeycomb Cake",
+      "img": "assets/wiki/honeycomb-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 9,
+      "mult": 6,
+      "note": "Multiplies ore value by 6x · Applies Hydrophobic effect · Machine tags from bee items increase multiplier: · ⟦Honeycomb Solace⟧: +1 · ⟦Deluxe Beehive⟧: +1 · ⟦The Beehive⟧: +1",
+      "wikiMpu": "Normal: · x1.22 · With Honeycomb Solace Upgrade: · x1.24"
+    },
+    {
+      "n": "Honeycomb Solace",
+      "img": "assets/wiki/honeycomb-solace.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 8,
+      "mult": 5,
+      "note": "Multiplies ore value by x5",
+      "wikiMpu": "x1.220"
+    },
+    {
+      "n": "Hopeless Bog",
+      "img": "assets/wiki/hopeless-bog.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 2,
+      "note": "Upgrades ore by x2",
+      "wikiMpu": "x1.19 = End of Event(s)"
+    },
+    {
+      "n": "Horizon Centrifuge",
+      "img": "assets/wiki/horizon-centrifuge.webp",
+      "kind": "Upgrader",
+      "tier": "Mythic",
+      "len": 3,
+      "mult": 1.55,
+      "note": "Multiplies ore value by x1.55",
+      "wikiMpu": "x1.16"
+    },
+    {
+      "n": "Hydra Blaster",
+      "img": "assets/wiki/hydra-blaster.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Evolution",
+      "len": 5,
+      "mult": 91.1,
+      "varies": true,
+      "note": "Multiplies ore value by x3 to x4.5 (3 times) · Total multiplier of 27x to 91.1x · Sets ores on fire"
+    },
+    {
+      "n": "Hydraulic Duality Refiner",
+      "img": "assets/wiki/hydraulic-duality-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Hydraulic",
+      "len": 3,
+      "mult": 5,
+      "note": "5x when both upgraders have been touched, 1x otherwise",
+      "wikiMpu": "x1.71"
+    },
+    {
+      "n": "Hydraulic Freefall Upgrader",
+      "img": "assets/wiki/hydraulic-freefall-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Hydraulic",
+      "len": 3,
+      "mult": 1.3,
+      "note": "Multiplies ore value by 30% up to 5 times.",
+      "wikiMpu": "x1.09"
+    },
+    {
+      "n": "Hydraulic Presser",
+      "img": "assets/wiki/hydraulic-presser.webp",
+      "kind": "Upgrader",
+      "tier": "Contraband",
+      "len": 4,
+      "mult": null,
+      "note": "Halves the size of ores. · Doesn't upgrade."
+    },
+    {
+      "n": "Hydraulic Ramp Upgrader",
+      "img": "assets/wiki/hydraulic-ramp-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Hydraulic",
+      "len": 2,
+      "mult": 1.25,
+      "note": "Multiplies ore value by x1.25",
+      "wikiMpu": "1.118"
+    },
+    {
+      "n": "Ice Crusher",
+      "img": "assets/wiki/ice-crusher.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 5,
+      "mult": 6,
+      "note": "Multiplies ore value by 6x · +1 to Present Value",
+      "wikiMpu": "x1.43"
+    },
+    {
+      "n": "Igloo Refiner",
+      "img": "assets/wiki/igloo-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 7,
+      "mult": 1.15,
+      "note": "Increases the value of flaming ore by 15% · +1 to Present Value",
+      "wikiMpu": "x1.02"
+    },
+    {
+      "n": "Igneous Lightning",
+      "img": "assets/wiki/igneous-lightning.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Fusion",
+      "len": 7,
+      "mult": 119,
+      "note": "Base multiplier of x1 · Multiplier increased by +1 for each coal input",
+      "wikiMpu": "x1.98 (max)"
+    },
+    {
+      "n": "Illuminator Evaluator",
+      "img": "assets/wiki/illuminator-evaluator.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn Fusion",
+      "len": 4,
+      "mult": null
+    },
+    {
+      "n": "Illusions of Void",
+      "img": "assets/wiki/illusions-of-void.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 5,
+      "mult": 7,
+      "note": "Multiplies ore value by a value between x1 and x7 · Adds +1 shield to the ore if no shields are currently present.",
+      "wikiMpu": "x1-x1.48"
+    },
+    {
+      "n": "Industrial Ore Welder",
+      "img": "assets/wiki/industrial-ore-welder.webp",
+      "kind": "Upgrader",
+      "tier": "Intermediate",
+      "len": 4,
+      "mult": 18.758,
+      "varies": true,
+      "note": "1st upgrade: · multiplies ore value by x2 · 2nd upgrade onwards: · multiply ore value by x1.75 · Total upgrade: · multiplies ore value by ~x18.758",
+      "wikiMpu": "1st upgrade - x1.189 · 2nd, 3rd and 4th upgrade - x1.150"
+    },
+    {
+      "n": "Industrial Skeletal Salvation",
+      "img": "assets/wiki/industrial-skeletal-salvation.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 7,
+      "mult": 4,
+      "note": "Multiplies ore value by 4x.",
+      "wikiMpu": "x1.22"
+    },
+    {
+      "n": "Inflatable Party Upgrader",
+      "img": "assets/wiki/inflatable-party-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 3,
+      "mult": 4,
+      "note": "Multiplies ore value based on height, maximum of x4. · If a ⟦Helium Blaster⟧ is used, the multiplier is doubled.",
+      "wikiMpu": "x1.587 (max)"
+    },
+    {
+      "n": "Ion Field",
+      "img": "assets/wiki/ion-field.webp",
+      "kind": "Upgrader",
+      "tier": "Epic",
+      "len": 4,
+      "mult": 2.5,
+      "varies": true,
+      "note": "1st upgrade: Multiplies ore value by x2.5 · 2nd, 3rd and 4th upgrade: multiplies ore value by x1.8"
+    },
+    {
+      "n": "ITeleporter",
+      "img": "assets/wiki/iteleporter.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 6,
+      "mult": 9,
+      "note": "Multiplies ore value by x9 · Creates an opening for ores to drop through from platforms"
+    },
+    {
+      "n": "Jagged Enhancer",
+      "img": "assets/wiki/jagged-enhancer.webp",
+      "kind": "Upgrader",
+      "tier": "Basic",
+      "len": 4,
+      "mult": 3.5,
+      "note": "Multiplies ore value by x3.5",
+      "wikiMpu": "x1.368"
+    },
+    {
+      "n": "Jelly Cake",
+      "img": "assets/wiki/jelly-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 8,
+      "note": "Multiplies ore value by x8 · Paints ores purple · Sets ore transparency to 0.5 · Increases ore elasticity",
+      "wikiMpu": "x1.35"
+    },
+    {
+      "n": "King Birthday Cake",
+      "img": "assets/wiki/king-birthday-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 9,
+      "mult": 50,
+      "note": "Base Multiplier of x50 · Machine tags from other cake items increase multiplier by +10 · Machine tags from the following items also increase multiplier by +10 · ⟦Red Velvet Cake⟧ ·",
+      "wikiMpu": "x1.544 (minimum) · x1.668 (maximum)"
+    },
+    {
+      "n": "King Darkseed",
+      "img": "assets/wiki/king-darkseed.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 6,
+      "mult": 34,
+      "varies": true,
+      "wikiMpu": "x1.603 (standalone)x1.716 (conquered)x1.698 (min conqueror) · x1.800 (max conque"
+    },
+    {
+      "n": "L.I.M.E",
+      "img": "assets/wiki/l-i-m-e.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 1.2,
+      "note": "Halves the size of ores. · Upgrades ore value by 1.2x",
+      "wikiMpu": "x1.046"
+    },
+    {
+      "n": "Large Ore Upgrader",
+      "img": "assets/wiki/large-ore-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Basic",
+      "len": 6,
+      "mult": 1.5,
+      "varies": true,
+      "note": "Multiplies ore value by x1.5 to x1.01",
+      "wikiMpu": "<$5k - x1.070 · $5k-$10k - x1.031 · $10k-$15k - x1.008 · $15k-$50k - x1.002"
+    },
+    {
+      "n": "Legendary Peppermint",
+      "img": "assets/wiki/legendary-peppermint.webp",
+      "kind": "Upgrader",
+      "tier": "Relic",
+      "len": 3,
+      "mult": 6,
+      "note": "Multiplies ore value randomly from x6 to x10. · Destroys ore that is on fire. · Otherwise, applies immunity to Radiation and makes ore Fireproof. · Colors ore red or white.",
+      "wikiMpu": "x1.82 (min) · x2.15 (max) · x1.99 (average)"
+    },
+    {
+      "n": "Leggendary Black Hole",
+      "img": "assets/wiki/leggendary-black-hole.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 2,
+      "mult": 20,
+      "note": "Teleports recently dropped ores within a 28 units radius · Multiplies ore value by x20"
+    },
+    {
+      "n": "Leprechaun Trap",
+      "img": "assets/wiki/leprechaun-trap.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 10,
+      "varies": true,
+      "note": "On Open: · Normal Ores: x5 · Gold Ore: x10 · On Close: · Destroy all ores.",
+      "wikiMpu": "x1.49 (base) · x1.77 (gold)"
+    },
+    {
+      "n": "Lepretron",
+      "img": "assets/wiki/lepretron.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 7,
+      "mult": 16,
+      "varies": true,
+      "note": "Each beam does ~x1.486 for a total multiplier of x16"
+    },
+    {
+      "n": "Lightningbolt Predictor",
+      "img": "assets/wiki/lightningbolt-predictor.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn Fusion",
+      "len": 4,
+      "mult": 8,
+      "varies": true,
+      "note": "1st Upgrade: · Multiplies ore value by x3 - x8 then x1.05 1 to 11 times every 0.25s based on charge · (see overview) · 2nd Upgrade+: · Multiplies ore value by x3 to x8"
+    },
+    {
+      "n": "Lightningbolt Refiner",
+      "img": "assets/wiki/lightningbolt-refiner-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 6,
+      "mult": 7,
+      "varies": true,
+      "note": "Multiplies ore value by an integer multiplier from x2 to x7",
+      "wikiMpu": "x1.414 - x1.201"
+    },
+    {
+      "n": "Lollipop-inator",
+      "img": "assets/wiki/lollipop-inator.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 1,
+      "mult": 1.75,
+      "note": "x1.75 to ore value · +1 Candy to candy value",
+      "wikiMpu": "x1.75"
+    },
+    {
+      "n": "Loop-de-Loop",
+      "img": "assets/wiki/loop-de-loop.webp",
+      "kind": "Upgrader",
+      "tier": "Divine",
+      "len": 9,
+      "mult": 3,
+      "varies": true,
+      "note": "First upgrade multiplies ore value by x3 regardless of ore value · Subsequent upgrades multiply ore value by x2 up to $100de"
+    },
+    {
+      "n": "Lord of the Apocalypse",
+      "img": "assets/wiki/lord-of-the-apocalypse.webp",
+      "kind": "Upgrader",
+      "tier": "Phantasmal",
+      "len": 8,
+      "mult": 1300,
+      "varies": true,
+      "note": "Base multiplier of x300 · +x50 per every Horseman Limited Reborn tag · +x150 per every Horseman Enchanted tagMaximum of x1300",
+      "wikiMpu": "x2.040 (base) · x2.450 (max)"
+    },
+    {
+      "n": "Lucky Hat",
+      "img": "assets/wiki/lucky-hat.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 5,
+      "mult": null,
+      "note": "Multiplies ore by x6. Has a low chance to turn ores into gold, granting them a shield but giving them a x1 multiplier. Has a chance to make ores swag but doesn't get upgraded."
+    },
+    {
+      "n": "Lucky Seven's Cake",
+      "img": "assets/wiki/lucky-seven-s-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": null
+    },
+    {
+      "n": "Lunar Refiner",
+      "img": "assets/wiki/lunar-refiner-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Contraband",
+      "len": 4,
+      "mult": 8,
+      "note": "Doubles ore value · Max upgrade of x8 when used three times"
+    },
+    {
+      "n": "Lunar Spectacle",
+      "img": "assets/wiki/lunar-spectacle.webp",
+      "kind": "Upgrader",
+      "tier": "Slipstream",
+      "len": 4,
+      "mult": 50,
+      "varies": true,
+      "note": "While Placed: · Activate night-time multipliersDay: · x25Night: · x50 · Apply yellow sparkles",
+      "wikiMpu": "x2.236 (day) · x2.659 (night)"
+    },
+    {
+      "n": "Lunar Spectacle (Renegade)",
+      "img": "assets/wiki/lunar-spectacle.webp",
+      "kind": "Upgrader",
+      "tier": "Renegade",
+      "len": 4,
+      "mult": 20,
+      "varies": true,
+      "note": "Day: · x10Night: · x20 · Apply yellow sparkles",
+      "wikiMpu": "x1.778 (day) · x2.114 (night)"
+    },
+    {
+      "n": "Macaroon Upgrader",
+      "img": "assets/wiki/macaroon-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 3,
+      "mult": 3,
+      "note": "Multiplies ore value by x3",
+      "wikiMpu": "x1.442"
+    },
+    {
+      "n": "Mad Monstrous Melter",
+      "img": "assets/wiki/mad-monstrous-melter.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 7,
+      "mult": 6.1,
+      "note": "Multiplies ore value by x6.1 · Sets ore on fire"
+    },
+    {
+      "n": "Maintenance Supporter",
+      "img": "assets/wiki/maintenance-supporter.webp",
+      "kind": "Upgrader",
+      "tier": "Contraband",
+      "len": 4,
+      "mult": 5,
+      "note": "Multiplies ore value by x5 · Removes smoke"
+    },
+    {
+      "n": "Malicious Incubator",
+      "img": "assets/wiki/malicious-incubator.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 5,
+      "mult": 15,
+      "note": "Multiplies ore value by x15 · Applies poison effect to ore",
+      "wikiMpu": "x1.70"
+    },
+    {
+      "n": "Massive Quantum Diamond Cleaner",
+      "img": "assets/wiki/massive-quantum-diamond-cleaner.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn Fusion",
+      "len": 6,
+      "mult": 14,
+      "note": "Multiplies ore value by x14 · Removes between 1-3 upgrade counters, depending on ore size.",
+      "wikiMpu": "x1.55"
+    },
+    {
+      "n": "Meatball Sandwich",
+      "img": "assets/wiki/meatball-sandwich.webp",
+      "kind": "Upgrader",
+      "tier": "Rare Reborn",
+      "len": 3,
+      "mult": 9.94,
+      "note": "Multiplies ore value by x10. · Applies a sphere mesh and change ore material to pebble to imitate a meatball",
+      "wikiMpu": "x2.150"
+    },
+    {
+      "n": "Melancholy Holidays",
+      "img": "assets/wiki/melancholy-holidays.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 3,
+      "mult": 1.75,
+      "note": "Multiplies ore value by 1.75x"
+    },
+    {
+      "n": "Meralin's Sorcery",
+      "img": "assets/wiki/meralin-s-sorcery.webp",
+      "kind": "Upgrader",
+      "tier": "Superstitious",
+      "len": 7,
+      "mult": 220,
+      "varies": true,
+      "note": "Before ⟦Methuselah's Mask⟧/standalone: · Multiplies ores by 105x to 150x · Poisons ore · After ⟦Methuselah's Mask⟧: · Multiplies ores by 150x to 220x · Locks ore size · Does not po",
+      "wikiMpu": "Before Methuselah's Mask/on its own: x1.944-x2.046, geometric mean x2.00 · After"
+    },
+    {
+      "n": "Methane Sky Fleet",
+      "img": "assets/wiki/methane-sky-fleet.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 3,
+      "mult": 5,
+      "note": "Multiplies ore value by 1x to 5x depending on the elevation of the item from the platform/base it is placed on",
+      "wikiMpu": "x1- x1.71"
+    },
+    {
+      "n": "Methuselah's Mask",
+      "img": "assets/wiki/methuselah-s-mask.webp",
+      "kind": "Upgrader",
+      "tier": "Superstitious",
+      "len": 6,
+      "mult": 140,
+      "note": "Before ⟦Meralin's Sorcery⟧/standalone: · Multiplies ore value by x140 · Random status effect is applied (see Overview) · After ⟦Meralin's Sorcery⟧: · Multiplies ore value by x140 ·"
+    },
+    {
+      "n": "Midas Blaster",
+      "img": "assets/wiki/midas-blaster.webp",
+      "kind": "Upgrader",
+      "tier": "Superstitious",
+      "len": 5,
+      "mult": 123,
+      "varies": true,
+      "note": "Multiplies ore value by 36x to 123x · Upgrade multiplier increases by +1 per use · Sets ore on fire · Colors ore gold · Makes ore incredibly dense"
+    },
+    {
+      "n": "Mighty Sugar Cookie",
+      "img": "assets/wiki/mighty-sugar-cookie.webp",
+      "kind": "Upgrader",
+      "tier": "Relic",
+      "len": 5,
+      "mult": 8.5,
+      "note": "Multiplies ore value by x8.5 · ----Status Effects · Fire: +20% to multiplier · Poison: +20% to multiplier",
+      "wikiMpu": "Normal: · 1.53x · Maximum: · 1.65x"
+    },
+    {
+      "n": "Mineral Wheel",
+      "img": "assets/wiki/mineral-wheel.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 4,
+      "mult": 6,
+      "note": "Multiplies ore value by x6",
+      "wikiMpu": "x1.57"
+    },
+    {
+      "n": "Mini Upgrader",
+      "img": "assets/wiki/mini-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Mythic",
+      "len": 1,
+      "mult": 2.27,
+      "varies": true,
+      "wikiMpu": "1 upgrader - x1.250 · 2 upgraders - x2.165 · 3 upgraders - x2.271 · 4 upgraders "
+    },
+    {
+      "n": "Moai God",
+      "img": "assets/wiki/moai-god.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 4,
+      "mult": 8,
+      "note": "Multiplies ore value by x8 · 20% chance to set ore on fire",
+      "wikiMpu": "x1.681"
+    },
+    {
+      "n": "Molten Forge",
+      "img": "assets/wiki/molten-forge.webp",
+      "kind": "Upgrader",
+      "tier": "Contraband",
+      "len": 6,
+      "mult": null,
+      "note": "Stage 1 (lasts 0.67 to 1.33 seconds): · Ore becomes sensitive to explosions and ore value is tripled · ----Stage 2: Ore becomes more dense; resistance to explosions increased and o"
+    },
+    {
+      "n": "Molten Upgrader",
+      "img": "assets/wiki/molten-upgrader-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Legendary",
+      "len": 2,
+      "mult": 1.8,
+      "note": "Multiplies ore value by 1.8x",
+      "wikiMpu": "x1.34"
+    },
+    {
+      "n": "MONSTER TRUCKER!",
+      "img": "assets/wiki/monster-trucker.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": null,
+      "note": "Turns silicon ore into toy monster trucks that can be wrapped in the ⟦Ore Wrapper⟧ and turned into presents in the ⟦Present Center⟧."
+    },
+    {
+      "n": "Monstrous Mimic Cake",
+      "img": "assets/wiki/monstrous-mimic-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 16,
+      "varies": true,
+      "note": "Base multiplier of x4. · Multiply ore value by x4 if the ore went through 9 upgrades after it. · ----Maximum upgrade of x16",
+      "wikiMpu": "x1.219 (base) · x1.486 (max)"
+    },
+    {
+      "n": "Monstrous Stitchwork",
+      "img": "assets/wiki/monstrous-stitchwork.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 5,
+      "mult": 7,
+      "varies": true,
+      "note": "Multiplies ore value by x7 · +x6 if sparkling · Makes ores slightly transparent",
+      "wikiMpu": "x1.476 (base) · x1.670 (max)"
+    },
+    {
+      "n": "Morning Star",
+      "img": "assets/wiki/morning-star.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 4,
+      "mult": 1.7,
+      "varies": true,
+      "note": "Increases ore value by 70% or 7% (x1.7 or x1.07 multiplier). · Upgrade caps at $1N.",
+      "wikiMpu": "1.142-1.017"
+    },
+    {
+      "n": "Mycolympus",
+      "img": "assets/wiki/mycolympus.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 5,
+      "mult": 20,
+      "note": "Multiplies ore value by x20 · Applies Poison to ore.",
+      "wikiMpu": "x1.821"
+    },
+    {
+      "n": "Mystical Thunder",
+      "img": "assets/wiki/mystical-thunder.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Evolution",
+      "len": 6,
+      "mult": 96,
+      "note": "Base multiplier of x1 · Each click adds +4 to the multiplier",
+      "wikiMpu": "x2.14 (max)"
+    },
+    {
+      "n": "Neutron Star",
+      "img": "assets/wiki/neutron-star.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 2,
+      "varies": true,
+      "note": "Main upgrade panel upgrades ores by x1.65 to x1.065 · Secondary upgrade beam upgrades ores by x2 to x1.1 · (See \"Upgrade Reduction\" section for more information)"
+    },
+    {
+      "n": "Neutropian Refiner",
+      "img": "assets/wiki/neutropian-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Slipstream",
+      "len": 6,
+      "mult": 125,
+      "varies": true,
+      "note": "Multiplies ores with no negative status effects by x90 · Multiplies ores with any negative status effect by x125",
+      "wikiMpu": "No negative effects: x2.116 · Negative effects: x2.236"
+    },
+    {
+      "n": "Neutropian Refiner (Renegade)",
+      "img": "assets/wiki/neutropian-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Renegade",
+      "len": 6,
+      "mult": 20,
+      "note": "Upgrade ores by x10. · Upgrade ores by x20 if it has a negative effect."
+    },
+    {
+      "n": "Newtonic Corroder",
+      "img": "assets/wiki/newtonic-corroder.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 4,
+      "mult": 7.01,
+      "note": "Multiplies ore value by x7. · Radiate ore.",
+      "wikiMpu": "x1.627"
+    },
+    {
+      "n": "North Star",
+      "img": "assets/wiki/north-star.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": null,
+      "wikiMpu": "x1"
+    },
+    {
+      "n": "Nova Evaluator",
+      "img": "assets/wiki/nova-evaluator.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Fusion",
+      "len": 4,
+      "mult": 1.3,
+      "note": "Boosts the effectiveness of other non-shop schrodingers by 1.3x for 5s."
+    },
+    {
+      "n": "Nova Star",
+      "img": "assets/wiki/nova-star.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Reborn",
+      "len": 4,
+      "mult": 25,
+      "varies": true,
+      "note": "Buffs Star upgrader multipliers by x4 for 5s · Exception: · ⟦Blue Supergiant⟧ multiplier buffed by x25"
+    },
+    {
+      "n": "Nuclear Chamber",
+      "img": "assets/wiki/nuclear-chamber.webp",
+      "kind": "Upgrader",
+      "tier": "Legendary",
+      "len": 4,
+      "mult": 2,
+      "note": "Primary multiplier of x2; increases with status effects · Secondary multiplier of x1; increases by +0.01 for every ore that enters · Both multipliers are added together for final m",
+      "wikiMpu": "x1.32 (base) · x1.81 (max)"
+    },
+    {
+      "n": "Obsidian Infusion Device",
+      "img": "assets/wiki/obsidian-infusion-device.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 5,
+      "mult": 12,
+      "varies": true,
+      "note": "Phase 1 (lasts 0.67 to 1.33s): · Ore becomes neon orange and is sensitive to explosions · If the ore is on fire: 6x to ore value · Phase 2: · Ore becomes forged (more dense) · Ore ",
+      "wikiMpu": "x1.15 (without fire) · x1.64 (with fire)"
+    },
+    {
+      "n": "One Million Upgrader",
+      "img": "assets/wiki/one-million-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 3,
+      "mult": 10,
+      "note": "Multiplies ore value by x10",
+      "wikiMpu": "x2.15"
+    },
+    {
+      "n": "Ooftopian Refiner",
+      "img": "assets/wiki/ooftopian-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Rare Reborn",
+      "len": 6,
+      "mult": 150,
+      "varies": true,
+      "note": "Multiplies ore value based on suffix exponent. · 1 suffix = additional x1.5. · Temporarily increases ore density. · Changes ore color into bright yellow.",
+      "wikiMpu": "x1.052 (minimum) · x2.305 (maximum)"
+    },
+    {
+      "n": "Optic Origin",
+      "img": "assets/wiki/optic-origin.webp",
+      "kind": "Upgrader",
+      "tier": "Superstitious",
+      "len": 7,
+      "mult": 400,
+      "varies": true,
+      "note": "Upgrades based on material and time of day: · Forcefield: x400 + ignition · Neon: x300 · Anything else: x200",
+      "wikiMpu": "Day: · Forcefield: x2.353 · Neon: x2.258 · No material: x2.131"
+    },
+    {
+      "n": "Orange Rock Candyizer",
+      "img": "assets/wiki/orange-rock-candyizer.webp",
+      "kind": "Upgrader",
+      "tier": "Quest",
+      "len": 4,
+      "mult": 1.5,
+      "note": "Multiplies ore value by x1.5 · Transforms Candy Ore into Orange Rock Candy · Turns ore orange",
+      "wikiMpu": "x1.107"
+    },
+    {
+      "n": "Orbitable Upgrader",
+      "img": "assets/wiki/orbital-upgrader-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Epic",
+      "len": 3,
+      "mult": 1.4,
+      "note": "Increases ore value by 40% (x1.4)"
+    },
+    {
+      "n": "Orbital Cataclysm",
+      "img": "assets/wiki/orbital-cataclysm.webp",
+      "kind": "Upgrader",
+      "tier": "Slipstream",
+      "len": 6,
+      "mult": 45,
+      "note": "Takes in sequence every 2 ores: · First ore's reflectance is stored in the upgrader; ore gets destroyed · Second ore is multiplied by the reflectance value stored + 1 · Negative up"
+    },
+    {
+      "n": "Orbital Cataclysm (Renegade)",
+      "img": "assets/wiki/orbital-cataclysm.webp",
+      "kind": "Upgrader",
+      "tier": "Renegade",
+      "len": 6,
+      "mult": 20,
+      "note": "Multiplies ores based on the upgrade count of the previous, up to a maximum of 20x at 450 upgrades."
+    },
+    {
+      "n": "Ore Basket",
+      "img": "assets/wiki/ore-basket.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 2,
+      "mult": 2.28,
+      "note": "Adds $25k then multiplies ore value by x2.5.",
+      "wikiMpu": "x1.51 (excluding money bonus)"
+    },
+    {
+      "n": "Ore Biplane",
+      "img": "assets/wiki/ore-biplane.webp",
+      "kind": "Upgrader",
+      "tier": "Vintage",
+      "len": 5,
+      "mult": 4,
+      "note": "Multiplies ore value by x4-7 depending on the item height.",
+      "wikiMpu": "x1.475 (max) · x1.319 (min)"
+    },
+    {
+      "n": "Ore Cannon",
+      "img": "assets/wiki/ore-cannon-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Novice",
+      "len": 3,
+      "mult": 1.5,
+      "note": "Propels ore forwards into the air · Multiplies ore value by x1.5",
+      "wikiMpu": "1.145"
+    },
+    {
+      "n": "Ore Caramelizer",
+      "img": "assets/wiki/ore-caramelizer.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 3,
+      "mult": 1.3,
+      "note": "Multiplies ore value by x1.3 · +1 Candy to Candy ore",
+      "wikiMpu": "x1.09"
+    },
+    {
+      "n": "Ore Chainsaw",
+      "img": "assets/wiki/ore-chainsaw.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 8,
+      "note": "Duplicates ore · Halves ore size · Multiplies ore value by 8x",
+      "wikiMpu": "x1.41"
+    },
+    {
+      "n": "Ore Collider",
+      "img": "assets/wiki/ore-collider-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Proficient",
+      "len": 3,
+      "mult": 5,
+      "note": "Multiplies ore value by x5 · Propels ore forwards into the air"
+    },
+    {
+      "n": "Ore Crane",
+      "img": "assets/wiki/ore-crane.webp",
+      "kind": "Upgrader",
+      "tier": "Novice",
+      "len": 3,
+      "mult": 2,
+      "note": "Multiplies ore value by x3. · Transports ore from Ground height to Way-Up-High using Rope Constraint.",
+      "wikiMpu": "x1.260 · (Effectiveness may be considered lower because of the ramp)"
+    },
+    {
+      "n": "Ore Destroyinator",
+      "img": "assets/wiki/ore-destroyinator.webp",
+      "kind": "Upgrader",
+      "tier": "Fabled",
+      "len": 8,
+      "mult": null,
+      "note": "Instantly destroy ores · Bypasses Shields"
+    },
+    {
+      "n": "Ore Gielder",
+      "img": "assets/wiki/ore-gielder.webp",
+      "kind": "Upgrader",
+      "tier": "Redeemed",
+      "len": 4,
+      "mult": 3,
+      "note": "Multiplies ore value by x3",
+      "wikiMpu": "1.32"
+    },
+    {
+      "n": "Ore Hoister",
+      "img": "assets/wiki/ore-hoister.webp",
+      "kind": "Upgrader",
+      "tier": "Intermediate",
+      "len": 3,
+      "mult": 2.5,
+      "note": "Multiplies ore value by x2.5 · Launch ores upward"
+    },
+    {
+      "n": "Ore Hypernova",
+      "img": "assets/wiki/ore-hypernova.webp",
+      "kind": "Upgrader",
+      "tier": "Superstitious",
+      "len": 6,
+      "mult": 1500,
+      "note": "Multiplies ore value by 1500x · Gives ore sparkles"
+    },
+    {
+      "n": "Ore Illuminator",
+      "img": "assets/wiki/ore-illuminator.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 4,
+      "mult": 7,
+      "note": "Multiplies ore value by x7",
+      "wikiMpu": "x1.63"
+    },
+    {
+      "n": "Ore Indoctrinator",
+      "img": "assets/wiki/ore-indoctrinator.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 666,
+      "note": "Upgrades ore by x666",
+      "wikiMpu": "2.955"
+    },
+    {
+      "n": "Ore Magmafier",
+      "img": "assets/wiki/ore-magmafier.webp",
+      "kind": "Upgrader",
+      "tier": "Legendary",
+      "len": 7,
+      "mult": 2.73,
+      "varies": true,
+      "note": "Normal beams (2 beams): 1.25x each · Fine-Point beam: 1.75x · Total: ~2.73x",
+      "wikiMpu": "x1.15"
+    },
+    {
+      "n": "Ore Magnifier",
+      "img": "assets/wiki/ore-magnifier-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Intermediate",
+      "len": 8,
+      "mult": 5,
+      "note": "Mutliplies ore value by x5",
+      "wikiMpu": "x1.220"
+    },
+    {
+      "n": "Ore Memer",
+      "img": "assets/wiki/ore-memer.webp",
+      "kind": "Upgrader",
+      "tier": "Rare Reborn",
+      "len": 4,
+      "mult": 300,
+      "note": "(see overview) · Canis Processus: · Always Processes ore with Ore Memer Machine tag at 300x · ⭐ Shiny Effect ⭐: · Gives The Doge Thrower upon touched.",
+      "wikiMpu": "x7.77 (80%) - 1.670 · x13.37 (13.5%) - 1.912 · x36 (4.5%) - 2.449 · x42 (2%) - 2"
+    },
+    {
+      "n": "Ore Negator",
+      "img": "assets/wiki/ore-negator.webp",
+      "kind": "Upgrader",
+      "tier": "Contraband",
+      "len": 4,
+      "mult": 2,
+      "note": "Multiplies ore value by x2 · Reduces upgrade counter by 6 to ore with 1 upgrade counter; Reduces upgrade counter by 5 otherwise",
+      "wikiMpu": "1.068"
+    },
+    {
+      "n": "Ore Nova",
+      "img": "assets/wiki/ore-nova.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Fusion",
+      "len": 4,
+      "mult": 4,
+      "note": "Multiplies ore value by x70. · Applies Nova effect to all ores, stacking an additional 4x to Star Upgraders. · Changes ores' color to different shades of purple depending on the ti"
+    },
+    {
+      "n": "Ore Painter",
+      "img": "assets/wiki/ore-painter.webp",
+      "kind": "Upgrader",
+      "tier": "Luxury",
+      "len": 3,
+      "mult": null,
+      "note": "Changes the color of ores that pass through depending on the color selected."
+    },
+    {
+      "n": "Ore Recliner",
+      "img": "assets/wiki/ore-recliner.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced",
+      "len": 3,
+      "mult": 1.5,
+      "note": "Multiplies ore value by x1.5",
+      "wikiMpu": "x1.145"
+    },
+    {
+      "n": "Ore Replicator",
+      "img": "assets/wiki/ore-replicator-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced",
+      "len": 3,
+      "mult": null,
+      "note": "Duplicates ore"
+    },
+    {
+      "n": "Ore Roaster",
+      "img": "assets/wiki/ore-roaster.webp",
+      "kind": "Upgrader",
+      "tier": "Intermediate",
+      "len": 4,
+      "mult": 2,
+      "note": "Initial multiplier starts at x2 · Multiplier reduced by x0.2 for every upgrade",
+      "wikiMpu": "Initial Upgrade - x1.189"
+    },
+    {
+      "n": "Ore Sawmill",
+      "img": "assets/wiki/ore-sawmill.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 6,
+      "mult": null,
+      "note": "Duplicates ore. · Halves ore size."
+    },
+    {
+      "n": "Ore Scanner",
+      "img": "assets/wiki/ore-scanner.webp",
+      "kind": "Upgrader",
+      "tier": "Novice",
+      "len": 9,
+      "mult": 2.5,
+      "note": "Multiplies ore value by x2.5",
+      "wikiMpu": "1.107"
+    },
+    {
+      "n": "Ore Skillet",
+      "img": "assets/wiki/ore-skillet.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 6,
+      "mult": 10,
+      "varies": true,
+      "note": "Multiplies ore value by a base of 2x. · Each ore dropped onto the frying pan increases the multiplier by 1 up to 10x.",
+      "wikiMpu": "~1.12x (minimum), ~1.47x (maximum)"
+    },
+    {
+      "n": "Ore Steamer",
+      "img": "assets/wiki/ore-steamer.webp",
+      "kind": "Upgrader",
+      "tier": "Novice",
+      "len": 4,
+      "mult": 6,
+      "varies": true,
+      "note": "1st upgrade: · ≤0 upgrade count: x6 · >0 upgrade count: x2 · 2nd, 3rd and 4th upgrade: · Multiplies ore value by x1.6",
+      "wikiMpu": "1st upgrade (≤0 upgrade count) - x1.565 · 1st upgrade (>0 upgrade count) - 1.189"
+    },
+    {
+      "n": "Ore Striker",
+      "img": "assets/wiki/ore-striker.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": null
+    },
+    {
+      "n": "Ore Supernova",
+      "img": "assets/wiki/ore-supernova.webp",
+      "kind": "Upgrader",
+      "tier": "Slipstream",
+      "len": 3,
+      "mult": 500,
+      "note": "Multiplies ore value by 500x · Gives ⟦Gargantium Mine⟧ ores immunity from fire"
+    },
+    {
+      "n": "Ore Thermocrusher",
+      "img": "assets/wiki/ore-thermocrusher-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Divine",
+      "len": 4,
+      "mult": 1.3,
+      "note": "Increases ore value by 30%",
+      "wikiMpu": "x1.07"
+    },
+    {
+      "n": "Ore Tixicator",
+      "img": "assets/wiki/ore-tixicator.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": null,
+      "note": "For every 6 ores: · 3 Tix bars are produced. · Each tix bar is worth the average of the 6 ores."
+    },
+    {
+      "n": "Ore Tracker",
+      "img": "assets/wiki/ore-tracker-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Intermediate",
+      "len": 2,
+      "mult": null,
+      "note": "Tracks ore value in blue text"
+    },
+    {
+      "n": "Ore Transistor",
+      "img": "assets/wiki/ore-transistor-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Divine",
+      "len": 2,
+      "mult": 1.45,
+      "note": "Multiplies ore value by x1.45 up to $1N",
+      "wikiMpu": "x1.20"
+    },
+    {
+      "n": "Ore Transponder",
+      "img": "assets/wiki/ore-transponder.webp",
+      "kind": "Upgrader",
+      "tier": "Almighty",
+      "len": 6,
+      "mult": 2,
+      "note": "Multiplies ore value by x2",
+      "wikiMpu": "x1.12"
+    },
+    {
+      "n": "Ore Winder",
+      "img": "assets/wiki/ore-winder.webp",
+      "kind": "Upgrader",
+      "tier": "Epic",
+      "len": 3,
+      "mult": 3,
+      "note": "Multiplies ore value by 3x",
+      "wikiMpu": "x1.44 (item length, not conveyor length)"
+    },
+    {
+      "n": "Ore Zapper",
+      "img": "assets/wiki/ore-zapper-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced",
+      "len": 2,
+      "mult": 1.25,
+      "note": "Multiplies ore value by 1.25x.",
+      "wikiMpu": "x1.118"
+    },
+    {
+      "n": "Ornament Blaster",
+      "img": "assets/wiki/ornament-blaster.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 3,
+      "note": "Multiplies ore value by 3x · Sets ore on fire"
+    },
+    {
+      "n": "Overhang Upgrader",
+      "img": "assets/wiki/overhang-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Novice",
+      "len": 3,
+      "mult": 4,
+      "note": "Multiplies ore value by x4 · Adds $10k",
+      "wikiMpu": "1.587"
+    },
+    {
+      "n": "Overlord Device",
+      "img": "assets/wiki/overlord-device.webp",
+      "kind": "Upgrader",
+      "tier": "Ultimate",
+      "len": 7,
+      "mult": 10,
+      "note": "Multiplies ore value by x10",
+      "wikiMpu": "x1.389"
+    },
+    {
+      "n": "Pancake Stack",
+      "img": "assets/wiki/pancake-stack.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 5,
+      "mult": 33,
+      "note": "Multiplies ore value by x33",
+      "wikiMpu": "x2.012"
+    },
+    {
+      "n": "Peanut Butter Cake",
+      "img": "assets/wiki/peanut-butter-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 10,
+      "mult": 5,
+      "note": "Multiplies ore value by 5x. · Replicates first 9 ores"
+    },
+    {
+      "n": "Permafrost Refiner",
+      "img": "assets/wiki/permafrost-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 3,
+      "note": "Upgrades ore by x3 and makes it frozen.",
+      "wikiMpu": "x1.32"
+    },
+    {
+      "n": "Phantom of Christmas Future",
+      "img": "assets/wiki/phantom-of-christmas-future.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 2,
+      "mult": 5,
+      "note": "Standalone: · Multiplies ore value by x5 · Each Christmas Ghost used before, doubles the multiplier."
+    },
+    {
+      "n": "Phase Bombarder",
+      "img": "assets/wiki/phase-bombarder.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 50,
+      "varies": true,
+      "note": "Multiplies ore value by 15x · Infuses ore with Phase which can be used to activate ⟦Phase Processor⟧/⟦Phasecursor Furnace⟧ · ⟦Phasecursor Mine⟧ ores will receive 50x",
+      "wikiMpu": "x1.57 (normal) · x1.92 (Phasecursor Mine)"
+    },
+    {
+      "n": "Phase Refiner",
+      "img": "assets/wiki/phase-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 4,
+      "mult": 8,
+      "varies": true,
+      "note": "Multiplies ore value by x4 · Infuses ore with Phase which can activate ⟦Phase Processor⟧/⟦Phasecursor Furnace⟧ · ⟦Phasecursor Mine⟧ ore will receive x8",
+      "wikiMpu": "x1.41 (normal) · x1.68 (Phasecursor Mine)"
+    },
+    {
+      "n": "Pillars of Creation",
+      "img": "assets/wiki/pillars-of-creation.webp",
+      "kind": "Upgrader",
+      "tier": "Relic",
+      "len": 6,
+      "mult": 17,
+      "varies": true,
+      "note": "Multiplies ore value by x9 - x17 · Gives 1 of the following effects: · Fireproof · Poison Immunity · Radioactive Immunity · Frostbite Immunity · Wet (lasts 5 seconds)",
+      "wikiMpu": "x1.44 - x1.60"
+    },
+    {
+      "n": "Pineapple Refiner",
+      "img": "assets/wiki/pineapple-refiner-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 2,
+      "note": "Multiplies ore value by x2",
+      "wikiMpu": "x1.189"
+    },
+    {
+      "n": "Pineapple! Stand",
+      "img": "assets/wiki/pineapple-stand.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 3,
+      "mult": 3,
+      "varies": true,
+      "note": "Multiplies ore value by x3, x4 if Pineapple Refiner is used before",
+      "wikiMpu": "x1.44"
+    },
+    {
+      "n": "Pirate Cove",
+      "img": "assets/wiki/pirate-cove.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 21.2,
+      "varies": true,
+      "note": "For every \"flash\", ore value is multiplied by x1.13 up to 25 times. Total multiplier of 21.2x."
+    },
+    {
+      "n": "Pistachio Slice",
+      "img": "assets/wiki/pistachio-slice.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 11,
+      "note": "Multiplies ore value by x11",
+      "wikiMpu": "x1.821"
+    },
+    {
+      "n": "Pizza Blaster",
+      "img": "assets/wiki/pizza-blaster.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 6,
+      "mult": 4,
+      "note": "Multiplies ore value by x4",
+      "wikiMpu": "1.26"
+    },
+    {
+      "n": "Pizza Bombarder",
+      "img": "assets/wiki/pizza-bombarder.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 8,
+      "mult": 10,
+      "note": "Multiplies ore value by x10",
+      "wikiMpu": "x1.33"
+    },
+    {
+      "n": "Pizza Cutter",
+      "img": "assets/wiki/pizza-cutter.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn Fusion",
+      "len": 6,
+      "mult": 5,
+      "note": "Turns ore into 8 slices of pizza. · Upgrades ore by x5",
+      "wikiMpu": "1.308"
+    },
+    {
+      "n": "Pizza Oven",
+      "img": "assets/wiki/pizza-oven.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 80000,
+      "varies": true,
+      "note": "Upgrade ore value based on its upgrade counter, ranging from x8 to x80,000"
+    },
+    {
+      "n": "Pizza Parlor",
+      "img": "assets/wiki/pizza-parlor.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 50,
+      "varies": true,
+      "note": "Multiplied ore value by x50k to x5 based on upgrade counter"
+    },
+    {
+      "n": "Plague Doctor",
+      "img": "assets/wiki/plague-doctor.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 6,
+      "mult": 5,
+      "note": "Multiplies ore value by x5 · Removes Plague · Applies one of the following: · Fire · Poison · Radiation",
+      "wikiMpu": "x1.31"
+    },
+    {
+      "n": "Plasma Iron Polisher",
+      "img": "assets/wiki/plasma-iron-polisher.webp",
+      "kind": "Upgrader",
+      "tier": "Novice",
+      "len": 2,
+      "mult": 4,
+      "note": "Charged · Beam will be Pink · Multiplies ore value by x4 · Uncharged · Beam will be dark · Ore value is not multiplied · Requires 9 ore to recharge",
+      "wikiMpu": "x2.000"
+    },
+    {
+      "n": "Plasma Scanner",
+      "img": "assets/wiki/plasma-scanner.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 6,
+      "mult": 6.05,
+      "note": "Multiplies ore value by x6. · Does not share the same Machine tag with other scanners.",
+      "wikiMpu": "x1.35"
+    },
+    {
+      "n": "Portable Flamethrower",
+      "img": "assets/wiki/portable-flamethrower-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Premium",
+      "len": 2,
+      "mult": null,
+      "note": "+ $5k to ore value · Sets ore on fire"
+    },
+    {
+      "n": "Portable Macrowave",
+      "img": "assets/wiki/portable-macrowave.webp",
+      "kind": "Upgrader",
+      "tier": "Epic",
+      "len": 2,
+      "mult": 1.8,
+      "note": "Multiplies ore value by x1.8 (80% increase)"
+    },
+    {
+      "n": "Portable Ore Enhancer",
+      "img": "assets/wiki/portable-ore-enhancer.webp",
+      "kind": "Upgrader",
+      "tier": "Intermediate",
+      "len": 2,
+      "mult": 1.25,
+      "note": "Increases ore value by 25%"
+    },
+    {
+      "n": "Portable Ore Refiner",
+      "img": "assets/wiki/portable-ore-advancer-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Novice",
+      "len": 2,
+      "mult": 1.15,
+      "note": "Increases ore value by 15%"
+    },
+    {
+      "n": "Portable Ore Stopper",
+      "img": "assets/wiki/portable-ore-stopper.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced",
+      "len": 2,
+      "mult": 1.5,
+      "note": "Increases ore value by 50%"
+    },
+    {
+      "n": "Portable Pearl Enhancer",
+      "img": "assets/wiki/portable-pearl-enhancer.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 5,
+      "mult": 6,
+      "note": "Multiplies ore value by x6"
+    },
+    {
+      "n": "Portable Tractor Beam",
+      "img": "assets/wiki/portable-tractor-beam.webp",
+      "kind": "Upgrader",
+      "tier": "Hydraulic",
+      "len": 4,
+      "mult": 1.2,
+      "note": "Multiplies ore value by x1.2"
+    },
+    {
+      "n": "Pot of Gold-inator",
+      "img": "assets/wiki/pot-of-gold-inator.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 6,
+      "note": "Multiplies ore value by x6 and turns ores into gold",
+      "wikiMpu": "x1.348"
+    },
+    {
+      "n": "Precision Refiner",
+      "img": "assets/wiki/precision-refiner-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced",
+      "len": 4,
+      "mult": 1.5,
+      "varies": true,
+      "note": "Multiplies ore value by x1.5 · Ore larger than 1.3x1.3x1.3 are ignited",
+      "wikiMpu": "x1.106"
+    },
+    {
+      "n": "Present Refiner",
+      "img": "assets/wiki/present-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 3,
+      "mult": 4,
+      "note": "Multiplies ore value by x4 · 33% Chance to apply Red or Green Sparkles",
+      "wikiMpu": "1.59"
+    },
+    {
+      "n": "Present Schrodinger",
+      "img": "assets/wiki/present-schrodinger.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 4,
+      "mult": null
+    },
+    {
+      "n": "Professional Upgrader",
+      "img": "assets/wiki/professional-upgrader-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Premium",
+      "len": 4,
+      "mult": 1.3,
+      "note": "Multiplies ore value by 1.3x",
+      "wikiMpu": "x1.07"
+    },
+    {
+      "n": "Protector of the Passage",
+      "img": "assets/wiki/protector-of-the-passage.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn Fusion",
+      "len": 7,
+      "mult": 125,
+      "varies": true,
+      "note": "Night: · Base owner is at base: x95 · Base owner is away from base: x125 · Daytime: · Base owner is at base: x50 · Base owner is away from base: x80",
+      "wikiMpu": "1.75x (day) · 1.92x (night) · 1.87x (day, away) · 1.99x (night, away)"
+    },
+    {
+      "n": "Pumpkin Carriage",
+      "img": "assets/wiki/pumpkin-carriage.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 3,
+      "note": "Multiplies ore value by x3",
+      "wikiMpu": "x1.22"
+    },
+    {
+      "n": "Pumpkin Hero",
+      "img": "assets/wiki/pumpkin-hero.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 4,
+      "note": "Multiplies the ore's value by 4x before adding $1k",
+      "wikiMpu": "1.414"
+    },
+    {
+      "n": "Pumpkin Hut",
+      "img": "assets/wiki/pumpkin-hut.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 6,
+      "mult": 4,
+      "varies": true,
+      "note": "Multiplies ore value by 4x. · Ore size is increased by 10%."
+    },
+    {
+      "n": "Pumpkin Patch",
+      "img": "assets/wiki/pumpkin-patch.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 5,
+      "mult": 2,
+      "note": "Upgrades ore by x2",
+      "wikiMpu": "x1.148"
+    },
+    {
+      "n": "Pumpkin Pie Refiner",
+      "img": "assets/wiki/pumpkin-pie-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 1.8,
+      "note": "Multiplies ore value by 1.8x · Adds 2 Candy value to candy ore",
+      "wikiMpu": "x1.16"
+    },
+    {
+      "n": "Pumpkin Spice Refiner",
+      "img": "assets/wiki/pumpkin-spice-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 6,
+      "mult": 2.5,
+      "note": "+2 Candy · Multiplies ore value by x2.5",
+      "wikiMpu": "x1.16"
+    },
+    {
+      "n": "Purple Rock Candyizer",
+      "img": "assets/wiki/purple-rock-candyizer.webp",
+      "kind": "Upgrader",
+      "tier": "Quest",
+      "len": 4,
+      "mult": 1.5,
+      "note": "Multiplies ore value by x1.5 · Transforms Candy ore into Purple rock candy · Turns ores Purple",
+      "wikiMpu": "x1.107"
+    },
+    {
+      "n": "Purrñata",
+      "img": "assets/wiki/purrnata.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 3,
+      "mult": 3,
+      "note": "Multiplies ore value by 3x · Makes a party horn noise whenever an ore passes through",
+      "wikiMpu": "1.442x"
+    },
+    {
+      "n": "Putrid Farmyard",
+      "img": "assets/wiki/putrid-farmyard.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 4,
+      "note": "Upgrades ore by x4 · Makes ores radioactive"
+    },
+    {
+      "n": "Quaint Skymill",
+      "img": "assets/wiki/quaint-skymill.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 6,
+      "mult": 13.2,
+      "varies": true,
+      "note": "Multiplies ore value based on height.Minimum of x9 (bottom) and x12 (top) · Maximum of x9.9 (bottom) and x13.2 (top)",
+      "wikiMpu": "x1.44-1.47 (bottom) · x1.86-1.9 (top) · x1.60-1.63 (both)"
+    },
+    {
+      "n": "Quantum Clockwork",
+      "img": "assets/wiki/quantum-clockwork.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn Fusion",
+      "len": 4,
+      "mult": 30,
+      "varies": true,
+      "note": "Quantum beam: x5 · Clockwork beam: x6 · Total: x30",
+      "wikiMpu": "x2.34 (Both beams hit) · x1.57 (Only Fine-point beam) · x1.50 (Only horizontal b"
+    },
+    {
+      "n": "Quantum Ore Cleaner",
+      "img": "assets/wiki/quantum-ore-cleaner.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 4,
+      "mult": 4,
+      "note": "Multiplies ore value by 4x",
+      "wikiMpu": "1.41x"
+    },
+    {
+      "n": "Quantum Ore Polisher",
+      "img": "assets/wiki/quantum-ore-polisher.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 5,
+      "mult": 8.11,
+      "note": "Multiplies ores by x8.",
+      "wikiMpu": "x1.52"
+    },
+    {
+      "n": "Radio Tower",
+      "img": "assets/wiki/radio-tower.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 8,
+      "mult": 20,
+      "note": "Upgrades dropped ore by x20"
+    },
+    {
+      "n": "Radioactive Refiner",
+      "img": "assets/wiki/radioactive-refiner-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Intermediate",
+      "len": 6,
+      "mult": 3,
+      "note": "Multiplies ore value by x3",
+      "wikiMpu": "x1.201"
+    },
+    {
+      "n": "Rainbow Blaster",
+      "img": "assets/wiki/rainbow-blaster.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 3,
+      "mult": 5,
+      "note": "Multiplies ore value by x5"
+    },
+    {
+      "n": "Rainbow Refiner",
+      "img": "assets/wiki/rainbow-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 2,
+      "mult": 4,
+      "note": "Multiplies ore value by 4x",
+      "wikiMpu": "x2"
+    },
+    {
+      "n": "Rainbow Upgrader",
+      "img": "assets/wiki/rainbow-upgrader-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Premium",
+      "len": 6,
+      "mult": 1.97,
+      "varies": true,
+      "note": "Increases orevalue randomly from 5%-100% (based on color)",
+      "wikiMpu": "Minimum: · x1.01 · Maximum: · x1.12"
+    },
+    {
+      "n": "Raised Wide Upgrader",
+      "img": "assets/wiki/raised-wide-upgrader-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Intermediate",
+      "len": 1,
+      "mult": null,
+      "note": "Adds value to ore based on current value"
+    },
+    {
+      "n": "Reaper's Fortress",
+      "img": "assets/wiki/reaper-s-fortress.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 3,
+      "mult": 7.5,
+      "varies": true,
+      "note": "Multiplies ore value by x5 - x7.5",
+      "wikiMpu": "x1.71-x1.96, geometric mean x1.84"
+    },
+    {
+      "n": "Red Giant",
+      "img": "assets/wiki/red-giant.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 6,
+      "mult": 1.7,
+      "varies": true,
+      "note": "Upgrades ore from x1.7 to x1.07 · Conveyor centers ore"
+    },
+    {
+      "n": "Red Velvet Cake",
+      "img": "assets/wiki/red-velvet-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 12,
+      "note": "Multiplies ore value by 12x · Makes ore color red and neon material",
+      "wikiMpu": "~1.42"
+    },
+    {
+      "n": "Red Velvet Cupcake",
+      "img": "assets/wiki/red-velvet-cupcake.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 6,
+      "mult": null,
+      "note": "Increases the multiplier of most cake upgraders and furnaces on the ore. · Turns ore red or white."
+    },
+    {
+      "n": "Repulsion Device",
+      "img": "assets/wiki/repulsion-device.webp",
+      "kind": "Upgrader",
+      "tier": "Mythic",
+      "len": 2,
+      "mult": 6,
+      "note": "Multiplies the value of every 10th ore by 6x",
+      "wikiMpu": "x2.45"
+    },
+    {
+      "n": "Robotic Enhancer",
+      "img": "assets/wiki/robotic-enhancer.webp",
+      "kind": "Upgrader",
+      "tier": "Contraband",
+      "len": 4,
+      "mult": 6,
+      "varies": true,
+      "note": "1st beam: x2 · 2nd beam: x3 · ----Total of x6 · Ore receives Smoking status effect.",
+      "wikiMpu": "x1.57"
+    },
+    {
+      "n": "Rose Palace",
+      "img": "assets/wiki/rose-palace.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 4,
+      "mult": 5,
+      "note": "First Ore: · x5 · Second Ore: · Makes a copy of the previous ore, if there was one before it",
+      "wikiMpu": "x1.49"
+    },
+    {
+      "n": "Rotary Upgrader",
+      "img": "assets/wiki/rotary-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Legendary",
+      "len": 5,
+      "mult": 4,
+      "note": "Upgrades ore by x4, given if they are able to hit the upgrade beam."
+    },
+    {
+      "n": "Royal Rabbit",
+      "img": "assets/wiki/royal-rabbit.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 5.5,
+      "note": "Multiplies ore value by x5.5",
+      "wikiMpu": "x1.53"
+    },
+    {
+      "n": "Ruby Crystallizer",
+      "img": "assets/wiki/ruby-crystallizer.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 3,
+      "mult": 10,
+      "note": "Multiplies ore value by x10",
+      "wikiMpu": "x2.154"
+    },
+    {
+      "n": "Rush Upgrader",
+      "img": "assets/wiki/rush-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Intermediate",
+      "len": 6,
+      "mult": 5,
+      "note": "Multiplies ore value by 1 to 5x depending on number of ores that pass through. · Adds between $500 to $20k to ore value depending on number of ores that pass through.",
+      "wikiMpu": "20 ores/sec - x1.316 · 40 ores/sec - x1.495"
+    },
+    {
+      "n": "Sacred Totem",
+      "img": "assets/wiki/sacred-totem.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 7,
+      "note": "Multiplies ore value by 7x. · Sets ore on fire.",
+      "wikiMpu": "x1.38"
+    },
+    {
+      "n": "Sandshark",
+      "img": "assets/wiki/sandshark-sender.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 7,
+      "mult": 10,
+      "note": "Multiplies ore value by x10 · Ignites ores"
+    },
+    {
+      "n": "Santa's Castle",
+      "img": "assets/wiki/santa-s-castle.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 6,
+      "varies": true,
+      "note": "Base multiplier x6 · Being upgraded by the below Winter-themed upgraders increase the base multiplier by +2. · ⟦Ghost of Christmas Past⟧ · ⟦Santa's Deluxe Sleigh⟧ · ⟦Santa's Sleigh"
+    },
+    {
+      "n": "Santa's Deluxe Sleigh",
+      "img": "assets/wiki/santa-s-deluxe-sleigh.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 5,
+      "mult": 4,
+      "varies": true,
+      "note": "Upgrades ore value by x3 · Multiplier goes to x4 if upgraded by a Santa's Sleigh",
+      "wikiMpu": "x1.25 (standard) · x1.32 (Santa's Sleigh)"
+    },
+    {
+      "n": "Santa's Nice List",
+      "img": "assets/wiki/santa-s-nice-list.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 5,
+      "mult": 5,
+      "note": "Multiplies ore value by x1 to x5Applying different effects · (see overview)",
+      "wikiMpu": "1.38x (44%) · 1.35x (40%) · 1.32x (4%) · 1.25x (4%) · 1.15x (4%) · 1x (4%)"
+    },
+    {
+      "n": "Santa's Sleigh",
+      "img": "assets/wiki/santa-s-sleigh-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 4,
+      "note": "Multiplies ore value by x4",
+      "wikiMpu": "x1.41"
+    },
+    {
+      "n": "Santa's Train",
+      "img": "assets/wiki/santa-s-train.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 5,
+      "mult": null,
+      "note": "+3 to Present Value",
+      "wikiMpu": "x1"
+    },
+    {
+      "n": "Santa's Workclock",
+      "img": "assets/wiki/santa-s-workclock.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 2,
+      "mult": 5,
+      "note": "Multiplies ore value by x5. · +2 to Present Value",
+      "wikiMpu": "x2.236"
+    },
+    {
+      "n": "Satellite Beam",
+      "img": "assets/wiki/satellite-beam.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced",
+      "len": 3,
+      "mult": 3,
+      "varies": true,
+      "note": "Upgrades ore based on their value: · $0 to $1M: · x2 then +$1k · >$1M: x3"
+    },
+    {
+      "n": "Saturated Catalyst",
+      "img": "assets/wiki/saturated-catalyst.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 7.99,
+      "note": "Multiplies ore value by x8.",
+      "wikiMpu": "x1.414"
+    },
+    {
+      "n": "Scales of Disparity",
+      "img": "assets/wiki/scales-of-disparity.webp",
+      "kind": "Upgrader",
+      "tier": "Enchanted",
+      "len": 7,
+      "mult": 60,
+      "varies": true,
+      "note": "While Placed: · Make all food items Rot · (x0.925 multiplier to all food items while also applying 1 stack of Rot) · Base multiplier of x60 · +x5 for every stack of Rot tag · Conve",
+      "wikiMpu": "x1.794 (base)"
+    },
+    {
+      "n": "Schrodinger Chamber",
+      "img": "assets/wiki/schrodinger-chamber.webp",
+      "kind": "Upgrader",
+      "tier": "Hydraulic",
+      "len": 2,
+      "mult": null
+    },
+    {
+      "n": "Schrodinger Evaluator",
+      "img": "assets/wiki/schrodinger-evaluator-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Epic",
+      "len": 4,
+      "mult": 6.08,
+      "varies": true,
+      "wikiMpu": "x1.2 - x1.57 (Excluding other effects)"
+    },
+    {
+      "n": "Scorching Heat",
+      "img": "assets/wiki/scorching-heat.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 5,
+      "mult": 5,
+      "note": "Multiplies flaming or fireproof ore value by 5x"
+    },
+    {
+      "n": "Searing Heat",
+      "img": "assets/wiki/searing-heat.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 11,
+      "note": "If ore is: · Flaming or fireproof: 11x · Non-flaming: Set on fire",
+      "wikiMpu": "x1.49"
+    },
+    {
+      "n": "Serpentine Upgrader",
+      "img": "assets/wiki/serpentine-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Epic",
+      "len": 4,
+      "mult": 1.4,
+      "note": "Increases ore value by 40% (x1.4 multiplier)"
+    },
+    {
+      "n": "Shamrock Factory",
+      "img": "assets/wiki/shamrock-factory.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 9,
+      "note": "When fueled: x9 · Turns ore into gold.",
+      "wikiMpu": "x1.44"
+    },
+    {
+      "n": "Shard City",
+      "img": "assets/wiki/shard-city.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 7,
+      "mult": 16,
+      "note": "Multiplies ore value by number of Shards of Life ÷ 4 up to 16x at 64 Shards of Life",
+      "wikiMpu": "x1 (minimum) · x1.49 (maximum)"
+    },
+    {
+      "n": "Shard Park",
+      "img": "assets/wiki/shard-park.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 5,
+      "mult": 10,
+      "note": "Multiplies ore value dependent on how many Shards of Life Shards of Life the user has, up to 10x (36 shards)",
+      "wikiMpu": "x1.57 (max)"
+    },
+    {
+      "n": "Shiny Red Upgrader",
+      "img": "assets/wiki/shiny-red-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 3,
+      "mult": 1.5,
+      "note": "Multiplies ore value by x1.5 · Increases multiplier of ⟦Santa's Castle⟧ by +3",
+      "wikiMpu": "x1.14"
+    },
+    {
+      "n": "Silkweaver",
+      "img": "assets/wiki/silkweaver.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 2,
+      "mult": 1.75,
+      "note": "Multiplies ore value by 1.75x.",
+      "wikiMpu": "x1.32"
+    },
+    {
+      "n": "Sinister Sepulcher",
+      "img": "assets/wiki/sinister-sepulcher.webp",
+      "kind": "Upgrader",
+      "tier": "Slipstream",
+      "len": 5,
+      "mult": 10,
+      "note": "Multiply ore value by x10k.",
+      "wikiMpu": "x6.310 (base) · x0.1 (square root)"
+    },
+    {
+      "n": "Sinister Sepulcher (Renegade)",
+      "img": "assets/wiki/sinister-sepulcher.webp",
+      "kind": "Upgrader",
+      "tier": "Renegade",
+      "len": 5,
+      "mult": 10,
+      "note": "Multiply ore value by x10k.",
+      "wikiMpu": "x6.310 (base) · x0.1 (square root)"
+    },
+    {
+      "n": "Skydance Serenade",
+      "img": "assets/wiki/skydance-serenade.webp",
+      "kind": "Upgrader",
+      "tier": "Slipstream",
+      "len": 6,
+      "mult": 70,
+      "note": "Multiplies ore value by x70 · Remove most status effects · plays a jingle when an ore is upgraded",
+      "wikiMpu": "x2.03"
+    },
+    {
+      "n": "Skydance Serenade (Renegade)",
+      "img": "assets/wiki/skydance-serenade.webp",
+      "kind": "Upgrader",
+      "tier": "Renegade",
+      "len": 6,
+      "mult": 45,
+      "note": "Multiplies ore value by x45 · Remove most status effects · plays a jingle when an ore is upgraded",
+      "wikiMpu": "x1.885"
+    },
+    {
+      "n": "Skyliner Flux",
+      "img": "assets/wiki/skyliner-flux.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 6,
+      "mult": 4,
+      "note": "Multiplies ore value by x4"
+    },
+    {
+      "n": "Smore Cake",
+      "img": "assets/wiki/smore-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 5,
+      "mult": 7,
+      "note": "Multiplies ore value by 7x · Chance to set ore on fire",
+      "wikiMpu": "x1.48"
+    },
+    {
+      "n": "Snowflake Suppressor",
+      "img": "assets/wiki/snowflake-suppressor.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 3,
+      "mult": 1.25,
+      "note": "Multiplies ore value by 1.25x · +2 to Present Value",
+      "wikiMpu": "x1.08"
+    },
+    {
+      "n": "Snowflake Wheel",
+      "img": "assets/wiki/snowflake-wheel.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 4,
+      "mult": 6,
+      "note": "Multiplies ore value by x6 · +2 to Present Value"
+    },
+    {
+      "n": "Snowglobe Refiner",
+      "img": "assets/wiki/snowglobe-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 2.5,
+      "varies": true,
+      "note": "1st usage: 2.5x · 2nd to 4th usage: 1.5x",
+      "wikiMpu": "1st usage: x1.260 · 2nd to 4th usage: x1.110"
+    },
+    {
+      "n": "Soapy Refiner",
+      "img": "assets/wiki/soapy-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 3,
+      "mult": 3,
+      "note": "Multiplies ore value by 3x · Applies wet for 5 seconds · Removes negative status effects",
+      "wikiMpu": "x1.44"
+    },
+    {
+      "n": "Soaring Chopper",
+      "img": "assets/wiki/soaring-chopper.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 4,
+      "mult": 4,
+      "note": "Multiply ore value by x4 · Makes ore Forcefield material",
+      "wikiMpu": "x1.41"
+    },
+    {
+      "n": "Solar Apocalypse",
+      "img": "assets/wiki/solar-apocalypse.webp",
+      "kind": "Upgrader",
+      "tier": "Relic",
+      "len": 6,
+      "mult": 7.86,
+      "note": "Multiplies ore value by x8. · Applies Eternal Flames. · Increase multiplier of Awakened Jack O Lantern",
+      "wikiMpu": "x1.41"
+    },
+    {
+      "n": "Solar Large Upgrader",
+      "img": "assets/wiki/solar-large-upgrader-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Proficient",
+      "len": 6,
+      "mult": 1.34,
+      "note": "Increases ore value by x1.35.",
+      "wikiMpu": "x1.05"
+    },
+    {
+      "n": "Son of Poison",
+      "img": "assets/wiki/son-of-poison.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Reborn",
+      "len": 6,
+      "mult": 80,
+      "varies": true,
+      "note": "Standalone: · Multiplies ore value by 12x · Poisons ore · Last: · Does not poison ores · Ore value multiplied by 80x · Ore loses 2% of its value (compounded) every 0.5s for 5s · To",
+      "wikiMpu": "x1.51 (standalone) · x2.01 (last)"
+    },
+    {
+      "n": "Spaghetti & Meatballs",
+      "img": "assets/wiki/spaghetti-meatballs.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 5,
+      "mult": 74.8,
+      "note": "Multiplies ore value by x75. · Applies a sphere mesh and change ore material to pebble to imitate a meatball",
+      "wikiMpu": "2.37"
+    },
+    {
+      "n": "Sparking Boba",
+      "img": "assets/wiki/sparking-boba.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 5,
+      "mult": 22,
+      "note": "Multiplies ore value by x22",
+      "wikiMpu": "x1.855"
+    },
+    {
+      "n": "Spector of Christmas Present",
+      "img": "assets/wiki/spector-of-christmas-present.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 2,
+      "mult": 3,
+      "note": "Standalone: · Multiplies ore value by x3 · Each Christmas Ghost used before, doubles the multiplier."
+    },
+    {
+      "n": "Spectral Purgatory",
+      "img": "assets/wiki/spectral-purgatory.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 5,
+      "mult": 6,
+      "note": "Multiplies ore value by x6 · Changes ore transparency · Makes ore cyan"
+    },
+    {
+      "n": "Spectral Upgrader",
+      "img": "assets/wiki/spectral-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Novice",
+      "len": 1,
+      "mult": 4.2,
+      "note": "Base multiplier of x4.2 · Multiplier is reduced by -0.1 for each machine tag",
+      "wikiMpu": "0 machine tags - x4.200 · (multiplier per length = normal multiplier)"
+    },
+    {
+      "n": "Speggtral Rose",
+      "img": "assets/wiki/speggtral-rose.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 6,
+      "mult": 8,
+      "note": "Multiplies Ore by 6-8x. Depending on multiplier, Ores turn transparent."
+    },
+    {
+      "n": "Sphinx of Luxor",
+      "img": "assets/wiki/sphinx-of-luxor.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 5,
+      "mult": 8,
+      "varies": true,
+      "note": "Multiplies ore based on how long the ore existed, increased by x0.2 per second. · ----Base multiplier of x2 · Maximum of x8",
+      "wikiMpu": "x1.148 (min) · x1.515 (max)"
+    },
+    {
+      "n": "Spider Queen",
+      "img": "assets/wiki/spider-queen.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 1.75,
+      "note": "Multiplies ore value by x1.75 · Poisons ore",
+      "wikiMpu": "?"
+    },
+    {
+      "n": "Spires of Conquest",
+      "img": "assets/wiki/spires-of-conquest.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 6,
+      "mult": 25,
+      "varies": true,
+      "note": "Multiplier of x20 · Apply 10 seconds of ConqueredAfter ⟦Conqueror's Delusion⟧: · Multiplier of x25 · Apply 10 seconds of Conqueror",
+      "wikiMpu": "x1.648 (base) · x1.710 (max base)x1.257 (min) · x2.159 (max)"
+    },
+    {
+      "n": "Spirit of Fire",
+      "img": "assets/wiki/spirit-of-fire.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Reborn",
+      "len": 6,
+      "mult": 10,
+      "varies": true,
+      "note": "Standalone: · Multiplies ore value by 10x · Sets ore on fire · Last: · Multiplies ore value by 7x · Ore is changed to neon orange",
+      "wikiMpu": "x1.47 (standalone) · x1.38 (last)"
+    },
+    {
+      "n": "Spooklord Device",
+      "img": "assets/wiki/spooklord-device.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 7,
+      "note": "Upgrades ore value by x7Can be used with ⟦Overlord Device⟧ or ⟦True Overlord Device⟧.",
+      "wikiMpu": "x1.40"
+    },
+    {
+      "n": "Spooktastic Refiner",
+      "img": "assets/wiki/spooktastic-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 1.9,
+      "note": "Multiplies ore value by x1.9",
+      "wikiMpu": "x1.17"
+    },
+    {
+      "n": "Spooky Schrodinger",
+      "img": "assets/wiki/spooky-schrodinger.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": null
+    },
+    {
+      "n": "Sporegg Hut",
+      "img": "assets/wiki/sporegg-hut.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 5,
+      "mult": 4.5,
+      "note": "Multiply ore by 4.5x. Has a chance to poison ores.",
+      "wikiMpu": "x1.35"
+    },
+    {
+      "n": "Stardust Illuminator",
+      "img": "assets/wiki/stardust-illuminator.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Fusion",
+      "len": 6,
+      "mult": 66,
+      "note": "Multiplies ore value by 66x. · Time taken for education for ⟦Gargantium Mine⟧'s ores becomes instantaneous."
+    },
+    {
+      "n": "Stardust Pulsar",
+      "img": "assets/wiki/stardust-pulsar.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Reborn",
+      "len": 4,
+      "mult": 35,
+      "note": "Multiplies ore value by 35x"
+    },
+    {
+      "n": "Statue of Knowledge",
+      "img": "assets/wiki/statue-of-knowledge.webp",
+      "kind": "Upgrader",
+      "tier": "Fabled",
+      "len": 2,
+      "mult": 2.5,
+      "note": "Multiplies ore value by 2.5x"
+    },
+    {
+      "n": "Steel Refinery",
+      "img": "assets/wiki/steel-refinery.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": null,
+      "note": "If objective is not completed: · Turns iron ore into steel. · If objective is completed: · Turns iron ore into steel, worth $500."
+    },
+    {
+      "n": "Stellar Bombardment",
+      "img": "assets/wiki/stellar-bombardment.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 5,
+      "mult": 6,
+      "varies": true,
+      "wikiMpu": "x1.148 (min) · x1.431 (max)"
+    },
+    {
+      "n": "Stratospheric Refiner",
+      "img": "assets/wiki/stratospheric-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Vintage",
+      "len": 4,
+      "mult": 4,
+      "note": "Multiplies ore value by 1-4x depending on height from surface it is placed on",
+      "wikiMpu": "x1 (minimum) · x1.41 (maximum)"
+    },
+    {
+      "n": "Strawberry Cake",
+      "img": "assets/wiki/strawberry-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 10,
+      "note": "Upgrades ore by x10 and turns it pink",
+      "wikiMpu": "x1.47"
+    },
+    {
+      "n": "Sugar Corroder",
+      "img": "assets/wiki/sugar-corroder.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 8,
+      "mult": 1.7,
+      "note": "Multiplies ore value by x1.7 · + 1 Candy to candy ore.",
+      "wikiMpu": "x1.07"
+    },
+    {
+      "n": "Suitopian Refiner",
+      "img": "assets/wiki/suitopian-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Slipstream",
+      "len": 6,
+      "mult": 10,
+      "note": "Multiplies ore value by 0x to 10x up to ten times."
+    },
+    {
+      "n": "Suitopian Refiner (Renegade)",
+      "img": "assets/wiki/suitopian-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Renegade",
+      "len": 6,
+      "mult": 10,
+      "note": "Randomly multiply ore value by x0 to x10 for up to ten times.",
+      "wikiMpu": "x1.47 (best scenario) · x0.00 (worst scenario)"
+    },
+    {
+      "n": "Sun Mask",
+      "img": "assets/wiki/sun-mask.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 8,
+      "note": "Multiplies ore value by x8 · Apply a one time protection from fire.",
+      "wikiMpu": "x1.682"
+    },
+    {
+      "n": "Super Schrodinger",
+      "img": "assets/wiki/super-schrodinger.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": null
+    },
+    {
+      "n": "Suspended Lava Refiner",
+      "img": "assets/wiki/suspended-lava-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Divine",
+      "len": 6,
+      "mult": 1.4,
+      "note": "Increases ore value by 40%.",
+      "wikiMpu": "1.06"
+    },
+    {
+      "n": "Suspended Refiner",
+      "img": "assets/wiki/suspended-refiner-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Legendary",
+      "len": 6,
+      "mult": 1.7,
+      "note": "Multiplies ore value by 1.7x.",
+      "wikiMpu": "x1.09"
+    },
+    {
+      "n": "Swag City",
+      "img": "assets/wiki/swag-city.webp",
+      "kind": "Upgrader",
+      "tier": "Superstitious",
+      "len": 6,
+      "mult": 185.193,
+      "varies": true,
+      "note": "During the day, each beam does 4.5x for a total multiplier of 91.125x · During the night, each beam does 5.7x for a total multiplier of 185.193x",
+      "wikiMpu": "x2.12-x2.39"
+    },
+    {
+      "n": "Tea Eggle Gardens",
+      "img": "assets/wiki/tea-eggle-gardens.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 4,
+      "mult": 4,
+      "note": "x4 multiplier · Removes Poison effect.",
+      "wikiMpu": "x1.414"
+    },
+    {
+      "n": "Teddy Bear Stuffer",
+      "img": "assets/wiki/teddy-bear-stuffer.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": null,
+      "note": "Turns silicon ore into Teddy Bears that can be wrapped with the ⟦Ore Wrapper⟧ and turned into presents with ⟦Present Center⟧."
+    },
+    {
+      "n": "Tempest Refiner",
+      "img": "assets/wiki/tempest-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 10,
+      "varies": true,
+      "note": "1st upgrade: · Multiplies ore value by 6x to 10x · 2nd upgrade: · Does nothing · 3rd upgrade and onward: · Random chance of 1 of the 3 outcomes occuring: · Does nothing · Multiplie",
+      "wikiMpu": "x1.35-x1.47"
+    },
+    {
+      "n": "Temporal Armageddon",
+      "img": "assets/wiki/temporal-armageddon.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 4,
+      "mult": 47.8,
+      "varies": true,
+      "note": "Multiplier and Effect dependant on ore lifespan. · Longer lifespan equates to better stats.",
+      "wikiMpu": "Max: 2.63 · Min: 2.43"
+    },
+    {
+      "n": "Tesla Refuter",
+      "img": "assets/wiki/tesla-refuter.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 5,
+      "mult": 10,
+      "note": "Functions like the Tesla Resetter, but upgrades ores before removing all tags. · The multiplier starts at x1 and increases by x1/15 (~x0.067) for every tag the ore being reset has,"
+    },
+    {
+      "n": "Test Upgrader",
+      "img": "assets/wiki/test-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Fabled",
+      "len": 2,
+      "mult": null,
+      "note": "Sets ore value to $100. · Apply a chosen status effect."
+    },
+    {
+      "n": "The Baron",
+      "img": "assets/wiki/the-baron.webp",
+      "kind": "Upgrader",
+      "tier": "Phantasmal",
+      "len": 8,
+      "mult": 6.5,
+      "note": "Multiplies ore value by x6.5",
+      "wikiMpu": "x1.26"
+    },
+    {
+      "n": "The Beehive",
+      "img": "assets/wiki/the-beehive.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 2,
+      "mult": 3.5,
+      "note": "Adds $10k to ore value · Multiplies ore value by x3.5",
+      "wikiMpu": "x1.87"
+    },
+    {
+      "n": "The Boy",
+      "img": "assets/wiki/the-boy.webp",
+      "kind": "Upgrader",
+      "tier": "Phantasmal",
+      "len": 4,
+      "mult": 1.75,
+      "note": "Multiplies ore value by x1.75 · Sets ore on fire."
+    },
+    {
+      "n": "The Catalyst",
+      "img": "assets/wiki/the-catalyst.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 6,
+      "mult": 4,
+      "note": "Multiplies ore value by x4",
+      "wikiMpu": "x1.26"
+    },
+    {
+      "n": "The Chaosrealm",
+      "img": "assets/wiki/the-chaosrealm.webp",
+      "kind": "Upgrader",
+      "tier": "Enchanted",
+      "len": 6,
+      "mult": 1.05,
+      "note": "Upgrades ore by ×7-11. · Applies green fire effect that lasts forever and will increase ore value by 5%.",
+      "wikiMpu": "x1.38 - x86.96"
+    },
+    {
+      "n": "The Cherry Pie",
+      "img": "assets/wiki/the-cherry-pie.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 3.6,
+      "varies": true,
+      "note": "Multiplies ore value by x1.8 · Ore that have been upgraded by the Blueberry Pie will multiply ore value by 3.6x · Changes ore color to red and ore material to pebble"
+    },
+    {
+      "n": "The Cookinator",
+      "img": "assets/wiki/the-cookinator.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 2,
+      "mult": 1.3,
+      "note": "+1 Candy to candy ores. · Multiply ore value by 1.3x. · Sets ores on fire",
+      "wikiMpu": "x1.14"
+    },
+    {
+      "n": "The Cornucopia",
+      "img": "assets/wiki/the-cornucopia.webp",
+      "kind": "Upgrader",
+      "tier": "Enchanted",
+      "len": 6,
+      "mult": 10,
+      "note": "x10 multiplier with an added 50% buff to all subsequent food upgraders · Effect is removable via Resetting Devices · 1/200 chance of upgrading every ore in the server by x2.",
+      "wikiMpu": "x1.467 (minimum) · x2.885 (maximum)"
+    },
+    {
+      "n": "The Cosmic Tower",
+      "img": "assets/wiki/the-cosmic-tower.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 8,
+      "mult": 35,
+      "note": "One-time multiplier of 35x to dropped ores."
+    },
+    {
+      "n": "The Crazy Hamburger",
+      "img": "assets/wiki/the-crazy-hamburger.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 5,
+      "mult": 2,
+      "note": "Multiplies ore value by 2x",
+      "wikiMpu": "x1.15"
+    },
+    {
+      "n": "The Cryolyst",
+      "img": "assets/wiki/the-cryolyst.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 6,
+      "mult": 4,
+      "note": "Multiplies ore value by x4 · +2 to Present Value",
+      "wikiMpu": "x1.20"
+    },
+    {
+      "n": "The Darkest Upgrader",
+      "img": "assets/wiki/the-darkest-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Fabled",
+      "len": 4,
+      "mult": 5,
+      "note": "Multiplies ore value by x5",
+      "wikiMpu": "x1.500"
+    },
+    {
+      "n": "The Death Cap",
+      "img": "assets/wiki/the-death-cap.webp",
+      "kind": "Upgrader",
+      "tier": "Superstitious",
+      "len": 8,
+      "mult": 130,
+      "note": "Base multiplier of x130 · Multiplier increases additively with status effects · Removes all status effects from ore · (Except Voided)",
+      "wikiMpu": "x1.84 (minimum) · x1.95 (maximum)"
+    },
+    {
+      "n": "THE DECADE",
+      "img": "assets/wiki/the-decade.webp",
+      "kind": "Upgrader",
+      "tier": "Phantasmal",
+      "len": 5,
+      "mult": 21.4,
+      "varies": true,
+      "note": "Upgrade ores based on your Life and Mastery Completion.",
+      "wikiMpu": "x1.588 (minimum) · x1.846 (1200+ items)"
+    },
+    {
+      "n": "The Demon",
+      "img": "assets/wiki/the-demon.webp",
+      "kind": "Upgrader",
+      "tier": "Phantasmal",
+      "len": 6,
+      "mult": 6,
+      "note": "Multiplies ore value by x6 · ----Multiplier increased by: · +2.5 if upgraded by a SpookDemon-66,666 ghost",
+      "wikiMpu": "x1.35 · x1.43 with SpookDemon-66,666"
+    },
+    {
+      "n": "The Dust Devil",
+      "img": "assets/wiki/the-dust-devil.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 4,
+      "mult": null,
+      "note": "Multiplier is the sum of the three dimensions of the ore (length, width, height)"
+    },
+    {
+      "n": "The Egg Portal",
+      "img": "assets/wiki/the-egg-portal.webp",
+      "kind": "Upgrader",
+      "tier": "Relic",
+      "len": 5,
+      "mult": 16,
+      "varies": true,
+      "note": "Base multiplier of x10 · Increased by +x2 for certain status effects.Maximum of x16",
+      "wikiMpu": "x1.584 (min) · x1.741 (max)"
+    },
+    {
+      "n": "The Eternal Overseer",
+      "img": "assets/wiki/the-eternal-overseer.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 9,
+      "mult": 15,
+      "note": "Upgrades all ore on base by x15"
+    },
+    {
+      "n": "The Final Upgrader",
+      "img": "assets/wiki/the-final-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Ultimate",
+      "len": 7,
+      "mult": 1000,
+      "varies": true,
+      "note": "1st usage: · Multiplies ore value by 50x · Resets Machine tags · Resets status effects · 2nd usage: · Multiplies ore value by based on time since last upgrade · Ranges from 5x to 1"
+    },
+    {
+      "n": "The Grand Prism",
+      "img": "assets/wiki/the-grand-prism.webp",
+      "kind": "Upgrader",
+      "tier": "Slipstream",
+      "len": 6,
+      "mult": 100,
+      "note": "Multiplies ore value by x100",
+      "wikiMpu": "x2.15"
+    },
+    {
+      "n": "The Grand Prism (Renegade)",
+      "img": "assets/wiki/the-grand-prism.webp",
+      "kind": "Upgrader",
+      "tier": "Renegade",
+      "len": 6,
+      "mult": 25,
+      "note": "Multiply ore value by x25",
+      "wikiMpu": "x1.710"
+    },
+    {
+      "n": "The Guillotine",
+      "img": "assets/wiki/the-guillotine.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 5,
+      "mult": 45,
+      "varies": true,
+      "note": "Base multiplier of x15+x7.5 to base multiplier for each immunity consumed · Remove the chance of destruction if any immunity is presentMax of x45",
+      "wikiMpu": "x1.718 (base) · x2.141 (max)"
+    },
+    {
+      "n": "The Haunted House",
+      "img": "assets/wiki/the-haunted-house.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 8.71,
+      "note": "Multiplies ore value by x8.71",
+      "wikiMpu": "x1.362"
+    },
+    {
+      "n": "The Heartbreaker",
+      "img": "assets/wiki/the-heartbreaker.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 2.5,
+      "note": "Multiplies ore value by 2.5x · Multiplier permanently increased by +1 if a flaming ore passes through.",
+      "wikiMpu": "x1.26 (standard) · x1.37 (fire)"
+    },
+    {
+      "n": "The Holy Cheese",
+      "img": "assets/wiki/the-holy-cheese.webp",
+      "kind": "Upgrader",
+      "tier": "Vintage",
+      "len": 3,
+      "mult": 4,
+      "note": "Multiplies ore value by x4",
+      "wikiMpu": "x1.59"
+    },
+    {
+      "n": "The Hourglass",
+      "img": "assets/wiki/the-hourglass.webp",
+      "kind": "Upgrader",
+      "tier": "Superstitious",
+      "len": 8,
+      "mult": 90,
+      "note": "Base multiplier of x90 · Multiplier increased by +1 per second · (Item has to be placed down) · Increases conveyor speed of all items on base",
+      "wikiMpu": "x1.76 (minimum) · x2.03 (maximum)"
+    },
+    {
+      "n": "The Ice Fortress",
+      "img": "assets/wiki/the-ice-fortress.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 4.5,
+      "note": "Upgrades ore by 4.5x · Makes ores fireproof"
+    },
+    {
+      "n": "The Lord",
+      "img": "assets/wiki/the-lord.webp",
+      "kind": "Upgrader",
+      "tier": "Phantasmal",
+      "len": 6,
+      "mult": 4,
+      "note": "Multiplies ore value by x4 · ----Multiplier increased by: · +3 if upgraded by a SpookLord-95,000 ghost",
+      "wikiMpu": "x1.26 · x1.38 if upgraded by SpookLord-95,000"
+    },
+    {
+      "n": "The Master",
+      "img": "assets/wiki/the-master.webp",
+      "kind": "Upgrader",
+      "tier": "Phantasmal",
+      "len": 6,
+      "mult": 6.6,
+      "note": "Multiplies ore value by x6.6 · ----Multiplier increased by: · +1 for each unique Spook mine placed",
+      "wikiMpu": "x1.37 · x1.53 with all spook mines"
+    },
+    {
+      "n": "The Phantasm",
+      "img": "assets/wiki/the-phantasm.webp",
+      "kind": "Upgrader",
+      "tier": "Phantasmal",
+      "len": 6,
+      "mult": 25,
+      "varies": true,
+      "note": "Multiplies ore value by x20 During the day and x25 at night",
+      "wikiMpu": "x1.647 (day) · x1.710 (night)"
+    },
+    {
+      "n": "The Pizzalyst",
+      "img": "assets/wiki/the-pizzalyst.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn Fusion",
+      "len": 5,
+      "mult": 29.854,
+      "varies": true,
+      "note": "Catalyst upgrade: x5.06 · Pizza upgrade: x5.9 · Total: x29.854",
+      "wikiMpu": "x1.97"
+    },
+    {
+      "n": "The Rock",
+      "img": "assets/wiki/the-rock.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": null,
+      "note": "+1 Candy value"
+    },
+    {
+      "n": "The Sporest",
+      "img": "assets/wiki/the-sporest.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 5,
+      "mult": 8,
+      "note": "Multiplies ore value by x8 · Applies Poison to ore.",
+      "wikiMpu": "x1.52"
+    },
+    {
+      "n": "The Storm",
+      "img": "assets/wiki/the-storm.webp",
+      "kind": "Upgrader",
+      "tier": "Phantasmal",
+      "len": 7,
+      "mult": 6,
+      "note": "Multiplies ore value by x6",
+      "wikiMpu": "x1.29"
+    },
+    {
+      "n": "The Stormcrow",
+      "img": "assets/wiki/the-stormcrow.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 3,
+      "mult": 19,
+      "varies": true,
+      "note": "Base multiplier of x10 · Additively increase multiplier by +x3 by · lightning-based upgraders · ----Maximum multiplier of x19",
+      "wikiMpu": "x2.154 (base) · x2.668 (max)"
+    },
+    {
+      "n": "The Trinity",
+      "img": "assets/wiki/the-trinity.webp",
+      "kind": "Upgrader",
+      "tier": "Enchanted",
+      "len": 6,
+      "mult": 126,
+      "varies": true,
+      "note": "Standalone: · Multiplies ore value by x65. · Applies poison, frostbite, or flaming at random. · If ≥1 Trinity upgrader Machine tag is present: · Multiplies ore value by x125. · App",
+      "wikiMpu": "x2.01 (no trinity upgraders) · x2.24 (with trinity upgraders)"
+    },
+    {
+      "n": "The Ultimate Sacrifice",
+      "img": "assets/wiki/the-ultimate-sacrifice.webp",
+      "kind": "Upgrader",
+      "tier": "Ultimate",
+      "len": 8,
+      "mult": 2.5,
+      "varies": true,
+      "note": "Main Effects · Resets machine tags. · Resets status effects. · Multiplies ore value by x2.5 then adds $5000 · Additional Effects · If an ore's upgrade counter is 0: · If ore value "
+    },
+    {
+      "n": "The Void Ritual",
+      "img": "assets/wiki/the-void-ritual.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 6,
+      "note": "Multiplies ore value by x6"
+    },
+    {
+      "n": "Three Years Upgrader",
+      "img": "assets/wiki/three-years-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 6,
+      "mult": 3,
+      "note": "Multiplies ore value by x3",
+      "wikiMpu": "x1.20"
+    },
+    {
+      "n": "Time-Space Scrambler",
+      "img": "assets/wiki/time-space-scrambler.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 3,
+      "mult": 5,
+      "note": "Multiplies ore value by 5x · Changes size of ore"
+    },
+    {
+      "n": "Tortoise Fortifier",
+      "img": "assets/wiki/tortoise-fortifier.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 8,
+      "mult": 25,
+      "note": "Multiplies ore value by x25, resettable. · Applies 3 Shields when ores are wet, non-resettable."
+    },
+    {
+      "n": "Toxic Schrodinger Evaluator",
+      "img": "assets/wiki/toxic-schrodinger-evaluator.webp",
+      "kind": "Upgrader",
+      "tier": "Mythic",
+      "len": 3,
+      "mult": 2.1,
+      "wikiMpu": "x1.28-x2"
+    },
+    {
+      "n": "Toxic Waste Disposal",
+      "img": "assets/wiki/toxic-waste-disposal.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 4,
+      "mult": 6,
+      "varies": true,
+      "note": "Multiplies ore value by 3x to 6x · Applies radioactive effect to ore",
+      "wikiMpu": "x3: x1.316 · x4: x1.414 · x5: x1.495 · x6: x1.565"
+    },
+    {
+      "n": "Transylvanian Refiner",
+      "img": "assets/wiki/transylvanian-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 6.25,
+      "varies": true,
+      "note": "Each panel multiplies ore value by x2.5 · Combined x6.25 if both panels are hit · Red panel reduces ore transparency · Yellow panel sets ore on fire for 3 seconds",
+      "wikiMpu": "x1.16 (1 panel) · x1.36 (2 panels)"
+    },
+    {
+      "n": "Tree of Giving",
+      "img": "assets/wiki/tree-of-giving.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 8,
+      "mult": 5,
+      "note": "Multiplies ore value by 5x"
+    },
+    {
+      "n": "Tropical Breeze",
+      "img": "assets/wiki/tropical-breeze.webp",
+      "kind": "Upgrader",
+      "tier": "Ultimate",
+      "len": 2,
+      "mult": 6,
+      "note": "Multiplies ore value by 6x",
+      "wikiMpu": "x2.45"
+    },
+    {
+      "n": "Tropical Holidays",
+      "img": "assets/wiki/tropical-holidays.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 3,
+      "mult": 2,
+      "note": "Multiplies ore value by x2",
+      "wikiMpu": "x1.73"
+    },
+    {
+      "n": "True Overlord Device",
+      "img": "assets/wiki/true-overlord-device.webp",
+      "kind": "Upgrader",
+      "tier": "Ultimate",
+      "len": 7,
+      "mult": 100,
+      "note": "Multiplies ore value by 100x",
+      "wikiMpu": "x1.931"
+    },
+    {
+      "n": "Tsar Bomba",
+      "img": "assets/wiki/tsar-bomba.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 8,
+      "mult": 50,
+      "note": "Multiplies ore value by 50x",
+      "wikiMpu": "x1.63"
+    },
+    {
+      "n": "Turbine Chamber",
+      "img": "assets/wiki/turbine-chamber.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 21,
+      "varies": true,
+      "note": "Internal variable of 60 · Flaming Ore: 21x (13x if overheated) · Non-Flaming Ore: 14x (8x if overheated) · Extinguishes fire unless overheated",
+      "wikiMpu": "x1.55 (normal) · x1.66 (fire)"
+    },
+    {
+      "n": "Turtle Dignifier",
+      "img": "assets/wiki/turtle-dignifier.webp",
+      "kind": "Upgrader",
+      "tier": "Rare Reborn",
+      "len": 5,
+      "mult": 8.01,
+      "note": "Multiplies ore value by x8. · Applies temporary shield to ore if it has wet effect for duration of the wet effect.",
+      "wikiMpu": "x1.516"
+    },
+    {
+      "n": "Twitch Scanner",
+      "img": "assets/wiki/twitch-scanner.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 2,
+      "mult": 5,
+      "note": "Adds $1k to ore value · Multiplies ore value by x5",
+      "wikiMpu": "x2.24"
+    },
+    {
+      "n": "Twitch-Powered Upgrader",
+      "img": "assets/wiki/twitch-powered-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 4,
+      "mult": 1.6,
+      "note": "Multiplies ore value by x1.6",
+      "wikiMpu": "x1.124"
+    },
+    {
+      "n": "Undead Assistance",
+      "img": "assets/wiki/undead-assistance.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 2,
+      "mult": 1.5,
+      "note": "Multiplies ore value by 1.5x",
+      "wikiMpu": "x1.22"
+    },
+    {
+      "n": "Universal Collapse",
+      "img": "assets/wiki/universal-collapse.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 48.6,
+      "varies": true,
+      "note": "Multiplier and Effect dependant on ore lifespan. · Shorter lifespan equates to better stats.",
+      "wikiMpu": "Max: x1.91 · Min: 1.81"
+    },
+    {
+      "n": "Utopian Refiner",
+      "img": "assets/wiki/utopian-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Slipstream",
+      "len": 8,
+      "mult": 49.8,
+      "note": "Multiplies ore value by x50. · Gives ore a random color of sparkles.",
+      "wikiMpu": "x1.63"
+    },
+    {
+      "n": "Utopian Refiner (Renegade)",
+      "img": "assets/wiki/utopian-refiner.webp",
+      "kind": "Upgrader",
+      "tier": "Renegade",
+      "len": 6,
+      "mult": 8,
+      "note": "x8 multiplier with random colored sparkles",
+      "wikiMpu": "x1.414"
+    },
+    {
+      "n": "Vampire Spore",
+      "img": "assets/wiki/vampire-spore.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Reborn",
+      "len": 4,
+      "mult": 15,
+      "note": "Multiplies ore value by 11xx14 if ⟦Dreamer's Blight⟧ is on the base · x15 if ⟦Dreamer's Devastation⟧ is on the base",
+      "wikiMpu": "x1.82"
+    },
+    {
+      "n": "Vanilla Scanner",
+      "img": "assets/wiki/vanilla-scanner.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 2,
+      "mult": 3,
+      "note": "Multiply ore value by x3",
+      "wikiMpu": "x1.732"
+    },
+    {
+      "n": "Vaporwave Vibe Visualizer",
+      "img": "assets/wiki/vaporwave-vibe-visualizer.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 4,
+      "mult": 7,
+      "note": "Multiplies ore value by x7 · Turns ore neon pink",
+      "wikiMpu": "x1.63"
+    },
+    {
+      "n": "Verdant Pincher",
+      "img": "assets/wiki/verdant-pincher.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 3,
+      "mult": 10,
+      "note": "Multiplies ore value by x10",
+      "wikiMpu": "x2.154"
+    },
+    {
+      "n": "Vesterian Upgrader",
+      "img": "assets/wiki/vesterian-upgrader.webp",
+      "kind": "Upgrader",
+      "tier": "Fabled",
+      "len": 5,
+      "mult": 6,
+      "note": "Base multiplier of 6x · Multiplier increased by +1 for every other Vesteria Alpha Supporter",
+      "wikiMpu": "x1.38 (minimum) · x1.58 (maximum)"
+    },
+    {
+      "n": "Video Game Digitalizer",
+      "img": "assets/wiki/video-game-digitalizer.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 6,
+      "mult": null,
+      "note": "Turns silicon ore into Video Game Consoles that can be wrapped in the ⟦Ore Wrapper⟧ and turned into presents in the ⟦Present Center⟧."
+    },
+    {
+      "n": "Virtual Enchanter",
+      "img": "assets/wiki/virtual-enchanter.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Evolution",
+      "len": 5,
+      "mult": 45,
+      "note": "Multiplies ore value depending on distance between upgrader and dropper up to x45",
+      "wikiMpu": "x2.14 (max)"
+    },
+    {
+      "n": "Virtual Enhancer",
+      "img": "assets/wiki/virtual-enhancer.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Reborn",
+      "len": 5,
+      "mult": 30,
+      "note": "Upgrades ores from x1 to x30 depending on how far the item is from dropper items placed on the base.",
+      "wikiMpu": "x1.97 (max)"
+    },
+    {
+      "n": "Virtual Gearwork",
+      "img": "assets/wiki/virtual-gearwork.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Fusion",
+      "len": 5,
+      "mult": 49.2,
+      "note": "Base multiplier of x1. · Multiplier increase depending on distance between dropper and upgrader.",
+      "wikiMpu": "x2.18"
+    },
+    {
+      "n": "Vitamin C-Coater",
+      "img": "assets/wiki/vitamin-c-coater.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 4,
+      "mult": 6,
+      "note": "Multiplies ore value by x6 · Turns ore into watermelons (green spheres with concrete texture) · Has a small chance to replicate ores (replicated ores resemble seeds) · Plays a soun",
+      "wikiMpu": "1.570"
+    },
+    {
+      "n": "Void Drive",
+      "img": "assets/wiki/void-drive.webp",
+      "kind": "Upgrader",
+      "tier": "Enchanted",
+      "len": 8,
+      "mult": 101,
+      "note": "Multiplies ore value by x100. · Gives ores 15 shields. · Ores become incredibly dense. · Ores become neon black.",
+      "wikiMpu": "x1.78 (base)"
+    },
+    {
+      "n": "Void Star",
+      "img": "assets/wiki/void-star.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Evolution",
+      "len": 8,
+      "mult": 1000,
+      "note": "Resets Machine tags · Base multiplier of x1 · +1 ore upgrade count = +5 to multiplier · Capped at x1000 (200 upgrade count)",
+      "wikiMpu": "Max: 2.372x"
+    },
+    {
+      "n": "Vortex Chamber",
+      "img": "assets/wiki/vortex-chamber.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 4,
+      "mult": 5,
+      "note": "Multiplies ore value by 5x",
+      "wikiMpu": "x1.5"
+    },
+    {
+      "n": "Vortex Singularity",
+      "img": "assets/wiki/vortex-singularity.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 5,
+      "mult": 9,
+      "note": "Multiplies ore value by 9x, and reverses ore gravity.",
+      "wikiMpu": "x1.55"
+    },
+    {
+      "n": "Vulcan's Destiny",
+      "img": "assets/wiki/vulcan-s-destiny.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Evolution",
+      "len": 6,
+      "mult": 120,
+      "note": "Base multiplier of 1x · Multiplier increased depending on the tier of other items placed down · (see overview)",
+      "wikiMpu": "x2.22 (max)"
+    },
+    {
+      "n": "Vulcan's Grasp",
+      "img": "assets/wiki/vulcan-s-grasp.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced Reborn",
+      "len": 1,
+      "mult": 2,
+      "note": "Base multiplier of x2 · Multiplier increases depending on the tier of other items placed down (See Overview)",
+      "wikiMpu": "x1.98"
+    },
+    {
+      "n": "Vulcan's Wrath",
+      "img": "assets/wiki/vulcan-s-wrath.webp",
+      "kind": "Upgrader",
+      "tier": "Superstitious",
+      "len": 6,
+      "mult": 165,
+      "varies": true,
+      "note": "Standalone: · Multiplies ore value by 65x · Makes ores neon · Fully Charged: · Multiplier increased to 165x · Makes ores neon · Ignites ore · Makes ores lighter",
+      "wikiMpu": "Uncharged: · x2.005 · Charged: · x2.587"
+    },
+    {
+      "n": "Vulcanus Wyvern",
+      "img": "assets/wiki/vulcanus-wyvern.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 5,
+      "mult": 5,
+      "note": "x5 multiplier · Applies a permanent 5% boost to all Blasters.",
+      "wikiMpu": "x1.379"
+    },
+    {
+      "n": "Walrus Blaster",
+      "img": "assets/wiki/walrus-blaster.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 5,
+      "mult": 5,
+      "note": "Multiplies ore value by x5",
+      "wikiMpu": "x1.379"
+    },
+    {
+      "n": "Way-Up-High Cake Pop",
+      "img": "assets/wiki/way-up-high-cake-pop.webp",
+      "kind": "Upgrader",
+      "tier": "Collectible",
+      "len": 5,
+      "mult": 1.5,
+      "note": "Multiply ore value by x1.5",
+      "wikiMpu": "1.144 (base) · x1.5 (max)"
+    },
+    {
+      "n": "Way-Up-High Upgrader",
+      "img": "assets/wiki/way-up-high-upgrader-hd.webp",
+      "kind": "Upgrader",
+      "tier": "Advanced",
+      "len": 2,
+      "mult": null,
+      "note": "Upgrades ores based on their value · (See Overview)"
+    },
+    {
+      "n": "Wedding Cake",
+      "img": "assets/wiki/wedding-cake.webp",
+      "kind": "Upgrader",
+      "tier": "Limited Reborn",
+      "len": 8,
+      "mult": 8,
+      "note": "Multiplies ore value by x8",
+      "wikiMpu": "1.296x"
+    },
+    {
+      "n": "Whimsical Turbine",
+      "img": "assets/wiki/whimsical-turbine.webp",
+      "kind": "Upgrader",
+      "tier": "Evolved Reborn",
+      "len": 8,
+      "mult": 90,
+      "varies": true,
+      "note": "Multiplies ore value based on height.Minimum of x50 (bottom) and x60 (top) · Maximum of x75 (bottom) and x90 (top)",
+      "wikiMpu": "x1.63-1.71 (bottom) · x1.98-2.11 (top) · x1.77-1.88 (both)"
+    },
+    {
+      "n": "Wholesome Skull Blaster",
+      "img": "assets/wiki/wholesome-skull-blaster.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 7,
+      "mult": 12,
+      "varies": true,
+      "note": "If ore is on fire: · Ore value multiplied by 6x · Fire is put out · If ore is not on fire: · Ore value multiplied by 4x · Delay of 15 to 20 seconds · Ore value multiplied by 3x (12",
+      "wikiMpu": "x1.29 (fire) · x1.43 (no fire)"
+    },
+    {
+      "n": "Widow's Outpost",
+      "img": "assets/wiki/widow-s-outpost.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 4,
+      "mult": 4,
+      "note": "Upgrades ore by x4 · Changes ore material to granite · Applies Poison effect"
+    },
+    {
+      "n": "Wild Spore",
+      "img": "assets/wiki/wild-spore.webp",
+      "kind": "Upgrader",
+      "tier": "Reborn",
+      "len": 4,
+      "mult": 5,
+      "varies": true,
+      "note": "Removes negative effects · Multiplies ore value by x5, x6 if ⟦Dreamer's Devastation⟧ is on the base.",
+      "wikiMpu": "x1.495"
+    },
+    {
+      "n": "Winter Snowflake",
+      "img": "assets/wiki/winter-snowflake.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 3,
+      "mult": 4.75,
+      "note": "Adds $10k · Multiplies ore value by x4.75 · Extinguishes fire · Makes ores slippery for 10 seconds",
+      "wikiMpu": "1.681"
+    },
+    {
+      "n": "Winter Wonderworld",
+      "img": "assets/wiki/winter-wonderworld.webp",
+      "kind": "Upgrader",
+      "tier": "Eggxotic",
+      "len": 5,
+      "mult": 10,
+      "note": "Base multiplier of x5. Increased by certain conditions.Maximum of x10",
+      "wikiMpu": "x1.379 (min) · x1.584 (max)"
+    },
+    {
+      "n": "Winterheart",
+      "img": "assets/wiki/winterheart.webp",
+      "kind": "Upgrader",
+      "tier": "Exotic",
+      "len": 3,
+      "mult": 3,
+      "note": "Upgrades ore depending on its value: · $10M: x3"
+    }
+  ],
+  "mines": [
+    {
+      "n": "SpookDemon-66,666",
+      "img": "assets/wiki/spookdemon-66-666.webp",
+      "kind": "Mine",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 2,
+      "uses": 11,
+      "maxUses": 11,
+      "usesLabel": "Ghost hits",
+      "note": "Ghosts double ore value. Up to 11 ghosts."
+    },
+    {
+      "n": "SpookLord-95,000",
+      "img": "assets/wiki/spooklord-95-000.webp",
+      "kind": "Mine",
+      "tier": "Exotic",
+      "len": 5,
+      "mult": 3,
+      "uses": 1,
+      "maxUses": 1,
+      "usesLabel": "Ghost hits",
+      "note": "Ghosts around the mine upgrade ore by x3 (resettable)."
+    },
+    {
+      "n": "DECADE HAVEN SPOOKMINE-5,256,000",
+      "img": "assets/wiki/decade-haven-spookmine-5-256-000.webp",
+      "kind": "Mine",
+      "tier": "Exotic",
+      "len": 8,
+      "mult": 10,
+      "uses": 1,
+      "maxUses": 1,
+      "usesLabel": "Ghost hits",
+      "note": "Ghosts around the mine upgrade ore by x10 (resettable)."
+    },
+    {
+      "n": "Autumn Breeze",
+      "img": "assets/wiki/autumn-breeze.webp",
+      "kind": "Mine",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 1.5,
+      "uses": 8,
+      "maxUses": 8,
+      "usesLabel": "Touches",
+      "note": "Upgrades ore it touches by x1.5, up to 8 times (about x25.6)."
+    },
+    {
+      "n": "Santa's Workshop",
+      "img": "assets/wiki/santa-s-workshop-hd.webp",
+      "kind": "Mine",
+      "tier": "Exotic",
+      "len": 5,
+      "mult": 1.07,
+      "uses": 5,
+      "maxUses": 5,
+      "usesLabel": "Present hits",
+      "note": "Presents upgrade ore by x1.07, 5 times (resettable)."
+    },
+    {
+      "n": "Deluxe Santa's Workshop",
+      "img": "assets/wiki/deluxe-santa-s-workshop.webp",
+      "kind": "Mine",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 1.2,
+      "uses": 5,
+      "maxUses": 5,
+      "usesLabel": "Hits",
+      "note": "White ore upgrades other ore by x1.2, 5 times (resettable)."
+    },
+    {
+      "n": "Atomium Mine",
+      "img": "assets/wiki/atomium-mine.webp",
+      "kind": "Mine",
+      "tier": "Reborn",
+      "len": 3,
+      "mult": 1.05,
+      "uses": 20,
+      "maxUses": 40,
+      "usesLabel": "Sparkles",
+      "note": "Sparkles give x1.05 every 0.25s for 5 to 10 seconds."
+    },
+    {
+      "n": "Atomyke Mine",
+      "img": "assets/wiki/atomyke-mine.webp",
+      "kind": "Mine",
+      "tier": "Evolved Reborn",
+      "len": 10,
+      "mult": 1.05,
+      "uses": 20,
+      "maxUses": 40,
+      "usesLabel": "Sparkles",
+      "note": "Sparkles give x1.05 every 0.25s for 5 to 10 seconds."
+    },
+    {
+      "n": "'Ol Faithful",
+      "img": "assets/wiki/ol-faithful-hd.webp",
+      "kind": "Mine",
+      "tier": "Vintage",
+      "len": 6,
+      "mult": 4,
+      "uses": 1,
+      "maxUses": 1,
+      "usesLabel": "Uses",
+      "note": "After 20 seconds, multiplies ore value by x4."
+    },
+    {
+      "n": "Boomite Mine",
+      "img": "assets/wiki/boomite-mine.webp",
+      "kind": "Mine",
+      "tier": "Vintage",
+      "len": 4,
+      "mult": 10,
+      "uses": 1,
+      "maxUses": 1,
+      "usesLabel": "Uses",
+      "note": "x10 when touching coal ore (1 in 8 chance the ore is destroyed)."
+    },
+    {
+      "n": "Witch's Cauldron",
+      "img": "assets/wiki/witch-s-cauldron.webp",
+      "kind": "Mine",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 15,
+      "uses": 1,
+      "maxUses": 1,
+      "usesLabel": "Uses",
+      "note": "Inserted ore is multiplied by x15 (1 in, 2 out)."
+    },
+    {
+      "n": "Oblivion Weaver",
+      "img": "assets/wiki/oblivion-weaver.webp",
+      "kind": "Mine",
+      "tier": "Slipstream",
+      "len": 10,
+      "mult": 9,
+      "uses": 1,
+      "maxUses": 1,
+      "usesLabel": "Uses",
+      "note": "Gives other ore a x9 upgrade and sets it on fire."
+    },
+    {
+      "n": "The Daegelart",
+      "img": "assets/wiki/the-daegelart.webp",
+      "kind": "Mine",
+      "tier": "Evolved Reborn",
+      "len": 8,
+      "mult": 5,
+      "uses": 6,
+      "maxUses": 6,
+      "usesLabel": "Absorbs",
+      "note": "Absorbs other ore for x5 each, up to 6 times (x15,625)."
+    },
+    {
+      "n": "Apollium Mine",
+      "img": "assets/wiki/apollium-mine.webp",
+      "kind": "Mine",
+      "tier": "Advanced Reborn",
+      "len": 10,
+      "mult": 25,
+      "uses": 1,
+      "maxUses": 1,
+      "usesLabel": "Uses",
+      "note": "x25 when the ore is set on fire."
+    },
+    {
+      "n": "Solarium Mine",
+      "img": "assets/wiki/solarium-mine.webp",
+      "kind": "Mine",
+      "tier": "Advanced Evolution",
+      "len": 9,
+      "mult": 700,
+      "uses": 1,
+      "maxUses": 1,
+      "usesLabel": "Uses",
+      "note": "x700 when the ore is set on fire. Ore is fireproof."
+    },
+    {
+      "n": "Phasecursor Mine",
+      "img": "assets/wiki/phasecursor-mine.webp",
+      "kind": "Mine",
+      "tier": "Advanced Fusion",
+      "len": 9,
+      "mult": 8,
+      "uses": 1,
+      "maxUses": 1,
+      "usesLabel": "Uses",
+      "note": "Buffed x8 by Phase Refiner, x50 by Phase Bombarder. Change the multiplier to match."
+    },
+    {
+      "n": "Scorponyte Mine",
+      "img": "assets/wiki/scorponyte-mine.webp",
+      "kind": "Mine",
+      "tier": "Evolved Reborn",
+      "len": 6,
+      "mult": 20,
+      "uses": 1,
+      "maxUses": 1,
+      "usesLabel": "Uses",
+      "note": "One-time x20 from poison-inflicting upgraders."
+    },
+    {
+      "n": "Twitchite Mine",
+      "img": "assets/wiki/twitchite-mine-hd.webp",
+      "kind": "Mine",
+      "tier": "Exotic",
+      "len": 6,
+      "mult": 2,
+      "uses": 1,
+      "maxUses": 1,
+      "usesLabel": "Uses",
+      "note": "x(1 + Twitch Boxes ÷ 7). Type your own multiplier."
+    }
+  ]
+}

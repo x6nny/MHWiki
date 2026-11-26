@@ -196,6 +196,12 @@ function checkPassword_(pw) {
 var U = { id: 0, username: 1, lower: 2, hash: 3, salt: 4, iter: 5, admin: 6, banned: 7, created: 8, last: 9, hidden: 10 };
 function users_() { return rows_('Users'); }
 function findUser_(list, pred) { for (var i = 0; i < list.length; i++) if (pred(list[i])) return list[i]; return null; }
+// True if this Users row has the given (lowercase) name. Checks both the username and username_lower
+// columns, so a row typed or edited by hand in the sheet still counts and can't be signed up again.
+function nameIs_(r, lower) {
+  return String(r[U.lower] == null ? '' : r[U.lower]).trim().toLowerCase() === lower ||
+         String(r[U.username] == null ? '' : r[U.username]).trim().toLowerCase() === lower;
+}
 function publicUser_(u) { return { id: u[U.id], username: u[U.username], admin: u[U.admin] === true, banned: u[U.banned] === true, hidden: u[U.hidden] === true }; }
 
 function newSession_(userId) {
@@ -241,7 +247,7 @@ function register_(req) {
   if (Number(cache.get(hour) || 0) >= CFG.SIGNUPS_PER_HOUR) fail_('Lots of people are signing up right now. Please try again in a little while.');
   return withLock_(function () {
     var list = users_(), lower = name.toLowerCase();
-    if (findUser_(list, function (r) { return r[U.lower] === lower; })) fail_('That username is taken.');
+    if (findUser_(list, function (r) { return nameIs_(r, lower); })) fail_('That username is already taken. Please pick another one.');
     var salt = newSalt_(), id = randomId_('u'), now = Date.now();
     var r = appendRow_('Users', [id, name, lower, txt_(hashPassword_(pw, salt, CFG.ITERATIONS)), txt_(salt), CFG.ITERATIONS, false, false, now, now, false]);
     tab_('Users').getRange(r, U.admin + 1, 1, 2).insertCheckboxes();
@@ -258,7 +264,7 @@ function login_(req) {
   var lower = name.toLowerCase(), cache = CacheService.getScriptCache(), key = 'fail:' + lower;
   var fails = Number(cache.get(key) || 0);
   if (fails >= CFG.LOGIN_FAILS) fail_('Too many wrong passwords. Wait 15 minutes and try again.');
-  var u = findUser_(users_(), function (r) { return r[U.lower] === lower; });
+  var u = findUser_(users_(), function (r) { return nameIs_(r, lower); });
   var ok = u && checkPw_(u, pw);
   if (!ok) {
     cache.put(key, String(fails + 1), 900);
@@ -366,7 +372,7 @@ function profilesSearch_(req) {
 // Only these parts of someone's trackers are ever shown on a profile.
 function profilesGet_(req) {
   var name = String(req.username || '').trim().toLowerCase();
-  var u = findUser_(users_(), function (r) { return r[U.lower] === name; });
+  var u = findUser_(users_(), function (r) { return nameIs_(r, name); });
   if (!u) fail_('There\'s no account called "' + String(req.username || '').trim() + '".', 'notfound');
   var me = optionalUser_(req), self = !!me && me[U.id] === u[U.id];
   var out = { user: { username: u[U.username], admin: u[U.admin] === true, joined: new Date(Number(u[U.created]) || 0).toISOString(), hidden: u[U.hidden] === true }, self: self };
@@ -449,7 +455,7 @@ function commentsDelete_(req) {
 
 function userByName_(name) {
   var lower = String(name || '').trim().toLowerCase();
-  var u = findUser_(users_(), function (r) { return r[U.lower] === lower; });
+  var u = findUser_(users_(), function (r) { return nameIs_(r, lower); });
   if (!u) fail_('There\'s no user called "' + String(name || '').trim() + '".');
   return u;
 }

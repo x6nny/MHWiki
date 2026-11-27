@@ -29,6 +29,9 @@ var CFG = {
   BIO_LINES: 6,
   AVATAR_MAX: 40000,             // an uploaded picture is resized in the browser first; this caps what's stored
   PROFILE_EDITS_PER_HOUR: 40,
+  ROBLOX_LOOKUPS_PER_HOUR: 15,    // "Link" presses (each one asks Roblox who the username is)
+  ROBLOX_CHECKS_PER_HOUR: 30,     // "Verify" presses
+  ROBLOX_CODE_MINUTES: 30,        // how long a verification code stays valid
   BANNERS: ['emerald', 'ocean', 'violet', 'sunset', 'rose', 'gold', 'ice', 'mono'],
   GITHUB_REPO: 'x6nny/MHWiki',
   GITHUB_BRANCH: 'main',
@@ -39,7 +42,7 @@ var TABS = {
   Sessions: ['token_hash', 'user_id', 'created_at', 'expires_at'],
   Trackers: ['user_id', 'key', 'updated_at', 'value'],
   Comments: ['id', 'thread', 'user_id', 'author', 'body', 'created_at'],
-  Profiles: ['user_id', 'bio', 'avatar', 'banner', 'updated_at'],
+  Profiles: ['user_id', 'bio', 'avatar', 'banner', 'updated_at', 'roblox_id', 'roblox_name', 'roblox_linked_at'],
 };
 // Text written by users is stored with a one-letter prefix so Google Sheets never
 // treats it as a formula, number or date. It's removed again when read.
@@ -89,6 +92,9 @@ var ACTIONS = {
   'profiles.get': profilesGet_,
   'profiles.visibility': profilesVisibility_,
   'profiles.update': profilesUpdate_,
+  'roblox.start': robloxStart_,
+  'roblox.verify': robloxVerify_,
+  'roblox.unlink': robloxUnlink_,
 
   'comments.list': commentsList_,
   'comments.add': commentsAdd_,
@@ -393,6 +399,8 @@ function profilesGet_(req) {
   if (u[U.hidden] === true && !self) { out.private = true; return out; }
   out.user.bio = look.bio || '';
   out.user.banner = look.banner || '';
+  if (look.roblox_id) out.user.roblox = { id: look.roblox_id, name: look.roblox_name };
+  if (self) { var pend = robloxPending_(u[U.id]); if (pend) out.robloxPending = pend; }
   rows_('Trackers').forEach(function (r) {
     if (r[0] !== u[U.id]) return;
     var t;
@@ -428,7 +436,8 @@ function profilesVisibility_(req) {
 function looks_() {
   var map = {};
   rows_('Profiles').forEach(function (r) {
-    map[r[0]] = { bio: untxt_(r[1]), avatar: untxt_(r[2]), banner: untxt_(r[3]), _r: r._r };
+    map[r[0]] = { bio: untxt_(r[1]), avatar: untxt_(r[2]), banner: untxt_(r[3]),
+      roblox_id: String(untxt_(r[5]) || ''), roblox_name: untxt_(r[6]) || '', roblox_at: r[7] || '', _r: r._r };
   });
   return map;
 }
@@ -457,13 +466,22 @@ function checkBio_(v) {
   if (v.split('\n').length > CFG.BIO_LINES) fail_('Bios can be up to ' + CFG.BIO_LINES + ' lines.');
   return v;
 }
+// Saves an account's profile row. Fields not given keep their current value; a row with nothing left is removed.
 function saveLook_(userId, look) {
-  var cur = looks_()[userId], row = [userId, txt_(look.bio || ''), txt_(look.avatar || ''), txt_(look.banner || ''), Date.now()];
-  var empty = !look.bio && !look.avatar && !look.banner;
-  if (cur && empty) deleteRows_('Profiles', [cur._r]);
-  else if (cur) tab_('Profiles').getRange(cur._r, 1, 1, row.length).setValues([row]);
-  else if (!empty) appendRow_('Profiles', row);
+  var cur = looks_()[userId] || {}, v = {};
+  ['bio', 'avatar', 'banner', 'roblox_id', 'roblox_name', 'roblox_at'].forEach(function (k) { v[k] = k in look ? look[k] : cur[k] || ''; });
+  var row = [userId, txt_(v.bio), txt_(v.avatar), txt_(v.banner), Date.now(), txt_(v.roblox_id), txt_(v.roblox_name), v.roblox_at || ''];
+  var empty = !v.bio && !v.avatar && !v.banner && !v.roblox_id;
+  if (cur._r && empty) deleteRows_('Profiles', [cur._r]);
+  else if (cur._r) { fixHeader_('Profiles'); tab_('Profiles').getRange(cur._r, 1, 1, row.length).setValues([row]); }
+  else if (!empty) { fixHeader_('Profiles'); appendRow_('Profiles', row); }
 }
+// Sheets made before a column was added get the new column names in row 1.
+function fixHeader_(name) {
+  var want = TABS[name], sh = tab_(name);
+  if (sh.getRange(1, want.length).getValue() !== want[want.length - 1]) sh.getRange(1, 1, 1, want.length).setValues([want]);
+}
+
 // Change any of bio, avatar, banner; fields left out stay as they are.
 function profilesUpdate_(req) {
   var u = auth_(req);
@@ -497,6 +515,89 @@ function adminClearProfile_(req) {
     saveLook_(t[U.id], next);
   });
   return { username: t[U.username], what: what };
+}
+
+/* ============================== Roblox account on a profile ============================== */
+// Not a sign-in: it only shows "this is my Roblox account" on someone's profile.
+// To prove the account is theirs, the player puts a short word code in their Roblox profile's About
+// section; this script reads that profile from Roblox and links it when the code is there.
+
+var RBX_WORDS = ('ore lava magma crystal quartz nebula tortoise lunar solar frost ember drill furnace conveyor ' +
+  'shiny cobalt emerald sapphire ruby topaz onyx comet meteor aurora glacier volcano thunder prism pixel rocket ' +
+  'galaxy phoenix maple cactus pebble canyon harbor beacon lantern compass anchor falcon otter panda koala mango ' +
+  'peach waffle pickle noodle biscuit tulip cedar willow river meadow orbit rainbow marble velvet').split(' ');
+
+function robloxFetch_(path, payload) {
+  var hosts = ['https://users.roblox.com', 'https://users.roproxy.com'];   // roproxy is the backup when Roblox is busy
+  for (var i = 0; i < hosts.length; i++) {
+    try {
+      var o = { method: payload ? 'post' : 'get', muteHttpExceptions: true, headers: { Accept: 'application/json' } };
+      if (payload) { o.contentType = 'application/json'; o.payload = JSON.stringify(payload); }
+      var res = UrlFetchApp.fetch(hosts[i] + path, o), code = res.getResponseCode();
+      if (code === 200) return JSON.parse(res.getContentText());
+      if (code === 404 || code === 400) return null;
+    } catch (e) { /* try the next host */ }
+  }
+  fail_('Roblox isn\'t answering right now. Try again in a minute.');
+}
+function rbxNorm_(t) { return ' ' + String(t || '').toLowerCase().replace(/[^a-z]+/g, ' ').trim() + ' '; }
+function rbxLimit_(kind, u, max) {
+  var cache = CacheService.getScriptCache(), key = 'rl:' + kind + ':' + u[U.id] + ':' + Math.floor(Date.now() / 36e5), n = Number(cache.get(key) || 0);
+  if (n >= max) fail_('Too many tries this hour. Try again later.');
+  cache.put(key, String(n + 1), 3600);
+}
+function robloxPending_(userId) {
+  try { return JSON.parse(CacheService.getScriptCache().get('rbx:' + userId) || 'null'); } catch (e) { return null; }
+}
+function robloxOwner_(robloxId) {   // which wiki account already has this Roblox account, if any
+  var looks = looks_();
+  for (var id in looks) if (looks[id].roblox_id && looks[id].roblox_id === String(robloxId)) return id;
+  return '';
+}
+// Step 1: look up the Roblox username and hand out a code to put in their About section.
+function robloxStart_(req) {
+  var u = auth_(req);
+  if (u[U.banned] === true) fail_('You can\'t change your profile on this wiki.');
+  var name = String(req.username || '').trim().replace(/^@/, '');
+  if (!/^[A-Za-z0-9_]{3,20}$/.test(name)) fail_('That isn\'t a Roblox username. They\'re 3–20 letters, numbers or _.');
+  rbxLimit_('rs', u, CFG.ROBLOX_LOOKUPS_PER_HOUR);
+  var r = robloxFetch_('/v1/usernames/users', { usernames: [name], excludeBannedUsers: true });
+  var hit = r && r.data && r.data[0];
+  if (!hit || !hit.id) fail_('No Roblox account is called "' + name + '".', 'notfound');
+  var owner = robloxOwner_(hit.id);
+  if (owner && owner !== u[U.id]) fail_('That Roblox account is already linked to another wiki account.');
+  var words = [];
+  for (var i = 0; i < 4; i++) words.push(RBX_WORDS[Math.floor(Math.random() * RBX_WORDS.length)]);
+  var pend = { id: String(hit.id), name: hit.name, displayName: hit.displayName || hit.name, code: 'haven ' + words.join(' ') };
+  CacheService.getScriptCache().put('rbx:' + u[U.id], JSON.stringify(pend), CFG.ROBLOX_CODE_MINUTES * 60);
+  return { pending: pend };
+}
+// Step 2: read their Roblox profile and link it if the code is in the About section.
+function robloxVerify_(req) {
+  var u = auth_(req);
+  if (u[U.banned] === true) fail_('You can\'t change your profile on this wiki.');
+  var pend = robloxPending_(u[U.id]);
+  if (!pend) fail_('That code ran out. Press Link again to get a new one.', 'expired');
+  rbxLimit_('rv', u, CFG.ROBLOX_CHECKS_PER_HOUR);
+  var p = robloxFetch_('/v1/users/' + encodeURIComponent(pend.id));
+  if (!p) fail_('That Roblox account can\'t be found any more.');
+  if (rbxNorm_(p.description).indexOf(rbxNorm_(pend.code)) < 0)
+    fail_('The code isn\'t in your About section yet. After saving it on Roblox, wait a few seconds and press Verify again.', 'notyet');
+  var linked;
+  withLock_(function () {
+    var owner = robloxOwner_(pend.id);
+    if (owner && owner !== u[U.id]) fail_('That Roblox account is already linked to another wiki account.');
+    linked = { id: String(p.id || pend.id), name: p.name || pend.name };
+    saveLook_(u[U.id], { roblox_id: linked.id, roblox_name: linked.name, roblox_at: Date.now() });
+  });
+  CacheService.getScriptCache().remove('rbx:' + u[U.id]);
+  return { roblox: linked };
+}
+function robloxUnlink_(req) {
+  var u = auth_(req);
+  CacheService.getScriptCache().remove('rbx:' + u[U.id]);
+  withLock_(function () { saveLook_(u[U.id], { roblox_id: '', roblox_name: '', roblox_at: '' }); });
+  return { roblox: null };
 }
 
 /* ============================== comments ============================== */

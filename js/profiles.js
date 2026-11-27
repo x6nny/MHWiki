@@ -111,6 +111,7 @@
           <div class="pr-who">
             <h2>${esc(u.username)}${u.admin ? ` <em class="pr-adm">Admin</em>` : ""}${mine ? ` <em class="pr-you">You</em>` : ""}</h2>
             <p>Joined ${fmtDay(u.joined)}${mine && u.hidden ? ` · <b class="pr-hid">Hidden from others</b>` : ""}</p>
+            ${rbxChip(u.roblox, true)}
           </div>
           <div class="pr-acts">
             ${mine ? `<button type="button" class="pr-btn pri" id="prEdit">Edit profile</button><button type="button" class="pr-btn" id="prVis">${u.hidden ? "Show my profile" : "Hide my profile"}</button>` : ""}
@@ -228,6 +229,7 @@
     });
     $("#prVis")?.addEventListener("click", () => A.setVisibility(!r.user.hidden));
     $("#prEdit")?.addEventListener("click", () => editor(r));
+    fillRbx(out);
     $("#prAddBio")?.addEventListener("click", () => editor(r, "bio"));
     out.querySelectorAll("[data-clear]").forEach(b => b.addEventListener("click", async () => {
       const what = b.dataset.clear;
@@ -239,6 +241,50 @@
         open(r.user.username);
       } catch (e) { MH.toast(e.message); b.disabled = false; }
     }));
+  }
+
+  /* ---------- linked Roblox account ---------- */
+  // Only the account id and username are stored; the Roblox picture and display name are fetched fresh.
+  const RBX_SVG = `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5.2 1.5 1.5 18.8l17.3 3.7 3.7-17.3L5.2 1.5Zm8.4 13.9-4.9-1 1-4.9 4.9 1-1 4.9Z"/></svg>`;
+  const rbxOk = x => x && /^\d{1,15}$/.test(String(x.id)) && /^[A-Za-z0-9_]{3,20}$/.test(x.name || "");
+  function rbxChip(x, withBadges) {
+    if (!rbxOk(x)) return "";
+    return `<div class="pr-rbx-row">
+      <a class="pr-rbx" href="https://www.roblox.com/users/${x.id}/profile" target="_blank" rel="noopener noreferrer" title="Open ${esc(x.name)} on Roblox">
+        <span class="pr-rbx-pic" data-rbx-pic="${x.id}">${RBX_SVG}</span>
+        <span class="pr-rbx-name"><b data-rbx-dn="${x.id}">${esc(x.name)}</b><small>@${esc(x.name)}</small></span>
+        <span class="pr-rbx-ok" title="Verified: this player proved they own the Roblox account"><svg viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5 12.4 3l2.8-.1 1 2.6 2.3 1.6-.8 2.7.8 2.7-2.3 1.6-1 2.6-2.8-.1L10 18.5 7.6 17l-2.8.1-1-2.6L1.5 12.9l.8-2.7-.8-2.7 2.3-1.6 1-2.6 2.8.1L10 1.5Zm-1.1 11.6 5-5-1.3-1.3-3.7 3.7-1.8-1.8-1.3 1.3 3.1 3.1Z"/></svg><span class="sr">Verified</span></span>
+      </a>
+      ${withBadges ? `<a class="pr-rbx-more" href="user-tracker.html#u=${encodeURIComponent(x.name)}">See badges</a>` : ""}
+    </div>`;
+  }
+  const rbxInfo = {};   // id → promise of { pic, displayName, name }, kept for this visit
+  function rbxLoad(id) {
+    if (rbxInfo[id]) return rbxInfo[id];
+    const KEY = "mh-rbx-look-" + id;
+    try { const c = JSON.parse(sessionStorage.getItem(KEY) || "null"); if (c && Date.now() - c.t < 36e5) return (rbxInfo[id] = Promise.resolve(c)); } catch (e) {}
+    const j = u => fetch(u).then(x => x.ok ? x.json() : null).catch(() => null);
+    return (rbxInfo[id] = Promise.all([
+      j(`https://thumbnails.roproxy.com/v1/users/avatar-headshot?userIds=${id}&size=150x150&format=Png&isCircular=false`),
+      j(`https://users.roproxy.com/v1/users/${id}`),
+    ]).then(([th, us]) => {
+      const pic = th && th.data && th.data[0] && th.data[0].imageUrl || "";
+      const out = { t: Date.now(), pic: /^https:\/\/[a-z0-9.-]+\.rbxcdn\.com\//.test(pic) ? pic : "", displayName: us && us.displayName || "", name: us && us.name || "" };
+      if (out.pic || out.name) try { sessionStorage.setItem(KEY, JSON.stringify(out)); } catch (e) {}
+      return out;
+    }));
+  }
+  function fillRbx(root) {
+    root.querySelectorAll("[data-rbx-pic]").forEach(el => {
+      const id = el.dataset.rbxPic;
+      rbxLoad(id).then(i => {
+        if (i.pic) { const im = new Image(); im.alt = ""; im.onload = () => { el.innerHTML = ""; el.appendChild(im); el.classList.add("has-pic"); }; im.src = i.pic; }
+        const dn = root.querySelector(`[data-rbx-dn="${id}"]`);
+        if (dn && i.displayName) dn.textContent = i.displayName;
+        const at = dn && dn.nextElementSibling;
+        if (at && i.name) at.textContent = "@" + i.name;
+      });
+    });
   }
 
   /* ---------- edit your profile ---------- */
@@ -285,6 +331,7 @@
             </div>
             <p class="pe-hint">Pictures are public, so keep them friendly. Admins can remove ones that break the rules.</p>
           </section>
+          <section class="pe-sec" id="peRbx" aria-live="polite"></section>
           <section class="pe-sec">
             <h4><label for="peBio">Bio</label> <span class="pe-cnt" id="peCnt"></span></h4>
             <textarea id="peBio" rows="4" maxlength="${BIO_MAX}" placeholder="Your favourite setup, how far you've got, what you're grinding for…"></textarea>
@@ -314,9 +361,11 @@
       P("#peCnt").classList.toggle("over", n > BIO_MAX || lines > BIO_LINES);
       P("#peSave").disabled = busy || !dirty();
     }
+    let rbxChanged = false;
     function close() {
       if (dirty() && !busy && !confirm("Close without saving your changes?")) return;
       back.remove(); document.documentElement.classList.remove("pe-open");
+      if (rbxChanged) render(r);
       document.removeEventListener("keydown", onKey);
       if (location.hash.includes("edit=1")) history.replaceState(null, "", "#u=" + encodeURIComponent(u.username));
     }
@@ -424,6 +473,62 @@
         busy = false; err.textContent = e.message; P("#peSave").textContent = "Save"; preview();
       }
     });
+
+    /* Roblox account: Link → put the code in your About section → Verify. Saves straight away (not with Save). */
+    const box = P("#peRbx");
+    function drawRbx(msg, bad) {
+      const L = r.user.roblox, pend = r.robloxPending;
+      let html = `<h4>Roblox account</h4>`;
+      if (rbxOk(L)) {
+        html += `<div class="pe-rbx-linked">${rbxChip(L)}<button type="button" class="pr-btn" id="peRbxOff">Unlink</button></div>
+          <p class="pe-hint">Shown on your profile with a verified tick. This doesn't sign you in to anything.</p>`;
+      } else if (pend && rbxOk(pend)) {
+        html += `<p class="pe-rbx-who">Linking <b>${esc(pend.displayName || pend.name)}</b> <span>@${esc(pend.name)}</span> <button type="button" class="pr-link" id="peRbxOther">Use a different account</button></p>
+          <ol class="pe-steps">
+            <li>Copy this code: <span class="pe-code"><code id="peRbxCode">${esc(pend.code)}</code><button type="button" class="pr-btn" id="peRbxCopy">Copy</button></span></li>
+            <li>Open <a href="https://www.roblox.com/users/${pend.id}/profile" target="_blank" rel="noopener noreferrer">your Roblox profile</a>, edit the <b>About</b> section, paste the code anywhere in it and save.</li>
+            <li>Come back and press <b>Verify</b>. Once it's linked you can delete the code from your About.</li>
+          </ol>
+          <div class="pe-rbx-go"><button type="button" class="pr-btn pri" id="peRbxCheck">Verify</button></div>`;
+      } else {
+        html += `<form class="pe-rbx-form" id="peRbxForm"><input id="peRbxName" maxlength="21" placeholder="Your Roblox username" aria-label="Roblox username" autocomplete="off" spellcheck="false" /><button type="submit" class="pr-btn pri">Link</button></form>
+          <p class="pe-hint">Shows your Roblox account on your profile. It's only for show; it doesn't sign you in.</p>`;
+      }
+      html += `<p class="pe-rbx-msg${bad ? " bad" : ""}" id="peRbxMsg">${msg ? esc(msg) : ""}</p>`;
+      box.innerHTML = html;
+      fillRbx(box);
+    }
+    async function rbxCall(btn, action, data, okMsg) {
+      if (btn) { btn.disabled = true; btn.dataset.t = btn.textContent; btn.textContent = "…"; }
+      try {
+        const res = await A.api(action, data);
+        if ("pending" in res) r.robloxPending = res.pending;
+        if ("roblox" in res) { r.user.roblox = res.roblox || undefined; delete r.robloxPending; rbxChanged = true; }
+        drawRbx(okMsg);
+      } catch (e) {
+        if (btn) { btn.disabled = false; btn.textContent = btn.dataset.t; }
+        if (e.code === "expired") { delete r.robloxPending; drawRbx(e.message, true); }
+        else { const m = P("#peRbxMsg"); m.textContent = e.message; m.classList.add("bad"); }
+      }
+    }
+    box.addEventListener("submit", e => {
+      e.preventDefault();
+      const n = P("#peRbxName").value.trim().replace(/^@/, "");
+      if (!/^[A-Za-z0-9_]{3,20}$/.test(n)) { const m = P("#peRbxMsg"); m.textContent = "Roblox usernames are 3–20 letters, numbers or _."; m.classList.add("bad"); return; }
+      rbxCall(box.querySelector("[type=submit]"), "roblox.start", { username: n });
+    });
+    box.addEventListener("click", e => {
+      const t = e.target.closest("button"); if (!t) return;
+      if (t.id === "peRbxCheck") rbxCall(t, "roblox.verify", {}, "Linked! You can remove the code from your Roblox About now.");
+      else if (t.id === "peRbxOff") { if (confirm("Unlink your Roblox account from your profile?")) rbxCall(t, "roblox.unlink", {}, "Unlinked."); }
+      else if (t.id === "peRbxOther") { delete r.robloxPending; drawRbx(); P("#peRbxName").focus(); }
+      else if (t.id === "peRbxCopy") {
+        const code = P("#peRbxCode").textContent;
+        (navigator.clipboard ? navigator.clipboard.writeText(code) : Promise.reject()).then(() => { t.textContent = "Copied"; setTimeout(() => (t.textContent = "Copy"), 1500); })
+          .catch(() => { const rg = document.createRange(); rg.selectNodeContents(P("#peRbxCode")); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(rg); });
+      }
+    });
+    drawRbx();
 
     preview();
     (focus === "bio" ? bio : P(".pe-x")).focus();

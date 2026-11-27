@@ -58,6 +58,7 @@ People can create a wiki account with a username and password. With an account:
 - **Trackers sync between devices.** This covers the Shiny Checklist, Rebirth Tracker, Daily Tasks, Daily Gift streak and Settings.
 - **Comments** work at the bottom of every page and on each item in the Item Index.
 - **Profiles** show other players your picture, bio and banner colour along with your shiny progress, rebirth and streak. Pick a picture by uploading one (it's cropped and shrunk to 128×128 in your browser) or by choosing any wiki item. You can hide your profile from the account menu.
+- **Linking a Roblox account** shows it on your profile with a verified tick and a link to its badges in the User Tracker. It's only for show, not for signing in. To prove the account is theirs, the player pastes a short word code (e.g. `haven lava otter prism comet`) into their Roblox profile's About section. The Apps Script reads the profile from Roblox and links it when the code is there. Each Roblox account can only be linked to one wiki account.
 - **Admins** get an admin area where they can edit the wiki's data files and publish the changes straight to this repo, reset passwords, unban people and remove profile pictures or bios that break the rules.
 
 Accounts are stored in a **private Google Sheet**. The sheet is never shared or published. The site only talks to a small Apps Script web app inside it (`google-sheets/Code.gs`). Passwords are salted and hashed with PBKDF2 plus a secret pepper, so even the sheet's owner can't read them. The script also has rate limits for sign-in attempts, new accounts and comments.
@@ -155,7 +156,7 @@ tools/                  Image downloader scripts
 
 ### External services
 - **Roblox APIs via [RoProxy](https://roproxy.com):** the User Tracker uses it for live player lookups and badge ownership. Badge results are saved in the visitor's browser, so later lookups only ask Roblox about badges that failed or are new.
-- **Google Apps Script:** accounts, comments and profiles (optional).
+- **Google Apps Script:** accounts, comments and profiles (optional). It also reads Roblox profiles (users.roblox.com, with RoProxy as a backup) to check Roblox link codes.
 - **Rolimons:** historical player counts.
 
 ---

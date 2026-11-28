@@ -460,7 +460,7 @@
       "r": 30,
       "sh": [
         {
-          "nm": "Dusk",
+          "nm": "Frenzied",
           "k": "S",
           "u": "assets/wiki/dusk-dreamer-s-anguish.webp"
         },
@@ -1014,7 +1014,7 @@
       "r": 32,
       "sh": [
         {
-          "nm": "Stained",
+          "nm": "Dreamy",
           "k": "S",
           "u": "assets/wiki/stained-massive-diamond-drill.webp"
         }
@@ -1937,7 +1937,7 @@
       "r": 32,
       "sh": [
         {
-          "nm": "Dusk",
+          "nm": "Frenzied",
           "k": "S",
           "u": "assets/wiki/dusk-dreamer-s-nightmare.webp"
         }

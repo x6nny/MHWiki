@@ -462,7 +462,7 @@
         {
           "nm": "Frenzied",
           "k": "S",
-          "u": "assets/wiki/dusk-dreamer-s-anguish.webp"
+          "u": "assets/wiki/FrenziedDreamersAnguish.png"
         },
         {
           "nm": "New Age",
@@ -1933,7 +1933,7 @@
       "n": "Dreamer's Nightmare",
       "t": "Evolved Reborn",
       "ty": "Furnace",
-      "img": "assets/wiki/dreamer-s-nightmare.webp",
+      "img": "assets/wiki/FrenziedDreamersNightmare",
       "r": 32,
       "sh": [
         {

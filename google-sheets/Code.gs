@@ -685,38 +685,52 @@ function adminResetPassword_(req) {
   return { username: t[U.username] };
 }
 
+// A token pasted with quotes, spaces, line breaks or a "Bearer "/"token " in front still works.
+function cleanToken_(t) {
+  return String(t || '').replace(/\s+/g, ' ').trim().replace(/^["'`]+|["'`]+$/g, '').replace(/^(bearer|token)\s+/i, '').replace(/\s/g, '');
+}
+function repo_() { return String(PropertiesService.getScriptProperties().getProperty('GITHUB_REPO') || CFG.GITHUB_REPO).trim(); }
+// Turns a GitHub error status into what to do about it.
+function ghFail_(status, what) {
+  var repo = repo_();
+  if (status === 401) fail_('GitHub didn\'t accept the token (401), so ' + what + '. The token has probably expired, been deleted, or was pasted incompletely. ' +
+    'Make a new one and paste it in the sheet with HavenWiki > Set the GitHub token. HavenWiki > Test the GitHub token checks it.');
+  if (status === 403) fail_('The GitHub token isn\'t allowed to do that (403), so ' + what + '. Give it Contents: Read and write on ' + repo + ', or make a new token with that permission.');
+  if (status === 404) fail_('GitHub can\'t find ' + repo + ' with this token (404), so ' + what + '. Check the token includes that repository (Repository access > Only select repositories).');
+  fail_('GitHub answered ' + status + ', so ' + what + '. Try again in a minute.');
+}
 function gh_(path, opts) {
   var p = PropertiesService.getScriptProperties();
-  var token = p.getProperty('GITHUB_TOKEN');
+  var token = cleanToken_(p.getProperty('GITHUB_TOKEN'));
   if (!token) fail_('The GitHub token isn\'t set yet. In the sheet, use HavenWiki > Set the GitHub token.');
-  var repo = p.getProperty('GITHUB_REPO') || CFG.GITHUB_REPO;
+  var repo = repo_();
   opts = opts || {};
   var headers = { Authorization: 'Bearer ' + token, 'X-GitHub-Api-Version': '2022-11-28', Accept: opts.accept || 'application/vnd.github+json' };
   var res = UrlFetchApp.fetch('https://api.github.com/repos/' + repo + '/' + path, {
     method: opts.method || 'get', headers: headers, muteHttpExceptions: true,
     contentType: opts.payload ? 'application/json' : undefined, payload: opts.payload ? JSON.stringify(opts.payload) : undefined,
   });
-  return { status: res.getResponseCode(), text: res.getContentText('UTF-8') };
+  return { status: res.getResponseCode(), text: res.getContentText('UTF-8'), headers: res.getAllHeaders ? res.getAllHeaders() : {} };
 }
 function branch_() { return PropertiesService.getScriptProperties().getProperty('GITHUB_BRANCH') || CFG.GITHUB_BRANCH; }
 var PATH_OK = /^data\/[A-Za-z0-9_-]+\.json$/;
 function dataDir_() {
   var r = gh_('contents/data?ref=' + encodeURIComponent(branch_()));
-  if (r.status !== 200) fail_('GitHub said ' + r.status + '. Check the token and repo name.');
+  if (r.status !== 200) ghFail_(r.status, 'the data files couldn\'t be listed');
   return JSON.parse(r.text);
 }
 function adminFiles_(req) {
   var me = requireAdmin_(req);
   var files = dataDir_().filter(function (f) { return f.type === 'file' && /\.json$/.test(f.name); })
     .map(function (f) { return { path: f.path, name: f.name, size: f.size, sha: f.sha }; });
-  return { files: files, repo: PropertiesService.getScriptProperties().getProperty('GITHUB_REPO') || CFG.GITHUB_REPO, branch: branch_(), you: me[U.username] };
+  return { files: files, repo: repo_(), branch: branch_(), you: me[U.username] };
 }
 function adminRead_(req) {
   requireAdmin_(req);
   var path = String(req.path || '');
   if (!PATH_OK.test(path)) fail_('Only files in data/ can be edited.');
   var r = gh_('contents/' + path + '?ref=' + encodeURIComponent(branch_()), { accept: 'application/vnd.github.raw+json' });
-  if (r.status !== 200) fail_('Couldn\'t read ' + path + ' (GitHub ' + r.status + ').');
+  if (r.status !== 200) ghFail_(r.status, path + ' couldn\'t be opened');
   var f = findUser_(dataDir_(), function (x) { return x.path === path; });
   return { path: path, content: r.text, sha: f ? f.sha : null };
 }
@@ -735,7 +749,7 @@ function adminSave_(req) {
     if (current) body.sha = current;
     var r = gh_('contents/' + path, { method: 'put', payload: body });
     if (r.status === 409 || r.status === 422) fail_('GitHub rejected the save because the file changed. Reload it and try again.', 'conflict');
-    if (r.status !== 200 && r.status !== 201) fail_('GitHub said ' + r.status + '. Check the token\'s permissions.');
+    if (r.status !== 200 && r.status !== 201) ghFail_(r.status, 'nothing was published');
     var out = JSON.parse(r.text);
     return { sha: out.content && out.content.sha, commit: out.commit && out.commit.html_url, message: message };
   });
@@ -748,6 +762,7 @@ function onOpen() {
     .addItem('Set up the sheet', 'setupSheet')
     .addItem('Reset a user\'s password…', 'menuResetPassword')
     .addItem('Set the GitHub token…', 'menuGithubToken')
+    .addItem('Test the GitHub token', 'menuTestGithub')
     .addItem('Sign everyone out', 'menuSignOutAll')
     .addToUi();
 }
@@ -779,10 +794,31 @@ function menuResetPassword() {
 }
 function menuGithubToken() {
   var ui = SpreadsheetApp.getUi(), p = PropertiesService.getScriptProperties();
-  var a = ui.prompt('GitHub token', 'Paste the fine-grained token (Contents: read and write on ' + (p.getProperty('GITHUB_REPO') || CFG.GITHUB_REPO) + '):', ui.ButtonSet.OK_CANCEL);
-  if (a.getSelectedButton() !== ui.Button.OK || !a.getResponseText().trim()) return;
-  p.setProperty('GITHUB_TOKEN', a.getResponseText().trim());
-  ui.alert('Saved. The token is stored in the script\'s private settings, not in the sheet.');
+  var a = ui.prompt('GitHub token', 'Paste the fine-grained token (Contents: read and write on ' + repo_() + '). It starts with github_pat_', ui.ButtonSet.OK_CANCEL);
+  if (a.getSelectedButton() !== ui.Button.OK) return;
+  var t = cleanToken_(a.getResponseText());
+  if (!t) return;
+  if (!/^(github_pat_|ghp_)[A-Za-z0-9_]{20,}$/.test(t)) {
+    ui.alert('That doesn\'t look like a GitHub token. A fine-grained token starts with github_pat_ and is about 90 characters long. Nothing was saved.');
+    return;
+  }
+  p.setProperty('GITHUB_TOKEN', t);
+  ui.alert('Saved (the token is kept in the script\'s private settings, not in the sheet).\n\n' + githubCheck_());
+}
+function menuTestGithub() { SpreadsheetApp.getUi().alert(githubCheck_()); }
+// Checks the token can see the repo's data folder, and when it expires.
+function githubCheck_() {
+  try {
+    var r = gh_('contents/data?ref=' + encodeURIComponent(branch_()));
+    if (r.status !== 200) ghFail_(r.status, 'the admin area can\'t read or publish');
+    var exp = '', h = r.headers || {};
+    for (var k in h) if (k.toLowerCase() === 'github-authentication-token-expiration') exp = String(h[k]);
+    return '✅ The token works: it can read ' + repo_() + ' (' + JSON.parse(r.text).length + ' files in data/).' +
+      (exp ? '\n\nIt expires on ' + exp + '. Make a new one before then.' : '') +
+      '\n\nPublishing also needs Contents: Read and write; if a publish says 403, that permission is missing.';
+  } catch (e) {
+    return '❌ ' + (e.userMessage || e.message);
+  }
 }
 function menuSignOutAll() {
   withLock_(function () {

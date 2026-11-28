@@ -83,7 +83,8 @@ If `api` in `js/account-config.js` is left empty, the whole account system is sw
 5. **Make an admin.** Create the account on the live site, then tick its **admin** box in the Users tab.
 6. **Let the admin area publish to GitHub.**
    - Create a fine-grained personal access token that only covers this repo, with **Contents: Read and write**.
-   - Paste it in the sheet via **HavenWiki → Set the GitHub token…**.
+   - Paste it in the sheet via **HavenWiki → Set the GitHub token…**. The sheet checks it straight away, and **HavenWiki → Test the GitHub token** checks it any time.
+   - Fine-grained tokens **expire** (30 days by default). When one does, publishing says *"GitHub didn't accept the token (401)"*: make a new token and set it again. No redeploy is needed.
    - The token is kept in the script's private properties and never reaches the website.
    - If Pages publishes from a branch other than `main`, add a `GITHUB_BRANCH` script property.
 

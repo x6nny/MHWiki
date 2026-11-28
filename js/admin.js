@@ -1,7 +1,7 @@
 /* =========================================================
    Admin area: edit the wiki's data/*.json files and publish
-   the changes to GitHub (through the admin-commit Supabase function).
-   Only admins listed in the database can load or save anything;
+   the changes to GitHub (through the Google Sheet's Apps Script, which holds the GitHub token).
+   Only accounts ticked as admin in the sheet can load or save anything;
    the page itself only hides the editor from everyone else.
    ========================================================= */
 (() => {
@@ -18,7 +18,7 @@
   };
 
   if (!A || !A.ready) {
-    showGate("Accounts aren't set up yet", "Paste your Apps Script web app address into <code>js/account-config.js</code> by following <b>GOOGLE-SHEETS-SETUP.md</b> in the project folder.");
+    showGate("Accounts aren't set up yet", "Paste your Apps Script web app address into <code>js/account-config.js</code> by following the <b>Accounts</b> steps in the project's <b>README.md</b>.");
     return;
   }
 

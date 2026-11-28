@@ -1933,13 +1933,13 @@
       "n": "Dreamer's Nightmare",
       "t": "Evolved Reborn",
       "ty": "Furnace",
-      "img": "assets/wiki/FrenziedDreamersNightmare",
+      "img": "assets/wiki/dreamer-s-nightmare.webp",
       "r": 32,
       "sh": [
         {
           "nm": "Frenzied",
           "k": "S",
-          "u": "assets/wiki/dusk-dreamer-s-nightmare.webp"
+          "u": "assets/wiki/FrenziedDreamersNightmare"
         }
       ]
     },
